@@ -1,0 +1,74 @@
+services:
+  backend:
+    build: ./backend
+    container_name: academia-backend
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "4100:4100"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - academia-network
+      - nginx-network
+
+  frontend-blue:
+    build:
+      context: ./frontend
+      args:
+        VITE_BACKEND_URL: ${VITE_BACKEND_URL}
+        VITE_WS_URL: ${VITE_WS_URL}
+        VITE_ANAHUAC_URL: ${VITE_ANAHUAC_URL}
+    restart: unless-stopped
+    ports:
+      - "4101:80"
+    networks:
+      - academia-network
+      - nginx-network
+
+  frontend-green:
+    build:
+      context: ./frontend
+      args:
+        VITE_BACKEND_URL: ${VITE_BACKEND_URL}
+        VITE_WS_URL: ${VITE_WS_URL}
+        VITE_ANAHUAC_URL: ${VITE_ANAHUAC_URL}
+    restart: unless-stopped
+    ports:
+      - "4102:80"
+    networks:
+      - academia-network
+      - nginx-network
+    profiles:
+      - green
+
+  db:
+    image: postgres:15
+    container_name: academia-db
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - academia_db_data:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - academia-network
+
+networks:
+  academia-network:
+    driver: bridge
+  nginx-network:
+    external: true
+
+volumes:
+  academia_db_data:

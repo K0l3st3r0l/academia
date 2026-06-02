@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-white font-game;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .animate-pop {
+    animation: pop 0.15s ease-out;
+  }
+  @keyframes pop {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .animate-shake {
+    animation: shake 0.3s ease-in-out;
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  }
+}
