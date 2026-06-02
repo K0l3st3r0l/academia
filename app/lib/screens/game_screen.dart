@@ -282,7 +282,7 @@ class _GameScreenState extends State<GameScreen> {
                     color: AppColors.optionColors[i],
                     borderRadius: BorderRadius.circular(16),
                     border: isSelected ? Border.all(color: Colors.white, width: 4) : null,
-                    boxShadow: isSelected ? [BoxShadow(color: Colors.white.withOpacity(0.3), blurRadius: 12)] : null,
+                    boxShadow: isSelected ? [BoxShadow(color: Colors.white.withValues(alpha: 0.3), blurRadius: 12)] : null,
                   ),
                   child: Opacity(
                     opacity: isAnswered && !isSelected ? 0.4 : 1.0,
@@ -318,7 +318,7 @@ class _GameScreenState extends State<GameScreen> {
           width: double.infinity,
           padding: const EdgeInsets.all(24),
           decoration: BoxDecoration(
-            color: (isCorrect ? AppColors.correct : AppColors.wrong).withOpacity(0.2),
+            color: (isCorrect ? AppColors.correct : AppColors.wrong).withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(24),
             border: Border.all(color: isCorrect ? AppColors.correct : AppColors.wrong, width: 2),
           ),
@@ -373,7 +373,7 @@ class _GameScreenState extends State<GameScreen> {
             margin: const EdgeInsets.only(bottom: 8),
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             decoration: BoxDecoration(
-              color: isMe ? AppColors.brand.withOpacity(0.2) : AppColors.surface,
+              color: isMe ? AppColors.brand.withValues(alpha: 0.2) : AppColors.surface,
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [

@@ -15,11 +15,10 @@ class JoinScreen extends StatefulWidget {
 class _JoinScreenState extends State<JoinScreen> {
   final _codeCtrl = TextEditingController();
   List<Map<String, dynamic>> _students = [];
-  Map<String, dynamic>? _room;
   String? _selectedStudentId;
   String? _selectedStudentName;
   bool _loadingRoom = false;
-  bool _joining = false;
+  final bool _joining = false;
   String? _error;
 
   late ApiService _api;
@@ -35,11 +34,10 @@ class _JoinScreenState extends State<JoinScreen> {
   }
 
   Future<void> _loadRoom(String code) async {
-    setState(() { _loadingRoom = true; _error = null; _room = null; _students = []; });
+    setState(() { _loadingRoom = true; _error = null; _students = []; });
     try {
       final data = await _api.getRoom(code.toUpperCase().trim());
       setState(() {
-        _room = data['room'];
         _students = List<Map<String, dynamic>>.from(data['students'] ?? []);
       });
     } catch (e) {
@@ -92,7 +90,7 @@ class _JoinScreenState extends State<JoinScreen> {
                   fillColor: AppColors.surface,
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
                   hintText: 'XXXXXX',
-                  hintStyle: TextStyle(color: AppColors.textSecondary.withOpacity(0.3), letterSpacing: 8, fontSize: 32),
+                  hintStyle: TextStyle(color: AppColors.textSecondary.withValues(alpha: 0.3), letterSpacing: 8, fontSize: 32),
                 ),
                 maxLength: 6,
                 onSubmitted: (v) => _loadRoom(v),
@@ -114,7 +112,7 @@ class _JoinScreenState extends State<JoinScreen> {
                 const SizedBox(height: 16),
                 Container(
                   padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(color: AppColors.wrong.withOpacity(0.2), borderRadius: BorderRadius.circular(12)),
+                  decoration: BoxDecoration(color: AppColors.wrong.withValues(alpha: 0.2), borderRadius: BorderRadius.circular(12)),
                   child: Text(_error!, style: const TextStyle(color: AppColors.wrong), textAlign: TextAlign.center),
                 ),
               ],
@@ -137,7 +135,7 @@ class _JoinScreenState extends State<JoinScreen> {
                           margin: const EdgeInsets.only(bottom: 8),
                           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                           decoration: BoxDecoration(
-                            color: selected ? AppColors.brand.withOpacity(0.3) : AppColors.surface,
+                            color: selected ? AppColors.brand.withValues(alpha: 0.3) : AppColors.surface,
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(color: selected ? AppColors.brand : Colors.transparent, width: 2),
                           ),
