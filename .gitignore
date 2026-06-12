@@ -2,3 +2,7 @@
 /content/
 /backend/node_modules/
 /frontend/node_modules/
+
+
+# Graphify - regenerar con: bash /root/apps/wiki/brain-setup.sh /root/apps
+graphify-out/
