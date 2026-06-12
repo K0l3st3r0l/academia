@@ -55,7 +55,11 @@ Para agregar una migración: crear `NNN_descripcion.sql` con el número siguient
 
 ---
 
-## 📚 Wiki
+## 📚 Wiki y grafo de código
+
+**Antes de buscar con grep** (aplica a todo agente/modelo):
+1. Si existe `graphify-out/graph.json` en este proyecto, consultarlo primero.
+2. Revisar `/root/apps/wiki/projects/academia/overview.md` si existe.
 
 Conocimiento acumulado de este proyecto en `/root/apps/wiki/projects/academia/`.
-Al terminar tareas relevantes, actualizar la wiki según `/root/apps/CLAUDE.md`.
+Al agregar o modificar algo relevante, actualizar la wiki según `/root/apps/CLAUDE.md`.
