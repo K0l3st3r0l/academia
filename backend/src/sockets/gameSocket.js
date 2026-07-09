@@ -14,6 +14,15 @@ function getRoomState(code) {
   return rooms.get(code);
 }
 
+function deriveGradeLevel(courseName) {
+  if (!courseName) return null;
+  const match = courseName.match(/(\d+)\s*°/);
+  if (!match) return null;
+  const grade = parseInt(match[1], 10);
+  if (grade < 1 || grade > 8) return null;
+  return `${grade}b`;
+}
+
 function buildLeaderboard(students) {
   return [...students.values()]
     .sort((a, b) => b.score - a.score)
@@ -80,6 +89,7 @@ function setupGameSocket(io) {
             code: roomCode,
             roomDbId: room.id,
             subject: room.subject,
+            courseName: room.course_name,
             teacherSocketId: socket.id,
             students: new Map(),
             status: 'waiting',
@@ -139,6 +149,7 @@ function setupGameSocket(io) {
             code: roomCode,
             roomDbId: roomRows[0].id,
             subject: roomRows[0].subject,
+            courseName: roomRows[0].course_name,
             teacherSocketId: null,
             students: new Map(),
             status: 'waiting',
@@ -239,12 +250,28 @@ function setupGameSocket(io) {
       if (socket.id !== state.teacherSocketId) return socket.emit('error', { message: 'Solo el docente puede iniciar' });
       if (state.status !== 'waiting') return;
 
-      // Load up to 10 random active questions for this subject
-      const qResult = await pool.query(
-        `SELECT * FROM questions WHERE subject = $1 AND active = true ORDER BY RANDOM() LIMIT 10`,
-        [state.subject]
-      );
-      let questions = qResult.rows;
+      // Load up to 10 random active questions for this subject, matched to the room's grade level.
+      // Falls back to grade_level='general' questions to always fill up to 10 when possible.
+      const gradeLevel = deriveGradeLevel(state.courseName);
+      let questions = [];
+
+      if (gradeLevel) {
+        const { rows } = await pool.query(
+          `SELECT * FROM questions WHERE subject = $1 AND grade_level = $2 AND active = true ORDER BY RANDOM() LIMIT 10`,
+          [state.subject, gradeLevel]
+        );
+        questions = rows;
+      }
+
+      if (questions.length < 10) {
+        const { rows: fallback } = await pool.query(
+          `SELECT * FROM questions
+           WHERE subject = $1 AND grade_level = 'general' AND active = true AND id != ALL($2::uuid[])
+           ORDER BY RANDOM() LIMIT $3`,
+          [state.subject, questions.map(q => q.id), 10 - questions.length]
+        );
+        questions = questions.concat(fallback);
+      }
 
       if (!questions.length) {
         return socket.emit('error', { message: `No hay preguntas activas para "${state.subject}". Agrega preguntas en el banco de contenido.` });

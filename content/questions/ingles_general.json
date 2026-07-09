@@ -1,0 +1,37 @@
+[
+  {
+    "text": "What is the translation of \"biblioteca\"?",
+    "options": ["bookstore", "library", "museum", "school"],
+    "correct": "library",
+    "hint": "It's a place where you borrow books for free",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Which word is a verb?",
+    "options": ["happy", "quickly", "run", "blue"],
+    "correct": "run",
+    "hint": "Verbs are action or state words",
+    "difficulty": "easy"
+  },
+  {
+    "text": "What is the plural of \"child\"?",
+    "options": ["childs", "childes", "children", "child's"],
+    "correct": "children",
+    "hint": "It's an irregular plural",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Complete: \"Yesterday I ___ to school.\"",
+    "options": ["go", "goes", "going", "went"],
+    "correct": "went",
+    "hint": "\"Went\" is the past tense of \"go\"",
+    "difficulty": "medium"
+  },
+  {
+    "text": "What does \"brave\" mean?",
+    "options": ["cobarde", "valiente", "inteligente", "amable"],
+    "correct": "valiente",
+    "hint": "A hero is usually described as brave",
+    "difficulty": "medium"
+  }
+]

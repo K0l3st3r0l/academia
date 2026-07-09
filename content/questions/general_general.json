@@ -1,0 +1,37 @@
+[
+  {
+    "text": "¿Cuántos días tiene un año bisiesto?",
+    "options": ["364", "365", "366", "367"],
+    "correct": "366",
+    "hint": "Ocurre cada 4 años aproximadamente",
+    "difficulty": "medium"
+  },
+  {
+    "text": "¿Cuál es el país más grande del mundo por superficie?",
+    "options": ["China", "Estados Unidos", "Canadá", "Rusia"],
+    "correct": "Rusia",
+    "hint": "Abarca dos continentes",
+    "difficulty": "medium"
+  },
+  {
+    "text": "¿Cuántos colores tiene el arcoíris?",
+    "options": ["5", "6", "7", "8"],
+    "correct": "7",
+    "hint": "Rojo, naranja, amarillo, verde, azul, índigo, violeta",
+    "difficulty": "easy"
+  },
+  {
+    "text": "¿Cuál es el metal más abundante en la corteza terrestre?",
+    "options": ["Hierro", "Aluminio", "Cobre", "Oro"],
+    "correct": "Aluminio",
+    "hint": "También es el metal más reciclado del mundo",
+    "difficulty": "hard"
+  },
+  {
+    "text": "¿Cuántos continentes hay en el mundo?",
+    "options": ["5", "6", "7", "8"],
+    "correct": "7",
+    "hint": "América del Norte y del Sur cuentan como dos",
+    "difficulty": "easy"
+  }
+]

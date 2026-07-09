@@ -1,0 +1,42 @@
+[
+  {
+    "text": "¿Cuál de estas palabras es un sustantivo?",
+    "options": ["correr", "rápido", "árbol", "felizmente"],
+    "correct": "árbol",
+    "hint": "Un sustantivo nombra personas, animales o cosas",
+    "difficulty": "easy"
+  },
+  {
+    "text": "¿Qué figura literaria hay en \"el viento susurra secretos\"?",
+    "options": ["Metáfora", "Comparación", "Personificación", "Hipérbole"],
+    "correct": "Personificación",
+    "hint": "Se le atribuye una acción humana a algo que no es humano",
+    "difficulty": "hard"
+  },
+  {
+    "text": "¿Cuál es el sinónimo de \"veloz\"?",
+    "options": ["lento", "rápido", "fuerte", "alto"],
+    "correct": "rápido",
+    "hint": "Significa que algo se mueve con mucha rapidez",
+    "difficulty": "easy"
+  },
+  {
+    "text": "¿Qué tipo de texto es una receta de cocina?",
+    "options": ["Narrativo", "Descriptivo", "Instructivo", "Argumentativo"],
+    "correct": "Instructivo",
+    "hint": "Da instrucciones paso a paso para hacer algo",
+    "difficulty": "medium"
+  },
+  {
+    "text": "¿Cuál de estas oraciones está escrita en tiempo futuro?",
+    "options": [
+      "Ayer jugué fútbol",
+      "Estoy jugando fútbol",
+      "Jugaré fútbol mañana",
+      "Jugaba fútbol siempre"
+    ],
+    "correct": "Jugaré fútbol mañana",
+    "hint": "El tiempo futuro indica algo que pasará después",
+    "difficulty": "medium"
+  }
+]

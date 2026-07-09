@@ -1,0 +1,37 @@
+[
+  {
+    "text": "¿Cuál es el planeta más grande del sistema solar?",
+    "options": ["Saturno", "Júpiter", "Neptuno", "Urano"],
+    "correct": "Júpiter",
+    "hint": "Es el quinto planeta desde el Sol",
+    "difficulty": "easy"
+  },
+  {
+    "text": "¿Qué proceso realizan las plantas para producir su alimento?",
+    "options": ["Respiración", "Digestión", "Fotosíntesis", "Evaporación"],
+    "correct": "Fotosíntesis",
+    "hint": "Usan luz solar, agua y CO₂",
+    "difficulty": "medium"
+  },
+  {
+    "text": "¿Cuántos huesos tiene el cuerpo humano adulto?",
+    "options": ["106", "186", "206", "256"],
+    "correct": "206",
+    "hint": "Los bebés tienen más huesos que los adultos",
+    "difficulty": "hard"
+  },
+  {
+    "text": "¿Cuál es el estado del agua a 0°C?",
+    "options": ["Gas", "Líquido", "Sólido", "Plasma"],
+    "correct": "Sólido",
+    "hint": "0°C es el punto de congelación del agua",
+    "difficulty": "easy"
+  },
+  {
+    "text": "¿Qué tipo de animal es una ballena?",
+    "options": ["Pez", "Reptil", "Anfibio", "Mamífero"],
+    "correct": "Mamífero",
+    "hint": "Respira aire y amamanta a sus crías",
+    "difficulty": "medium"
+  }
+]

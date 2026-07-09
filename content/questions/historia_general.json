@@ -1,0 +1,37 @@
+[
+  {
+    "text": "¿En qué año llegó Cristóbal Colón a América?",
+    "options": ["1392", "1492", "1592", "1692"],
+    "correct": "1492",
+    "hint": "Fue en el siglo XV",
+    "difficulty": "medium"
+  },
+  {
+    "text": "¿Cuál fue la primera capital de Chile?",
+    "options": ["Valparaíso", "Concepción", "Santiago", "La Serena"],
+    "correct": "Santiago",
+    "hint": "Pedro de Valdivia la fundó en 1541",
+    "difficulty": "medium"
+  },
+  {
+    "text": "¿Qué civilización construyó Machu Picchu?",
+    "options": ["Azteca", "Maya", "Inca", "Olmeca"],
+    "correct": "Inca",
+    "hint": "Está ubicada en Perú",
+    "difficulty": "easy"
+  },
+  {
+    "text": "¿Qué héroe de la Independencia de Chile murió en Rancagua en 1814?",
+    "options": ["Bernardo O'Higgins", "José Miguel Carrera", "Juan Martínez de Rozas", "Manuel Rodríguez"],
+    "correct": "Bernardo O'Higgins",
+    "hint": "El Desastre de Rancagua fue parte de la Reconquista española",
+    "difficulty": "hard"
+  },
+  {
+    "text": "¿Qué océano baña la costa oeste de Chile?",
+    "options": ["Atlántico", "Ártico", "Índico", "Pacífico"],
+    "correct": "Pacífico",
+    "hint": "Es el océano más grande del mundo",
+    "difficulty": "easy"
+  }
+]

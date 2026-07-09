@@ -1,5 +1,6 @@
 .env
-/content/
+/content/*
+!/content/questions/
 /backend/node_modules/
 /frontend/node_modules/
 

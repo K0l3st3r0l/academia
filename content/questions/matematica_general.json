@@ -1,0 +1,37 @@
+[
+  {
+    "text": "¿Cuánto es 7 × 8?",
+    "options": ["54", "56", "58", "64"],
+    "correct": "56",
+    "hint": "Multiplica 7 por 8",
+    "difficulty": "easy"
+  },
+  {
+    "text": "¿Cuál es la mitad de 144?",
+    "options": ["62", "70", "72", "76"],
+    "correct": "72",
+    "hint": "144 ÷ 2",
+    "difficulty": "easy"
+  },
+  {
+    "text": "¿Cuántos lados tiene un hexágono?",
+    "options": ["4", "5", "6", "8"],
+    "correct": "6",
+    "hint": "Hexa- significa seis",
+    "difficulty": "easy"
+  },
+  {
+    "text": "¿Cuál es el 25% de 200?",
+    "options": ["25", "40", "50", "75"],
+    "correct": "50",
+    "hint": "25% = 1/4",
+    "difficulty": "medium"
+  },
+  {
+    "text": "¿Cuánto es 15² (quince al cuadrado)?",
+    "options": ["150", "175", "200", "225"],
+    "correct": "225",
+    "hint": "15 × 15",
+    "difficulty": "medium"
+  }
+]
