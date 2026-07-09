@@ -5,6 +5,7 @@ const pool = require('../db');
 const { authenticateToken, requireTeacher } = require('../middleware/auth');
 const { getSchoolCourses, getStudentsByCourse } = require('../services/anahuacService');
 const anahuacTokenCache = require('../services/anahuacTokenCache');
+const { trackEvent } = require('../services/eventTracker');
 
 const router = express.Router();
 
@@ -60,6 +61,14 @@ router.post('/', authenticateToken, requireTeacher, async (req, res) => {
     `, [code, req.user.id, course_name, subject]);
 
     const room = rows[0];
+
+    trackEvent({
+      actorType: 'teacher',
+      actorId: req.user.id,
+      eventType: 'room_created',
+      roomId: room.id,
+      payload: { course_name, subject, code: room.code },
+    });
 
     // Return room + student list for the projector/teacher panel
     const { rows: roomStudents } = await pool.query(

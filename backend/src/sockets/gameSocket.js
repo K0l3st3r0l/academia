@@ -1,6 +1,7 @@
 const logger = require('../logger');
 const jwt = require('jsonwebtoken');
 const pool = require('../db');
+const { trackEvent } = require('../services/eventTracker');
 
 // In-memory game state per room
 // Map<roomCode, RoomState>
@@ -230,6 +231,14 @@ function setupGameSocket(io) {
           });
         }
 
+        trackEvent({
+          actorType: 'student',
+          actorId: studentDbId,
+          eventType: 'student_joined',
+          roomId: state.roomDbId,
+          payload: { displayName, reconnected: !!existing },
+        });
+
         io.to(roomCode).emit('room:participants', {
           participants: [...state.students.values()].map(s => ({
             studentId: s.studentId,
@@ -296,6 +305,15 @@ function setupGameSocket(io) {
 
       // Update room status
       await pool.query("UPDATE rooms SET status = 'active' WHERE id = $1", [state.roomDbId]);
+
+      trackEvent({
+        actorType: 'teacher',
+        actorId: socket.data.userId,
+        eventType: 'game_started',
+        roomId: state.roomDbId,
+        sessionId: state.sessionId,
+        payload: { subject: state.subject, totalQuestions: state.questions.length },
+      });
 
       io.to(roomCode).emit('game:started', { totalQuestions: state.questions.length });
       sendNextQuestion(io, roomCode);
@@ -375,6 +393,15 @@ function setupGameSocket(io) {
       qAnswers.set(socket.id, { answer, isCorrect, timeTakenMs });
       student.answers.push({ questionIndex: qi, answer, isCorrect, timeTakenMs });
 
+      trackEvent({
+        actorType: 'student',
+        actorId: student.studentDbId,
+        eventType: 'answer_submitted',
+        roomId: state.roomDbId,
+        sessionId: state.sessionId,
+        payload: { question_index: qi, is_correct: isCorrect, time_taken_ms: timeTakenMs },
+      });
+
       // Notify teacher of new answer (count only, not which student answered)
       io.to(state.teacherSocketId).emit('game:answer_count', {
         questionIndex: qi,
@@ -398,7 +425,20 @@ function setupGameSocket(io) {
       if (!state) return;
 
       if (role === 'student') {
+        const student = state.students.get(socket.id);
         state.students.delete(socket.id);
+
+        if (student) {
+          trackEvent({
+            actorType: 'student',
+            actorId: student.studentDbId,
+            eventType: 'student_disconnected',
+            roomId: state.roomDbId,
+            sessionId: state.sessionId,
+            payload: { displayName: student.displayName },
+          });
+        }
+
         io.to(roomCode).emit('room:participants', {
           participants: [...state.students.values()].map(s => ({
             studentId: s.studentId,
@@ -531,6 +571,14 @@ async function endGame(io, roomCode) {
         'UPDATE game_sessions SET ended_at = NOW(), summary = $1 WHERE id = $2',
         [JSON.stringify(summary), state.sessionId]
       );
+
+      trackEvent({
+        actorType: 'system',
+        eventType: 'game_ended',
+        roomId: state.roomDbId,
+        sessionId: state.sessionId,
+        payload: summary,
+      });
 
       // Award tokens
       const winners = [...state.students.values()].map(s => ({

@@ -5,6 +5,7 @@ const pool = require('../db');
 const { loginToAnahuac, getAnahuacProfile } = require('../services/anahuacService');
 const { authenticateToken } = require('../middleware/auth');
 const anahuacTokenCache = require('../services/anahuacTokenCache');
+const { trackEvent } = require('../services/eventTracker');
 
 const router = express.Router();
 
@@ -53,6 +54,8 @@ router.post('/login', async (req, res) => {
       { expiresIn: '12h' }
     );
 
+    trackEvent({ actorType: 'teacher', actorId: localUser.id, eventType: 'login_success', payload: { email: localUser.email } });
+
     res.json({
       token,
       user: {
@@ -65,9 +68,11 @@ router.post('/login', async (req, res) => {
     });
   } catch (err) {
     if (err.response?.status === 401) {
+      trackEvent({ actorType: 'teacher', eventType: 'login_failed', payload: { email, reason: 'invalid_credentials' } });
       return res.status(401).json({ error: 'Credenciales inválidas' });
     }
     logger.error('Login error:', err.message);
+    trackEvent({ actorType: 'teacher', eventType: 'login_failed', payload: { email, reason: err.message } });
     res.status(500).json({ error: 'Error al autenticar' });
   }
 });
