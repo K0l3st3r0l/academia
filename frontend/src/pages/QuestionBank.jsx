@@ -11,7 +11,7 @@ const SUBJECTS = [
   { value: 'general', label: 'General' },
 ];
 
-const GRADES = ['NT1','NT2','1B','2B','3B','4B','5B','6B','7B','8B'];
+const GRADES = ['nt1','nt2','1b','2b','3b','4b','5b','6b','7b','8b','general'];
 
 const DIFFICULTIES = [
   { value: 'easy', label: 'Fácil' },
@@ -21,7 +21,7 @@ const DIFFICULTIES = [
 
 const EMPTY_FORM = {
   subject: 'matematica',
-  grade_level: '1B',
+  grade_level: '1b',
   difficulty: 'medium',
   text: '',
   options: ['', '', '', ''],

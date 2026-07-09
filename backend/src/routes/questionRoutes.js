@@ -5,7 +5,7 @@ const { authenticateToken, requireTeacher } = require('../middleware/auth');
 const router = express.Router();
 
 const VALID_SUBJECTS = ['lenguaje', 'matematica', 'ciencias', 'historia', 'ingles', 'general'];
-const VALID_GRADES = ['NT1', 'NT2', '1B', '2B', '3B', '4B', '5B', '6B', '7B', '8B'];
+const VALID_GRADES = ['nt1', 'nt2', '1b', '2b', '3b', '4b', '5b', '6b', '7b', '8b', 'general'];
 const VALID_DIFFICULTIES = ['easy', 'medium', 'hard'];
 
 function validate(body) {
