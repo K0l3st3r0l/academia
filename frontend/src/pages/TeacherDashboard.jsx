@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { createRoom, getCourses } from '../api/client';
+import { createRoom, getCourses, getRoomHistory, getSessionDetail } from '../api/client';
 
 const SUBJECTS = [
   { value: 'matematica', label: 'Matemática' },
@@ -11,6 +11,18 @@ const SUBJECTS = [
   { value: 'ingles', label: 'Inglés' },
   { value: 'general', label: 'General' },
 ];
+
+const SUBJECT_LABELS = Object.fromEntries(SUBJECTS.map(s => [s.value, s.label]));
+
+function formatDateTime(iso) {
+  if (!iso) return '—';
+  return new Date(iso).toLocaleString('es-CL', { dateStyle: 'short', timeStyle: 'short' });
+}
+
+function formatMs(ms) {
+  if (ms == null) return '—';
+  return `${(ms / 1000).toFixed(1)}s`;
+}
 
 export default function TeacherDashboard() {
   const { user, logout } = useAuth();
@@ -22,12 +34,51 @@ export default function TeacherDashboard() {
   const [error, setError] = useState('');
   const [loadingCourses, setLoadingCourses] = useState(true);
 
+  const [history, setHistory] = useState([]);
+  const [loadingHistory, setLoadingHistory] = useState(true);
+  const [expandedRoomId, setExpandedRoomId] = useState(null);
+  const [sessionDetail, setSessionDetail] = useState(null);
+  const [loadingSession, setLoadingSession] = useState(false);
+  const [sessionError, setSessionError] = useState('');
+
   useEffect(() => {
     getCourses()
       .then(res => setCourses(res.data))
       .catch(() => setError('No se pudieron cargar los cursos. Vuelve a iniciar sesión.'))
       .finally(() => setLoadingCourses(false));
+
+    getRoomHistory()
+      .then(res => setHistory(res.data))
+      .catch(() => {})
+      .finally(() => setLoadingHistory(false));
   }, []);
+
+  const openSession = async (sessionId) => {
+    setSessionError('');
+    setSessionDetail(null);
+    setLoadingSession(true);
+    try {
+      const res = await getSessionDetail(sessionId);
+      setSessionDetail(res.data);
+    } catch (err) {
+      setSessionError(err.response?.data?.error || 'Error al cargar la sesión');
+    } finally {
+      setLoadingSession(false);
+    }
+  };
+
+  const handleRoomClick = (room) => {
+    if (room.sessions.length === 1) {
+      openSession(room.sessions[0].id);
+    } else if (room.sessions.length > 1) {
+      setExpandedRoomId(expandedRoomId === room.id ? null : room.id);
+    }
+  };
+
+  const closeSessionModal = () => {
+    setSessionDetail(null);
+    setSessionError('');
+  };
 
   const handleCreate = async (e) => {
     e.preventDefault();
@@ -125,7 +176,129 @@ export default function TeacherDashboard() {
             </form>
           )}
         </div>
+
+        <div className="bg-card rounded-2xl p-6 shadow-xl mt-6">
+          <h2 className="text-xl font-bold mb-6">Historial de sesiones</h2>
+
+          {loadingHistory ? (
+            <p className="text-gray-400">Cargando historial...</p>
+          ) : history.length === 0 ? (
+            <p className="text-gray-400">Aún no hay salas registradas.</p>
+          ) : (
+            <div className="space-y-2">
+              {history.map(room => (
+                <div key={room.id}>
+                  <button
+                    type="button"
+                    onClick={() => handleRoomClick(room)}
+                    className="w-full text-left bg-surface border border-gray-700 hover:border-brand rounded-xl px-4 py-3 transition-colors"
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <p className="font-semibold">
+                          {room.course_name} · {SUBJECT_LABELS[room.subject] || room.subject}
+                        </p>
+                        <p className="text-sm text-gray-400">
+                          {formatDateTime(room.created_at)} · código {room.code}
+                        </p>
+                      </div>
+                      <div className="text-right text-sm text-gray-400 shrink-0">
+                        <p>{room.student_count} alumno{room.student_count === 1 ? '' : 's'}</p>
+                        <p>{room.sessions.length} partida{room.sessions.length === 1 ? '' : 's'}</p>
+                      </div>
+                    </div>
+                  </button>
+
+                  {expandedRoomId === room.id && (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {room.sessions.map(s => (
+                        <button
+                          key={s.id}
+                          type="button"
+                          onClick={() => openSession(s.id)}
+                          className="w-full text-left bg-surface/60 border border-gray-800 hover:border-brand rounded-lg px-3 py-2 text-sm text-gray-300 transition-colors"
+                        >
+                          {formatDateTime(s.started_at)} — {SUBJECT_LABELS[s.subject] || s.subject}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </main>
+
+      {(loadingSession || sessionDetail || sessionError) && (
+        <div
+          className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50"
+          onClick={closeSessionModal}
+        >
+          <div
+            className="bg-card rounded-2xl p-6 shadow-xl max-w-2xl w-full max-h-[85vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {loadingSession && <p className="text-gray-400">Cargando sesión...</p>}
+
+            {sessionError && (
+              <div className="bg-wrong/20 border border-wrong/40 text-wrong rounded-xl px-4 py-2 text-sm">
+                {sessionError}
+              </div>
+            )}
+
+            {sessionDetail && (
+              <>
+                <div className="flex items-start justify-between mb-4 gap-4">
+                  <div>
+                    <h3 className="text-lg font-bold">{sessionDetail.session.course_name}</h3>
+                    <p className="text-sm text-gray-400">
+                      {SUBJECT_LABELS[sessionDetail.session.subject] || sessionDetail.session.subject} · código {sessionDetail.session.code}
+                    </p>
+                    <p className="text-sm text-gray-400">
+                      {formatDateTime(sessionDetail.session.started_at)} — {formatDateTime(sessionDetail.session.ended_at)}
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={closeSessionModal}
+                    className="text-gray-500 hover:text-gray-300 shrink-0"
+                  >
+                    Cerrar
+                  </button>
+                </div>
+
+                {sessionDetail.students.length === 0 ? (
+                  <p className="text-gray-400 text-sm">Sin respuestas registradas.</p>
+                ) : (
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="text-left text-gray-400 border-b border-gray-700">
+                          <th className="py-2 pr-3">Alumno</th>
+                          <th className="py-2 pr-3">Correctas</th>
+                          <th className="py-2 pr-3">Tiempo prom.</th>
+                          <th className="py-2 pr-3">Tokens</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {sessionDetail.students.map(s => (
+                          <tr key={s.student_id} className="border-b border-gray-800">
+                            <td className="py-2 pr-3">{s.name}</td>
+                            <td className="py-2 pr-3">{s.correct_answers}/{s.total_answers}</td>
+                            <td className="py-2 pr-3">{formatMs(s.avg_time_ms)}</td>
+                            <td className="py-2 pr-3 text-gold font-semibold">{s.tokens_earned}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

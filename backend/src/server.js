@@ -8,6 +8,7 @@ const runMigrations = require('./db/migrate');
 const authRoutes = require('./routes/authRoutes');
 const roomRoutes = require('./routes/roomRoutes');
 const questionRoutes = require('./routes/questionRoutes');
+const sessionRoutes = require('./routes/sessionRoutes');
 const { setupGameSocket } = require('./sockets/gameSocket');
 
 const app = express();
@@ -38,6 +39,7 @@ app.get('/health', (_, res) => res.json({ status: 'ok', service: 'academia-backe
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
 app.use('/api/questions', questionRoutes);
+app.use('/api/sessions', sessionRoutes);
 
 setupGameSocket(io);
 

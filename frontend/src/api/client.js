@@ -22,6 +22,12 @@ export const createRoom = (courseName, subject) =>
 export const getCourses = () =>
   client.get('/api/rooms/meta/courses');
 
+export const getRoomHistory = () =>
+  client.get('/api/rooms/history');
+
+export const getSessionDetail = (id) =>
+  client.get(`/api/sessions/${id}`);
+
 export const SOCKET_URL = import.meta.env.VITE_WS_URL || 'http://localhost:4100';
 
 export default client;

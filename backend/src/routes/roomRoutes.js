@@ -83,6 +83,43 @@ router.post('/', authenticateToken, requireTeacher, async (req, res) => {
   }
 });
 
+// Get teacher's room history with session/student counts
+router.get('/history', authenticateToken, requireTeacher, async (req, res) => {
+  try {
+    const { rows } = await pool.query(`
+      SELECT r.id, r.code, r.course_name, r.subject, r.status, r.created_at, r.closed_at,
+             COALESCE(answered.student_count, 0)::int AS student_count,
+             COALESCE(sessions.sessions, '[]'::json) AS sessions
+      FROM rooms r
+      LEFT JOIN LATERAL (
+        SELECT json_agg(json_build_object(
+          'id', g.id,
+          'game_type', g.game_type,
+          'subject', g.subject,
+          'started_at', g.started_at,
+          'ended_at', g.ended_at
+        ) ORDER BY g.started_at) AS sessions
+        FROM game_sessions g
+        WHERE g.room_id = r.id
+      ) sessions ON true
+      LEFT JOIN LATERAL (
+        SELECT COUNT(DISTINCT sa.student_id) AS student_count
+        FROM student_answers sa
+        JOIN game_sessions g2 ON g2.id = sa.session_id
+        WHERE g2.room_id = r.id
+      ) answered ON true
+      WHERE r.teacher_id = $1
+      ORDER BY r.created_at DESC
+      LIMIT 50
+    `, [req.user.id]);
+
+    res.json(rows);
+  } catch (err) {
+    logger.error('Get room history error:', err.message);
+    res.status(500).json({ error: 'Error al obtener el historial de salas' });
+  }
+});
+
 // Get room info + student list (public — students need this to join)
 router.get('/:code', async (req, res) => {
   const { code } = req.params;
