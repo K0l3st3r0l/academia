@@ -12,7 +12,16 @@ const io = new Server(server, {
   cors: { origin: allowedOrigins, methods: ['GET', 'POST'] },
 });
 
+app.set('io', io);
 setupGameSocket(io);
+
+process.on('unhandledRejection', (reason) => {
+  logger.error({ stack: reason?.stack, reason: reason?.message || reason }, 'Unhandled promise rejection');
+});
+
+process.on('uncaughtException', (err) => {
+  logger.error({ stack: err?.stack }, 'Uncaught exception');
+});
 
 const PORT = process.env.PORT || 4100;
 

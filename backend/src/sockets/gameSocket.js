@@ -15,6 +15,26 @@ function getRoomState(code) {
   return rooms.get(code);
 }
 
+function getActiveRoomsCount() {
+  return rooms.size;
+}
+
+function withErrorLogging(socket, eventName, handler) {
+  return async (payload, ...rest) => {
+    try {
+      await handler(payload, ...rest);
+    } catch (err) {
+      logger.error({
+        err,
+        stack: err?.stack,
+        event: eventName,
+        roomCode: payload?.roomCode ?? socket.data?.roomCode,
+        actor: socket.data?.userId ?? socket.data?.studentDbId ?? socket.id,
+      }, `game socket handler error: ${eventName}`);
+    }
+  };
+}
+
 function deriveGradeLevel(courseName) {
   if (!courseName) return null;
   const match = courseName.match(/(\d+)\s*°/);
@@ -76,7 +96,7 @@ function setupGameSocket(io) {
   io.on('connection', (socket) => {
 
     // ── Teacher joins room ──────────────────────────────────────────────
-    socket.on('teacher:join', async ({ token, roomCode }) => {
+    socket.on('teacher:join', withErrorLogging(socket, 'teacher:join', async ({ token, roomCode }) => {
       try {
         const user = jwt.verify(token, process.env.JWT_SECRET);
         const { rows } = await pool.query(
@@ -128,10 +148,10 @@ function setupGameSocket(io) {
       } catch (err) {
         socket.emit('error', { message: 'No autorizado' });
       }
-    });
+    }));
 
     // ── Student joins room ──────────────────────────────────────────────
-    socket.on('student:join', async ({ roomCode, studentDbId, displayName }) => {
+    socket.on('student:join', withErrorLogging(socket, 'student:join', async ({ roomCode, studentDbId, displayName }) => {
       try {
         const { rows: roomRows } = await pool.query(
           'SELECT * FROM rooms WHERE code = $1 AND status != $2',
@@ -256,10 +276,10 @@ function setupGameSocket(io) {
         logger.error('student:join error', err);
         socket.emit('error', { message: 'Error al unirse a la sala' });
       }
-    });
+    }));
 
     // ── Teacher starts the game ─────────────────────────────────────────
-    socket.on('game:start', async ({ roomCode }) => {
+    socket.on('game:start', withErrorLogging(socket, 'game:start', async ({ roomCode }) => {
       const state = getRoomState(roomCode);
       if (!state) return socket.emit('error', { message: 'Sala no existe en memoria' });
       if (socket.id !== state.teacherSocketId) return socket.emit('error', { message: 'Solo el docente puede iniciar' });
@@ -323,10 +343,10 @@ function setupGameSocket(io) {
 
       io.to(roomCode).emit('game:started', { totalQuestions: state.questions.length });
       sendNextQuestion(io, roomCode);
-    });
+    }));
 
     // ── Teacher manually advances (skips remaining time) ───────────────
-    socket.on('game:next', ({ roomCode }) => {
+    socket.on('game:next', withErrorLogging(socket, 'game:next', ({ roomCode }) => {
       const state = getRoomState(roomCode);
       if (!state || socket.id !== state.teacherSocketId) return;
       if (state.status !== 'playing') return;
@@ -334,10 +354,10 @@ function setupGameSocket(io) {
       state.paused = false;
       state.pausedAt = null;
       revealAnswer(io, roomCode);
-    });
+    }));
 
     // ── Teacher pauses the current question ────────────────────────────
-    socket.on('game:pause', ({ roomCode }) => {
+    socket.on('game:pause', withErrorLogging(socket, 'game:pause', ({ roomCode }) => {
       const state = getRoomState(roomCode);
       if (!state || socket.id !== state.teacherSocketId) return;
       if (state.status !== 'playing' || state.paused) return;
@@ -348,10 +368,10 @@ function setupGameSocket(io) {
       state.pausedTimeRemaining = Math.max(0, (state.questionStartedAt + QUESTION_TIME_MS) - Date.now());
 
       io.to(roomCode).emit('game:paused', { timeRemaining: state.pausedTimeRemaining });
-    });
+    }));
 
     // ── Teacher resumes the current question ───────────────────────────
-    socket.on('game:resume', ({ roomCode }) => {
+    socket.on('game:resume', withErrorLogging(socket, 'game:resume', ({ roomCode }) => {
       const state = getRoomState(roomCode);
       if (!state || socket.id !== state.teacherSocketId) return;
       if (state.status !== 'playing' || !state.paused) return;
@@ -365,20 +385,20 @@ function setupGameSocket(io) {
       io.to(roomCode).emit('game:resumed', { timeRemaining: state.pausedTimeRemaining });
 
       state.timer = setTimeout(() => revealAnswer(io, roomCode), state.pausedTimeRemaining);
-    });
+    }));
 
     // ── Teacher stops the game early ───────────────────────────────────
-    socket.on('game:stop', ({ roomCode }) => {
+    socket.on('game:stop', withErrorLogging(socket, 'game:stop', ({ roomCode }) => {
       const state = getRoomState(roomCode);
       if (!state || socket.id !== state.teacherSocketId) return;
       if (state.status !== 'playing') return;
       clearRoomTimer(state);
       state.paused = false;
       endGame(io, roomCode);
-    });
+    }));
 
     // ── Student submits answer ──────────────────────────────────────────
-    socket.on('game:answer', ({ roomCode, answer }) => {
+    socket.on('game:answer', withErrorLogging(socket, 'game:answer', ({ roomCode, answer }) => {
       const state = getRoomState(roomCode);
       if (!state || state.status !== 'playing' || state.paused) return;
 
@@ -421,10 +441,10 @@ function setupGameSocket(io) {
         clearRoomTimer(state);
         revealAnswer(io, roomCode);
       }
-    });
+    }));
 
     // ── Disconnection ───────────────────────────────────────────────────
-    socket.on('disconnect', () => {
+    socket.on('disconnect', withErrorLogging(socket, 'disconnect', () => {
       const { role, roomCode } = socket.data || {};
       if (!roomCode) return;
 
@@ -457,7 +477,7 @@ function setupGameSocket(io) {
           })),
         });
       }
-    });
+    }));
   });
 }
 
@@ -615,4 +635,4 @@ async function endGame(io, roomCode) {
   setTimeout(() => rooms.delete(roomCode), 10 * 60 * 1000);
 }
 
-module.exports = { setupGameSocket };
+module.exports = { setupGameSocket, getActiveRoomsCount };

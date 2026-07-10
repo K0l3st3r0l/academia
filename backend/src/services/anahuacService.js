@@ -18,46 +18,43 @@ function handleAnahuacError(err, context) {
   throw err;
 }
 
-async function loginToAnahuac(email, password) {
+async function callAnahuac(method, endpoint, config, context) {
+  const start = Date.now();
   try {
-    const res = await anahuac.post('/api/users/login', { email, password });
-    return res.data;
+    const res = await anahuac.request({ method, url: endpoint, ...config });
+    logger.info({ endpoint, method, latencyMs: Date.now() - start, status: res.status }, 'Anahuac call');
+    return res;
   } catch (err) {
-    handleAnahuacError(err, 'loginToAnahuac');
+    const status = err.response?.status ?? err.statusCode ?? null;
+    logger.warn({ endpoint, method, latencyMs: Date.now() - start, status }, 'Anahuac call failed');
+    handleAnahuacError(err, context);
   }
+}
+
+async function loginToAnahuac(email, password) {
+  const res = await callAnahuac('post', '/api/users/login', { data: { email, password } }, 'loginToAnahuac');
+  return res.data;
 }
 
 async function getAnahuacProfile(anahuacToken) {
-  try {
-    const res = await anahuac.get('/api/users/me', {
-      headers: { Authorization: `Bearer ${anahuacToken}` },
-    });
-    return res.data;
-  } catch (err) {
-    handleAnahuacError(err, 'getAnahuacProfile');
-  }
+  const res = await callAnahuac('get', '/api/users/me', {
+    headers: { Authorization: `Bearer ${anahuacToken}` },
+  }, 'getAnahuacProfile');
+  return res.data;
 }
 
 async function getSchoolCourses(anahuacToken) {
-  try {
-    const res = await anahuac.get('/api/courses/school-courses', {
-      headers: { Authorization: `Bearer ${anahuacToken}` },
-    });
-    return res.data;
-  } catch (err) {
-    handleAnahuacError(err, 'getSchoolCourses');
-  }
+  const res = await callAnahuac('get', '/api/courses/school-courses', {
+    headers: { Authorization: `Bearer ${anahuacToken}` },
+  }, 'getSchoolCourses');
+  return res.data;
 }
 
 async function getStudentsByCourse(anahuacToken, courseName) {
-  try {
-    const res = await anahuac.get('/api/students?activo=true', {
-      headers: { Authorization: `Bearer ${anahuacToken}` },
-    });
-    return res.data.filter(s => s.curso === courseName);
-  } catch (err) {
-    handleAnahuacError(err, 'getStudentsByCourse');
-  }
+  const res = await callAnahuac('get', '/api/students?activo=true', {
+    headers: { Authorization: `Bearer ${anahuacToken}` },
+  }, 'getStudentsByCourse');
+  return res.data.filter(s => s.curso === courseName);
 }
 
 module.exports = { loginToAnahuac, getAnahuacProfile, getSchoolCourses, getStudentsByCourse };
