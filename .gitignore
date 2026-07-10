@@ -7,3 +7,6 @@
 
 # Graphify - regenerar con: bash /root/apps/wiki/brain-setup.sh /root/apps
 graphify-out/
+
+# Backups de base de datos
+/backups/
