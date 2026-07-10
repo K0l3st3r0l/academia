@@ -36,6 +36,10 @@ function buildLeaderboard(students) {
     }));
 }
 
+function connectedStudents(state) {
+  return [...state.students.values()].filter(s => s.connected !== false);
+}
+
 function clearRoomTimer(state) {
   if (state.timer) {
     clearTimeout(state.timer);
@@ -115,7 +119,7 @@ function setupGameSocket(io) {
           subject: room.subject,
           courseName: room.course_name,
           status: state.status,
-          participants: [...state.students.values()].map(s => ({
+          participants: connectedStudents(state).map(s => ({
             studentId: s.studentId,
             name: s.displayName,
             score: s.score,
@@ -180,6 +184,7 @@ function setupGameSocket(io) {
           // Reconnect: migrate existing session to new socket
           state.students.delete(existing.socketId);
           existing.socketId = socket.id;
+          existing.connected = true;
           state.students.set(socket.id, existing);
 
           socket.emit('room:joined', {
@@ -221,6 +226,7 @@ function setupGameSocket(io) {
             correctCount: 0,
             tokensEarned: 0,
             answers: [],
+            connected: true,
           });
 
           socket.emit('room:joined', {
@@ -240,7 +246,7 @@ function setupGameSocket(io) {
         });
 
         io.to(roomCode).emit('room:participants', {
-          participants: [...state.students.values()].map(s => ({
+          participants: connectedStudents(state).map(s => ({
             studentId: s.studentId,
             name: s.displayName,
             score: s.score,
@@ -403,14 +409,15 @@ function setupGameSocket(io) {
       });
 
       // Notify teacher of new answer (count only, not which student answered)
+      const totalConnected = connectedStudents(state).length;
       io.to(state.teacherSocketId).emit('game:answer_count', {
         questionIndex: qi,
         count: qAnswers.size,
-        total: state.students.size,
+        total: totalConnected,
       });
 
-      // If all students answered, reveal immediately
-      if (qAnswers.size >= state.students.size) {
+      // If all connected students answered, reveal immediately
+      if (qAnswers.size >= totalConnected) {
         clearRoomTimer(state);
         revealAnswer(io, roomCode);
       }
@@ -426,9 +433,12 @@ function setupGameSocket(io) {
 
       if (role === 'student') {
         const student = state.students.get(socket.id);
-        state.students.delete(socket.id);
 
+        // Keep the student's state (score, answers) so a reconnect within the
+        // same game can find it via studentDbId and migrate it to the new socket.
         if (student) {
+          student.connected = false;
+
           trackEvent({
             actorType: 'student',
             actorId: student.studentDbId,
@@ -440,7 +450,7 @@ function setupGameSocket(io) {
         }
 
         io.to(roomCode).emit('room:participants', {
-          participants: [...state.students.values()].map(s => ({
+          participants: connectedStudents(state).map(s => ({
             studentId: s.studentId,
             name: s.displayName,
             score: s.score,
