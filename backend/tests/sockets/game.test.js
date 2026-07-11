@@ -4,6 +4,7 @@ import { startTestServer } from '../helpers/socketServer.js';
 import { createTeacher, createStudent, createRoom, createQuestion, signToken } from '../helpers/fixtures.js';
 
 const { default: pool } = await import('../../src/db/index.js');
+const { getRoomState, QUESTION_TIME_MS } = await import('../../src/sockets/gameSocket.js');
 
 let testServer;
 
@@ -185,6 +186,93 @@ describe('flujo de juego por sockets', () => {
     expect(s2Answers).toHaveLength(1);
     expect(s2Answers[0].answer).toBe('Dos');
     expect(s2Answers[0].is_correct).toBe(false);
+
+    teacherSocket.disconnect();
+    s1.disconnect();
+    s2.disconnect();
+  });
+
+  it('descarta con gracia una respuesta con question_index desactualizado, sin romper el juego', async () => {
+    const { teacher, student1, student2, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+
+    const teacherSocket = await connectClient();
+    const s1 = await connectClient();
+    const s2 = await connectClient();
+
+    const teacherToken = signToken({ id: teacher.id, roles: ['teacher'] });
+    await teacherJoin(teacherSocket, teacherToken, room.code);
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    await studentJoin(s2, room.code, student2.id, 'Estudiante Dos');
+
+    const startedP = once(teacherSocket, 'game:started');
+    const q1P = once(s1, 'game:question');
+    teacherSocket.emit('game:start', { roomCode: room.code });
+    await startedP;
+    await q1P;
+
+    // s1 answers with a stale question_index (e.g. a queued offline answer for a question that already passed)
+    const rejectedP = once(s1, 'game:answer_rejected');
+    s1.emit('game:answer', { roomCode: room.code, answer: 'Uno', questionIndex: 99 });
+    const rejected = await rejectedP;
+    expect(rejected.reason).toBe('stale_question_index');
+    expect(rejected.currentQuestionIndex).toBe(0);
+
+    // Game keeps working normally afterwards: a valid answer from s1 is still accepted and counted.
+    const revealP = once(teacherSocket, 'game:reveal');
+    s1.emit('game:answer', { roomCode: room.code, answer: 'Uno', questionIndex: 0 });
+    s2.emit('game:answer', { roomCode: room.code, answer: 'Dos' });
+    const reveal = await revealP;
+    const s1Result = reveal.results.find(r => r.name === 'Estudiante Uno');
+    expect(s1Result.correct).toBe(true);
+
+    const endedP = once(teacherSocket, 'game:end');
+    teacherSocket.emit('game:stop', { roomCode: room.code });
+    await endedP;
+
+    teacherSocket.disconnect();
+    s1.disconnect();
+    s2.disconnect();
+  });
+
+  it('descarta con gracia una respuesta fuera de la ventana de tiempo de su pregunta, sin romper el juego', async () => {
+    const { teacher, student1, student2, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+
+    const teacherSocket = await connectClient();
+    const s1 = await connectClient();
+    const s2 = await connectClient();
+
+    const teacherToken = signToken({ id: teacher.id, roles: ['teacher'] });
+    await teacherJoin(teacherSocket, teacherToken, room.code);
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    await studentJoin(s2, room.code, student2.id, 'Estudiante Dos');
+
+    const startedP = once(teacherSocket, 'game:started');
+    const q1P = once(s1, 'game:question');
+    teacherSocket.emit('game:start', { roomCode: room.code });
+    await startedP;
+    await q1P;
+
+    // Simulate the question's time window having already elapsed (e.g. answer
+    // arrived very late from a client that just came back online).
+    const state = getRoomState(room.code);
+    state.questionStartedAt = Date.now() - (QUESTION_TIME_MS + 5000);
+
+    const rejectedP = once(s1, 'game:answer_rejected');
+    s1.emit('game:answer', { roomCode: room.code, answer: 'Uno', questionIndex: 0 });
+    const rejected = await rejectedP;
+    expect(rejected.reason).toBe('time_window_expired');
+
+    // Restore the clock and confirm the game still runs to completion normally
+    // (both students answering triggers the immediate reveal, no need to wait for the timer).
+    state.questionStartedAt = Date.now();
+    const revealP = once(teacherSocket, 'game:reveal');
+    s1.emit('game:answer', { roomCode: room.code, answer: 'Uno', questionIndex: 0 });
+    s2.emit('game:answer', { roomCode: room.code, answer: 'Dos', questionIndex: 0 });
+    await revealP;
+
+    const endedP = once(teacherSocket, 'game:end');
+    teacherSocket.emit('game:stop', { roomCode: room.code });
+    await endedP;
 
     teacherSocket.disconnect();
     s1.disconnect();

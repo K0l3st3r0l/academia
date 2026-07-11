@@ -12,8 +12,11 @@ class SocketService {
     _socket = io.io(url, io.OptionBuilder()
       .setTransports(['websocket'])
       .enableReconnection()
-      .setReconnectionAttempts(10)
+      // Cortes de red en la tablet pueden durar minutos: reintentar de forma
+      // prácticamente indefinida en vez de rendirse tras pocos intentos.
+      .setReconnectionAttempts(2147483647)
       .setReconnectionDelay(1000)
+      .setReconnectionDelayMax(10000)
       .build());
   }
 

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { useAuth } from '../context/AuthContext';
-import { SOCKET_URL } from '../api/client';
+import { SOCKET_URL, closeRoom } from '../api/client';
 
 const OPTION_COLORS = ['bg-blue-600', 'bg-orange-500', 'bg-green-600', 'bg-red-600'];
 
@@ -21,6 +21,9 @@ export default function TeacherGame() {
   const [endSummary, setEndSummary] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
   const [confirmStop, setConfirmStop] = useState(false);
+  const [roomId, setRoomId] = useState(null);
+  const [confirmClose, setConfirmClose] = useState(false);
+  const [closingRoom, setClosingRoom] = useState(false);
   const timerRef = useRef(null);
 
   useEffect(() => {
@@ -33,6 +36,7 @@ export default function TeacherGame() {
     socket.on('room:joined', (data) => {
       setPhase(data.status === 'waiting' ? 'waiting' : 'playing');
       setParticipants(data.participants || []);
+      setRoomId(data.roomId || null);
     });
 
     socket.on('room:participants', (data) => setParticipants(data.participants));
@@ -105,24 +109,70 @@ export default function TeacherGame() {
   const resumeGame = () => socketRef.current?.emit('game:resume', { roomCode: code });
   const stopGame = () => { setConfirmStop(false); socketRef.current?.emit('game:stop', { roomCode: code }); };
 
+  const handleCloseRoom = async () => {
+    if (!roomId) return;
+    setClosingRoom(true);
+    try {
+      await closeRoom(roomId);
+      navigate('/teacher');
+    } catch (err) {
+      alert(err.response?.data?.error || 'Error al cerrar la sala');
+      setClosingRoom(false);
+      setConfirmClose(false);
+    }
+  };
+
   const projectorUrl = `${window.location.origin}/projector/${code}`;
 
   return (
     <div className="min-h-screen p-4 max-w-4xl mx-auto">
       {/* Header */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 gap-2">
         <div>
           <span className="text-gray-400 text-sm">Sala: </span>
           <span className="text-2xl font-black text-gold tracking-widest">{code}</span>
         </div>
-        <a
-          href={projectorUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="text-sm bg-surface border border-gray-700 px-3 py-1.5 rounded-lg hover:border-brand transition-colors"
-        >
-          Abrir proyector ↗
-        </a>
+        <div className="flex items-center gap-2">
+          <a
+            href={projectorUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm bg-surface border border-gray-700 px-3 py-1.5 rounded-lg hover:border-brand transition-colors"
+          >
+            Abrir proyector ↗
+          </a>
+          {phase !== 'ended' && (
+            confirmClose ? (
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-400">¿Cerrar sala?</span>
+                <button
+                  type="button"
+                  onClick={handleCloseRoom}
+                  disabled={closingRoom}
+                  className="text-sm bg-wrong hover:bg-red-700 disabled:opacity-50 text-white font-bold px-3 py-1.5 rounded-lg transition-colors"
+                >
+                  {closingRoom ? 'Cerrando…' : 'Sí, cerrar'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setConfirmClose(false)}
+                  disabled={closingRoom}
+                  className="text-sm bg-gray-700 hover:bg-gray-600 disabled:opacity-50 text-white font-bold px-3 py-1.5 rounded-lg transition-colors"
+                >
+                  Cancelar
+                </button>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setConfirmClose(true)}
+                className="text-sm bg-surface border border-gray-700 text-gray-400 hover:text-wrong hover:border-wrong px-3 py-1.5 rounded-lg transition-colors"
+              >
+                Cerrar sala
+              </button>
+            )
+          )}
+        </div>
       </div>
 
       {/* Waiting phase */}

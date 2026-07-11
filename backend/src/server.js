@@ -4,7 +4,7 @@ const { Server } = require('socket.io');
 const logger = require('./logger');
 const runMigrations = require('./db/migrate');
 const { app, allowedOrigins } = require('./app');
-const { setupGameSocket } = require('./sockets/gameSocket');
+const { setupGameSocket, closeRoomForTeacher } = require('./sockets/gameSocket');
 
 const server = http.createServer(app);
 
@@ -13,6 +13,7 @@ const io = new Server(server, {
 });
 
 app.set('io', io);
+app.set('closeRoomForTeacher', closeRoomForTeacher);
 setupGameSocket(io);
 
 process.on('unhandledRejection', (reason) => {

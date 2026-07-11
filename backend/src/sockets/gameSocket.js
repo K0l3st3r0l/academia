@@ -136,6 +136,7 @@ function setupGameSocket(io) {
         socket.emit('room:joined', {
           role: 'teacher',
           roomCode,
+          roomId: room.id,
           subject: room.subject,
           courseName: room.course_name,
           status: state.status,
@@ -398,7 +399,7 @@ function setupGameSocket(io) {
     }));
 
     // ── Student submits answer ──────────────────────────────────────────
-    socket.on('game:answer', withErrorLogging(socket, 'game:answer', ({ roomCode, answer }) => {
+    socket.on('game:answer', withErrorLogging(socket, 'game:answer', ({ roomCode, answer, questionIndex }) => {
       const state = getRoomState(roomCode);
       if (!state || state.status !== 'playing' || state.paused) return;
 
@@ -406,6 +407,27 @@ function setupGameSocket(io) {
       if (!student) return;
 
       const qi = state.currentQuestionIndex;
+
+      // Answers can arrive late from a queued/offline client for a question
+      // that has since moved on, or after that question's own time window
+      // already closed. Discard gracefully instead of scoring/crashing.
+      if (questionIndex != null && questionIndex !== qi) {
+        logger.warn({
+          event: 'game:answer', roomCode, actor: student.studentDbId,
+          receivedQuestionIndex: questionIndex, currentQuestionIndex: qi,
+        }, 'game:answer rechazada: question_index desactualizado');
+        return socket.emit('game:answer_rejected', { reason: 'stale_question_index', questionIndex, currentQuestionIndex: qi });
+      }
+
+      const elapsedMs = Date.now() - state.questionStartedAt;
+      if (elapsedMs > QUESTION_TIME_MS) {
+        logger.warn({
+          event: 'game:answer', roomCode, actor: student.studentDbId,
+          questionIndex: qi, elapsedMs,
+        }, 'game:answer rechazada: fuera de la ventana de tiempo de la pregunta');
+        return socket.emit('game:answer_rejected', { reason: 'time_window_expired', questionIndex: qi });
+      }
+
       if (!state.questionAnswers.has(qi)) state.questionAnswers.set(qi, new Map());
       const qAnswers = state.questionAnswers.get(qi);
 
@@ -635,4 +657,28 @@ async function endGame(io, roomCode) {
   setTimeout(() => rooms.delete(roomCode), 10 * 60 * 1000);
 }
 
-module.exports = { setupGameSocket, getActiveRoomsCount };
+// Called from the REST layer when a teacher closes a room. If there's an
+// active game in memory it's ended the same clean way game:stop does
+// (persists results, awards tokens, notifies clients via game:end).
+// Otherwise just drops any lingering lobby state for that room.
+async function closeRoomForTeacher(io, roomCode) {
+  const state = getRoomState(roomCode);
+  if (!state) return { hadActiveGame: false };
+
+  if (state.status === 'playing') {
+    await endGame(io, roomCode);
+    return { hadActiveGame: true };
+  }
+
+  clearRoomTimer(state);
+  rooms.delete(roomCode);
+  return { hadActiveGame: false };
+}
+
+module.exports = {
+  setupGameSocket,
+  getActiveRoomsCount,
+  closeRoomForTeacher,
+  getRoomState,
+  QUESTION_TIME_MS,
+};

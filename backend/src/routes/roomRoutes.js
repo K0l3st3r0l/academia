@@ -83,6 +83,46 @@ router.post('/', authenticateToken, requireTeacher, async (req, res) => {
   }
 });
 
+// Teacher closes a room they own — ends any active game in memory cleanly
+// (same path as game:stop) and marks the room closed in the DB.
+router.post('/:id/close', authenticateToken, requireTeacher, async (req, res) => {
+  const { id } = req.params;
+  try {
+    const { rows } = await pool.query('SELECT * FROM rooms WHERE id = $1', [id]);
+    if (!rows.length) return res.status(404).json({ error: 'Sala no encontrada' });
+
+    const room = rows[0];
+    if (room.teacher_id !== req.user.id) {
+      return res.status(403).json({ error: 'No puedes cerrar una sala de otro docente' });
+    }
+    if (room.status === 'closed') {
+      return res.json({ room });
+    }
+
+    const io = req.app.get('io');
+    const closeRoomForTeacher = req.app.get('closeRoomForTeacher');
+    const { hadActiveGame } = await closeRoomForTeacher(io, room.code);
+
+    const { rows: updated } = await pool.query(
+      "UPDATE rooms SET status = 'closed', closed_at = COALESCE(closed_at, NOW()) WHERE id = $1 RETURNING *",
+      [id]
+    );
+
+    trackEvent({
+      actorType: 'teacher',
+      actorId: req.user.id,
+      eventType: 'room_closed',
+      roomId: room.id,
+      payload: { code: room.code, hadActiveGame },
+    });
+
+    res.json({ room: updated[0] });
+  } catch (err) {
+    logger.error('Close room error:', err.message);
+    res.status(500).json({ error: 'Error al cerrar la sala' });
+  }
+});
+
 // Get teacher's room history with session/student counts
 router.get('/history', authenticateToken, requireTeacher, async (req, res) => {
   try {

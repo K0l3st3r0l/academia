@@ -25,6 +25,9 @@ export const getCourses = () =>
 export const getRoomHistory = () =>
   client.get('/api/rooms/history');
 
+export const closeRoom = (id) =>
+  client.post(`/api/rooms/${id}/close`);
+
 export const getSessionDetail = (id) =>
   client.get(`/api/sessions/${id}`);
 

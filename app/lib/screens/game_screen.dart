@@ -7,6 +7,7 @@ import '../services/socket_service.dart';
 import '../theme/app_theme.dart';
 
 enum GamePhase { waiting, question, answered, reveal, paused, ended }
+enum ConnectionStatus { connected, reconnecting }
 
 class GameScreen extends StatefulWidget {
   final String roomCode;
@@ -30,6 +31,9 @@ class _GameScreenState extends State<GameScreen> {
   int _timeLeft = 0;
   Timer? _timer;
   bool _confirmLeave = false;
+  ConnectionStatus _connectionStatus = ConnectionStatus.connected;
+  String _studentId = '';
+  final List<Map<String, dynamic>> _pendingAnswers = [];
 
   static const _optionIcons = ['▲', '●', '■', '✦'];
 
@@ -48,9 +52,24 @@ class _GameScreenState extends State<GameScreen> {
       if (mounted) context.go('/join');
       return;
     }
+    _studentId = studentId;
 
     _socket = SocketService(url: const String.fromEnvironment('BACKEND_URL', defaultValue: 'https://games.laravas.com'));
     _socket.connect();
+
+    // 'connect' fires on the first connection AND on every automatic
+    // reconnection, so re-emitting student:join here (instead of once,
+    // right after connect()) recovers the session after any network cut.
+    _socket.on('connect', (_) {
+      if (!mounted) return;
+      setState(() { _connectionStatus = ConnectionStatus.connected; });
+      _emitJoin();
+    });
+
+    _socket.on('disconnect', (_) {
+      if (!mounted) return;
+      setState(() { _connectionStatus = ConnectionStatus.reconnecting; });
+    });
 
     _socket.on('room:joined', (data) {
       if (data['reconnected'] == true) {
@@ -58,6 +77,7 @@ class _GameScreenState extends State<GameScreen> {
       } else {
         setState(() { _phase = GamePhase.waiting; });
       }
+      _flushPendingAnswers();
     });
 
     _socket.on('game:started', (_) => setState(() { _phase = GamePhase.waiting; }));
@@ -114,12 +134,44 @@ class _GameScreenState extends State<GameScreen> {
         context.go('/join');
       }
     });
+  }
 
+  void _emitJoin() {
     _socket.emit('student:join', {
       'roomCode': widget.roomCode,
-      'studentDbId': studentId,
+      'studentDbId': _studentId,
       'displayName': _displayName,
     });
+  }
+
+  void _sendAnswer(int questionIndex, String answer) {
+    if (_socket.connected) {
+      _socket.emit('game:answer', {
+        'roomCode': widget.roomCode,
+        'answer': answer,
+        'questionIndex': questionIndex,
+      });
+    } else {
+      _pendingAnswers.add({
+        'question_index': questionIndex,
+        'answer': answer,
+        'timestamp': DateTime.now().millisecondsSinceEpoch,
+      });
+    }
+  }
+
+  void _flushPendingAnswers() {
+    if (_pendingAnswers.isEmpty || !_socket.connected) return;
+    final toSend = List<Map<String, dynamic>>.from(_pendingAnswers);
+    _pendingAnswers.clear();
+    for (final item in toSend) {
+      _socket.emit('game:answer', {
+        'roomCode': widget.roomCode,
+        'answer': item['answer'],
+        'questionIndex': item['question_index'],
+      });
+    }
+    if (mounted) setState(() {});
   }
 
   void _startTimer(int timeMs) {
@@ -134,7 +186,7 @@ class _GameScreenState extends State<GameScreen> {
   void _submitAnswer(String answer) {
     if (_phase != GamePhase.question || _selectedAnswer != null) return;
     setState(() { _selectedAnswer = answer; _phase = GamePhase.answered; });
-    _socket.emit('game:answer', {'roomCode': widget.roomCode, 'answer': answer});
+    _sendAnswer(_question!.questionIndex, answer);
   }
 
   void _leave() {
@@ -158,8 +210,41 @@ class _GameScreenState extends State<GameScreen> {
                 ],
               ),
             ),
+            Positioned(top: 8, right: 8, child: _buildConnectionBadge()),
             if (_confirmLeave) _buildLeaveDialog(),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildConnectionBadge() {
+    final reconnecting = _connectionStatus == ConnectionStatus.reconnecting;
+    return IgnorePointer(
+      child: AnimatedOpacity(
+        opacity: reconnecting ? 1 : 0.4,
+        duration: const Duration(milliseconds: 300),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          decoration: BoxDecoration(
+            color: AppColors.card.withValues(alpha: 0.9),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Row(mainAxisSize: MainAxisSize.min, children: [
+            Container(
+              width: 8,
+              height: 8,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: reconnecting ? AppColors.gold : AppColors.correct,
+              ),
+            ),
+            const SizedBox(width: 6),
+            Text(
+              reconnecting ? 'Reconectando…' : 'Conectado',
+              style: const TextStyle(fontSize: 11, color: AppColors.textSecondary),
+            ),
+          ]),
         ),
       ),
     );
@@ -301,9 +386,14 @@ class _GameScreenState extends State<GameScreen> {
           ),
         ),
         if (_phase == GamePhase.answered)
-          const Padding(
-            padding: EdgeInsets.only(top: 8),
-            child: Text('✓ Respuesta enviada — esperando al resto…', style: TextStyle(color: AppColors.textSecondary)),
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: Text(
+              _pendingAnswers.isNotEmpty
+                  ? '📡 Respuesta guardada, enviando…'
+                  : '✓ Respuesta enviada — esperando al resto…',
+              style: const TextStyle(color: AppColors.textSecondary),
+            ),
           ),
       ],
     );
@@ -427,6 +517,10 @@ class _GameScreenState extends State<GameScreen> {
   @override
   void dispose() {
     _timer?.cancel();
+    // Unregister before disconnecting so the resulting 'disconnect' event
+    // can't trigger a setState() while the widget is being torn down.
+    _socket.off('connect');
+    _socket.off('disconnect');
     _socket.disconnect();
     super.dispose();
   }

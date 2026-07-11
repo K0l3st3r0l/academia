@@ -3,10 +3,12 @@ import { Server } from 'socket.io';
 
 export async function startTestServer() {
   const { app } = await import('../../src/app.js');
-  const { setupGameSocket } = await import('../../src/sockets/gameSocket.js');
+  const { setupGameSocket, closeRoomForTeacher } = await import('../../src/sockets/gameSocket.js');
 
   const server = http.createServer(app);
   const io = new Server(server, { cors: { origin: '*' } });
+  app.set('io', io);
+  app.set('closeRoomForTeacher', closeRoomForTeacher);
   setupGameSocket(io);
 
   await new Promise((resolve) => server.listen(0, resolve));
