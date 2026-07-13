@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { getStudentToken } from './studentAuth';
 
 const API_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4100';
 
@@ -10,8 +11,33 @@ client.interceptors.request.use((config) => {
   return config;
 });
 
+// Instancia separada para alumnos: usa su propio token (academia_student_token)
+// en vez del token de docente, para que ambas sesiones puedan convivir en el mismo navegador.
+const studentClient = axios.create({ baseURL: API_URL });
+
+studentClient.interceptors.request.use((config) => {
+  const token = getStudentToken();
+  if (token) config.headers.Authorization = `Bearer ${token}`;
+  return config;
+});
+
 export const login = (email, password) =>
   client.post('/api/auth/login', { email, password });
+
+export const studentLogin = (rut, pin) =>
+  client.post('/api/auth/student-login', { rut, pin });
+
+export const getStudentMe = () =>
+  studentClient.get('/api/auth/student-me');
+
+export const getStudentsByCourse = (courseName) =>
+  client.get('/api/students', { params: { course_name: courseName } });
+
+export const resetStudentPin = (id) =>
+  client.post(`/api/students/${id}/reset-pin`);
+
+export const resetStudentPinsBulk = (courseName) =>
+  client.post('/api/students/reset-pins-bulk', { course_name: courseName });
 
 export const getRoom = (code) =>
   client.get(`/api/rooms/${code}`);

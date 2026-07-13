@@ -18,4 +18,11 @@ const requireTeacher = (req, res, next) => {
   next();
 };
 
-module.exports = { authenticateToken, requireTeacher };
+const requireStudent = (req, res, next) => {
+  if (!req.user?.roles?.includes('student')) {
+    return res.status(403).json({ error: 'Solo alumnos pueden realizar esta acción' });
+  }
+  next();
+};
+
+module.exports = { authenticateToken, requireTeacher, requireStudent };

@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { createRoom, getCourses, getRoomHistory, getSessionDetail } from '../api/client';
+import {
+  createRoom, getCourses, getRoomHistory, getSessionDetail,
+  getStudentsByCourse, resetStudentPin, resetStudentPinsBulk,
+} from '../api/client';
 
 const SUBJECTS = [
   { value: 'matematica', label: 'Matemática' },
@@ -41,6 +44,15 @@ export default function TeacherDashboard() {
   const [loadingSession, setLoadingSession] = useState(false);
   const [sessionError, setSessionError] = useState('');
 
+  const [pinCourse, setPinCourse] = useState('');
+  const [pinStudents, setPinStudents] = useState([]);
+  const [loadingPinStudents, setLoadingPinStudents] = useState(false);
+  const [pinError, setPinError] = useState('');
+  const [revealedPins, setRevealedPins] = useState({});
+  const [resettingId, setResettingId] = useState(null);
+  const [bulkPins, setBulkPins] = useState(null);
+  const [bulkLoading, setBulkLoading] = useState(false);
+
   useEffect(() => {
     getCourses()
       .then(res => setCourses(res.data))
@@ -52,6 +64,55 @@ export default function TeacherDashboard() {
       .catch(() => {})
       .finally(() => setLoadingHistory(false));
   }, []);
+
+  useEffect(() => {
+    if (!pinCourse) {
+      setPinStudents([]);
+      return;
+    }
+    setLoadingPinStudents(true);
+    setPinError('');
+    getStudentsByCourse(pinCourse)
+      .then(res => setPinStudents(res.data))
+      .catch(() => setPinError('No se pudieron cargar los alumnos de este curso.'))
+      .finally(() => setLoadingPinStudents(false));
+  }, [pinCourse]);
+
+  const handleResetPin = async (studentId) => {
+    setResettingId(studentId);
+    setPinError('');
+    try {
+      const res = await resetStudentPin(studentId);
+      setRevealedPins(prev => ({ ...prev, [studentId]: res.data.pin }));
+      setPinStudents(prev => prev.map(s => s.id === studentId ? { ...s, has_pin: true } : s));
+    } catch {
+      setPinError('No se pudo generar el PIN.');
+    } finally {
+      setResettingId(null);
+    }
+  };
+
+  const handleBulkReset = async () => {
+    if (!pinCourse) return;
+    if (!window.confirm(`¿Generar PINs nuevos para todo el curso "${pinCourse}"? Los PINs anteriores dejarán de funcionar.`)) return;
+    setBulkLoading(true);
+    setPinError('');
+    try {
+      const res = await resetStudentPinsBulk(pinCourse);
+      setBulkPins(res.data);
+      setPinStudents(prev => prev.map(s => ({ ...s, has_pin: true })));
+    } catch {
+      setPinError('No se pudieron generar los PINs del curso.');
+    } finally {
+      setBulkLoading(false);
+    }
+  };
+
+  const copyBulkPins = () => {
+    if (!bulkPins) return;
+    const text = bulkPins.map(s => `${s.nombre}: ${s.pin}`).join('\n');
+    navigator.clipboard.writeText(text);
+  };
 
   const openSession = async (sessionId) => {
     setSessionError('');
@@ -228,7 +289,115 @@ export default function TeacherDashboard() {
             </div>
           )}
         </div>
+
+        <div className="bg-card rounded-2xl p-6 shadow-xl mt-6">
+          <h2 className="text-xl font-bold mb-6">PINs de alumnos</h2>
+
+          <div className="mb-4">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">Curso</label>
+            <select
+              value={pinCourse}
+              onChange={(e) => { setPinCourse(e.target.value); setPinError(''); setRevealedPins({}); }}
+              className="w-full bg-surface border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand"
+            >
+              <option value="">Selecciona un curso…</option>
+              {courses.map(c => (
+                <option key={c.id} value={c.name}>{c.name}</option>
+              ))}
+            </select>
+          </div>
+
+          {pinError && (
+            <div className="bg-wrong/20 border border-wrong/40 text-wrong rounded-xl px-4 py-2 text-sm mb-4">
+              {pinError}
+            </div>
+          )}
+
+          {pinCourse && (
+            <>
+              <button
+                type="button"
+                onClick={handleBulkReset}
+                disabled={bulkLoading || loadingPinStudents || pinStudents.length === 0}
+                className="w-full bg-gold hover:brightness-95 disabled:opacity-40 text-surface font-black py-3 rounded-xl mb-4 transition-colors"
+              >
+                {bulkLoading ? 'Generando...' : 'Generar PINs del curso'}
+              </button>
+
+              {loadingPinStudents ? (
+                <p className="text-gray-400">Cargando alumnos...</p>
+              ) : pinStudents.length === 0 ? (
+                <p className="text-gray-400">No hay alumnos sincronizados para este curso. Crea una sala primero.</p>
+              ) : (
+                <div className="space-y-2">
+                  {pinStudents.map(s => (
+                    <div key={s.id} className="flex items-center justify-between bg-surface border border-gray-700 rounded-xl px-4 py-3 gap-3">
+                      <div>
+                        <p className="font-semibold">{s.first_name} {s.last_name}</p>
+                        <p className="text-xs text-gray-500">
+                          {s.has_pin ? 'PIN asignado' : 'Sin PIN asignado'}
+                          {s.last_login_at && ` · último ingreso ${formatDateTime(s.last_login_at)}`}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-3 shrink-0">
+                        {revealedPins[s.id] && (
+                          <span className="text-gold font-black text-lg tracking-widest">{revealedPins[s.id]}</span>
+                        )}
+                        <button
+                          type="button"
+                          onClick={() => handleResetPin(s.id)}
+                          disabled={resettingId === s.id}
+                          className="text-sm border border-gray-700 hover:border-brand text-gray-300 hover:text-white px-3 py-1.5 rounded-lg transition-colors"
+                        >
+                          {resettingId === s.id ? 'Generando...' : 'Restablecer PIN'}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+        </div>
       </main>
+
+      {bulkPins && (
+        <div
+          className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50 print:static print:bg-white print:p-0"
+          onClick={() => setBulkPins(null)}
+        >
+          <div
+            id="printable-pins"
+            className="bg-card rounded-2xl p-6 shadow-xl max-w-md w-full max-h-[85vh] overflow-y-auto print:max-h-none print:shadow-none print:bg-white print:text-black"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4 print:hidden">
+              <h3 className="text-lg font-bold">PINs generados — {pinCourse}</h3>
+              <button onClick={() => setBulkPins(null)} className="text-gray-500 hover:text-gray-300">Cerrar</button>
+            </div>
+            <p className="text-sm text-gray-400 mb-4 print:hidden">
+              Anota o dicta estos PINs a tus alumnos. No podrás volver a consultarlos después de cerrar esta ventana.
+            </p>
+            <h3 className="hidden print:block text-lg font-bold mb-3">PINs — {pinCourse}</h3>
+            <div className="space-y-1 mb-4">
+              {bulkPins.map(s => (
+                <div key={s.id} className="flex justify-between bg-surface border border-gray-700 rounded-lg px-3 py-2 print:bg-white print:border-gray-300 print:text-black">
+                  <span>{s.nombre}</span>
+                  <span className="text-gold font-black tracking-widest print:text-black">{s.pin}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-2 print:hidden">
+              <button onClick={copyBulkPins} className="flex-1 bg-brand hover:bg-brand-dark text-white font-bold py-2 rounded-xl transition-colors">
+                Copiar
+              </button>
+              <button onClick={() => window.print()} className="flex-1 bg-surface border border-gray-700 hover:border-brand text-gray-200 font-bold py-2 rounded-xl transition-colors">
+                Imprimir
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {(loadingSession || sessionDetail || sessionError) && (
         <div

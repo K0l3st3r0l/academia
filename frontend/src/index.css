@@ -9,6 +9,22 @@
   }
 }
 
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-pins,
+  #printable-pins * {
+    visibility: visible;
+  }
+  #printable-pins {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
 @layer utilities {
   .animate-pop {
     animation: pop 0.15s ease-out;
