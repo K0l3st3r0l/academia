@@ -84,3 +84,13 @@ export function teacherPayload(teacherRow, overrides = {}) {
     ...overrides,
   };
 }
+
+export function studentPayload(studentRow, overrides = {}) {
+  return {
+    id: studentRow.id,
+    roles: ['student'],
+    first_name: studentRow.first_name,
+    last_name: studentRow.last_name,
+    ...overrides,
+  };
+}

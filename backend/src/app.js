@@ -9,6 +9,7 @@ const roomRoutes = require('./routes/roomRoutes');
 const questionRoutes = require('./routes/questionRoutes');
 const sessionRoutes = require('./routes/sessionRoutes');
 const studentRoutes = require('./routes/studentRoutes');
+const characterRoutes = require('./routes/characterRoutes');
 const { getActiveRoomsCount } = require('./sockets/gameSocket');
 
 const DB_HEALTHCHECK_TIMEOUT_MS = 2000;
@@ -62,6 +63,7 @@ app.use('/api/rooms', roomRoutes);
 app.use('/api/questions', questionRoutes);
 app.use('/api/sessions', sessionRoutes);
 app.use('/api/students', studentRoutes);
+app.use('/api/characters', characterRoutes);
 
 app.use((err, req, res, _next) => {
   logger.error({ method: req.method, path: req.path, userId: req.user?.id, stack: err.stack }, err.message || 'unhandled error');

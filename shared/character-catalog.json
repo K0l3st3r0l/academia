@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "skinTones": [
+    { "id": "skin_1", "hex": "#FFE0BD" },
+    { "id": "skin_2", "hex": "#FFCD94" },
+    { "id": "skin_3", "hex": "#EAA971" },
+    { "id": "skin_4", "hex": "#C68642" },
+    { "id": "skin_5", "hex": "#8D5524" },
+    { "id": "skin_6", "hex": "#5C3317" }
+  ],
+  "hairStyles": [
+    { "id": "hair_style_1", "name": "Corto" },
+    { "id": "hair_style_2", "name": "Largo" },
+    { "id": "hair_style_3", "name": "Colita" },
+    { "id": "hair_style_4", "name": "Rulos" },
+    { "id": "hair_style_5", "name": "Trenzas" },
+    { "id": "hair_style_6", "name": "Puntas" }
+  ],
+  "hairColors": [
+    { "id": "hair_color_1", "hex": "#2B1B0E" },
+    { "id": "hair_color_2", "hex": "#4A2C17" },
+    { "id": "hair_color_3", "hex": "#A0522D" },
+    { "id": "hair_color_4", "hex": "#F4D160" },
+    { "id": "hair_color_5", "hex": "#1B1B1B" },
+    { "id": "hair_color_6", "hex": "#7B3F61" }
+  ],
+  "faces": [
+    { "id": "face_1", "name": "Feliz" },
+    { "id": "face_2", "name": "Guiño" },
+    { "id": "face_3", "name": "Sorprendido" },
+    { "id": "face_4", "name": "Tranquilo" }
+  ],
+  "outfits": [
+    { "id": "outfit_1", "name": "Polera" },
+    { "id": "outfit_2", "name": "Polerón" },
+    { "id": "outfit_3", "name": "Vestido" },
+    { "id": "outfit_4", "name": "Overol" }
+  ],
+  "outfitColors": [
+    { "id": "outfit_color_1", "hex": "#6C3CE1" },
+    { "id": "outfit_color_2", "hex": "#F5C842" },
+    { "id": "outfit_color_3", "hex": "#22C55E" },
+    { "id": "outfit_color_4", "hex": "#F76C6C" },
+    { "id": "outfit_color_5", "hex": "#3B82F6" },
+    { "id": "outfit_color_6", "hex": "#14B8A6" }
+  ],
+  "accessories": [
+    { "id": "none", "name": "Ninguno" },
+    { "id": "accessory_1", "name": "Lentes" },
+    { "id": "accessory_2", "name": "Gorro" },
+    { "id": "accessory_3", "name": "Mochila" },
+    { "id": "accessory_4", "name": "Bufanda" }
+  ]
+}

@@ -30,6 +30,15 @@ export const studentLogin = (rut, pin) =>
 export const getStudentMe = () =>
   studentClient.get('/api/auth/student-me');
 
+export const getCharacterCatalog = () =>
+  studentClient.get('/api/characters/catalog');
+
+export const getCharacterMe = () =>
+  studentClient.get('/api/characters/me');
+
+export const saveCharacter = (layers) =>
+  studentClient.put('/api/characters/me', { layers });
+
 export const getStudentsByCourse = (courseName) =>
   client.get('/api/students', { params: { course_name: courseName } });
 

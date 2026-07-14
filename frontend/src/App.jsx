@@ -10,6 +10,7 @@ import StudentGame from './pages/StudentGame';
 import QuestionBank from './pages/QuestionBank';
 import StudentLogin from './pages/StudentLogin';
 import AlumnoHome from './pages/AlumnoHome';
+import CharacterEditor from './pages/CharacterEditor';
 
 function ProtectedTeacher({ children }) {
   const { user, loading, isTeacher } = useAuth();
@@ -37,6 +38,10 @@ export default function App() {
           <Route
             path="/alumno"
             element={<ProtectedStudent><AlumnoHome /></ProtectedStudent>}
+          />
+          <Route
+            path="/alumno/personaje"
+            element={<ProtectedStudent><CharacterEditor /></ProtectedStudent>}
           />
           <Route path="/projector/:code" element={<ProjectorView />} />
           <Route
