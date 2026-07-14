@@ -3,6 +3,7 @@
 !/content/questions/
 /backend/node_modules/
 /frontend/node_modules/
+/frontend/dist/
 
 
 # Graphify - regenerar con: bash /root/apps/wiki/brain-setup.sh /root/apps
