@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+source /root/apps/wiki/deploy-guard.sh
+deploy_guard_enter "academia/frontend" || exit $?
+
 # Colors
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'

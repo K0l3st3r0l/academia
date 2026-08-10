@@ -4,6 +4,9 @@
 # ============================================================
 set -e
 
+source /root/apps/wiki/deploy-guard.sh
+deploy_guard_enter "academia/full" || exit $?
+
 echo "🎮 Desplegando AcademIA..."
 
 # Verificar que existe .env
