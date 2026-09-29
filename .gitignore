@@ -1,4 +1,5 @@
 .env
+.env.mail
 /content/*
 !/content/questions/
 /backend/node_modules/

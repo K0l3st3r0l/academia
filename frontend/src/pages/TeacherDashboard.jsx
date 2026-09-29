@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
   createRoom, getCourses, getRoomHistory, getSessionDetail,
-  getStudentsByCourse, resetStudentPin, resetStudentPinsBulk,
+  getStudentsByCourse, resetStudentPin, resetStudentPinsBulk, getAuthConfig,
 } from '../api/client';
 
 const SUBJECTS = [
@@ -25,7 +25,7 @@ function formatDateTime(iso) {
 const SECTIONS = [
   { id: 'crear-sala', label: 'Crear sala' },
   { id: 'historial', label: 'Historial' },
-  { id: 'pins', label: 'PINs de alumnos' },
+  { id: 'pins', label: 'Accesos de alumnos' },
 ];
 
 const OPTION_CLASS = 'bg-card hover:bg-gray-800 border border-gray-700 hover:border-brand rounded-xl px-3 py-3 text-sm font-semibold text-gray-300 hover:text-white text-center transition-colors';
@@ -60,6 +60,13 @@ export default function TeacherDashboard() {
   const [pinCourse, setPinCourse] = useState('');
   const [pinStudents, setPinStudents] = useState([]);
   const [pinSync, setPinSync] = useState(null);
+  const [emailAccounts, setEmailAccounts] = useState(false);
+
+  useEffect(() => {
+    getAuthConfig()
+      .then(res => setEmailAccounts(res.data.studentEmailAccounts))
+      .catch(() => setEmailAccounts(false));
+  }, []);
   const [loadingPinStudents, setLoadingPinStudents] = useState(false);
   const [pinError, setPinError] = useState('');
   const [revealedPins, setRevealedPins] = useState({});
@@ -315,7 +322,12 @@ export default function TeacherDashboard() {
         </section>
 
         <section id="pins" className="bg-card rounded-2xl p-6 shadow-xl mt-6 scroll-mt-4">
-          <h2 className="text-xl font-bold mb-6">PINs de alumnos</h2>
+          <h2 className="text-xl font-bold mb-2">Accesos de alumnos</h2>
+          <p className="text-sm text-gray-400 mb-6">
+            {emailAccounts
+              ? 'Desde 3° básico cada alumno crea su contraseña con su correo del colegio, en «Primera vez u olvidé mi contraseña». El PIN queda para quien no pueda usar su correo.'
+              : 'Cada alumno entra con su RUT y el PIN que le generes aquí.'}
+          </p>
 
           <div className="mb-4">
             <label className="block text-sm font-semibold text-gray-300 mb-2">Curso</label>
@@ -366,9 +378,15 @@ export default function TeacherDashboard() {
                     <div key={s.id} className="flex items-center justify-between bg-surface border border-gray-700 rounded-xl px-4 py-3 gap-3">
                       <div>
                         <p className="font-semibold">{s.first_name} {s.last_name}</p>
+                        {emailAccounts && s.institutional_email && (
+                          <p className="text-xs text-gray-400 break-all">{s.institutional_email}</p>
+                        )}
                         <p className="text-xs text-gray-500">
-                          {s.has_pin ? 'PIN asignado' : 'Sin PIN asignado'}
-                          {s.last_login_at && ` · último ingreso ${formatDateTime(s.last_login_at)}`}
+                          {[
+                            emailAccounts && (s.has_password ? 'Contraseña creada' : 'Sin contraseña'),
+                            s.has_pin ? 'PIN asignado' : 'Sin PIN',
+                            s.last_login_at && `último ingreso ${formatDateTime(s.last_login_at)}`,
+                          ].filter(Boolean).join(' · ')}
                         </p>
                       </div>
                       <div className="flex items-center gap-3 shrink-0">

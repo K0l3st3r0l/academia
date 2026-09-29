@@ -3,7 +3,12 @@ services:
     build: ./backend
     container_name: academia-backend
     restart: unless-stopped
-    env_file: .env
+    env_file:
+      - .env
+      # MAIL_USER / MAIL_APP_PASSWORD for student password links. Backend-only on
+      # purpose: editing the shared .env would recreate the database container too.
+      - path: .env.mail
+        required: false
     ports:
       - "4100:4100"
     volumes:

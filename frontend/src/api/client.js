@@ -69,3 +69,18 @@ export const getSessionDetail = (id) =>
 export const SOCKET_URL = import.meta.env.VITE_WS_URL || 'http://localhost:4100';
 
 export default client;
+
+export const getAuthConfig = () =>
+  client.get('/api/auth/config');
+
+export const studentEmailLogin = (email, password) =>
+  client.post('/api/auth/student-email-login', { email, password });
+
+export const requestPasswordLink = (email) =>
+  client.post('/api/student-account/olvide', { email });
+
+export const checkPasswordLink = (token) =>
+  client.post('/api/student-account/enlace', { token });
+
+export const createStudentPassword = (token, password) =>
+  client.post('/api/student-account/crear', { token, password });

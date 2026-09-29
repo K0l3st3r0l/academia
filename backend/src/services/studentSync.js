@@ -1,6 +1,7 @@
 const pool = require('../db');
 const logger = require('../logger');
 const { getActiveStudents } = require('./anahuacService');
+const { institutionalEmail } = require('../utils/institutionalEmail');
 
 // If Anahuac suddenly omits more than half of the students we know, a partial
 // response is far more likely than a mass withdrawal: keep everyone active.
@@ -44,15 +45,16 @@ async function syncStudents(anahuacToken, courseName) {
     if (toUpsert.length) {
       const names = toUpsert.map(splitNames);
       await client.query(`
-        INSERT INTO local_students (anahuac_id, rut, first_name, last_name, course_name, updated_at)
-        SELECT u.anahuac_id, u.rut, u.first_name, u.last_name, u.course_name, NOW()
-        FROM unnest($1::int[], $2::text[], $3::text[], $4::text[], $5::text[])
-          AS u(anahuac_id, rut, first_name, last_name, course_name)
+        INSERT INTO local_students (anahuac_id, rut, first_name, last_name, course_name, institutional_email, updated_at)
+        SELECT u.anahuac_id, u.rut, u.first_name, u.last_name, u.course_name, u.institutional_email, NOW()
+        FROM unnest($1::int[], $2::text[], $3::text[], $4::text[], $5::text[], $6::text[])
+          AS u(anahuac_id, rut, first_name, last_name, course_name, institutional_email)
         ON CONFLICT (anahuac_id) DO UPDATE
           SET rut = COALESCE(EXCLUDED.rut, local_students.rut),
               first_name = EXCLUDED.first_name,
               last_name = EXCLUDED.last_name,
               course_name = EXCLUDED.course_name,
+              institutional_email = EXCLUDED.institutional_email,
               active = true,
               withdrawn_at = NULL,
               updated_at = NOW()
@@ -62,6 +64,7 @@ async function syncStudents(anahuacToken, courseName) {
         names.map(n => n.firstName),
         names.map(n => n.lastName),
         toUpsert.map(s => s.curso || null),
+        toUpsert.map(institutionalEmail),
       ]);
     }
 

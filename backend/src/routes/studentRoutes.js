@@ -36,7 +36,8 @@ router.get('/', authenticateToken, requireTeacher, async (req, res) => {
 
   try {
     const { rows } = await pool.query(
-      `SELECT id, first_name, last_name, (pin_hash IS NOT NULL) AS has_pin, last_login_at
+      `SELECT id, first_name, last_name, institutional_email, (pin_hash IS NOT NULL) AS has_pin,
+              (password_hash IS NOT NULL) AS has_password, last_login_at
        FROM local_students WHERE course_name = $1 AND active ORDER BY last_name, first_name`,
       [course_name]
     );

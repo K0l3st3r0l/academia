@@ -10,6 +10,7 @@ import StudentGame from './pages/StudentGame';
 import QuestionBank from './pages/QuestionBank';
 import AlumnoHome from './pages/AlumnoHome';
 import CharacterEditor from './pages/CharacterEditor';
+import CreateStudentPassword from './pages/CreateStudentPassword';
 
 function ProtectedTeacher({ children }) {
   const { user, loading, isTeacher } = useAuth();
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/join" element={<Navigate to="/?modo=clase" replace />} />
           <Route path="/join/:code" element={<StudentJoin />} />
           <Route path="/play/:code" element={<StudentGame />} />
+          <Route path="/alumno/crear-clave" element={<CreateStudentPassword />} />
           <Route
             path="/alumno"
             element={<ProtectedStudent><AlumnoHome /></ProtectedStudent>}

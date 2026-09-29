@@ -66,7 +66,11 @@ describe('sincronización de alumnos con Anahuac', () => {
     expect(res.body.sync).toMatchObject({ ok: true, added: 1 });
     expect(res.body.students).toHaveLength(1);
     // Second given name belongs to first_name, not to the surnames.
-    expect(res.body.students[0]).toMatchObject({ first_name: 'Ana María', last_name: 'Pérez Soto' });
+    expect(res.body.students[0]).toMatchObject({
+      first_name: 'Ana María',
+      last_name: 'Pérez Soto',
+      institutional_email: 'ana.perez.soto@escuelaanahuac.cl',
+    });
     // A course nobody uses is not copied.
     expect(await studentByAnahuacId(102)).toBeUndefined();
   });

@@ -100,6 +100,7 @@ await runMigrations();
 const { default: pool } = await import('../src/db/index.js');
 
 const APP_TABLES = [
+  'student_password_tokens',
   'characters',
   'student_answers',
   'token_ledger',

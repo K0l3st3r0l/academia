@@ -9,6 +9,9 @@ const anahuacTokenCache = require('../services/anahuacTokenCache');
 const { trackEvent } = require('../services/eventTracker');
 const { normalizeRut } = require('../utils/rut');
 const studentLoginRateLimiter = require('../services/studentLoginRateLimiter');
+const { startStudentSession } = require('../services/studentSession');
+const { mailEnabled } = require('../utils/mailer');
+const { INSTITUTIONAL_DOMAIN } = require('../utils/institutionalEmail');
 
 const router = express.Router();
 
@@ -128,28 +131,52 @@ router.post('/student-login', async (req, res) => {
     }
 
     studentLoginRateLimiter.registerSuccess(normalizedRut);
-    await pool.query('UPDATE local_students SET last_login_at = NOW() WHERE id = $1', [student.id]);
-
-    const token = jwt.sign(
-      { id: student.id, roles: ['student'], first_name: student.first_name, last_name: student.last_name },
-      process.env.JWT_SECRET,
-      { expiresIn: '12h' }
-    );
-
-    trackEvent({ actorType: 'student', actorId: student.id, eventType: 'student_login_success', payload: {} });
-
-    res.json({
-      token,
-      student: {
-        id: student.id,
-        first_name: student.first_name,
-        last_name: student.last_name,
-        course_name: student.course_name,
-        tokens_balance: student.tokens_balance,
-      },
-    });
+    res.json(await startStudentSession(student, 'pin'));
   } catch (err) {
     logger.error('Student login error:', err.message);
+    res.status(500).json({ error: 'Error al iniciar sesión' });
+  }
+});
+
+// What the welcome page offers students: email accounts only once mail can be sent.
+router.get('/config', (req, res) => {
+  res.json({ studentEmailAccounts: mailEnabled(), institutionalDomain: INSTITUTIONAL_DOMAIN });
+});
+
+// Students from 3° básico up: institutional email + the password they created by link
+router.post('/student-email-login', async (req, res) => {
+  const email = typeof req.body?.email === 'string' ? req.body.email.trim().toLowerCase() : '';
+  const { password } = req.body || {};
+  if (!email || !password) return res.status(400).json({ error: 'Correo y contraseña son requeridos' });
+
+  const rateKey = `email:${email}`;
+  if (studentLoginRateLimiter.isRateLimited(rateKey)) {
+    return res.status(429).json({ error: 'Demasiados intentos. Espera unos minutos e inténtalo de nuevo.' });
+  }
+  const wrong = { error: 'Correo o contraseña incorrectos. Si es tu primera vez, crea tu contraseña.' };
+
+  try {
+    const { rows } = await pool.query(
+      `SELECT * FROM local_students WHERE lower(institutional_email) = $1 AND password_hash IS NOT NULL
+       ORDER BY active DESC LIMIT 1`,
+      [email]
+    );
+    const student = rows[0];
+    if (!student || !(await bcrypt.compare(String(password), student.password_hash))) {
+      studentLoginRateLimiter.registerFailure(rateKey);
+      trackEvent({ actorType: 'student', actorId: student?.id, eventType: 'student_login_failed', payload: { reason: student ? 'wrong_password' : 'not_found', method: 'email' } });
+      return res.status(401).json(wrong);
+    }
+    // Checked only after the password matches, so it can't be used to probe who is enrolled.
+    if (!student.active) {
+      trackEvent({ actorType: 'student', actorId: student.id, eventType: 'student_login_failed', payload: { reason: 'withdrawn', method: 'email' } });
+      return res.status(403).json({ error: 'Tu matrícula no aparece activa. Habla con tu profesor.' });
+    }
+
+    studentLoginRateLimiter.registerSuccess(rateKey);
+    res.json(await startStudentSession(student, 'email'));
+  } catch (err) {
+    logger.error('Student email login error:', err.message);
     res.status(500).json({ error: 'Error al iniciar sesión' });
   }
 });

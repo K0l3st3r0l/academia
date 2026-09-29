@@ -15,22 +15,26 @@ Ver `/root/apps/CLAUDE.md`. Nunca usar `docker compose down -v`.
 ```bash
 cd /root/apps/academia
 
-# Levantar todo
-docker compose --env-file .env up -d --build
+# Deploy (build bajo el mutex global + migraciones + auto-commit/push + wiki-push).
+# Nunca `docker compose build` / `up --build` a mano: se salta la guardia de deploys.
+./deploy.sh
 
-# Solo backend
-docker compose --env-file .env up -d --build backend
+# Tras un deploy que recrea el backend, si /api da 502 (IP cacheada en NPM):
+docker exec proxy-app-1 nginx -s reload
 
-# Solo frontend
-docker compose --env-file .env up -d --build frontend
-
-# Ver logs
+# Logs y reinicio sin rebuild
 docker compose --env-file .env logs -f backend
-docker compose --env-file .env logs -f frontend
-
-# Reiniciar sin rebuild
 docker compose --env-file .env restart backend
+
+# Tests del backend (contra academia_test, nunca contra producción)
+cd backend && npx vitest run
 ```
+
+## Correo (enlaces para que el alumno cree su contraseña)
+Credenciales en `.env.mail` (plantilla: `.env.mail.example`), que **solo lee el
+backend**. No van en `.env`: ese archivo también lo lee la base, y tocarlo hace
+que el próximo deploy recree el contenedor de PostgreSQL. Sin `.env.mail`, el
+ingreso con correo queda oculto y los alumnos entran con RUT + PIN.
 
 ## Puertos
 - Backend: 4100

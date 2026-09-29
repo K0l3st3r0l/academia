@@ -1,9 +1,11 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { getStudentToken, getStudentUser, studentLogout } from '../api/studentAuth';
 import RoomCodeForm from '../components/RoomCodeForm';
 import StudentLoginForm from '../components/StudentLoginForm';
+import StudentAccess from '../components/StudentAccess';
+import { getAuthConfig } from '../api/client';
 import TeacherLoginForm from '../components/TeacherLoginForm';
 import { shortName } from '../utils/displayName';
 
@@ -17,13 +19,13 @@ const MODES = [
   {
     id: 'alumno',
     label: 'Alumno',
-    hint: 'RUT y PIN',
-    description: 'Para avanzar por tu cuenta: tu personaje, tus tokens y tu progreso.',
+    hint: 'Mi cuenta',
+    description: 'Desde 3° básico, para avanzar por tu cuenta: tu personaje, tus tokens y tu progreso.',
   },
   {
     id: 'profesor',
     label: 'Profesor',
-    hint: 'Correo',
+    hint: 'Anahuac',
     description: 'Entra con tu correo y contraseña de Anahuac.',
   },
 ];
@@ -85,6 +87,13 @@ export default function WelcomePage() {
   const tabRefs = useRef({});
   const { user, isTeacher, logout } = useAuth();
   const [student, setStudent] = useState(() => (getStudentToken() ? getStudentUser() : null));
+  const [authConfig, setAuthConfig] = useState(null);
+
+  useEffect(() => {
+    getAuthConfig()
+      .then(res => setAuthConfig(res.data))
+      .catch(() => setAuthConfig({ studentEmailAccounts: false }));
+  }, []);
 
   const selectMode = (id, { focusTab = false } = {}) => {
     setMode(id);
@@ -191,7 +200,15 @@ export default function WelcomePage() {
         >
           <p className="text-gray-400 text-sm text-center mb-5">{current.description}</p>
           {mode === 'clase' && <RoomCodeForm autoFocus={focusForm} />}
-          {mode === 'alumno' && <StudentLoginForm autoFocus={focusForm} />}
+          {mode === 'alumno' && (
+            !authConfig ? (
+              <p className="text-gray-500 text-center">Cargando...</p>
+            ) : authConfig.studentEmailAccounts ? (
+              <StudentAccess domain={authConfig.institutionalDomain} autoFocus={focusForm} />
+            ) : (
+              <StudentLoginForm autoFocus={focusForm} />
+            )
+          )}
           {mode === 'profesor' && <TeacherLoginForm autoFocus={focusForm} />}
         </section>
       </div>
