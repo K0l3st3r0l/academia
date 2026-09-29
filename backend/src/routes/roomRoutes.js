@@ -3,7 +3,8 @@ const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const pool = require('../db');
 const { authenticateToken, requireTeacher } = require('../middleware/auth');
-const { getSchoolCourses, getStudentsByCourse } = require('../services/anahuacService');
+const { getSchoolCourses } = require('../services/anahuacService');
+const { syncStudents } = require('../services/studentSync');
 const anahuacTokenCache = require('../services/anahuacTokenCache');
 const { trackEvent } = require('../services/eventTracker');
 
@@ -27,23 +28,15 @@ router.post('/', authenticateToken, requireTeacher, async (req, res) => {
   }
 
   try {
-    // Sync students for this course from Anahuac
-    const students = await getStudentsByCourse(anahuac_token, course_name);
-    if (students.length === 0) {
-      return res.status(404).json({ error: `No se encontraron alumnos activos para el curso "${course_name}"` });
-    }
+    await syncStudents(anahuac_token, course_name);
 
-    // Upsert students into local DB
-    for (const s of students) {
-      await pool.query(`
-        INSERT INTO local_students (anahuac_id, rut, first_name, last_name, course_name, updated_at)
-        VALUES ($1, $2, $3, $4, $5, NOW())
-        ON CONFLICT (anahuac_id) DO UPDATE
-          SET first_name = EXCLUDED.first_name,
-              last_name = EXCLUDED.last_name,
-              course_name = EXCLUDED.course_name,
-              updated_at = NOW()
-      `, [s.id, s.rut || null, s.nombre1, `${s.nombre2 || ''} ${s.apellido_paterno} ${s.apellido_materno}`.trim(), course_name]);
+    // Student list for the projector/teacher panel
+    const { rows: roomStudents } = await pool.query(
+      'SELECT id, first_name, last_name, tokens_balance FROM local_students WHERE course_name = $1 AND active ORDER BY last_name, first_name',
+      [course_name]
+    );
+    if (roomStudents.length === 0) {
+      return res.status(404).json({ error: `No se encontraron alumnos activos para el curso "${course_name}"` });
     }
 
     // Create room with unique code
@@ -69,12 +62,6 @@ router.post('/', authenticateToken, requireTeacher, async (req, res) => {
       roomId: room.id,
       payload: { course_name, subject, code: room.code },
     });
-
-    // Return room + student list for the projector/teacher panel
-    const { rows: roomStudents } = await pool.query(
-      'SELECT id, first_name, last_name, tokens_balance FROM local_students WHERE course_name = $1 ORDER BY last_name, first_name',
-      [course_name]
-    );
 
     res.json({ room, students: roomStudents });
   } catch (err) {
@@ -172,7 +159,7 @@ router.get('/:code', async (req, res) => {
 
     const room = rows[0];
     const { rows: students } = await pool.query(
-      'SELECT id, first_name, last_name FROM local_students WHERE course_name = $1 ORDER BY last_name, first_name',
+      'SELECT id, first_name, last_name FROM local_students WHERE course_name = $1 AND active ORDER BY last_name, first_name',
       [room.course_name]
     );
 

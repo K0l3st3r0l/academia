@@ -59,6 +59,7 @@ export default function TeacherDashboard() {
 
   const [pinCourse, setPinCourse] = useState('');
   const [pinStudents, setPinStudents] = useState([]);
+  const [pinSync, setPinSync] = useState(null);
   const [loadingPinStudents, setLoadingPinStudents] = useState(false);
   const [pinError, setPinError] = useState('');
   const [revealedPins, setRevealedPins] = useState({});
@@ -81,12 +82,16 @@ export default function TeacherDashboard() {
   useEffect(() => {
     if (!pinCourse) {
       setPinStudents([]);
+      setPinSync(null);
       return;
     }
     setLoadingPinStudents(true);
     setPinError('');
     getStudentsByCourse(pinCourse)
-      .then(res => setPinStudents(res.data))
+      .then(res => {
+        setPinStudents(res.data.students);
+        setPinSync(res.data.sync);
+      })
       .catch(() => setPinError('No se pudieron cargar los alumnos de este curso.'))
       .finally(() => setLoadingPinStudents(false));
   }, [pinCourse]);
@@ -326,6 +331,14 @@ export default function TeacherDashboard() {
             </select>
           </div>
 
+          {pinCourse && !loadingPinStudents && pinSync && !pinSync.ok && (
+            <div className="bg-gold/10 border border-gold/40 text-gold rounded-xl px-4 py-2 text-sm mb-4">
+              {pinSync.reason === 'no_session'
+                ? 'No pudimos revisar Anahuac porque tu sesión expiró: la lista puede no incluir alumnos nuevos ni retiros recientes. Cierra sesión y vuelve a entrar para actualizarla.'
+                : 'Anahuac no respondió: se muestra la última lista conocida, que puede no incluir alumnos nuevos ni retiros recientes.'}
+            </div>
+          )}
+
           {pinError && (
             <div className="bg-wrong/20 border border-wrong/40 text-wrong rounded-xl px-4 py-2 text-sm mb-4">
               {pinError}
@@ -346,7 +359,7 @@ export default function TeacherDashboard() {
               {loadingPinStudents ? (
                 <p className="text-gray-400">Cargando alumnos...</p>
               ) : pinStudents.length === 0 ? (
-                <p className="text-gray-400">No hay alumnos sincronizados para este curso. Crea una sala primero.</p>
+                <p className="text-gray-400">No hay alumnos activos en este curso.</p>
               ) : (
                 <div className="space-y-2">
                   {pinStudents.map(s => (

@@ -162,7 +162,7 @@ function setupGameSocket(io) {
 
         // Verify student exists in local DB for this room's course
         const { rows: stuRows } = await pool.query(
-          'SELECT * FROM local_students WHERE id = $1 AND course_name = $2',
+          'SELECT * FROM local_students WHERE id = $1 AND course_name = $2 AND active',
           [studentDbId, roomRows[0].course_name]
         );
         if (!stuRows.length) return socket.emit('error', { message: 'Alumno no encontrado en este curso' });

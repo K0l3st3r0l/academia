@@ -72,8 +72,8 @@ describe('gestión de PINs (docente)', () => {
       .set('Authorization', `Bearer ${token}`);
 
     expect(res.status).toBe(200);
-    expect(res.body[0]).toMatchObject({ has_pin: false });
-    expect(res.body[0].pin_hash).toBeUndefined();
+    expect(res.body.students[0]).toMatchObject({ has_pin: false });
+    expect(res.body.students[0].pin_hash).toBeUndefined();
   });
 });
 

@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const pool = require('../db');
 const { authenticateToken, requireTeacher } = require('../middleware/auth');
 const { trackEvent } = require('../services/eventTracker');
+const { syncStudents } = require('../services/studentSync');
+const anahuacTokenCache = require('../services/anahuacTokenCache');
 
 const router = express.Router();
 
@@ -16,13 +18,29 @@ router.get('/', authenticateToken, requireTeacher, async (req, res) => {
   const { course_name } = req.query;
   if (!course_name) return res.status(400).json({ error: 'course_name es requerido' });
 
+  // Refresh from Anahuac first so new students can get a PIN without creating a room.
+  // If Anahuac is unreachable (or the token cache was lost in a restart), the last
+  // known list is still useful: return it and say it may be stale.
+  let sync = { ok: true };
+  const anahuacToken = anahuacTokenCache.get(req.user.id);
+  if (!anahuacToken) {
+    sync = { ok: false, reason: 'no_session' };
+  } else {
+    try {
+      sync = { ok: true, ...(await syncStudents(anahuacToken, course_name)) };
+    } catch (err) {
+      logger.error('Student sync error:', err.message);
+      sync = { ok: false, reason: 'anahuac_error' };
+    }
+  }
+
   try {
     const { rows } = await pool.query(
       `SELECT id, first_name, last_name, (pin_hash IS NOT NULL) AS has_pin, last_login_at
-       FROM local_students WHERE course_name = $1 ORDER BY last_name, first_name`,
+       FROM local_students WHERE course_name = $1 AND active ORDER BY last_name, first_name`,
       [course_name]
     );
-    res.json(rows);
+    res.json({ students: rows, sync });
   } catch (err) {
     logger.error('List students error:', err.message);
     res.status(500).json({ error: 'Error al obtener alumnos' });
@@ -33,7 +51,7 @@ router.get('/', authenticateToken, requireTeacher, async (req, res) => {
 router.post('/:id/reset-pin', authenticateToken, requireTeacher, async (req, res) => {
   const { id } = req.params;
   try {
-    const { rows } = await pool.query('SELECT id FROM local_students WHERE id = $1', [id]);
+    const { rows } = await pool.query('SELECT id FROM local_students WHERE id = $1 AND active', [id]);
     if (!rows.length) return res.status(404).json({ error: 'Alumno no encontrado' });
 
     const pin = generatePin();
@@ -59,7 +77,7 @@ router.post('/reset-pins-bulk', authenticateToken, requireTeacher, async (req, r
 
   try {
     const { rows: students } = await pool.query(
-      'SELECT id, first_name, last_name FROM local_students WHERE course_name = $1 ORDER BY last_name, first_name',
+      'SELECT id, first_name, last_name FROM local_students WHERE course_name = $1 AND active ORDER BY last_name, first_name',
       [course_name]
     );
     if (!students.length) return res.status(404).json({ error: `No hay alumnos sincronizados para el curso "${course_name}"` });

@@ -50,11 +50,12 @@ async function getSchoolCourses(anahuacToken) {
   return res.data;
 }
 
-async function getStudentsByCourse(anahuacToken, courseName) {
+// Anahuac has no per-course filter: this is every active student in the school.
+async function getActiveStudents(anahuacToken) {
   const res = await callAnahuac('get', '/api/students?activo=true', {
     headers: { Authorization: `Bearer ${anahuacToken}` },
-  }, 'getStudentsByCourse');
-  return res.data.filter(s => s.curso === courseName);
+  }, 'getActiveStudents');
+  return res.data;
 }
 
-module.exports = { loginToAnahuac, getAnahuacProfile, getSchoolCourses, getStudentsByCourse };
+module.exports = { loginToAnahuac, getAnahuacProfile, getSchoolCourses, getActiveStudents };

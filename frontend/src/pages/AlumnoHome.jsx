@@ -44,7 +44,7 @@ export default function AlumnoHome() {
 
       <main className="w-full max-w-sm space-y-6">
         <div className="bg-card rounded-2xl p-6 shadow-xl text-center">
-          <h2 className="text-3xl font-black text-white mb-1">¡Hola, {student?.first_name || 'alumno'}!</h2>
+          <h2 className="text-3xl font-black text-white mb-1">¡Hola, {student?.first_name?.split(' ')[0] || 'alumno'}!</h2>
           <p className="text-gray-500 text-sm">{student?.course_name}</p>
         </div>
 

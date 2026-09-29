@@ -98,7 +98,8 @@ router.post('/student-login', async (req, res) => {
 
   try {
     const { rows } = await pool.query(
-      `SELECT * FROM local_students WHERE UPPER(REGEXP_REPLACE(rut, '[^0-9kK]', '', 'g')) = $1`,
+      `SELECT * FROM local_students WHERE UPPER(REGEXP_REPLACE(rut, '[^0-9kK]', '', 'g')) = $1
+       ORDER BY active DESC LIMIT 1`,
       [normalizedRut]
     );
     const student = rows[0];
@@ -118,6 +119,12 @@ router.post('/student-login', async (req, res) => {
       studentLoginRateLimiter.registerFailure(normalizedRut);
       trackEvent({ actorType: 'student', actorId: student.id, eventType: 'student_login_failed', payload: { reason: 'wrong_pin' } });
       return res.status(401).json({ error: 'RUT o PIN incorrecto' });
+    }
+
+    // Checked only after the PIN matches, so it can't be used to probe which RUTs exist.
+    if (!student.active) {
+      trackEvent({ actorType: 'student', actorId: student.id, eventType: 'student_login_failed', payload: { reason: 'withdrawn' } });
+      return res.status(403).json({ error: 'Tu matrícula no aparece activa. Habla con tu profesor.' });
     }
 
     studentLoginRateLimiter.registerSuccess(normalizedRut);
@@ -152,7 +159,7 @@ router.post('/student-login', async (req, res) => {
 router.get('/student-me', authenticateToken, requireStudent, async (req, res) => {
   try {
     const { rows } = await pool.query(
-      'SELECT id, first_name, last_name, course_name, tokens_balance FROM local_students WHERE id = $1',
+      'SELECT id, first_name, last_name, course_name, tokens_balance FROM local_students WHERE id = $1 AND active',
       [req.user.id]
     );
     if (!rows.length) return res.status(404).json({ error: 'Alumno no encontrado' });
