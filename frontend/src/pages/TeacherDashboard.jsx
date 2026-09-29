@@ -22,6 +22,19 @@ function formatDateTime(iso) {
   return new Date(iso).toLocaleString('es-CL', { dateStyle: 'short', timeStyle: 'short' });
 }
 
+const SECTIONS = [
+  { id: 'crear-sala', label: 'Crear sala' },
+  { id: 'historial', label: 'Historial' },
+  { id: 'pins', label: 'PINs de alumnos' },
+];
+
+const OPTION_CLASS = 'bg-card hover:bg-gray-800 border border-gray-700 hover:border-brand rounded-xl px-3 py-3 text-sm font-semibold text-gray-300 hover:text-white text-center transition-colors';
+
+function scrollToSection(id) {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById(id)?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+}
+
 function formatMs(ms) {
   if (ms == null) return '—';
   return `${(ms / 1000).toFixed(1)}s`;
@@ -168,18 +181,24 @@ export default function TeacherDashboard() {
             Hola, {user?.first_name || user?.email}
           </p>
         </div>
-        <div className="flex items-center gap-3">
-          <Link to="/teacher/questions" className="text-gray-500 hover:text-gray-300 text-sm border border-gray-700 hover:border-gray-500 px-3 py-1.5 rounded-lg transition-colors">
-            Banco de preguntas
-          </Link>
-          <button onClick={logout} className="text-gray-500 hover:text-gray-300 text-sm">
-            Cerrar sesión
-          </button>
-        </div>
+        <button onClick={logout} className="text-gray-500 hover:text-gray-300 text-sm">
+          Cerrar sesión
+        </button>
       </header>
 
+      <nav aria-label="Opciones del profesor" className="max-w-2xl mx-auto mb-6 grid grid-cols-2 sm:grid-cols-4 gap-2">
+        {SECTIONS.map(s => (
+          <button key={s.id} type="button" onClick={() => scrollToSection(s.id)} className={OPTION_CLASS}>
+            {s.label}
+          </button>
+        ))}
+        <Link to="/teacher/questions" className={OPTION_CLASS}>
+          Banco de preguntas
+        </Link>
+      </nav>
+
       <main className="max-w-2xl mx-auto">
-        <div className="bg-card rounded-2xl p-6 shadow-xl">
+        <section id="crear-sala" className="bg-card rounded-2xl p-6 shadow-xl scroll-mt-4">
           <h2 className="text-xl font-bold mb-6">Crear nueva sala de juego</h2>
 
           {loadingCourses ? (
@@ -236,9 +255,9 @@ export default function TeacherDashboard() {
               </button>
             </form>
           )}
-        </div>
+        </section>
 
-        <div className="bg-card rounded-2xl p-6 shadow-xl mt-6">
+        <section id="historial" className="bg-card rounded-2xl p-6 shadow-xl mt-6 scroll-mt-4">
           <h2 className="text-xl font-bold mb-6">Historial de sesiones</h2>
 
           {loadingHistory ? (
@@ -288,9 +307,9 @@ export default function TeacherDashboard() {
               ))}
             </div>
           )}
-        </div>
+        </section>
 
-        <div className="bg-card rounded-2xl p-6 shadow-xl mt-6">
+        <section id="pins" className="bg-card rounded-2xl p-6 shadow-xl mt-6 scroll-mt-4">
           <h2 className="text-xl font-bold mb-6">PINs de alumnos</h2>
 
           <div className="mb-4">
@@ -358,7 +377,7 @@ export default function TeacherDashboard() {
               )}
             </>
           )}
-        </div>
+        </section>
       </main>
 
       {bulkPins && (

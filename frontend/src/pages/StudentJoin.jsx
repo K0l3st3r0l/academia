@@ -1,21 +1,26 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import { getRoom } from '../api/client';
 
 export default function StudentJoin() {
   const { code: urlCode } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
+  // The welcome page already looked the room up; reuse it only if it's the same room.
+  const preloaded = location.state?.roomData?.room?.code === urlCode?.toUpperCase()
+    ? location.state.roomData
+    : null;
 
-  const [step, setStep] = useState('code'); // code | pick_name | error
+  const [step, setStep] = useState(preloaded ? 'pick_name' : 'code'); // code | pick_name | error
   const [code, setCode] = useState(urlCode || '');
-  const [roomData, setRoomData] = useState(null);
+  const [roomData, setRoomData] = useState(preloaded);
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    if (urlCode) lookupRoom(urlCode.toUpperCase());
+    if (urlCode && !preloaded) lookupRoom(urlCode.toUpperCase());
   }, []);
 
   const lookupRoom = async (roomCode) => {
@@ -85,8 +90,7 @@ export default function StudentJoin() {
             </button>
           </form>
           <p className="text-center text-gray-500 text-sm mt-4">
-            ¿Eres docente?{' '}
-            <a href="/login" className="text-brand-light underline">Inicia sesión aquí</a>
+            <Link to="/" className="text-brand-light underline">Volver al inicio</Link>
           </p>
         </div>
       )}

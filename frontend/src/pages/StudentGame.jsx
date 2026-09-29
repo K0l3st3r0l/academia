@@ -127,7 +127,7 @@ export default function StudentGame() {
 
   const leaveGame = () => {
     socketRef.current?.disconnect();
-    navigate('/join');
+    navigate('/?modo=clase');
   };
 
   const handleLeave = () => {
@@ -332,7 +332,7 @@ export default function StudentGame() {
           </div>
 
           <button
-            onClick={() => navigate('/join')}
+            onClick={() => navigate('/?modo=clase')}
             className="w-full bg-brand hover:bg-brand-dark text-white font-bold py-4 rounded-xl transition-colors"
           >
             Volver al inicio

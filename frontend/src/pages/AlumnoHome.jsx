@@ -16,7 +16,7 @@ export default function AlumnoHome() {
       .then(res => setStudent(res.data.student))
       .catch(() => {
         studentLogout();
-        navigate('/alumno/login', { replace: true });
+        navigate('/?modo=alumno', { replace: true });
       })
       .finally(() => setLoading(false));
 
@@ -28,7 +28,7 @@ export default function AlumnoHome() {
 
   const handleLogout = () => {
     studentLogout();
-    navigate('/alumno/login', { replace: true });
+    navigate('/?modo=alumno', { replace: true });
   };
 
   return (
@@ -82,6 +82,11 @@ export default function AlumnoHome() {
             </>
           )}
         </div>
+
+        <p className="text-center text-gray-500 text-sm">
+          ¿Vas a jugar en clase?{' '}
+          <Link to="/?modo=clase" className="text-brand-light underline">Entra con el código de sala</Link>
+        </p>
       </main>
     </div>
   );

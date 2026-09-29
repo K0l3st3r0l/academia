@@ -2,6 +2,11 @@ import { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext(null);
 
+const TEACHER_ROLES = ['teacher', 'admin', 'docente', 'director', 'utp'];
+
+export const hasTeacherRole = (user) =>
+  Boolean(user?.roles?.some(r => TEACHER_ROLES.includes(r)));
+
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -27,9 +32,7 @@ export function AuthProvider({ children }) {
     setUser(null);
   };
 
-  const isTeacher = user?.roles?.some(r =>
-    ['teacher', 'admin', 'docente', 'director', 'utp'].includes(r)
-  );
+  const isTeacher = hasTeacherRole(user);
 
   return (
     <AuthContext.Provider value={{ user, loading, loginSuccess, logout, isTeacher }}>
