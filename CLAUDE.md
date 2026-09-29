@@ -51,6 +51,9 @@ ingreso con correo queda oculto y los alumnos entran con RUT + PIN.
 Las migraciones están en `backend/src/db/migrations/`.
 Se ejecutan automáticamente al iniciar el backend (ver `backend/src/db/migrate.js`).
 Para agregar una migración: crear `NNN_descripcion.sql` con el número siguiente.
+`migrate.js` registra la versión en `schema_migrations` al terminar (desde 2026-09-29;
+antes cada archivo la insertaba al final y 007/008 lo olvidaron). Escribir las
+migraciones idempotentes (`IF NOT EXISTS`) igual.
 
 ## Arquitectura de sockets
 - El servidor mantiene el estado del juego en memoria (Map de rooms)

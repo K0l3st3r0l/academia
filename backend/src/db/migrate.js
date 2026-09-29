@@ -28,6 +28,11 @@ async function runMigrations() {
       logger.info(`Running migration ${file}...`);
       const sql = fs.readFileSync(path.join(migrationsDir, file), 'utf8');
       await client.query(sql);
+      // Older files also insert their own version; recording it here means a new
+      // migration that forgets that line no longer re-runs on every start.
+      await client.query(
+        'INSERT INTO schema_migrations (version) VALUES ($1) ON CONFLICT DO NOTHING', [version]
+      );
       logger.info(`Migration ${file} done.`);
     }
   } finally {
