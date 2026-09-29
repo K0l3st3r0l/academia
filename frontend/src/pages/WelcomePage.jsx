@@ -5,6 +5,7 @@ import { getStudentToken, getStudentUser, studentLogout } from '../api/studentAu
 import RoomCodeForm from '../components/RoomCodeForm';
 import StudentLoginForm from '../components/StudentLoginForm';
 import TeacherLoginForm from '../components/TeacherLoginForm';
+import { shortName } from '../utils/displayName';
 
 const MODES = [
   {
@@ -127,7 +128,7 @@ export default function WelcomePage() {
           <div className="space-y-2 mb-6">
             {user && isTeacher && (
               <OpenSession
-                name={user.first_name || user.email}
+                name={shortName(user)}
                 role="profesor"
                 homePath="/teacher"
                 homeLabel="Ir a mi panel"
@@ -136,7 +137,7 @@ export default function WelcomePage() {
             )}
             {student && (
               <OpenSession
-                name={student.first_name}
+                name={shortName(student)}
                 role="alumno"
                 homePath="/alumno"
                 homeLabel="Ir a mi inicio"
