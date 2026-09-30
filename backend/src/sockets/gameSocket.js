@@ -129,6 +129,7 @@ function ensureRoomState(room) {
       pausedAt: null,
       pausedTimeRemaining: 0,
       usedQuestionIds: new Set(),
+      lastReveal: null,
       lastResult: null,
       idleTimer: null,
     });
@@ -149,6 +150,37 @@ async function pickQuestions({ subject, courseName, count, usedIds }) {
     [subject, levels, [...usedIds], count]
   );
   return rows;
+}
+
+// A staff view (teacher tab, projector) opened or reloaded mid-round would
+// otherwise stay blank until the next question.
+function emitRoundCatchUp(socket, state) {
+  if (state.status !== 'playing' || state.currentQuestionIndex < 0) return;
+
+  const qi = state.currentQuestionIndex;
+  const q = state.questions[qi];
+  const timeRemaining = state.paused
+    ? state.pausedTimeRemaining
+    : Math.max(0, (state.questionStartedAt + QUESTION_TIME_MS) - Date.now());
+
+  socket.emit('game:question', {
+    questionIndex: qi,
+    totalQuestions: state.questions.length,
+    text: q.text,
+    options: q.options,
+    timeMs: timeRemaining,
+  });
+
+  if (state.lastReveal) {
+    socket.emit('game:reveal', state.lastReveal);
+    return;
+  }
+  if (state.paused) socket.emit('game:paused', { timeRemaining: state.pausedTimeRemaining });
+  socket.emit('game:answer_count', {
+    questionIndex: qi,
+    count: state.questionAnswers.get(qi)?.size ?? 0,
+    total: connectedStudents(state).length,
+  });
 }
 
 // Students who left after the last round drop out instead of showing up with
@@ -237,6 +269,7 @@ function setupGameSocket(io) {
           projectorKey: issueProjectorKey(roomCode),
           lastResult: state.status === 'ended' ? state.lastResult : null,
         });
+        emitRoundCatchUp(socket, state);
       } catch (err) {
         socket.emit('error', { message: 'No autorizado' });
       }
@@ -259,6 +292,7 @@ function setupGameSocket(io) {
           status: state.status,
           participants: participantsOf(state),
         });
+        emitRoundCatchUp(socket, state);
       } catch (err) {
         socket.emit('error', { message: 'No autorizado' });
       }
@@ -645,6 +679,7 @@ function sendNextQuestion(io, roomCode) {
   state.paused = false;
   state.pausedAt = null;
   state.pausedTimeRemaining = 0;
+  state.lastReveal = null;
 
   const question = state.questions[qi];
   // Only questions actually shown count as used: a round stopped early leaves the rest for later.
@@ -715,13 +750,14 @@ function revealAnswer(io, roomCode) {
     }
   }
 
-  io.to(roomCode).emit('game:reveal', {
+  state.lastReveal = {
     questionIndex: qi,
     correctAnswer: question.correct,
     hint: question.hint,
     results,
     leaderboard: buildLeaderboard(state.students),
-  });
+  };
+  io.to(roomCode).emit('game:reveal', state.lastReveal);
 
   // Wait 5 seconds then next question
   state.timer = setTimeout(() => sendNextQuestion(io, roomCode), 5000);

@@ -17,7 +17,7 @@ export default function TeacherGame() {
   const [participants, setParticipants] = useState([]);
   const [question, setQuestion] = useState(null);
   const [timeLeft, setTimeLeft] = useState(0);
-  const [answerCount, setAnswerCount] = useState({ count: 0, total: 0 });
+  const [answerCount, setAnswerCount] = useState({ count: 0, total: null });
   const [revealData, setRevealData] = useState(null);
   const [leaderboard, setLeaderboard] = useState([]);
   const [endSummary, setEndSummary] = useState(null);
@@ -70,7 +70,8 @@ export default function TeacherGame() {
       setQuestion(data);
       setPhase('playing');
       setRevealData(null);
-      setAnswerCount({ count: 0, total: participants.length });
+      // This handler closes over the first render's participants; the total comes from the render instead.
+      setAnswerCount({ count: 0, total: null });
       setIsPaused(false);
       setConfirmStop(false);
       setTimeLeft(Math.ceil(data.timeMs / 1000));
@@ -286,7 +287,7 @@ export default function TeacherGame() {
             <div className="bg-card rounded-2xl p-4 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-gray-400">
-                  Respondieron: <span className="text-white font-bold">{answerCount.count}</span>/{answerCount.total}
+                  Respondieron: <span className="text-white font-bold">{answerCount.count}</span>/{answerCount.total ?? participants.length}
                 </span>
                 {isPaused && (
                   <span className="text-yellow-400 font-bold text-sm animate-pulse">⏸ PAUSADO</span>

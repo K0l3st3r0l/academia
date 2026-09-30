@@ -559,6 +559,80 @@ describe('otra ronda en la misma sala', () => {
   });
 });
 
+describe('vista del docente o proyector abierta a mitad de ronda', () => {
+  // Listeners go up before the join: the catch-up events follow room:joined right away.
+  function joinAndCollect(socket, event, payload, events) {
+    const got = {};
+    const all = events.map(e => once(socket, e).then(data => { got[e] = data; }));
+    socket.emit(event, payload);
+    return Promise.all(all).then(() => got);
+  }
+
+  it('recibe la pregunta en curso con el tiempo que queda y cuántos respondieron', async () => {
+    const { teacher, student1, student2, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const { projectorKey } = await teacherJoin(teacherSocket, token, room.code);
+    const s1 = await connectClient();
+    const s2 = await connectClient();
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    await studentJoin(s2, room.code, student2.id, 'Estudiante Dos');
+
+    const questionP = once(s1, 'game:question');
+    teacherSocket.emit('game:start', { roomCode: room.code });
+    await questionP;
+    const countP = once(teacherSocket, 'game:answer_count');
+    s1.emit('game:answer', { roomCode: room.code, answer: 'Uno' });
+    await countP;
+
+    const reloadedTab = await connectClient();
+    const tab = await joinAndCollect(reloadedTab, 'teacher:join', { token, roomCode: room.code },
+      ['room:joined', 'game:question', 'game:answer_count']);
+    expect(tab['room:joined'].status).toBe('playing');
+    expect(tab['game:question'].options).toEqual(['Uno', 'Dos', 'Tres', 'Cuatro']);
+    expect(tab['game:question'].timeMs).toBeGreaterThan(0);
+    expect(tab['game:question'].timeMs).toBeLessThanOrEqual(QUESTION_TIME_MS);
+    expect(tab['game:answer_count']).toMatchObject({ count: 1, total: 2 });
+
+    const projector = await connectClient();
+    const proj = await joinAndCollect(projector, 'projector:join', { token: '', projectorKey, roomCode: room.code },
+      ['room:joined', 'game:question', 'game:answer_count']);
+    expect(proj['game:question'].questionIndex).toBe(0);
+    expect(proj['game:answer_count'].count).toBe(1);
+
+    for (const socket of [teacherSocket, reloadedTab, projector, s1, s2]) socket.disconnect();
+  });
+
+  it('si la respuesta ya se reveló, recibe también el reveal', async () => {
+    const { teacher, student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    await teacherJoin(teacherSocket, token, room.code);
+    const s1 = await connectClient();
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+
+    const questionP = once(s1, 'game:question');
+    teacherSocket.emit('game:start', { roomCode: room.code });
+    await questionP;
+    const revealP = once(teacherSocket, 'game:reveal');
+    s1.emit('game:answer', { roomCode: room.code, answer: 'Uno' });
+    await revealP;
+
+    const reloadedTab = await connectClient();
+    const tab = await joinAndCollect(reloadedTab, 'teacher:join', { token, roomCode: room.code },
+      ['room:joined', 'game:question', 'game:reveal']);
+    expect(tab['game:reveal'].correctAnswer).toBe('Uno');
+    expect(tab['game:reveal'].leaderboard[0].name).toBe('Estudiante Uno');
+
+    const endP = once(teacherSocket, 'game:end');
+    teacherSocket.emit('game:stop', { roomCode: room.code });
+    await endP;
+    for (const socket of [teacherSocket, reloadedTab, s1]) socket.disconnect();
+  });
+});
+
 describe('proyector en un computador sin sesión', () => {
   function emitAndWait(socket, event, payload, responseEvent) {
     const p = once(socket, responseEvent);
