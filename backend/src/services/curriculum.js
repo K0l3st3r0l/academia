@@ -26,15 +26,22 @@ function loadCurriculumFiles() {
 async function syncCurriculum() {
   let count = 0;
   for (const file of loadCurriculumFiles()) {
-    for (const { subject, oas } of file.subjects) {
+    for (const { subject, units = [], oas } of file.subjects) {
+      for (const unit of units) {
+        await pool.query(`
+          INSERT INTO curriculum_units (subject, grade_level, number, title) VALUES ($1, $2, $3, $4)
+          ON CONFLICT (subject, grade_level, number) DO UPDATE SET title = EXCLUDED.title
+        `, [subject, file.grade_level, unit.number, unit.title]);
+      }
       for (const oa of oas) {
         await pool.query(`
-          INSERT INTO curriculum_oas (subject, grade_level, code, number, eje, label, text, quiz, note, unit, updated_at)
-          VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, NOW())
+          INSERT INTO curriculum_oas (subject, grade_level, code, number, eje, label, text, quiz, note, units, all_year, updated_at)
+          VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, NOW())
           ON CONFLICT (subject, grade_level, code) DO UPDATE SET
             number = EXCLUDED.number, eje = EXCLUDED.eje, label = EXCLUDED.label, text = EXCLUDED.text,
-            quiz = EXCLUDED.quiz, note = EXCLUDED.note, unit = EXCLUDED.unit, updated_at = NOW()
-        `, [subject, file.grade_level, oa.code, parseInt(oa.code.replace(/\D/g, ''), 10), oa.eje, oa.label, oa.text, oa.quiz, oa.note, oa.unit]);
+            quiz = EXCLUDED.quiz, note = EXCLUDED.note, units = EXCLUDED.units, all_year = EXCLUDED.all_year,
+            updated_at = NOW()
+        `, [subject, file.grade_level, oa.code, parseInt(oa.code.replace(/\D/g, ''), 10), oa.eje, oa.label, oa.text, oa.quiz, oa.note, oa.units || [], !!oa.all_year]);
         count++;
       }
     }
@@ -43,8 +50,12 @@ async function syncCurriculum() {
 }
 
 async function getCurriculum({ subject, gradeLevel }) {
-  const { rows } = await pool.query(`
-    SELECT c.code, c.number, c.eje, c.label, c.text, c.quiz, c.note, c.unit,
+  const { rows: units } = await pool.query(
+    'SELECT number, title FROM curriculum_units WHERE subject = $1 AND grade_level = $2 ORDER BY number',
+    [subject, gradeLevel]
+  );
+  const { rows: oas } = await pool.query(`
+    SELECT c.code, c.number, c.eje, c.label, c.text, c.quiz, c.note, c.units, c.all_year,
            COUNT(q.id) FILTER (WHERE q.active)::int AS active_questions
     FROM curriculum_oas c
     LEFT JOIN questions q
@@ -53,7 +64,7 @@ async function getCurriculum({ subject, gradeLevel }) {
     GROUP BY c.id
     ORDER BY c.number
   `, [subject, gradeLevel]);
-  return rows;
+  return { units, oas };
 }
 
 module.exports = { syncCurriculum, getCurriculum, loadCurriculumFiles };

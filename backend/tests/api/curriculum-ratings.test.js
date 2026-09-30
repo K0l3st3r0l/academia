@@ -95,8 +95,14 @@ describe('GET /api/curriculum/:grade/:subject', () => {
     expect(res.status).toBe(200);
     expect(res.body.oas).toHaveLength(27);
     const oa20 = res.body.oas.find(o => o.code === 'OA20');
-    expect(oa20).toMatchObject({ eje: 'Medición', label: 'Conversión de unidades de longitud', active_questions: 1, quiz: true });
+    expect(oa20).toMatchObject({ eje: 'Medición', label: 'Conversión de unidades de longitud', active_questions: 1, quiz: true, units: [2] });
     expect(res.body.oas.find(o => o.code === 'OA1').active_questions).toBe(0);
+    expect(res.body.units.map(u => u.number)).toEqual([1, 2, 3, 4]);
+
+    // English units are themes and its OA are worked all year.
+    const english = await request(testServer.server).get('/api/curriculum/5b/ingles').set('Authorization', `Bearer ${token}`);
+    expect(english.body.units[0].title).toBe('My world');
+    expect(english.body.oas.every(o => o.all_year && o.units.length === 4)).toBe(true);
   });
 
   it('rechaza sin sesión y con curso o asignatura inválidos', async () => {

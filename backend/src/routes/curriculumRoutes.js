@@ -14,7 +14,7 @@ router.get('/:gradeLevel/:subject', authenticateToken, requireTeacher, async (re
     return res.status(400).json({ error: 'Curso o asignatura inválidos' });
   }
   try {
-    res.json({ oas: await getCurriculum({ subject, gradeLevel }) });
+    res.json(await getCurriculum({ subject, gradeLevel }));
   } catch (err) {
     logger.error({ err }, 'curriculum fetch error');
     res.status(500).json({ error: 'Error al obtener el currículum' });
