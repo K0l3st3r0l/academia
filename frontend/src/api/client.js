@@ -48,6 +48,9 @@ export const resetStudentPin = (id) =>
 export const resetStudentPinsBulk = (courseName) =>
   client.post('/api/students/reset-pins-bulk', { course_name: courseName });
 
+export const getCurriculum = (gradeLevel, subject) =>
+  client.get(`/api/curriculum/${gradeLevel}/${subject}`);
+
 export const getRoom = (code) =>
   client.get(`/api/rooms/${code}`);
 

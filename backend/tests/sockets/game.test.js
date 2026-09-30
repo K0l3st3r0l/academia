@@ -643,6 +643,84 @@ describe('vista del docente o proyector abierta a mitad de ronda', () => {
   });
 });
 
+describe('ronda por OA con informe para el profesor', () => {
+  function emitAndWait(socket, event, payload, responseEvent) {
+    const p = once(socket, responseEvent);
+    socket.emit(event, payload);
+    return p;
+  }
+
+  async function seedOaQuestions() {
+    const { teacher, student1, student2, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    await pool.query("UPDATE questions SET oa_code = 'OA1' WHERE subject = 'matematica'");
+    await createQuestion(pool, { subject: 'matematica', gradeLevel: '5b', options: ['10', '100', '1', '1000'], correct: '10', oaCode: 'OA20', text: 'mm en 1 cm' });
+    return { teacher, student1, student2, room };
+  }
+
+  it('solo usa preguntas de los OA elegidos y manda el informe al profesor y al proyector, no a los alumnos', async () => {
+    const { teacher, student1, student2, room } = await seedOaQuestions();
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const { projectorKey, gradeLevel } = await teacherJoin(teacherSocket, token, room.code);
+    expect(gradeLevel).toBe('5b');
+    const projector = await connectClient();
+    await emitAndWait(projector, 'projector:join', { token: '', projectorKey, roomCode: room.code }, 'room:joined');
+    const s1 = await connectClient();
+    const s2 = await connectClient();
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    await studentJoin(s2, room.code, student2.id, 'Estudiante Dos');
+
+    let studentGotReport = false;
+    s1.on('game:report', () => { studentGotReport = true; });
+    const questionP = once(s1, 'game:question');
+    teacherSocket.emit('game:start', { roomCode: room.code, oaCodes: ['OA20'], level: 'desafio', questionCount: 5 });
+    const question = await questionP;
+    expect(question.text).toBe('mm en 1 cm');
+    expect(question.totalQuestions).toBe(1);
+
+    const revealP = once(teacherSocket, 'game:reveal');
+    s1.emit('game:answer', { roomCode: room.code, answer: '100' });
+    s2.emit('game:answer', { roomCode: room.code, answer: '10' });
+    await revealP;
+
+    const teacherReportP = once(teacherSocket, 'game:report');
+    const projectorReportP = once(projector, 'game:report');
+    teacherSocket.emit('game:stop', { roomCode: room.code });
+    const report = await teacherReportP;
+    await projectorReportP;
+    expect(report.questions[0]).toMatchObject({ oaCode: 'OA20', answered: 2, correct: 1, correctAnswer: '10', topWrong: { answer: '100', count: 1 } });
+    expect(report.oas).toEqual([expect.objectContaining({ oaCode: 'OA20', answered: 2, correct: 1 })]);
+    expect(studentGotReport).toBe(false);
+
+    const reloaded = await connectClient();
+    const rejoined = await teacherJoin(reloaded, token, room.code);
+    expect(rejoined.lastReport.questions).toHaveLength(1);
+
+    for (const socket of [teacherSocket, projector, s1, s2, reloaded]) socket.disconnect();
+  });
+
+  it('rechaza OA inválidos, una exigencia desconocida y OA sin preguntas', async () => {
+    const { teacher, student1, room } = await seedOaQuestions();
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+    const teacherSocket = await connectClient();
+    await teacherJoin(teacherSocket, token, room.code);
+    const s1 = await connectClient();
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+
+    const badOa = await emitAndWait(teacherSocket, 'game:start', { roomCode: room.code, oaCodes: ['DROP TABLE'] }, 'error');
+    expect(badOa.message).toBe('Los OA elegidos no son válidos.');
+    const badLevel = await emitAndWait(teacherSocket, 'game:start', { roomCode: room.code, level: 'imposible' }, 'error');
+    expect(badLevel.message).toBe('Elige repaso, ajustado o desafío.');
+    const empty = await emitAndWait(teacherSocket, 'game:start', { roomCode: room.code, oaCodes: ['OA27'] }, 'error');
+    expect(empty.message).toMatch(/No hay preguntas activas para los OA elegidos/);
+    expect(getRoomState(room.code).status).toBe('waiting');
+
+    teacherSocket.disconnect();
+    s1.disconnect();
+  });
+});
+
 describe('proyector en un computador sin sesión', () => {
   function emitAndWait(socket, event, payload, responseEvent) {
     const p = once(socket, responseEvent);

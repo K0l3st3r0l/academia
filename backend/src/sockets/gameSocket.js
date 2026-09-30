@@ -5,6 +5,7 @@ const { trackEvent } = require('../services/eventTracker');
 const { verifyRoomTicket, issueProjectorKey, verifyProjectorKey } = require('../services/roomTicket');
 const { VALID_SUBJECTS } = require('../routes/questionRoutes');
 const { scheduleRating } = require('../services/skillRatings');
+const { pickQuestions, LEVEL_TARGETS, DEFAULT_LEVEL } = require('../services/questionPicker');
 
 // In-memory game state per room
 // Map<roomCode, RoomState>
@@ -132,25 +133,44 @@ function ensureRoomState(room) {
       usedQuestionIds: new Set(),
       lastReveal: null,
       lastResult: null,
+      lastReport: null,
       idleTimer: null,
     });
   }
   return rooms.get(room.code);
 }
 
-// Unused questions first so a second round of the same subject doesn't repeat
-// the first; within each group the course's grade level before 'general'.
-async function pickQuestions({ subject, courseName, count, usedIds }) {
-  const gradeLevel = deriveGradeLevel(courseName);
-  const levels = gradeLevel ? [gradeLevel, 'general'] : ['general'];
-  const { rows } = await pool.query(
-    `SELECT * FROM questions
-     WHERE subject = $1 AND grade_level = ANY($2::text[]) AND active = true
-     ORDER BY id = ANY($3::uuid[]), grade_level = 'general', RANDOM()
-     LIMIT $4`,
-    [subject, levels, [...usedIds], count]
-  );
-  return rows;
+// Per question and per OA, for the teacher: what the class got wrong and which
+// wrong answer it chose. Only counts, never names.
+function buildRoundReport(state) {
+  const shown = state.questions.slice(0, Math.min(state.currentQuestionIndex + 1, state.questions.length));
+  const questions = shown.map((q, index) => {
+    const answers = [...(state.questionAnswers.get(index)?.values() ?? [])];
+    const wrongCounts = new Map();
+    for (const a of answers) {
+      if (!a.isCorrect) wrongCounts.set(a.answer, (wrongCounts.get(a.answer) ?? 0) + 1);
+    }
+    const [topWrong] = [...wrongCounts.entries()].sort((a, b) => b[1] - a[1]);
+    return {
+      index,
+      text: q.text,
+      oaCode: q.oaCode,
+      oaLabel: q.oaLabel,
+      correctAnswer: q.correct,
+      answered: answers.length,
+      correct: answers.filter(a => a.isCorrect).length,
+      topWrong: topWrong ? { answer: topWrong[0], count: topWrong[1] } : null,
+    };
+  });
+  const oas = new Map();
+  for (const q of questions) {
+    if (!q.oaCode) continue;
+    const oa = oas.get(q.oaCode) ?? { oaCode: q.oaCode, oaLabel: q.oaLabel, answered: 0, correct: 0 };
+    oa.answered += q.answered;
+    oa.correct += q.correct;
+    oas.set(q.oaCode, oa);
+  }
+  return { questions, oas: [...oas.values()] };
 }
 
 // A staff view (teacher tab, projector) opened or reloaded mid-round would
@@ -199,6 +219,7 @@ function resetForNewRound(state) {
   }
   state.questionAnswers = new Map();
   state.lastResult = null;
+  state.lastReport = null;
 }
 
 function participantsOf(state) {
@@ -268,7 +289,9 @@ function setupGameSocket(io) {
           status: state.status,
           participants: participantsOf(state),
           projectorKey: issueProjectorKey(roomCode),
+          gradeLevel: deriveGradeLevel(room.course_name),
           lastResult: state.status === 'ended' ? state.lastResult : null,
+          lastReport: state.status === 'ended' ? state.lastReport : null,
         });
         emitRoundCatchUp(socket, state);
       } catch (err) {
@@ -436,7 +459,7 @@ function setupGameSocket(io) {
     }));
 
     // ── Teacher starts the game, or another round once one has ended ────
-    socket.on('game:start', withErrorLogging(socket, 'game:start', async ({ roomCode, subject, questionCount } = {}) => {
+    socket.on('game:start', withErrorLogging(socket, 'game:start', async ({ roomCode, subject, questionCount, oaCodes = [], level = DEFAULT_LEVEL } = {}) => {
       const state = getRoomState(roomCode);
       if (!state) return socket.emit('error', { message: 'Sala no existe en memoria' });
       if (!isRoomController(socket, roomCode)) return socket.emit('error', { message: 'Solo el docente puede iniciar' });
@@ -450,6 +473,16 @@ function setupGameSocket(io) {
         return socket.emit('error', { message: 'Elige 5, 10 o 15 preguntas.' });
       }
       const count = questionCount ?? DEFAULT_QUESTION_COUNT;
+      if (!Object.hasOwn(LEVEL_TARGETS, level)) {
+        return socket.emit('error', { message: 'Elige repaso, ajustado o desafío.' });
+      }
+      const gradeLevel = deriveGradeLevel(state.courseName);
+      if (!Array.isArray(oaCodes) || oaCodes.length > 40 || oaCodes.some(c => !/^OA\d{1,2}$/.test(c))) {
+        return socket.emit('error', { message: 'Los OA elegidos no son válidos.' });
+      }
+      if (oaCodes.length && !gradeLevel) {
+        return socket.emit('error', { message: 'Este curso no tiene nivel definido: no se pueden elegir OA.' });
+      }
 
       // Blocks a double click from starting two rounds while the questions load.
       const previousStatus = state.status;
@@ -458,9 +491,12 @@ function setupGameSocket(io) {
       try {
         questions = await pickQuestions({
           subject: roundSubject,
-          courseName: state.courseName,
+          gradeLevel,
+          oaCodes,
+          level,
           count,
           usedIds: state.usedQuestionIds,
+          studentIds: connectedStudents(state).map(s => s.studentDbId),
         });
       } catch (err) {
         state.status = previousStatus;
@@ -470,7 +506,11 @@ function setupGameSocket(io) {
 
       if (!questions.length) {
         state.status = previousStatus;
-        return socket.emit('error', { message: `No hay preguntas activas para "${roundSubject}". Agrega preguntas en el banco de contenido.` });
+        return socket.emit('error', {
+          message: oaCodes.length
+            ? 'No hay preguntas activas para los OA elegidos. Elige otros o agrega preguntas en el banco.'
+            : `No hay preguntas activas para "${roundSubject}". Agrega preguntas en el banco de contenido.`,
+        });
       }
 
       if (previousStatus === 'ended') resetForNewRound(state);
@@ -480,6 +520,8 @@ function setupGameSocket(io) {
       state.subject = roundSubject;
       state.questions = questions.map(q => ({
         id: q.id,
+        oaCode: q.oa_code,
+        oaLabel: q.oa_label,
         text: q.text,
         options: q.options,
         correct: q.correct,
@@ -505,7 +547,7 @@ function setupGameSocket(io) {
         eventType: 'game_started',
         roomId: state.roomDbId,
         sessionId: state.sessionId,
-        payload: { subject: state.subject, totalQuestions: state.questions.length, newRound: previousStatus === 'ended' },
+        payload: { subject: state.subject, totalQuestions: state.questions.length, newRound: previousStatus === 'ended', level, oaCodes },
       });
 
       io.to(roomCode).emit('game:started', { totalQuestions: state.questions.length, subject: state.subject });
@@ -827,6 +869,8 @@ async function endGame(io, roomCode, { closeRoom = false } = {}) {
     },
   };
   io.to(roomCode).emit('game:end', state.lastResult);
+  state.lastReport = buildRoundReport(state);
+  io.to(staffChannel(roomCode)).emit('game:report', state.lastReport);
 
   if (closeRoom) {
     rooms.delete(roomCode);

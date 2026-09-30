@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { useAuth } from '../context/AuthContext';
-import { SOCKET_URL, closeRoom } from '../api/client';
+import { SOCKET_URL, closeRoom, getCurriculum } from '../api/client';
 import RoundSettings from '../components/RoundSettings';
+import RoundReport from '../components/RoundReport';
 import { subjectLabel } from '../utils/subjects';
 
 const OPTION_COLORS = ['bg-blue-600', 'bg-orange-500', 'bg-green-600', 'bg-red-600'];
@@ -29,6 +30,11 @@ export default function TeacherGame() {
   const [projectorKey, setProjectorKey] = useState('');
   const [roundSubject, setRoundSubject] = useState('');
   const [questionCount, setQuestionCount] = useState(10);
+  const [gradeLevel, setGradeLevel] = useState(null);
+  const [curriculum, setCurriculum] = useState(null);
+  const [selectedOAs, setSelectedOAs] = useState([]);
+  const [level, setLevel] = useState('ajustado');
+  const [report, setReport] = useState(null);
   const timerRef = useRef(null);
 
   useEffect(() => {
@@ -45,6 +51,7 @@ export default function TeacherGame() {
       if (data.status === 'ended' && data.lastResult) {
         setEndSummary(data.lastResult);
         setLeaderboard(data.lastResult.leaderboard);
+        setReport(data.lastReport || null);
       }
       setPhase(prev => {
         if (data.status === 'waiting' || data.status === 'ended') return data.status;
@@ -54,6 +61,7 @@ export default function TeacherGame() {
       setRoomId(data.roomId || null);
       setProjectorKey(data.projectorKey || '');
       setRoundSubject(prev => prev || data.subject || '');
+      setGradeLevel(data.gradeLevel || null);
     });
 
     socket.on('room:participants', (data) => setParticipants(data.participants));
@@ -63,6 +71,7 @@ export default function TeacherGame() {
       setRevealData(null);
       setLeaderboard([]);
       setEndSummary(null);
+      setReport(null);
       if (data?.subject) setRoundSubject(data.subject);
     });
 
@@ -119,6 +128,8 @@ export default function TeacherGame() {
       setPhase('ended');
     });
 
+    socket.on('game:report', setReport);
+
     socket.on('error', (data) => alert(data.message));
 
     // Closed from another tab or device: this control panel has nothing left to control.
@@ -130,7 +141,23 @@ export default function TeacherGame() {
     };
   }, [code]);
 
-  const startGame = () => socketRef.current?.emit('game:start', { roomCode: code, subject: roundSubject, questionCount });
+  // The OA list follows the subject; OA of another subject would start an empty round.
+  useEffect(() => {
+    setSelectedOAs([]);
+    if (!gradeLevel || !roundSubject) {
+      setCurriculum(null);
+      return;
+    }
+    let cancelled = false;
+    getCurriculum(gradeLevel, roundSubject)
+      .then(res => { if (!cancelled) setCurriculum(res.data); })
+      .catch(() => { if (!cancelled) setCurriculum(null); });
+    return () => { cancelled = true; };
+  }, [gradeLevel, roundSubject]);
+
+  const startGame = () => socketRef.current?.emit('game:start', {
+    roomCode: code, subject: roundSubject, questionCount, oaCodes: selectedOAs, level,
+  });
   const nextQuestion = () => socketRef.current?.emit('game:next', { roomCode: code });
   const pauseGame = () => socketRef.current?.emit('game:pause', { roomCode: code });
   const resumeGame = () => socketRef.current?.emit('game:resume', { roomCode: code });
@@ -233,6 +260,11 @@ export default function TeacherGame() {
             onSubjectChange={setRoundSubject}
             questionCount={questionCount}
             onQuestionCountChange={setQuestionCount}
+            curriculum={curriculum}
+            selectedOAs={selectedOAs}
+            onSelectedOAsChange={setSelectedOAs}
+            level={level}
+            onLevelChange={setLevel}
           />
 
           <button
@@ -408,6 +440,8 @@ export default function TeacherGame() {
             </ol>
           </div>
 
+          <RoundReport report={report} />
+
           <div>
             <h3 className="font-bold mb-1">Otra ronda</h3>
             <p className="text-gray-400 text-sm mb-3">
@@ -419,6 +453,11 @@ export default function TeacherGame() {
               onSubjectChange={setRoundSubject}
               questionCount={questionCount}
               onQuestionCountChange={setQuestionCount}
+              curriculum={curriculum}
+              selectedOAs={selectedOAs}
+              onSelectedOAsChange={setSelectedOAs}
+              level={level}
+              onLevelChange={setLevel}
             />
           </div>
 
