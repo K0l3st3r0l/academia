@@ -62,7 +62,10 @@ export default function ProjectorView() {
     });
     socket.on('room:participants', (data) => setParticipants(data.participants));
 
-    socket.on('game:started', () => setPhase('countdown'));
+    socket.on('game:started', (data) => {
+      setPhase('countdown');
+      if (data?.subject) setRoomInfo(prev => (prev ? { ...prev, subject: data.subject } : prev));
+    });
 
     socket.on('game:question', (data) => {
       setQuestion(data);
@@ -258,7 +261,7 @@ export default function ProjectorView() {
       {phase === 'ended' && (
         <div className="flex-1 flex flex-col items-center justify-center">
           <p className="text-8xl mb-4">🏆</p>
-          <h2 className="text-5xl font-black mb-8">¡Actividad terminada!</h2>
+          <h2 className="text-5xl font-black mb-8">¡Ronda terminada!</h2>
           <div className="w-full max-w-lg space-y-3">
             {leaderboard.slice(0, 10).map(p => (
               <div

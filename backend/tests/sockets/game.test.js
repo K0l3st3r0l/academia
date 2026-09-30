@@ -4,7 +4,7 @@ import { startTestServer } from '../helpers/socketServer.js';
 import { createTeacher, createStudent, createRoom, createQuestion, signToken, studentPayload } from '../helpers/fixtures.js';
 
 const { default: pool } = await import('../../src/db/index.js');
-const { getRoomState, QUESTION_TIME_MS } = await import('../../src/sockets/gameSocket.js');
+const { getRoomState, closeIdleRoom, QUESTION_TIME_MS } = await import('../../src/sockets/gameSocket.js');
 const { issueRoomTicket } = await import('../../src/services/roomTicket.js');
 
 let testServer;
@@ -121,8 +121,9 @@ describe('flujo de juego por sockets', () => {
     expect(ledger[0].student_id).toBe(student1.id);
     expect(ledger[0].amount).toBeGreaterThan(0);
 
+    // The room stays open so the class can play another round.
     const { rows: roomRows } = await pool.query('SELECT status FROM rooms WHERE id = $1', [room.id]);
-    expect(roomRows[0].status).toBe('closed');
+    expect(roomRows[0].status).toBe('waiting');
 
     const { rows: events } = await pool.query('SELECT event_type FROM events WHERE room_id = $1', [room.id]);
     const eventTypes = events.map(e => e.event_type);
@@ -385,6 +386,176 @@ describe('control del juego por identidad', () => {
     expect(asAdmin.role).toBe('teacher');
 
     socket.disconnect();
+  });
+});
+
+describe('otra ronda en la misma sala', () => {
+  function emitAndWait(socket, event, payload, responseEvent) {
+    const p = once(socket, responseEvent);
+    socket.emit(event, payload);
+    return p;
+  }
+
+  async function playOneQuestionRound(teacherSocket, roomCode, answers, startPayload = {}) {
+    const questionP = once(answers[0][0], 'game:question');
+    const startedP = once(teacherSocket, 'game:started');
+    teacherSocket.emit('game:start', { roomCode, ...startPayload });
+    const started = await startedP;
+    await questionP;
+
+    const revealP = once(teacherSocket, 'game:reveal');
+    for (const [socket, answer] of answers) socket.emit('game:answer', { roomCode, answer });
+    await revealP;
+
+    const endP = once(teacherSocket, 'game:end');
+    teacherSocket.emit('game:stop', { roomCode });
+    return { started, end: await endP };
+  }
+
+  it('juega una segunda ronda con otra asignatura, con puntaje y tokens desde cero', async () => {
+    const { teacher, student1, student2, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    await createQuestion(pool, { subject: 'lenguaje', gradeLevel: '5b', options: ['A', 'B', 'C', 'D'], correct: 'B' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const projector = await connectClient();
+    const s1 = await connectClient();
+    const s2 = await connectClient();
+    const { projectorKey } = await teacherJoin(teacherSocket, token, room.code);
+    await emitAndWait(projector, 'projector:join', { token: '', projectorKey, roomCode: room.code }, 'room:joined');
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    await studentJoin(s2, room.code, student2.id, 'Estudiante Dos');
+
+    await playOneQuestionRound(teacherSocket, room.code, [[s1, 'Uno'], [s2, 'Dos']]);
+    expect(getRoomState(room.code).idleTimer).toBeTruthy();
+
+    const projectorQuestionP = once(projector, 'game:question');
+    const { started, end } = await playOneQuestionRound(
+      teacherSocket, room.code, [[s1, 'A'], [s2, 'B']], { subject: 'lenguaje', questionCount: 5 }
+    );
+    expect(started.subject).toBe('lenguaje');
+    expect((await projectorQuestionP).options).toEqual(['A', 'B', 'C', 'D']);
+    expect(getRoomState(room.code).idleTimer).toBeTruthy();
+
+    const scores = Object.fromEntries(end.leaderboard.map(p => [p.name, p.score]));
+    expect(scores['Estudiante Uno']).toBe(0);
+    expect(scores['Estudiante Dos']).toBeGreaterThan(0);
+
+    const { rows: sessions } = await pool.query('SELECT subject FROM game_sessions WHERE room_id = $1 ORDER BY started_at', [room.id]);
+    expect(sessions.map(s => s.subject)).toEqual(['matematica', 'lenguaje']);
+
+    const { rows: ledger } = await pool.query('SELECT student_id FROM token_ledger WHERE room_id = $1 ORDER BY created_at', [room.id]);
+    expect(ledger.map(l => l.student_id)).toEqual([student1.id, student2.id]);
+
+    const { rows: roomRows } = await pool.query('SELECT status, subject FROM rooms WHERE id = $1', [room.id]);
+    expect(roomRows[0]).toMatchObject({ status: 'waiting', subject: 'lenguaje' });
+
+    // A teacher tab reloaded between rounds gets the last results back.
+    const reloaded = await connectClient();
+    const rejoined = await teacherJoin(reloaded, token, room.code);
+    expect(rejoined.status).toBe('ended');
+    expect(rejoined.subject).toBe('lenguaje');
+    expect(rejoined.lastResult.leaderboard).toHaveLength(2);
+
+    for (const socket of [teacherSocket, projector, s1, s2, reloaded]) socket.disconnect();
+  });
+
+  it('entre rondas entra un alumno nuevo y el que se fue no aparece en la siguiente', async () => {
+    const { teacher, student1, student2, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const student3 = await createStudent(pool, { courseName: room.course_name, firstName: 'Estudiante Tres' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const s1 = await connectClient();
+    const s2 = await connectClient();
+    await teacherJoin(teacherSocket, token, room.code);
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    await studentJoin(s2, room.code, student2.id, 'Estudiante Dos');
+    await playOneQuestionRound(teacherSocket, room.code, [[s1, 'Uno'], [s2, 'Uno']]);
+
+    const leftP = once(teacherSocket, 'room:participants');
+    s2.disconnect();
+    await leftP;
+
+    const s3 = await connectClient();
+    const joined = await studentJoin(s3, room.code, student3.id, 'Estudiante Tres');
+    expect(joined.status).toBe('ended');
+
+    const { end } = await playOneQuestionRound(teacherSocket, room.code, [[s1, 'Uno'], [s3, 'Uno']]);
+    expect(end.leaderboard.map(p => p.name).sort()).toEqual(['Estudiante Tres', 'Estudiante Uno']);
+    expect(end.summary.totalStudents).toBe(2);
+
+    for (const socket of [teacherSocket, s1, s3]) socket.disconnect();
+  });
+
+  it('no repite preguntas de la ronda anterior mientras queden otras', async () => {
+    const { teacher, student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    for (let i = 2; i <= 6; i++) {
+      await createQuestion(pool, { subject: 'matematica', gradeLevel: '5b', text: `Pregunta ${i}`, options: ['Uno', 'Dos', 'Tres', 'Cuatro'], correct: 'Uno' });
+    }
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const s1 = await connectClient();
+    await teacherJoin(teacherSocket, token, room.code);
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+
+    await playOneQuestionRound(teacherSocket, room.code, [[s1, 'Uno']], { questionCount: 5 });
+    const firstRound = getRoomState(room.code).questions.map(q => q.text);
+    expect(firstRound).toHaveLength(5);
+
+    await playOneQuestionRound(teacherSocket, room.code, [[s1, 'Uno']], { questionCount: 5 });
+    // Round one was stopped after its first question: only that one counts as seen.
+    const secondRound = getRoomState(room.code).questions.map(q => q.text);
+    expect(secondRound).toHaveLength(5);
+    expect(secondRound).not.toContain(firstRound[0]);
+
+    teacherSocket.disconnect();
+    s1.disconnect();
+  });
+
+  it('rechaza una asignatura o una cantidad de preguntas inválida sin iniciar', async () => {
+    const { teacher, student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const s1 = await connectClient();
+    await teacherJoin(teacherSocket, token, room.code);
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+
+    const badSubject = await emitAndWait(teacherSocket, 'game:start', { roomCode: room.code, subject: 'quimica' }, 'error');
+    expect(badSubject.message).toBe('Esa asignatura no existe.');
+    const badCount = await emitAndWait(teacherSocket, 'game:start', { roomCode: room.code, questionCount: 1000 }, 'error');
+    expect(badCount.message).toBe('Elige 5, 10 o 15 preguntas.');
+    const noQuestions = await emitAndWait(teacherSocket, 'game:start', { roomCode: room.code, subject: 'historia' }, 'error');
+    expect(noQuestions.message).toMatch(/No hay preguntas activas/);
+    expect(getRoomState(room.code).status).toBe('waiting');
+
+    teacherSocket.disconnect();
+    s1.disconnect();
+  });
+
+  it('una sala sin otra ronda se cierra sola y avisa a quienes siguen conectados', async () => {
+    const { teacher, student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const s1 = await connectClient();
+    await teacherJoin(teacherSocket, token, room.code);
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    await playOneQuestionRound(teacherSocket, room.code, [[s1, 'Uno']]);
+
+    const closedP = once(s1, 'room:closed');
+    await closeIdleRoom(testServer.io, room.code);
+    await closedP;
+    expect(getRoomState(room.code)).toBeUndefined();
+
+    const { rows } = await pool.query('SELECT status, closed_at FROM rooms WHERE id = $1', [room.id]);
+    expect(rows[0].status).toBe('closed');
+    expect(rows[0].closed_at).not.toBeNull();
+
+    teacherSocket.disconnect();
+    s1.disconnect();
   });
 });
 

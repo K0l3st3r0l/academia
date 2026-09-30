@@ -55,7 +55,14 @@ export default function StudentGame() {
       }
     });
 
-    socket.on('game:started', () => setPhase('waiting'));
+    // Also a new round in the same room: score and ranking start over.
+    socket.on('game:started', () => {
+      setPhase('waiting');
+      setScore(0);
+      setLeaderboard([]);
+      setEndSummary(null);
+      setMyResult(null);
+    });
 
     socket.on('game:question', (data) => {
       setQuestion(data);
@@ -337,11 +344,15 @@ export default function StudentGame() {
             })}
           </div>
 
+          <p className="text-gray-400">
+            Quédate en esta pantalla: si tu profesor inicia otra ronda, aparecerá aquí.
+          </p>
+
           <button
             onClick={() => navigate('/?modo=clase')}
-            className="w-full bg-brand hover:bg-brand-dark text-white font-bold py-4 rounded-xl transition-colors"
+            className="w-full bg-surface border border-gray-700 text-gray-300 hover:text-white font-bold py-4 rounded-xl transition-colors"
           >
-            Volver al inicio
+            Salir de la sala
           </button>
         </div>
       )}

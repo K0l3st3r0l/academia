@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { useAuth } from '../context/AuthContext';
 import { SOCKET_URL, closeRoom } from '../api/client';
+import RoundSettings from '../components/RoundSettings';
+import { subjectLabel } from '../utils/subjects';
 
 const OPTION_COLORS = ['bg-blue-600', 'bg-orange-500', 'bg-green-600', 'bg-red-600'];
 
@@ -25,6 +27,8 @@ export default function TeacherGame() {
   const [confirmClose, setConfirmClose] = useState(false);
   const [closingRoom, setClosingRoom] = useState(false);
   const [projectorKey, setProjectorKey] = useState('');
+  const [roundSubject, setRoundSubject] = useState('');
+  const [questionCount, setQuestionCount] = useState(10);
   const timerRef = useRef(null);
 
   useEffect(() => {
@@ -37,15 +41,30 @@ export default function TeacherGame() {
     socket.on('connect', () => socket.emit('teacher:join', { token, roomCode: code }));
 
     socket.on('room:joined', (data) => {
-      setPhase(prev => (data.status === 'waiting' ? 'waiting' : prev === 'waiting' ? 'playing' : prev));
+      // A tab opened or reloaded between rounds shows the last results.
+      if (data.status === 'ended' && data.lastResult) {
+        setEndSummary(data.lastResult);
+        setLeaderboard(data.lastResult.leaderboard);
+      }
+      setPhase(prev => {
+        if (data.status === 'waiting' || data.status === 'ended') return data.status;
+        return prev === 'waiting' ? 'playing' : prev;
+      });
       setParticipants(data.participants || []);
       setRoomId(data.roomId || null);
       setProjectorKey(data.projectorKey || '');
+      setRoundSubject(prev => prev || data.subject || '');
     });
 
     socket.on('room:participants', (data) => setParticipants(data.participants));
 
-    socket.on('game:started', () => setPhase('playing'));
+    socket.on('game:started', (data) => {
+      setPhase('playing');
+      setRevealData(null);
+      setLeaderboard([]);
+      setEndSummary(null);
+      if (data?.subject) setRoundSubject(data.subject);
+    });
 
     socket.on('game:question', (data) => {
       setQuestion(data);
@@ -110,7 +129,7 @@ export default function TeacherGame() {
     };
   }, [code]);
 
-  const startGame = () => socketRef.current?.emit('game:start', { roomCode: code });
+  const startGame = () => socketRef.current?.emit('game:start', { roomCode: code, subject: roundSubject, questionCount });
   const nextQuestion = () => socketRef.current?.emit('game:next', { roomCode: code });
   const pauseGame = () => socketRef.current?.emit('game:pause', { roomCode: code });
   const resumeGame = () => socketRef.current?.emit('game:resume', { roomCode: code });
@@ -149,8 +168,7 @@ export default function TeacherGame() {
           >
             Abrir proyector ↗
           </a>
-          {phase !== 'ended' && (
-            confirmClose ? (
+          {confirmClose ? (
               <div className="flex items-center gap-2">
                 <span className="text-sm text-gray-400">¿Cerrar sala?</span>
                 <button
@@ -178,8 +196,7 @@ export default function TeacherGame() {
               >
                 Cerrar sala
               </button>
-            )
-          )}
+            )}
         </div>
       </div>
 
@@ -209,6 +226,13 @@ export default function TeacherGame() {
               )}
             </div>
           </div>
+
+          <RoundSettings
+            subject={roundSubject}
+            onSubjectChange={setRoundSubject}
+            questionCount={questionCount}
+            onQuestionCountChange={setQuestionCount}
+          />
 
           <button
             onClick={startGame}
@@ -360,7 +384,7 @@ export default function TeacherGame() {
         <div className="space-y-4">
           <div className="bg-card rounded-2xl p-6 text-center">
             <p className="text-5xl mb-2">🏆</p>
-            <h2 className="text-2xl font-black">¡Actividad finalizada!</h2>
+            <h2 className="text-2xl font-black">¡Ronda terminada!</h2>
             <p className="text-gray-400 mt-1">
               {endSummary.summary.totalStudents} alumnos · {endSummary.summary.totalQuestions} preguntas
             </p>
@@ -383,11 +407,33 @@ export default function TeacherGame() {
             </ol>
           </div>
 
+          <div>
+            <h3 className="font-bold mb-1">Otra ronda</h3>
+            <p className="text-gray-400 text-sm mb-3">
+              Los alumnos siguen conectados y el proyector se queda en la misma dirección.
+              {participants.length > 0 && ` Hay ${participants.length} conectado${participants.length === 1 ? '' : 's'}.`}
+            </p>
+            <RoundSettings
+              subject={roundSubject}
+              onSubjectChange={setRoundSubject}
+              questionCount={questionCount}
+              onQuestionCountChange={setQuestionCount}
+            />
+          </div>
+
           <button
-            onClick={() => navigate('/teacher')}
-            className="w-full bg-brand hover:bg-brand-dark text-white font-bold py-4 rounded-xl transition-colors"
+            onClick={startGame}
+            disabled={participants.length === 0}
+            className="w-full bg-correct hover:bg-green-700 disabled:opacity-40 text-white font-black py-5 rounded-2xl text-xl transition-colors"
           >
-            Nueva sala
+            Jugar otra ronda de {subjectLabel(roundSubject)}
+          </button>
+          <button
+            onClick={handleCloseRoom}
+            disabled={closingRoom}
+            className="w-full bg-surface border border-gray-700 text-gray-300 hover:text-white disabled:opacity-50 font-bold py-4 rounded-xl transition-colors"
+          >
+            {closingRoom ? 'Cerrando…' : 'Terminar la clase y cerrar la sala'}
           </button>
         </div>
       )}

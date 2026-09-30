@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const pool = require('../db');
 const { trackEvent } = require('../services/eventTracker');
 const { verifyRoomTicket, issueProjectorKey, verifyProjectorKey } = require('../services/roomTicket');
+const { VALID_SUBJECTS } = require('../routes/questionRoutes');
 
 // In-memory game state per room
 // Map<roomCode, RoomState>
@@ -11,6 +12,11 @@ const rooms = new Map();
 const QUESTION_TIME_MS = 25000;
 const TOKENS_CORRECT = 10;
 const TOKENS_SPEED_BONUS = [5, 3, 1]; // top 3 fastest correct answers
+const QUESTION_COUNTS = [5, 10, 15];
+const DEFAULT_QUESTION_COUNT = 10;
+// A room stays open after a round so the class can play another one; if no
+// round starts in this long, it closes on its own.
+const ROOM_IDLE_MS = 30 * 60 * 1000;
 
 function getRoomState(code) {
   return rooms.get(code);
@@ -122,9 +128,44 @@ function ensureRoomState(room) {
       paused: false,
       pausedAt: null,
       pausedTimeRemaining: 0,
+      usedQuestionIds: new Set(),
+      lastResult: null,
+      idleTimer: null,
     });
   }
   return rooms.get(room.code);
+}
+
+// Unused questions first so a second round of the same subject doesn't repeat
+// the first; within each group the course's grade level before 'general'.
+async function pickQuestions({ subject, courseName, count, usedIds }) {
+  const gradeLevel = deriveGradeLevel(courseName);
+  const levels = gradeLevel ? [gradeLevel, 'general'] : ['general'];
+  const { rows } = await pool.query(
+    `SELECT * FROM questions
+     WHERE subject = $1 AND grade_level = ANY($2::text[]) AND active = true
+     ORDER BY id = ANY($3::uuid[]), grade_level = 'general', RANDOM()
+     LIMIT $4`,
+    [subject, levels, [...usedIds], count]
+  );
+  return rows;
+}
+
+// Students who left after the last round drop out instead of showing up with
+// 0 points; everyone else starts the round from zero.
+function resetForNewRound(state) {
+  for (const [socketId, student] of state.students) {
+    if (student.connected === false) {
+      state.students.delete(socketId);
+      continue;
+    }
+    student.score = 0;
+    student.correctCount = 0;
+    student.tokensEarned = 0;
+    student.answers = [];
+  }
+  state.questionAnswers = new Map();
+  state.lastResult = null;
 }
 
 function participantsOf(state) {
@@ -189,11 +230,12 @@ function setupGameSocket(io) {
           role: 'teacher',
           roomCode,
           roomId: room.id,
-          subject: room.subject,
+          subject: state.subject,
           courseName: room.course_name,
           status: state.status,
           participants: participantsOf(state),
           projectorKey: issueProjectorKey(roomCode),
+          lastResult: state.status === 'ended' ? state.lastResult : null,
         });
       } catch (err) {
         socket.emit('error', { message: 'No autorizado' });
@@ -256,8 +298,8 @@ function setupGameSocket(io) {
         // Check if this student already has a session (reconnect)
         const existing = [...state.students.values()].find(s => s.studentDbId === studentDbId);
 
-        if (state.status !== 'waiting' && !existing) {
-          // Late join with no prior session — not allowed
+        if (state.status !== 'waiting' && state.status !== 'ended' && !existing) {
+          // Late join with no prior session — not allowed mid-round; between rounds it is
           return socket.emit('error', { message: 'La actividad ya comenzó. Espera la próxima.' });
         }
 
@@ -358,41 +400,51 @@ function setupGameSocket(io) {
       }
     }));
 
-    // ── Teacher starts the game ─────────────────────────────────────────
-    socket.on('game:start', withErrorLogging(socket, 'game:start', async ({ roomCode }) => {
+    // ── Teacher starts the game, or another round once one has ended ────
+    socket.on('game:start', withErrorLogging(socket, 'game:start', async ({ roomCode, subject, questionCount } = {}) => {
       const state = getRoomState(roomCode);
       if (!state) return socket.emit('error', { message: 'Sala no existe en memoria' });
       if (!isRoomController(socket, roomCode)) return socket.emit('error', { message: 'Solo el docente puede iniciar' });
-      if (state.status !== 'waiting') return;
+      if (state.status !== 'waiting' && state.status !== 'ended') return;
 
-      // Load up to 10 random active questions for this subject, matched to the room's grade level.
-      // Falls back to grade_level='general' questions to always fill up to 10 when possible.
-      const gradeLevel = deriveGradeLevel(state.courseName);
-      let questions = [];
-
-      if (gradeLevel) {
-        const { rows } = await pool.query(
-          `SELECT * FROM questions WHERE subject = $1 AND grade_level = $2 AND active = true ORDER BY RANDOM() LIMIT 10`,
-          [state.subject, gradeLevel]
-        );
-        questions = rows;
+      const roundSubject = subject ?? state.subject;
+      if (!VALID_SUBJECTS.includes(roundSubject)) {
+        return socket.emit('error', { message: 'Esa asignatura no existe.' });
       }
-
-      if (questions.length < 10) {
-        const { rows: fallback } = await pool.query(
-          `SELECT * FROM questions
-           WHERE subject = $1 AND grade_level = 'general' AND active = true AND id != ALL($2::uuid[])
-           ORDER BY RANDOM() LIMIT $3`,
-          [state.subject, questions.map(q => q.id), 10 - questions.length]
-        );
-        questions = questions.concat(fallback);
+      if (questionCount != null && !QUESTION_COUNTS.includes(questionCount)) {
+        return socket.emit('error', { message: 'Elige 5, 10 o 15 preguntas.' });
       }
+      const count = questionCount ?? DEFAULT_QUESTION_COUNT;
+
+      // Blocks a double click from starting two rounds while the questions load.
+      const previousStatus = state.status;
+      state.status = 'starting';
+      let questions;
+      try {
+        questions = await pickQuestions({
+          subject: roundSubject,
+          courseName: state.courseName,
+          count,
+          usedIds: state.usedQuestionIds,
+        });
+      } catch (err) {
+        state.status = previousStatus;
+        throw err;
+      }
+      if (getRoomState(roomCode) !== state) return; // closed while loading
 
       if (!questions.length) {
-        return socket.emit('error', { message: `No hay preguntas activas para "${state.subject}". Agrega preguntas en el banco de contenido.` });
+        state.status = previousStatus;
+        return socket.emit('error', { message: `No hay preguntas activas para "${roundSubject}". Agrega preguntas en el banco de contenido.` });
       }
 
+      if (previousStatus === 'ended') resetForNewRound(state);
+      clearTimeout(state.idleTimer);
+      state.idleTimer = null;
+
+      state.subject = roundSubject;
       state.questions = questions.map(q => ({
+        id: q.id,
         text: q.text,
         options: q.options,
         correct: q.correct,
@@ -409,8 +461,8 @@ function setupGameSocket(io) {
       `, [state.roomDbId, state.subject]);
       state.sessionId = rows[0].id;
 
-      // Update room status
-      await pool.query("UPDATE rooms SET status = 'active' WHERE id = $1", [state.roomDbId]);
+      // The room shows the subject of the round being played
+      await pool.query("UPDATE rooms SET status = 'active', subject = $2 WHERE id = $1", [state.roomDbId, state.subject]);
 
       trackEvent({
         actorType: 'teacher',
@@ -418,10 +470,10 @@ function setupGameSocket(io) {
         eventType: 'game_started',
         roomId: state.roomDbId,
         sessionId: state.sessionId,
-        payload: { subject: state.subject, totalQuestions: state.questions.length },
+        payload: { subject: state.subject, totalQuestions: state.questions.length, newRound: previousStatus === 'ended' },
       });
 
-      io.to(roomCode).emit('game:started', { totalQuestions: state.questions.length });
+      io.to(roomCode).emit('game:started', { totalQuestions: state.questions.length, subject: state.subject });
       sendNextQuestion(io, roomCode);
     }));
 
@@ -595,6 +647,8 @@ function sendNextQuestion(io, roomCode) {
   state.pausedTimeRemaining = 0;
 
   const question = state.questions[qi];
+  // Only questions actually shown count as used: a round stopped early leaves the rest for later.
+  state.usedQuestionIds.add(question.id);
   state.questionStartedAt = Date.now();
   state.questionAnswers.set(qi, new Map());
 
@@ -673,11 +727,14 @@ function revealAnswer(io, roomCode) {
   state.timer = setTimeout(() => sendNextQuestion(io, roomCode), 5000);
 }
 
-async function endGame(io, roomCode) {
+// Ends the round. The room stays open for another one unless the teacher is
+// closing it (closeRoom), in which case this is the last round.
+async function endGame(io, roomCode, { closeRoom = false } = {}) {
   const state = getRoomState(roomCode);
   if (!state) return;
 
-  state.status = 'ended';
+  // 'ended' only once results are saved: a new round can't start mid-save.
+  state.status = 'ending';
   clearRoomTimer(state);
 
   const leaderboard = buildLeaderboard(state.students);
@@ -713,21 +770,52 @@ async function endGame(io, roomCode) {
       await awardTokens(state.roomDbId, winners);
     }
 
-    await pool.query("UPDATE rooms SET status = 'closed', closed_at = NOW() WHERE id = $1", [state.roomDbId]);
+    await pool.query(
+      closeRoom
+        ? "UPDATE rooms SET status = 'closed', closed_at = NOW() WHERE id = $1"
+        : "UPDATE rooms SET status = 'waiting' WHERE id = $1 AND status != 'closed'",
+      [state.roomDbId]
+    );
   } catch (err) {
     logger.error('endGame DB error:', err.message);
   }
 
-  io.to(roomCode).emit('game:end', {
+  state.status = 'ended';
+  state.lastResult = {
     leaderboard,
     summary: {
       totalStudents: state.students.size,
       totalQuestions: state.questions.length,
     },
-  });
+  };
+  io.to(roomCode).emit('game:end', state.lastResult);
 
-  // Clean up memory after 10 minutes
-  setTimeout(() => rooms.delete(roomCode), 10 * 60 * 1000);
+  if (closeRoom) {
+    rooms.delete(roomCode);
+    return;
+  }
+  state.idleTimer = setTimeout(() => closeIdleRoom(io, roomCode), ROOM_IDLE_MS);
+}
+
+async function closeIdleRoom(io, roomCode) {
+  const state = getRoomState(roomCode);
+  if (!state || state.status !== 'ended') return;
+  rooms.delete(roomCode);
+  try {
+    await pool.query(
+      "UPDATE rooms SET status = 'closed', closed_at = COALESCE(closed_at, NOW()) WHERE id = $1",
+      [state.roomDbId]
+    );
+    trackEvent({
+      actorType: 'system',
+      eventType: 'room_closed',
+      roomId: state.roomDbId,
+      payload: { code: roomCode, reason: 'idle' },
+    });
+  } catch (err) {
+    logger.error({ err, roomCode }, 'closeIdleRoom DB error');
+  }
+  io.to(roomCode).emit('room:closed', { roomCode });
 }
 
 // Called from the REST layer when a teacher closes a room. If there's an
@@ -739,12 +827,13 @@ async function closeRoomForTeacher(io, roomCode) {
   const state = getRoomState(roomCode);
 
   if (state?.status === 'playing') {
-    await endGame(io, roomCode);
+    await endGame(io, roomCode, { closeRoom: true });
     return { hadActiveGame: true };
   }
 
   if (state) {
     clearRoomTimer(state);
+    clearTimeout(state.idleTimer);
     rooms.delete(roomCode);
   }
   // Emitted even with no state in memory (e.g. after a backend restart): the
@@ -757,6 +846,7 @@ module.exports = {
   setupGameSocket,
   getActiveRoomsCount,
   closeRoomForTeacher,
+  closeIdleRoom,
   getRoomState,
   QUESTION_TIME_MS,
 };
