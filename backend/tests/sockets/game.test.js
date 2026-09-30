@@ -115,6 +115,8 @@ describe('flujo de juego por sockets', () => {
       [sessions[0].id]
     );
     expect(answers).toHaveLength(2);
+    const { rows: [question] } = await pool.query("SELECT id FROM questions WHERE subject = 'matematica'");
+    expect(answers.map(a => a.question_id)).toEqual([question.id, question.id]);
 
     const { rows: ledger } = await pool.query('SELECT * FROM token_ledger WHERE room_id = $1', [room.id]);
     expect(ledger).toHaveLength(1); // only the correct answer earns tokens

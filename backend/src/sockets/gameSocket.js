@@ -219,13 +219,13 @@ function clearRoomTimer(state) {
   }
 }
 
-async function persistAnswers(sessionId, answers) {
+async function persistAnswers(sessionId, answers, questions) {
   for (const [, student] of answers) {
     for (const ans of student.answers) {
       await pool.query(`
-        INSERT INTO student_answers (session_id, student_id, question_index, answer, is_correct, time_taken_ms)
-        VALUES ($1, $2, $3, $4, $5, $6)
-      `, [sessionId, student.studentDbId, ans.questionIndex, ans.answer, ans.isCorrect, ans.timeTakenMs]);
+        INSERT INTO student_answers (session_id, student_id, question_index, question_id, answer, is_correct, time_taken_ms)
+        VALUES ($1, $2, $3, $4, $5, $6, $7)
+      `, [sessionId, student.studentDbId, ans.questionIndex, questions[ans.questionIndex]?.id ?? null, ans.answer, ans.isCorrect, ans.timeTakenMs]);
     }
   }
 }
@@ -778,7 +778,7 @@ async function endGame(io, roomCode, { closeRoom = false } = {}) {
   // Persist to DB
   try {
     if (state.sessionId) {
-      await persistAnswers(state.sessionId, state.students);
+      await persistAnswers(state.sessionId, state.students, state.questions);
 
       const summary = {
         totalStudents: state.students.size,
