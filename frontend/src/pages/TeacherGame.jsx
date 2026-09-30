@@ -24,6 +24,7 @@ export default function TeacherGame() {
   const [roomId, setRoomId] = useState(null);
   const [confirmClose, setConfirmClose] = useState(false);
   const [closingRoom, setClosingRoom] = useState(false);
+  const [projectorKey, setProjectorKey] = useState('');
   const timerRef = useRef(null);
 
   useEffect(() => {
@@ -39,6 +40,7 @@ export default function TeacherGame() {
       setPhase(prev => (data.status === 'waiting' ? 'waiting' : prev === 'waiting' ? 'playing' : prev));
       setParticipants(data.participants || []);
       setRoomId(data.roomId || null);
+      setProjectorKey(data.projectorKey || '');
     });
 
     socket.on('room:participants', (data) => setParticipants(data.participants));
@@ -127,7 +129,8 @@ export default function TeacherGame() {
     }
   };
 
-  const projectorUrl = `${window.location.origin}/projector/${code}`;
+  // The key goes in the hash so the link works pasted on a computer with no session.
+  const projectorUrl = `${window.location.origin}/projector/${code}${projectorKey ? `#k=${projectorKey}` : ''}`;
 
   return (
     <div className="min-h-screen p-4 max-w-4xl mx-auto">

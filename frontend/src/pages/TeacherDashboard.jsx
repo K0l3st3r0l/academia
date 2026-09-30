@@ -6,6 +6,7 @@ import {
   getStudentsByCourse, resetStudentPin, resetStudentPinsBulk, getAuthConfig,
 } from '../api/client';
 import { SUBJECTS, SUBJECT_LABELS } from '../utils/subjects';
+import { shortName } from '../utils/displayName';
 
 function formatDateTime(iso) {
   if (!iso) return '—';
@@ -180,7 +181,7 @@ export default function TeacherDashboard() {
             Academ<span className="text-gold">IA</span>
           </h1>
           <p className="text-gray-400 text-sm">
-            Hola, {user?.first_name || user?.email}
+            Hola, {shortName(user)}
           </p>
         </div>
         <button onClick={logout} className="text-gray-500 hover:text-gray-300 text-sm">

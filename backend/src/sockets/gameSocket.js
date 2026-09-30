@@ -2,7 +2,7 @@ const logger = require('../logger');
 const jwt = require('jsonwebtoken');
 const pool = require('../db');
 const { trackEvent } = require('../services/eventTracker');
-const { verifyRoomTicket } = require('../services/roomTicket');
+const { verifyRoomTicket, issueProjectorKey, verifyProjectorKey } = require('../services/roomTicket');
 
 // In-memory game state per room
 // Map<roomCode, RoomState>
@@ -66,17 +66,38 @@ function staffChannel(roomCode) {
 // Control is tied to who the user is, not to a socket id: the owner's control
 // panel, a second tab or a socket.io reconnect all keep working, and a
 // projector tab can no longer take control away from the teacher.
-async function loadRoomForStaff(token, roomCode) {
-  const user = jwt.verify(token, process.env.JWT_SECRET);
+async function findOpenRoom(roomCode) {
   const { rows } = await pool.query(
     'SELECT * FROM rooms WHERE code = $1 AND status != $2',
     [roomCode, 'closed']
   );
-  if (!rows.length) return { error: 'Sala no encontrada' };
+  return rows[0] || null;
+}
 
-  const room = rows[0];
+async function loadRoomForStaff(token, roomCode) {
+  const user = jwt.verify(token, process.env.JWT_SECRET);
+  const room = await findOpenRoom(roomCode);
+  if (!room) return { error: 'Sala no encontrada' };
+
   if (room.teacher_id !== user.id && !user.roles?.includes('admin')) return { error: 'No autorizado' };
   return { user, room };
+}
+
+// The key from the teacher's projector link wins, so the projector computer
+// needs no session; a logged-in staff browser works without it.
+async function loadRoomForProjector({ token, projectorKey, roomCode }) {
+  let keyRoomCode = null;
+  try {
+    if (projectorKey) keyRoomCode = verifyProjectorKey(projectorKey).roomCode;
+  } catch { /* expired or forged: fall back to the session */ }
+
+  if (keyRoomCode === roomCode) {
+    const room = await findOpenRoom(roomCode);
+    return room ? { room, userId: null } : { error: 'Sala no encontrada' };
+  }
+
+  const { user, room, error } = await loadRoomForStaff(token, roomCode);
+  return error ? { error } : { room, userId: user.id };
 }
 
 function isRoomController(socket, roomCode) {
@@ -172,6 +193,7 @@ function setupGameSocket(io) {
           courseName: room.course_name,
           status: state.status,
           participants: participantsOf(state),
+          projectorKey: issueProjectorKey(roomCode),
         });
       } catch (err) {
         socket.emit('error', { message: 'No autorizado' });
@@ -179,14 +201,14 @@ function setupGameSocket(io) {
     }));
 
     // ── Projector joins room (observer, cannot control the game) ───────
-    socket.on('projector:join', withErrorLogging(socket, 'projector:join', async ({ token, roomCode }) => {
+    socket.on('projector:join', withErrorLogging(socket, 'projector:join', async ({ token, projectorKey, roomCode }) => {
       try {
-        const { user, room, error } = await loadRoomForStaff(token, roomCode);
+        const { room, userId, error } = await loadRoomForProjector({ token, projectorKey, roomCode });
         if (error) return socket.emit('error', { message: error });
 
         socket.join(roomCode);
         socket.join(staffChannel(roomCode));
-        socket.data = { role: 'projector', roomCode, userId: user.id, roomDbId: room.id };
+        socket.data = { role: 'projector', roomCode, userId, roomDbId: room.id };
 
         const state = ensureRoomState(room);
         socket.emit('room:joined', {

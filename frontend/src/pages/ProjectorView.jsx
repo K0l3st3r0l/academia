@@ -42,14 +42,24 @@ export default function ProjectorView() {
     socketRef.current = socket;
 
     // Observer only: joining as teacher used to take game control away from the teacher's tab.
+    // The key from the teacher's link lets a computer with no session show the room.
     const token = localStorage.getItem('academia_token') || '';
-    socket.on('connect', () => socket.emit('projector:join', { token, roomCode: code }));
+    const projectorKey = new URLSearchParams(window.location.hash.slice(1)).get('k') || '';
+    socket.on('connect', () => socket.emit('projector:join', { token, projectorKey, roomCode: code }));
 
     socket.on('room:closed', markClosed);
     // projector:join is refused for a closed room, e.g. after reconnecting.
-    socket.on('error', checkRoomStillOpen);
+    socket.on('error', ({ message } = {}) => {
+      if (message === 'No autorizado') {
+        setPhase(prev => (prev === 'ended' || prev === 'closed' ? prev : 'unauthorized'));
+      }
+      checkRoomStillOpen();
+    });
 
-    socket.on('room:joined', (data) => setParticipants(data.participants || []));
+    socket.on('room:joined', (data) => {
+      setParticipants(data.participants || []);
+      setPhase(prev => (prev === 'unauthorized' ? 'waiting' : prev));
+    });
     socket.on('room:participants', (data) => setParticipants(data.participants));
 
     socket.on('game:started', () => setPhase('countdown'));
@@ -265,6 +275,20 @@ export default function ProjectorView() {
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* Refused: opened without the teacher's link and without a session */}
+      {phase === 'unauthorized' && (
+        <div className="flex-1 flex flex-col items-center justify-center text-center">
+          <h1 className="text-6xl font-black text-brand-light mb-10">
+            Academ<span className="text-gold">IA</span>
+          </h1>
+          <h2 className="text-5xl font-black mb-6">Este proyector no pudo unirse a la sala {code}</h2>
+          <p className="text-gray-400 text-2xl max-w-3xl">
+            En el panel del profesor, usa «Abrir proyector ↗» y copia la dirección completa de esa pestaña.
+            Solo el código de la sala no basta.
+          </p>
         </div>
       )}
 

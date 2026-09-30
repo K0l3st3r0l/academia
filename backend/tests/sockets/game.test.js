@@ -388,6 +388,92 @@ describe('control del juego por identidad', () => {
   });
 });
 
+describe('proyector en un computador sin sesión', () => {
+  function emitAndWait(socket, event, payload, responseEvent) {
+    const p = once(socket, responseEvent);
+    socket.emit(event, payload);
+    return p;
+  }
+
+  it('la llave del enlace del docente basta para mirar la sala, pero no para controlarla', async () => {
+    const { teacher, student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const { projectorKey } = await teacherJoin(teacherSocket, token, room.code);
+    expect(projectorKey).toBeTruthy();
+
+    const projector = await connectClient();
+    const joined = await emitAndWait(projector, 'projector:join', { token: '', projectorKey, roomCode: room.code }, 'room:joined');
+    expect(joined.role).toBe('projector');
+    expect(joined.projectorKey).toBeUndefined();
+
+    const s1 = await connectClient();
+    const participantsP = once(projector, 'room:participants');
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    expect((await participantsP).participants.map(p => p.name)).toContain('Estudiante Uno');
+
+    const refused = await emitAndWait(projector, 'game:start', { roomCode: room.code }, 'error');
+    expect(refused.message).toBe('Solo el docente puede iniciar');
+
+    const projectorQuestionP = once(projector, 'game:question');
+    teacherSocket.emit('game:start', { roomCode: room.code });
+    expect((await projectorQuestionP).options).toHaveLength(4);
+
+    const endedP = once(projector, 'game:end');
+    teacherSocket.emit('game:stop', { roomCode: room.code });
+    await endedP;
+
+    teacherSocket.disconnect();
+    projector.disconnect();
+    s1.disconnect();
+  });
+
+  it('rechaza sin sesión ni llave, con la llave de otra sala o con una llave falsa', async () => {
+    const { teacher, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const otherRoom = await createRoom(pool, { teacherId: teacher.id, courseName: '5° Básico A', subject: 'matematica', status: 'waiting' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const { projectorKey: otherKey } = await teacherJoin(teacherSocket, token, otherRoom.code);
+
+    const socket = await connectClient();
+    const noKey = await emitAndWait(socket, 'projector:join', { token: '', roomCode: room.code }, 'error');
+    expect(noKey.message).toBe('No autorizado');
+
+    const wrongRoom = await emitAndWait(socket, 'projector:join', { token: '', projectorKey: otherKey, roomCode: room.code }, 'error');
+    expect(wrongRoom.message).toBe('No autorizado');
+
+    const forged = await emitAndWait(socket, 'projector:join', { token: '', projectorKey: token, roomCode: room.code }, 'error');
+    expect(forged.message).toBe('No autorizado');
+
+    teacherSocket.disconnect();
+    socket.disconnect();
+  });
+
+  it('la llave no sirve como sesión de docente ni como ticket de alumno, y muere al cerrar la sala', async () => {
+    const { teacher, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const { projectorKey } = await teacherJoin(teacherSocket, token, room.code);
+
+    const socket = await connectClient();
+    const asTeacher = await emitAndWait(socket, 'teacher:join', { token: projectorKey, roomCode: room.code }, 'error');
+    expect(asTeacher.message).toBe('No autorizado');
+
+    const asStudent = await emitAndWait(socket, 'student:join', { roomCode: room.code, ticket: projectorKey }, 'error');
+    expect(asStudent.message).toBe('Vuelve a ingresar tu RUT para entrar a la sala.');
+
+    await pool.query("UPDATE rooms SET status = 'closed' WHERE id = $1", [room.id]);
+    const closed = await emitAndWait(socket, 'projector:join', { token: '', projectorKey, roomCode: room.code }, 'error');
+    expect(closed.message).toBe('Sala no encontrada');
+
+    teacherSocket.disconnect();
+    socket.disconnect();
+  });
+});
+
 describe('identidad del alumno al unirse', () => {
   function emitAndWait(socket, event, payload, responseEvent) {
     const response = once(socket, responseEvent);
