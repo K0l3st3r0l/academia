@@ -6,6 +6,7 @@ import { createTeacher, createStudent, createRoom, createQuestion, signToken, st
 const { default: pool } = await import('../../src/db/index.js');
 const { getRoomState, closeIdleRoom, QUESTION_TIME_MS } = await import('../../src/sockets/gameSocket.js');
 const { issueRoomTicket } = await import('../../src/services/roomTicket.js');
+const { scheduleRating } = await import('../../src/services/skillRatings.js');
 
 let testServer;
 
@@ -117,6 +118,13 @@ describe('flujo de juego por sockets', () => {
     expect(answers).toHaveLength(2);
     const { rows: [question] } = await pool.query("SELECT id FROM questions WHERE subject = 'matematica'");
     expect(answers.map(a => a.question_id)).toEqual([question.id, question.id]);
+
+    // Ending the round queues the rating pass; waiting on the queue lets it finish.
+    await scheduleRating();
+    const { rows: [rated] } = await pool.query('SELECT rating_answers FROM questions WHERE id = $1', [question.id]);
+    expect(rated.rating_answers).toBe(2);
+    const { rows: skills } = await pool.query("SELECT student_id FROM student_skill_ratings WHERE oa_code = '*'");
+    expect(skills).toHaveLength(2);
 
     const { rows: ledger } = await pool.query('SELECT * FROM token_ledger WHERE room_id = $1', [room.id]);
     expect(ledger).toHaveLength(1); // only the correct answer earns tokens

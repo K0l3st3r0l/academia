@@ -4,6 +4,7 @@ const pool = require('../db');
 const { trackEvent } = require('../services/eventTracker');
 const { verifyRoomTicket, issueProjectorKey, verifyProjectorKey } = require('../services/roomTicket');
 const { VALID_SUBJECTS } = require('../routes/questionRoutes');
+const { scheduleRating } = require('../services/skillRatings');
 
 // In-memory game state per room
 // Map<roomCode, RoomState>
@@ -779,6 +780,7 @@ async function endGame(io, roomCode, { closeRoom = false } = {}) {
   try {
     if (state.sessionId) {
       await persistAnswers(state.sessionId, state.students, state.questions);
+      scheduleRating();
 
       const summary = {
         totalStudents: state.students.size,

@@ -1,0 +1,1041 @@
+{
+  "grade_level": "5b",
+  "source": "Bases Curriculares 1° a 6° Básico, Mineduc (Decreto 439/2012). academia/content/articles-22394_bases.pdf, págs. 101–102, 170–172, 247–249, 279–281 y 331–334",
+  "units": "Pendiente: vienen de los Programas de Estudio de 5° (no incluidos en las Bases)",
+  "subjects": [
+    {
+      "subject": "matematica",
+      "ejes": [
+        "Números y operaciones",
+        "Patrones y álgebra",
+        "Geometría",
+        "Medición",
+        "Datos y probabilidades"
+      ],
+      "oas": [
+        {
+          "code": "OA1",
+          "eje": "Números y operaciones",
+          "label": "Números hasta 1.000 millones",
+          "text": "Representar y describir números naturales de hasta más de 6 dígitos y menores que 1.000 millones: identificando el valor posicional de los dígitos componiendo y descomponiendo números naturales en forma estándar y expandida aproximando cantidades comparando y ordenando números naturales en este ámbito numérico dando ejemplos de estos números naturales en contextos reales",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA2",
+          "eje": "Números y operaciones",
+          "label": "Cálculo mental: multiplicación",
+          "text": "Aplicar estrategias de cálculo mental para la multiplicación: anexar ceros cuando se multiplica por un múltiplo de 10 doblar y dividir por 2 en forma repetida usando las propiedades conmutativa, asociativa y distributiva",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA3",
+          "eje": "Números y operaciones",
+          "label": "Multiplicación de 2 por 2 dígitos",
+          "text": "Demostrar que comprenden la multiplicación de números naturales de dos dígitos por números naturales de dos dígitos: estimando productos aplicando estrategias de cálculo mental resolviendo problemas rutinarios y no rutinarios aplicando el algoritmo",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA4",
+          "eje": "Números y operaciones",
+          "label": "División de 3 dígitos por 1 dígito",
+          "text": "Demostrar que comprenden la división con dividendos de tres dígitos y divisores de un dígito: interpretando el resto resolviendo problemas rutinarios y no rutinarios que impliquen divisiones",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA5",
+          "eje": "Números y operaciones",
+          "label": "Orden de las operaciones",
+          "text": "Realizar cálculos que involucren las cuatro operaciones, aplicando las reglas relativas a paréntesis y la prevalencia de la multiplicación y la división por sobre la adición y la sustracción cuando corresponda. usando la propiedad distributiva de la multiplicación respecto de la suma aplicando el algoritmo de la multiplicación resolviendo problemas rutinarios",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA6",
+          "eje": "Números y operaciones",
+          "label": "Problemas con las cuatro operaciones",
+          "text": "Resolver problemas rutinarios y no rutinarios que involucren las cuatro operaciones y combinaciones de ellas: que incluyan situaciones con dinero usando la calculadora y el computador en ámbitos numéricos superiores al 10.000",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA7",
+          "eje": "Números y operaciones",
+          "label": "Fracciones propias y equivalentes",
+          "text": "Demostrar que comprenden las fracciones propias: representándolas de manera concreta, pictórica y simbólica creando grupos de fracciones equivalentes –simplificando y amplificando– de manera concreta, pictórica y simbólica, de forma manual y/o con software educativo comparando fracciones propias con igual y distinto denominador de manera concreta, pictórica y simbólica",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA8",
+          "eje": "Números y operaciones",
+          "label": "Fracciones impropias y números mixtos",
+          "text": "Demostrar que comprenden las fracciones impropias de uso común de denominadores 2, 3, 4, 5, 6, 8, 10, 12 y los números mixtos asociados: usando material concreto y pictórico para representarlas, de manera manual y/o con software educativo identificando y determinando equivalencias entre fracciones impropias y números mixtos representando estas fracciones y estos números mixtos en la recta numérica",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA9",
+          "eje": "Números y operaciones",
+          "label": "Suma y resta de fracciones",
+          "text": "Resolver adiciones y sustracciones con fracciones propias con denominadores menores o iguales a 12: de manera pictórica y simbólica amplificando o simplificando",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA10",
+          "eje": "Números y operaciones",
+          "label": "De fracción a decimal",
+          "text": "Determinar el decimal que corresponde a fracciones con denominador 2, 4, 5 y 10.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA11",
+          "eje": "Números y operaciones",
+          "label": "Comparar y ordenar decimales",
+          "text": "Comparar y ordenar decimales hasta la milésima.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA12",
+          "eje": "Números y operaciones",
+          "label": "Suma y resta de decimales",
+          "text": "Resolver adiciones y sustracciones de decimales, empleando el valor posicional hasta la milésima.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA13",
+          "eje": "Números y operaciones",
+          "label": "Problemas con fracciones y decimales",
+          "text": "Resolver problemas rutinarios y no rutinarios, aplicando adiciones y sustracciones de fracciones propias o decimales hasta la milésima.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA14",
+          "eje": "Patrones y álgebra",
+          "label": "Reglas de sucesiones",
+          "text": "Descubrir alguna regla que explique una sucesión dada y que permita hacer predicciones.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA15",
+          "eje": "Patrones y álgebra",
+          "label": "Ecuaciones e inecuaciones de un paso",
+          "text": "Resolver problemas, usando ecuaciones e inecuaciones de un paso, que involucren adiciones y sustracciones, en forma pictórica y simbólica.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA16",
+          "eje": "Geometría",
+          "label": "Plano cartesiano",
+          "text": "Identificar y dibujar puntos en el primer cuadrante del plano cartesiano, dadas sus coordenadas en números naturales.",
+          "quiz": true,
+          "note": "Mejor con imagen del plano",
+          "unit": null
+        },
+        {
+          "code": "OA17",
+          "eje": "Geometría",
+          "label": "Paralelas, perpendiculares e intersecciones",
+          "text": "Describir y dar ejemplos de aristas y caras de figuras 3D y lados de figuras 2D: que son paralelos que se intersectan que son perpendiculares",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA18",
+          "eje": "Geometría",
+          "label": "Congruencia y transformaciones",
+          "text": "Demostrar que comprenden el concepto de congruencia, usando la traslación, la reflexión y la rotación en cuadrículas y mediante software geométrico.",
+          "quiz": true,
+          "note": "Mejor con imagen",
+          "unit": null
+        },
+        {
+          "code": "OA19",
+          "eje": "Medición",
+          "label": "Medir longitudes (m, cm, mm)",
+          "text": "Medir longitudes con unidades estandarizadas (m, cm, mm) en el contexto de la resolución de problemas.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA20",
+          "eje": "Medición",
+          "label": "Conversión de unidades de longitud",
+          "text": "Realizar transformaciones entre unidades de medidas de longitud: km a m, m a cm, cm a mm y viceversa, de manera manual y/o usando software educativo.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA21",
+          "eje": "Medición",
+          "label": "Perímetro y área de rectángulos",
+          "text": "Diseñar y construir diferentes rectángulos, dados el perímetro, el área o ambos, y sacar conclusiones.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA22",
+          "eje": "Medición",
+          "label": "Área de triángulos, paralelogramos y trapecios",
+          "text": "Calcular áreas de triángulos, de paralelogramos y de trapecios, y estimar áreas de figuras irregulares, aplicando las siguientes estrategias: conteo de cuadrículas comparación con el área de un rectángulo completar figuras por traslación",
+          "quiz": true,
+          "note": "Mejor con imagen",
+          "unit": null
+        },
+        {
+          "code": "OA23",
+          "eje": "Datos y probabilidades",
+          "label": "Promedio",
+          "text": "Calcular el promedio de datos e interpretarlo en su contexto.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA24",
+          "eje": "Datos y probabilidades",
+          "label": "Posibilidad de ocurrencia",
+          "text": "Describir la posibilidad de ocurrencia de un evento por sobre la base de un experimento aleatorio, empleando los términos seguro – posible - poco posible - imposible.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA25",
+          "eje": "Datos y probabilidades",
+          "label": "Comparar probabilidades",
+          "text": "Comparar probabilidades de distintos eventos sin calcularlas.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA26",
+          "eje": "Datos y probabilidades",
+          "label": "Tablas y gráficos",
+          "text": "Leer, interpretar y completar tablas, gráficos de barra simple y gráficos de línea y comunicar sus conclusiones.",
+          "quiz": true,
+          "note": "Requiere tabla o gráfico en el enunciado",
+          "unit": null
+        },
+        {
+          "code": "OA27",
+          "eje": "Datos y probabilidades",
+          "label": "Diagrama de tallo y hojas",
+          "text": "Utilizar diagramas de tallo y hojas para representar datos provenientes de muestras aleatorias.",
+          "quiz": true,
+          "note": "Requiere el diagrama en el enunciado",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "subject": "lenguaje",
+      "ejes": [
+        "Lectura",
+        "Escritura",
+        "Comunicación oral"
+      ],
+      "oas": [
+        {
+          "code": "OA1",
+          "eje": "Lectura",
+          "label": "Lectura fluida",
+          "text": "Leer de manera fluida textos variados apropiados a su edad: pronunciando las palabras con precisión respetando la prosodia indicada por todos los signos de puntuación decodificando de manera automática la mayoría de las palabras del texto",
+          "quiz": false,
+          "note": "Fluidez lectora: se evalúa leyendo en voz alta",
+          "unit": null
+        },
+        {
+          "code": "OA2",
+          "eje": "Lectura",
+          "label": "Estrategias de comprensión lectora",
+          "text": "Comprender textos, aplicando estrategias de comprensión lectora; por ejemplo: relacionar la información del texto con sus experiencias y conocimientos releer lo que no fue comprendido formular preguntas sobre lo leído y responderlas identificar las ideas más importantes de acuerdo con el propósito del lector organizar la información en esquemas o mapas conceptuales",
+          "quiz": true,
+          "note": "Requiere un texto breve en el enunciado",
+          "unit": null
+        },
+        {
+          "code": "OA3",
+          "eje": "Lectura",
+          "label": "Repertorio literario",
+          "text": "Leer y familiarizarse con un amplio repertorio de literatura para aumentar su conocimiento del mundo, desarrollar su imaginación y reconocer su valor social y cultural; por ejemplo: poemas cuentos folclóricos y de autor fábulas leyendas mitos novelas historietas otros",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA4",
+          "eje": "Lectura",
+          "label": "Análisis de narraciones",
+          "text": "Analizar aspectos relevantes de narraciones leídas para profundizar su comprensión: interpretando el lenguaje figurado presente en el texto expresando opiniones sobre las actitudes y acciones de los personajes y fundamentándolas con ejemplos del texto determinando las consecuencias de hechos o acciones describiendo el ambiente y las costumbres representadas en el texto explicando las características físicas y sicológicas de los personajes que son relevantes para el desarrollo de la historia comparando textos de autores diferentes y justificando su preferencia por alguno",
+          "quiz": true,
+          "note": "Requiere un texto breve en el enunciado",
+          "unit": null
+        },
+        {
+          "code": "OA5",
+          "eje": "Lectura",
+          "label": "Análisis de poemas",
+          "text": "Analizar aspectos relevantes de diversos poemas para profundizar su comprensión: explicando cómo el lenguaje poético que emplea el autor apela a los sentidos, sugiere estados de ánimo y crea imágenes en el lector identificando personificaciones y comparaciones y explicando su significado dentro del poema distinguiendo los elementos formales de la poesía (rima asonante y consonante, verso y estrofa)",
+          "quiz": true,
+          "note": "Requiere un poema breve en el enunciado",
+          "unit": null
+        },
+        {
+          "code": "OA6",
+          "eje": "Lectura",
+          "label": "Comprensión de textos no literarios",
+          "text": "Leer independientemente y comprender textos no literarios (cartas, biografías, relatos históricos, libros y artículos informativos, noticias, etc.) para ampliar su conocimiento del mundo y formarse una opinión: extrayendo información explícita e implícita haciendo inferencias a partir de la información del texto y de sus experiencias y conocimientos relacionando la información de imágenes, gráficos, tablas, mapas o diagramas, con el texto en el cual están insertos interpretando expresiones en lenguaje figurado comparando información formulando una opinión sobre algún aspecto de la lectura fundamentando su opinión con información del texto o sus conocimientos previos",
+          "quiz": true,
+          "note": "Requiere un texto breve en el enunciado",
+          "unit": null
+        },
+        {
+          "code": "OA7",
+          "eje": "Lectura",
+          "label": "Evaluar críticamente la información",
+          "text": "Evaluar críticamente la información presente en textos de diversa procedencia: determinando quién es el emisor, cuál es su propósito y a quién dirige el mensaje evaluando si un texto entrega suficiente información para responder una determinada pregunta o cumplir un propósito",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA8",
+          "eje": "Lectura",
+          "label": "Sintetizar ideas principales",
+          "text": "Sintetizar y registrar las ideas principales de textos leídos para satisfacer propósitos como estudiar, hacer una investigación, recordar detalles, etc.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA9",
+          "eje": "Lectura",
+          "label": "Gusto por la lectura",
+          "text": "Desarrollar el gusto por la lectura, leyendo habitualmente diversos textos.",
+          "quiz": false,
+          "note": "Actitudinal",
+          "unit": null
+        },
+        {
+          "code": "OA10",
+          "eje": "Lectura",
+          "label": "Uso de la biblioteca",
+          "text": "Asistir habitualmente a la biblioteca para satisfacer diversos propósitos (seleccionar textos, investigar sobre un tema, informarse sobre actualidad, etc.), adecuando su comportamiento y cuidando el material para permitir el trabajo y la lectura de los demás.",
+          "quiz": false,
+          "note": "Actitudinal",
+          "unit": null
+        },
+        {
+          "code": "OA11",
+          "eje": "Lectura",
+          "label": "Buscar y seleccionar información",
+          "text": "Buscar y seleccionar la información más relevante sobre un tema en internet, libros, diarios, revistas, enciclopedias, atlas, etc., para llevar a cabo una investigación.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA12",
+          "eje": "Lectura",
+          "label": "Significado de palabras nuevas",
+          "text": "Aplicar estrategias para determinar el significado de palabras nuevas: claves del texto (para determinar qué acepción es pertinente según el contexto) raíces y afijos preguntar a otro diccionarios, enciclopedias e internet",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA13",
+          "eje": "Escritura",
+          "label": "Escritura frecuente",
+          "text": "Escribir frecuentemente, para desarrollar la creatividad y expresar sus ideas, textos como poemas, diarios de vida, cuentos, anécdotas, cartas, blogs, etc.",
+          "quiz": false,
+          "note": "Producción escrita",
+          "unit": null
+        },
+        {
+          "code": "OA14",
+          "eje": "Escritura",
+          "label": "Escribir narraciones",
+          "text": "Escribir creativamente narraciones (relatos de experiencias personales, noticias, cuentos, etc.) que: tengan una estructura clara utilicen conectores adecuados incluyan descripciones y diálogo (si es pertinente) para desarrollar la trama, los personajes y el ambiente",
+          "quiz": true,
+          "note": "Estructura y conectores, no producción",
+          "unit": null
+        },
+        {
+          "code": "OA15",
+          "eje": "Escritura",
+          "label": "Escribir artículos informativos",
+          "text": "Escribir artículos informativos para comunicar información sobre un tema: presentando el tema en una oración desarrollando una idea central por párrafo agregando las fuentes utilizadas",
+          "quiz": true,
+          "note": "Estructura, no producción",
+          "unit": null
+        },
+        {
+          "code": "OA16",
+          "eje": "Escritura",
+          "label": "Comentar lecturas por escrito",
+          "text": "Escribir frecuentemente para compartir impresiones sobre sus lecturas, desarrollando un tema relevante del texto leído y fundamentando sus comentarios con ejemplos.",
+          "quiz": false,
+          "note": "Producción escrita",
+          "unit": null
+        },
+        {
+          "code": "OA17",
+          "eje": "Escritura",
+          "label": "Planificar textos",
+          "text": "Planificar sus textos: estableciendo propósito y destinatario generando ideas a partir de sus conocimientos e investigación organizando las ideas que compondrán su escrito",
+          "quiz": true,
+          "note": "Propósito y destinatario",
+          "unit": null
+        },
+        {
+          "code": "OA18",
+          "eje": "Escritura",
+          "label": "Revisar y editar textos",
+          "text": "Escribir, revisar y editar sus textos para satisfacer un propósito y transmitir sus ideas con claridad. Durante este proceso: desarrollan las ideas, agregando información emplean un vocabulario preciso y variado, y un registro adecuado releen a medida que escriben aseguran la coherencia y agregan conectores editan, en forma independiente, aspectos de ortografía y presentación utilizan las herramientas del procesador de textos para buscar sinónimos, corregir ortografía y gramática, y dar formato (cuando escriben en computador)",
+          "quiz": true,
+          "note": "Elegir la versión corregida",
+          "unit": null
+        },
+        {
+          "code": "OA19",
+          "eje": "Escritura",
+          "label": "Vocabulario nuevo al escribir",
+          "text": "Incorporar de manera pertinente en la escritura el vocabulario nuevo extraído de textos escuchados o leídos.",
+          "quiz": true,
+          "note": "Vocabulario en contexto",
+          "unit": null
+        },
+        {
+          "code": "OA20",
+          "eje": "Escritura",
+          "label": "Matices entre sinónimos",
+          "text": "Distinguir matices entre sinónimos al leer, hablar y escribir para ampliar su comprensión y capacidad expresiva.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA21",
+          "eje": "Escritura",
+          "label": "Conjugación de verbos regulares",
+          "text": "Conjugar correctamente los verbos regulares al utilizarlos en sus producciones escritas.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA22",
+          "eje": "Escritura",
+          "label": "Ortografía: c-s-z, raya, acentos y coma",
+          "text": "Escribir correctamente para facilitar la comprensión por parte del lector, aplicando las reglas ortográficas aprendidas en años anteriores, además de: uso de c-s-z raya para indicar diálogo acento diacrítico y dierético coma en frases explicativas",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA23",
+          "eje": "Comunicación oral",
+          "label": "Obras literarias narradas",
+          "text": "Comprender y disfrutar versiones completas de obras de la literatura, narradas o leídas por un adulto, como: cuentos folclóricos y de autor poemas mitos y leyendas capítulos de novelas",
+          "quiz": true,
+          "note": "Requiere el texto en el enunciado",
+          "unit": null
+        },
+        {
+          "code": "OA24",
+          "eje": "Comunicación oral",
+          "label": "Comprensión de textos orales",
+          "text": "Comprender textos orales (explicaciones, instrucciones, noticias, documentales, entrevistas, testimonios, relatos, etc.) para obtener información y desarrollar su curiosidad por el mundo: relacionando las ideas escuchadas con sus experiencias personales y sus conocimientos previos extrayendo y registrando la información relevante formulando preguntas al profesor o a los compañeros para comprender o elaborar una idea, o aclarar el significado de una palabra comparando información dentro del texto o con otros textos formulando y fundamentando una opinión sobre lo escuchado",
+          "quiz": false,
+          "note": "Requiere audio",
+          "unit": null
+        },
+        {
+          "code": "OA25",
+          "eje": "Comunicación oral",
+          "label": "Apreciar teatro y películas",
+          "text": "Apreciar obras de teatro, películas o representaciones: discutiendo aspectos relevantes de la historia describiendo a los personajes según su manera de hablar y de comportarse",
+          "quiz": false,
+          "note": "Apreciación y discusión",
+          "unit": null
+        },
+        {
+          "code": "OA26",
+          "eje": "Comunicación oral",
+          "label": "Dialogar y buscar acuerdos",
+          "text": "Dialogar para compartir y desarrollar ideas y buscar acuerdos: manteniendo el foco en un tema aceptando sugerencias haciendo comentarios en los momentos adecuados mostrando acuerdo o desacuerdo con respeto fundamentando su postura",
+          "quiz": false,
+          "note": "Oral",
+          "unit": null
+        },
+        {
+          "code": "OA27",
+          "eje": "Comunicación oral",
+          "label": "Convenciones sociales",
+          "text": "Interactuar de acuerdo con las convenciones sociales en diferentes situaciones: presentarse a sí mismo y a otros saludar preguntar expresar opiniones, sentimientos e ideas otras situaciones que requieran el uso de fórmulas de cortesía, como por favor, gracias, perdón, permiso",
+          "quiz": true,
+          "note": "Situaciones de cortesía",
+          "unit": null
+        },
+        {
+          "code": "OA28",
+          "eje": "Comunicación oral",
+          "label": "Exposiciones orales",
+          "text": "Expresarse de manera clara y efectiva en exposiciones orales para comunicar temas de su interés: presentando las ideas de manera coherente y cohesiva fundamentando sus planteamientos con ejemplos y datos organizando las ideas en introducción, desarrollo y cierre utilizando un vocabulario variado y preciso y un registro formal, adecuado a la situación comunicativa reemplazando algunas construcciones sintácticas familiares por otras más variadas conjugando correctamente los verbos pronunciando claramente y usando un volumen audible, entonación, pausas y énfasis adecuados usando gestos y posturas acordes a la situación usando material de apoyo (power point, papelógrafo, objetos, etc.) de manera efectiva",
+          "quiz": false,
+          "note": "Oral",
+          "unit": null
+        },
+        {
+          "code": "OA29",
+          "eje": "Comunicación oral",
+          "label": "Vocabulario nuevo al hablar",
+          "text": "Incorporar de manera pertinente en sus intervenciones orales el vocabulario nuevo extraído de textos escuchados o leídos.",
+          "quiz": false,
+          "note": "Oral",
+          "unit": null
+        },
+        {
+          "code": "OA30",
+          "eje": "Comunicación oral",
+          "label": "Producir textos orales",
+          "text": "Producir textos orales planificados de diverso tipo para desarrollar su capacidad expresiva: poemas narraciones (contar una historia, describir una actividad, relatar noticias, testimonios, etc.) dramatizaciones",
+          "quiz": false,
+          "note": "Oral",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "subject": "ciencias",
+      "ejes": [
+        "Ciencias de la vida",
+        "Ciencias físicas y químicas",
+        "Ciencias de la Tierra y el Universo"
+      ],
+      "oas": [
+        {
+          "code": "OA1",
+          "eje": "Ciencias de la vida",
+          "label": "Células, tejidos, órganos y sistemas",
+          "text": "Reconocer y explicar que los seres vivos están formados por una o más células y que estas se organizan en tejidos, órganos y sistemas.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA2",
+          "eje": "Ciencias de la vida",
+          "label": "Sistema digestivo",
+          "text": "Identificar y describir, por medio de modelos, las estructuras básicas del sistema digestivo (boca, esófago, estómago, hígado, intestino delgado, intestino grueso, recto y ano) y sus funciones en la digestión, la absorción de alimentos y la eliminación de desechos.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA3",
+          "eje": "Ciencias de la vida",
+          "label": "Sistema respiratorio",
+          "text": "Explicar, por medio de modelos, la respiración (inspiración-espiración-intercambio de oxígeno y dióxido de carbono), identificando las estructuras básicas del sistema respiratorio (nariz, tráquea, bronquios, alvéolos, pulmones).",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA4",
+          "eje": "Ciencias de la vida",
+          "label": "Sistema circulatorio",
+          "text": "Explicar la función de transporte del sistema circulatorio (sustancias alimenticias, oxígeno y dióxido de carbono), identificando sus estructuras básicas (corazón, vasos sanguíneos y sangre).",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA5",
+          "eje": "Ciencias de la vida",
+          "label": "Alimentación saludable",
+          "text": "Analizar el consumo de alimento diario (variedad, tamaño y frecuencia de porciones), reconociendo los alimentos para el crecimiento, la reparación, el desarrollo y el movimiento del cuerpo.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA6",
+          "eje": "Ciencias de la vida",
+          "label": "Efectos del cigarrillo",
+          "text": "Investigar en diversas fuentes y comunicar los efectos nocivos que produce el cigarrillo (humo del tabaco) en los sistemas respiratorio y circulatorio.",
+          "quiz": true,
+          "note": "Sobre efectos, no la investigación",
+          "unit": null
+        },
+        {
+          "code": "OA7",
+          "eje": "Ciencias de la vida",
+          "label": "Microorganismos e higiene",
+          "text": "Investigar e identificar algunos microorganismos beneficiosos y dañinos para la salud (bacterias, virus y hongos), y proponer medidas de cuidado e higiene del cuerpo.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA8",
+          "eje": "Ciencias físicas y químicas",
+          "label": "Transformaciones de la energía eléctrica",
+          "text": "Reconocer los cambios que experimenta la energía eléctrica al pasar de una forma a otra (eléctrica a calórica, sonora, lumínica, etc.) e investigar los principales aportes de científicos en su estudio a lo largo del tiempo.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA9",
+          "eje": "Ciencias físicas y químicas",
+          "label": "Circuito eléctrico simple",
+          "text": "Construir un circuito eléctrico simple (cable, ampolleta, interruptor y pila), usarlo para resolver problemas cotidianos y explicar su funcionamiento.",
+          "quiz": true,
+          "note": "Mejor con imagen del circuito",
+          "unit": null
+        },
+        {
+          "code": "OA10",
+          "eje": "Ciencias físicas y químicas",
+          "label": "Conductores y aisladores",
+          "text": "Observar y distinguir, por medio de la investigación experimental, los materiales conductores (cobre y aluminio) y aisladores (plásticos y goma) de electricidad, relacionándolos con la manipulación segura de artefactos tecnológicos y circuitos eléctricos domiciliarios.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA11",
+          "eje": "Ciencias físicas y químicas",
+          "label": "Ahorro de energía eléctrica",
+          "text": "Explicar la importancia de la energía eléctrica en la vida cotidiana y proponer medidas para promover su ahorro y su uso responsable.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA12",
+          "eje": "Ciencias de la Tierra y el Universo",
+          "label": "Agua dulce y salada en la Tierra",
+          "text": "Describir la distribución del agua dulce y salada en la Tierra, considerando océanos, glaciares, ríos y lagos, aguas subterráneas, nubes, vapor de agua, etc., y comparar sus volúmenes, reconociendo la escasez relativa de agua dulce.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA13",
+          "eje": "Ciencias de la Tierra y el Universo",
+          "label": "Océanos y lagos",
+          "text": "Analizar y describir las características de los océanos y lagos: variación de temperatura, luminosidad y presión en relación con la profundidad diversidad de flora y fauna movimiento de las aguas, como olas, mareas, corrientes (El Niño y Humboldt)",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA14",
+          "eje": "Ciencias de la Tierra y el Universo",
+          "label": "Actividad humana y reservas de agua",
+          "text": "Investigar y explicar efectos positivos y negativos de la actividad humana en océanos, lagos, ríos, glaciares, entre otros, proponiendo acciones de protección de las reservas hídricas en Chile y comunicando sus resultados.",
+          "quiz": true,
+          "note": "Sobre efectos y acciones",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "subject": "historia",
+      "ejes": [
+        "Historia",
+        "Geografía",
+        "Formación ciudadana"
+      ],
+      "oas": [
+        {
+          "code": "OA1",
+          "eje": "Historia",
+          "label": "Viajes de descubrimiento",
+          "text": "Explicar los viajes de descubrimiento de Cristóbal Colón, de Hernando de Magallanes y de algún otro explorador, considerando sus objetivos, las rutas recorridas, los avances tecnológicos que facilitaron la navegación, las dificultades y los desafíos que enfrentaron las tripulaciones y el contexto europeo general en que se desarrollaron.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA2",
+          "eje": "Historia",
+          "label": "Conquista de América y de Chile",
+          "text": "Describir el proceso de conquista de América y de Chile, incluyendo a los principales actores (Corona española, Iglesia católica y hombres y mujeres protagonistas, entre otros), algunas expediciones y conflictos bélicos, y la fundación de ciudades como expresión de la voluntad de los españoles de quedarse y expandirse, y reconocer en este proceso el surgimiento de una nueva sociedad.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA3",
+          "eje": "Historia",
+          "label": "Consecuencias de la conquista",
+          "text": "Analizar el impacto y las consecuencias que tuvo el proceso de conquista para Europa y para América, considerando diversos ámbitos.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA4",
+          "eje": "Historia",
+          "label": "Conquista y pueblos indígenas",
+          "text": "Investigar sobre los efectos de la conquista sobre los pueblos indígenas americanos, utilizando fuentes dadas por el docente.",
+          "quiz": true,
+          "note": "Sobre efectos, no la investigación",
+          "unit": null
+        },
+        {
+          "code": "OA5",
+          "eje": "Historia",
+          "label": "Vida colonial en Chile",
+          "text": "Describir algunas dimensiones de la vida colonial en Chile, como organización de la sociedad y grupos sociales, oficios y actividades económicas, costumbres y vida cotidiana, arte y celebraciones.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA6",
+          "eje": "Historia",
+          "label": "La Colonia: dependencia, Iglesia y mestizaje",
+          "text": "Explicar aspectos centrales de la Colonia, como la dependencia de las colonias americanas de la metrópoli, el rol de la Iglesia católica y el surgimiento de una sociedad mestiza.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA7",
+          "eje": "Historia",
+          "label": "Españoles y mapuches en la Colonia",
+          "text": "Explicar y dar ejemplos de las distintas formas en las que españoles y mapuches se relacionaron en el período colonial, considerando resistencia mapuche y guerra de Arauco, mestizaje, formas de trabajo (como encomienda y esclavitud), evangelización, vida fronteriza y sistema de parlamentos.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA8",
+          "eje": "Historia",
+          "label": "Patrimonio colonial",
+          "text": "Identificar, en su entorno o en fotografías, elementos del patrimonio colonial de Chile que siguen presentes hoy, como edificios, obras de arte y costumbres, entre otros.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA9",
+          "eje": "Geografía",
+          "label": "Zonas naturales de Chile",
+          "text": "Caracterizar las grandes zonas de Chile y sus paisajes (Norte Grande, Norte Chico, Zona Central, Zona Sur y Zona Austral), considerando ubicación, clima (temperatura y precipitaciones), relieve, hidrografía, población y recursos naturales, entre otros.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA10",
+          "eje": "Geografía",
+          "label": "Recursos naturales de Chile",
+          "text": "Reconocer y ubicar en mapas recursos naturales significativos de Chile, como cobre, hierro, recursos marítimos y forestales, entre otros; diferenciar recursos renovables y no renovables y explicar la importancia de cuidarlos en el marco de un desarrollo sostenible.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA11",
+          "eje": "Geografía",
+          "label": "Trabajo humano y recursos naturales",
+          "text": "Analizar y dar ejemplos de diversas maneras en las que el trabajo de las personas, sus ideas y proyectos potencian y dan valor a los recursos naturales (por ejemplo: tecnología de riego, elaboración de vinos, uso de madera en la construcción, nuevas formas de explotación sustentable).",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA12",
+          "eje": "Geografía",
+          "label": "Riesgos naturales y prevención",
+          "text": "Investigar, describir y ubicar los riesgos naturales que afectan a su localidad, como sismos, maremotos, inundaciones, derrumbes y volcanismo, e identificar formas en que la comunidad puede protegerse (construcciones antisísmicas, medidas de seguridad y evacuación en el hogar, en la escuela y en los distintos espacios públicos, entre otros).",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA13",
+          "eje": "Formación ciudadana",
+          "label": "Sujetos de derecho",
+          "text": "Reconocer que todas las personas son sujetos de derecho, que deben ser respetados por los pares, la comunidad y el Estado, y que esos derechos no dependen de características individuales, como etnia, sexo, lugar de nacimiento u otras.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA14",
+          "eje": "Formación ciudadana",
+          "label": "Derechos y deberes",
+          "text": "Reconocer que los derechos generan deberes y responsabilidades en las personas y en el Estado, lo que se manifiesta, por ejemplo, en que: las personas deben respetar los derechos de los demás todas las personas deben respetar las leyes el Estado debe asegurar que las personas puedan ejercer sus derechos (a la educación, a la protección de la salud, a la libertad de expresión, a la propiedad privada y a la igualdad ante la ley, entre otros) el Estado debe asegurar los derechos de las personas a participar en la vida pública, como el derecho a formar organizaciones de participación social (fundaciones, juntas de vecinos, etc.), a participar en partidos políticos y el derecho a sufragio, entre otros",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA15",
+          "eje": "Formación ciudadana",
+          "label": "Esfuerzo y mérito",
+          "text": "Reconocer que hay logros y beneficios que dependen del esfuerzo, el mérito y el comportamiento de cada persona (como las calificaciones, los premios deportivos, los premios por compañerismo, el aprecio y el reconocimiento por parte de sus pares, el liderazgo).",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA16",
+          "eje": "Formación ciudadana",
+          "label": "Actitudes cívicas",
+          "text": "Demostrar actitudes cívicas con acciones en su vida diaria, como: actuar con honestidad y responsabilidad (ejemplos: respetar los acuerdos establecidos, respetar la autoría de música y películas, evitar el plagio escolar, etc.) respetar a todas las personas (ejemplos: no discriminar por condiciones físicas, sociales, culturales o étnicas, escuchar respetuosamente opiniones distintas, respetar espacios y propiedad de los demás, etc.) contribuir a la buena convivencia (ejemplos: buscar soluciones pacíficas para resolver problemas, mostrar empatía con los demás, etc.) cuidar y valorar el patrimonio y el medioambiente (ejemplos: realizar campañas de información y cuidado de nuestro patrimonio, usar la energía de manera eficiente, etc.)",
+          "quiz": true,
+          "note": "Situaciones cotidianas",
+          "unit": null
+        },
+        {
+          "code": "OA17",
+          "eje": "Formación ciudadana",
+          "label": "Directiva de curso",
+          "text": "Participar en su comunidad, tomando parte en elecciones para una directiva de curso, asignando roles y funciones a cada cargo, y demostrando que entienden las responsabilidades que lleva consigo el desempeño de un cargo y la importancia de elegir personas que se estimen idóneas, para mantener una buena convivencia y una organización del curso que permita el trabajo escolar.",
+          "quiz": false,
+          "note": "Participación en el curso",
+          "unit": null
+        },
+        {
+          "code": "OA18",
+          "eje": "Formación ciudadana",
+          "label": "Proyecto para la comunidad escolar",
+          "text": "Diseñar y participar en un proyecto que solucione un problema de la comunidad escolar, considerando temas como voluntariado, gasto excesivo de agua y electricidad en la escuela, y cuidado del medioambiente, entre otros, y ateniéndose a un plan y a un presupuesto.",
+          "quiz": false,
+          "note": "Proyecto",
+          "unit": null
+        },
+        {
+          "code": "OA19",
+          "eje": "Formación ciudadana",
+          "label": "Organizarse para resolver problemas",
+          "text": "Explicar formas en que un grupo de personas puede organizarse para resolver problemas, mejorar su calidad de vida y la de otros y lograr metas comunes; por ejemplo, fundaciones, voluntariado, empresas, agrupaciones y recolección de fondos para causas benéficas.",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA20",
+          "eje": "Formación ciudadana",
+          "label": "Opinar con fundamentos",
+          "text": "Opinar y argumentar con fundamentos sobre temas de la asignatura u otros.",
+          "quiz": false,
+          "note": "Argumentación abierta",
+          "unit": null
+        },
+        {
+          "code": "OA21",
+          "eje": "Formación ciudadana",
+          "label": "Evaluar soluciones",
+          "text": "Evaluar posibles soluciones frente a un problema o proyecto y justificar su elección.",
+          "quiz": true,
+          "note": "Elegir la mejor solución",
+          "unit": null
+        },
+        {
+          "code": "OA22",
+          "eje": "Formación ciudadana",
+          "label": "Informarse sobre actualidad",
+          "text": "Informarse y opinar sobre temas relevantes y de su interés en el país y el mundo (política, medioambiente, deporte, arte y música, entre otros) por medio de periódicos y TIC.",
+          "quiz": false,
+          "note": "Actualidad y opinión",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "subject": "ingles",
+      "ejes": [
+        "Comprensión auditiva",
+        "Comprensión de lectura",
+        "Expresión oral",
+        "Expresión escrita"
+      ],
+      "oas": [
+        {
+          "code": "OA1",
+          "eje": "Comprensión auditiva",
+          "label": "Comprensión auditiva de textos simples",
+          "text": "Escuchar y demostrar comprensión de información explícita en textos adaptados y auténticos simples, tanto no literarios (textos expositivos, diálogos) como literarios (rimas, canciones, cuentos), que estén enunciados en forma clara, tengan repetición de palabras y apoyo visual y gestual, y estén relacionados con las funciones del año y con los siguientes temas: temas de la vida cotidiana: la escuela, la casa, la familia, la ropa, la comida, el clima temas del contexto inmediato de los estudiantes, como experiencias personales e información de interés relativa a eventos y aspectos de su entorno y de nuestro país temas de otras asignaturas, como alimentación equilibrada y variada (Ciencias Naturales) y descripción de lugares y clima (Geografía) temas de actualidad e interés global, como cultura de otros países, cuidado del medioambiente y avances tecnológicos (redes sociales, medios de comunicación)",
+          "quiz": false,
+          "note": "Requiere audio",
+          "unit": null
+        },
+        {
+          "code": "OA2",
+          "eje": "Comprensión auditiva",
+          "label": "Identificar información al escuchar",
+          "text": "Identificar en los textos escuchados: tema e ideas generales información específica asociada a personas, lugares y tiempo palabras, familias de palabras, expresiones de uso frecuente y vocabulario temático sonidos y repetición de sonidos para comenzar a familiarizarse con los sonidos del inglés",
+          "quiz": false,
+          "note": "Requiere audio",
+          "unit": null
+        },
+        {
+          "code": "OA3",
+          "eje": "Comprensión auditiva",
+          "label": "Estrategias de comprensión auditiva",
+          "text": "Escuchar textos orales en diversos formatos audiovisuales, usando las siguientes estrategias para apoyar la comprensión: hacer predicciones, basándose en conocimientos previos usar claves contextuales (tema, hablantes, lugar, tiempo, imágenes) visualizar diferentes aspectos del texto usar apoyo visual",
+          "quiz": false,
+          "note": "Requiere audio",
+          "unit": null
+        },
+        {
+          "code": "OA4",
+          "eje": "Comprensión auditiva",
+          "label": "Reaccionar a textos escuchados",
+          "text": "Reaccionar a los textos escuchados, expresando preferencias o haciendo conexiones con experiencias personales, en forma oral, escrita o mediante ilustraciones.",
+          "quiz": false,
+          "note": "Reacción personal",
+          "unit": null
+        },
+        {
+          "code": "OA5",
+          "eje": "Comprensión de lectura",
+          "label": "Leer textos no literarios simples",
+          "text": "Leer y demostrar comprensión de textos adaptados y auténticos simples no literarios, que contengan palabras de uso frecuente, familias de palabras, repetición de palabras y frases, estén acompañados de abundante apoyo visual y estén relacionados con los temas y las siguientes funciones del año: saludar y despedirse solicitar y entregar información personal y de temas familiares agradecer, disculparse y pedir permiso seguir y dar instrucciones describir personas, objetos y su posición, lugares, acciones cotidianas y clima expresar gustos, preferencias, cantidades y posesiones",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA6",
+          "eje": "Comprensión de lectura",
+          "label": "Comprensión de textos no literarios",
+          "text": "Leer comprensivamente textos no literarios, como notas, postales, invitaciones, tarjetas de saludo, menús, recetas, diálogos, instrucciones o emails, identificando: propósito del texto ideas generales información explícita palabras clave, expresiones de uso común asociadas a las funciones del nivel (por ejemplo: I’m sorry, excuse me) y vocabulario temático",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA7",
+          "eje": "Comprensión de lectura",
+          "label": "Comprensión de textos literarios",
+          "text": "Leer comprensivamente textos literarios adaptados y auténticos simples, como rimas, canciones y cuentos, que contengan palabras de uso frecuente, familias de palabras, repetición de palabras y frases y estén acompañados de abundante apoyo visual, identificando: tema general del texto personajes, lugares y tiempo secuencia de eventos (beginning – middle – end) vocabulario temático y expresiones de uso común",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA8",
+          "eje": "Comprensión de lectura",
+          "label": "Reaccionar a textos leídos",
+          "text": "Reaccionar a los textos leídos, expresando preferencias o haciendo conexiones con experiencias personales, en forma oral, escrita o mediante ilustraciones.",
+          "quiz": false,
+          "note": "Reacción personal",
+          "unit": null
+        },
+        {
+          "code": "OA9",
+          "eje": "Comprensión de lectura",
+          "label": "Estrategias de lectura",
+          "text": "Usar las siguientes estrategias para apoyar la comprensión de los textos leídos, tanto en formato digital como impreso: prelectura: hacer predicciones, basándose en conocimientos previos y elementos visuales lectura: usar organizadores, como títulos, subtítulos, ilustraciones e imágenes poslectura: organizar información en diagramas, releer",
+          "quiz": true,
+          "note": "Reconocer estrategias",
+          "unit": null
+        },
+        {
+          "code": "OA10",
+          "eje": "Expresión oral",
+          "label": "Reproducir canciones, rimas y diálogos",
+          "text": "Reproducir y producir monólogos, canciones, rimas y diálogos para comenzar a identificar y familiarizarse con los sonidos propios del idioma.",
+          "quiz": false,
+          "note": "Oral",
+          "unit": null
+        },
+        {
+          "code": "OA11",
+          "eje": "Expresión oral",
+          "label": "Expresión oral",
+          "text": "Expresarse oralmente, ya sea en diálogos, presentaciones o actividades grupales, con apoyo de lenguaje visual y/o digital, en torno a los temas del año.",
+          "quiz": false,
+          "note": "Oral",
+          "unit": null
+        },
+        {
+          "code": "OA12",
+          "eje": "Expresión oral",
+          "label": "Funciones comunicativas en diálogos",
+          "text": "Participar en diálogos con pares y profesores al realizar las siguientes funciones: saludar y despedirse; por ejemplo: hello/good morning, goodbye dar instrucciones; por ejemplo: sit down, close the door agradecer, disculparse y pedir permiso; por ejemplo: thank you, sorry, may I...? describir acciones cotidianas; por ejemplo: I run, I sleep identificar y describir objetos, personas y lugares en su apariencia; por ejemplo: the... is big, it is black agregar información; por ejemplo: it is big and black; this is my bag and that is your bag describir el clima; por ejemplo: today is sunny/cloudy expresar gustos y preferencias; por ejemplo: I like/don’t like... describir posesiones; por ejemplo: this/that is my/your...; I/They have... expresar cantidad numérica hasta el 20 identificar y expresar cantidades; por ejemplo: there is a/an/one...; there are two/twenty... It is a/an... solicitar y dar información; por ejemplo: How old/What/ Where is/are...?; there is/are...; it/this/the... is/are...; Is/Are he/they...? yes/no; Is he your father? Yes, he is/ No, he isn’t identificar y describir posición de objetos; por ejemplo: the... is on/in/under the... dar información general sobre un tema conocido; por ejemplo: the/he/they... is/are/have/eat/read re-contar cuentos con apoyo de ilustraciones; por ejemplo: the...run/play/ have...; there is/ are...",
+          "quiz": true,
+          "note": "Elegir la expresión adecuada",
+          "unit": null
+        },
+        {
+          "code": "OA13",
+          "eje": "Expresión oral",
+          "label": "Vocabulario del nivel",
+          "text": "Demostrar conocimiento y uso del vocabulario aprendido: vocabulario temático de uso cotidiano palabras de uso frecuente expresiones de uso común asociadas a las funciones del nivel (por ejemplo: Excuse me, How old...?)",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA14",
+          "eje": "Expresión escrita",
+          "label": "Completar y escribir textos breves",
+          "text": "Completar y escribir, de acuerdo a un modelo y con apoyo de lenguaje visual, textos no literarios (como postales, mini libros, listas de compras) y textos literarios (como rimas, tiras cómicas) con el propósito de compartir información en torno a los temas del año.",
+          "quiz": true,
+          "note": "Completar textos (cloze)",
+          "unit": null
+        },
+        {
+          "code": "OA15",
+          "eje": "Expresión escrita",
+          "label": "Funciones comunicativas por escrito",
+          "text": "Escribir para realizar las siguientes funciones: describir acciones cotidianas; por ejemplo: I run, I sleep expresar gustos y preferencias; por ejemplo: I like/don’t like identificar y expresar cantidades; por ejemplo: there is a/an/one...; there are two/twenty...; It is a/an... agregar información; por ejemplo: it is big and black describir posesiones; por ejemplo: this is my/your... ...; I/They have... expresar cantidad numérica hasta el 12 identificar y describir objetos, personas y lugares por su apariencia; por ejemplo: the... is big; it is black describir posición de objetos; por ejemplo: the... is on/in/under the... dar información general sobre un tema conocido; por ejemplo: the...is/are/ have/eat/ read...; he/they is/are/have/eat/read... describir el clima; por ejemplo: today is sunny/cloudy solicitar y dar información; por ejemplo: What/ Where is/are...?; there is/are...; it/this/ the... is/are...; Is this...? Yes, it is/No, it isn’t; Is he your father? Yes, he is/No, he isn’t",
+          "quiz": true,
+          "note": null,
+          "unit": null
+        },
+        {
+          "code": "OA16",
+          "eje": "Expresión escrita",
+          "label": "Proceso de escritura",
+          "text": "Utilizar los pasos del proceso de escritura (organización de ideas, escritura, corrección y publicación), recurriendo a herramientas como diccionario en línea y procesador de texto para: escribir oraciones simples y párrafos breves de acuerdo a un modelo y con la ayuda del docente demostrar conocimiento y uso de vocabulario temático de uso cotidiano, palabras de uso frecuente y expresiones de uso común asociadas a las funciones del nivel (por ejemplo: Excuse me, I’m sorry, How old...?)",
+          "quiz": false,
+          "note": "Proceso de escritura",
+          "unit": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 const express = require('express');
 const pool = require('../db');
 const { authenticateToken, requireTeacher } = require('../middleware/auth');
+const logger = require('../logger');
+const { findSuspiciousQuestions } = require('../services/skillRatings');
 
 const router = express.Router();
 
@@ -40,6 +42,16 @@ router.get('/', authenticateToken, requireTeacher, async (req, res) => {
 });
 
 // GET /api/questions/:id
+// Questions answered worse than chance with one dominant wrong answer: wrong key or shared misconception.
+router.get('/review', authenticateToken, requireTeacher, async (req, res) => {
+  try {
+    res.json({ questions: await findSuspiciousQuestions() });
+  } catch (err) {
+    logger.error({ err }, 'question review fetch error');
+    res.status(500).json({ error: 'Error al obtener preguntas para revisar' });
+  }
+});
+
 router.get('/:id', authenticateToken, requireTeacher, async (req, res) => {
   const { rows } = await pool.query('SELECT * FROM questions WHERE id = $1', [req.params.id]);
   if (!rows.length) return res.status(404).json({ error: 'Pregunta no encontrada' });

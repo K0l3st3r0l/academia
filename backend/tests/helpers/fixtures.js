@@ -51,12 +51,12 @@ export async function createRoom(pool, { teacherId, courseName, subject, status 
   return rows[0];
 }
 
-export async function createQuestion(pool, { subject, gradeLevel, difficulty = 'medium', text, options, correct, hint = null } = {}) {
+export async function createQuestion(pool, { subject, gradeLevel, difficulty = 'medium', text, options, correct, hint = null, oaCode = null } = {}) {
   const { rows } = await pool.query(`
-    INSERT INTO questions (subject, grade_level, difficulty, text, options, correct, hint, active)
-    VALUES ($1, $2, $3, $4, $5, $6, $7, true)
+    INSERT INTO questions (subject, grade_level, difficulty, text, options, correct, hint, oa_code, active)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, true)
     RETURNING *
-  `, [subject, gradeLevel, difficulty, text ?? `Pregunta ${unique()}`, JSON.stringify(options), correct, hint]);
+  `, [subject, gradeLevel, difficulty, text ?? `Pregunta ${unique()}`, JSON.stringify(options), correct, hint, oaCode]);
   return rows[0];
 }
 
