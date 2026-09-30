@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { getStudentToken, getStudentUser, studentLogout } from '../api/studentAuth';
 import RoomCodeForm from '../components/RoomCodeForm';
+import OpenRooms from '../components/OpenRooms';
 import StudentLoginForm from '../components/StudentLoginForm';
 import StudentAccess from '../components/StudentAccess';
 import { getAuthConfig } from '../api/client';
@@ -14,7 +15,7 @@ const MODES = [
     id: 'clase',
     label: 'Clase',
     hint: 'Con código',
-    description: 'Para los juegos en la sala de clases. Escribe el código que muestra tu profe.',
+    description: 'Para los juegos en la sala de clases. Toca la sala de tu curso.',
   },
   {
     id: 'alumno',
@@ -199,7 +200,13 @@ export default function WelcomePage() {
           className="bg-card rounded-2xl p-6 shadow-xl mt-3"
         >
           <p className="text-gray-400 text-sm text-center mb-5">{current.description}</p>
-          {mode === 'clase' && <RoomCodeForm autoFocus={focusForm} />}
+          {mode === 'clase' && (
+            <>
+              <OpenRooms />
+              {/* No autofocus: the tablet keyboard would cover the room list. */}
+              <RoomCodeForm />
+            </>
+          )}
           {mode === 'alumno' && (
             !authConfig ? (
               <p className="text-gray-500 text-center">Cargando...</p>

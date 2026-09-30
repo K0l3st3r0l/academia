@@ -145,9 +145,11 @@ describe('sincronización de alumnos con Anahuac', () => {
 
   it('el curso de la sala excluye a los retirados', async () => {
     const token = await loginTeacher();
-    anahuacReturns([anahuacStudent(601), anahuacStudent(602)]);
+    const stays = anahuacStudent(601, { rut: '12.345.678-5' });
+    const leaves = anahuacStudent(602, { rut: '11.111.111-1' });
+    anahuacReturns([stays, leaves]);
     await openPinList(token);
-    anahuacReturns([anahuacStudent(601)]);
+    anahuacReturns([stays]);
 
     const res = await request(app)
       .post('/api/rooms')
@@ -156,8 +158,10 @@ describe('sincronización de alumnos con Anahuac', () => {
 
     expect(res.status).toBe(200);
     expect(res.body.students).toHaveLength(1);
-    const roster = await request(app).get(`/api/rooms/${res.body.room.code}`);
-    expect(roster.body.students).toHaveLength(1);
+    const withdrawn = await request(app).post(`/api/rooms/${res.body.room.code}/join`).send({ rut: leaves.rut });
+    expect(withdrawn.status).toBe(404);
+    const active = await request(app).post(`/api/rooms/${res.body.room.code}/join`).send({ rut: stays.rut });
+    expect(active.status).toBe(200);
   });
 });
 

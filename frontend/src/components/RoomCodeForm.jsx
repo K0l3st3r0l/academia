@@ -16,7 +16,7 @@ export default function RoomCodeForm({ autoFocus = false }) {
     setLoading(true);
     try {
       const res = await getRoom(roomCode);
-      // StudentJoin reuses this roster instead of fetching the room a second time.
+      // StudentJoin reuses this lookup instead of fetching the room a second time.
       navigate(`/join/${roomCode}`, { state: { roomData: res.data } });
     } catch (err) {
       setError(err.response?.data?.error || 'No encontramos esa sala. Revisa el código.');

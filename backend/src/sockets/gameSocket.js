@@ -2,6 +2,7 @@ const logger = require('../logger');
 const jwt = require('jsonwebtoken');
 const pool = require('../db');
 const { trackEvent } = require('../services/eventTracker');
+const { verifyRoomTicket } = require('../services/roomTicket');
 
 // In-memory game state per room
 // Map<roomCode, RoomState>
@@ -56,6 +57,63 @@ function buildLeaderboard(students) {
     }));
 }
 
+// Teacher-only events (answer counts) go here, so every staff view of the room
+// gets them and students never do.
+function staffChannel(roomCode) {
+  return `${roomCode}:staff`;
+}
+
+// Control is tied to who the user is, not to a socket id: the owner's control
+// panel, a second tab or a socket.io reconnect all keep working, and a
+// projector tab can no longer take control away from the teacher.
+async function loadRoomForStaff(token, roomCode) {
+  const user = jwt.verify(token, process.env.JWT_SECRET);
+  const { rows } = await pool.query(
+    'SELECT * FROM rooms WHERE code = $1 AND status != $2',
+    [roomCode, 'closed']
+  );
+  if (!rows.length) return { error: 'Sala no encontrada' };
+
+  const room = rows[0];
+  if (room.teacher_id !== user.id && !user.roles?.includes('admin')) return { error: 'No autorizado' };
+  return { user, room };
+}
+
+function isRoomController(socket, roomCode) {
+  return socket.data?.role === 'teacher' && socket.data.roomCode === roomCode;
+}
+
+function ensureRoomState(room) {
+  if (!rooms.has(room.code)) {
+    rooms.set(room.code, {
+      code: room.code,
+      roomDbId: room.id,
+      subject: room.subject,
+      courseName: room.course_name,
+      students: new Map(),
+      status: 'waiting',
+      questions: [],
+      currentQuestionIndex: -1,
+      questionStartedAt: null,
+      timer: null,
+      sessionId: null,
+      questionAnswers: new Map(),
+      paused: false,
+      pausedAt: null,
+      pausedTimeRemaining: 0,
+    });
+  }
+  return rooms.get(room.code);
+}
+
+function participantsOf(state) {
+  return connectedStudents(state).map(s => ({
+    studentId: s.studentId,
+    name: s.displayName,
+    score: s.score,
+  }));
+}
+
 function connectedStudents(state) {
   return [...state.students.values()].filter(s => s.connected !== false);
 }
@@ -98,41 +156,14 @@ function setupGameSocket(io) {
     // ── Teacher joins room ──────────────────────────────────────────────
     socket.on('teacher:join', withErrorLogging(socket, 'teacher:join', async ({ token, roomCode }) => {
       try {
-        const user = jwt.verify(token, process.env.JWT_SECRET);
-        const { rows } = await pool.query(
-          'SELECT * FROM rooms WHERE code = $1 AND status != $2',
-          [roomCode, 'closed']
-        );
-        if (!rows.length) return socket.emit('error', { message: 'Sala no encontrada' });
+        const { user, room, error } = await loadRoomForStaff(token, roomCode);
+        if (error) return socket.emit('error', { message: error });
 
-        const room = rows[0];
         socket.join(roomCode);
+        socket.join(staffChannel(roomCode));
         socket.data = { role: 'teacher', roomCode, userId: user.id, roomDbId: room.id };
 
-        if (!rooms.has(roomCode)) {
-          rooms.set(roomCode, {
-            code: roomCode,
-            roomDbId: room.id,
-            subject: room.subject,
-            courseName: room.course_name,
-            teacherSocketId: socket.id,
-            students: new Map(),
-            status: 'waiting',
-            questions: [],
-            currentQuestionIndex: -1,
-            questionStartedAt: null,
-            timer: null,
-            sessionId: null,
-            questionAnswers: new Map(),
-            paused: false,
-            pausedAt: null,
-            pausedTimeRemaining: 0,
-          });
-        } else {
-          rooms.get(roomCode).teacherSocketId = socket.id;
-        }
-
-        const state = rooms.get(roomCode);
+        const state = ensureRoomState(room);
         socket.emit('room:joined', {
           role: 'teacher',
           roomCode,
@@ -140,11 +171,29 @@ function setupGameSocket(io) {
           subject: room.subject,
           courseName: room.course_name,
           status: state.status,
-          participants: connectedStudents(state).map(s => ({
-            studentId: s.studentId,
-            name: s.displayName,
-            score: s.score,
-          })),
+          participants: participantsOf(state),
+        });
+      } catch (err) {
+        socket.emit('error', { message: 'No autorizado' });
+      }
+    }));
+
+    // ── Projector joins room (observer, cannot control the game) ───────
+    socket.on('projector:join', withErrorLogging(socket, 'projector:join', async ({ token, roomCode }) => {
+      try {
+        const { user, room, error } = await loadRoomForStaff(token, roomCode);
+        if (error) return socket.emit('error', { message: error });
+
+        socket.join(roomCode);
+        socket.join(staffChannel(roomCode));
+        socket.data = { role: 'projector', roomCode, userId: user.id, roomDbId: room.id };
+
+        const state = ensureRoomState(room);
+        socket.emit('room:joined', {
+          role: 'projector',
+          roomCode,
+          status: state.status,
+          participants: participantsOf(state),
         });
       } catch (err) {
         socket.emit('error', { message: 'No autorizado' });
@@ -152,46 +201,35 @@ function setupGameSocket(io) {
     }));
 
     // ── Student joins room ──────────────────────────────────────────────
-    socket.on('student:join', withErrorLogging(socket, 'student:join', async ({ roomCode, studentDbId, displayName }) => {
+    // Identity comes from the ticket issued by POST /api/rooms/:code/join after
+    // the student typed their RUT. A student id sent by the client is ignored.
+    socket.on('student:join', withErrorLogging(socket, 'student:join', async ({ roomCode, ticket } = {}) => {
       try {
+        let identity;
+        try {
+          identity = verifyRoomTicket(ticket);
+        } catch {
+          return socket.emit('error', { message: 'Vuelve a ingresar tu RUT para entrar a la sala.' });
+        }
+        if (identity.roomCode !== roomCode) {
+          return socket.emit('error', { message: 'Vuelve a ingresar tu RUT para entrar a la sala.' });
+        }
+        const { studentId: studentDbId, displayName, ticketId } = identity;
+
         const { rows: roomRows } = await pool.query(
           'SELECT * FROM rooms WHERE code = $1 AND status != $2',
           [roomCode, 'closed']
         );
         if (!roomRows.length) return socket.emit('error', { message: 'Sala no encontrada o cerrada' });
 
-        // Verify student exists in local DB for this room's course
+        // The student may have been withdrawn or moved since the ticket was issued.
         const { rows: stuRows } = await pool.query(
-          'SELECT * FROM local_students WHERE id = $1 AND course_name = $2 AND active',
+          'SELECT id FROM local_students WHERE id = $1 AND course_name = $2 AND active',
           [studentDbId, roomRows[0].course_name]
         );
         if (!stuRows.length) return socket.emit('error', { message: 'Alumno no encontrado en este curso' });
 
-        socket.join(roomCode);
-        socket.data = { role: 'student', roomCode, studentDbId, displayName };
-
-        if (!rooms.has(roomCode)) {
-          rooms.set(roomCode, {
-            code: roomCode,
-            roomDbId: roomRows[0].id,
-            subject: roomRows[0].subject,
-            courseName: roomRows[0].course_name,
-            teacherSocketId: null,
-            students: new Map(),
-            status: 'waiting',
-            questions: [],
-            currentQuestionIndex: -1,
-            questionStartedAt: null,
-            timer: null,
-            sessionId: null,
-            questionAnswers: new Map(),
-            paused: false,
-            pausedAt: null,
-            pausedTimeRemaining: 0,
-          });
-        }
-
-        const state = rooms.get(roomCode);
+        const state = ensureRoomState(roomRows[0]);
 
         // Check if this student already has a session (reconnect)
         const existing = [...state.students.values()].find(s => s.studentDbId === studentDbId);
@@ -201,10 +239,34 @@ function setupGameSocket(io) {
           return socket.emit('error', { message: 'La actividad ya comenzó. Espera la próxima.' });
         }
 
+        const previousSocket = existing ? io.sockets.sockets.get(existing.socketId) : null;
+        const stillConnected = existing && existing.connected !== false && previousSocket?.connected;
+        if (stillConnected && existing.ticketId !== ticketId) {
+          // Someone else typed this RUT while its owner is playing: don't hand them the session.
+          trackEvent({
+            actorType: 'student',
+            actorId: studentDbId,
+            eventType: 'room_join_rejected',
+            roomId: state.roomDbId,
+            payload: { reason: 'already_connected' },
+          });
+          return socket.emit('error', { message: 'Ese RUT ya está jugando en esta sala. Si eres tú, avísale a tu profesor.' });
+        }
+
+        socket.join(roomCode);
+        socket.data = { role: 'student', roomCode, studentDbId, displayName };
+
         if (existing) {
+          // Same ticket from a second tab: the newest tab keeps the session.
+          if (stillConnected && previousSocket.id !== socket.id) {
+            previousSocket.emit('error', { message: 'Abriste la sala en otra pestaña. Sigue jugando allá.' });
+            previousSocket.disconnect(true);
+          }
+
           // Reconnect: migrate existing session to new socket
           state.students.delete(existing.socketId);
           existing.socketId = socket.id;
+          existing.ticketId = ticketId;
           existing.connected = true;
           state.students.set(socket.id, existing);
 
@@ -242,6 +304,7 @@ function setupGameSocket(io) {
             socketId: socket.id,
             studentId: studentDbId,
             studentDbId,
+            ticketId,
             displayName,
             score: 0,
             correctCount: 0,
@@ -266,13 +329,7 @@ function setupGameSocket(io) {
           payload: { displayName, reconnected: !!existing },
         });
 
-        io.to(roomCode).emit('room:participants', {
-          participants: connectedStudents(state).map(s => ({
-            studentId: s.studentId,
-            name: s.displayName,
-            score: s.score,
-          })),
-        });
+        io.to(roomCode).emit('room:participants', { participants: participantsOf(state) });
       } catch (err) {
         logger.error('student:join error', err);
         socket.emit('error', { message: 'Error al unirse a la sala' });
@@ -283,7 +340,7 @@ function setupGameSocket(io) {
     socket.on('game:start', withErrorLogging(socket, 'game:start', async ({ roomCode }) => {
       const state = getRoomState(roomCode);
       if (!state) return socket.emit('error', { message: 'Sala no existe en memoria' });
-      if (socket.id !== state.teacherSocketId) return socket.emit('error', { message: 'Solo el docente puede iniciar' });
+      if (!isRoomController(socket, roomCode)) return socket.emit('error', { message: 'Solo el docente puede iniciar' });
       if (state.status !== 'waiting') return;
 
       // Load up to 10 random active questions for this subject, matched to the room's grade level.
@@ -349,7 +406,7 @@ function setupGameSocket(io) {
     // ── Teacher manually advances (skips remaining time) ───────────────
     socket.on('game:next', withErrorLogging(socket, 'game:next', ({ roomCode }) => {
       const state = getRoomState(roomCode);
-      if (!state || socket.id !== state.teacherSocketId) return;
+      if (!state || !isRoomController(socket, roomCode)) return;
       if (state.status !== 'playing') return;
       clearRoomTimer(state);
       state.paused = false;
@@ -360,7 +417,7 @@ function setupGameSocket(io) {
     // ── Teacher pauses the current question ────────────────────────────
     socket.on('game:pause', withErrorLogging(socket, 'game:pause', ({ roomCode }) => {
       const state = getRoomState(roomCode);
-      if (!state || socket.id !== state.teacherSocketId) return;
+      if (!state || !isRoomController(socket, roomCode)) return;
       if (state.status !== 'playing' || state.paused) return;
 
       clearRoomTimer(state);
@@ -374,7 +431,7 @@ function setupGameSocket(io) {
     // ── Teacher resumes the current question ───────────────────────────
     socket.on('game:resume', withErrorLogging(socket, 'game:resume', ({ roomCode }) => {
       const state = getRoomState(roomCode);
-      if (!state || socket.id !== state.teacherSocketId) return;
+      if (!state || !isRoomController(socket, roomCode)) return;
       if (state.status !== 'playing' || !state.paused) return;
 
       // Shift questionStartedAt so timeTakenMs in answers stays accurate
@@ -391,7 +448,7 @@ function setupGameSocket(io) {
     // ── Teacher stops the game early ───────────────────────────────────
     socket.on('game:stop', withErrorLogging(socket, 'game:stop', ({ roomCode }) => {
       const state = getRoomState(roomCode);
-      if (!state || socket.id !== state.teacherSocketId) return;
+      if (!state || !isRoomController(socket, roomCode)) return;
       if (state.status !== 'playing') return;
       clearRoomTimer(state);
       state.paused = false;
@@ -452,7 +509,7 @@ function setupGameSocket(io) {
 
       // Notify teacher of new answer (count only, not which student answered)
       const totalConnected = connectedStudents(state).length;
-      io.to(state.teacherSocketId).emit('game:answer_count', {
+      io.to(staffChannel(roomCode)).emit('game:answer_count', {
         questionIndex: qi,
         count: qAnswers.size,
         total: totalConnected,
@@ -491,13 +548,7 @@ function setupGameSocket(io) {
           });
         }
 
-        io.to(roomCode).emit('room:participants', {
-          participants: connectedStudents(state).map(s => ({
-            studentId: s.studentId,
-            name: s.displayName,
-            score: s.score,
-          })),
-        });
+        io.to(roomCode).emit('room:participants', { participants: participantsOf(state) });
       }
     }));
   });
@@ -660,18 +711,23 @@ async function endGame(io, roomCode) {
 // Called from the REST layer when a teacher closes a room. If there's an
 // active game in memory it's ended the same clean way game:stop does
 // (persists results, awards tokens, notifies clients via game:end).
-// Otherwise just drops any lingering lobby state for that room.
+// Otherwise drops any lingering lobby state and tells the lobby screens
+// (projector, waiting students) via room:closed.
 async function closeRoomForTeacher(io, roomCode) {
   const state = getRoomState(roomCode);
-  if (!state) return { hadActiveGame: false };
 
-  if (state.status === 'playing') {
+  if (state?.status === 'playing') {
     await endGame(io, roomCode);
     return { hadActiveGame: true };
   }
 
-  clearRoomTimer(state);
-  rooms.delete(roomCode);
+  if (state) {
+    clearRoomTimer(state);
+    rooms.delete(roomCode);
+  }
+  // Emitted even with no state in memory (e.g. after a backend restart): the
+  // projector and students in the lobby would otherwise keep showing the code.
+  io?.to(roomCode).emit('room:closed', { roomCode });
   return { hadActiveGame: false };
 }
 

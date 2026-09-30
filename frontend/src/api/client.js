@@ -51,6 +51,12 @@ export const resetStudentPinsBulk = (courseName) =>
 export const getRoom = (code) =>
   client.get(`/api/rooms/${code}`);
 
+export const getOpenRooms = () =>
+  client.get('/api/rooms/open');
+
+export const joinRoom = (code, rut) =>
+  client.post(`/api/rooms/${code}/join`, { rut });
+
 export const createRoom = (courseName, subject) =>
   client.post('/api/rooms', { course_name: courseName, subject });
 

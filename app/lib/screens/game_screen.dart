@@ -32,7 +32,7 @@ class _GameScreenState extends State<GameScreen> {
   Timer? _timer;
   bool _confirmLeave = false;
   ConnectionStatus _connectionStatus = ConnectionStatus.connected;
-  String _studentId = '';
+  String _roomTicket = '';
   final List<Map<String, dynamic>> _pendingAnswers = [];
 
   static const _optionIcons = ['▲', '●', '■', '✦'];
@@ -45,14 +45,14 @@ class _GameScreenState extends State<GameScreen> {
 
   Future<void> _initSocket() async {
     final prefs = await SharedPreferences.getInstance();
-    final studentId = prefs.getString('student_id') ?? '';
+    final roomTicket = prefs.getString('room_ticket') ?? '';
     _displayName = prefs.getString('student_name') ?? 'Alumno';
 
-    if (studentId.isEmpty) {
+    if (roomTicket.isEmpty) {
       if (mounted) context.go('/join');
       return;
     }
-    _studentId = studentId;
+    _roomTicket = roomTicket;
 
     _socket = SocketService(url: const String.fromEnvironment('BACKEND_URL', defaultValue: 'https://games.laravas.com'));
     _socket.connect();
@@ -139,8 +139,7 @@ class _GameScreenState extends State<GameScreen> {
   void _emitJoin() {
     _socket.emit('student:join', {
       'roomCode': widget.roomCode,
-      'studentDbId': _studentId,
-      'displayName': _displayName,
+      'ticket': _roomTicket,
     });
   }
 

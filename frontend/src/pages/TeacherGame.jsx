@@ -31,10 +31,12 @@ export default function TeacherGame() {
     const socket = io(SOCKET_URL);
     socketRef.current = socket;
 
-    socket.emit('teacher:join', { token, roomCode: code });
+    // Re-join on every (re)connect: a reconnected socket gets a new id and the
+    // server only lets joined sockets control the game.
+    socket.on('connect', () => socket.emit('teacher:join', { token, roomCode: code }));
 
     socket.on('room:joined', (data) => {
-      setPhase(data.status === 'waiting' ? 'waiting' : 'playing');
+      setPhase(prev => (data.status === 'waiting' ? 'waiting' : prev === 'waiting' ? 'playing' : prev));
       setParticipants(data.participants || []);
       setRoomId(data.roomId || null);
     });
@@ -96,6 +98,9 @@ export default function TeacherGame() {
     });
 
     socket.on('error', (data) => alert(data.message));
+
+    // Closed from another tab or device: this control panel has nothing left to control.
+    socket.on('room:closed', () => navigate('/teacher'));
 
     return () => {
       clearInterval(timerRef.current);

@@ -1,10 +1,11 @@
 import { describe, it, expect, beforeAll, afterAll, afterEach } from 'vitest';
 import { io as ioClient } from 'socket.io-client';
 import { startTestServer } from '../helpers/socketServer.js';
-import { createTeacher, createStudent, createRoom, createQuestion, signToken } from '../helpers/fixtures.js';
+import { createTeacher, createStudent, createRoom, createQuestion, signToken, studentPayload } from '../helpers/fixtures.js';
 
 const { default: pool } = await import('../../src/db/index.js');
 const { getRoomState, QUESTION_TIME_MS } = await import('../../src/sockets/gameSocket.js');
+const { issueRoomTicket } = await import('../../src/services/roomTicket.js');
 
 let testServer;
 
@@ -42,9 +43,14 @@ function teacherJoin(socket, token, roomCode) {
   return joined;
 }
 
+// What POST /api/rooms/:code/join hands the student after checking their RUT.
+function ticketFor(roomCode, studentDbId, displayName) {
+  return issueRoomTicket({ studentId: studentDbId, roomCode, displayName }).ticket;
+}
+
 function studentJoin(socket, roomCode, studentDbId, displayName) {
   const joined = once(socket, 'room:joined');
-  socket.emit('student:join', { roomCode, studentDbId, displayName });
+  socket.emit('student:join', { roomCode, ticket: ticketFor(roomCode, studentDbId, displayName) });
   return joined;
 }
 
@@ -159,7 +165,7 @@ describe('flujo de juego por sockets', () => {
     s2 = await connectClient();
     const rejoinedP = once(s2, 'room:joined');
     const catchupP = once(s2, 'game:question');
-    s2.emit('student:join', { roomCode: room.code, studentDbId: student2.id, displayName: 'Estudiante Dos' });
+    s2.emit('student:join', { roomCode: room.code, ticket: ticketFor(room.code, student2.id, 'Estudiante Dos') });
     const rejoined = await rejoinedP;
     expect(rejoined.reconnected).toBe(true);
     expect(rejoined.score).toBe(0);
@@ -277,5 +283,173 @@ describe('flujo de juego por sockets', () => {
     teacherSocket.disconnect();
     s1.disconnect();
     s2.disconnect();
+  });
+});
+
+describe('control del juego por identidad', () => {
+  function emitAndWait(socket, event, payload, responseEvent) {
+    const p = once(socket, responseEvent);
+    socket.emit(event, payload);
+    return p;
+  }
+
+  it('abrir el proyector no le quita el control al docente, y el proyector no puede iniciar', async () => {
+    const { teacher, student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    const projector = await connectClient();
+    const s1 = await connectClient();
+    await teacherJoin(teacherSocket, token, room.code);
+    const projectorJoined = await emitAndWait(projector, 'projector:join', { token, roomCode: room.code }, 'room:joined');
+    expect(projectorJoined.role).toBe('projector');
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+
+    const projectorError = await emitAndWait(projector, 'game:start', { roomCode: room.code }, 'error');
+    expect(projectorError.message).toBe('Solo el docente puede iniciar');
+
+    const projectorStartedP = once(projector, 'game:started');
+    const startedP = once(teacherSocket, 'game:started');
+    teacherSocket.emit('game:start', { roomCode: room.code });
+    await startedP;
+    await projectorStartedP;
+
+    let studentGotCount = false;
+    s1.on('game:answer_count', () => { studentGotCount = true; });
+    const projectorCountP = once(projector, 'game:answer_count');
+    const teacherCountP = once(teacherSocket, 'game:answer_count');
+    s1.emit('game:answer', { roomCode: room.code, answer: 'Uno', questionIndex: 0 });
+    expect((await projectorCountP).count).toBe(1);
+    expect((await teacherCountP).count).toBe(1);
+    expect(studentGotCount).toBe(false);
+
+    const endedP = once(teacherSocket, 'game:end');
+    teacherSocket.emit('game:stop', { roomCode: room.code });
+    await endedP;
+
+    teacherSocket.disconnect();
+    projector.disconnect();
+    s1.disconnect();
+  });
+
+  it('una segunda pestaña o una reconexión del docente no deja sin control a la otra', async () => {
+    const { teacher, student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const tabA = await connectClient();
+    await teacherJoin(tabA, token, room.code);
+    // tabB stands for both a second tab and a reconnected socket: a new id joining later.
+    const tabB = await connectClient();
+    await teacherJoin(tabB, token, room.code);
+    const s1 = await connectClient();
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+
+    const startedP = once(tabB, 'game:started');
+    tabA.emit('game:start', { roomCode: room.code });
+    await startedP;
+
+    const endedP = once(tabA, 'game:end');
+    tabB.emit('game:stop', { roomCode: room.code });
+    await endedP;
+
+    tabA.disconnect();
+    tabB.disconnect();
+    s1.disconnect();
+  });
+
+  it('rechaza unirse como docente con token de alumno o de otro docente, y admite al admin', async () => {
+    const { student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const otherTeacher = await createTeacher(pool);
+    const admin = await createTeacher(pool, { roles: ['admin'] });
+
+    const socket = await connectClient();
+    const studentToken = signToken(studentPayload(student1));
+    const asStudent = await emitAndWait(socket, 'teacher:join', { token: studentToken, roomCode: room.code }, 'error');
+    expect(asStudent.message).toBe('No autorizado');
+
+    const asStudentProjector = await emitAndWait(socket, 'projector:join', { token: studentToken, roomCode: room.code }, 'error');
+    expect(asStudentProjector.message).toBe('No autorizado');
+
+    const otherToken = signToken({ id: otherTeacher.id, roles: ['teacher'] });
+    const asOther = await emitAndWait(socket, 'teacher:join', { token: otherToken, roomCode: room.code }, 'error');
+    expect(asOther.message).toBe('No autorizado');
+
+    const s1 = await connectClient();
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    const notJoined = await emitAndWait(socket, 'game:start', { roomCode: room.code }, 'error');
+    expect(notJoined.message).toBe('Solo el docente puede iniciar');
+    s1.disconnect();
+
+    const adminToken = signToken({ id: admin.id, roles: ['admin'] });
+    const asAdmin = await emitAndWait(socket, 'teacher:join', { token: adminToken, roomCode: room.code }, 'room:joined');
+    expect(asAdmin.role).toBe('teacher');
+
+    socket.disconnect();
+  });
+});
+
+describe('identidad del alumno al unirse', () => {
+  function emitAndWait(socket, event, payload, responseEvent) {
+    const response = once(socket, responseEvent);
+    socket.emit(event, payload);
+    return response;
+  }
+
+  it('ignora un id de alumno enviado por el cliente y exige el ticket del RUT', async () => {
+    const { student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const socket = await connectClient();
+
+    const legacy = await emitAndWait(socket, 'student:join', { roomCode: room.code, studentDbId: student1.id, displayName: 'Otro' }, 'error');
+    expect(legacy.message).toMatch(/RUT/);
+
+    const sessionToken = signToken(studentPayload(student1));
+    const withSessionToken = await emitAndWait(socket, 'student:join', { roomCode: room.code, ticket: sessionToken }, 'error');
+    expect(withSessionToken.message).toMatch(/RUT/);
+
+    const otherRoomTicket = ticketFor('ZZZZZZ', student1.id, 'Estudiante Uno');
+    const wrongRoom = await emitAndWait(socket, 'student:join', { roomCode: room.code, ticket: otherRoomTicket }, 'error');
+    expect(wrongRoom.message).toMatch(/RUT/);
+
+    expect(getRoomState(room.code)?.students.size ?? 0).toBe(0);
+    socket.disconnect();
+  });
+
+  it('no entrega la sesión a otro que escribe el mismo RUT mientras el dueño juega', async () => {
+    const { student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const owner = await connectClient();
+    await studentJoin(owner, room.code, student1.id, 'Estudiante Uno');
+
+    const impostor = await connectClient();
+    const rejected = await emitAndWait(impostor, 'student:join', { roomCode: room.code, ticket: ticketFor(room.code, student1.id, 'Estudiante Uno') }, 'error');
+    expect(rejected.message).toMatch(/ya está jugando/);
+
+    const state = getRoomState(room.code);
+    expect(state.students.size).toBe(1);
+    expect(state.students.has(owner.id)).toBe(true);
+
+    impostor.disconnect();
+    owner.disconnect();
+  });
+
+  it('con el mismo ticket, la pestaña nueva se queda con la sesión y la vieja se desconecta', async () => {
+    const { student1, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const ticket = ticketFor(room.code, student1.id, 'Estudiante Uno');
+
+    const tabA = await connectClient();
+    await emitAndWait(tabA, 'student:join', { roomCode: room.code, ticket }, 'room:joined');
+
+    const tabB = await connectClient();
+    const kicked = once(tabA, 'error');
+    const tabADisconnected = once(tabA, 'disconnect');
+    const joined = await emitAndWait(tabB, 'student:join', { roomCode: room.code, ticket }, 'room:joined');
+    expect(joined.reconnected).toBe(true);
+    expect((await kicked).message).toMatch(/otra pestaña/);
+    await tabADisconnected;
+
+    const state = getRoomState(room.code);
+    expect(state.students.size).toBe(1);
+    expect(state.students.get(tabB.id)?.connected).toBe(true);
+
+    tabB.disconnect();
   });
 });

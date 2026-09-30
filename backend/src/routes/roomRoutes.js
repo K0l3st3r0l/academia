@@ -7,6 +7,9 @@ const { getSchoolCourses } = require('../services/anahuacService');
 const { syncStudents } = require('../services/studentSync');
 const anahuacTokenCache = require('../services/anahuacTokenCache');
 const { trackEvent } = require('../services/eventTracker');
+const { issueRoomTicket } = require('../services/roomTicket');
+const roomJoinRateLimiter = require('../services/roomJoinRateLimiter');
+const { normalizeRut, isValidRut } = require('../utils/rut');
 
 const router = express.Router();
 
@@ -147,7 +150,30 @@ router.get('/history', authenticateToken, requireTeacher, async (req, res) => {
   }
 });
 
-// Get room info + student list (public — students need this to join)
+// Rooms a student can walk into right now, so the "Clase" tab can offer them
+// without typing a code. Codes are no secret since joining needs the student's
+// RUT. The age cap hides rooms a teacher left open and never closed.
+const OPEN_ROOM_MAX_AGE_HOURS = 3;
+
+router.get('/open', async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      `SELECT code, course_name, subject, status, created_at FROM rooms
+       WHERE status IN ('waiting', 'active') AND created_at > NOW() - make_interval(hours => $1)
+       ORDER BY created_at DESC
+       LIMIT 20`,
+      [OPEN_ROOM_MAX_AGE_HOURS]
+    );
+    res.set('Cache-Control', 'no-store');
+    res.json({ rooms: rows });
+  } catch (err) {
+    logger.error('Open rooms error:', err.message);
+    res.status(500).json({ error: 'Error al buscar salas abiertas' });
+  }
+});
+
+// Public room info. No roster: anyone with the code could read the names of the
+// whole class, and picking a name from a list let a student play as a classmate.
 router.get('/:code', async (req, res) => {
   const { code } = req.params;
   try {
@@ -157,16 +183,54 @@ router.get('/:code', async (req, res) => {
     );
     if (!rows.length) return res.status(404).json({ error: 'Sala no encontrada o cerrada' });
 
-    const room = rows[0];
-    const { rows: students } = await pool.query(
-      'SELECT id, first_name, last_name FROM local_students WHERE course_name = $1 AND active ORDER BY last_name, first_name',
-      [room.course_name]
-    );
-
-    res.json({ room, students });
+    res.json({ room: rows[0] });
   } catch (err) {
     logger.error('Get room error:', err.message);
     res.status(500).json({ error: 'Error al obtener sala' });
+  }
+});
+
+// A student identifies with their RUT and gets a ticket for this room only;
+// student:join trusts the ticket, never a student id sent by the client.
+router.post('/:code/join', async (req, res) => {
+  const code = req.params.code.toUpperCase();
+  const { rut } = req.body || {};
+
+  if (!isValidRut(rut)) {
+    return res.status(400).json({ error: 'Ese RUT no es válido. Revisa los números y el dígito verificador.' });
+  }
+  if (roomJoinRateLimiter.isRateLimited(code)) {
+    return res.status(429).json({ error: 'Hubo demasiados intentos en esta sala. Pídele ayuda a tu profesor.' });
+  }
+
+  try {
+    const { rows: roomRows } = await pool.query(
+      'SELECT id, code, course_name FROM rooms WHERE code = $1 AND status != $2',
+      [code, 'closed']
+    );
+    if (!roomRows.length) return res.status(404).json({ error: 'Sala no encontrada o cerrada' });
+    const room = roomRows[0];
+
+    const { rows } = await pool.query(
+      `SELECT id, first_name, last_name FROM local_students
+       WHERE UPPER(REGEXP_REPLACE(rut, '[^0-9kK]', '', 'g')) = $1 AND course_name = $2 AND active
+       LIMIT 1`,
+      [normalizeRut(rut), room.course_name]
+    );
+    const student = rows[0];
+
+    if (!student) {
+      roomJoinRateLimiter.registerFailure(code);
+      trackEvent({ actorType: 'student', eventType: 'room_join_failed', roomId: room.id, payload: { reason: 'not_in_course' } });
+      return res.status(404).json({ error: `Ese RUT no aparece en ${room.course_name}. Revísalo o avísale a tu profesor.` });
+    }
+
+    const displayName = `${student.first_name} ${student.last_name}`.trim();
+    const { ticket } = issueRoomTicket({ studentId: student.id, roomCode: room.code, displayName });
+    res.json({ ticket, student: { firstName: student.first_name, displayName } });
+  } catch (err) {
+    logger.error('Room join error:', err.message);
+    res.status(500).json({ error: 'Error al entrar a la sala' });
   }
 });
 

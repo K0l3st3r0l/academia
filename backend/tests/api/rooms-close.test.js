@@ -5,6 +5,7 @@ import { startTestServer } from '../helpers/socketServer.js';
 import { createTeacher, createStudent, createRoom, createQuestion, signToken, teacherPayload } from '../helpers/fixtures.js';
 
 const { default: pool } = await import('../../src/db/index.js');
+const { issueRoomTicket } = await import('../../src/services/roomTicket.js');
 
 let testServer;
 
@@ -74,6 +75,46 @@ describe('POST /api/rooms/:id/close', () => {
     expect(rows[0].closed_at).not.toBeNull();
   });
 
+  it('avisa al proyector y a los alumnos en espera que la sala se cerró', async () => {
+    const teacher = await createTeacher(pool);
+    const courseName = '5° Básico A';
+    const student = await createStudent(pool, { courseName, firstName: 'Alumno Espera' });
+    const room = await createRoom(pool, { teacherId: teacher.id, courseName, subject: 'matematica', status: 'waiting' });
+    const teacherToken = signToken(teacherPayload(teacher));
+
+    const projector = await connectClient();
+    const projectorJoinedP = once(projector, 'room:joined');
+    projector.emit('projector:join', { token: teacherToken, roomCode: room.code });
+    await projectorJoinedP;
+
+    const studentSocket = await connectClient();
+    const studentJoinedP = once(studentSocket, 'room:joined');
+    const { ticket } = issueRoomTicket({ studentId: student.id, roomCode: room.code, displayName: 'Alumno Espera' });
+    studentSocket.emit('student:join', { roomCode: room.code, ticket });
+    await studentJoinedP;
+
+    const projectorClosedP = once(projector, 'room:closed');
+    const studentClosedP = once(studentSocket, 'room:closed');
+    const res = await request(testServer.server)
+      .post(`/api/rooms/${room.id}/close`)
+      .set('Authorization', `Bearer ${teacherToken}`);
+    expect(res.status).toBe(200);
+
+    expect((await projectorClosedP).roomCode).toBe(room.code);
+    expect((await studentClosedP).roomCode).toBe(room.code);
+
+    // A projector that reconnects afterwards is refused instead of showing the old code.
+    const errorP = once(projector, 'error');
+    projector.emit('projector:join', { token: teacherToken, roomCode: room.code });
+    expect((await errorP).message).toBe('Sala no encontrada');
+
+    const openRooms = await request(testServer.server).get('/api/rooms/open');
+    expect(openRooms.body.rooms.map(r => r.code)).not.toContain(room.code);
+
+    projector.disconnect();
+    studentSocket.disconnect();
+  });
+
   it('termina limpiamente una partida activa en memoria y notifica a los alumnos conectados', async () => {
     const teacher = await createTeacher(pool);
     const courseName = '5° Básico A';
@@ -95,7 +136,8 @@ describe('POST /api/rooms/:id/close', () => {
     await teacherJoinedP;
 
     const studentJoinedP = once(studentSocket, 'room:joined');
-    studentSocket.emit('student:join', { roomCode: room.code, studentDbId: student.id, displayName: 'Alumno Cierre' });
+    const { ticket } = issueRoomTicket({ studentId: student.id, roomCode: room.code, displayName: 'Alumno Cierre' });
+    studentSocket.emit('student:join', { roomCode: room.code, ticket });
     await studentJoinedP;
 
     const startedP = once(teacherSocket, 'game:started');

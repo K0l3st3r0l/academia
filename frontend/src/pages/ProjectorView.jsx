@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { getRoom } from '../api/client';
 import { SOCKET_URL } from '../api/client';
+import { subjectLabel } from '../utils/subjects';
 
 const OPTION_COLORS = ['bg-blue-600', 'bg-orange-500', 'bg-green-600', 'bg-red-600'];
 const OPTION_ICONS = ['▲', '●', '■', '✦'];
@@ -22,14 +23,31 @@ export default function ProjectorView() {
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef(null);
 
+  // The results screen stays up after the game ends, even though the room is closed by then.
+  const markClosed = () => {
+    clearInterval(timerRef.current);
+    setPhase(prev => (prev === 'ended' ? prev : 'closed'));
+  };
+
+  // 404 means closed (or never existed); a network error proves nothing.
+  const checkRoomStillOpen = () =>
+    getRoom(code)
+      .then(res => setRoomInfo(res.data.room))
+      .catch(err => { if (err.response?.status === 404) markClosed(); });
+
   useEffect(() => {
-    getRoom(code).then(res => setRoomInfo(res.data.room)).catch(() => {});
+    checkRoomStillOpen();
 
     const socket = io(SOCKET_URL);
     socketRef.current = socket;
 
-    // Projector joins as an observer (no token, just listen)
-    socket.emit('teacher:join', { token: localStorage.getItem('academia_token') || '', roomCode: code });
+    // Observer only: joining as teacher used to take game control away from the teacher's tab.
+    const token = localStorage.getItem('academia_token') || '';
+    socket.on('connect', () => socket.emit('projector:join', { token, roomCode: code }));
+
+    socket.on('room:closed', markClosed);
+    // projector:join is refused for a closed room, e.g. after reconnecting.
+    socket.on('error', checkRoomStillOpen);
 
     socket.on('room:joined', (data) => setParticipants(data.participants || []));
     socket.on('room:participants', (data) => setParticipants(data.participants));
@@ -91,6 +109,14 @@ export default function ProjectorView() {
     };
   }, [code]);
 
+  // Backstop for a room:closed missed while the socket was down: the lobby is
+  // exactly where a stale code would keep students trying to join.
+  useEffect(() => {
+    if (phase !== 'waiting') return;
+    const poll = setInterval(checkRoomStillOpen, 15000);
+    return () => clearInterval(poll);
+  }, [phase, code]);
+
   const joinUrl = `${window.location.origin}/join/${code}`;
 
   return (
@@ -103,7 +129,7 @@ export default function ProjectorView() {
           </h1>
           {roomInfo && (
             <p className="text-gray-400 text-xl mb-8">
-              {roomInfo.course_name} · {roomInfo.subject}
+              {roomInfo.course_name} · {subjectLabel(roomInfo.subject)}
             </p>
           )}
           <div className="bg-card rounded-3xl px-16 py-10 text-center shadow-2xl border border-brand/20">
@@ -239,6 +265,28 @@ export default function ProjectorView() {
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* Closed by the teacher */}
+      {phase === 'closed' && (
+        <div className="flex-1 flex flex-col items-center justify-center text-center">
+          <h1 className="text-6xl font-black text-brand-light mb-10">
+            Academ<span className="text-gold">IA</span>
+          </h1>
+          <h2 className="text-6xl font-black mb-4">Esta sala se cerró</h2>
+          {roomInfo && (
+            <p className="text-gray-400 text-2xl mb-2">
+              {roomInfo.course_name} · {subjectLabel(roomInfo.subject)}
+            </p>
+          )}
+          <p className="text-gray-500 text-xl mt-6">Para jugar otra vez, abre una sala nueva desde tu panel.</p>
+          <Link
+            to="/teacher"
+            className="mt-8 bg-brand hover:bg-brand-dark text-white font-bold text-xl px-8 py-4 rounded-2xl transition-colors"
+          >
+            Ir a mi panel
+          </Link>
         </div>
       )}
 

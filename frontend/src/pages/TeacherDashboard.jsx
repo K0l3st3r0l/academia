@@ -5,17 +5,7 @@ import {
   createRoom, getCourses, getRoomHistory, getSessionDetail,
   getStudentsByCourse, resetStudentPin, resetStudentPinsBulk, getAuthConfig,
 } from '../api/client';
-
-const SUBJECTS = [
-  { value: 'matematica', label: 'Matemática' },
-  { value: 'lenguaje', label: 'Lenguaje' },
-  { value: 'ciencias', label: 'Ciencias' },
-  { value: 'historia', label: 'Historia' },
-  { value: 'ingles', label: 'Inglés' },
-  { value: 'general', label: 'General' },
-];
-
-const SUBJECT_LABELS = Object.fromEntries(SUBJECTS.map(s => [s.value, s.label]));
+import { SUBJECTS, SUBJECT_LABELS } from '../utils/subjects';
 
 function formatDateTime(iso) {
   if (!iso) return '—';

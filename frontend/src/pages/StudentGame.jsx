@@ -32,18 +32,17 @@ export default function StudentGame() {
 
   useEffect(() => {
     const stored = sessionStorage.getItem('academia_student');
-    if (!stored) { navigate(`/join/${code}`); return; }
+    const studentData = stored ? JSON.parse(stored) : null;
+    if (!studentData?.ticket) { navigate(`/join/${code}`); return; }
 
-    const studentData = JSON.parse(stored);
     setStudent(studentData);
 
     const socket = io(SOCKET_URL);
     socketRef.current = socket;
 
-    socket.emit('student:join', {
-      roomCode: code,
-      studentDbId: studentData.id,
-      displayName: studentData.displayName,
+    // Also on every socket.io reconnect: the new socket must re-join to keep playing.
+    socket.on('connect', () => {
+      socket.emit('student:join', { roomCode: code, ticket: studentData.ticket });
     });
 
     socket.on('room:joined', (data) => {
@@ -117,6 +116,13 @@ export default function StudentGame() {
     socket.on('error', (data) => {
       alert(data.message);
       navigate(`/join/${code}`);
+    });
+
+    socket.on('room:closed', () => {
+      clearInterval(timerRef.current);
+      sessionStorage.removeItem('academia_student');
+      alert('Tu profesor cerró la sala.');
+      navigate('/?modo=clase');
     });
 
     return () => {
