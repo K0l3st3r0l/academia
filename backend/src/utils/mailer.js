@@ -29,7 +29,9 @@ if (!transporter) logger.warn('Mail disabled: MAIL_USER / MAIL_APP_PASSWORD not 
 
 // Credentials that Gmail rejects must not switch students to email sign-in: they
 // would get links that never arrive. Mail counts as enabled only after Gmail accepts
-// the login, and a rejected login is retried every 15 minutes.
+// the login. Network errors are retried every 15 minutes; a rejected password is not,
+// because .env.mail is only re-read when the container is recreated, and repeated
+// failed logins could get the account locked.
 const RETRY_MS = 15 * 60 * 1000;
 let verified = process.env.NODE_ENV === 'test';
 
@@ -41,7 +43,11 @@ function verifyTransport() {
     })
     .catch(err => {
       verified = false;
-      logger.error({ code: err.code, responseCode: err.responseCode }, 'Mail disabled: Gmail rejected the .env.mail credentials');
+      if (err.code === 'EAUTH') {
+        logger.error({ responseCode: err.responseCode }, 'Mail disabled: Gmail rejected the .env.mail credentials; fix them and redeploy');
+        return;
+      }
+      logger.error({ code: err.code }, 'Mail disabled: could not reach Gmail, retrying in 15 minutes');
       setTimeout(verifyTransport, RETRY_MS).unref();
     });
 }
