@@ -15,3 +15,8 @@ graphify-out/
 
 # Raw images from GPT Image; only optimized assets go into the app
 /art/incoming/
+/art/codex/
+/art/piezas/*
+!/art/piezas/maestra.png
+!/art/piezas/plantilla-ropa-nino.png
+__pycache__/

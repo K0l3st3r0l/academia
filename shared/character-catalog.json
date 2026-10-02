@@ -1,174 +1,527 @@
 {
-  "version": 2,
+  "version": 3,
+  "renameCost": 100,
+  "fantasyBrowHex": "#3B2416",
   "skinTones": [
     {
-      "id": "skin_1",
-      "hex": "#FFE0BD"
+      "id": "piel-1",
+      "hex": "#FDE3CC"
     },
     {
-      "id": "skin_2",
-      "hex": "#FFCD94"
+      "id": "piel-2",
+      "hex": "#F6D0B1"
     },
     {
-      "id": "skin_3",
-      "hex": "#EAA971"
+      "id": "piel-3",
+      "hex": "#EFBE97"
     },
     {
-      "id": "skin_4",
-      "hex": "#C68642"
+      "id": "piel-4",
+      "hex": "#F49C62"
     },
     {
-      "id": "skin_5",
-      "hex": "#8D5524"
+      "id": "piel-5",
+      "hex": "#D19A6A"
     },
     {
-      "id": "skin_6",
-      "hex": "#5C3317"
+      "id": "piel-6",
+      "hex": "#BF8456"
+    },
+    {
+      "id": "piel-7",
+      "hex": "#A96D44"
+    },
+    {
+      "id": "piel-8",
+      "hex": "#8D5634"
+    },
+    {
+      "id": "piel-9",
+      "hex": "#6E4126"
+    },
+    {
+      "id": "piel-10",
+      "hex": "#4A2A18"
     }
   ],
   "hairStyles": [
     {
-      "id": "hair_style_1",
-      "name": "Corto"
+      "id": "pelo-corto-desordenado",
+      "name": "Corto desordenado"
     },
     {
-      "id": "hair_style_2",
-      "name": "Largo"
+      "id": "pelo-corto-chasquilla",
+      "name": "Corto con chasquilla"
     },
     {
-      "id": "hair_style_3",
-      "name": "Colita"
+      "id": "pelo-corto-raya",
+      "name": "Corto con partidura"
     },
     {
-      "id": "hair_style_4",
-      "name": "Rulos"
+      "id": "pelo-rapado",
+      "name": "Rapado"
     },
     {
-      "id": "hair_style_5",
+      "id": "pelo-punta",
+      "name": "De punta"
+    },
+    {
+      "id": "pelo-cresta",
+      "name": "Cresta"
+    },
+    {
+      "id": "pelo-rizos-cortos",
+      "name": "Rizos cortos"
+    },
+    {
+      "id": "pelo-afro",
+      "name": "Afro"
+    },
+    {
+      "id": "pelo-afro-pompones",
+      "name": "Pompones afro"
+    },
+    {
+      "id": "pelo-largo-liso",
+      "name": "Largo liso"
+    },
+    {
+      "id": "pelo-largo-ondulado",
+      "name": "Largo ondulado"
+    },
+    {
+      "id": "pelo-rizos-largos",
+      "name": "Rizos largos"
+    },
+    {
+      "id": "pelo-melena",
+      "name": "Melena con chasquilla"
+    },
+    {
+      "id": "pelo-cola",
+      "name": "Cola de caballo"
+    },
+    {
+      "id": "pelo-colitas",
+      "name": "Dos colitas"
+    },
+    {
+      "id": "pelo-trenzas",
       "name": "Trenzas"
     },
     {
-      "id": "hair_style_6",
-      "name": "Puntas"
+      "id": "pelo-trenzas-pegadas",
+      "name": "Trenzas pegadas"
+    },
+    {
+      "id": "pelo-mono",
+      "name": "Moño alto"
+    },
+    {
+      "id": "pelo-media-cola",
+      "name": "Media cola"
+    },
+    {
+      "id": "pelo-rastas",
+      "name": "Rastas"
     }
   ],
   "hairColors": [
     {
-      "id": "hair_color_1",
-      "hex": "#2B1B0E"
+      "id": "pelo-color-1",
+      "name": "Negro",
+      "hex": "#1E1410"
     },
     {
-      "id": "hair_color_2",
-      "hex": "#4A2C17"
+      "id": "pelo-color-2",
+      "name": "Castaño oscuro",
+      "hex": "#3B2416"
     },
     {
-      "id": "hair_color_3",
-      "hex": "#A0522D"
+      "id": "pelo-color-3",
+      "name": "Castaño",
+      "hex": "#5C2B1B"
     },
     {
-      "id": "hair_color_4",
-      "hex": "#F4D160"
+      "id": "pelo-color-4",
+      "name": "Castaño claro",
+      "hex": "#8A5A2B"
     },
     {
-      "id": "hair_color_5",
-      "hex": "#1B1B1B"
+      "id": "pelo-color-5",
+      "name": "Colorín",
+      "hex": "#B8592A"
     },
     {
-      "id": "hair_color_6",
-      "hex": "#7B3F61"
+      "id": "pelo-color-6",
+      "name": "Rubio",
+      "hex": "#E6BE64"
+    },
+    {
+      "id": "pelo-color-7",
+      "name": "Morado",
+      "hex": "#7844E0",
+      "fantasy": true,
+      "price": 40
+    },
+    {
+      "id": "pelo-color-8",
+      "name": "Azul",
+      "hex": "#3B82F6",
+      "fantasy": true,
+      "price": 40
+    },
+    {
+      "id": "pelo-color-9",
+      "name": "Rosado",
+      "hex": "#EC4899",
+      "fantasy": true,
+      "price": 40
+    },
+    {
+      "id": "pelo-color-10",
+      "name": "Turquesa",
+      "hex": "#28A096",
+      "fantasy": true,
+      "price": 40
+    },
+    {
+      "id": "pelo-color-11",
+      "name": "Verde",
+      "hex": "#22C55E",
+      "fantasy": true,
+      "price": 40
+    },
+    {
+      "id": "pelo-color-12",
+      "name": "Plateado",
+      "hex": "#B8C2CC",
+      "fantasy": true,
+      "price": 40
     }
   ],
-  "faces": [
+  "eyes": [
     {
-      "id": "face_1",
-      "name": "Feliz"
+      "id": "ojos-redondos",
+      "name": "Redondos"
     },
     {
-      "id": "face_2",
+      "id": "ojos-brillantes",
+      "name": "Brillantes"
+    },
+    {
+      "id": "ojos-almendrados",
+      "name": "Almendrados"
+    },
+    {
+      "id": "ojos-felices",
+      "name": "Felices"
+    },
+    {
+      "id": "ojos-pestanas",
+      "name": "Con pestañas"
+    },
+    {
+      "id": "ojos-somnolientos",
+      "name": "Somnolientos"
+    },
+    {
+      "id": "ojos-decididos",
+      "name": "Decididos"
+    },
+    {
+      "id": "ojos-estrella",
+      "name": "Estrellados"
+    },
+    {
+      "id": "ojos-guino",
       "name": "Guiño"
     },
     {
-      "id": "face_3",
-      "name": "Sorprendido"
-    },
-    {
-      "id": "face_4",
-      "name": "Tranquilo"
+      "id": "ojos-sorprendidos",
+      "name": "Sorprendidos"
     }
   ],
-  "outfits": [
+  "eyeColors": [
     {
-      "id": "outfit_1",
-      "name": "Polera"
+      "id": "ojos-color-1",
+      "name": "Café oscuro",
+      "hex": "#3B2416"
     },
     {
-      "id": "outfit_2",
-      "name": "Polerón",
-      "price": 60
+      "id": "ojos-color-2",
+      "name": "Café",
+      "hex": "#663A22"
     },
     {
-      "id": "outfit_3",
-      "name": "Vestido"
+      "id": "ojos-color-3",
+      "name": "Avellana",
+      "hex": "#8A6A2E"
     },
     {
-      "id": "outfit_4",
-      "name": "Overol",
-      "price": 80
+      "id": "ojos-color-4",
+      "name": "Verde",
+      "hex": "#3F6B3A"
+    },
+    {
+      "id": "ojos-color-5",
+      "name": "Azul",
+      "hex": "#2F5F9E"
+    },
+    {
+      "id": "ojos-color-6",
+      "name": "Gris",
+      "hex": "#5B6770"
     }
   ],
-  "outfitColors": [
+  "brows": [
     {
-      "id": "outfit_color_1",
+      "id": "cejas-suaves",
+      "name": "Suaves"
+    },
+    {
+      "id": "cejas-gruesas",
+      "name": "Gruesas"
+    },
+    {
+      "id": "cejas-finas",
+      "name": "Finas"
+    },
+    {
+      "id": "cejas-arqueadas",
+      "name": "Arqueadas"
+    },
+    {
+      "id": "cejas-decididas",
+      "name": "Decididas"
+    },
+    {
+      "id": "cejas-rectas",
+      "name": "Rectas"
+    }
+  ],
+  "noses": [
+    {
+      "id": "nariz-boton",
+      "name": "Botón"
+    },
+    {
+      "id": "nariz-curva",
+      "name": "Curva"
+    },
+    {
+      "id": "nariz-respingada",
+      "name": "Respingada"
+    },
+    {
+      "id": "nariz-ancha",
+      "name": "Ancha"
+    },
+    {
+      "id": "nariz-puntitos",
+      "name": "Puntitos"
+    },
+    {
+      "id": "nariz-redonda",
+      "name": "Redonda"
+    }
+  ],
+  "mouths": [
+    {
+      "id": "boca-sonrisa",
+      "name": "Sonrisa"
+    },
+    {
+      "id": "boca-abierta",
+      "name": "Sonrisa abierta"
+    },
+    {
+      "id": "boca-risa",
+      "name": "Risa"
+    },
+    {
+      "id": "boca-conejo",
+      "name": "Dientes de conejo"
+    },
+    {
+      "id": "boca-frenillos",
+      "name": "Frenillos"
+    },
+    {
+      "id": "boca-lengua",
+      "name": "Lengua afuera"
+    },
+    {
+      "id": "boca-sorpresa",
+      "name": "Sorpresa"
+    },
+    {
+      "id": "boca-tranquila",
+      "name": "Tranquila"
+    },
+    {
+      "id": "boca-mueca",
+      "name": "Mueca"
+    },
+    {
+      "id": "boca-chimuela",
+      "name": "Chimuela"
+    }
+  ],
+  "tops": [
+    {
+      "id": "top-raglan",
+      "name": "Polera raglán"
+    }
+  ],
+  "topColors": [
+    {
+      "id": "arriba-color-1",
+      "name": "Blanco",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "arriba-color-2",
+      "name": "Morado",
       "hex": "#6C3CE1"
     },
     {
-      "id": "outfit_color_2",
-      "hex": "#F5C842"
+      "id": "arriba-color-3",
+      "name": "Turquesa",
+      "hex": "#14B8A6"
     },
     {
-      "id": "outfit_color_3",
-      "hex": "#22C55E"
+      "id": "arriba-color-4",
+      "name": "Azul",
+      "hex": "#3B82F6"
     },
     {
-      "id": "outfit_color_4",
-      "hex": "#F76C6C",
+      "id": "arriba-color-5",
+      "name": "Amarillo",
+      "hex": "#F5C842",
       "price": 30
     },
     {
-      "id": "outfit_color_5",
-      "hex": "#3B82F6",
+      "id": "arriba-color-6",
+      "name": "Coral",
+      "hex": "#F87171",
       "price": 30
     },
     {
-      "id": "outfit_color_6",
-      "hex": "#14B8A6",
+      "id": "arriba-color-7",
+      "name": "Verde",
+      "hex": "#22C55E",
+      "price": 30
+    },
+    {
+      "id": "arriba-color-8",
+      "name": "Negro",
+      "hex": "#1F2937",
       "price": 30
     }
   ],
-  "accessories": [
+  "bottoms": [
     {
-      "id": "none",
-      "name": "Ninguno"
-    },
-    {
-      "id": "accessory_1",
-      "name": "Lentes"
-    },
-    {
-      "id": "accessory_2",
-      "name": "Gorro",
-      "price": 50
-    },
-    {
-      "id": "accessory_3",
-      "name": "Mochila",
-      "price": 70
-    },
-    {
-      "id": "accessory_4",
-      "name": "Bufanda",
-      "price": 50
+      "id": "bottom-short",
+      "name": "Short"
     }
   ],
-  "renameCost": 100
+  "bottomColors": [
+    {
+      "id": "abajo-color-1",
+      "name": "Blanco",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "abajo-color-2",
+      "name": "Morado",
+      "hex": "#6C3CE1"
+    },
+    {
+      "id": "abajo-color-3",
+      "name": "Turquesa",
+      "hex": "#14B8A6"
+    },
+    {
+      "id": "abajo-color-4",
+      "name": "Azul",
+      "hex": "#3B82F6"
+    },
+    {
+      "id": "abajo-color-5",
+      "name": "Amarillo",
+      "hex": "#F5C842",
+      "price": 30
+    },
+    {
+      "id": "abajo-color-6",
+      "name": "Coral",
+      "hex": "#F87171",
+      "price": 30
+    },
+    {
+      "id": "abajo-color-7",
+      "name": "Verde",
+      "hex": "#22C55E",
+      "price": 30
+    },
+    {
+      "id": "abajo-color-8",
+      "name": "Negro",
+      "hex": "#1F2937",
+      "price": 30
+    }
+  ],
+  "shoes": [
+    {
+      "id": "calzado-zapatillas",
+      "name": "Zapatillas"
+    }
+  ],
+  "shoeColors": [
+    {
+      "id": "calzado-color-1",
+      "name": "Blanco",
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": "calzado-color-2",
+      "name": "Morado",
+      "hex": "#6C3CE1"
+    },
+    {
+      "id": "calzado-color-3",
+      "name": "Turquesa",
+      "hex": "#14B8A6"
+    },
+    {
+      "id": "calzado-color-4",
+      "name": "Azul",
+      "hex": "#3B82F6"
+    },
+    {
+      "id": "calzado-color-5",
+      "name": "Amarillo",
+      "hex": "#F5C842",
+      "price": 30
+    },
+    {
+      "id": "calzado-color-6",
+      "name": "Coral",
+      "hex": "#F87171",
+      "price": 30
+    },
+    {
+      "id": "calzado-color-7",
+      "name": "Verde",
+      "hex": "#22C55E",
+      "price": 30
+    },
+    {
+      "id": "calzado-color-8",
+      "name": "Negro",
+      "hex": "#1F2937",
+      "price": 30
+    }
+  ]
 }

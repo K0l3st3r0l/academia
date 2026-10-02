@@ -15,14 +15,22 @@ if (!catalogPath) {
 
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
 
+// Field stored in characters.layers -> list in the catalog it must come from.
 const CATEGORY_FIELDS = {
   skinTone: 'skinTones',
   hairStyle: 'hairStyles',
   hairColor: 'hairColors',
-  face: 'faces',
-  outfit: 'outfits',
-  outfitColor: 'outfitColors',
-  accessory: 'accessories',
+  eyes: 'eyes',
+  eyeColor: 'eyeColors',
+  brows: 'brows',
+  nose: 'noses',
+  mouth: 'mouths',
+  top: 'tops',
+  topColor: 'topColors',
+  bottom: 'bottoms',
+  bottomColor: 'bottomColors',
+  shoes: 'shoes',
+  shoeColor: 'shoeColors',
 };
 
 function getCatalog() {

@@ -1,0 +1,321 @@
+{
+  "templates": {
+    "maestra": "art/piezas/maestra.png",
+    "ropa": "art/piezas/plantilla-ropa-nino.png",
+    "estilo": "art/codex/personaje-base-b.png"
+  },
+  "parts": [
+    {
+      "id": "pelo-corto-desordenado",
+      "kind": "hair",
+      "label": "Corto desordenado",
+      "desc": "short, messy, voluminous hair with tousled tufts, like the hair of the character in the second image"
+    },
+    {
+      "id": "pelo-corto-chasquilla",
+      "kind": "hair",
+      "label": "Corto con chasquilla",
+      "desc": "short straight hair with straight bangs across the forehead"
+    },
+    {
+      "id": "pelo-corto-raya",
+      "kind": "hair",
+      "label": "Corto con partidura",
+      "desc": "short neat hair combed with a side part"
+    },
+    {
+      "id": "pelo-rapado",
+      "kind": "hair",
+      "label": "Rapado",
+      "desc": "a very short buzz cut that follows the shape of the scalp"
+    },
+    {
+      "id": "pelo-punta",
+      "kind": "hair",
+      "label": "De punta",
+      "desc": "short spiky hair standing up in soft rounded points"
+    },
+    {
+      "id": "pelo-cresta",
+      "kind": "hair",
+      "label": "Cresta",
+      "desc": "a soft short mohawk: very short sides and a tall soft crest on top"
+    },
+    {
+      "id": "pelo-rizos-cortos",
+      "kind": "hair",
+      "label": "Rizos cortos",
+      "desc": "short tight curls all over the head"
+    },
+    {
+      "id": "pelo-afro",
+      "kind": "hair",
+      "label": "Afro",
+      "desc": "a big round afro"
+    },
+    {
+      "id": "pelo-afro-pompones",
+      "kind": "hair",
+      "label": "Pompones afro",
+      "desc": "two big round afro puffs on the top of the head, one on each side; the rest of the hair covers the whole scalp, pulled tight toward the puffs, so no bald skin shows"
+    },
+    {
+      "id": "pelo-largo-liso",
+      "kind": "hair",
+      "label": "Largo liso",
+      "desc": "long straight hair falling past the shoulders, with a center part"
+    },
+    {
+      "id": "pelo-largo-ondulado",
+      "kind": "hair",
+      "label": "Largo ondulado",
+      "desc": "long wavy hair falling past the shoulders, with a side part"
+    },
+    {
+      "id": "pelo-rizos-largos",
+      "kind": "hair",
+      "label": "Rizos largos",
+      "desc": "long curly hair falling past the shoulders"
+    },
+    {
+      "id": "pelo-melena",
+      "kind": "hair",
+      "label": "Melena con chasquilla",
+      "desc": "a chin-length bob haircut with bangs"
+    },
+    {
+      "id": "pelo-cola",
+      "kind": "hair",
+      "label": "Cola de caballo",
+      "desc": "hair pulled back into a high ponytail that hangs down beside the head, held with a purple hair tie"
+    },
+    {
+      "id": "pelo-colitas",
+      "kind": "hair",
+      "label": "Dos colitas",
+      "desc": "two pigtails, one on each side of the head, held with purple hair ties"
+    },
+    {
+      "id": "pelo-trenzas",
+      "kind": "hair",
+      "label": "Trenzas",
+      "desc": "a center part and two long braids that fall in front of the shoulders, with purple hair ties"
+    },
+    {
+      "id": "pelo-trenzas-pegadas",
+      "kind": "hair",
+      "label": "Trenzas pegadas",
+      "desc": "cornrow braids close to the scalp, ending in short braids at the back of the neck"
+    },
+    {
+      "id": "pelo-mono",
+      "kind": "hair",
+      "label": "Moño alto",
+      "desc": "hair pulled up into a round bun on top of the head"
+    },
+    {
+      "id": "pelo-media-cola",
+      "kind": "hair",
+      "label": "Media cola",
+      "desc": "shoulder-length hair with the top half tied in a small ponytail"
+    },
+    {
+      "id": "pelo-rastas",
+      "kind": "hair",
+      "label": "Rastas",
+      "desc": "medium-length locs (dreadlocks) falling to the shoulders"
+    },
+    {
+      "id": "ojos-redondos",
+      "kind": "eyes",
+      "label": "Redondos",
+      "desc": "big round eyes with dark-brown irises and two white highlights each, like the character in the second image"
+    },
+    {
+      "id": "ojos-brillantes",
+      "kind": "eyes",
+      "label": "Brillantes",
+      "desc": "extra large sparkling eyes with big dark-brown irises and several white highlights"
+    },
+    {
+      "id": "ojos-almendrados",
+      "kind": "eyes",
+      "label": "Almendrados",
+      "desc": "almond-shaped eyes with a visible white sclera and dark-brown irises"
+    },
+    {
+      "id": "ojos-felices",
+      "kind": "eyes",
+      "label": "Felices",
+      "desc": "happy closed eyes drawn as upward curved arcs"
+    },
+    {
+      "id": "ojos-pestanas",
+      "kind": "eyes",
+      "label": "Con pestañas",
+      "desc": "big round eyes with dark-brown irises and three small eyelashes at the outer corner of each eye"
+    },
+    {
+      "id": "ojos-somnolientos",
+      "kind": "eyes",
+      "label": "Somnolientos",
+      "desc": "half-closed sleepy eyes with heavy upper eyelids and dark-brown irises"
+    },
+    {
+      "id": "ojos-decididos",
+      "kind": "eyes",
+      "label": "Decididos",
+      "desc": "determined eyes, slightly narrowed, with a straight upper lid and dark-brown irises"
+    },
+    {
+      "id": "ojos-estrella",
+      "kind": "eyes",
+      "label": "Estrellados",
+      "desc": "big eyes with dark-brown irises and a white star-shaped highlight in each iris"
+    },
+    {
+      "id": "ojos-guino",
+      "kind": "eyes",
+      "label": "Guiño",
+      "desc": "one eye open (big, round, dark-brown iris with highlights) and the other eye winking as a closed curved line"
+    },
+    {
+      "id": "ojos-sorprendidos",
+      "kind": "eyes",
+      "label": "Sorprendidos",
+      "desc": "wide-open surprised eyes: white sclera with small dark-brown irises"
+    },
+    {
+      "id": "cejas-suaves",
+      "kind": "brows",
+      "label": "Suaves",
+      "desc": "soft, gently curved dark-brown eyebrows, like the character in the second image"
+    },
+    {
+      "id": "cejas-gruesas",
+      "kind": "brows",
+      "label": "Gruesas",
+      "desc": "thick bold dark-brown eyebrows"
+    },
+    {
+      "id": "cejas-finas",
+      "kind": "brows",
+      "label": "Finas",
+      "desc": "thin delicate dark-brown eyebrows"
+    },
+    {
+      "id": "cejas-arqueadas",
+      "kind": "brows",
+      "label": "Arqueadas",
+      "desc": "high arched dark-brown eyebrows"
+    },
+    {
+      "id": "cejas-decididas",
+      "kind": "brows",
+      "label": "Decididas",
+      "desc": "angled dark-brown eyebrows tilted down toward the center, determined look"
+    },
+    {
+      "id": "cejas-rectas",
+      "kind": "brows",
+      "label": "Rectas",
+      "desc": "straight flat dark-brown eyebrows"
+    },
+    {
+      "id": "nariz-boton",
+      "kind": "nose",
+      "label": "Botón",
+      "desc": "a small round button nose with two tiny nostrils, like the character in the second image"
+    },
+    {
+      "id": "nariz-curva",
+      "kind": "nose",
+      "label": "Curva",
+      "desc": "a minimal nose drawn as a small curved line"
+    },
+    {
+      "id": "nariz-respingada",
+      "kind": "nose",
+      "label": "Respingada",
+      "desc": "a small upturned nose"
+    },
+    {
+      "id": "nariz-ancha",
+      "kind": "nose",
+      "label": "Ancha",
+      "desc": "a wide rounded nose"
+    },
+    {
+      "id": "nariz-puntitos",
+      "kind": "nose",
+      "label": "Puntitos",
+      "desc": "a minimal nose drawn as two tiny nostril dots"
+    },
+    {
+      "id": "nariz-redonda",
+      "kind": "nose",
+      "label": "Redonda",
+      "desc": "a larger round nose"
+    },
+    {
+      "id": "boca-sonrisa",
+      "kind": "mouth",
+      "label": "Sonrisa",
+      "desc": "a gentle closed smile, like the character in the second image"
+    },
+    {
+      "id": "boca-abierta",
+      "kind": "mouth",
+      "label": "Sonrisa abierta",
+      "desc": "an open happy smile showing the upper teeth"
+    },
+    {
+      "id": "boca-risa",
+      "kind": "mouth",
+      "label": "Risa",
+      "desc": "a wide open laughing mouth showing the upper teeth and the tongue"
+    },
+    {
+      "id": "boca-conejo",
+      "kind": "mouth",
+      "label": "Dientes de conejo",
+      "desc": "a smile showing two big front teeth"
+    },
+    {
+      "id": "boca-frenillos",
+      "kind": "mouth",
+      "label": "Frenillos",
+      "desc": "a wide smile showing teeth with metal braces"
+    },
+    {
+      "id": "boca-lengua",
+      "kind": "mouth",
+      "label": "Lengua afuera",
+      "desc": "a playful smile with the tongue sticking out"
+    },
+    {
+      "id": "boca-sorpresa",
+      "kind": "mouth",
+      "label": "Sorpresa",
+      "desc": "a small round open mouth, surprised"
+    },
+    {
+      "id": "boca-tranquila",
+      "kind": "mouth",
+      "label": "Tranquila",
+      "desc": "a small calm straight mouth"
+    },
+    {
+      "id": "boca-mueca",
+      "kind": "mouth",
+      "label": "Mueca",
+      "desc": "a lopsided smirk"
+    },
+    {
+      "id": "boca-chimuela",
+      "kind": "mouth",
+      "label": "Chimuela",
+      "desc": "a big smile with one front tooth missing"
+    }
+  ]
+}

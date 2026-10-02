@@ -41,6 +41,60 @@ Prompt (cambia solo la línea de proporción):
 > Show three different skin tones across the variations. Expressive, kind eyes;
 > simple mouth. Wide layout, generous spacing between figures.
 
+**Resultado (2026-10-02):** A y B aprobadas por el usuario; C descartada (cabeza muy chica,
+cuerpo muy grande).
+
+---
+
+## 1b. Referencias grandes para redibujar el personaje en capas
+
+Las hojas de arriba tienen 18 figuras de ~170 px de alto: sirven para elegir estilo, pero los
+detalles (ojos, mechones, costuras) son muy chicos para copiarlos. Estas cuatro imágenes dan
+las mismas piezas en grande y **todas sobre la misma figura y en la misma posición**, que es lo
+que permite separarlas en capas que calcen entre sí.
+
+En cada una: **adjunta la hoja elegida (`personaje-hoja-a.png` o `personaje-hoja-b.png`) como
+imagen de referencia** y antepone el estilo base. Guarda con el sufijo de la hoja elegida
+(por ejemplo `personaje-base-b.png`).
+
+### `personaje-base-<a|b>.png` — figura base, grande
+
+> [Estilo base]
+> Match exactly the art style, proportions and line weight of the attached reference sheet.
+> A single character, large, centered, filling most of the image height, on a plain white
+> background: a 10-year-old student, front-facing, neutral standing pose, arms relaxed
+> slightly away from the body, legs slightly apart, feet visible. Short dark-brown hair,
+> medium skin tone, plain white t-shirt and teal shorts, white socks, purple sneakers.
+> Every color region is a single flat fill plus at most one darker shadow tone.
+
+### `personaje-caras-<a|b>.png` — caras
+
+> [Estilo base]
+> Match exactly the art style of the attached reference sheet. A grid of eight large heads
+> of the same character (same head shape, same skin tone, short dark-brown hair), front view,
+> on a plain white background: happy smile, wink, surprised, calm closed-mouth smile,
+> determined, laughing, with round glasses, with a small hearing aid behind the ear.
+> Same size and alignment for every head.
+
+### `personaje-peinados-<a|b>.png` — peinados
+
+> [Estilo base]
+> Match exactly the art style of the attached reference sheet. A grid of eight large
+> head-and-shoulders portraits of the same character, same face, same skin tone, same
+> position and scale, only the hairstyle changes: short, long straight, long curly, afro,
+> two braids, ponytail, buzz cut, shoulder-length bob. All in the same dark-brown color,
+> plain white background. Draw the full hair volume including the parts behind the
+> shoulders.
+
+### `personaje-ropa-<a|b>.png` — ropa
+
+> [Estilo base]
+> Match exactly the art style of the attached reference sheet. A row of six full-body
+> figures of the same character, identical pose, position and scale, short dark-brown hair,
+> only the outfit changes: school polo with shorts, raglan t-shirt with shorts, hoodie with
+> jeans, simple dress, tracksuit, overalls. Plain white background, generous spacing.
+> Every color region is a single flat fill plus at most one darker shadow tone.
+
 ---
 
 ## 2. Mapa piloto (después de elegir el personaje)

@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats } from '../api/client';
 import { getStudentUser, studentLogout } from '../api/studentAuth';
-import Avatar from '../components/Avatar';
+import CharacterView from '../components/character/CharacterView';
+import { layersToLook } from '../components/character/look';
 import AttributeSheet from '../components/AttributeSheet';
 
 export default function AlumnoHome() {
@@ -66,7 +67,9 @@ export default function AlumnoHome() {
           {character ? (
             <>
               <div className="flex justify-center mb-3">
-                <Avatar layers={character.layers} catalog={catalog} size={140} />
+                <div className="bg-white rounded-2xl p-2">
+                  <CharacterView look={layersToLook(character.layers, catalog)} size={220} label={character.name || 'Tu personaje'} />
+                </div>
               </div>
               {character.name && <p className="text-2xl font-black text-white mb-1">{character.name}</p>}
               {character.name_status === 'rejected' && (

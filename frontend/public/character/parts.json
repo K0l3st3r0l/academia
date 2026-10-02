@@ -1,0 +1,807 @@
+{
+ "canvas": {
+  "w": 512,
+  "h": 768
+ },
+ "layers": {
+  "body": {
+   "kind": "body",
+   "file": "body.webp",
+   "x": 108,
+   "y": 75,
+   "w": 283,
+   "h": 654,
+   "role": "skin",
+   "source": [
+    244,
+    156,
+    98
+   ]
+  },
+  "pelo-corto-desordenado": {
+   "kind": "hair",
+   "label": "Corto desordenado",
+   "file": "pelo-corto-desordenado.webp",
+   "x": 125,
+   "y": 19,
+   "w": 245,
+   "h": 180,
+   "role": "hair",
+   "source": [
+    92,
+    43,
+    27
+   ]
+  },
+  "pelo-corto-chasquilla": {
+   "kind": "hair",
+   "label": "Corto con chasquilla",
+   "file": "pelo-corto-chasquilla.webp",
+   "x": 140,
+   "y": 40,
+   "w": 226,
+   "h": 160,
+   "role": "hair",
+   "source": [
+    108,
+    61,
+    41
+   ]
+  },
+  "pelo-corto-raya": {
+   "kind": "hair",
+   "label": "Corto con partidura",
+   "file": "pelo-corto-raya.webp",
+   "x": 143,
+   "y": 48,
+   "w": 221,
+   "h": 149,
+   "role": "hair",
+   "source": [
+    84,
+    44,
+    29
+   ]
+  },
+  "pelo-rapado": {
+   "kind": "hair",
+   "label": "Rapado",
+   "file": "pelo-rapado.webp",
+   "x": 164,
+   "y": 68,
+   "w": 178,
+   "h": 124,
+   "role": "hair",
+   "source": [
+    87,
+    39,
+    18
+   ]
+  },
+  "pelo-punta": {
+   "kind": "hair",
+   "label": "De punta",
+   "file": "pelo-punta.webp",
+   "x": 128,
+   "y": 23,
+   "w": 242,
+   "h": 174,
+   "role": "hair",
+   "source": [
+    85,
+    41,
+    26
+   ]
+  },
+  "pelo-cresta": {
+   "kind": "hair",
+   "label": "Cresta",
+   "file": "pelo-cresta.webp",
+   "x": 168,
+   "y": 9,
+   "w": 175,
+   "h": 167,
+   "role": "hair",
+   "source": [
+    104,
+    55,
+    29
+   ]
+  },
+  "pelo-rizos-cortos": {
+   "kind": "hair",
+   "label": "Rizos cortos",
+   "file": "pelo-rizos-cortos.webp",
+   "x": 139,
+   "y": 40,
+   "w": 226,
+   "h": 150,
+   "role": "hair",
+   "source": [
+    82,
+    44,
+    25
+   ]
+  },
+  "pelo-afro": {
+   "kind": "hair",
+   "label": "Afro",
+   "file": "pelo-afro.webp",
+   "x": 96,
+   "y": 13,
+   "w": 316,
+   "h": 340,
+   "role": "hair",
+   "source": [
+    112,
+    54,
+    29
+   ]
+  },
+  "pelo-afro-pompones": {
+   "kind": "hair",
+   "label": "Pompones afro",
+   "file": "pelo-afro-pompones.webp",
+   "x": 109,
+   "y": 14,
+   "w": 291,
+   "h": 176,
+   "role": "hair",
+   "source": [
+    82,
+    41,
+    20
+   ]
+  },
+  "pelo-largo-liso": {
+   "kind": "hair",
+   "label": "Largo liso",
+   "file": "pelo-largo-liso.webp",
+   "x": 110,
+   "y": 47,
+   "w": 282,
+   "h": 332,
+   "role": "hair",
+   "source": [
+    82,
+    44,
+    26
+   ]
+  },
+  "pelo-largo-ondulado": {
+   "kind": "hair",
+   "label": "Largo ondulado",
+   "file": "pelo-largo-ondulado.webp",
+   "x": 80,
+   "y": 23,
+   "w": 335,
+   "h": 369,
+   "role": "hair",
+   "source": [
+    103,
+    53,
+    32
+   ]
+  },
+  "pelo-rizos-largos": {
+   "kind": "hair",
+   "label": "Rizos largos",
+   "file": "pelo-rizos-largos.webp",
+   "x": 86,
+   "y": 33,
+   "w": 336,
+   "h": 357,
+   "role": "hair",
+   "source": [
+    84,
+    43,
+    26
+   ]
+  },
+  "pelo-melena": {
+   "kind": "hair",
+   "label": "Melena con chasquilla",
+   "file": "pelo-melena.webp",
+   "x": 119,
+   "y": 51,
+   "w": 263,
+   "h": 203,
+   "role": "hair",
+   "source": [
+    111,
+    57,
+    38
+   ]
+  },
+  "pelo-cola": {
+   "kind": "hair",
+   "label": "Cola de caballo",
+   "file": "pelo-cola.webp",
+   "x": 152,
+   "y": 16,
+   "w": 280,
+   "h": 284,
+   "role": "hair",
+   "source": [
+    85,
+    43,
+    26
+   ]
+  },
+  "pelo-colitas": {
+   "kind": "hair",
+   "label": "Dos colitas",
+   "file": "pelo-colitas.webp",
+   "x": 96,
+   "y": 64,
+   "w": 320,
+   "h": 148,
+   "role": "hair",
+   "source": [
+    85,
+    44,
+    29
+   ]
+  },
+  "pelo-trenzas": {
+   "kind": "hair",
+   "label": "Trenzas",
+   "file": "pelo-trenzas.webp",
+   "x": 147,
+   "y": 64,
+   "w": 209,
+   "h": 337,
+   "role": "hair",
+   "source": [
+    85,
+    44,
+    30
+   ]
+  },
+  "pelo-trenzas-pegadas": {
+   "kind": "hair",
+   "label": "Trenzas pegadas",
+   "file": "pelo-trenzas-pegadas.webp",
+   "x": 160,
+   "y": 60,
+   "w": 185,
+   "h": 210,
+   "role": "hair",
+   "source": [
+    205,
+    114,
+    61
+   ]
+  },
+  "pelo-mono": {
+   "kind": "hair",
+   "label": "Moño alto",
+   "file": "pelo-mono.webp",
+   "x": 156,
+   "y": 8,
+   "w": 195,
+   "h": 194,
+   "role": "hair",
+   "source": [
+    85,
+    43,
+    28
+   ]
+  },
+  "pelo-media-cola": {
+   "kind": "hair",
+   "label": "Media cola",
+   "file": "pelo-media-cola.webp",
+   "x": 127,
+   "y": 12,
+   "w": 248,
+   "h": 263,
+   "role": "hair",
+   "source": [
+    91,
+    49,
+    28
+   ]
+  },
+  "pelo-rastas": {
+   "kind": "hair",
+   "label": "Rastas",
+   "file": "pelo-rastas.webp",
+   "x": 121,
+   "y": 40,
+   "w": 258,
+   "h": 251,
+   "role": "hair",
+   "source": [
+    84,
+    45,
+    27
+   ]
+  },
+  "ojos-redondos": {
+   "kind": "eyes",
+   "label": "Redondos",
+   "file": "ojos-redondos.webp",
+   "x": 184,
+   "y": 159,
+   "w": 130,
+   "h": 46,
+   "role": "eye",
+   "source": [
+    102,
+    58,
+    34
+   ]
+  },
+  "ojos-brillantes": {
+   "kind": "eyes",
+   "label": "Brillantes",
+   "file": "ojos-brillantes.webp",
+   "x": 184,
+   "y": 159,
+   "w": 129,
+   "h": 47,
+   "role": "eye",
+   "source": [
+    88,
+    54,
+    31
+   ]
+  },
+  "ojos-almendrados": {
+   "kind": "eyes",
+   "label": "Almendrados",
+   "file": "ojos-almendrados.webp",
+   "x": 185,
+   "y": 159,
+   "w": 128,
+   "h": 46,
+   "role": "eye",
+   "source": [
+    87,
+    53,
+    32
+   ]
+  },
+  "ojos-felices": {
+   "kind": "eyes",
+   "label": "Felices",
+   "file": "ojos-felices.webp",
+   "x": 189,
+   "y": 168,
+   "w": 119,
+   "h": 23,
+   "role": "eye",
+   "source": [
+    102,
+    65,
+    52
+   ]
+  },
+  "ojos-pestanas": {
+   "kind": "eyes",
+   "label": "Con pestañas",
+   "file": "ojos-pestanas.webp",
+   "x": 177,
+   "y": 159,
+   "w": 145,
+   "h": 47,
+   "role": "eye",
+   "source": [
+    106,
+    64,
+    37
+   ]
+  },
+  "ojos-somnolientos": {
+   "kind": "eyes",
+   "label": "Somnolientos",
+   "file": "ojos-somnolientos.webp",
+   "x": 180,
+   "y": 168,
+   "w": 137,
+   "h": 38,
+   "role": "eye",
+   "source": [
+    103,
+    62,
+    36
+   ]
+  },
+  "ojos-decididos": {
+   "kind": "eyes",
+   "label": "Decididos",
+   "file": "ojos-decididos.webp",
+   "x": 185,
+   "y": 161,
+   "w": 128,
+   "h": 45,
+   "role": "eye",
+   "source": [
+    107,
+    62,
+    35
+   ]
+  },
+  "ojos-estrella": {
+   "kind": "eyes",
+   "label": "Estrellados",
+   "file": "ojos-estrella.webp",
+   "x": 185,
+   "y": 159,
+   "w": 129,
+   "h": 48,
+   "role": "eye",
+   "source": [
+    82,
+    38,
+    9
+   ]
+  },
+  "ojos-guino": {
+   "kind": "eyes",
+   "label": "Guiño",
+   "file": "ojos-guino.webp",
+   "x": 185,
+   "y": 161,
+   "w": 125,
+   "h": 44,
+   "role": "eye",
+   "source": [
+    88,
+    53,
+    31
+   ]
+  },
+  "ojos-sorprendidos": {
+   "kind": "eyes",
+   "label": "Sorprendidos",
+   "file": "ojos-sorprendidos.webp",
+   "x": 185,
+   "y": 159,
+   "w": 128,
+   "h": 47,
+   "role": "eye",
+   "source": [
+    88,
+    53,
+    31
+   ]
+  },
+  "cejas-suaves": {
+   "kind": "brows",
+   "label": "Suaves",
+   "file": "cejas-suaves.webp",
+   "x": 186,
+   "y": 126,
+   "w": 127,
+   "h": 23,
+   "role": "hair",
+   "source": [
+    107,
+    59,
+    35
+   ]
+  },
+  "cejas-gruesas": {
+   "kind": "brows",
+   "label": "Gruesas",
+   "file": "cejas-gruesas.webp",
+   "x": 186,
+   "y": 129,
+   "w": 127,
+   "h": 26,
+   "role": "hair",
+   "source": [
+    108,
+    59,
+    34
+   ]
+  },
+  "cejas-finas": {
+   "kind": "brows",
+   "label": "Finas",
+   "file": "cejas-finas.webp",
+   "x": 184,
+   "y": 133,
+   "w": 128,
+   "h": 25,
+   "role": "hair",
+   "source": [
+    86,
+    44,
+    26
+   ]
+  },
+  "cejas-arqueadas": {
+   "kind": "brows",
+   "label": "Arqueadas",
+   "file": "cejas-arqueadas.webp",
+   "x": 186,
+   "y": 125,
+   "w": 126,
+   "h": 23,
+   "role": "hair",
+   "source": [
+    106,
+    58,
+    34
+   ]
+  },
+  "cejas-decididas": {
+   "kind": "brows",
+   "label": "Decididas",
+   "file": "cejas-decididas.webp",
+   "x": 188,
+   "y": 138,
+   "w": 124,
+   "h": 21,
+   "role": "hair",
+   "source": [
+    85,
+    40,
+    24
+   ]
+  },
+  "cejas-rectas": {
+   "kind": "brows",
+   "label": "Rectas",
+   "file": "cejas-rectas.webp",
+   "x": 184,
+   "y": 134,
+   "w": 129,
+   "h": 24,
+   "role": "hair",
+   "source": [
+    82,
+    39,
+    21
+   ]
+  },
+  "nariz-boton": {
+   "kind": "nose",
+   "label": "Botón",
+   "file": "nariz-boton.webp",
+   "x": 240,
+   "y": 186,
+   "w": 21,
+   "h": 18,
+   "role": "skin",
+   "source": [
+    244,
+    156,
+    98
+   ]
+  },
+  "nariz-curva": {
+   "kind": "nose",
+   "label": "Curva",
+   "file": "nariz-curva.webp",
+   "x": 238,
+   "y": 189,
+   "w": 24,
+   "h": 20,
+   "role": "skin",
+   "source": [
+    244,
+    156,
+    98
+   ]
+  },
+  "nariz-respingada": {
+   "kind": "nose",
+   "label": "Respingada",
+   "file": "nariz-respingada.webp",
+   "x": 236,
+   "y": 189,
+   "w": 29,
+   "h": 22,
+   "role": "skin",
+   "source": [
+    244,
+    156,
+    98
+   ]
+  },
+  "nariz-ancha": {
+   "kind": "nose",
+   "label": "Ancha",
+   "file": "nariz-ancha.webp",
+   "x": 236,
+   "y": 202,
+   "w": 26,
+   "h": 8,
+   "role": "skin",
+   "source": [
+    244,
+    156,
+    98
+   ]
+  },
+  "nariz-puntitos": {
+   "kind": "nose",
+   "label": "Puntitos",
+   "file": "nariz-puntitos.webp",
+   "x": 239,
+   "y": 196,
+   "w": 21,
+   "h": 7,
+   "role": "skin",
+   "source": [
+    244,
+    156,
+    98
+   ]
+  },
+  "nariz-redonda": {
+   "kind": "nose",
+   "label": "Redonda",
+   "file": "nariz-redonda.webp",
+   "x": 237,
+   "y": 184,
+   "w": 29,
+   "h": 26,
+   "role": "skin",
+   "source": [
+    244,
+    156,
+    98
+   ]
+  },
+  "boca-sonrisa": {
+   "kind": "mouth",
+   "label": "Sonrisa",
+   "file": "boca-sonrisa.webp",
+   "x": 228,
+   "y": 215,
+   "w": 44,
+   "h": 13,
+   "role": null,
+   "source": null
+  },
+  "boca-abierta": {
+   "kind": "mouth",
+   "label": "Sonrisa abierta",
+   "file": "boca-abierta.webp",
+   "x": 226,
+   "y": 200,
+   "w": 51,
+   "h": 32,
+   "role": null,
+   "source": null
+  },
+  "boca-risa": {
+   "kind": "mouth",
+   "label": "Risa",
+   "file": "boca-risa.webp",
+   "x": 219,
+   "y": 200,
+   "w": 63,
+   "h": 41,
+   "role": null,
+   "source": null
+  },
+  "boca-conejo": {
+   "kind": "mouth",
+   "label": "Dientes de conejo",
+   "file": "boca-conejo.webp",
+   "x": 222,
+   "y": 198,
+   "w": 56,
+   "h": 30,
+   "role": null,
+   "source": null
+  },
+  "boca-frenillos": {
+   "kind": "mouth",
+   "label": "Frenillos",
+   "file": "boca-frenillos.webp",
+   "x": 217,
+   "y": 201,
+   "w": 67,
+   "h": 27,
+   "role": null,
+   "source": null
+  },
+  "boca-lengua": {
+   "kind": "mouth",
+   "label": "Lengua afuera",
+   "file": "boca-lengua.webp",
+   "x": 221,
+   "y": 209,
+   "w": 61,
+   "h": 31,
+   "role": null,
+   "source": null
+  },
+  "boca-sorpresa": {
+   "kind": "mouth",
+   "label": "Sorpresa",
+   "file": "boca-sorpresa.webp",
+   "x": 238,
+   "y": 209,
+   "w": 21,
+   "h": 24,
+   "role": null,
+   "source": null
+  },
+  "boca-tranquila": {
+   "kind": "mouth",
+   "label": "Tranquila",
+   "file": "boca-tranquila.webp",
+   "x": 228,
+   "y": 215,
+   "w": 44,
+   "h": 13,
+   "role": null,
+   "source": null
+  },
+  "boca-mueca": {
+   "kind": "mouth",
+   "label": "Mueca",
+   "file": "boca-mueca.webp",
+   "x": 234,
+   "y": 207,
+   "w": 45,
+   "h": 18,
+   "role": null,
+   "source": null
+  },
+  "boca-chimuela": {
+   "kind": "mouth",
+   "label": "Chimuela",
+   "file": "boca-chimuela.webp",
+   "x": 217,
+   "y": 198,
+   "w": 68,
+   "h": 38,
+   "role": null,
+   "source": null
+  },
+  "top-raglan": {
+   "kind": "top",
+   "label": null,
+   "file": "top-raglan.webp",
+   "x": 142,
+   "y": 264,
+   "w": 217,
+   "h": 183,
+   "role": "top",
+   "source": [
+    252,
+    252,
+    252
+   ]
+  },
+  "bottom-short": {
+   "kind": "bottom",
+   "label": null,
+   "file": "bottom-short.webp",
+   "x": 167,
+   "y": 440,
+   "w": 166,
+   "h": 92,
+   "role": "bottom",
+   "source": [
+    8,
+    189,
+    175
+   ]
+  },
+  "calzado-zapatillas": {
+   "kind": "shoes",
+   "label": null,
+   "file": "calzado-zapatillas.webp",
+   "x": 116,
+   "y": 626,
+   "w": 267,
+   "h": 102,
+   "role": "shoes",
+   "source": [
+    121,
+    54,
+    234
+   ]
+  }
+ }
+}

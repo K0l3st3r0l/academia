@@ -8,10 +8,13 @@ const { nameProblem } = await import('../../src/services/characterName.js');
 const { rateUnratedAnswers } = await import('../../src/services/skillRatings.js');
 const { syncCurriculum } = await import('../../src/services/curriculum.js');
 
-const LAYERS = {
-  skinTone: 'skin_1', hairStyle: 'hair_style_1', hairColor: 'hair_color_1', face: 'face_1',
-  outfit: 'outfit_1', outfitColor: 'outfit_color_1', accessory: 'none',
+const FIELDS = {
+  skinTone: 'skinTones', hairStyle: 'hairStyles', hairColor: 'hairColors', eyes: 'eyes', eyeColor: 'eyeColors',
+  brows: 'brows', nose: 'noses', mouth: 'mouths', top: 'tops', topColor: 'topColors', bottom: 'bottoms',
+  bottomColor: 'bottomColors', shoes: 'shoes', shoeColor: 'shoeColors',
 };
+const { body: CATALOG } = await request(app).get('/api/characters/catalog');
+const LAYERS = Object.fromEntries(Object.entries(FIELDS).map(([field, list]) => [field, CATALOG[list][0].id]));
 
 async function studentWithCharacter({ tokens = 0, name = 'Cóndor Sabio' } = {}) {
   const student = await createStudent(pool, { courseName: '5° Básico A', tokensBalance: tokens });
@@ -80,32 +83,31 @@ describe('nombre del personaje', () => {
 });
 
 describe('artículos con precio', () => {
-  it('no deja usar un artículo sin comprarlo; comprarlo descuenta tokens una sola vez', async () => {
+  it('no deja usar un color sin comprarlo; comprarlo descuenta tokens una sola vez', async () => {
     const { student, token } = await studentWithCharacter({ tokens: 70 });
-    const withCap = { ...LAYERS, accessory: 'accessory_2' };
-    const { body: catalog } = await request(app).get('/api/characters/catalog');
-    const cap = catalog.accessories.find(a => a.name === 'Gorro');
-    withCap.accessory = cap.id;
+    const purple = CATALOG.hairColors.find(c => c.name === 'Morado');
+    const withPurple = { ...LAYERS, hairColor: purple.id };
+    expect(purple.price).toBe(40);
 
-    const blocked = await request(app).put('/api/characters/me').set('Authorization', `Bearer ${token}`).send({ layers: withCap });
+    const blocked = await request(app).put('/api/characters/me').set('Authorization', `Bearer ${token}`).send({ layers: withPurple });
     expect(blocked.status).toBe(400);
-    expect(blocked.body).toMatchObject({ code: 'not_owned', details: [cap.id] });
+    expect(blocked.body).toMatchObject({ code: 'not_owned', details: [purple.id] });
 
-    const buy = await request(app).post(`/api/characters/me/items/${cap.id}`).set('Authorization', `Bearer ${token}`);
-    expect(buy.body).toMatchObject({ itemId: cap.id, price: 50, tokens: 20 });
-    const again = await request(app).post(`/api/characters/me/items/${cap.id}`).set('Authorization', `Bearer ${token}`);
+    const buy = await request(app).post(`/api/characters/me/items/${purple.id}`).set('Authorization', `Bearer ${token}`);
+    expect(buy.body).toMatchObject({ itemId: purple.id, price: 40, tokens: 30 });
+    const again = await request(app).post(`/api/characters/me/items/${purple.id}`).set('Authorization', `Bearer ${token}`);
     expect(again.status).toBe(400);
-    expect(await balance(student.id)).toBe(20);
+    expect(await balance(student.id)).toBe(30);
 
-    const wear = await request(app).put('/api/characters/me').set('Authorization', `Bearer ${token}`).send({ layers: withCap });
+    const wear = await request(app).put('/api/characters/me').set('Authorization', `Bearer ${token}`).send({ layers: withPurple });
     expect(wear.status).toBe(200);
     const me = await request(app).get('/api/characters/me').set('Authorization', `Bearer ${token}`);
-    expect(me.body).toMatchObject({ ownedItems: [cap.id], tokens: 20 });
+    expect(me.body).toMatchObject({ ownedItems: [purple.id], tokens: 30 });
 
-    const backpack = catalog.accessories.find(a => a.name === 'Mochila');
-    const poor = await request(app).post(`/api/characters/me/items/${backpack.id}`).set('Authorization', `Bearer ${token}`);
+    const blue = CATALOG.hairColors.find(c => c.name === 'Azul');
+    const poor = await request(app).post(`/api/characters/me/items/${blue.id}`).set('Authorization', `Bearer ${token}`);
     expect(poor.body.code).toBe('insufficient_tokens');
-    const free = await request(app).post('/api/characters/me/items/skin_1').set('Authorization', `Bearer ${token}`);
+    const free = await request(app).post(`/api/characters/me/items/${CATALOG.skinTones[0].id}`).set('Authorization', `Bearer ${token}`);
     expect(free.status).toBe(400);
   });
 });

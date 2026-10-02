@@ -5,17 +5,15 @@ import { createStudent, createTeacher, signToken, teacherPayload, studentPayload
 const { app } = await import('../../src/app.js');
 const { default: pool } = await import('../../src/db/index.js');
 
+// The first entry of every list is free, so these layers never need a purchase.
 async function validLayers() {
   const { body: catalog } = await request(app).get('/api/characters/catalog');
-  return {
-    skinTone: catalog.skinTones[0].id,
-    hairStyle: catalog.hairStyles[0].id,
-    hairColor: catalog.hairColors[0].id,
-    face: catalog.faces[0].id,
-    outfit: catalog.outfits[0].id,
-    outfitColor: catalog.outfitColors[0].id,
-    accessory: catalog.accessories[0].id,
+  const fields = {
+    skinTone: 'skinTones', hairStyle: 'hairStyles', hairColor: 'hairColors', eyes: 'eyes', eyeColor: 'eyeColors',
+    brows: 'brows', nose: 'noses', mouth: 'mouths', top: 'tops', topColor: 'topColors', bottom: 'bottoms',
+    bottomColor: 'bottomColors', shoes: 'shoes', shoeColor: 'shoeColors',
   };
+  return Object.fromEntries(Object.entries(fields).map(([field, list]) => [field, catalog[list][0].id]));
 }
 
 describe('GET /api/characters/catalog', () => {
@@ -23,7 +21,8 @@ describe('GET /api/characters/catalog', () => {
     const res = await request(app).get('/api/characters/catalog');
     expect(res.status).toBe(200);
     expect(res.body.skinTones.length).toBeGreaterThan(0);
-    expect(res.body.accessories.some(a => a.id === 'none')).toBe(true);
+    expect(res.body.version).toBe(3);
+    expect(res.body.hairStyles.length).toBeGreaterThan(0);
   });
 });
 
