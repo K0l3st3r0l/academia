@@ -104,6 +104,7 @@ const APP_TABLES = [
   'curriculum_oas',
   'curriculum_units',
   'student_password_tokens',
+  'student_items',
   'characters',
   'student_answers',
   'token_ledger',

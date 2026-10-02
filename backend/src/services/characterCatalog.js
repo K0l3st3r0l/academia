@@ -43,4 +43,21 @@ function validateLayers(layers) {
   return errors;
 }
 
-module.exports = { getCatalog, validateLayers };
+// Items with a price must be bought before they can be worn; the rest are free for everyone.
+function itemPrice(itemId) {
+  for (const catalogKey of Object.values(CATEGORY_FIELDS)) {
+    const entry = catalog[catalogKey].find(e => e.id === itemId);
+    if (entry) return entry.price ?? 0;
+  }
+  return null;
+}
+
+function pricedItemsIn(layers) {
+  return Object.keys(CATEGORY_FIELDS)
+    .map(field => layers[field])
+    .filter(id => (itemPrice(id) ?? 0) > 0);
+}
+
+const renameCost = () => catalog.renameCost ?? 100;
+
+module.exports = { getCatalog, validateLayers, itemPrice, pricedItemsIn, renameCost };

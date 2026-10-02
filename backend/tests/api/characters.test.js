@@ -46,9 +46,10 @@ describe('PUT /api/characters/me', () => {
     const createRes = await request(app)
       .put('/api/characters/me')
       .set('Authorization', `Bearer ${token}`)
-      .send({ layers });
+      .send({ layers, name: 'Puma Veloz' });
 
     expect(createRes.status).toBe(200);
+    expect(createRes.body.character).toMatchObject({ name: 'Puma Veloz', name_status: 'pending' });
     expect(createRes.body.character.layers).toMatchObject(layers);
 
     const getRes = await request(app).get('/api/characters/me').set('Authorization', `Bearer ${token}`);

@@ -36,8 +36,24 @@ export const getCharacterCatalog = () =>
 export const getCharacterMe = () =>
   studentClient.get('/api/characters/me');
 
-export const saveCharacter = (layers) =>
-  studentClient.put('/api/characters/me', { layers });
+// The name only counts on creation; afterwards it changes with renameCharacter.
+export const saveCharacter = (layers, name) =>
+  studentClient.put('/api/characters/me', { layers, name });
+
+export const renameCharacter = (name) =>
+  studentClient.put('/api/characters/me/name', { name });
+
+export const buyCharacterItem = (itemId) =>
+  studentClient.post(`/api/characters/me/items/${itemId}`);
+
+export const getCharacterStats = () =>
+  studentClient.get('/api/characters/me/stats');
+
+export const getCharacterNames = (status) =>
+  client.get('/api/characters/names', { params: { status } });
+
+export const reviewCharacterName = (studentId, status) =>
+  client.patch(`/api/characters/names/${studentId}`, { status });
 
 export const getStudentsByCourse = (courseName) =>
   client.get('/api/students', { params: { course_name: courseName } });

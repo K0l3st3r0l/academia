@@ -25,4 +25,11 @@ const requireStudent = (req, res, next) => {
   next();
 };
 
-module.exports = { authenticateToken, requireTeacher, requireStudent };
+const requireAdmin = (req, res, next) => {
+  if (!req.user?.roles?.includes('admin')) {
+    return res.status(403).json({ error: 'Solo un administrador puede realizar esta acción' });
+  }
+  next();
+};
+
+module.exports = { authenticateToken, requireTeacher, requireStudent, requireAdmin };

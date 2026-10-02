@@ -7,6 +7,7 @@ import {
 } from '../api/client';
 import { SUBJECTS, SUBJECT_LABELS } from '../utils/subjects';
 import { shortName } from '../utils/displayName';
+import CharacterNamesReview from '../components/CharacterNamesReview';
 
 function formatDateTime(iso) {
   if (!iso) return '—';
@@ -18,6 +19,7 @@ const SECTIONS = [
   { id: 'historial', label: 'Historial' },
   { id: 'pins', label: 'Accesos de alumnos' },
 ];
+const ADMIN_SECTIONS = [{ id: 'nombres', label: 'Nombres de personajes' }];
 
 const OPTION_CLASS = 'bg-card hover:bg-gray-800 border border-gray-700 hover:border-brand rounded-xl px-3 py-3 text-sm font-semibold text-gray-300 hover:text-white text-center transition-colors';
 
@@ -34,6 +36,8 @@ function formatMs(ms) {
 export default function TeacherDashboard() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const isAdmin = user?.roles?.includes('admin');
+  const sections = isAdmin ? [...SECTIONS, ...ADMIN_SECTIONS] : SECTIONS;
   const [courses, setCourses] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('matematica');
@@ -189,8 +193,8 @@ export default function TeacherDashboard() {
         </button>
       </header>
 
-      <nav aria-label="Opciones del profesor" className="max-w-2xl mx-auto mb-6 grid grid-cols-2 sm:grid-cols-4 gap-2">
-        {SECTIONS.map(s => (
+      <nav aria-label="Opciones del profesor" className={`max-w-2xl mx-auto mb-6 grid grid-cols-2 ${isAdmin ? 'sm:grid-cols-5' : 'sm:grid-cols-4'} gap-2`}>
+        {sections.map(s => (
           <button key={s.id} type="button" onClick={() => scrollToSection(s.id)} className={OPTION_CLASS}>
             {s.label}
           </button>
@@ -400,6 +404,13 @@ export default function TeacherDashboard() {
             </>
           )}
         </section>
+        {isAdmin && (
+          <section id="nombres" className="bg-card rounded-2xl p-6 shadow-xl mt-6 scroll-mt-4">
+            <h2 className="text-xl font-bold mb-2">Nombres de personajes</h2>
+            <p className="text-gray-400 text-sm mb-4">Los alumnos eligen el nombre libremente; aquí lo apruebas o lo rechazas.</p>
+            <CharacterNamesReview />
+          </section>
+        )}
       </main>
 
       {bulkPins && (

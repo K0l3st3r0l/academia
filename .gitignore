@@ -12,3 +12,6 @@ graphify-out/
 
 # Backups de base de datos
 /backups/
+
+# Raw images from GPT Image; only optimized assets go into the app
+/art/incoming/

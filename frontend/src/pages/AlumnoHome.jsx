@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { getStudentMe, getCharacterCatalog, getCharacterMe } from '../api/client';
+import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats } from '../api/client';
 import { getStudentUser, studentLogout } from '../api/studentAuth';
 import Avatar from '../components/Avatar';
+import AttributeSheet from '../components/AttributeSheet';
 
 export default function AlumnoHome() {
   const [student, setStudent] = useState(getStudentUser());
   const [loading, setLoading] = useState(true);
   const [catalog, setCatalog] = useState(null);
   const [character, setCharacter] = useState(null);
+  const [attributes, setAttributes] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,6 +26,9 @@ export default function AlumnoHome() {
     getCharacterMe()
       .then(res => setCharacter(res.data.character))
       .catch(() => setCharacter(null));
+    getCharacterStats()
+      .then(res => setAttributes(res.data.attributes))
+      .catch(() => setAttributes(null));
   }, []);
 
   const handleLogout = () => {
@@ -63,6 +68,10 @@ export default function AlumnoHome() {
               <div className="flex justify-center mb-3">
                 <Avatar layers={character.layers} catalog={catalog} size={140} />
               </div>
+              {character.name && <p className="text-2xl font-black text-white mb-1">{character.name}</p>}
+              {character.name_status === 'rejected' && (
+                <p className="text-wrong text-sm mb-3">Tu nombre no fue aprobado. Elige otro: es gratis.</p>
+              )}
               <Link
                 to="/alumno/personaje"
                 className="inline-block bg-surface hover:bg-gray-800 text-brand-light font-semibold px-5 py-2 rounded-xl transition-colors"
@@ -82,6 +91,8 @@ export default function AlumnoHome() {
             </>
           )}
         </div>
+
+        {character && <AttributeSheet attributes={attributes} />}
 
         <p className="text-center text-gray-500 text-sm">
           ¿Vas a jugar en clase?{' '}
