@@ -27,7 +27,27 @@ function createTransport() {
 const transporter = createTransport();
 if (!transporter) logger.warn('Mail disabled: MAIL_USER / MAIL_APP_PASSWORD not set (.env.mail)');
 
-const mailEnabled = () => Boolean(transporter);
+// Credentials that Gmail rejects must not switch students to email sign-in: they
+// would get links that never arrive. Mail counts as enabled only after Gmail accepts
+// the login, and a rejected login is retried every 15 minutes.
+const RETRY_MS = 15 * 60 * 1000;
+let verified = process.env.NODE_ENV === 'test';
+
+function verifyTransport() {
+  transporter.verify()
+    .then(() => {
+      verified = true;
+      logger.info(`Mail enabled: Gmail accepted ${MAIL_USER}`);
+    })
+    .catch(err => {
+      verified = false;
+      logger.error({ code: err.code, responseCode: err.responseCode }, 'Mail disabled: Gmail rejected the .env.mail credentials');
+      setTimeout(verifyTransport, RETRY_MS).unref();
+    });
+}
+if (transporter && !verified) verifyTransport();
+
+const mailEnabled = () => Boolean(transporter) && verified;
 
 async function sendMail({ to, subject, html, text }) {
   if (!transporter) throw new Error('mail_not_configured');
