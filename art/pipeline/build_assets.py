@@ -7,6 +7,7 @@ and which color families its map holds.
 
 Usage: build_assets.py   (reads art/piezas, writes frontend/public/character/)
 """
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -141,7 +142,13 @@ def main():
         print(p['id'], end=' ', flush=True)
     print()
 
-    doc = {'canvas': {'w': int(1024 * SCALE), 'h': int(1536 * SCALE)}, 'layers': layers}
+    # Layer files keep their names, so browsers and Cloudflare could pair a cached old image with
+    # a new parts.json: the browser asks for every image with ?v=<hash of all of them>.
+    digest = hashlib.sha1()
+    for v in sorted(layers.values(), key=lambda v: v['file']):
+        digest.update((OUT / v['file']).read_bytes())
+        digest.update((OUT / v['map']).read_bytes())
+    doc = {'version': digest.hexdigest()[:10], 'canvas': {'w': int(1024 * SCALE), 'h': int(1536 * SCALE)}, 'layers': layers}
     (OUT / 'parts.json').write_text(json.dumps(doc, ensure_ascii=False, indent=1))
     total = sum((OUT / v['file']).stat().st_size + (OUT / v['map']).stat().st_size for v in layers.values())
     print(f'{len(layers)} capas · {total / 1024:.0f} KB en total')

@@ -21,12 +21,19 @@ const HAT_SPREAD = 0.8;  // horizontal radius of the bowl, in hat widths
 const HAT_DROP = 0.55;   // how far the curve drops at that radius, in hat heights
 
 let partsPromise;
+let assetVersion = '';
 const images = new Map();
 const built = new Map();
 const luts = new Map();
 
 export function loadParts() {
-  partsPromise ??= fetch('/character/parts.json').then(r => r.json());
+  // Revalidated on every load: it names the version of the images it goes with.
+  partsPromise ??= fetch('/character/parts.json', { cache: 'no-cache' })
+    .then(r => r.json())
+    .then(parts => {
+      assetVersion = parts.version ?? '';
+      return parts;
+    });
   return partsPromise;
 }
 
@@ -36,7 +43,7 @@ function loadImage(file) {
       const img = new Image();
       img.onload = () => resolve(img);
       img.onerror = reject;
-      img.src = `/character/${file}`;
+      img.src = `/character/${file}?v=${assetVersion}`;
     }));
   }
   return images.get(file);
