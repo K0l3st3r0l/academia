@@ -28,7 +28,14 @@ docker compose --env-file .env restart backend
 
 # Tests del backend (contra academia_test, nunca contra producción)
 cd backend && npx vitest run
+
+# Cuenta de alumno de prueba (RUT 11.111.111-1, curso 5°): genera e imprime un PIN nuevo.
+# Opcional: otro curso como argumento. No usar credenciales de alumnos reales para probar.
+docker exec academia-backend node scripts/test-student.js
 ```
+
+Las cuentas de prueba llevan `local_students.is_test`: cualquier informe o estadística
+agregada por curso debe excluirlas.
 
 ## Correo (enlaces para que el alumno cree su contraseña)
 Credenciales en `.env.mail` (plantilla: `.env.mail.example`), que **solo lee el

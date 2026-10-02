@@ -74,6 +74,14 @@ function pricedItemsIn(layers) {
     .filter(id => (itemPrice(id) ?? 0) > 0);
 }
 
+// Test accounts own everything, including items added after they were created.
+function allPricedItems() {
+  return Object.values(CATEGORY_FIELDS)
+    .flatMap(catalogKey => catalog[catalogKey])
+    .filter(e => (e.price ?? 0) > 0)
+    .map(e => e.id);
+}
+
 const renameCost = () => catalog.renameCost ?? 100;
 
-module.exports = { getCatalog, validateLayers, itemPrice, pricedItemsIn, renameCost };
+module.exports = { getCatalog, validateLayers, itemPrice, pricedItemsIn, allPricedItems, renameCost };

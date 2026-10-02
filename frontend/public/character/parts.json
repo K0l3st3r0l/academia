@@ -7,1385 +7,1203 @@
   "body": {
    "kind": "body",
    "file": "body.webp",
-   "x": 108,
-   "y": 75,
-   "w": 283,
-   "h": 654,
-   "role": "skin",
-   "source": [
-    244,
-    156,
-    98
-   ]
+   "map": "body.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 109,
+   "y": 76,
+   "w": 281,
+   "h": 652
   },
   "pelo-corto-desordenado": {
    "kind": "hair",
-   "label": "Corto desordenado",
    "file": "pelo-corto-desordenado.webp",
+   "map": "pelo-corto-desordenado.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 125,
    "y": 19,
    "w": 245,
    "h": 180,
-   "role": "hair",
-   "source": [
-    92,
-    43,
-    27
-   ]
+   "label": "Corto desordenado"
   },
   "pelo-corto-chasquilla": {
    "kind": "hair",
-   "label": "Corto con chasquilla",
    "file": "pelo-corto-chasquilla.webp",
+   "map": "pelo-corto-chasquilla.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 140,
    "y": 40,
-   "w": 226,
+   "w": 225,
    "h": 160,
-   "role": "hair",
-   "source": [
-    108,
-    61,
-    41
-   ]
+   "label": "Corto con chasquilla"
   },
   "pelo-corto-raya": {
    "kind": "hair",
-   "label": "Corto con partidura",
    "file": "pelo-corto-raya.webp",
-   "x": 143,
-   "y": 48,
-   "w": 221,
-   "h": 149,
-   "role": "hair",
-   "source": [
-    84,
-    44,
-    29
-   ]
+   "map": "pelo-corto-raya.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 144,
+   "y": 49,
+   "w": 219,
+   "h": 148,
+   "label": "Corto con partidura"
   },
   "pelo-rapado": {
    "kind": "hair",
-   "label": "Rapado",
    "file": "pelo-rapado.webp",
+   "map": "pelo-rapado.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 164,
-   "y": 68,
-   "w": 178,
-   "h": 124,
-   "role": "hair",
-   "source": [
-    87,
-    39,
-    18
-   ]
+   "y": 69,
+   "w": 177,
+   "h": 123,
+   "label": "Rapado"
   },
   "pelo-punta": {
    "kind": "hair",
-   "label": "De punta",
    "file": "pelo-punta.webp",
+   "map": "pelo-punta.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 128,
-   "y": 23,
-   "w": 242,
-   "h": 174,
-   "role": "hair",
-   "source": [
-    85,
-    41,
-    26
-   ]
+   "y": 24,
+   "w": 241,
+   "h": 173,
+   "label": "De punta"
   },
   "pelo-cresta": {
    "kind": "hair",
-   "label": "Cresta",
    "file": "pelo-cresta.webp",
+   "map": "pelo-cresta.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 168,
-   "y": 9,
+   "y": 10,
    "w": 175,
-   "h": 167,
-   "role": "hair",
-   "source": [
-    104,
-    55,
-    29
-   ]
+   "h": 166,
+   "label": "Cresta"
   },
   "pelo-rizos-cortos": {
    "kind": "hair",
-   "label": "Rizos cortos",
    "file": "pelo-rizos-cortos.webp",
-   "x": 139,
+   "map": "pelo-rizos-cortos.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 140,
    "y": 40,
-   "w": 226,
+   "w": 225,
    "h": 150,
-   "role": "hair",
-   "source": [
-    82,
-    44,
-    25
-   ]
+   "label": "Rizos cortos"
   },
   "pelo-afro": {
    "kind": "hair",
-   "label": "Afro",
    "file": "pelo-afro.webp",
+   "map": "pelo-afro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 96,
    "y": 13,
    "w": 316,
    "h": 255,
-   "role": "hair",
-   "source": [
-    112,
-    54,
-    29
-   ]
+   "label": "Afro"
   },
   "pelo-afro-pompones": {
    "kind": "hair",
-   "label": "Pompones afro",
    "file": "pelo-afro-pompones.webp",
+   "map": "pelo-afro-pompones.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 109,
    "y": 14,
    "w": 291,
    "h": 176,
-   "role": "hair",
-   "source": [
-    82,
-    41,
-    20
-   ]
+   "label": "Pompones afro"
   },
   "pelo-largo-liso": {
    "kind": "hair",
-   "label": "Largo liso",
    "file": "pelo-largo-liso.webp",
+   "map": "pelo-largo-liso.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 110,
-   "y": 47,
+   "y": 48,
    "w": 282,
-   "h": 332,
-   "role": "hair",
-   "source": [
-    82,
-    44,
-    26
-   ]
+   "h": 330,
+   "label": "Largo liso"
   },
   "pelo-largo-ondulado": {
    "kind": "hair",
-   "label": "Largo ondulado",
    "file": "pelo-largo-ondulado.webp",
+   "map": "pelo-largo-ondulado.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 80,
    "y": 23,
-   "w": 335,
+   "w": 334,
    "h": 369,
-   "role": "hair",
-   "source": [
-    103,
-    53,
-    32
-   ]
+   "label": "Largo ondulado"
   },
   "pelo-rizos-largos": {
    "kind": "hair",
-   "label": "Rizos largos",
    "file": "pelo-rizos-largos.webp",
+   "map": "pelo-rizos-largos.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 86,
-   "y": 33,
-   "w": 336,
-   "h": 357,
-   "role": "hair",
-   "source": [
-    84,
-    43,
-    26
-   ]
+   "y": 34,
+   "w": 335,
+   "h": 356,
+   "label": "Rizos largos"
   },
   "pelo-melena": {
    "kind": "hair",
-   "label": "Melena con chasquilla",
    "file": "pelo-melena.webp",
+   "map": "pelo-melena.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 119,
    "y": 51,
-   "w": 263,
-   "h": 203,
-   "role": "hair",
-   "source": [
-    111,
-    57,
-    38
-   ]
+   "w": 262,
+   "h": 202,
+   "label": "Melena con chasquilla"
   },
   "pelo-cola": {
    "kind": "hair",
-   "label": "Cola de caballo",
    "file": "pelo-cola.webp",
+   "map": "pelo-cola.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 152,
-   "y": 16,
-   "w": 280,
-   "h": 284,
-   "role": "hair",
-   "source": [
-    85,
-    43,
-    26
-   ]
+   "y": 17,
+   "w": 279,
+   "h": 282,
+   "label": "Cola de caballo"
   },
   "pelo-colitas": {
    "kind": "hair",
-   "label": "Dos colitas",
    "file": "pelo-colitas.webp",
+   "map": "pelo-colitas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 96,
    "y": 64,
    "w": 320,
    "h": 148,
-   "role": "hair",
-   "source": [
-    85,
-    44,
-    29
-   ]
+   "label": "Dos colitas"
   },
   "pelo-trenzas": {
    "kind": "hair",
-   "label": "Trenzas",
    "file": "pelo-trenzas.webp",
-   "x": 147,
+   "map": "pelo-trenzas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 148,
    "y": 64,
-   "w": 209,
+   "w": 208,
    "h": 337,
-   "role": "hair",
-   "source": [
-    85,
-    44,
-    30
-   ]
+   "label": "Trenzas"
   },
   "pelo-trenzas-pegadas": {
    "kind": "hair",
-   "label": "Trenzas pegadas",
    "file": "pelo-trenzas-pegadas.webp",
+   "map": "pelo-trenzas-pegadas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 160,
-   "y": 60,
-   "w": 185,
-   "h": 210,
-   "role": "hair",
-   "source": [
-    205,
-    114,
-    61
-   ]
+   "y": 61,
+   "w": 184,
+   "h": 209,
+   "label": "Trenzas pegadas"
   },
   "pelo-mono": {
    "kind": "hair",
-   "label": "Moño alto",
    "file": "pelo-mono.webp",
+   "map": "pelo-mono.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 156,
    "y": 8,
-   "w": 195,
+   "w": 194,
    "h": 194,
-   "role": "hair",
-   "source": [
-    85,
-    43,
-    28
-   ]
+   "label": "Moño alto"
   },
   "pelo-media-cola": {
    "kind": "hair",
-   "label": "Media cola",
    "file": "pelo-media-cola.webp",
+   "map": "pelo-media-cola.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 127,
-   "y": 12,
+   "y": 13,
    "w": 248,
-   "h": 263,
-   "role": "hair",
-   "source": [
-    91,
-    49,
-    28
-   ]
+   "h": 262,
+   "label": "Media cola"
   },
   "pelo-rastas": {
    "kind": "hair",
-   "label": "Rastas",
    "file": "pelo-rastas.webp",
-   "x": 121,
+   "map": "pelo-rastas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 122,
    "y": 40,
-   "w": 258,
+   "w": 256,
    "h": 251,
-   "role": "hair",
-   "source": [
-    84,
-    45,
-    27
-   ]
+   "label": "Rastas"
   },
   "ojos-redondos": {
    "kind": "eyes",
-   "label": "Redondos",
    "file": "ojos-redondos.webp",
+   "map": "ojos-redondos.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 184,
    "y": 159,
    "w": 130,
    "h": 46,
-   "role": "eye",
-   "source": [
-    102,
-    58,
-    34
-   ]
+   "label": "Redondos"
   },
   "ojos-brillantes": {
    "kind": "eyes",
-   "label": "Brillantes",
    "file": "ojos-brillantes.webp",
+   "map": "ojos-brillantes.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 184,
    "y": 159,
    "w": 129,
    "h": 47,
-   "role": "eye",
-   "source": [
-    88,
-    54,
-    31
-   ]
+   "label": "Brillantes"
   },
   "ojos-almendrados": {
    "kind": "eyes",
-   "label": "Almendrados",
    "file": "ojos-almendrados.webp",
+   "map": "ojos-almendrados.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 185,
    "y": 159,
    "w": 128,
    "h": 46,
-   "role": "eye",
-   "source": [
-    87,
-    53,
-    32
-   ]
+   "label": "Almendrados"
   },
   "ojos-felices": {
    "kind": "eyes",
-   "label": "Felices",
    "file": "ojos-felices.webp",
+   "map": "ojos-felices.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 189,
    "y": 168,
    "w": 119,
    "h": 23,
-   "role": "eye",
-   "source": [
-    102,
-    65,
-    52
-   ]
+   "label": "Felices"
   },
   "ojos-pestanas": {
    "kind": "eyes",
-   "label": "Con pestañas",
    "file": "ojos-pestanas.webp",
+   "map": "ojos-pestanas.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 177,
    "y": 159,
    "w": 145,
    "h": 47,
-   "role": "eye",
-   "source": [
-    106,
-    64,
-    37
-   ]
+   "label": "Con pestañas"
   },
   "ojos-somnolientos": {
    "kind": "eyes",
-   "label": "Somnolientos",
    "file": "ojos-somnolientos.webp",
+   "map": "ojos-somnolientos.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 180,
    "y": 168,
    "w": 137,
    "h": 38,
-   "role": "eye",
-   "source": [
-    103,
-    62,
-    36
-   ]
+   "label": "Somnolientos"
   },
   "ojos-decididos": {
    "kind": "eyes",
-   "label": "Decididos",
    "file": "ojos-decididos.webp",
+   "map": "ojos-decididos.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 185,
    "y": 161,
    "w": 128,
    "h": 45,
-   "role": "eye",
-   "source": [
-    107,
-    62,
-    35
-   ]
+   "label": "Decididos"
   },
   "ojos-estrella": {
    "kind": "eyes",
-   "label": "Estrellados",
    "file": "ojos-estrella.webp",
+   "map": "ojos-estrella.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 185,
    "y": 159,
    "w": 129,
    "h": 48,
-   "role": "eye",
-   "source": [
-    82,
-    38,
-    9
-   ]
+   "label": "Estrellados"
   },
   "ojos-guino": {
    "kind": "eyes",
-   "label": "Guiño",
    "file": "ojos-guino.webp",
+   "map": "ojos-guino.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 185,
    "y": 161,
    "w": 125,
    "h": 44,
-   "role": "eye",
-   "source": [
-    88,
-    53,
-    31
-   ]
+   "label": "Guiño"
   },
   "ojos-sorprendidos": {
    "kind": "eyes",
-   "label": "Sorprendidos",
    "file": "ojos-sorprendidos.webp",
+   "map": "ojos-sorprendidos.map.webp",
+   "families": [
+    "eye",
+    "skin"
+   ],
    "x": 185,
    "y": 159,
    "w": 128,
    "h": 47,
-   "role": "eye",
-   "source": [
-    88,
-    53,
-    31
-   ]
+   "label": "Sorprendidos"
   },
   "cejas-suaves": {
    "kind": "brows",
-   "label": "Suaves",
    "file": "cejas-suaves.webp",
+   "map": "cejas-suaves.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 186,
    "y": 126,
    "w": 127,
    "h": 23,
-   "role": "hair",
-   "source": [
-    107,
-    59,
-    35
-   ]
+   "label": "Suaves"
   },
   "cejas-gruesas": {
    "kind": "brows",
-   "label": "Gruesas",
    "file": "cejas-gruesas.webp",
+   "map": "cejas-gruesas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 186,
    "y": 129,
    "w": 127,
    "h": 26,
-   "role": "hair",
-   "source": [
-    108,
-    59,
-    34
-   ]
+   "label": "Gruesas"
   },
   "cejas-finas": {
    "kind": "brows",
-   "label": "Finas",
    "file": "cejas-finas.webp",
+   "map": "cejas-finas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 184,
    "y": 133,
    "w": 128,
    "h": 25,
-   "role": "hair",
-   "source": [
-    86,
-    44,
-    26
-   ]
+   "label": "Finas"
   },
   "cejas-arqueadas": {
    "kind": "brows",
-   "label": "Arqueadas",
    "file": "cejas-arqueadas.webp",
+   "map": "cejas-arqueadas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 186,
    "y": 125,
    "w": 126,
    "h": 23,
-   "role": "hair",
-   "source": [
-    106,
-    58,
-    34
-   ]
+   "label": "Arqueadas"
   },
   "cejas-decididas": {
    "kind": "brows",
-   "label": "Decididas",
    "file": "cejas-decididas.webp",
+   "map": "cejas-decididas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 188,
    "y": 138,
    "w": 124,
    "h": 21,
-   "role": "hair",
-   "source": [
-    85,
-    40,
-    24
-   ]
+   "label": "Decididas"
   },
   "cejas-rectas": {
    "kind": "brows",
-   "label": "Rectas",
    "file": "cejas-rectas.webp",
+   "map": "cejas-rectas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
    "x": 184,
    "y": 134,
    "w": 129,
    "h": 24,
-   "role": "hair",
-   "source": [
-    82,
-    39,
-    21
-   ]
+   "label": "Rectas"
   },
   "nariz-boton": {
    "kind": "nose",
-   "label": "Botón",
    "file": "nariz-boton.webp",
+   "map": "nariz-boton.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 240,
    "y": 186,
    "w": 21,
    "h": 18,
-   "role": "skin",
-   "source": [
-    244,
-    156,
-    98
-   ]
+   "label": "Botón"
   },
   "nariz-curva": {
    "kind": "nose",
-   "label": "Curva",
    "file": "nariz-curva.webp",
+   "map": "nariz-curva.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 238,
    "y": 189,
    "w": 24,
    "h": 20,
-   "role": "skin",
-   "source": [
-    244,
-    156,
-    98
-   ]
+   "label": "Curva"
   },
   "nariz-respingada": {
    "kind": "nose",
-   "label": "Respingada",
    "file": "nariz-respingada.webp",
+   "map": "nariz-respingada.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 236,
    "y": 189,
    "w": 29,
    "h": 22,
-   "role": "skin",
-   "source": [
-    244,
-    156,
-    98
-   ]
+   "label": "Respingada"
   },
   "nariz-ancha": {
    "kind": "nose",
-   "label": "Ancha",
    "file": "nariz-ancha.webp",
+   "map": "nariz-ancha.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 236,
    "y": 202,
    "w": 26,
    "h": 8,
-   "role": "skin",
-   "source": [
-    244,
-    156,
-    98
-   ]
+   "label": "Ancha"
   },
   "nariz-puntitos": {
    "kind": "nose",
-   "label": "Puntitos",
    "file": "nariz-puntitos.webp",
+   "map": "nariz-puntitos.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 239,
    "y": 196,
    "w": 21,
    "h": 7,
-   "role": "skin",
-   "source": [
-    244,
-    156,
-    98
-   ]
+   "label": "Puntitos"
   },
   "nariz-redonda": {
    "kind": "nose",
-   "label": "Redonda",
    "file": "nariz-redonda.webp",
+   "map": "nariz-redonda.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 237,
    "y": 184,
    "w": 29,
    "h": 26,
-   "role": "skin",
-   "source": [
-    244,
-    156,
-    98
-   ]
+   "label": "Redonda"
   },
   "boca-sonrisa": {
    "kind": "mouth",
-   "label": "Sonrisa",
    "file": "boca-sonrisa.webp",
+   "map": "boca-sonrisa.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 228,
    "y": 215,
    "w": 44,
    "h": 13,
-   "role": null,
-   "source": null
+   "label": "Sonrisa"
   },
   "boca-abierta": {
    "kind": "mouth",
-   "label": "Sonrisa abierta",
    "file": "boca-abierta.webp",
+   "map": "boca-abierta.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 226,
    "y": 200,
    "w": 51,
    "h": 32,
-   "role": null,
-   "source": null
+   "label": "Sonrisa abierta"
   },
   "boca-risa": {
    "kind": "mouth",
-   "label": "Risa",
    "file": "boca-risa.webp",
+   "map": "boca-risa.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 219,
    "y": 200,
    "w": 63,
    "h": 41,
-   "role": null,
-   "source": null
+   "label": "Risa"
   },
   "boca-conejo": {
    "kind": "mouth",
-   "label": "Dientes de conejo",
    "file": "boca-conejo.webp",
+   "map": "boca-conejo.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 222,
    "y": 198,
    "w": 56,
    "h": 30,
-   "role": null,
-   "source": null
+   "label": "Dientes de conejo"
   },
   "boca-frenillos": {
    "kind": "mouth",
-   "label": "Frenillos",
    "file": "boca-frenillos.webp",
+   "map": "boca-frenillos.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 217,
    "y": 201,
    "w": 67,
    "h": 27,
-   "role": null,
-   "source": null
+   "label": "Frenillos"
   },
   "boca-lengua": {
    "kind": "mouth",
-   "label": "Lengua afuera",
    "file": "boca-lengua.webp",
+   "map": "boca-lengua.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 221,
    "y": 209,
    "w": 61,
    "h": 31,
-   "role": null,
-   "source": null
+   "label": "Lengua afuera"
   },
   "boca-sorpresa": {
    "kind": "mouth",
-   "label": "Sorpresa",
    "file": "boca-sorpresa.webp",
+   "map": "boca-sorpresa.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 238,
    "y": 209,
    "w": 21,
    "h": 24,
-   "role": null,
-   "source": null
+   "label": "Sorpresa"
   },
   "boca-tranquila": {
    "kind": "mouth",
-   "label": "Tranquila",
    "file": "boca-tranquila.webp",
+   "map": "boca-tranquila.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 228,
    "y": 215,
    "w": 44,
    "h": 13,
-   "role": null,
-   "source": null
+   "label": "Tranquila"
   },
   "boca-mueca": {
    "kind": "mouth",
-   "label": "Mueca",
    "file": "boca-mueca.webp",
+   "map": "boca-mueca.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 234,
    "y": 207,
    "w": 45,
    "h": 18,
-   "role": null,
-   "source": null
+   "label": "Mueca"
   },
   "boca-chimuela": {
    "kind": "mouth",
-   "label": "Chimuela",
    "file": "boca-chimuela.webp",
+   "map": "boca-chimuela.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 217,
    "y": 198,
    "w": 68,
    "h": 38,
-   "role": null,
-   "source": null
+   "label": "Chimuela"
   },
   "top-raglan": {
    "kind": "top",
-   "label": "Polera raglán",
    "file": "top-raglan.webp",
+   "map": "top-raglan.map.webp",
+   "families": [
+    "top",
+    "skin"
+   ],
    "x": 142,
    "y": 264,
    "w": 217,
    "h": 183,
-   "role": "top",
-   "source": [
-    115,
-    50,
-    245
-   ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Polera raglán"
   },
   "top-polera": {
    "kind": "top",
-   "label": "Polera",
    "file": "top-polera.webp",
+   "map": "top-polera.map.webp",
+   "families": [
+    "top",
+    "skin"
+   ],
    "x": 141,
    "y": 264,
    "w": 218,
    "h": 183,
-   "role": "top",
-   "source": [
-    55,
-    131,
-    251
-   ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Polera"
   },
   "top-polo": {
    "kind": "top",
-   "label": "Polo",
    "file": "top-polo.webp",
+   "map": "top-polo.map.webp",
+   "families": [
+    "top",
+    "skin"
+   ],
    "x": 141,
    "y": 252,
    "w": 219,
    "h": 196,
-   "role": "top",
-   "source": [
-    43,
-    126,
-    251
-   ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Polo"
   },
   "top-poleron": {
    "kind": "top",
-   "label": "Polerón",
    "file": "top-poleron.webp",
+   "map": "top-poleron.map.webp",
+   "families": [
+    "top",
+    "skin"
+   ],
    "x": 119,
    "y": 248,
-   "w": 262,
+   "w": 261,
    "h": 206,
-   "role": "top",
-   "source": [
-    49,
-    124,
-    248
-   ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Polerón"
   },
   "top-chaqueta": {
    "kind": "top",
-   "label": "Chaqueta deportiva",
    "file": "top-chaqueta.webp",
-   "x": 121,
-   "y": 249,
-   "w": 260,
-   "h": 205,
-   "role": "top",
-   "source": [
-    53,
-    123,
-    252
+   "map": "top-chaqueta.map.webp",
+   "families": [
+    "top",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 122,
+   "y": 249,
+   "w": 258,
+   "h": 205,
+   "label": "Chaqueta deportiva"
   },
   "top-camisa": {
    "kind": "top",
-   "label": "Camisa",
    "file": "top-camisa.webp",
-   "x": 136,
-   "y": 253,
-   "w": 229,
-   "h": 200,
-   "role": "top",
-   "source": [
-    44,
-    124,
-    246
+   "map": "top-camisa.map.webp",
+   "families": [
+    "top",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 136,
+   "y": 254,
+   "w": 228,
+   "h": 199,
+   "label": "Camisa"
   },
   "top-sweater": {
    "kind": "top",
-   "label": "Sweater",
    "file": "top-sweater.webp",
-   "x": 122,
-   "y": 258,
-   "w": 255,
-   "h": 189,
-   "role": "top",
-   "source": [
-    52,
-    123,
-    248
+   "map": "top-sweater.map.webp",
+   "families": [
+    "top",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 122,
+   "y": 259,
+   "w": 255,
+   "h": 188,
+   "label": "Sweater"
   },
   "top-rayas": {
    "kind": "top",
-   "label": "Polera a rayas",
    "file": "top-rayas.webp",
-   "x": 119,
-   "y": 264,
-   "w": 262,
-   "h": 185,
-   "role": "top",
-   "source": [
-    34,
-    130,
-    245
+   "map": "top-rayas.map.webp",
+   "families": [
+    "top",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 120,
+   "y": 264,
+   "w": 260,
+   "h": 185,
+   "label": "Polera a rayas"
   },
   "top-vestido": {
    "kind": "dress",
-   "label": "Vestido",
    "file": "top-vestido.webp",
+   "map": "top-vestido.map.webp",
+   "families": [
+    "top",
+    "skin"
+   ],
    "x": 137,
    "y": 263,
    "w": 226,
    "h": 294,
-   "role": "top",
-   "source": [
-    48,
-    125,
-    235
-   ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Vestido"
   },
   "bottom-short": {
    "kind": "bottom",
-   "label": "Short",
    "file": "bottom-short.webp",
+   "map": "bottom-short.map.webp",
+   "families": [
+    "bottom",
+    "skin"
+   ],
    "x": 167,
    "y": 440,
    "w": 166,
    "h": 92,
-   "role": "bottom",
-   "source": [
-    8,
-    189,
-    175
-   ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Short"
   },
   "bottom-jeans": {
    "kind": "bottom",
-   "label": "Jeans",
    "file": "bottom-jeans.webp",
-   "x": 160,
-   "y": 439,
-   "w": 184,
-   "h": 243,
-   "role": "bottom",
-   "source": [
-    44,
-    121,
-    244
+   "map": "bottom-jeans.map.webp",
+   "families": [
+    "bottom",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 161,
+   "y": 439,
+   "w": 182,
+   "h": 243,
+   "label": "Jeans"
   },
   "bottom-buzo": {
    "kind": "bottom",
-   "label": "Buzo",
    "file": "bottom-buzo.webp",
+   "map": "bottom-buzo.map.webp",
+   "families": [
+    "bottom",
+    "skin"
+   ],
    "x": 157,
    "y": 440,
-   "w": 187,
+   "w": 186,
    "h": 226,
-   "role": "bottom",
-   "source": [
-    52,
-    130,
-    244
-   ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Buzo"
   },
   "bottom-falda": {
    "kind": "bottom",
-   "label": "Falda",
    "file": "bottom-falda.webp",
+   "map": "bottom-falda.map.webp",
+   "families": [
+    "bottom",
+    "skin"
+   ],
    "x": 151,
    "y": 439,
-   "w": 198,
+   "w": 197,
    "h": 129,
-   "role": "bottom",
-   "source": [
-    30,
-    114,
-    253
-   ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Falda"
   },
   "bottom-bermuda": {
    "kind": "bottom",
-   "label": "Bermuda",
    "file": "bottom-bermuda.webp",
-   "x": 159,
-   "y": 440,
-   "w": 182,
-   "h": 136,
-   "role": "bottom",
-   "source": [
-    48,
-    124,
-    246
+   "map": "bottom-bermuda.map.webp",
+   "families": [
+    "bottom",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 160,
+   "y": 440,
+   "w": 181,
+   "h": 136,
+   "label": "Bermuda"
   },
   "calzado-zapatillas": {
    "kind": "shoes",
-   "label": "Zapatillas",
    "file": "calzado-zapatillas.webp",
-   "x": 120,
-   "y": 614,
-   "w": 261,
-   "h": 116,
-   "role": "shoes",
-   "source": [
-    27,
-    117,
-    252
+   "map": "calzado-zapatillas.map.webp",
+   "families": [
+    "shoes",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 121,
+   "y": 614,
+   "w": 259,
+   "h": 115,
+   "label": "Zapatillas"
   },
   "calzado-escolares": {
    "kind": "shoes",
-   "label": "Zapatos escolares",
    "file": "calzado-escolares.webp",
-   "x": 115,
-   "y": 624,
-   "w": 268,
-   "h": 106,
-   "role": "shoes",
-   "source": [
-    3,
-    104,
-    210
+   "map": "calzado-escolares.map.webp",
+   "families": [
+    "shoes",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 116,
+   "y": 624,
+   "w": 267,
+   "h": 106,
+   "label": "Zapatos escolares"
   },
   "calzado-botas": {
    "kind": "shoes",
-   "label": "Botas",
    "file": "calzado-botas.webp",
-   "x": 117,
-   "y": 621,
-   "w": 270,
-   "h": 108,
-   "role": "shoes",
-   "source": [
-    52,
-    110,
-    219
+   "map": "calzado-botas.map.webp",
+   "families": [
+    "shoes",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 118,
+   "y": 621,
+   "w": 268,
+   "h": 107,
+   "label": "Botas"
   },
   "calzado-sandalias": {
    "kind": "shoes",
-   "label": "Sandalias",
    "file": "calzado-sandalias.webp",
-   "x": 120,
-   "y": 649,
-   "w": 260,
-   "h": 88,
-   "role": "shoes",
-   "source": [
-    1,
-    100,
-    244
+   "map": "calzado-sandalias.map.webp",
+   "families": [
+    "shoes",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 120,
+   "y": 650,
+   "w": 259,
+   "h": 86,
+   "label": "Sandalias"
   },
   "calzado-altas": {
    "kind": "shoes",
-   "label": "Zapatillas altas",
    "file": "calzado-altas.webp",
-   "x": 115,
-   "y": 627,
-   "w": 270,
-   "h": 102,
-   "role": "shoes",
-   "source": [
-    52,
-    125,
-    222
+   "map": "calzado-altas.map.webp",
+   "families": [
+    "shoes",
+    "skin"
    ],
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "x": 116,
+   "y": 627,
+   "w": 268,
+   "h": 101,
+   "label": "Zapatillas altas"
   },
   "cabeza-jockey": {
    "kind": "headwear",
-   "label": "Jockey",
    "file": "cabeza-jockey.webp",
-   "x": 159,
-   "y": 54,
-   "w": 186,
-   "h": 107,
-   "role": null,
-   "source": null,
-   "clipsHair": true,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "map": "cabeza-jockey.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 160,
+   "y": 55,
+   "w": 185,
+   "h": 106,
+   "label": "Jockey",
+   "clipsHair": true
   },
   "cabeza-gorro-lana": {
    "kind": "headwear",
-   "label": "Gorro de lana",
    "file": "cabeza-gorro-lana.webp",
+   "map": "cabeza-gorro-lana.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 153,
-   "y": 9,
-   "w": 196,
-   "h": 161,
-   "role": null,
-   "source": null,
-   "clipsHair": true,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "y": 10,
+   "w": 195,
+   "h": 159,
+   "label": "Gorro de lana",
+   "clipsHair": true
   },
   "cabeza-orejas-gato": {
    "kind": "headwear",
-   "label": "Cintillo de gato",
    "file": "cabeza-orejas-gato.webp",
+   "map": "cabeza-orejas-gato.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 162,
    "y": 55,
-   "w": 182,
+   "w": 181,
    "h": 108,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Cintillo de gato"
   },
   "cabeza-corona": {
    "kind": "headwear",
-   "label": "Corona",
    "file": "cabeza-corona.webp",
-   "x": 215,
-   "y": 30,
-   "w": 90,
-   "h": 61,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "map": "cabeza-corona.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 216,
+   "y": 31,
+   "w": 88,
+   "h": 60,
+   "label": "Corona"
   },
   "cabeza-flor": {
    "kind": "headwear",
-   "label": "Pinche de flor",
    "file": "cabeza-flor.webp",
+   "map": "cabeza-flor.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 306,
-   "y": 100,
-   "w": 45,
-   "h": 54,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "y": 101,
+   "w": 44,
+   "h": 53,
+   "label": "Pinche de flor"
   },
   "cabeza-sombrero": {
    "kind": "headwear",
-   "label": "Sombrero",
    "file": "cabeza-sombrero.webp",
-   "x": 90,
-   "y": 31,
-   "w": 327,
-   "h": 163,
-   "role": null,
-   "source": null,
-   "clipsHair": true,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "map": "cabeza-sombrero.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 91,
+   "y": 32,
+   "w": 325,
+   "h": 162,
+   "label": "Sombrero",
+   "clipsHair": true
   },
   "cara-lentes-redondos": {
    "kind": "eyewear",
-   "label": "Lentes redondos",
    "file": "cara-lentes-redondos.webp",
+   "map": "cara-lentes-redondos.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 169,
    "y": 152,
    "w": 161,
    "h": 64,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Lentes redondos"
   },
   "cara-lentes-cuadrados": {
    "kind": "eyewear",
-   "label": "Lentes rectangulares",
    "file": "cara-lentes-cuadrados.webp",
+   "map": "cara-lentes-cuadrados.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 168,
    "y": 154,
    "w": 164,
    "h": 57,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Lentes rectangulares"
   },
   "cara-lentes-sol": {
    "kind": "eyewear",
-   "label": "Lentes de sol",
    "file": "cara-lentes-sol.webp",
+   "map": "cara-lentes-sol.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 169,
    "y": 157,
    "w": 161,
    "h": 53,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Lentes de sol"
   },
   "cuello-bufanda": {
    "kind": "neckwear",
-   "label": "Bufanda",
    "file": "cuello-bufanda.webp",
+   "map": "cuello-bufanda.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 195,
    "y": 242,
    "w": 134,
    "h": 139,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Bufanda"
   },
   "cuello-humita": {
    "kind": "neckwear",
-   "label": "Humita",
    "file": "cuello-humita.webp",
+   "map": "cuello-humita.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 217,
-   "y": 257,
+   "y": 258,
    "w": 70,
-   "h": 39,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "h": 38,
+   "label": "Humita"
   },
   "cuello-medalla": {
    "kind": "neckwear",
-   "label": "Medalla",
    "file": "cuello-medalla.webp",
+   "map": "cuello-medalla.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 209,
    "y": 264,
    "w": 83,
    "h": 117,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "label": "Medalla"
   },
   "espalda-mochila": {
    "kind": "backwear",
-   "label": "Mochila",
    "file": "espalda-mochila.webp",
-   "x": 160,
+   "map": "espalda-mochila.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 161,
    "y": 256,
-   "w": 179,
-   "h": 188,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "w": 178,
+   "h": 187,
+   "label": "Mochila"
   },
   "espalda-capa": {
    "kind": "backwear",
-   "label": "Capa",
    "file": "espalda-capa.webp",
-   "x": 53,
-   "y": 254,
-   "w": 406,
-   "h": 326,
-   "role": null,
-   "source": null,
-   "skin": [
-    244,
-    156,
-    98
-   ]
+   "map": "espalda-capa.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 54,
+   "y": 255,
+   "w": 404,
+   "h": 324,
+   "label": "Capa"
   },
   "orejas-audifono": {
    "kind": "earwear",
-   "label": "Audífono",
    "file": "orejas-audifono.webp",
-   "x": 138,
+   "map": "orejas-audifono.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 139,
    "y": 159,
-   "w": 46,
+   "w": 45,
    "h": 53,
-   "role": null,
-   "source": null
+   "label": "Audífono"
   },
   "orejas-audifonos": {
    "kind": "earwear",
-   "label": "Audífonos de música",
    "file": "orejas-audifonos.webp",
+   "map": "orejas-audifonos.map.webp",
+   "families": [
+    "skin"
+   ],
    "x": 134,
    "y": 124,
-   "w": 235,
-   "h": 122,
-   "role": null,
-   "source": null
+   "w": 234,
+   "h": 121,
+   "label": "Audífonos de música"
   }
  }
 }

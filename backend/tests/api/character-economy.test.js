@@ -26,6 +26,20 @@ async function studentWithCharacter({ tokens = 0, name = 'Cóndor Sabio' } = {})
 
 const balance = async id => (await pool.query('SELECT tokens_balance FROM local_students WHERE id = $1', [id])).rows[0].tokens_balance;
 
+describe('cuenta de prueba', () => {
+  it('tiene todos los artículos sin comprarlos', async () => {
+    const tester = await createStudent(pool, { courseName: '5° Básico A', isTest: true });
+    const token = signToken(studentPayload(tester));
+    const priced = Object.values(CATALOG).filter(Array.isArray).flat().filter(e => e.price > 0).map(e => e.id);
+    const layers = { ...LAYERS, top: CATALOG.tops.find(t => t.price > 0).id };
+
+    const res = await request(app).put('/api/characters/me').set('Authorization', `Bearer ${token}`).send({ layers, name: 'Probador' });
+    expect(res.status).toBe(200);
+    const me = await request(app).get('/api/characters/me').set('Authorization', `Bearer ${token}`);
+    expect(me.body.ownedItems.sort()).toEqual(priced.sort());
+  });
+});
+
 describe('nombre del personaje', () => {
   it('deja pasar nombres normales y frena contacto, largos y groserías evidentes', () => {
     expect(nameProblem('Puma Veloz')).toBeNull();

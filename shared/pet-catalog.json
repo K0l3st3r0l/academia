@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "renameCost": 100,
+  "changeSpeciesCost": 150,
+  "stages": [
+    { "stage": 1, "label": "Cría", "fromDays": 0, "scale": 0.8, "help": "Te da la pista de una pregunta cuando la pides" },
+    { "stage": 2, "label": "Joven", "fromDays": 10, "scale": 0.9, "help": "Una pista extra en cada nivel" },
+    { "stage": 3, "label": "Guardián", "fromDays": 30, "scale": 1, "help": "Una segunda oportunidad en cada jefe" }
+  ],
+  "species": [
+    { "id": "pudu", "label": "Pudú", "fact": "Uno de los ciervos más pequeños del mundo. Vive en los bosques húmedos del sur de Chile." },
+    { "id": "chungungo", "label": "Chungungo", "fact": "Una nutria de mar de las costas rocosas de Chile. Se zambulle para atrapar cangrejos y peces." },
+    { "id": "pinguino", "label": "Pingüino de Humboldt", "fact": "Vive en las costas de Chile y Perú, bañadas por la fría corriente de Humboldt, que le da su nombre." },
+    { "id": "monito", "label": "Monito del monte", "fact": "Un marsupial de los bosques del sur: como los canguros, sus crías crecen en una bolsa. Le dicen «fósil viviente»." },
+    { "id": "puma", "label": "Puma", "fact": "El felino más grande de Chile. Recorre desde el desierto del norte hasta la Patagonia." },
+    { "id": "zorro", "label": "Zorro culpeo", "fact": "El zorro más grande de Chile. Vive en cerros y cordilleras, de norte a sur." }
+  ]
+}

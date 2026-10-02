@@ -10,6 +10,7 @@ const questionRoutes = require('./routes/questionRoutes');
 const sessionRoutes = require('./routes/sessionRoutes');
 const studentRoutes = require('./routes/studentRoutes');
 const characterRoutes = require('./routes/characterRoutes');
+const petRoutes = require('./routes/petRoutes');
 const studentAccountRoutes = require('./routes/studentAccountRoutes');
 const curriculumRoutes = require('./routes/curriculumRoutes');
 const { getActiveRoomsCount } = require('./sockets/gameSocket');
@@ -66,6 +67,7 @@ app.use('/api/questions', questionRoutes);
 app.use('/api/sessions', sessionRoutes);
 app.use('/api/students', studentRoutes);
 app.use('/api/characters', characterRoutes);
+app.use('/api/pets', petRoutes);
 app.use('/api/student-account', studentAccountRoutes);
 app.use('/api/curriculum', curriculumRoutes);
 

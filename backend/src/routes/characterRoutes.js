@@ -3,9 +3,10 @@ const express = require('express');
 const pool = require('../db');
 const { authenticateToken, requireStudent, requireAdmin } = require('../middleware/auth');
 const { trackEvent } = require('../services/eventTracker');
-const { getCatalog, validateLayers, itemPrice, pricedItemsIn, renameCost } = require('../services/characterCatalog');
+const { getCatalog, validateLayers, itemPrice, pricedItemsIn, allPricedItems, renameCost } = require('../services/characterCatalog');
 const { cleanName, nameProblem } = require('../services/characterName');
-const { spendTokens, InsufficientTokensError } = require('../services/tokenWallet');
+const { spendTokens, InsufficientTokensError, insufficientTokens } = require('../services/tokenWallet');
+const { inTransaction } = require('../db/transaction');
 const { getAttributes } = require('../services/characterStats');
 
 const router = express.Router();
@@ -13,6 +14,8 @@ const router = express.Router();
 const CHARACTER_FIELDS = 'layers, name, name_status, name_set_at, created_at, updated_at';
 
 async function ownedItems(studentId) {
+  const { rows: [student] } = await pool.query('SELECT is_test FROM local_students WHERE id = $1', [studentId]);
+  if (student?.is_test) return allPricedItems();
   const { rows } = await pool.query('SELECT item_id FROM student_items WHERE student_id = $1', [studentId]);
   return rows.map(r => r.item_id);
 }
@@ -20,28 +23,6 @@ async function ownedItems(studentId) {
 async function balanceOf(studentId) {
   const { rows } = await pool.query('SELECT tokens_balance FROM local_students WHERE id = $1', [studentId]);
   return rows[0]?.tokens_balance ?? 0;
-}
-
-function insufficientTokens(res, err) {
-  return res.status(400).json({
-    error: `Te faltan tokens: cuesta ${err.price} y tienes ${err.balance}.`,
-    code: 'insufficient_tokens',
-  });
-}
-
-async function inTransaction(fn) {
-  const client = await pool.connect();
-  try {
-    await client.query('BEGIN');
-    const result = await fn(client);
-    await client.query('COMMIT');
-    return result;
-  } catch (err) {
-    await client.query('ROLLBACK');
-    throw err;
-  } finally {
-    client.release();
-  }
 }
 
 router.get('/catalog', (req, res) => {

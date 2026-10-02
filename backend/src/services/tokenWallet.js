@@ -26,4 +26,11 @@ async function spendTokens(client, { studentId, amount, reason }) {
   return rows[0].tokens_balance;
 }
 
-module.exports = { spendTokens, InsufficientTokensError };
+function insufficientTokens(res, err) {
+  return res.status(400).json({
+    error: `Te faltan tokens: cuesta ${err.price} y tienes ${err.balance}.`,
+    code: 'insufficient_tokens',
+  });
+}
+
+module.exports = { spendTokens, InsufficientTokensError, insufficientTokens };
