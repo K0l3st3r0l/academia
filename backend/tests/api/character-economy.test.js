@@ -112,6 +112,33 @@ describe('artículos con precio', () => {
   });
 });
 
+describe('accesorios', () => {
+  it('son opcionales, «ninguno» es gratis y uno con precio se compra antes de usarlo', async () => {
+    const { token } = await studentWithCharacter({ tokens: 100 });
+    const crown = CATALOG.headwear.find(a => a.id === 'cabeza-corona');
+    const glasses = CATALOG.eyewear.find(a => a.id === 'cara-lentes-redondos');
+    expect(crown.price).toBe(80);
+    expect(glasses.price).toBeUndefined();
+
+    const withGlasses = { ...LAYERS, eyewear: glasses.id, headwear: 'ninguno' };
+    expect((await request(app).put('/api/characters/me').set('Authorization', `Bearer ${token}`).send({ layers: withGlasses })).status).toBe(200);
+
+    const withCrown = { ...withGlasses, headwear: crown.id };
+    const blocked = await request(app).put('/api/characters/me').set('Authorization', `Bearer ${token}`).send({ layers: withCrown });
+    expect(blocked.body).toMatchObject({ code: 'not_owned', details: [crown.id] });
+    await request(app).post(`/api/characters/me/items/${crown.id}`).set('Authorization', `Bearer ${token}`);
+    const worn = await request(app).put('/api/characters/me').set('Authorization', `Bearer ${token}`).send({ layers: withCrown });
+    expect(worn.body.character.layers.headwear).toBe(crown.id);
+
+    const bogus = await request(app).put('/api/characters/me').set('Authorization', `Bearer ${token}`).send({ layers: { ...LAYERS, headwear: 'cabeza-no-existe' } });
+    expect(bogus.status).toBe(400);
+  });
+
+  it('el vestido está marcado como que cubre la parte de abajo', () => {
+    expect(CATALOG.tops.find(t => t.id === 'top-vestido').coversBottom).toBe(true);
+  });
+});
+
 describe('atributos del personaje', () => {
   it('quedan por descubrir con pocas respuestas y se calculan con las suficientes', async () => {
     await syncCurriculum();

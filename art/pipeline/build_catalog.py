@@ -23,13 +23,23 @@ EYES = [('Café oscuro', '#3B2416'), ('Café', '#663A22'), ('Avellana', '#8A6A2E
 CLOTH = [('Blanco', '#FFFFFF', 0), ('Morado', '#6C3CE1', 0), ('Turquesa', '#14B8A6', 0), ('Azul', '#3B82F6', 0),
          ('Amarillo', '#F5C842', 30), ('Coral', '#F87171', 30), ('Verde', '#22C55E', 30), ('Negro', '#1F2937', 30)]
 FANTASY_HAIR_PRICE = 40
-NAMES = {'top-raglan': 'Polera raglán', 'bottom-short': 'Short', 'calzado-zapatillas': 'Zapatillas'}
+BY_ID = {p['id']: p for p in MANIFEST['parts']}
+NONE = {'id': 'ninguno', 'name': 'Ninguno'}
 
 
-def parts_of(kind):
-    labels = {p['id']: p['label'] for p in MANIFEST['parts']}
-    return [{'id': pid, 'name': labels.get(pid) or NAMES.get(pid, pid)}
-            for pid, layer in PARTS.items() if layer['kind'] == kind]
+def parts_of(*kinds, with_none=False):
+    out = [NONE] if with_none else []
+    for pid, layer in PARTS.items():
+        if layer['kind'] not in kinds:
+            continue
+        part = BY_ID.get(pid, {})
+        item = {'id': pid, 'name': part.get('label', pid)}
+        if part.get('price'):
+            item['price'] = part['price']
+        if layer['kind'] == 'dress':
+            item['coversBottom'] = True
+        out.append(item)
+    return out
 
 
 def colors(prefix, entries):
@@ -64,12 +74,18 @@ def main():
         'brows': parts_of('brows'),
         'noses': parts_of('nose'),
         'mouths': parts_of('mouth'),
-        'tops': parts_of('top'),
+        'tops': parts_of('top', 'dress'),
         'topColors': colors('arriba-color', CLOTH),
         'bottoms': parts_of('bottom'),
         'bottomColors': colors('abajo-color', CLOTH),
         'shoes': parts_of('shoes'),
         'shoeColors': colors('calzado-color', CLOTH),
+        # One optional accessory per slot; 'ninguno' is the empty choice.
+        'headwear': parts_of('headwear', with_none=True),
+        'eyewear': parts_of('eyewear', with_none=True),
+        'neckwear': parts_of('neckwear', with_none=True),
+        'backwear': parts_of('backwear', with_none=True),
+        'earwear': parts_of('earwear', with_none=True),
     }
     path = ROOT / 'shared/character-catalog.json'
     path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')

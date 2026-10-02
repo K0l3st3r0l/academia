@@ -9,7 +9,8 @@ Before cutting, check_alignment() rejects edits where GPT redrew the whole figur
 of editing the template (it happens): hands and feet must sit where the template has them.
 
 Usage: extract.py <template.png> <part.png> <kind> <out.png>
-kinds: hair, face, eyes, brows, nose, mouth, top, bottom, shoes
+kinds: hair, face, eyes, brows, nose, mouth, top, dress, bottom, shoes,
+       headwear, eyewear, neckwear, backwear, earwear
 """
 import sys
 import numpy as np
@@ -24,11 +25,19 @@ REGIONS = {
     'brows': (330, 190, 700, 520),
     'nose': (330, 190, 700, 520),
     'mouth': (330, 190, 700, 520),
-    'top': (150, 470, 874, 1120),
-    'bottom': (250, 830, 774, 1400),
+    'top': (120, 470, 904, 1120),
+    'dress': (120, 470, 904, 1300),
+    'bottom': (230, 830, 794, 1440),
     'shoes': (180, 1150, 844, 1536),
+    'headwear': (100, 0, 924, 520),
+    'eyewear': (280, 230, 744, 470),
+    'neckwear': (260, 420, 764, 760),
+    'backwear': (80, 380, 944, 1250),
+    'earwear': (200, 250, 824, 560),
 }
-MIN_SPECK = {'face': 30, 'eyes': 60, 'brows': 60, 'nose': 20, 'mouth': 40, 'hair': 400, 'top': 400, 'bottom': 400, 'shoes': 400}
+MIN_SPECK = {'face': 30, 'eyes': 60, 'brows': 60, 'nose': 20, 'mouth': 40, 'hair': 400, 'top': 400, 'dress': 400,
+             'bottom': 400, 'shoes': 400, 'headwear': 300, 'eyewear': 60, 'neckwear': 200, 'backwear': 300, 'earwear': 60}
+CLOTHES = ('top', 'dress', 'bottom')
 FEATURES = ('eyes', 'brows', 'nose', 'mouth')
 
 
@@ -45,6 +54,8 @@ def feature_of(cx, cy):
     return None
 # Hands and lower legs: no part kind changes them, so they must match the template.
 ANCHORS = [(200, 860, 340, 1030), (680, 860, 820, 1030), (330, 1180, 470, 1290), (550, 1180, 700, 1290)]
+# Bare feet: every kind except footwear leaves them alone, so a dress still has a reference.
+FEET = [(250, 1390, 470, 1480), (560, 1390, 780, 1480)]
 
 
 class MisalignedEdit(Exception):
@@ -56,9 +67,12 @@ def dark(a):
 
 
 def check_alignment(t, p, kind, min_iou=0.8):
-    for x0, y0, x1, y1 in ANCHORS:
-        if kind in ('shoes', 'bottom') and y0 >= 1180:
-            continue  # shoes and long trousers do cover the lower legs
+    anchors = ANCHORS + ([] if kind in ('shoes', 'bottom') else FEET)
+    for x0, y0, x1, y1 in anchors:
+        if kind in ('shoes', 'bottom', 'dress') and 1180 <= y0 < 1390:
+            continue  # shoes, long trousers and long dresses do cover the lower legs
+        if kind in ('top', 'dress', 'backwear') and y0 < 1180:
+            continue  # long sleeves and capes reach the hands
         a, b = dark(t[y0:y1, x0:x1]), dark(p[y0:y1, x0:x1])
         a, b = ndimage.binary_dilation(a, iterations=4), ndimage.binary_dilation(b, iterations=4)
         iou = (a & b).sum() / max(1, (a | b).sum())
@@ -88,12 +102,14 @@ def extract(template_path, part_path, kind):
     check_alignment(t, p, kind)
     diff = np.abs(p - t).sum(-1)
     mask = diff > 75
-    if kind not in ('top', 'bottom'):
+    if kind not in CLOTHES:
         mask &= ~magentaish(p)
     if kind == 'hair':
         # GPT also touches up the face and ears around new hair; those pixels are still skin.
         skin = np.median(t[300:450, 450:580].reshape(-1, 3), axis=0)
         mask &= ~skinlike(p, skin) & ~whitish(p)
+        # No hairstyle puts hair over the middle of the neck: lines there are GPT redrawing the collar.
+        mask[500:760, 440:584] = False
     x0, y0, x1, y1 = REGIONS[kind]
     region = np.zeros_like(mask)
     region[y0:y1, x0:x1] = True

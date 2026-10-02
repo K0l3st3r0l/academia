@@ -30,6 +30,13 @@ const TABS = [
     { field: 'shoes', list: 'shoes', label: 'Calzado', type: 'part', view: 'full', size: 120 },
     { field: 'shoeColor', list: 'shoeColors', label: 'Color del calzado', type: 'color' },
   ] },
+  { key: 'accesorios', label: 'Accesorios', sections: [
+    { field: 'headwear', list: 'headwear', label: 'Cabeza', type: 'part', view: 'portrait', size: 96 },
+    { field: 'eyewear', list: 'eyewear', label: 'Lentes', type: 'part', view: 'portrait', size: 96 },
+    { field: 'earwear', list: 'earwear', label: 'Orejas', type: 'part', view: 'portrait', size: 96 },
+    { field: 'neckwear', list: 'neckwear', label: 'Cuello', type: 'part', view: 'portrait', size: 96 },
+    { field: 'backwear', list: 'backwear', label: 'Espalda', type: 'part', view: 'full', size: 120 },
+  ] },
 ];
 const ALL_SECTIONS = TABS.flatMap(t => t.sections);
 
@@ -220,6 +227,8 @@ export default function CharacterEditor() {
   const nameReady = draftLength >= 3 && draftLength <= 20;
   const showNameInput = isNew || renaming || character?.name_status === 'rejected';
   const activeTab = TABS.find(t => t.key === tab);
+  // A dress covers the bottom, so that choice would change nothing on screen.
+  const dressOn = catalog.tops.find(t => t.id === layers.top)?.coversBottom;
 
   return (
     <div className="min-h-screen flex flex-col items-center px-4 py-6">
@@ -289,7 +298,7 @@ export default function CharacterEditor() {
         </aside>
 
         <main className="space-y-4">
-          <div role="tablist" className="grid grid-cols-4 gap-2">
+          <div role="tablist" className="grid grid-cols-3 sm:grid-cols-5 gap-2">
             {TABS.map(t => (
               <button
                 key={t.key}
@@ -304,7 +313,7 @@ export default function CharacterEditor() {
             ))}
           </div>
 
-          {activeTab.sections.map(section => {
+          {activeTab.sections.filter(section => !(dressOn && ['bottom', 'bottomColor'].includes(section.field))).map(section => {
             const selectedItem = itemOf(section, layers[section.field]);
             const Options = section.type === 'color' ? ColorOptions : PartOptions;
             return (

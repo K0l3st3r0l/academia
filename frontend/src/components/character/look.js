@@ -1,6 +1,8 @@
 // characters.layers stores catalog ids; the renderer needs part ids and hex colors.
 
 const hexOf = (list, id) => list.find(e => e.id === id)?.hex;
+export const ACCESSORY_SLOTS = ['headwear', 'eyewear', 'neckwear', 'backwear', 'earwear'];
+const NONE = 'ninguno';
 
 export function layersToLook(layers, catalog) {
   if (!layers || !catalog) return null;
@@ -21,6 +23,7 @@ export function layersToLook(layers, catalog) {
     bottomColor: hexOf(catalog.bottomColors, layers.bottomColor),
     shoes: layers.shoes,
     shoeColor: hexOf(catalog.shoeColors, layers.shoeColor),
+    ...Object.fromEntries(ACCESSORY_SLOTS.map(slot => [slot, layers[slot] && layers[slot] !== NONE ? layers[slot] : null])),
   };
 }
 
@@ -45,5 +48,6 @@ export function defaultLayers(catalog) {
     bottomColor: pick(catalog.bottomColors),
     shoes: first(catalog.shoes),
     shoeColor: pick(catalog.shoeColors),
+    ...Object.fromEntries(ACCESSORY_SLOTS.map(slot => [slot, NONE])),
   };
 }

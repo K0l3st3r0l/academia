@@ -2,7 +2,8 @@
   "templates": {
     "maestra": "art/piezas/maestra.png",
     "ropa": "art/piezas/plantilla-ropa-nino.png",
-    "estilo": "art/codex/personaje-base-b.png"
+    "estilo": "art/codex/personaje-base-b.png",
+    "cara": "art/piezas/maestra-cara.png"
   },
   "parts": [
     {
@@ -316,6 +317,244 @@
       "kind": "mouth",
       "label": "Chimuela",
       "desc": "a big smile with one front tooth missing"
+    },
+    {
+      "id": "top-raglan",
+      "kind": "top",
+      "label": "Polera raglán",
+      "desc": "a raglan t-shirt with a blue body and white short raglan sleeves"
+    },
+    {
+      "id": "top-polera",
+      "kind": "top",
+      "label": "Polera",
+      "desc": "a plain crew-neck t-shirt with short sleeves"
+    },
+    {
+      "id": "top-polo",
+      "kind": "top",
+      "label": "Polo",
+      "desc": "a school polo shirt with a collar, two buttons and short sleeves"
+    },
+    {
+      "id": "top-poleron",
+      "kind": "top",
+      "label": "Polerón",
+      "desc": "a hoodie with the hood down, long sleeves, a front pocket and white drawstrings",
+      "price": 60
+    },
+    {
+      "id": "top-chaqueta",
+      "kind": "top",
+      "label": "Chaqueta deportiva",
+      "desc": "a zip-up track jacket with long sleeves and white stripes down the sleeves, zipped up",
+      "price": 60
+    },
+    {
+      "id": "top-camisa",
+      "kind": "top",
+      "label": "Camisa",
+      "desc": "a short-sleeved button-up shirt with a collar",
+      "price": 40
+    },
+    {
+      "id": "top-sweater",
+      "kind": "top",
+      "label": "Sweater",
+      "desc": "a knit crew-neck sweater with long sleeves and ribbed cuffs",
+      "price": 50
+    },
+    {
+      "id": "top-rayas",
+      "kind": "top",
+      "label": "Polera a rayas",
+      "desc": "a long-sleeved t-shirt with horizontal white stripes",
+      "price": 40
+    },
+    {
+      "id": "top-vestido",
+      "kind": "dress",
+      "label": "Vestido",
+      "desc": "a simple short-sleeved dress with a round white collar, reaching just above the knees"
+    },
+    {
+      "id": "bottom-short",
+      "kind": "bottom",
+      "label": "Short",
+      "desc": "shorts with two small front pockets, mid-thigh length"
+    },
+    {
+      "id": "bottom-jeans",
+      "kind": "bottom",
+      "label": "Jeans",
+      "desc": "long jeans that reach the ankles, with front pockets and white stitching"
+    },
+    {
+      "id": "bottom-buzo",
+      "kind": "bottom",
+      "label": "Buzo",
+      "desc": "sweatpants that reach the ankles, with a white side stripe and cuffed ankles",
+      "price": 50
+    },
+    {
+      "id": "bottom-falda",
+      "kind": "bottom",
+      "label": "Falda",
+      "desc": "a pleated skirt that reaches just above the knees"
+    },
+    {
+      "id": "bottom-bermuda",
+      "kind": "bottom",
+      "label": "Bermuda",
+      "desc": "knee-length cargo shorts with side pockets",
+      "price": 40
+    },
+    {
+      "id": "calzado-zapatillas",
+      "kind": "shoes",
+      "label": "Zapatillas",
+      "desc": "sneakers with white soles and white velcro straps, with white ankle socks"
+    },
+    {
+      "id": "calzado-escolares",
+      "kind": "shoes",
+      "label": "Zapatos escolares",
+      "desc": "classic school shoes with laces, with white ankle socks"
+    },
+    {
+      "id": "calzado-botas",
+      "kind": "shoes",
+      "label": "Botas",
+      "desc": "ankle boots with white soles",
+      "price": 50
+    },
+    {
+      "id": "calzado-sandalias",
+      "kind": "shoes",
+      "label": "Sandalias",
+      "desc": "sandals with straps",
+      "price": 30
+    },
+    {
+      "id": "calzado-altas",
+      "kind": "shoes",
+      "label": "Zapatillas altas",
+      "desc": "high-top canvas sneakers with white laces and white toe caps",
+      "price": 50
+    },
+    {
+      "id": "cabeza-jockey",
+      "kind": "headwear",
+      "label": "Jockey",
+      "desc": "a medium blue (#3B82F6) baseball cap facing forward, sitting on the head",
+      "price": 60,
+      "clipsHair": true
+    },
+    {
+      "id": "cabeza-gorro-lana",
+      "kind": "headwear",
+      "label": "Gorro de lana",
+      "desc": "a red knitted beanie with a white pom-pom, sitting on the head and covering the top of it",
+      "price": 50,
+      "clipsHair": true
+    },
+    {
+      "id": "cabeza-orejas-gato",
+      "kind": "headwear",
+      "label": "Cintillo de gato",
+      "desc": "a black headband with black cat ears with pink insides, on top of the head",
+      "price": 50
+    },
+    {
+      "id": "cabeza-corona",
+      "kind": "headwear",
+      "label": "Corona",
+      "desc": "a small golden crown on top of the head",
+      "price": 80
+    },
+    {
+      "id": "cabeza-flor",
+      "kind": "headwear",
+      "label": "Pinche de flor",
+      "desc": "a yellow flower hair clip with an orange center, on one side of the head above the ear",
+      "price": 30,
+      "minArea": 1500
+    },
+    {
+      "id": "cabeza-sombrero",
+      "kind": "headwear",
+      "label": "Sombrero",
+      "desc": "a straw-yellow sun hat with a wide brim and a blue ribbon, sitting on the head",
+      "price": 60,
+      "clipsHair": true
+    },
+    {
+      "id": "cara-lentes-redondos",
+      "kind": "eyewear",
+      "label": "Lentes redondos",
+      "desc": "round eyeglasses with thin dark frames, over the eyes"
+    },
+    {
+      "id": "cara-lentes-cuadrados",
+      "kind": "eyewear",
+      "label": "Lentes rectangulares",
+      "desc": "rectangular eyeglasses with thick dark frames, over the eyes"
+    },
+    {
+      "id": "cara-lentes-sol",
+      "kind": "eyewear",
+      "label": "Lentes de sol",
+      "desc": "cool sunglasses with black frames and dark lenses, over the eyes",
+      "price": 40
+    },
+    {
+      "id": "cuello-bufanda",
+      "kind": "neckwear",
+      "label": "Bufanda",
+      "desc": "a red and white striped knitted scarf wrapped around the neck",
+      "price": 40
+    },
+    {
+      "id": "cuello-humita",
+      "kind": "neckwear",
+      "label": "Humita",
+      "desc": "a red bow tie at the neck",
+      "price": 30
+    },
+    {
+      "id": "cuello-medalla",
+      "kind": "neckwear",
+      "label": "Medalla",
+      "desc": "a gold medal hanging on a blue ribbon around the neck",
+      "price": 80
+    },
+    {
+      "id": "espalda-mochila",
+      "kind": "backwear",
+      "label": "Mochila",
+      "desc": "an orange school backpack worn on both shoulders: the straps cross the shoulders in front and the bag shows behind the shoulders",
+      "price": 40
+    },
+    {
+      "id": "espalda-capa",
+      "kind": "backwear",
+      "label": "Capa",
+      "desc": "a red superhero cape tied at the neck, flowing behind the body and visible beside the arms and legs",
+      "price": 80
+    },
+    {
+      "id": "orejas-audifono",
+      "kind": "earwear",
+      "label": "Audífono",
+      "desc": "a bright teal behind-the-ear hearing aid on the right ear, clearly visible and a bit larger than usual, with a thin clear tube going into the ear",
+      "minArea": 400
+    },
+    {
+      "id": "orejas-audifonos",
+      "kind": "earwear",
+      "label": "Audífonos de música",
+      "desc": "big purple over-ear headphones with the band over the head",
+      "price": 50
     }
   ]
 }

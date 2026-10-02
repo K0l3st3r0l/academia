@@ -24,11 +24,8 @@ SCALE = 0.5
 SKIN_SOURCE = [244, 156, 98]
 # Which color each kind of layer follows in the editor.
 ROLE = {'body': 'skin', 'nose': 'skin', 'hair': 'hair', 'brows': 'hair', 'eyes': 'eye',
-        'top': 'top', 'bottom': 'bottom', 'shoes': 'shoes', 'mouth': None}
-# Clothes from the end-to-end test, until the clothing batch is produced.
-EXTRA = [('top-raglan', 'top', 'recortes/prueba/top-raglan.png'),
-         ('bottom-short', 'bottom', 'recortes/prueba/bottom-short.png'),
-         ('calzado-zapatillas', 'shoes', 'recortes/prueba/zapatos.png')]
+        'top': 'top', 'dress': 'top', 'bottom': 'bottom', 'shoes': 'shoes', 'mouth': None,
+        'headwear': None, 'eyewear': None, 'neckwear': None, 'backwear': None, 'earwear': None}
 
 
 def dominant_color(rgba, exclude_white=False, chromatic=False):
@@ -58,6 +55,12 @@ def without_background(img):
     return Image.fromarray(a, 'RGBA')
 
 
+# GPT redraws a bit of arm, leg or forehead around a garment or accessory, in the template's
+# skin tone. The browser repaints that skin with the student's tone (flag "skin" in parts.json)
+# instead of erasing it: erased, it would uncover the template's magenta clothes.
+SKIN_UNDER = {'top', 'dress', 'bottom', 'shoes', 'headwear', 'eyewear', 'neckwear', 'backwear'}
+
+
 def export(src, dst_name, clear_background=False):
     img = Image.open(src).convert('RGBA')
     if clear_background:
@@ -78,8 +81,8 @@ def main():
     layers['body'] = {'kind': 'body', 'file': 'body.webp', 'x': bbox[0], 'y': bbox[1],
                       'w': body.width, 'h': body.height, 'role': 'skin', 'source': SKIN_SOURCE}
 
+    flags = {p['id']: {k: p[k] for k in ('clipsHair',) if p.get(k)} for p in manifest['parts']}
     sources = [(p['id'], p['kind'], PIECES / 'recortes' / f"{p['id']}.png", p['label']) for p in manifest['parts']]
-    sources += [(pid, kind, PIECES / rel, None) for pid, kind, rel in EXTRA]
     for pid, kind, path, label in sources:
         if not path.exists():
             continue
@@ -90,12 +93,15 @@ def main():
             source = SKIN_SOURCE
         elif role == 'eye':
             source = dominant_color(np.asarray(crop), exclude_white=True, chromatic=True)
-        elif role in ('hair', 'shoes'):
+        elif role in ('hair', 'top', 'bottom', 'shoes'):
+            # Clothes are drawn blue with white details: the blue family is what gets repainted.
             source = dominant_color(np.asarray(crop), exclude_white=True)
         elif role:
             source = dominant_color(np.asarray(crop))
         layers[pid] = {'kind': kind, 'label': label, 'file': f'{pid}.webp', 'x': bbox[0], 'y': bbox[1],
-                       'w': crop.width, 'h': crop.height, 'role': role, 'source': source}
+                       'w': crop.width, 'h': crop.height, 'role': role, 'source': source, **flags.get(pid, {})}
+        if kind in SKIN_UNDER:
+            layers[pid]['skin'] = SKIN_SOURCE
 
     doc = {'canvas': {'w': int(1024 * SCALE), 'h': int(1536 * SCALE)}, 'layers': layers}
     (OUT / 'parts.json').write_text(json.dumps(doc, ensure_ascii=False, indent=1))

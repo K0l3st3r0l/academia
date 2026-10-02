@@ -372,6 +372,44 @@
     {
       "id": "top-raglan",
       "name": "Polera raglán"
+    },
+    {
+      "id": "top-polera",
+      "name": "Polera"
+    },
+    {
+      "id": "top-polo",
+      "name": "Polo"
+    },
+    {
+      "id": "top-poleron",
+      "name": "Polerón",
+      "price": 60
+    },
+    {
+      "id": "top-chaqueta",
+      "name": "Chaqueta deportiva",
+      "price": 60
+    },
+    {
+      "id": "top-camisa",
+      "name": "Camisa",
+      "price": 40
+    },
+    {
+      "id": "top-sweater",
+      "name": "Sweater",
+      "price": 50
+    },
+    {
+      "id": "top-rayas",
+      "name": "Polera a rayas",
+      "price": 40
+    },
+    {
+      "id": "top-vestido",
+      "name": "Vestido",
+      "coversBottom": true
     }
   ],
   "topColors": [
@@ -424,6 +462,24 @@
     {
       "id": "bottom-short",
       "name": "Short"
+    },
+    {
+      "id": "bottom-jeans",
+      "name": "Jeans"
+    },
+    {
+      "id": "bottom-buzo",
+      "name": "Buzo",
+      "price": 50
+    },
+    {
+      "id": "bottom-falda",
+      "name": "Falda"
+    },
+    {
+      "id": "bottom-bermuda",
+      "name": "Bermuda",
+      "price": 40
     }
   ],
   "bottomColors": [
@@ -476,6 +532,25 @@
     {
       "id": "calzado-zapatillas",
       "name": "Zapatillas"
+    },
+    {
+      "id": "calzado-escolares",
+      "name": "Zapatos escolares"
+    },
+    {
+      "id": "calzado-botas",
+      "name": "Botas",
+      "price": 50
+    },
+    {
+      "id": "calzado-sandalias",
+      "name": "Sandalias",
+      "price": 30
+    },
+    {
+      "id": "calzado-altas",
+      "name": "Zapatillas altas",
+      "price": 50
     }
   ],
   "shoeColors": [
@@ -522,6 +597,113 @@
       "name": "Negro",
       "hex": "#1F2937",
       "price": 30
+    }
+  ],
+  "headwear": [
+    {
+      "id": "ninguno",
+      "name": "Ninguno"
+    },
+    {
+      "id": "cabeza-jockey",
+      "name": "Jockey",
+      "price": 60
+    },
+    {
+      "id": "cabeza-gorro-lana",
+      "name": "Gorro de lana",
+      "price": 50
+    },
+    {
+      "id": "cabeza-orejas-gato",
+      "name": "Cintillo de gato",
+      "price": 50
+    },
+    {
+      "id": "cabeza-corona",
+      "name": "Corona",
+      "price": 80
+    },
+    {
+      "id": "cabeza-flor",
+      "name": "Pinche de flor",
+      "price": 30
+    },
+    {
+      "id": "cabeza-sombrero",
+      "name": "Sombrero",
+      "price": 60
+    }
+  ],
+  "eyewear": [
+    {
+      "id": "ninguno",
+      "name": "Ninguno"
+    },
+    {
+      "id": "cara-lentes-redondos",
+      "name": "Lentes redondos"
+    },
+    {
+      "id": "cara-lentes-cuadrados",
+      "name": "Lentes rectangulares"
+    },
+    {
+      "id": "cara-lentes-sol",
+      "name": "Lentes de sol",
+      "price": 40
+    }
+  ],
+  "neckwear": [
+    {
+      "id": "ninguno",
+      "name": "Ninguno"
+    },
+    {
+      "id": "cuello-bufanda",
+      "name": "Bufanda",
+      "price": 40
+    },
+    {
+      "id": "cuello-humita",
+      "name": "Humita",
+      "price": 30
+    },
+    {
+      "id": "cuello-medalla",
+      "name": "Medalla",
+      "price": 80
+    }
+  ],
+  "backwear": [
+    {
+      "id": "ninguno",
+      "name": "Ninguno"
+    },
+    {
+      "id": "espalda-mochila",
+      "name": "Mochila",
+      "price": 40
+    },
+    {
+      "id": "espalda-capa",
+      "name": "Capa",
+      "price": 80
+    }
+  ],
+  "earwear": [
+    {
+      "id": "ninguno",
+      "name": "Ninguno"
+    },
+    {
+      "id": "orejas-audifono",
+      "name": "Audífono"
+    },
+    {
+      "id": "orejas-audifonos",
+      "name": "Audífonos de música",
+      "price": 50
     }
   ]
 }

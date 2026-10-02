@@ -130,7 +130,7 @@
    "x": 96,
    "y": 13,
    "w": 316,
-   "h": 340,
+   "h": 255,
    "role": "hair",
    "source": [
     112,
@@ -760,7 +760,7 @@
   },
   "top-raglan": {
    "kind": "top",
-   "label": null,
+   "label": "Polera raglán",
    "file": "top-raglan.webp",
    "x": 142,
    "y": 264,
@@ -768,14 +768,179 @@
    "h": 183,
    "role": "top",
    "source": [
-    252,
-    252,
+    115,
+    50,
+    245
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "top-polera": {
+   "kind": "top",
+   "label": "Polera",
+   "file": "top-polera.webp",
+   "x": 141,
+   "y": 264,
+   "w": 218,
+   "h": 183,
+   "role": "top",
+   "source": [
+    55,
+    131,
+    251
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "top-polo": {
+   "kind": "top",
+   "label": "Polo",
+   "file": "top-polo.webp",
+   "x": 141,
+   "y": 252,
+   "w": 219,
+   "h": 196,
+   "role": "top",
+   "source": [
+    43,
+    126,
+    251
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "top-poleron": {
+   "kind": "top",
+   "label": "Polerón",
+   "file": "top-poleron.webp",
+   "x": 119,
+   "y": 248,
+   "w": 262,
+   "h": 206,
+   "role": "top",
+   "source": [
+    49,
+    124,
+    248
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "top-chaqueta": {
+   "kind": "top",
+   "label": "Chaqueta deportiva",
+   "file": "top-chaqueta.webp",
+   "x": 121,
+   "y": 249,
+   "w": 260,
+   "h": 205,
+   "role": "top",
+   "source": [
+    53,
+    123,
     252
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "top-camisa": {
+   "kind": "top",
+   "label": "Camisa",
+   "file": "top-camisa.webp",
+   "x": 136,
+   "y": 253,
+   "w": 229,
+   "h": 200,
+   "role": "top",
+   "source": [
+    44,
+    124,
+    246
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "top-sweater": {
+   "kind": "top",
+   "label": "Sweater",
+   "file": "top-sweater.webp",
+   "x": 122,
+   "y": 258,
+   "w": 255,
+   "h": 189,
+   "role": "top",
+   "source": [
+    52,
+    123,
+    248
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "top-rayas": {
+   "kind": "top",
+   "label": "Polera a rayas",
+   "file": "top-rayas.webp",
+   "x": 119,
+   "y": 264,
+   "w": 262,
+   "h": 185,
+   "role": "top",
+   "source": [
+    34,
+    130,
+    245
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "top-vestido": {
+   "kind": "dress",
+   "label": "Vestido",
+   "file": "top-vestido.webp",
+   "x": 137,
+   "y": 263,
+   "w": 226,
+   "h": 294,
+   "role": "top",
+   "source": [
+    48,
+    125,
+    235
+   ],
+   "skin": [
+    244,
+    156,
+    98
    ]
   },
   "bottom-short": {
    "kind": "bottom",
-   "label": null,
+   "label": "Short",
    "file": "bottom-short.webp",
    "x": 167,
    "y": 440,
@@ -786,22 +951,441 @@
     8,
     189,
     175
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "bottom-jeans": {
+   "kind": "bottom",
+   "label": "Jeans",
+   "file": "bottom-jeans.webp",
+   "x": 160,
+   "y": 439,
+   "w": 184,
+   "h": 243,
+   "role": "bottom",
+   "source": [
+    44,
+    121,
+    244
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "bottom-buzo": {
+   "kind": "bottom",
+   "label": "Buzo",
+   "file": "bottom-buzo.webp",
+   "x": 157,
+   "y": 440,
+   "w": 187,
+   "h": 226,
+   "role": "bottom",
+   "source": [
+    52,
+    130,
+    244
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "bottom-falda": {
+   "kind": "bottom",
+   "label": "Falda",
+   "file": "bottom-falda.webp",
+   "x": 151,
+   "y": 439,
+   "w": 198,
+   "h": 129,
+   "role": "bottom",
+   "source": [
+    30,
+    114,
+    253
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "bottom-bermuda": {
+   "kind": "bottom",
+   "label": "Bermuda",
+   "file": "bottom-bermuda.webp",
+   "x": 159,
+   "y": 440,
+   "w": 182,
+   "h": 136,
+   "role": "bottom",
+   "source": [
+    48,
+    124,
+    246
+   ],
+   "skin": [
+    244,
+    156,
+    98
    ]
   },
   "calzado-zapatillas": {
    "kind": "shoes",
-   "label": null,
+   "label": "Zapatillas",
    "file": "calzado-zapatillas.webp",
-   "x": 116,
-   "y": 626,
-   "w": 267,
+   "x": 120,
+   "y": 614,
+   "w": 261,
+   "h": 116,
+   "role": "shoes",
+   "source": [
+    27,
+    117,
+    252
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "calzado-escolares": {
+   "kind": "shoes",
+   "label": "Zapatos escolares",
+   "file": "calzado-escolares.webp",
+   "x": 115,
+   "y": 624,
+   "w": 268,
+   "h": 106,
+   "role": "shoes",
+   "source": [
+    3,
+    104,
+    210
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "calzado-botas": {
+   "kind": "shoes",
+   "label": "Botas",
+   "file": "calzado-botas.webp",
+   "x": 117,
+   "y": 621,
+   "w": 270,
+   "h": 108,
+   "role": "shoes",
+   "source": [
+    52,
+    110,
+    219
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "calzado-sandalias": {
+   "kind": "shoes",
+   "label": "Sandalias",
+   "file": "calzado-sandalias.webp",
+   "x": 120,
+   "y": 649,
+   "w": 260,
+   "h": 88,
+   "role": "shoes",
+   "source": [
+    1,
+    100,
+    244
+   ],
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "calzado-altas": {
+   "kind": "shoes",
+   "label": "Zapatillas altas",
+   "file": "calzado-altas.webp",
+   "x": 115,
+   "y": 627,
+   "w": 270,
    "h": 102,
    "role": "shoes",
    "source": [
-    121,
-    54,
-    234
+    52,
+    125,
+    222
+   ],
+   "skin": [
+    244,
+    156,
+    98
    ]
+  },
+  "cabeza-jockey": {
+   "kind": "headwear",
+   "label": "Jockey",
+   "file": "cabeza-jockey.webp",
+   "x": 159,
+   "y": 54,
+   "w": 186,
+   "h": 107,
+   "role": null,
+   "source": null,
+   "clipsHair": true,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cabeza-gorro-lana": {
+   "kind": "headwear",
+   "label": "Gorro de lana",
+   "file": "cabeza-gorro-lana.webp",
+   "x": 153,
+   "y": 9,
+   "w": 196,
+   "h": 161,
+   "role": null,
+   "source": null,
+   "clipsHair": true,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cabeza-orejas-gato": {
+   "kind": "headwear",
+   "label": "Cintillo de gato",
+   "file": "cabeza-orejas-gato.webp",
+   "x": 162,
+   "y": 55,
+   "w": 182,
+   "h": 108,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cabeza-corona": {
+   "kind": "headwear",
+   "label": "Corona",
+   "file": "cabeza-corona.webp",
+   "x": 215,
+   "y": 30,
+   "w": 90,
+   "h": 61,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cabeza-flor": {
+   "kind": "headwear",
+   "label": "Pinche de flor",
+   "file": "cabeza-flor.webp",
+   "x": 306,
+   "y": 100,
+   "w": 45,
+   "h": 54,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cabeza-sombrero": {
+   "kind": "headwear",
+   "label": "Sombrero",
+   "file": "cabeza-sombrero.webp",
+   "x": 90,
+   "y": 31,
+   "w": 327,
+   "h": 163,
+   "role": null,
+   "source": null,
+   "clipsHair": true,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cara-lentes-redondos": {
+   "kind": "eyewear",
+   "label": "Lentes redondos",
+   "file": "cara-lentes-redondos.webp",
+   "x": 169,
+   "y": 152,
+   "w": 161,
+   "h": 64,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cara-lentes-cuadrados": {
+   "kind": "eyewear",
+   "label": "Lentes rectangulares",
+   "file": "cara-lentes-cuadrados.webp",
+   "x": 168,
+   "y": 154,
+   "w": 164,
+   "h": 57,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cara-lentes-sol": {
+   "kind": "eyewear",
+   "label": "Lentes de sol",
+   "file": "cara-lentes-sol.webp",
+   "x": 169,
+   "y": 157,
+   "w": 161,
+   "h": 53,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cuello-bufanda": {
+   "kind": "neckwear",
+   "label": "Bufanda",
+   "file": "cuello-bufanda.webp",
+   "x": 195,
+   "y": 242,
+   "w": 134,
+   "h": 139,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cuello-humita": {
+   "kind": "neckwear",
+   "label": "Humita",
+   "file": "cuello-humita.webp",
+   "x": 217,
+   "y": 257,
+   "w": 70,
+   "h": 39,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "cuello-medalla": {
+   "kind": "neckwear",
+   "label": "Medalla",
+   "file": "cuello-medalla.webp",
+   "x": 209,
+   "y": 264,
+   "w": 83,
+   "h": 117,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "espalda-mochila": {
+   "kind": "backwear",
+   "label": "Mochila",
+   "file": "espalda-mochila.webp",
+   "x": 160,
+   "y": 256,
+   "w": 179,
+   "h": 188,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "espalda-capa": {
+   "kind": "backwear",
+   "label": "Capa",
+   "file": "espalda-capa.webp",
+   "x": 53,
+   "y": 254,
+   "w": 406,
+   "h": 326,
+   "role": null,
+   "source": null,
+   "skin": [
+    244,
+    156,
+    98
+   ]
+  },
+  "orejas-audifono": {
+   "kind": "earwear",
+   "label": "Audífono",
+   "file": "orejas-audifono.webp",
+   "x": 138,
+   "y": 159,
+   "w": 46,
+   "h": 53,
+   "role": null,
+   "source": null
+  },
+  "orejas-audifonos": {
+   "kind": "earwear",
+   "label": "Audífonos de música",
+   "file": "orejas-audifonos.webp",
+   "x": 134,
+   "y": 124,
+   "w": 235,
+   "h": 122,
+   "role": null,
+   "source": null
   }
  }
 }

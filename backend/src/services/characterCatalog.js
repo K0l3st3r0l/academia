@@ -31,7 +31,14 @@ const CATEGORY_FIELDS = {
   bottomColor: 'bottomColors',
   shoes: 'shoes',
   shoeColor: 'shoeColors',
+  headwear: 'headwear',
+  eyewear: 'eyewear',
+  neckwear: 'neckwear',
+  backwear: 'backwear',
+  earwear: 'earwear',
 };
+// Accessory slots may be left out: missing means none.
+const OPTIONAL_FIELDS = new Set(['headwear', 'eyewear', 'neckwear', 'backwear', 'earwear']);
 
 function getCatalog() {
   return catalog;
@@ -41,6 +48,7 @@ function validateLayers(layers) {
   const errors = [];
   for (const [field, catalogKey] of Object.entries(CATEGORY_FIELDS)) {
     const value = layers[field];
+    if (!value && OPTIONAL_FIELDS.has(field)) continue;
     if (!value) {
       errors.push(`${field} es requerido`);
       continue;

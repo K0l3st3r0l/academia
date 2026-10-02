@@ -20,3 +20,4 @@ graphify-out/
 !/art/piezas/maestra.png
 !/art/piezas/plantilla-ropa-nino.png
 __pycache__/
+!/art/piezas/maestra-cara.png
