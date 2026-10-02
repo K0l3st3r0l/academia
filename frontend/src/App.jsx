@@ -10,6 +10,7 @@ import StudentGame from './pages/StudentGame';
 import QuestionBank from './pages/QuestionBank';
 import AlumnoHome from './pages/AlumnoHome';
 import CharacterEditor from './pages/CharacterEditor';
+import PetPage from './pages/PetPage';
 import CreateStudentPassword from './pages/CreateStudentPassword';
 
 function ProtectedTeacher({ children }) {
@@ -45,6 +46,10 @@ export default function App() {
           <Route
             path="/alumno/personaje"
             element={<ProtectedStudent><CharacterEditor /></ProtectedStudent>}
+          />
+          <Route
+            path="/alumno/companero"
+            element={<ProtectedStudent><PetPage /></ProtectedStudent>}
           />
           <Route path="/projector/:code" element={<ProjectorView />} />
           <Route

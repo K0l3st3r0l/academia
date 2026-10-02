@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getCharacterNames, reviewCharacterName } from '../api/client';
+import { getCharacterNames, reviewCharacterName, getPetNames, reviewPetName } from '../api/client';
 
 const TABS = [
   { value: 'pending', label: 'Por revisar' },
@@ -11,8 +11,14 @@ function formatDate(iso) {
   return iso ? new Date(iso).toLocaleString('es-CL', { dateStyle: 'short', timeStyle: 'short' }) : '—';
 }
 
-// Admin only: every character name students type goes through here.
-export default function CharacterNamesReview() {
+const SOURCES = {
+  character: { load: getCharacterNames, review: reviewCharacterName },
+  pet: { load: getPetNames, review: reviewPetName },
+};
+
+// Admin only: every name students type (for their character or their pet) goes through here.
+export default function CharacterNamesReview({ kind = 'character' }) {
+  const { load, review: save } = SOURCES[kind];
   const [status, setStatus] = useState('pending');
   const [names, setNames] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,17 +29,17 @@ export default function CharacterNamesReview() {
     let cancelled = false;
     setLoading(true);
     setError('');
-    getCharacterNames(status)
+    load(status)
       .then(res => { if (!cancelled) setNames(res.data.names); })
       .catch(() => { if (!cancelled) setError('No se pudieron cargar los nombres.'); })
       .finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
-  }, [status]);
+  }, [status, load]);
 
   const review = async (studentId, next) => {
     setBusy(studentId);
     try {
-      await reviewCharacterName(studentId, next);
+      await save(studentId, next);
       setNames(prev => prev.filter(n => n.student_id !== studentId));
     } catch (err) {
       setError(err.response?.data?.error || 'No se pudo guardar la revisión.');
@@ -73,7 +79,7 @@ export default function CharacterNamesReview() {
               <div>
                 <p className="font-bold text-white text-lg">{n.name}</p>
                 <p className="text-gray-400 text-xs">
-                  {n.first_name} {n.last_name} · {n.course_name} · {formatDate(n.name_set_at)}
+                  {n.first_name} {n.last_name} · {n.course_name}{n.species ? ` · ${n.species}` : ''} · {formatDate(n.name_set_at)}
                 </p>
               </div>
               <div className="flex gap-2">

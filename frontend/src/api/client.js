@@ -109,3 +109,28 @@ export const checkPasswordLink = (token) =>
 
 export const createStudentPassword = (token, password) =>
   client.post('/api/student-account/crear', { token, password });
+
+export const getPetCatalog = () =>
+  studentClient.get('/api/pets/catalog');
+
+export const getPetMe = () =>
+  studentClient.get('/api/pets/me');
+
+export const adoptPet = (species, name) =>
+  studentClient.post('/api/pets/me', { species, name });
+
+export const changePetSpecies = (species) =>
+  studentClient.put('/api/pets/me/species', { species });
+
+export const renamePet = (name) =>
+  studentClient.put('/api/pets/me/name', { name });
+
+// Records that the student already saw the pet's current stage (the growth is celebrated once).
+export const markPetSeen = () =>
+  studentClient.post('/api/pets/me/seen');
+
+export const getPetNames = (status) =>
+  client.get('/api/pets/names', { params: { status } });
+
+export const reviewPetName = (studentId, status) =>
+  client.patch(`/api/pets/names/${studentId}`, { status });

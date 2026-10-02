@@ -1,10 +1,31 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats } from '../api/client';
+import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats, getPetCatalog, getPetMe, markPetSeen } from '../api/client';
 import { getStudentUser, studentLogout } from '../api/studentAuth';
 import CharacterView from '../components/character/CharacterView';
 import { layersToLook } from '../components/character/look';
 import AttributeSheet from '../components/AttributeSheet';
+import PetView from '../components/pet/PetView';
+
+// Shown once per new stage: the pet grew since the student last looked.
+function GrowthCelebration({ pet, catalog, stage, onClose }) {
+  const label = catalog.stages.find(s => s.stage === stage)?.label ?? '';
+  return (
+    <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4" role="dialog" aria-modal="true" aria-labelledby="growth-title">
+      <div className="bg-card rounded-2xl p-6 shadow-2xl max-w-xs w-full text-center animate-pop">
+        <p id="growth-title" className="text-2xl font-black text-gold">¡{pet.name} creció!</p>
+        <div className="flex justify-center my-3">
+          <PetView species={pet.species} stage={stage} size={180} catalog={catalog} label={pet.name} hop />
+        </div>
+        <p className="text-white font-semibold">Ahora es {label.toLowerCase()}.</p>
+        <p className="text-gray-400 text-sm mt-1">Creció contigo, por cada día que jugaste.</p>
+        <button type="button" onClick={onClose} autoFocus className="mt-5 w-full bg-brand hover:bg-brand-dark text-white font-black py-3 rounded-xl text-lg">
+          ¡Genial!
+        </button>
+      </div>
+    </div>
+  );
+}
 
 export default function AlumnoHome() {
   const [student, setStudent] = useState(getStudentUser());
@@ -12,6 +33,8 @@ export default function AlumnoHome() {
   const [catalog, setCatalog] = useState(null);
   const [character, setCharacter] = useState(null);
   const [attributes, setAttributes] = useState(null);
+  const [petCatalog, setPetCatalog] = useState(null);
+  const [petInfo, setPetInfo] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,7 +53,17 @@ export default function AlumnoHome() {
     getCharacterStats()
       .then(res => setAttributes(res.data.attributes))
       .catch(() => setAttributes(null));
+    getPetCatalog().then(res => setPetCatalog(res.data)).catch(() => {});
+    getPetMe().then(res => setPetInfo(res.data)).catch(() => setPetInfo(null));
   }, []);
+
+  const pet = petInfo?.pet;
+  const growth = petInfo?.growth;
+  const grew = pet && growth && growth.stage > pet.stage_seen;
+  const closeCelebration = () => {
+    setPetInfo(info => ({ ...info, pet: { ...info.pet, stage_seen: info.growth.stage } }));
+    markPetSeen().catch(() => {});
+  };
 
   const handleLogout = () => {
     studentLogout();
@@ -95,6 +128,47 @@ export default function AlumnoHome() {
           )}
         </div>
 
+        {petCatalog && petInfo && (
+          <div className="bg-card rounded-2xl p-6 shadow-xl text-center">
+            {pet ? (
+              <>
+                <div className="flex justify-center">
+                  <PetView species={pet.species} stage={growth.stage} size={150} catalog={petCatalog} label={pet.name} />
+                </div>
+                <p className="text-2xl font-black text-white mt-1">{pet.name}</p>
+                <p className="text-gray-400 text-sm">
+                  {petCatalog.stages.find(s => s.stage === growth.stage)?.label}
+                  {growth.nextStage ? ` · crece en ${growth.daysToNext} ${growth.daysToNext === 1 ? 'día' : 'días'} de juego` : ''}
+                </p>
+                {pet.name_status === 'rejected' && (
+                  <p className="text-wrong text-sm mt-1">El nombre de tu compañero no fue aprobado. Elige otro: es gratis.</p>
+                )}
+                <Link
+                  to="/alumno/companero"
+                  className="inline-block mt-3 bg-surface hover:bg-gray-800 text-brand-light font-semibold px-5 py-2 rounded-xl transition-colors"
+                >
+                  Ver a tu compañero
+                </Link>
+              </>
+            ) : (
+              <>
+                <div className="flex justify-center gap-1 mb-2" aria-hidden="true">
+                  {['pudu', 'chungungo', 'pinguino'].map(s => (
+                    <PetView key={s} species={s} stage={1} size={70} catalog={petCatalog} idle={false} />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-3">Un compañero te acompañará en tus aventuras y crecerá contigo.</p>
+                <Link
+                  to="/alumno/companero"
+                  className="inline-block bg-brand hover:bg-brand-dark text-white font-black px-6 py-3 rounded-xl text-lg transition-colors"
+                >
+                  ¡Elige tu compañero!
+                </Link>
+              </>
+            )}
+          </div>
+        )}
+
         {character && <AttributeSheet attributes={attributes} />}
 
         <p className="text-center text-gray-500 text-sm">
@@ -102,6 +176,9 @@ export default function AlumnoHome() {
           <Link to="/?modo=clase" className="text-brand-light underline">Entra con el código de sala</Link>
         </p>
       </main>
+      {grew && petCatalog && (
+        <GrowthCelebration pet={pet} catalog={petCatalog} stage={growth.stage} onClose={closeCelebration} />
+      )}
     </div>
   );
 }

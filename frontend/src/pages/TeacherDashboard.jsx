@@ -19,7 +19,10 @@ const SECTIONS = [
   { id: 'historial', label: 'Historial' },
   { id: 'pins', label: 'Accesos de alumnos' },
 ];
-const ADMIN_SECTIONS = [{ id: 'nombres', label: 'Nombres de personajes' }];
+const ADMIN_SECTIONS = [
+  { id: 'nombres', label: 'Nombres de personajes' },
+  { id: 'nombres-companeros', label: 'Nombres de compañeros' },
+];
 
 const OPTION_CLASS = 'bg-card hover:bg-gray-800 border border-gray-700 hover:border-brand rounded-xl px-3 py-3 text-sm font-semibold text-gray-300 hover:text-white text-center transition-colors';
 
@@ -409,6 +412,13 @@ export default function TeacherDashboard() {
             <h2 className="text-xl font-bold mb-2">Nombres de personajes</h2>
             <p className="text-gray-400 text-sm mb-4">Los alumnos eligen el nombre libremente; aquí lo apruebas o lo rechazas.</p>
             <CharacterNamesReview />
+          </section>
+        )}
+        {isAdmin && (
+          <section id="nombres-companeros" className="bg-card rounded-2xl p-6 shadow-xl mt-6 scroll-mt-4">
+            <h2 className="text-xl font-bold mb-2">Nombres de compañeros</h2>
+            <p className="text-gray-400 text-sm mb-4">El nombre que cada alumno le pone a su mascota compañera.</p>
+            <CharacterNamesReview kind="pet" />
           </section>
         )}
       </main>
