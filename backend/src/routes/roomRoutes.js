@@ -35,7 +35,7 @@ router.post('/', authenticateToken, requireTeacher, async (req, res) => {
 
     // Student list for the projector/teacher panel
     const { rows: roomStudents } = await pool.query(
-      'SELECT id, first_name, last_name, tokens_balance FROM local_students WHERE course_name = $1 AND active ORDER BY last_name, first_name',
+      'SELECT id, first_name, last_name, tokens_balance FROM local_students WHERE course_name = $1 AND active AND NOT is_test ORDER BY last_name, first_name',
       [course_name]
     );
     if (roomStudents.length === 0) {

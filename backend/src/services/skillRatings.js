@@ -56,10 +56,11 @@ async function rateUnratedAnswers() {
   try {
     await client.query('BEGIN');
     const { rows: answers } = await client.query(`
-      SELECT a.id, a.student_id, a.is_correct, a.answered_at,
+      SELECT a.id, a.student_id, a.is_correct, a.answered_at, s.is_test,
              q.id AS question_id, q.subject, q.grade_level, q.oa_code, q.difficulty, q.rating, q.rating_answers
       FROM student_answers a
       JOIN questions q ON q.id = a.question_id
+      JOIN local_students s ON s.id = a.student_id
       WHERE a.rated_at IS NULL AND a.student_id IS NOT NULL
       ORDER BY a.answered_at, a.session_id, a.question_index
       FOR UPDATE OF a SKIP LOCKED
@@ -83,8 +84,11 @@ async function rateUnratedAnswers() {
       const oa = a.oa_code ? await loadSkill(client, skills, a.student_id, a.subject, a.grade_level, a.oa_code) : null;
 
       const next = rateAnswer({ subject, oa, question, correct: a.is_correct });
-      question.rating = next.question;
-      question.answers += 1;
+      // A tester answers on purpose right or wrong: their own ratings move, the question's don't.
+      if (!a.is_test) {
+        question.rating = next.question;
+        question.answers += 1;
+      }
       for (const [skill, rating] of [[subject, next.subject], [oa, next.oa]]) {
         if (!skill) continue;
         skill.rating = rating;
@@ -133,11 +137,12 @@ async function findSuspiciousQuestions({ minAnswers = 10 } = {}) {
   const { rows } = await pool.query(`
     WITH per_question AS (
       SELECT question_id, COUNT(*)::int AS answers, AVG(is_correct::int) AS pct_correct
-      FROM student_answers WHERE question_id IS NOT NULL
+      FROM student_answers WHERE question_id IS NOT NULL AND student_id NOT IN (SELECT id FROM local_students WHERE is_test)
       GROUP BY question_id HAVING COUNT(*) >= $1
     ), top_wrong AS (
       SELECT DISTINCT ON (question_id) question_id, answer, COUNT(*)::int AS times
       FROM student_answers WHERE question_id IS NOT NULL AND NOT is_correct
+        AND student_id NOT IN (SELECT id FROM local_students WHERE is_test)
       GROUP BY question_id, answer
       ORDER BY question_id, COUNT(*) DESC
     )

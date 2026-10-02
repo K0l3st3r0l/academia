@@ -38,7 +38,7 @@ router.get('/', authenticateToken, requireTeacher, async (req, res) => {
     const { rows } = await pool.query(
       `SELECT id, first_name, last_name, institutional_email, (pin_hash IS NOT NULL) AS has_pin,
               (password_hash IS NOT NULL) AS has_password, last_login_at
-       FROM local_students WHERE course_name = $1 AND active ORDER BY last_name, first_name`,
+       FROM local_students WHERE course_name = $1 AND active AND NOT is_test ORDER BY last_name, first_name`,
       [course_name]
     );
     res.json({ students: rows, sync });
@@ -78,7 +78,7 @@ router.post('/reset-pins-bulk', authenticateToken, requireTeacher, async (req, r
 
   try {
     const { rows: students } = await pool.query(
-      'SELECT id, first_name, last_name FROM local_students WHERE course_name = $1 AND active ORDER BY last_name, first_name',
+      'SELECT id, first_name, last_name FROM local_students WHERE course_name = $1 AND active AND NOT is_test ORDER BY last_name, first_name',
       [course_name]
     );
     if (!students.length) return res.status(404).json({ error: `No hay alumnos sincronizados para el curso "${course_name}"` });

@@ -73,6 +73,22 @@ describe('puntaje de dificultad tipo Elo', () => {
     expect(s2Oa.rating).toBeLessThan(0);
   });
 
+  it('las respuestas de una cuenta de prueba mueven su puntaje, no la dificultad de la pregunta', async () => {
+    const question = await createQuestion(pool, { subject: 'matematica', gradeLevel: '5b', options: OPTIONS, correct: 'Uno', oaCode: 'OA21' });
+    const tester = await createStudent(pool, { courseName: '5° Básico A', isTest: true });
+    await seedAnswers({ question, students: [tester], answersPerStudent: [['Dos', 'Tres']] });
+
+    expect(await rateUnratedAnswers()).toBe(2);
+
+    const { rows: [q] } = await pool.query('SELECT rating, rating_answers FROM questions WHERE id = $1', [question.id]);
+    expect(q.rating_answers).toBe(0);
+    const { rows: [skill] } = await pool.query(
+      "SELECT answers, rating FROM student_skill_ratings WHERE student_id = $1 AND oa_code = 'OA21'", [tester.id]
+    );
+    expect(skill.answers).toBe(2);
+    expect(skill.rating).toBeLessThan(0);
+  });
+
   it('marca para revisión una pregunta bajo el azar con una respuesta incorrecta dominante', async () => {
     const question = await createQuestion(pool, { subject: 'matematica', gradeLevel: '5b', options: ['10', '100', '1', '1000'], correct: '10' });
     const students = await Promise.all(Array.from({ length: 10 }, () => createStudent(pool, { courseName: '5° Básico A' })));

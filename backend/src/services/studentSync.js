@@ -32,7 +32,7 @@ async function syncStudents(anahuacToken, courseName) {
   try {
     await client.query('BEGIN');
 
-    const { rows: known } = await client.query('SELECT anahuac_id, active FROM local_students');
+    const { rows: known } = await client.query('SELECT anahuac_id, active FROM local_students WHERE NOT is_test');
     const knownActive = new Map(known.map(r => [r.anahuac_id, r.active]));
     const result = { added: 0, reactivated: 0, withdrawn: 0, withdrawalSkipped: false };
 

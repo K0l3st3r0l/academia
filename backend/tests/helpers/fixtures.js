@@ -24,8 +24,8 @@ export async function createTeacher(pool, overrides = {}) {
 
 export async function createStudent(pool, overrides = {}) {
   const { rows } = await pool.query(`
-    INSERT INTO local_students (anahuac_id, rut, first_name, last_name, course_name, tokens_balance)
-    VALUES ($1, $2, $3, $4, $5, $6)
+    INSERT INTO local_students (anahuac_id, rut, first_name, last_name, course_name, tokens_balance, is_test)
+    VALUES ($1, $2, $3, $4, $5, $6, $7)
     RETURNING *
   `, [
     overrides.anahuacId ?? Math.floor(Math.random() * 1_000_000_000),
@@ -34,6 +34,7 @@ export async function createStudent(pool, overrides = {}) {
     overrides.lastName ?? unique(),
     overrides.courseName,
     overrides.tokensBalance ?? 0,
+    overrides.isTest ?? false,
   ]);
   return rows[0];
 }

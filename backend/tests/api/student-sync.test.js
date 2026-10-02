@@ -165,6 +165,29 @@ describe('sincronización de alumnos con Anahuac', () => {
   });
 });
 
+describe('cuenta de prueba', () => {
+  it('la sincronización no la retira, las listas del profesor no la muestran y puede entrar a la sala', async () => {
+    const token = await loginTeacher();
+    const real = anahuacStudent(701, { rut: '12.345.678-5' });
+    anahuacReturns([real]);
+    await openPinList(token);
+    const tester = await createStudent(pool, { anahuacId: -1, courseName: COURSE, rut: '11.111.111-1', isTest: true });
+
+    const pins = await openPinList(token);
+    expect(pins.body.sync).toMatchObject({ ok: true, withdrawn: 0 });
+    expect(pins.body.students.map(s => s.id)).not.toContain(tester.id);
+    expect(await studentByAnahuacId(-1)).toMatchObject({ active: true });
+
+    const room = await request(app)
+      .post('/api/rooms')
+      .set('Authorization', `Bearer ${token}`)
+      .send({ course_name: COURSE, subject: 'matematica' });
+    expect(room.body.students.map(s => s.id)).not.toContain(tester.id);
+    const join = await request(app).post(`/api/rooms/${room.body.room.code}/join`).send({ rut: '11111111-1' });
+    expect(join.status).toBe(200);
+  });
+});
+
 describe('alumno retirado', () => {
   it('no puede iniciar sesión aunque su PIN sea correcto', async () => {
     const student = await createStudent(pool, { courseName: COURSE, rut: '12.345.678-5' });
