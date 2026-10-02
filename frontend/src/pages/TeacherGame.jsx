@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { SOCKET_URL, closeRoom, getCurriculum } from '../api/client';
 import RoundSettings from '../components/RoundSettings';
 import RoundReport from '../components/RoundReport';
+import StudentAvatar from '../components/character/StudentAvatar';
 import { subjectLabel } from '../utils/subjects';
 
 const OPTION_COLORS = ['bg-blue-600', 'bg-orange-500', 'bg-green-600', 'bg-red-600'];
@@ -245,7 +246,8 @@ export default function TeacherGame() {
             </h3>
             <div className="flex flex-wrap gap-2">
               {participants.map(p => (
-                <span key={p.studentId} className="bg-brand/30 text-brand-light px-3 py-1 rounded-full text-sm font-semibold">
+                <span key={p.studentId} className="bg-brand/30 text-brand-light pl-1 pr-3 py-1 rounded-full text-sm font-semibold flex items-center gap-2">
+                  <StudentAvatar avatar={p.avatar} name={p.name} size={28} />
                   {p.name}
                 </span>
               ))}
@@ -399,8 +401,9 @@ export default function TeacherGame() {
               <ol className="space-y-1">
                 {leaderboard.slice(0, 5).map(p => (
                   <li key={p.studentId} className="flex items-center justify-between text-sm">
-                    <span>
-                      <span className="text-gray-500 mr-2">#{p.rank}</span>
+                    <span className="flex items-center gap-2">
+                      <span className="text-gray-500 w-6">#{p.rank}</span>
+                      <StudentAvatar avatar={p.avatar} name={p.name} size={24} />
                       {p.name}
                     </span>
                     <span className="font-bold text-gold">{p.score}🪙</span>
@@ -428,10 +431,11 @@ export default function TeacherGame() {
             <ol className="space-y-2">
               {leaderboard.map(p => (
                 <li key={p.studentId} className="flex items-center justify-between">
-                  <span>
-                    <span className={`font-black mr-2 ${p.rank === 1 ? 'text-gold' : p.rank === 2 ? 'text-gray-300' : p.rank === 3 ? 'text-orange-400' : 'text-gray-500'}`}>
+                  <span className="flex items-center gap-2">
+                    <span className={`font-black w-8 ${p.rank === 1 ? 'text-gold' : p.rank === 2 ? 'text-gray-300' : p.rank === 3 ? 'text-orange-400' : 'text-gray-500'}`}>
                       #{p.rank}
                     </span>
+                    <StudentAvatar avatar={p.avatar} name={p.name} size={32} />
                     {p.name}
                   </span>
                   <span className="font-bold text-gold">{p.score} tokens</span>

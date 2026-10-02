@@ -569,6 +569,43 @@ describe('otra ronda en la misma sala', () => {
   });
 });
 
+describe('personaje del alumno en la sala', () => {
+  it('la lista de conectados y la clasificación traen el personaje, o null si no tiene', async () => {
+    const { teacher, student1, student2, room } = await seedSingleQuestionGame({ subject: 'matematica' });
+    const layers = { skinTone: 'piel-3', hairStyle: 'pelo-afro' };
+    await pool.query("INSERT INTO characters (student_id, layers, name) VALUES ($1, $2, 'Puma Veloz')", [student1.id, JSON.stringify(layers)]);
+    const token = signToken({ id: teacher.id, roles: ['teacher'] });
+
+    const teacherSocket = await connectClient();
+    await teacherJoin(teacherSocket, token, room.code);
+    const s1 = await connectClient();
+    const s2 = await connectClient();
+    // Join events can arrive in any order: wait for the list that has both students.
+    const participantsP = new Promise(resolve => {
+      teacherSocket.on('room:participants', data => { if (data.participants.length === 2) resolve(data); });
+    });
+    await studentJoin(s1, room.code, student1.id, 'Estudiante Uno');
+    await studentJoin(s2, room.code, student2.id, 'Estudiante Dos');
+    const { participants } = await participantsP;
+    expect(participants.find(p => p.name === 'Estudiante Uno').avatar).toEqual(layers);
+    expect(participants.find(p => p.name === 'Estudiante Dos').avatar).toBeNull();
+
+    const questionP = once(s1, 'game:question');
+    teacherSocket.emit('game:start', { roomCode: room.code });
+    await questionP;
+    const revealP = once(teacherSocket, 'game:reveal');
+    s1.emit('game:answer', { roomCode: room.code, answer: 'Uno' });
+    s2.emit('game:answer', { roomCode: room.code, answer: 'Dos' });
+    const reveal = await revealP;
+    expect(reveal.leaderboard[0]).toMatchObject({ name: 'Estudiante Uno', avatar: layers });
+
+    const endP = once(teacherSocket, 'game:end');
+    teacherSocket.emit('game:stop', { roomCode: room.code });
+    await endP;
+    for (const socket of [teacherSocket, s1, s2]) socket.disconnect();
+  });
+});
+
 describe('vista del docente o proyector abierta a mitad de ronda', () => {
   // Listeners go up before the join: the catch-up events follow room:joined right away.
   function joinAndCollect(socket, event, payload, events) {

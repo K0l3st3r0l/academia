@@ -125,6 +125,7 @@ export const VIEWS = {
   full: { x: 0, y: 0, w: 512, h: 768 },
   portrait: { x: 96, y: 0, w: 320, h: 330 },
   face: { x: 160, y: 124, w: 192, h: 136 },
+  head: { x: 131, y: 24, w: 250, h: 250 },
 };
 
 export async function drawCharacter(canvas, look, { view: viewName = 'full' } = {}) {

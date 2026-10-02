@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { SOCKET_URL } from '../api/client';
+import StudentAvatar from '../components/character/StudentAvatar';
 
 const OPTION_COLORS = [
   'bg-blue-600 hover:bg-blue-500 active:bg-blue-700',
@@ -337,7 +338,11 @@ export default function StudentGame() {
                   key={p.studentId}
                   className={`flex justify-between items-center px-2 py-1 rounded-lg ${isMe ? 'bg-brand/20 text-brand-light' : 'text-gray-300'}`}
                 >
-                  <span><span className="text-gray-500 mr-2">#{p.rank}</span>{p.name}</span>
+                  <span className="flex items-center gap-2">
+                    <span className="text-gray-500 w-6">#{p.rank}</span>
+                    <StudentAvatar avatar={p.avatar} name={p.name} size={32} />
+                    {p.name}
+                  </span>
                   <span className="font-bold text-gold">{p.score}🪙</span>
                 </div>
               );

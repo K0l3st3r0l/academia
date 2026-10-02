@@ -4,9 +4,16 @@ import { io } from 'socket.io-client';
 import { getRoom } from '../api/client';
 import { SOCKET_URL } from '../api/client';
 import { subjectLabel } from '../utils/subjects';
+import StudentAvatar from '../components/character/StudentAvatar';
 
 const OPTION_COLORS = ['bg-blue-600', 'bg-orange-500', 'bg-green-600', 'bg-red-600'];
 const OPTION_ICONS = ['▲', '●', '■', '✦'];
+
+// «Benjamín R.»: fits under an avatar and is still clear for the class.
+function cardName(name = '') {
+  const [first, second] = name.trim().split(/\s+/);
+  return second ? `${first} ${second[0]}.` : first;
+}
 
 export default function ProjectorView() {
   const { code } = useParams();
@@ -151,11 +158,13 @@ export default function ProjectorView() {
             <p className="text-gray-500 mt-4 text-lg">Ingresa en: <span className="text-white">{joinUrl}</span></p>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3 max-w-3xl">
+          <div className="mt-8 flex flex-wrap justify-center gap-3 max-w-6xl">
             {participants.map(p => (
-              <span key={p.studentId} className="bg-brand/30 border border-brand/50 text-brand-light px-4 py-2 rounded-full text-lg font-bold animate-pop">
-                {p.name}
-              </span>
+              <div key={p.studentId} className="flex flex-col items-center w-24 animate-pop">
+                {/* A full class has to fit under the code on one screen. */}
+                <StudentAvatar avatar={p.avatar} name={p.name} size={participants.length > 20 ? 60 : 76} className="ring-4 ring-brand/50" />
+                <span className="mt-1 text-brand-light font-bold text-base text-center leading-tight w-full truncate" title={p.name}>{cardName(p.name)}</span>
+              </div>
             ))}
           </div>
           {participants.length > 0 && (
@@ -245,7 +254,8 @@ export default function ProjectorView() {
           {/* Quick leaderboard */}
           <div className="mt-4 flex justify-center gap-6">
             {leaderboard.slice(0, 5).map(p => (
-              <div key={p.studentId} className="text-center">
+              <div key={p.studentId} className="text-center flex flex-col items-center">
+                <StudentAvatar avatar={p.avatar} name={p.name} size={56} className={p.rank === 1 ? 'ring-4 ring-gold' : ''} />
                 <div className={`text-2xl font-black ${p.rank === 1 ? 'text-gold' : 'text-gray-300'}`}>
                   #{p.rank}
                 </div>
@@ -266,12 +276,13 @@ export default function ProjectorView() {
             {leaderboard.slice(0, 10).map(p => (
               <div
                 key={p.studentId}
-                className="bg-card rounded-2xl px-6 py-4 flex items-center justify-between"
+                className="bg-card rounded-2xl px-6 py-2 flex items-center justify-between"
               >
-                <span>
-                  <span className={`font-black text-2xl mr-3 ${p.rank === 1 ? 'text-gold' : p.rank === 2 ? 'text-gray-300' : p.rank === 3 ? 'text-orange-400' : 'text-gray-600'}`}>
+                <span className="flex items-center gap-3">
+                  <span className={`font-black text-2xl w-12 ${p.rank === 1 ? 'text-gold' : p.rank === 2 ? 'text-gray-300' : p.rank === 3 ? 'text-orange-400' : 'text-gray-600'}`}>
                     #{p.rank}
                   </span>
+                  <StudentAvatar avatar={p.avatar} name={p.name} size={48} />
                   <span className="text-xl font-semibold">{p.name}</span>
                 </span>
                 <span className="text-gold font-black text-2xl">{p.score} tokens</span>

@@ -60,6 +60,7 @@ function buildLeaderboard(students) {
       rank: i + 1,
       studentId: s.studentId,
       name: s.displayName,
+      avatar: s.avatar ?? null,
       score: s.score,
       correct: s.correctCount,
     }));
@@ -222,10 +223,12 @@ function resetForNewRound(state) {
   state.lastReport = null;
 }
 
+// avatar: the student's saved character layers (catalog ids), or null without one.
 function participantsOf(state) {
   return connectedStudents(state).map(s => ({
     studentId: s.studentId,
     name: s.displayName,
+    avatar: s.avatar ?? null,
     score: s.score,
   }));
 }
@@ -346,7 +349,9 @@ function setupGameSocket(io) {
 
         // The student may have been withdrawn or moved since the ticket was issued.
         const { rows: stuRows } = await pool.query(
-          'SELECT id FROM local_students WHERE id = $1 AND course_name = $2 AND active',
+          `SELECT s.id, c.layers AS avatar
+           FROM local_students s LEFT JOIN characters c ON c.student_id = s.id
+           WHERE s.id = $1 AND s.course_name = $2 AND s.active`,
           [studentDbId, roomRows[0].course_name]
         );
         if (!stuRows.length) return socket.emit('error', { message: 'Alumno no encontrado en este curso' });
@@ -390,6 +395,7 @@ function setupGameSocket(io) {
           existing.socketId = socket.id;
           existing.ticketId = ticketId;
           existing.connected = true;
+          existing.avatar = stuRows[0].avatar; // may have been edited between rounds
           state.students.set(socket.id, existing);
 
           socket.emit('room:joined', {
@@ -428,6 +434,7 @@ function setupGameSocket(io) {
             studentDbId,
             ticketId,
             displayName,
+            avatar: stuRows[0].avatar,
             score: 0,
             correctCount: 0,
             tokensEarned: 0,

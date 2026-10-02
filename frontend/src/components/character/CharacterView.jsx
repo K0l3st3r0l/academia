@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { drawCharacter, viewAspect } from './render';
 
 // size is the height in CSS pixels; the canvas is drawn at device resolution.
-// view: 'full' (whole body), 'portrait' (head and shoulders) or 'face'.
+// view: 'full' (whole body), 'portrait' (head and shoulders), 'head' (round avatars) or 'face'.
 export default function CharacterView({ look, size = 300, view = 'full', className = '', label = 'Personaje' }) {
   const ref = useRef(null);
   const width = Math.round(size * viewAspect(view));
