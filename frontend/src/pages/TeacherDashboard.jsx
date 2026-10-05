@@ -8,6 +8,7 @@ import {
 import { SUBJECTS, SUBJECT_LABELS } from '../utils/subjects';
 import { shortName } from '../utils/displayName';
 import CharacterNamesReview from '../components/CharacterNamesReview';
+import { Tokens } from '../components/TokenCoin';
 
 function formatDateTime(iso) {
   if (!iso) return '—';
@@ -518,7 +519,7 @@ export default function TeacherDashboard() {
                             <td className="py-2 pr-3">{s.name}</td>
                             <td className="py-2 pr-3">{s.correct_answers}/{s.total_answers}</td>
                             <td className="py-2 pr-3">{formatMs(s.avg_time_ms)}</td>
-                            <td className="py-2 pr-3 text-gold font-semibold">{s.tokens_earned}</td>
+                            <td className="py-2 pr-3"><Tokens value={s.tokens_earned} size={16} className="text-gold font-semibold" /></td>
                           </tr>
                         ))}
                       </tbody>

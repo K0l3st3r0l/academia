@@ -2,16 +2,13 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getPetCatalog, getPetMe, adoptPet, changePetSpecies, renamePet } from '../api/client';
 import PetView from '../components/pet/PetView';
+import { Tokens } from '../components/TokenCoin';
 
 const NAME_STATUS = {
   pending: { text: 'Nombre en revisión', className: 'text-gray-400' },
   approved: { text: 'Nombre aprobado', className: 'text-correct' },
   rejected: { text: 'El nombre no fue aprobado: elige otro, es gratis', className: 'text-wrong' },
 };
-
-function Tokens({ value }) {
-  return <span className="font-black text-gold tabular-nums">🪙 {value}</span>;
-}
 
 function SpeciesGrid({ catalog, picked, onPick, current }) {
   return (
@@ -216,7 +213,7 @@ export default function PetPage() {
                   onClick={() => run(() => renamePet(nameDraft), () => { setMode(null); setNameDraft(''); })}
                   className="flex-1 bg-brand hover:bg-brand-dark disabled:opacity-40 text-white font-bold py-2.5 rounded-xl transition-colors"
                 >
-                  {renameIsFree ? 'Guardar nombre' : `Cambiar por 🪙 ${catalog.renameCost}`}
+                  {renameIsFree ? 'Guardar nombre' : <>Cambiar por <Tokens value={catalog.renameCost} size={18} className="font-bold" /></>}
                 </button>
                 {mode === 'rename' && (
                   <button type="button" onClick={() => { setMode(null); setNameDraft(''); }} className="bg-surface border border-gray-700 text-gray-300 font-bold px-4 rounded-xl">
@@ -250,10 +247,10 @@ export default function PetPage() {
           ) : (
             <div className="flex flex-col sm:flex-row gap-2">
               <button type="button" onClick={() => setMode('rename')} className="flex-1 bg-surface border border-gray-700 hover:border-brand text-gray-200 font-semibold py-2.5 rounded-xl">
-                Cambiar el nombre (🪙 {catalog.renameCost})
+                Cambiar el nombre <Tokens value={catalog.renameCost} size={16} />
               </button>
               <button type="button" onClick={() => setMode('species')} className="flex-1 bg-surface border border-gray-700 hover:border-brand text-gray-200 font-semibold py-2.5 rounded-xl">
-                Cambiar de compañero (🪙 {catalog.changeSpeciesCost})
+                Cambiar de compañero <Tokens value={catalog.changeSpeciesCost} size={16} />
               </button>
             </div>
           )}

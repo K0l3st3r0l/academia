@@ -5,6 +5,7 @@ import {
 } from '../api/client';
 import CharacterView from '../components/character/CharacterView';
 import { layersToLook, defaultLayers } from '../components/character/look';
+import { Tokens } from '../components/TokenCoin';
 
 // Each tab groups catalog lists; parts preview the character, colors are swatches.
 const TABS = [
@@ -47,10 +48,6 @@ const NAME_STATUS = {
 };
 
 const priceOf = item => item?.price ?? 0;
-
-function Tokens({ value }) {
-  return <span className="font-black text-gold tabular-nums">🪙 {value}</span>;
-}
 
 function PriceTag({ item, owned }) {
   if (!priceOf(item)) return null;
@@ -279,7 +276,7 @@ export default function CharacterEditor() {
                       disabled={!nameReady || saving || (!renameIsFree && tokens < renameCost)}
                       className="flex-1 bg-brand hover:bg-brand-dark disabled:opacity-40 text-white font-bold py-2.5 rounded-xl transition-colors"
                     >
-                      {renameIsFree ? 'Guardar nombre' : `Cambiar por 🪙 ${renameCost}`}
+                      {renameIsFree ? 'Guardar nombre' : <>Cambiar por <Tokens value={renameCost} size={18} className="font-bold" /></>}
                     </button>
                     {renaming && (
                       <button type="button" onClick={() => { setRenaming(false); setNameDraft(''); }} className="bg-surface border border-gray-700 text-gray-300 font-bold px-4 rounded-xl">
@@ -291,7 +288,7 @@ export default function CharacterEditor() {
               </>
             ) : (
               <button type="button" onClick={() => setRenaming(true)} className="w-full text-sm text-brand-light underline">
-                Cambiar el nombre (🪙 {renameCost})
+                Cambiar el nombre <Tokens value={renameCost} size={16} />
               </button>
             )}
           </div>

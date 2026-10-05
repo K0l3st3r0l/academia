@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { SOCKET_URL } from '../api/client';
 import StudentAvatar from '../components/character/StudentAvatar';
+import { Tokens } from '../components/TokenCoin';
 
 const OPTION_COLORS = [
   'bg-blue-600 hover:bg-blue-500 active:bg-blue-700',
@@ -164,7 +165,7 @@ export default function StudentGame() {
       <div className="flex items-center justify-between mb-4">
         <div>
           <p className="text-gray-400 text-sm">{student?.displayName}</p>
-          <p className="text-gold font-black text-xl">{score} tokens</p>
+          <Tokens value={score} size={22} className="text-gold font-black text-xl" />
         </div>
         <div className="flex items-center gap-3">
           <div className="text-right">
@@ -285,7 +286,7 @@ export default function StudentGame() {
               <div className="text-6xl mb-2">{myResult.correct ? '✅' : '❌'}</div>
               <h2 className="text-3xl font-black">{myResult.correct ? '¡Correcto!' : '¡Incorrecto!'}</h2>
               {myResult.correct && (
-                <p className="text-gold font-black text-2xl mt-1">+{myResult.tokensEarned} tokens</p>
+                <p className="mt-1"><Tokens value={`+${myResult.tokensEarned}`} size={28} className="text-gold font-black text-2xl" /></p>
               )}
               {!myResult.correct && (
                 <p className="text-gray-300 mt-2">
@@ -327,7 +328,7 @@ export default function StudentGame() {
             <p className={`text-6xl font-black ${myRank === 1 ? 'text-gold' : 'text-white'}`}>
               #{myRank || '—'}
             </p>
-            <p className="text-gold font-bold text-2xl mt-1">{score} tokens ganados</p>
+            <p className="text-gold font-bold text-2xl mt-1 inline-flex items-center gap-1"><Tokens value={score} size={28} className="" /> ganados</p>
           </div>
 
           <div className="w-full bg-card rounded-2xl p-4 space-y-2">
@@ -343,7 +344,7 @@ export default function StudentGame() {
                     <StudentAvatar avatar={p.avatar} name={p.name} size={32} />
                     {p.name}
                   </span>
-                  <span className="font-bold text-gold">{p.score}🪙</span>
+                  <Tokens value={p.score} size={18} className="font-bold text-gold" />
                 </div>
               );
             })}

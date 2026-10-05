@@ -6,6 +6,7 @@ import CharacterView from '../components/character/CharacterView';
 import { layersToLook } from '../components/character/look';
 import AttributeSheet from '../components/AttributeSheet';
 import PetView from '../components/pet/PetView';
+import { TokenCoin } from '../components/TokenCoin';
 
 // Shown once per new stage: the pet grew since the student last looked.
 function GrowthCelebration({ pet, catalog, stage, onClose }) {
@@ -92,7 +93,10 @@ export default function AlumnoHome() {
           {loading ? (
             <p className="text-gray-500">Cargando...</p>
           ) : (
-            <p className="text-5xl font-black text-gold">{student?.tokens_balance ?? 0}</p>
+            <p className="text-5xl font-black text-gold inline-flex items-center gap-3 tabular-nums">
+              <TokenCoin size={56} />
+              {student?.tokens_balance ?? 0}
+            </p>
           )}
         </div>
 

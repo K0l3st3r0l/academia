@@ -7,6 +7,7 @@ import RoundSettings from '../components/RoundSettings';
 import RoundReport from '../components/RoundReport';
 import StudentAvatar from '../components/character/StudentAvatar';
 import { subjectLabel } from '../utils/subjects';
+import { Tokens } from '../components/TokenCoin';
 
 const OPTION_COLORS = ['bg-blue-600', 'bg-orange-500', 'bg-green-600', 'bg-red-600'];
 
@@ -386,7 +387,7 @@ export default function TeacherGame() {
                 <div className="flex flex-wrap gap-2">
                   {revealData.results.filter(r => r.correct).slice(0, 5).map(r => (
                     <span key={r.studentId} className="bg-correct/20 text-correct px-2 py-0.5 rounded-full text-sm">
-                      {r.name} +{r.tokensEarned}🪙
+                      {r.name} <Tokens value={`+${r.tokensEarned}`} size={14} className="font-semibold" />
                     </span>
                   ))}
                 </div>
@@ -406,7 +407,7 @@ export default function TeacherGame() {
                       <StudentAvatar avatar={p.avatar} name={p.name} size={24} />
                       {p.name}
                     </span>
-                    <span className="font-bold text-gold">{p.score}🪙</span>
+                    <Tokens value={p.score} size={16} className="font-bold text-gold" />
                   </li>
                 ))}
               </ol>
@@ -438,7 +439,7 @@ export default function TeacherGame() {
                     <StudentAvatar avatar={p.avatar} name={p.name} size={32} />
                     {p.name}
                   </span>
-                  <span className="font-bold text-gold">{p.score} tokens</span>
+                  <Tokens value={p.score} size={20} className="font-bold text-gold" />
                 </li>
               ))}
             </ol>

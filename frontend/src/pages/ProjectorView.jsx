@@ -5,6 +5,7 @@ import { getRoom } from '../api/client';
 import { SOCKET_URL } from '../api/client';
 import { subjectLabel } from '../utils/subjects';
 import StudentAvatar from '../components/character/StudentAvatar';
+import { Tokens } from '../components/TokenCoin';
 
 const OPTION_COLORS = ['bg-blue-600', 'bg-orange-500', 'bg-green-600', 'bg-red-600'];
 const OPTION_ICONS = ['▲', '●', '■', '✦'];
@@ -260,7 +261,7 @@ export default function ProjectorView() {
                   #{p.rank}
                 </div>
                 <div className="text-sm text-gray-300 font-semibold">{p.name}</div>
-                <div className="text-gold font-bold">{p.score}🪙</div>
+                <Tokens value={p.score} size={20} className="text-gold font-bold" />
               </div>
             ))}
           </div>
@@ -285,7 +286,7 @@ export default function ProjectorView() {
                   <StudentAvatar avatar={p.avatar} name={p.name} size={48} />
                   <span className="text-xl font-semibold">{p.name}</span>
                 </span>
-                <span className="text-gold font-black text-2xl">{p.score} tokens</span>
+                <Tokens value={p.score} size={30} className="text-gold font-black text-2xl" />
               </div>
             ))}
           </div>
