@@ -13,12 +13,11 @@ const COLOR_FIELD = { skin: 'skinColor', hair: 'hairColor', eye: 'eyeColor', top
 // Colors the parts were drawn in, for a family the look leaves without a color.
 const DRAWN_COLOR = { skin: '#F49C62', hair: '#552B1A', eye: '#5C3A21', top: '#3B82F6', bottom: '#3B82F6', shoes: '#3B82F6' };
 const DL_SCALE = 2;
-// A hat that sits on the head flattens the hair under it: hair above a bowl-shaped curve that
-// passes just under the brim and drops toward the sides is removed, and the cut gets the same
-// navy outline as the drawing. Long hair and ponytails then come out from under the hat.
-const HAT_BRIM = 0.85;   // share of the hat's height where the curve passes under it
-const HAT_SPREAD = 0.8;  // horizontal radius of the bowl, in hat widths
-const HAT_DROP = 0.55;   // how far the curve drops at that radius, in hat heights
+// A hat that sits on the head flattens the hair under it: hair above the hat's lower edge goes
+// (it would poke through the crown or float beside it), hair below stays, as it does under a
+// real cap: bangs under the brim, long hair falling from under the sides.
+const HAT_TUCK = 3;      // the cut runs this far up under the hat's edge, so no seam shows
+const SIDE_SLOPE = 0.7;  // beyond the hat's sides the cut drops this much per pixel outward
 
 let partsPromise;
 let assetVersion = '';
@@ -159,36 +158,68 @@ async function layerCanvas(id, layer, colors) {
 }
 
 // Copy of the hair layer flattened under the hat (the cached original stays intact). Both
-// layers are placed on the canvas through their x/y offsets; the curve is in hair coordinates.
+// layers are placed on the canvas through their x/y offsets; the cut is in hair coordinates and
+// follows the lowest opaque pixel of each hat column.
 function clipUnderHat(hairCanvas, hairLayer, hatCanvas, hatLayer) {
+  const hw = hatCanvas.width;
+  const hh = hatCanvas.height;
+  const hat = hatCanvas.getContext('2d').getImageData(0, 0, hw, hh).data;
+  const bottom = new Int32Array(hw).fill(-1);
+  for (let x = 0; x < hw; x++) {
+    for (let y = hh - 1; y >= 0; y--) {
+      if (hat[(y * hw + x) * 4 + 3] > 128) { bottom[x] = y; break; }
+    }
+  }
+  let left = 0;
+  while (left < hw && bottom[left] < 0) left++;
+  let right = hw - 1;
+  while (right >= 0 && bottom[right] < 0) right--;
+  if (left > right) return hairCanvas;
+  // Columns are drawn at the canvas scale of the layers, which share one coordinate system.
+  const sx = hatLayer.w / hw;
+  const sy = hatLayer.h / hh;
+
   const c = document.createElement('canvas');
   c.width = hairCanvas.width;
   c.height = hairCanvas.height;
   const ctx = c.getContext('2d');
   ctx.drawImage(hairCanvas, 0, 0);
 
-  const cx = hatLayer.x + hatLayer.w / 2 - hairLayer.x;
-  const y0 = hatLayer.y + hatLayer.h * HAT_BRIM - hairLayer.y;
-  const rx = hatLayer.w * HAT_SPREAD;
-  const drop = hatLayer.h * HAT_DROP;
-  const curve = new Path2D();
-  for (let x = 0; x <= c.width; x += 2) {
-    const t = Math.min(1, Math.abs(x - cx) / rx);
-    const y = y0 + drop * t * t;
-    if (x === 0) curve.moveTo(x, y); else curve.lineTo(x, y);
+  const cutAt = x => {
+    const col = (x + hairLayer.x - hatLayer.x) / sx;
+    const i = Math.round(Math.min(right, Math.max(left, col)));
+    const y = bottom[i] >= 0 ? bottom[i] : bottom[col < left ? left : right];
+    const beyond = col < left ? left - col : col > right ? col - right : 0;
+    return hatLayer.y + (y - HAT_TUCK) * sy + beyond * sx * SIDE_SLOPE - hairLayer.y;
+  };
+  const cut = new Path2D();
+  const side = new Path2D();
+  for (let x = 0; x <= c.width; x += 1) {
+    const y = cutAt(x);
+    if (x === 0) cut.moveTo(x, y); else cut.lineTo(x, y);
   }
-  const above = new Path2D(curve);
+  const above = new Path2D(cut);
   above.lineTo(c.width, 0);
   above.lineTo(0, 0);
   above.closePath();
-
   ctx.globalCompositeOperation = 'destination-out';
   ctx.fill(above);
-  // Outline only where hair remains along the cut.
+
+  // Under the hat the cut is hidden; beside it, hair that remains gets the drawing's outline.
+  const hatLeft = hatLayer.x + left * sx - hairLayer.x;
+  const hatRight = hatLayer.x + right * sx - hairLayer.x;
+  if (hatLeft > 0) {
+    side.moveTo(0, cutAt(0));
+    for (let x = 1; x <= hatLeft; x++) side.lineTo(x, cutAt(x));
+  }
+  if (hatRight < c.width) {
+    side.moveTo(hatRight, cutAt(hatRight));
+    for (let x = Math.ceil(hatRight); x <= c.width; x++) side.lineTo(x, cutAt(x));
+  }
   ctx.globalCompositeOperation = 'source-atop';
   ctx.strokeStyle = `rgb(${INK.join(',')})`;
   ctx.lineWidth = 3.4;
-  ctx.stroke(curve);
+  ctx.stroke(side);
   return c;
 }
 

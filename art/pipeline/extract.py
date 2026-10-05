@@ -106,8 +106,11 @@ def extract(template_path, part_path, kind):
         mask &= ~magentaish(p)
     if kind == 'hair':
         # GPT also touches up the face and ears around new hair; those pixels are still skin.
+        # Where the template is background, though, that skin (a jaw drawn a little wider) is
+        # the only thing between face and hair: dropping it left white gaps (afro). Keep it;
+        # build_assets repaints it with the student's skin.
         skin = np.median(t[300:450, 450:580].reshape(-1, 3), axis=0)
-        mask &= ~skinlike(p, skin) & ~whitish(p)
+        mask &= ~(skinlike(p, skin) & ~whitish(t)) & ~whitish(p)
         # No hairstyle puts hair over the middle of the neck: lines there are GPT redrawing the collar.
         mask[500:760, 440:584] = False
     x0, y0, x1, y1 = REGIONS[kind]
