@@ -54,12 +54,40 @@
       "name": "Corto con chasquilla"
     },
     {
+      "id": "pelo-crop",
+      "name": "Crop texturizado"
+    },
+    {
+      "id": "pelo-cortina",
+      "name": "Chasquilla cortina"
+    },
+    {
       "id": "pelo-corto-raya",
       "name": "Corto con partidura"
     },
     {
+      "id": "pelo-hacia-atras",
+      "name": "Hacia atrás"
+    },
+    {
+      "id": "pelo-copete",
+      "name": "Copete"
+    },
+    {
+      "id": "pelo-dos-bloques",
+      "name": "Dos bloques"
+    },
+    {
+      "id": "pelo-mullet",
+      "name": "Mullet moderno"
+    },
+    {
       "id": "pelo-rapado",
       "name": "Rapado"
+    },
+    {
+      "id": "pelo-degradado",
+      "name": "Degradado"
     },
     {
       "id": "pelo-punta",
@@ -74,6 +102,14 @@
       "name": "Rizos cortos"
     },
     {
+      "id": "pelo-rizos-degradado",
+      "name": "Rizos con degradado"
+    },
+    {
+      "id": "pelo-hi-top",
+      "name": "Afro alto"
+    },
+    {
       "id": "pelo-afro",
       "name": "Afro"
     },
@@ -82,8 +118,40 @@
       "name": "Pompones afro"
     },
     {
+      "id": "pelo-melena",
+      "name": "Melena con chasquilla"
+    },
+    {
+      "id": "pelo-melena-ondulada",
+      "name": "Melena ondulada"
+    },
+    {
+      "id": "pelo-wolf",
+      "name": "Wolf cut"
+    },
+    {
+      "id": "pelo-rizos-medianos",
+      "name": "Rizos medianos"
+    },
+    {
+      "id": "pelo-media-cola",
+      "name": "Media cola"
+    },
+    {
+      "id": "pelo-rastas",
+      "name": "Rastas"
+    },
+    {
       "id": "pelo-largo-liso",
       "name": "Largo liso"
+    },
+    {
+      "id": "pelo-largo-chasquilla",
+      "name": "Largo con chasquilla"
+    },
+    {
+      "id": "pelo-mariposa",
+      "name": "Capas con cortina"
     },
     {
       "id": "pelo-largo-ondulado",
@@ -94,12 +162,20 @@
       "name": "Rizos largos"
     },
     {
-      "id": "pelo-melena",
-      "name": "Melena con chasquilla"
+      "id": "pelo-trenzas-africanas",
+      "name": "Trenzas africanas"
     },
     {
       "id": "pelo-cola",
       "name": "Cola de caballo"
+    },
+    {
+      "id": "pelo-burbujas",
+      "name": "Cola de burbujas"
+    },
+    {
+      "id": "pelo-cola-baja",
+      "name": "Cola baja"
     },
     {
       "id": "pelo-colitas",
@@ -110,6 +186,14 @@
       "name": "Trenzas"
     },
     {
+      "id": "pelo-trenza-lado",
+      "name": "Trenza de lado"
+    },
+    {
+      "id": "pelo-trenzas-boxeadoras",
+      "name": "Trenzas boxeadoras"
+    },
+    {
       "id": "pelo-trenzas-pegadas",
       "name": "Trenzas pegadas"
     },
@@ -118,12 +202,12 @@
       "name": "Moño alto"
     },
     {
-      "id": "pelo-media-cola",
-      "name": "Media cola"
+      "id": "pelo-pinza",
+      "name": "Moño con pinza"
     },
     {
-      "id": "pelo-rastas",
-      "name": "Rastas"
+      "id": "pelo-dos-monos",
+      "name": "Dos moños"
     }
   ],
   "hairColors": [

@@ -1,5 +1,5 @@
 {
- "version": "1837722563",
+ "version": "cb22733996",
  "canvas": {
   "w": 512,
   "h": 768
@@ -45,6 +45,34 @@
    "h": 160,
    "label": "Corto con chasquilla"
   },
+  "pelo-crop": {
+   "kind": "hair",
+   "file": "pelo-crop.webp",
+   "map": "pelo-crop.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 152,
+   "y": 45,
+   "w": 197,
+   "h": 133,
+   "label": "Crop texturizado"
+  },
+  "pelo-cortina": {
+   "kind": "hair",
+   "file": "pelo-cortina.webp",
+   "map": "pelo-cortina.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 130,
+   "y": 40,
+   "w": 245,
+   "h": 162,
+   "label": "Chasquilla cortina"
+  },
   "pelo-corto-raya": {
    "kind": "hair",
    "file": "pelo-corto-raya.webp",
@@ -58,6 +86,62 @@
    "w": 219,
    "h": 148,
    "label": "Corto con partidura"
+  },
+  "pelo-hacia-atras": {
+   "kind": "hair",
+   "file": "pelo-hacia-atras.webp",
+   "map": "pelo-hacia-atras.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 143,
+   "y": 39,
+   "w": 212,
+   "h": 160,
+   "label": "Hacia atrás"
+  },
+  "pelo-copete": {
+   "kind": "hair",
+   "file": "pelo-copete.webp",
+   "map": "pelo-copete.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 145,
+   "y": 18,
+   "w": 217,
+   "h": 195,
+   "label": "Copete"
+  },
+  "pelo-dos-bloques": {
+   "kind": "hair",
+   "file": "pelo-dos-bloques.webp",
+   "map": "pelo-dos-bloques.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 129,
+   "y": 29,
+   "w": 245,
+   "h": 155,
+   "label": "Dos bloques"
+  },
+  "pelo-mullet": {
+   "kind": "hair",
+   "file": "pelo-mullet.webp",
+   "map": "pelo-mullet.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 140,
+   "y": 27,
+   "w": 224,
+   "h": 268,
+   "label": "Mullet moderno"
   },
   "pelo-rapado": {
    "kind": "hair",
@@ -73,6 +157,20 @@
    "h": 123,
    "label": "Rapado"
   },
+  "pelo-degradado": {
+   "kind": "hair",
+   "file": "pelo-degradado.webp",
+   "map": "pelo-degradado.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 146,
+   "y": 36,
+   "w": 212,
+   "h": 146,
+   "label": "Degradado"
+  },
   "pelo-punta": {
    "kind": "hair",
    "file": "pelo-punta.webp",
@@ -81,10 +179,10 @@
     "hair",
     "skin"
    ],
-   "x": 128,
-   "y": 24,
-   "w": 241,
-   "h": 173,
+   "x": 148,
+   "y": 22,
+   "w": 217,
+   "h": 179,
    "label": "De punta"
   },
   "pelo-cresta": {
@@ -115,6 +213,34 @@
    "h": 150,
    "label": "Rizos cortos"
   },
+  "pelo-rizos-degradado": {
+   "kind": "hair",
+   "file": "pelo-rizos-degradado.webp",
+   "map": "pelo-rizos-degradado.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 136,
+   "y": 22,
+   "w": 236,
+   "h": 173,
+   "label": "Rizos con degradado"
+  },
+  "pelo-hi-top": {
+   "kind": "hair",
+   "file": "pelo-hi-top.webp",
+   "map": "pelo-hi-top.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 157,
+   "y": 36,
+   "w": 191,
+   "h": 153,
+   "label": "Afro alto"
+  },
   "pelo-afro": {
    "kind": "hair",
    "file": "pelo-afro.webp",
@@ -143,6 +269,90 @@
    "h": 176,
    "label": "Pompones afro"
   },
+  "pelo-melena": {
+   "kind": "hair",
+   "file": "pelo-melena.webp",
+   "map": "pelo-melena.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 119,
+   "y": 51,
+   "w": 262,
+   "h": 202,
+   "label": "Melena con chasquilla"
+  },
+  "pelo-melena-ondulada": {
+   "kind": "hair",
+   "file": "pelo-melena-ondulada.webp",
+   "map": "pelo-melena-ondulada.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 104,
+   "y": 34,
+   "w": 298,
+   "h": 259,
+   "label": "Melena ondulada"
+  },
+  "pelo-wolf": {
+   "kind": "hair",
+   "file": "pelo-wolf.webp",
+   "map": "pelo-wolf.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 121,
+   "y": 26,
+   "w": 264,
+   "h": 274,
+   "label": "Wolf cut"
+  },
+  "pelo-rizos-medianos": {
+   "kind": "hair",
+   "file": "pelo-rizos-medianos.webp",
+   "map": "pelo-rizos-medianos.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 104,
+   "y": 39,
+   "w": 295,
+   "h": 220,
+   "label": "Rizos medianos"
+  },
+  "pelo-media-cola": {
+   "kind": "hair",
+   "file": "pelo-media-cola.webp",
+   "map": "pelo-media-cola.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 127,
+   "y": 13,
+   "w": 248,
+   "h": 262,
+   "label": "Media cola"
+  },
+  "pelo-rastas": {
+   "kind": "hair",
+   "file": "pelo-rastas.webp",
+   "map": "pelo-rastas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 122,
+   "y": 40,
+   "w": 256,
+   "h": 251,
+   "label": "Rastas"
+  },
   "pelo-largo-liso": {
    "kind": "hair",
    "file": "pelo-largo-liso.webp",
@@ -156,6 +366,34 @@
    "w": 282,
    "h": 330,
    "label": "Largo liso"
+  },
+  "pelo-largo-chasquilla": {
+   "kind": "hair",
+   "file": "pelo-largo-chasquilla.webp",
+   "map": "pelo-largo-chasquilla.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 112,
+   "y": 53,
+   "w": 277,
+   "h": 328,
+   "label": "Largo con chasquilla"
+  },
+  "pelo-mariposa": {
+   "kind": "hair",
+   "file": "pelo-mariposa.webp",
+   "map": "pelo-mariposa.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 95,
+   "y": 44,
+   "w": 301,
+   "h": 349,
+   "label": "Capas con cortina"
   },
   "pelo-largo-ondulado": {
    "kind": "hair",
@@ -185,19 +423,19 @@
    "h": 356,
    "label": "Rizos largos"
   },
-  "pelo-melena": {
+  "pelo-trenzas-africanas": {
    "kind": "hair",
-   "file": "pelo-melena.webp",
-   "map": "pelo-melena.map.webp",
+   "file": "pelo-trenzas-africanas.webp",
+   "map": "pelo-trenzas-africanas.map.webp",
    "families": [
     "hair",
     "skin"
    ],
-   "x": 119,
-   "y": 51,
-   "w": 262,
-   "h": 202,
-   "label": "Melena con chasquilla"
+   "x": 123,
+   "y": 65,
+   "w": 259,
+   "h": 376,
+   "label": "Trenzas africanas"
   },
   "pelo-cola": {
    "kind": "hair",
@@ -212,6 +450,34 @@
    "w": 279,
    "h": 282,
    "label": "Cola de caballo"
+  },
+  "pelo-burbujas": {
+   "kind": "hair",
+   "file": "pelo-burbujas.webp",
+   "map": "pelo-burbujas.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 153,
+   "y": 12,
+   "w": 278,
+   "h": 294,
+   "label": "Cola de burbujas"
+  },
+  "pelo-cola-baja": {
+   "kind": "hair",
+   "file": "pelo-cola-baja.webp",
+   "map": "pelo-cola-baja.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 141,
+   "y": 39,
+   "w": 223,
+   "h": 331,
+   "label": "Cola baja"
   },
   "pelo-colitas": {
    "kind": "hair",
@@ -241,6 +507,34 @@
    "h": 337,
    "label": "Trenzas"
   },
+  "pelo-trenza-lado": {
+   "kind": "hair",
+   "file": "pelo-trenza-lado.webp",
+   "map": "pelo-trenza-lado.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 136,
+   "y": 39,
+   "w": 228,
+   "h": 378,
+   "label": "Trenza de lado"
+  },
+  "pelo-trenzas-boxeadoras": {
+   "kind": "hair",
+   "file": "pelo-trenzas-boxeadoras.webp",
+   "map": "pelo-trenzas-boxeadoras.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 156,
+   "y": 62,
+   "w": 197,
+   "h": 216,
+   "label": "Trenzas boxeadoras"
+  },
   "pelo-trenzas-pegadas": {
    "kind": "hair",
    "file": "pelo-trenzas-pegadas.webp",
@@ -269,33 +563,33 @@
    "h": 194,
    "label": "Moño alto"
   },
-  "pelo-media-cola": {
+  "pelo-pinza": {
    "kind": "hair",
-   "file": "pelo-media-cola.webp",
-   "map": "pelo-media-cola.map.webp",
+   "file": "pelo-pinza.webp",
+   "map": "pelo-pinza.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 139,
+   "y": 15,
+   "w": 255,
+   "h": 258,
+   "label": "Moño con pinza"
+  },
+  "pelo-dos-monos": {
+   "kind": "hair",
+   "file": "pelo-dos-monos.webp",
+   "map": "pelo-dos-monos.map.webp",
    "families": [
     "hair",
     "skin"
    ],
    "x": 127,
-   "y": 13,
-   "w": 248,
-   "h": 262,
-   "label": "Media cola"
-  },
-  "pelo-rastas": {
-   "kind": "hair",
-   "file": "pelo-rastas.webp",
-   "map": "pelo-rastas.map.webp",
-   "families": [
-    "hair",
-    "skin"
-   ],
-   "x": 122,
-   "y": 40,
-   "w": 256,
-   "h": 251,
-   "label": "Rastas"
+   "y": 42,
+   "w": 252,
+   "h": 152,
+   "label": "Dos moños"
   },
   "ojos-redondos": {
    "kind": "eyes",

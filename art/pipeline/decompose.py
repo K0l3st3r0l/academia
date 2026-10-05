@@ -109,7 +109,7 @@ def mode_smooth(cls, labels, size=5):
     return np.where(among, best, cls)
 
 
-def islands_to_skin(cls, hair_id, skin_id, max_share=0.05):
+def islands_to_skin(cls, hair_id, skin_id, max_share=0.05, rgb=None):
     """Ear lines redrawn inside a hair layer share the hair's reddish brown, so color can't
     tell them apart; shape can: they are small islands cut off from the hair mass and touching
     skin. Those become skin."""
@@ -120,9 +120,84 @@ def islands_to_skin(cls, hair_id, skin_id, max_share=0.05):
     sizes = ndimage.sum(hair, labels, range(1, n + 1))
     near_skin = ndimage.binary_dilation(cls == skin_id, np.ones((5, 5)))
     touching = ndimage.maximum(near_skin, labels, range(1, n + 1))
-    small = np.nonzero((sizes < sizes.max() * max_share) & (touching > 0))[0] + 1
+    candidate = (sizes < sizes.max() * max_share) & (touching > 0)
+    if rgb is not None:
+        # Ear lines are a lighter reddish brown; dark bits cut off from the hair are outline.
+        L = srgb_to_lab(rgb)[..., 0]
+        lighter = ndimage.median(L, labels, range(1, n + 1)) > np.median(L[hair]) + 8
+        candidate &= lighter
+    small = np.nonzero(candidate)[0] + 1
     out = cls.copy()
     out[np.isin(labels, small)] = skin_id
+    return out
+
+
+# Real highlights in every hairstyle stay within +23 L* of the hair's median (measured on all
+# 41 styles, 2026-10-05); scalp showing between cornrows or through a fade sits at +30 to +43.
+SCALP_LIFT = 26
+FADE_LIFT = 15
+
+
+def touching(candidates, region, reach):
+    """The connected parts of `candidates` that come within `reach` px of `region`."""
+    labels, n = ndimage.label(candidates, np.ones((3, 3)))
+    if not n:
+        return candidates
+    near = ndimage.binary_dilation(region, iterations=reach)
+    hit = ndimage.maximum(near, labels, range(1, n + 1))
+    return np.isin(labels, np.nonzero(hit)[0] + 1)
+
+
+def scalp_to_skin(cls, rgb, hair_id, skin_id):
+    """Scalp between cornrows and the skin of a fade are drawn in shaded skin, a reddish brown
+    that passes for a hair highlight. Far lighter than any real highlight, skin-hued and
+    connected to the skin: skin. Highlight strokes can be as light, but sit inside the hair."""
+    hair = cls == hair_id
+    if not hair.any():
+        return cls
+    L = srgb_to_lab(rgb)[..., 0]
+    skin_hued = angle_to(rgb, SKIN_SOURCE) <= 30
+    median = np.median(L[hair])
+    out = cls.copy()
+    scalp = hair & (L > median + SCALP_LIFT) & skin_hued
+    out[touching(scalp, large_parts(out == skin_id), 4)] = skin_id
+    # A fade blends hair into skin gradually: its lighter half, right against the skin, is skin too.
+    seed = large_parts(out == skin_id)
+    fade = hair & (L > median + FADE_LIFT) & skin_hued
+    out[touching(fade, seed, 2) & ndimage.binary_dilation(seed, iterations=10)] = skin_id
+    return out
+
+
+def large_parts(mask, min_area=400):
+    """Real skin (forehead, sides of the head), not a stray speck that only looks like skin."""
+    labels, n = ndimage.label(mask, np.ones((3, 3)))
+    if not n:
+        return mask
+    sizes = ndimage.sum(mask, labels, range(1, n + 1))
+    return np.isin(labels, np.nonzero(sizes >= min_area)[0] + 1)
+
+
+def skin_specks_to_hair(cls, rgb, alpha, hair_id, skin_id, max_area=400):
+    """Orange highlight strokes inside the hair pass for skin by lightness. Real skin in a hair
+    layer reaches the face or the layer's edge, and scalp lines are lighter than any highlight:
+    a small skin patch enclosed by hair and not that light goes back to hair."""
+    skin = cls == skin_id
+    hair = cls == hair_id
+    if not skin.any() or not hair.any():
+        return cls
+    L = srgb_to_lab(rgb)[..., 0]
+    median = np.median(L[hair])
+    labels, n = ndimage.label(skin, np.ones((3, 3)))
+    if not n:
+        return cls
+    idx = range(1, n + 1)
+    sizes = ndimage.sum(skin, labels, idx)
+    near_edge = ndimage.maximum(ndimage.binary_dilation(alpha == 0, iterations=3), labels, idx)
+    lightness = ndimage.median(L, labels, idx)
+    specks = [i for i, (s, e, l) in enumerate(zip(sizes, near_edge, lightness), start=1)
+              if s < max_area and not e and l < median + SCALP_LIFT + 6]
+    out = cls.copy()
+    out[np.isin(labels, specks)] = hair_id
     return out
 
 
@@ -162,7 +237,9 @@ def decompose(rgba, families, hair_islands=False):
     smoothed = mode_smooth(cls, family_ids + [FIXED])
     cls = np.where(present & ambiguous, smoothed, cls).astype(np.uint8)
     if hair_islands and len(families) == 2:
-        cls = islands_to_skin(cls, 1, 2)
+        cls = islands_to_skin(cls, 1, 2, rgb=rgb)
+        cls = scalp_to_skin(cls, rgb, 1, 2)
+        cls = skin_specks_to_hair(cls, rgb, alpha, 1, 2)
 
     # 2. Pure pixels: same class all around (3x3). The rest blend two classes.
     labels = family_ids + [FIXED]

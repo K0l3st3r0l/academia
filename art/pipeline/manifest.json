@@ -19,10 +19,46 @@
       "desc": "short straight hair with straight bangs across the forehead"
     },
     {
+      "id": "pelo-crop",
+      "kind": "hair",
+      "label": "Crop texturizado",
+      "desc": "a modern French crop: short choppy textured hair on top with a short straight fringe across the forehead, and faded very short sides"
+    },
+    {
+      "id": "pelo-cortina",
+      "kind": "hair",
+      "label": "Chasquilla cortina",
+      "desc": "medium-short hair with curtain bangs parted in the middle that fall to both sides of the forehead, soft and a bit messy, covering the tops of the ears"
+    },
+    {
       "id": "pelo-corto-raya",
       "kind": "hair",
       "label": "Corto con partidura",
       "desc": "short neat hair combed with a side part"
+    },
+    {
+      "id": "pelo-hacia-atras",
+      "kind": "hair",
+      "label": "Hacia atrás",
+      "desc": "short-to-medium hair neatly combed straight back from the forehead, smooth and tidy, the whole forehead visible"
+    },
+    {
+      "id": "pelo-copete",
+      "kind": "hair",
+      "label": "Copete",
+      "desc": "short sides and a tall rounded quiff at the front, the front hair brushed up and slightly back"
+    },
+    {
+      "id": "pelo-dos-bloques",
+      "kind": "hair",
+      "label": "Dos bloques",
+      "desc": "a Korean two-block cut with strong contrast: both sides above the ears clearly shaved almost to the skin, and on top a thick, heavy, rounded mushroom-shaped layer of straight hair with straight bangs that overhangs the shaved sides"
+    },
+    {
+      "id": "pelo-mullet",
+      "kind": "hair",
+      "label": "Mullet moderno",
+      "desc": "a modern kids mullet: short textured hair on top with a light fringe, short tapered sides above the ears, and clearly longer wavy hair at the back that reaches the shoulders and is visible on both sides of the neck"
     },
     {
       "id": "pelo-rapado",
@@ -31,10 +67,16 @@
       "desc": "a very short buzz cut that follows the shape of the scalp"
     },
     {
+      "id": "pelo-degradado",
+      "kind": "hair",
+      "label": "Degradado",
+      "desc": "a modern mid fade: the sides and back clipped very short and blending upward into short textured hair on top, pushed slightly forward"
+    },
+    {
       "id": "pelo-punta",
       "kind": "hair",
       "label": "De punta",
-      "desc": "short spiky hair standing up in soft rounded points"
+      "desc": "short hair spiked straight up with gel into six or seven distinct, sharp, pointed spikes on top of the head, each spike clearly separated and pointing upward, short neat sides; clearly pointed spikes, not messy tufts"
     },
     {
       "id": "pelo-cresta",
@@ -49,6 +91,18 @@
       "desc": "short tight curls all over the head"
     },
     {
+      "id": "pelo-rizos-degradado",
+      "kind": "hair",
+      "label": "Rizos con degradado",
+      "desc": "a taper fade with a curly top: very short sides and back, and a big volume of defined tight curls on top falling slightly over the forehead"
+    },
+    {
+      "id": "pelo-hi-top",
+      "kind": "hair",
+      "label": "Afro alto",
+      "desc": "a high-top haircut: a tall, flat-topped, box-shaped block of tightly coiled hair on top of the head, with very short sides"
+    },
+    {
       "id": "pelo-afro",
       "kind": "hair",
       "label": "Afro",
@@ -61,10 +115,58 @@
       "desc": "two big round afro puffs on the top of the head, one on each side; the rest of the hair covers the whole scalp, pulled tight toward the puffs, so no bald skin shows"
     },
     {
+      "id": "pelo-melena",
+      "kind": "hair",
+      "label": "Melena con chasquilla",
+      "desc": "a chin-length bob haircut with bangs"
+    },
+    {
+      "id": "pelo-melena-ondulada",
+      "kind": "hair",
+      "label": "Melena ondulada",
+      "desc": "shoulder-length wavy hair with a side part and no bangs, the ends flipping slightly outward"
+    },
+    {
+      "id": "pelo-wolf",
+      "kind": "hair",
+      "label": "Wolf cut",
+      "desc": "a wolf cut: shaggy, choppy layers of medium length reaching the shoulders, curtain bangs, more volume on top and around the face"
+    },
+    {
+      "id": "pelo-rizos-medianos",
+      "kind": "hair",
+      "label": "Rizos medianos",
+      "desc": "chin-length bouncy ringlet curls with volume on both sides of the head"
+    },
+    {
+      "id": "pelo-media-cola",
+      "kind": "hair",
+      "label": "Media cola",
+      "desc": "shoulder-length hair with the top half tied in a small ponytail"
+    },
+    {
+      "id": "pelo-rastas",
+      "kind": "hair",
+      "label": "Rastas",
+      "desc": "medium-length locs (dreadlocks) falling to the shoulders"
+    },
+    {
       "id": "pelo-largo-liso",
       "kind": "hair",
       "label": "Largo liso",
       "desc": "long straight hair falling past the shoulders, with a center part"
+    },
+    {
+      "id": "pelo-largo-chasquilla",
+      "kind": "hair",
+      "label": "Largo con chasquilla",
+      "desc": "long straight hair falling past the shoulders with straight blunt bangs across the forehead"
+    },
+    {
+      "id": "pelo-mariposa",
+      "kind": "hair",
+      "label": "Capas con cortina",
+      "desc": "long hair with long face-framing layers and curtain bangs parted in the middle, soft and voluminous, falling past the shoulders"
     },
     {
       "id": "pelo-largo-ondulado",
@@ -79,16 +181,28 @@
       "desc": "long curly hair falling past the shoulders"
     },
     {
-      "id": "pelo-melena",
+      "id": "pelo-trenzas-africanas",
       "kind": "hair",
-      "label": "Melena con chasquilla",
-      "desc": "a chin-length bob haircut with bangs"
+      "label": "Trenzas africanas",
+      "desc": "long box braids: many thin, neat braids starting from square sections on the scalp and falling past the shoulders"
     },
     {
       "id": "pelo-cola",
       "kind": "hair",
       "label": "Cola de caballo",
       "desc": "hair pulled back into a high ponytail that hangs down beside the head, held with a purple hair tie"
+    },
+    {
+      "id": "pelo-burbujas",
+      "kind": "hair",
+      "label": "Cola de burbujas",
+      "desc": "the whole scalp covered with hair pulled smoothly back from the forehead into a high ponytail at the crown; the ponytail is tied with four purple hair ties spaced along its length, forming a row of round bubbles that hangs down beside the head"
+    },
+    {
+      "id": "pelo-cola-baja",
+      "kind": "hair",
+      "label": "Cola baja",
+      "desc": "hair combed back with a side part into a low ponytail at the nape of the neck that falls forward over one shoulder, held with a purple hair tie"
     },
     {
       "id": "pelo-colitas",
@@ -103,6 +217,18 @@
       "desc": "a center part and two long braids that fall in front of the shoulders, with purple hair ties"
     },
     {
+      "id": "pelo-trenza-lado",
+      "kind": "hair",
+      "label": "Trenza de lado",
+      "desc": "long hair gathered into one thick braid that falls forward over one shoulder, with a purple hair tie at the end"
+    },
+    {
+      "id": "pelo-trenzas-boxeadoras",
+      "kind": "hair",
+      "label": "Trenzas boxeadoras",
+      "desc": "two thick Dutch braids that start at the hairline and run tight along the scalp to the back of the head, ending in two braids that hang behind the neck"
+    },
+    {
       "id": "pelo-trenzas-pegadas",
       "kind": "hair",
       "label": "Trenzas pegadas",
@@ -115,16 +241,16 @@
       "desc": "hair pulled up into a round bun on top of the head"
     },
     {
-      "id": "pelo-media-cola",
+      "id": "pelo-pinza",
       "kind": "hair",
-      "label": "Media cola",
-      "desc": "shoulder-length hair with the top half tied in a small ponytail"
+      "label": "Moño con pinza",
+      "desc": "hair twisted up into a loose bun at the back of the head held with a big purple claw clip, with a few loose strands framing the face"
     },
     {
-      "id": "pelo-rastas",
+      "id": "pelo-dos-monos",
       "kind": "hair",
-      "label": "Rastas",
-      "desc": "medium-length locs (dreadlocks) falling to the shoulders"
+      "label": "Dos moños",
+      "desc": "two round buns on the top of the head, one on each side (space buns), with the rest of the hair pulled smooth toward them"
     },
     {
       "id": "ojos-redondos",
