@@ -3,7 +3,8 @@
     "maestra": "art/piezas/maestra.png",
     "ropa": "art/piezas/plantilla-ropa-nino.png",
     "estilo": "art/codex/personaje-base-b.png",
-    "cara": "art/piezas/maestra-cara.png"
+    "cara": "art/piezas/maestra-cara.png",
+    "gorro": "art/piezas/maestra-gorro.png"
   },
   "parts": [
     {
@@ -106,7 +107,7 @@
       "id": "pelo-afro",
       "kind": "hair",
       "label": "Afro",
-      "desc": "a big round afro"
+      "desc": "a rounded afro of moderate size that frames the face: it stands out only a little beyond the sides and the top of the head, about one and a half times as wide as the bald head, clearly smaller than a big afro; it covers the top of the ears"
     },
     {
       "id": "pelo-afro-pompones",
@@ -574,7 +575,8 @@
       "label": "Jockey",
       "desc": "a medium blue (#3B82F6) baseball cap facing forward, sitting on the head",
       "price": 60,
-      "clipsHair": true
+      "clipsHair": true,
+      "dropWarm": true
     },
     {
       "id": "cabeza-gorro-lana",
@@ -612,7 +614,110 @@
       "label": "Sombrero",
       "desc": "a straw-yellow sun hat with a wide brim and a blue ribbon, sitting on the head",
       "price": 60,
-      "clipsHair": true
+      "clipsHair": true,
+      "backBelow": [
+        [
+          100,
+          292
+        ],
+        [
+          305,
+          292
+        ],
+        [
+          310,
+          281
+        ],
+        [
+          320,
+          271
+        ],
+        [
+          330,
+          263
+        ],
+        [
+          335,
+          263
+        ],
+        [
+          350,
+          253
+        ],
+        [
+          365,
+          247
+        ],
+        [
+          380,
+          242
+        ],
+        [
+          395,
+          239
+        ],
+        [
+          410,
+          236
+        ],
+        [
+          425,
+          233
+        ],
+        [
+          440,
+          232
+        ],
+        [
+          455,
+          230
+        ],
+        [
+          500,
+          230
+        ],
+        [
+          530,
+          232
+        ],
+        [
+          560,
+          235
+        ],
+        [
+          590,
+          241
+        ],
+        [
+          620,
+          249
+        ],
+        [
+          650,
+          261
+        ],
+        [
+          665,
+          270
+        ],
+        [
+          675,
+          276
+        ],
+        [
+          685,
+          285
+        ],
+        [
+          695,
+          301
+        ],
+        [
+          930,
+          301
+        ]
+      ],
+      "keepColors": true
     },
     {
       "id": "cara-lentes-redondos",

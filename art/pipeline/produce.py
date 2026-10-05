@@ -6,6 +6,9 @@ empty edit is retried once. Every attempt is logged to art/piezas/produccion.jso
 
 Usage: produce.py [--kinds hair,eyes] [--only id1,id2] [--workers 4] [--limit N] [--recut]
 --recut cuts again every part from its saved GPT image, without generating anything.
+
+Every hairstyle also gets a version pressed under a hat (<id>-con-gorro, kind hair-hat), drawn
+on maestra-gorro.png (hat_template.py) with the hairstyle's own image as reference.
 """
 import argparse
 import json
@@ -14,6 +17,8 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).parent))
 from extract import MisalignedEdit, extract  # noqa: E402
@@ -65,19 +70,49 @@ CLOTHES_ASK = {
               'color medium blue (#3B82F6) with white soles and white details. Do not change the clothes. '
               + KEEP_CHILD),
 }
+UNDER_HAT_SUFFIX = '-con-gorro'
+UNDER_HAT_ASK = (
+    'Edit the first attached image (a bald, faceless child template wearing a small magenta cap). Add ONLY hair: '
+    'the same hairstyle as in the second attached image, a close-up of another child ({desc}), as it looks when '
+    'the child wears a hat. The magenta cap stands for the hat and the hair is pressed flat under it: no hair '
+    "above, over or beside the cap. Right below the cap's edge the hair lies flat and close to the head, with no volume sticking out "
+    'above the ears; lower down it falls and continues exactly like in the second image, with the same length '
+    'and shape below the ears. Whatever the hairstyle has on top of the head (buns, puffs, a high ponytail, '
+    "height) is hidden under the hat. Bangs show only below the cap's edge. Dark brown with one darker shadow "
+    'tone and a few light highlights, in the art style of the second attached image. Do not change or recolor '
+    'the magenta cap. Do not add a face. Keep everything else pixel-identical to the first attached image: same '
+    'magenta cap, same blank face, magenta clothes, skin, body, bare feet, pose, proportions, size and exact '
+    'position on the canvas, same plain white background, same 1024x1536 portrait canvas. Flat vector '
+    'illustration, thick dark navy outlines, one shadow tone, no gradients, no text.')
 ACCESSORY_ASK = ('Edit the attached image of a bald 10-year-old child character. Add ONLY {desc}, in the same art '
                  'style. Do not add hair and do not change the face, the clothes or the body. ' + KEEP_BALD)
 ACCESSORIES = ('headwear', 'eyewear', 'neckwear', 'backwear', 'earwear')
 # Which template each kind is an edit of (keys of manifest["templates"]).
-TEMPLATE = {**{k: 'maestra' for k in ASK}, **{k: 'ropa' for k in CLOTHES_ASK}, **{k: 'cara' for k in ACCESSORIES}}
+TEMPLATE = {**{k: 'maestra' for k in ASK}, **{k: 'ropa' for k in CLOTHES_ASK}, **{k: 'cara' for k in ACCESSORIES},
+            'hair-hat': 'gorro'}
 # Below this many pixels the cut is empty or GPT drew the part somewhere else.
 MIN_AREA = {'hair': 20000, 'eyes': 3000, 'brows': 1200, 'nose': 120, 'mouth': 500, 'top': 40000, 'dress': 60000,
             'bottom': 20000, 'shoes': 15000, 'headwear': 4000, 'eyewear': 1500, 'neckwear': 2500, 'backwear': 4000,
-            'earwear': 300}
+            'earwear': 300, 'hair-hat': 3000}
+
+
+def all_parts(manifest):
+    """The manifest's parts plus the under-hat version of every hairstyle."""
+    parts = list(manifest['parts'])
+    for p in manifest['parts']:
+        if p['kind'] == 'hair':
+            parts.append({'id': p['id'] + UNDER_HAT_SUFFIX, 'kind': 'hair-hat', 'of': p['id'], 'desc': p['desc']})
+    return parts
+
+
+def cut(part, template, raw):
+    return extract(template, str(raw), part['kind'], drop_warm=part.get('dropWarm', False))
 
 
 def prompt_for(part):
     kind = part['kind']
+    if kind == 'hair-hat':
+        return UNDER_HAT_ASK.format(desc=part['desc']) + '\n'
     if kind in ASK:
         return ('Edit the first attached image (a bald, faceless child template). '
                 + ASK[kind].format(desc=part['desc']) + ' ' + KEEP + '\n')
@@ -86,14 +121,27 @@ def prompt_for(part):
     return ACCESSORY_ASK.format(desc=part['desc']) + '\n'
 
 
+def head_closeup(hair_id):
+    """The hairstyle's image cropped to the head: given whole, GPT took it for the image to edit
+    and redrew the figure."""
+    out = PIECES / 'referencias' / f'{hair_id}-cabeza.png'
+    if not out.exists():
+        out.parent.mkdir(exist_ok=True)
+        Image.open(PIECES / f'{hair_id}.png').convert('RGB').crop((112, 0, 912, 800)).save(out)
+    return out
+
+
 def references(part, templates):
     """Face and hair parts also get the styled character for reference; clothes and accessories
     only their template (a second image made GPT redraw the whole figure)."""
     refs = [str(ROOT / templates[TEMPLATE[part['kind']]])]
-    if part['kind'] in ASK:
+    if part['kind'] == 'hair-hat':
+        refs.append(str(head_closeup(part['of'])))
+    elif part['kind'] in ASK:
         refs.append(str(ROOT / templates['estilo']))
     return refs
 ATTEMPTS = 2
+ATTEMPTS_UNDER_HAT = 3  # GPT redraws the whole figure more often with two figures attached
 
 
 def log(entry):
@@ -110,7 +158,7 @@ def produce(part, templates):
     # An image left by an earlier run is tried first: it already cost quota.
     if raw.exists():
         try:
-            img, area = extract(template, str(raw), kind)
+            img, area = cut(part, template, raw)
             if area >= part.get('minArea', MIN_AREA[kind]):
                 img.save(CUTS / f'{pid}.png')
                 log({'id': pid, 'attempt': 0, 'result': 'ok', 'area': area, 'gen': 'reaprovechada'})
@@ -118,7 +166,7 @@ def produce(part, templates):
         except MisalignedEdit:
             pass
         raw.unlink()
-    for attempt in range(1, ATTEMPTS + 1):
+    for attempt in range(1, (ATTEMPTS_UNDER_HAT if kind == 'hair-hat' else ATTEMPTS) + 1):
         run = subprocess.run([str(GEN), str(raw), str(prompt_file), *references(part, templates)],
                              capture_output=True, text=True)
         summary = (run.stdout.strip().splitlines() or [''])[-1]
@@ -126,7 +174,7 @@ def produce(part, templates):
             log({'id': pid, 'attempt': attempt, 'result': 'sin imagen', 'detail': (run.stderr or run.stdout)[-300:]})
             continue
         try:
-            img, area = extract(template, str(raw), kind)
+            img, area = cut(part, template, raw)
         except MisalignedEdit as err:
             log({'id': pid, 'attempt': attempt, 'result': 'rechazada', 'detail': str(err), 'gen': summary})
             continue
@@ -150,19 +198,21 @@ def main():
 
     manifest = json.loads((Path(__file__).parent / 'manifest.json').read_text())
     if args.recut:
-        for part in manifest['parts']:
+        for part in all_parts(manifest):
+            if args.only and part['id'] not in args.only.split(','):
+                continue
             raw = PIECES / f"{part['id']}.png"
             if not raw.exists():
                 continue
             try:
-                img, area = extract(str(ROOT / manifest['templates'][TEMPLATE[part['kind']]]), str(raw), part['kind'])
+                img, area = cut(part, str(ROOT / manifest['templates'][TEMPLATE[part['kind']]]), raw)
                 img.save(CUTS / f"{part['id']}.png")
                 print(f"{part['id']}: {area} px", flush=True)
             except MisalignedEdit as err:
                 print(f"{part['id']}: rechazada ({err})", flush=True)
         return
     CUTS.mkdir(parents=True, exist_ok=True)
-    parts = [p for p in manifest['parts'] if not (CUTS / f"{p['id']}.png").exists()]
+    parts = [p for p in all_parts(manifest) if not (CUTS / f"{p['id']}.png").exists()]
     if args.kinds:
         parts = [p for p in parts if p['kind'] in args.kinds.split(',')]
     if args.only:

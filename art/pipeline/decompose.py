@@ -76,6 +76,11 @@ PARAMS = {
 }
 MIX_RADIUS = 2.5
 FIXED = 255  # class id of anything that keeps its color
+# GPT outlines hair in a near-black brown. Pixel by pixel, part of that line read as outline and
+# part as the darkest hair shade, so a blonde hair got a dashed edge. Along the layer's edge
+# (silhouette and hairline over the face) dark pixels are all outline; inside, all shading.
+HAIR_EDGE = 10       # px from the layer's edge (1024 canvas): about one outline width
+HAIR_LINE_LUM = 28   # darker than the darkest hair shadow GPT draws
 
 
 def lum(rgb):
@@ -240,6 +245,12 @@ def decompose(rgba, families, hair_islands=False):
         cls = islands_to_skin(cls, 1, 2, rgb=rgb)
         cls = scalp_to_skin(cls, rgb, 1, 2)
         cls = skin_specks_to_hair(cls, rgb, alpha, 1, 2)
+        dark = present & (lum(rgb) < HAIR_LINE_LUM)
+        edge = ndimage.distance_transform_edt(alpha > 0.5) <= HAIR_EDGE
+        # An ear's outline borders skin and stays outline wherever it is.
+        near_skin = ndimage.binary_dilation(cls == 2, iterations=6)
+        cls[dark & edge] = FIXED
+        cls[dark & ~edge & ~near_skin & (cls == FIXED)] = 1
 
     # 2. Pure pixels: same class all around (3x3). The rest blend two classes.
     labels = family_ids + [FIXED]

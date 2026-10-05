@@ -6,16 +6,18 @@
 // that shade in CIELAB and blends: pixel = sum(coverage x color) / sum(coverage).
 
 const INK = [26, 26, 46];
+// hatBack: the underside of a wide brim beside the head, which hair hanging there covers.
 const PAINT_ORDER = ['body', 'shoes', 'bottom', 'top', 'backwear', 'neckwear', 'nose', 'mouth', 'eyes', 'brows',
-  'eyewear', 'hair', 'earwear', 'headwear'];
+  'hatBack', 'eyewear', 'hair', 'earwear', 'headwear'];
 // Which look field gives each color family its color.
 const COLOR_FIELD = { skin: 'skinColor', hair: 'hairColor', eye: 'eyeColor', top: 'topColor', bottom: 'bottomColor', shoes: 'shoeColor' };
 // Colors the parts were drawn in, for a family the look leaves without a color.
 const DRAWN_COLOR = { skin: '#F49C62', hair: '#552B1A', eye: '#5C3A21', top: '#3B82F6', bottom: '#3B82F6', shoes: '#3B82F6' };
 const DL_SCALE = 2;
-// A hat that sits on the head flattens the hair under it: hair above the hat's lower edge goes
-// (it would poke through the crown or float beside it), hair below stays, as it does under a
-// real cap: bangs under the brim, long hair falling from under the sides.
+// A hat that sits on the head flattens the hair under it. Each hairstyle has a version drawn
+// that way (underHat: close to the head below the hat, then falling as usual); the hat still
+// hides the part of it above its lower edge. A hairstyle without that version is cut along the
+// hat's edge, and beside the hat along a line that drops outward.
 const HAT_TUCK = 3;      // the cut runs this far up under the hat's edge, so no seam shows
 const SIDE_SLOPE = 0.7;  // beyond the hat's sides the cut drops this much per pixel outward
 
@@ -160,7 +162,7 @@ async function layerCanvas(id, layer, colors) {
 // Copy of the hair layer flattened under the hat (the cached original stays intact). Both
 // layers are placed on the canvas through their x/y offsets; the cut is in hair coordinates and
 // follows the lowest opaque pixel of each hat column.
-function clipUnderHat(hairCanvas, hairLayer, hatCanvas, hatLayer) {
+function clipUnderHat(hairCanvas, hairLayer, hatCanvas, hatLayer, { pressed = false } = {}) {
   const hw = hatCanvas.width;
   const hh = hatCanvas.height;
   const hat = hatCanvas.getContext('2d').getImageData(0, 0, hw, hh).data;
@@ -192,22 +194,25 @@ function clipUnderHat(hairCanvas, hairLayer, hatCanvas, hatLayer) {
     const beyond = col < left ? left - col : col > right ? col - right : 0;
     return hatLayer.y + (y - HAT_TUCK) * sy + beyond * sx * SIDE_SLOPE - hairLayer.y;
   };
-  const cut = new Path2D();
-  const side = new Path2D();
-  for (let x = 0; x <= c.width; x += 1) {
+  const hatLeft = hatLayer.x + left * sx - hairLayer.x;
+  const hatRight = hatLayer.x + right * sx - hairLayer.x;
+  // Hair drawn pressed under a hat is already shaped beside it: only what the hat hides goes.
+  const from = pressed ? Math.max(0, Math.floor(hatLeft)) : 0;
+  const to = pressed ? Math.min(c.width, Math.ceil(hatRight)) : c.width;
+  const above = new Path2D();
+  for (let x = from; x <= to; x += 1) {
     const y = cutAt(x);
-    if (x === 0) cut.moveTo(x, y); else cut.lineTo(x, y);
+    if (x === from) above.moveTo(x, y); else above.lineTo(x, y);
   }
-  const above = new Path2D(cut);
-  above.lineTo(c.width, 0);
-  above.lineTo(0, 0);
+  above.lineTo(to, 0);
+  above.lineTo(from, 0);
   above.closePath();
   ctx.globalCompositeOperation = 'destination-out';
   ctx.fill(above);
+  if (pressed) return c;
 
   // Under the hat the cut is hidden; beside it, hair that remains gets the drawing's outline.
-  const hatLeft = hatLayer.x + left * sx - hairLayer.x;
-  const hatRight = hatLayer.x + right * sx - hairLayer.x;
+  const side = new Path2D();
   if (hatLeft > 0) {
     side.moveTo(0, cutAt(0));
     for (let x = 1; x <= hatLeft; x++) side.lineTo(x, cutAt(x));
@@ -237,9 +242,14 @@ export async function drawCharacter(canvas, look, { view: viewName = 'full' } = 
   const view = VIEWS[viewName] ?? VIEWS.full;
   const dress = parts.layers[look.top]?.kind === 'dress';
   const hat = parts.layers[look.headwear];
+  const underHat = parts.layers[look.hair]?.underHat;
+  const pressed = hat?.clipsHair && parts.layers[underHat] ? underHat : null;
   const stack = PAINT_ORDER.map(kind => {
     if (kind === 'bottom' && dress) return null;
-    const id = kind === 'body' ? 'body' : look[kind];
+    let id = look[kind];
+    if (kind === 'body') id = 'body';
+    if (kind === 'hatBack') id = hat?.back;
+    if (kind === 'hair' && pressed) id = pressed;
     const layer = id && parts.layers[id];
     if (!layer) return null;
     const colors = layer.families.map(family => (
@@ -251,7 +261,7 @@ export async function drawCharacter(canvas, look, { view: viewName = 'full' } = 
   if (hat?.clipsHair) {
     const i = stack.findIndex(s => s.kind === 'hair');
     const h = stack.findIndex(s => s.kind === 'headwear');
-    if (i >= 0 && h >= 0) drawn[i] = clipUnderHat(drawn[i], stack[i].layer, drawn[h], hat);
+    if (i >= 0 && h >= 0) drawn[i] = clipUnderHat(drawn[i], stack[i].layer, drawn[h], hat, { pressed: !!pressed });
   }
 
   const ctx = canvas.getContext('2d');

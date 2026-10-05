@@ -1,5 +1,5 @@
 {
- "version": "063095a5e9",
+ "version": "43738ad8bc",
  "canvas": {
   "w": 512,
   "h": 768
@@ -29,7 +29,21 @@
    "y": 19,
    "w": 245,
    "h": 180,
-   "label": "Corto desordenado"
+   "label": "Corto desordenado",
+   "underHat": "pelo-corto-desordenado-con-gorro"
+  },
+  "pelo-corto-desordenado-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-corto-desordenado-con-gorro.webp",
+   "map": "pelo-corto-desordenado-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 158,
+   "y": 113,
+   "w": 184,
+   "h": 79
   },
   "pelo-corto-chasquilla": {
    "kind": "hair",
@@ -43,7 +57,21 @@
    "y": 40,
    "w": 225,
    "h": 160,
-   "label": "Corto con chasquilla"
+   "label": "Corto con chasquilla",
+   "underHat": "pelo-corto-chasquilla-con-gorro"
+  },
+  "pelo-corto-chasquilla-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-corto-chasquilla-con-gorro.webp",
+   "map": "pelo-corto-chasquilla-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 159,
+   "y": 113,
+   "w": 180,
+   "h": 89
   },
   "pelo-crop": {
    "kind": "hair",
@@ -57,7 +85,21 @@
    "y": 45,
    "w": 197,
    "h": 133,
-   "label": "Crop texturizado"
+   "label": "Crop texturizado",
+   "underHat": "pelo-crop-con-gorro"
+  },
+  "pelo-crop-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-crop-con-gorro.webp",
+   "map": "pelo-crop-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 165,
+   "y": 113,
+   "w": 166,
+   "h": 60
   },
   "pelo-cortina": {
    "kind": "hair",
@@ -71,7 +113,21 @@
    "y": 40,
    "w": 245,
    "h": 162,
-   "label": "Chasquilla cortina"
+   "label": "Chasquilla cortina",
+   "underHat": "pelo-cortina-con-gorro"
+  },
+  "pelo-cortina-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-cortina-con-gorro.webp",
+   "map": "pelo-cortina-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 149,
+   "y": 113,
+   "w": 202,
+   "h": 84
   },
   "pelo-corto-raya": {
    "kind": "hair",
@@ -85,7 +141,21 @@
    "y": 49,
    "w": 219,
    "h": 148,
-   "label": "Corto con partidura"
+   "label": "Corto con partidura",
+   "underHat": "pelo-corto-raya-con-gorro"
+  },
+  "pelo-corto-raya-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-corto-raya-con-gorro.webp",
+   "map": "pelo-corto-raya-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 156,
+   "y": 113,
+   "w": 187,
+   "h": 85
   },
   "pelo-hacia-atras": {
    "kind": "hair",
@@ -99,7 +169,21 @@
    "y": 39,
    "w": 212,
    "h": 160,
-   "label": "Hacia atrás"
+   "label": "Hacia atrás",
+   "underHat": "pelo-hacia-atras-con-gorro"
+  },
+  "pelo-hacia-atras-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-hacia-atras-con-gorro.webp",
+   "map": "pelo-hacia-atras-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 159,
+   "y": 113,
+   "w": 181,
+   "h": 85
   },
   "pelo-copete": {
    "kind": "hair",
@@ -113,7 +197,21 @@
    "y": 18,
    "w": 217,
    "h": 195,
-   "label": "Copete"
+   "label": "Copete",
+   "underHat": "pelo-copete-con-gorro"
+  },
+  "pelo-copete-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-copete-con-gorro.webp",
+   "map": "pelo-copete-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 157,
+   "y": 113,
+   "w": 182,
+   "h": 81
   },
   "pelo-dos-bloques": {
    "kind": "hair",
@@ -127,7 +225,21 @@
    "y": 29,
    "w": 245,
    "h": 155,
-   "label": "Dos bloques"
+   "label": "Dos bloques",
+   "underHat": "pelo-dos-bloques-con-gorro"
+  },
+  "pelo-dos-bloques-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-dos-bloques-con-gorro.webp",
+   "map": "pelo-dos-bloques-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 156,
+   "y": 113,
+   "w": 187,
+   "h": 76
   },
   "pelo-mullet": {
    "kind": "hair",
@@ -141,7 +253,21 @@
    "y": 27,
    "w": 224,
    "h": 268,
-   "label": "Mullet moderno"
+   "label": "Mullet moderno",
+   "underHat": "pelo-mullet-con-gorro"
+  },
+  "pelo-mullet-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-mullet-con-gorro.webp",
+   "map": "pelo-mullet-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 156,
+   "y": 113,
+   "w": 188,
+   "h": 178
   },
   "pelo-rapado": {
    "kind": "hair",
@@ -151,11 +277,25 @@
     "hair",
     "skin"
    ],
-   "x": 164,
+   "x": 163,
    "y": 69,
-   "w": 177,
+   "w": 178,
    "h": 123,
-   "label": "Rapado"
+   "label": "Rapado",
+   "underHat": "pelo-rapado-con-gorro"
+  },
+  "pelo-rapado-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-rapado-con-gorro.webp",
+   "map": "pelo-rapado-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 163,
+   "y": 113,
+   "w": 173,
+   "h": 78
   },
   "pelo-degradado": {
    "kind": "hair",
@@ -169,7 +309,21 @@
    "y": 36,
    "w": 212,
    "h": 146,
-   "label": "Degradado"
+   "label": "Degradado",
+   "underHat": "pelo-degradado-con-gorro"
+  },
+  "pelo-degradado-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-degradado-con-gorro.webp",
+   "map": "pelo-degradado-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 163,
+   "y": 113,
+   "w": 168,
+   "h": 62
   },
   "pelo-punta": {
    "kind": "hair",
@@ -183,7 +337,21 @@
    "y": 22,
    "w": 217,
    "h": 179,
-   "label": "De punta"
+   "label": "De punta",
+   "underHat": "pelo-punta-con-gorro"
+  },
+  "pelo-punta-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-punta-con-gorro.webp",
+   "map": "pelo-punta-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 163,
+   "y": 113,
+   "w": 173,
+   "h": 82
   },
   "pelo-cresta": {
    "kind": "hair",
@@ -197,7 +365,21 @@
    "y": 10,
    "w": 175,
    "h": 166,
-   "label": "Cresta"
+   "label": "Cresta",
+   "underHat": "pelo-cresta-con-gorro"
+  },
+  "pelo-cresta-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-cresta-con-gorro.webp",
+   "map": "pelo-cresta-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 168,
+   "y": 113,
+   "w": 163,
+   "h": 66
   },
   "pelo-rizos-cortos": {
    "kind": "hair",
@@ -211,7 +393,21 @@
    "y": 40,
    "w": 225,
    "h": 150,
-   "label": "Rizos cortos"
+   "label": "Rizos cortos",
+   "underHat": "pelo-rizos-cortos-con-gorro"
+  },
+  "pelo-rizos-cortos-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-rizos-cortos-con-gorro.webp",
+   "map": "pelo-rizos-cortos-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 152,
+   "y": 113,
+   "w": 194,
+   "h": 132
   },
   "pelo-rizos-degradado": {
    "kind": "hair",
@@ -225,7 +421,21 @@
    "y": 22,
    "w": 236,
    "h": 173,
-   "label": "Rizos con degradado"
+   "label": "Rizos con degradado",
+   "underHat": "pelo-rizos-degradado-con-gorro"
+  },
+  "pelo-rizos-degradado-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-rizos-degradado-con-gorro.webp",
+   "map": "pelo-rizos-degradado-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 160,
+   "y": 113,
+   "w": 180,
+   "h": 75
   },
   "pelo-hi-top": {
    "kind": "hair",
@@ -239,7 +449,21 @@
    "y": 36,
    "w": 191,
    "h": 153,
-   "label": "Afro alto"
+   "label": "Afro alto",
+   "underHat": "pelo-hi-top-con-gorro"
+  },
+  "pelo-hi-top-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-hi-top-con-gorro.webp",
+   "map": "pelo-hi-top-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 168,
+   "y": 113,
+   "w": 163,
+   "h": 74
   },
   "pelo-afro": {
    "kind": "hair",
@@ -249,11 +473,25 @@
     "hair",
     "skin"
    ],
-   "x": 96,
-   "y": 13,
-   "w": 316,
-   "h": 255,
-   "label": "Afro"
+   "x": 126,
+   "y": 33,
+   "w": 256,
+   "h": 209,
+   "label": "Afro",
+   "underHat": "pelo-afro-con-gorro"
+  },
+  "pelo-afro-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-afro-con-gorro.webp",
+   "map": "pelo-afro-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 147,
+   "y": 113,
+   "w": 206,
+   "h": 81
   },
   "pelo-afro-pompones": {
    "kind": "hair",
@@ -267,7 +505,21 @@
    "y": 14,
    "w": 291,
    "h": 176,
-   "label": "Pompones afro"
+   "label": "Pompones afro",
+   "underHat": "pelo-afro-pompones-con-gorro"
+  },
+  "pelo-afro-pompones-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-afro-pompones-con-gorro.webp",
+   "map": "pelo-afro-pompones-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 163,
+   "y": 113,
+   "w": 174,
+   "h": 81
   },
   "pelo-melena": {
    "kind": "hair",
@@ -281,7 +533,21 @@
    "y": 51,
    "w": 262,
    "h": 202,
-   "label": "Melena con chasquilla"
+   "label": "Melena con chasquilla",
+   "underHat": "pelo-melena-con-gorro"
+  },
+  "pelo-melena-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-melena-con-gorro.webp",
+   "map": "pelo-melena-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 135,
+   "y": 113,
+   "w": 230,
+   "h": 140
   },
   "pelo-melena-ondulada": {
    "kind": "hair",
@@ -295,7 +561,21 @@
    "y": 34,
    "w": 298,
    "h": 259,
-   "label": "Melena ondulada"
+   "label": "Melena ondulada",
+   "underHat": "pelo-melena-ondulada-con-gorro"
+  },
+  "pelo-melena-ondulada-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-melena-ondulada-con-gorro.webp",
+   "map": "pelo-melena-ondulada-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 116,
+   "y": 113,
+   "w": 270,
+   "h": 176
   },
   "pelo-wolf": {
    "kind": "hair",
@@ -309,7 +589,21 @@
    "y": 26,
    "w": 264,
    "h": 274,
-   "label": "Wolf cut"
+   "label": "Wolf cut",
+   "underHat": "pelo-wolf-con-gorro"
+  },
+  "pelo-wolf-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-wolf-con-gorro.webp",
+   "map": "pelo-wolf-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 141,
+   "y": 113,
+   "w": 217,
+   "h": 181
   },
   "pelo-rizos-medianos": {
    "kind": "hair",
@@ -323,7 +617,21 @@
    "y": 39,
    "w": 295,
    "h": 220,
-   "label": "Rizos medianos"
+   "label": "Rizos medianos",
+   "underHat": "pelo-rizos-medianos-con-gorro"
+  },
+  "pelo-rizos-medianos-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-rizos-medianos-con-gorro.webp",
+   "map": "pelo-rizos-medianos-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 129,
+   "y": 113,
+   "w": 243,
+   "h": 153
   },
   "pelo-media-cola": {
    "kind": "hair",
@@ -337,7 +645,21 @@
    "y": 13,
    "w": 248,
    "h": 262,
-   "label": "Media cola"
+   "label": "Media cola",
+   "underHat": "pelo-media-cola-con-gorro"
+  },
+  "pelo-media-cola-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-media-cola-con-gorro.webp",
+   "map": "pelo-media-cola-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 142,
+   "y": 113,
+   "w": 213,
+   "h": 161
   },
   "pelo-rastas": {
    "kind": "hair",
@@ -351,7 +673,21 @@
    "y": 40,
    "w": 256,
    "h": 251,
-   "label": "Rastas"
+   "label": "Rastas",
+   "underHat": "pelo-rastas-con-gorro"
+  },
+  "pelo-rastas-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-rastas-con-gorro.webp",
+   "map": "pelo-rastas-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 146,
+   "y": 114,
+   "w": 207,
+   "h": 175
   },
   "pelo-largo-liso": {
    "kind": "hair",
@@ -365,7 +701,21 @@
    "y": 48,
    "w": 282,
    "h": 330,
-   "label": "Largo liso"
+   "label": "Largo liso",
+   "underHat": "pelo-largo-liso-con-gorro"
+  },
+  "pelo-largo-liso-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-largo-liso-con-gorro.webp",
+   "map": "pelo-largo-liso-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 122,
+   "y": 113,
+   "w": 259,
+   "h": 260
   },
   "pelo-largo-chasquilla": {
    "kind": "hair",
@@ -379,7 +729,21 @@
    "y": 53,
    "w": 277,
    "h": 328,
-   "label": "Largo con chasquilla"
+   "label": "Largo con chasquilla",
+   "underHat": "pelo-largo-chasquilla-con-gorro"
+  },
+  "pelo-largo-chasquilla-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-largo-chasquilla-con-gorro.webp",
+   "map": "pelo-largo-chasquilla-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 126,
+   "y": 113,
+   "w": 247,
+   "h": 254
   },
   "pelo-mariposa": {
    "kind": "hair",
@@ -393,7 +757,21 @@
    "y": 44,
    "w": 301,
    "h": 349,
-   "label": "Capas con cortina"
+   "label": "Capas con cortina",
+   "underHat": "pelo-mariposa-con-gorro"
+  },
+  "pelo-mariposa-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-mariposa-con-gorro.webp",
+   "map": "pelo-mariposa-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 115,
+   "y": 113,
+   "w": 263,
+   "h": 261
   },
   "pelo-largo-ondulado": {
    "kind": "hair",
@@ -407,7 +785,21 @@
    "y": 23,
    "w": 334,
    "h": 369,
-   "label": "Largo ondulado"
+   "label": "Largo ondulado",
+   "underHat": "pelo-largo-ondulado-con-gorro"
+  },
+  "pelo-largo-ondulado-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-largo-ondulado-con-gorro.webp",
+   "map": "pelo-largo-ondulado-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 110,
+   "y": 113,
+   "w": 283,
+   "h": 233
   },
   "pelo-rizos-largos": {
    "kind": "hair",
@@ -421,7 +813,21 @@
    "y": 34,
    "w": 335,
    "h": 356,
-   "label": "Rizos largos"
+   "label": "Rizos largos",
+   "underHat": "pelo-rizos-largos-con-gorro"
+  },
+  "pelo-rizos-largos-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-rizos-largos-con-gorro.webp",
+   "map": "pelo-rizos-largos-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 106,
+   "y": 113,
+   "w": 287,
+   "h": 267
   },
   "pelo-trenzas-africanas": {
    "kind": "hair",
@@ -435,7 +841,21 @@
    "y": 65,
    "w": 259,
    "h": 376,
-   "label": "Trenzas africanas"
+   "label": "Trenzas africanas",
+   "underHat": "pelo-trenzas-africanas-con-gorro"
+  },
+  "pelo-trenzas-africanas-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-trenzas-africanas-con-gorro.webp",
+   "map": "pelo-trenzas-africanas-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 130,
+   "y": 114,
+   "w": 245,
+   "h": 322
   },
   "pelo-cola": {
    "kind": "hair",
@@ -449,7 +869,21 @@
    "y": 17,
    "w": 279,
    "h": 282,
-   "label": "Cola de caballo"
+   "label": "Cola de caballo",
+   "underHat": "pelo-cola-con-gorro"
+  },
+  "pelo-cola-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-cola-con-gorro.webp",
+   "map": "pelo-cola-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 160,
+   "y": 113,
+   "w": 247,
+   "h": 236
   },
   "pelo-burbujas": {
    "kind": "hair",
@@ -463,7 +897,21 @@
    "y": 12,
    "w": 278,
    "h": 294,
-   "label": "Cola de burbujas"
+   "label": "Cola de burbujas",
+   "underHat": "pelo-burbujas-con-gorro"
+  },
+  "pelo-burbujas-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-burbujas-con-gorro.webp",
+   "map": "pelo-burbujas-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 160,
+   "y": 113,
+   "w": 253,
+   "h": 277
   },
   "pelo-cola-baja": {
    "kind": "hair",
@@ -477,7 +925,21 @@
    "y": 39,
    "w": 223,
    "h": 331,
-   "label": "Cola baja"
+   "label": "Cola baja",
+   "underHat": "pelo-cola-baja-con-gorro"
+  },
+  "pelo-cola-baja-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-cola-baja-con-gorro.webp",
+   "map": "pelo-cola-baja-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 161,
+   "y": 113,
+   "w": 194,
+   "h": 257
   },
   "pelo-colitas": {
    "kind": "hair",
@@ -491,7 +953,21 @@
    "y": 64,
    "w": 320,
    "h": 148,
-   "label": "Dos colitas"
+   "label": "Dos colitas",
+   "underHat": "pelo-colitas-con-gorro"
+  },
+  "pelo-colitas-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-colitas-con-gorro.webp",
+   "map": "pelo-colitas-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 102,
+   "y": 113,
+   "w": 297,
+   "h": 174
   },
   "pelo-trenzas": {
    "kind": "hair",
@@ -505,7 +981,21 @@
    "y": 64,
    "w": 208,
    "h": 337,
-   "label": "Trenzas"
+   "label": "Trenzas",
+   "underHat": "pelo-trenzas-con-gorro"
+  },
+  "pelo-trenzas-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-trenzas-con-gorro.webp",
+   "map": "pelo-trenzas-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 159,
+   "y": 113,
+   "w": 182,
+   "h": 278
   },
   "pelo-trenza-lado": {
    "kind": "hair",
@@ -519,7 +1009,21 @@
    "y": 39,
    "w": 228,
    "h": 378,
-   "label": "Trenza de lado"
+   "label": "Trenza de lado",
+   "underHat": "pelo-trenza-lado-con-gorro"
+  },
+  "pelo-trenza-lado-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-trenza-lado-con-gorro.webp",
+   "map": "pelo-trenza-lado-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 159,
+   "y": 113,
+   "w": 183,
+   "h": 300
   },
   "pelo-trenzas-boxeadoras": {
    "kind": "hair",
@@ -533,7 +1037,21 @@
    "y": 62,
    "w": 197,
    "h": 216,
-   "label": "Trenzas boxeadoras"
+   "label": "Trenzas boxeadoras",
+   "underHat": "pelo-trenzas-boxeadoras-con-gorro"
+  },
+  "pelo-trenzas-boxeadoras-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-trenzas-boxeadoras-con-gorro.webp",
+   "map": "pelo-trenzas-boxeadoras-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 154,
+   "y": 117,
+   "w": 185,
+   "h": 162
   },
   "pelo-trenzas-pegadas": {
    "kind": "hair",
@@ -547,7 +1065,21 @@
    "y": 61,
    "w": 184,
    "h": 209,
-   "label": "Trenzas pegadas"
+   "label": "Trenzas pegadas",
+   "underHat": "pelo-trenzas-pegadas-con-gorro"
+  },
+  "pelo-trenzas-pegadas-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-trenzas-pegadas-con-gorro.webp",
+   "map": "pelo-trenzas-pegadas-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 161,
+   "y": 113,
+   "w": 178,
+   "h": 158
   },
   "pelo-mono": {
    "kind": "hair",
@@ -561,7 +1093,21 @@
    "y": 8,
    "w": 194,
    "h": 194,
-   "label": "Moño alto"
+   "label": "Moño alto",
+   "underHat": "pelo-mono-con-gorro"
+  },
+  "pelo-mono-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-mono-con-gorro.webp",
+   "map": "pelo-mono-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 158,
+   "y": 113,
+   "w": 182,
+   "h": 79
   },
   "pelo-pinza": {
    "kind": "hair",
@@ -575,7 +1121,21 @@
    "y": 15,
    "w": 255,
    "h": 258,
-   "label": "Moño con pinza"
+   "label": "Moño con pinza",
+   "underHat": "pelo-pinza-con-gorro"
+  },
+  "pelo-pinza-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-pinza-con-gorro.webp",
+   "map": "pelo-pinza-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 158,
+   "y": 113,
+   "w": 185,
+   "h": 159
   },
   "pelo-dos-monos": {
    "kind": "hair",
@@ -589,7 +1149,21 @@
    "y": 42,
    "w": 252,
    "h": 152,
-   "label": "Dos moños"
+   "label": "Dos moños",
+   "underHat": "pelo-dos-monos-con-gorro"
+  },
+  "pelo-dos-monos-con-gorro": {
+   "kind": "hair-hat",
+   "file": "pelo-dos-monos-con-gorro.webp",
+   "map": "pelo-dos-monos-con-gorro.map.webp",
+   "families": [
+    "hair",
+    "skin"
+   ],
+   "x": 164,
+   "y": 113,
+   "w": 172,
+   "h": 84
   },
   "ojos-redondos": {
    "kind": "eyes",
@@ -1366,9 +1940,22 @@
    "x": 91,
    "y": 32,
    "w": 325,
-   "h": 162,
+   "h": 119,
    "label": "Sombrero",
-   "clipsHair": true
+   "clipsHair": true,
+   "back": "cabeza-sombrero-atras"
+  },
+  "cabeza-sombrero-atras": {
+   "kind": "headwear-back",
+   "file": "cabeza-sombrero-atras.webp",
+   "map": "cabeza-sombrero-atras.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 91,
+   "y": 113,
+   "w": 325,
+   "h": 81
   },
   "cara-lentes-redondos": {
    "kind": "eyewear",

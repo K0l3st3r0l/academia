@@ -9,8 +9,9 @@ Before cutting, check_alignment() rejects edits where GPT redrew the whole figur
 of editing the template (it happens): hands and feet must sit where the template has them.
 
 Usage: extract.py <template.png> <part.png> <kind> <out.png>
-kinds: hair, face, eyes, brows, nose, mouth, top, dress, bottom, shoes,
+kinds: hair, hair-hat, face, eyes, brows, nose, mouth, top, dress, bottom, shoes,
        headwear, eyewear, neckwear, backwear, earwear
+hair-hat is a hairstyle drawn under the magenta cap of maestra-gorro.png (see hat_template.py).
 """
 import sys
 import numpy as np
@@ -20,6 +21,7 @@ from scipy import ndimage
 # Regions on the 1024x1536 canvas (x0, y0, x1, y1) where each kind of part may appear.
 REGIONS = {
     'hair': (120, 0, 904, 1000),
+    'hair-hat': (120, 0, 904, 1000),
     'face': (330, 190, 700, 520),
     'eyes': (330, 190, 700, 520),
     'brows': (330, 190, 700, 520),
@@ -35,8 +37,8 @@ REGIONS = {
     'backwear': (80, 380, 944, 1250),
     'earwear': (200, 250, 824, 560),
 }
-MIN_SPECK = {'face': 30, 'eyes': 60, 'brows': 60, 'nose': 20, 'mouth': 40, 'hair': 400, 'top': 400, 'dress': 400,
-             'bottom': 400, 'shoes': 400, 'headwear': 300, 'eyewear': 60, 'neckwear': 200, 'backwear': 300, 'earwear': 60}
+MIN_SPECK = {'face': 30, 'eyes': 60, 'brows': 60, 'nose': 20, 'mouth': 40, 'hair': 400, 'hair-hat': 400, 'top': 400,
+             'dress': 400, 'bottom': 400, 'shoes': 400, 'headwear': 300, 'eyewear': 60, 'neckwear': 200, 'backwear': 300, 'earwear': 60}
 CLOTHES = ('top', 'dress', 'bottom')
 FEATURES = ('eyes', 'brows', 'nose', 'mouth')
 
@@ -97,14 +99,39 @@ def load(path):
     return np.asarray(Image.open(path).convert('RGB')).astype(np.int16)
 
 
-def extract(template_path, part_path, kind):
+def warm(a):
+    """Skin and brown: what GPT redraws under a cap's visor (its shadow on the forehead)."""
+    r, g, b = a[..., 0], a[..., 1], a[..., 2]
+    return (r >= g) & (g >= b) & (r - b > 40)
+
+
+def slits_in_hair(mask, t, min_share=0.75):
+    """Hair drawn over the head's outline in a shadow tone as dark as the outline matches the
+    template there, so the cut leaves a slit through the hair that shows the body's black line.
+    A slit is template outline with hair on both sides; outline along the jaw, an ear or a
+    shoulder has hair on one side only and stays out."""
+    candidates = ndimage.binary_closing(mask, iterations=6) & ~mask & dark(t)
+    labels, n = ndimage.label(candidates)
+    keep = np.zeros_like(mask)
+    for i, sl in enumerate(ndimage.find_objects(labels), start=1):
+        sl = tuple(slice(max(0, s.start - 2), s.stop + 2) for s in sl)
+        blob = labels[sl] == i
+        ring = ndimage.binary_dilation(blob, iterations=2) & ~blob
+        if mask[sl][ring].mean() >= min_share:
+            keep[sl] |= blob
+    return keep
+
+
+def extract(template_path, part_path, kind, drop_warm=False):
     t, p = load(template_path), load(part_path)
     check_alignment(t, p, kind)
     diff = np.abs(p - t).sum(-1)
     mask = diff > 75
     if kind not in CLOTHES:
         mask &= ~magentaish(p)
-    if kind == 'hair':
+    if drop_warm:
+        mask &= ~warm(p)
+    if kind in ('hair', 'hair-hat'):
         # GPT also touches up the face and ears around new hair; those pixels are still skin.
         # Where the template is background, though, that skin (a jaw drawn a little wider) is
         # the only thing between face and hair: dropping it left white gaps (afro). Keep it;
@@ -113,6 +140,20 @@ def extract(template_path, part_path, kind):
         mask &= ~(skinlike(p, skin) & ~whitish(t)) & ~whitish(p)
         # No hairstyle puts hair over the middle of the neck: lines there are GPT redrawing the collar.
         mask[500:760, 440:584] = False
+    if kind == 'hair-hat':
+        # Under a hat no hair goes above the cap's lower edge, not even beside it; the cap's own
+        # outline (when GPT shifts it) and a few pixels below it go too: real hats cover them.
+        cap = magentaish(t)
+        cap[345:] = False  # the magenta clothes are not the cap
+        cap = ndimage.binary_dilation(cap, iterations=14)
+        rows = np.arange(cap.shape[0])[:, None]
+        cols = cap.any(0)
+        edge = np.where(cols, (cap * rows).max(0), 0)
+        xs = np.nonzero(cols)[0]
+        edge[: xs[0]], edge[xs[-1] + 1:] = edge[xs[0]], edge[xs[-1]]
+        mask &= rows > edge[None, :]
+        # Where the cut crosses a curl it leaves thin bits of outline, which poked out beside hats.
+        mask &= (rows > edge[None, :] + 30) | ndimage.binary_opening(mask, iterations=4)
     x0, y0, x1, y1 = REGIONS[kind]
     region = np.zeros_like(mask)
     region[y0:y1, x0:x1] = True
@@ -120,6 +161,13 @@ def extract(template_path, part_path, kind):
     mask = ndimage.binary_opening(mask, iterations=1)
     mask = ndimage.binary_closing(mask, iterations=2)
     mask = ndimage.binary_fill_holes(mask)
+    if kind in ('hair', 'hair-hat'):
+        # After filling holes: a slit that closed a ring of hair would fill the ear inside it.
+        slits = slits_in_hair(mask, t)
+        if kind == 'hair-hat':
+            slits &= rows > edge[None, :]
+        mask |= slits & region
+        mask[500:760, 440:584] = False
     if kind in FEATURES:
         # GPT often draws more than asked (eyebrows with the eyes): keep only this feature's blobs.
         labels, n = ndimage.label(ndimage.binary_dilation(mask, iterations=3))

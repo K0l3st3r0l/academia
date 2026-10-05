@@ -19,6 +19,7 @@ from scipy import ndimage
 sys.path.insert(0, str(Path(__file__).parent))
 from recolor import INK  # noqa: E402
 import decompose as D  # noqa: E402
+from produce import UNDER_HAT_SUFFIX  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 PIECES = ROOT / 'art/piezas'
@@ -56,7 +57,8 @@ def without_background(img):
 # Color families each kind of layer is split into (see decompose.py). Every layer also looks
 # for skin: GPT redraws ears, foreheads, necks and arms around what it adds.
 SKIN_SECONDARY = ('skin', D.SKIN_SOURCE, 'skin-secondary', False)
-PRIMARY = {'hair': ('hair', 'hair', True), 'brows': ('hair', 'hair', True), 'eyes': ('eye', 'eye', False),
+PRIMARY = {'hair': ('hair', 'hair', True), 'hair-hat': ('hair', 'hair', True), 'brows': ('hair', 'hair', True),
+           'eyes': ('eye', 'eye', False),
            'top': ('top', 'cloth', False), 'dress': ('top', 'cloth', False),
            'bottom': ('bottom', 'cloth', False), 'shoes': ('shoes', 'cloth', False)}
 
@@ -99,15 +101,40 @@ def clean_input(rgba, kind):
     return a
 
 
-def export(src, dst_name, kind, clear_background=False):
+def split_back(rgba, below):
+    """A wide brim seen from below shows its underside beside the head. That part is behind the
+    hair hanging there, the rest of the hat in front: split along the polyline `below` (canvas
+    pixels), under which the underside starts."""
+    xs, ys = np.array(below, float).T
+    line = np.interp(np.arange(rgba.shape[1]), xs, ys)
+    rows = np.arange(rgba.shape[0])[:, None]
+    front, back = rgba.copy(), rgba.copy()
+    front[rows > line[None, :], 3] = 0
+    # The back reaches a little under the front: each layer is scaled on its own, and where both
+    # end on the same row their half-transparent edges let a light hairline through.
+    back[rows <= line[None, :] - 4, 3] = 0
+    return front, back
+
+
+def export(src, dst_name, kind, clear_background=False, keep_colors=False):
     """Writes <id>.webp (what never changes color) and <id>.map.webp (shade and coverage of
-    each color family, one strip per family, lossless). Returns the layer's parts.json entry."""
-    img = Image.open(src).convert('RGBA')
+    each color family, one strip per family, lossless). Returns the layer's parts.json entry.
+    src is a path or an RGBA array. keep_colors: nothing is repainted (a straw hat is as orange
+    as the template's skin and came out skin-colored)."""
+    if isinstance(src, np.ndarray):
+        img = Image.fromarray(src, 'RGBA')
+    else:
+        img = Image.open(src).convert('RGBA')
     if clear_background:
         img = without_background(img)
     rgba = clean_input(np.asarray(img), kind)
     fams = families_for(kind, rgba)
-    fixed, comps = D.decompose(rgba, fams, hair_islands=kind == 'hair')
+    if keep_colors:
+        a = rgba.astype(float)
+        fixed = np.dstack([a[..., :3], a[..., 3] / 255])
+        comps = [(np.zeros(a.shape[:2]), np.zeros(a.shape[:2]))]
+    else:
+        fixed, comps = D.decompose(rgba, fams, hair_islands=kind in ('hair', 'hair-hat'))
     fixed, comps = D.to_half(fixed, comps)
 
     present = fixed[..., 3] > 8 / 255
@@ -138,7 +165,20 @@ def main():
         path = PIECES / 'recortes' / f"{p['id']}.png"
         if not path.exists():
             continue
-        layers[p['id']] = {**export(path, p['id'], p['kind']), 'label': p['label'], **flags.get(p['id'], {})}
+        entry = {'label': p['label'], **flags.get(p['id'], {})}
+        keep = p.get('keepColors', False)
+        if p.get('backBelow'):
+            front, back = split_back(np.asarray(Image.open(path).convert('RGBA')), p['backBelow'])
+            back_id = p['id'] + '-atras'
+            layers[p['id']] = {**export(front, p['id'], p['kind'], keep_colors=keep), **entry, 'back': back_id}
+            layers[back_id] = export(back, back_id, 'headwear-back', keep_colors=keep)
+        else:
+            layers[p['id']] = {**export(path, p['id'], p['kind'], keep_colors=keep), **entry}
+        # The hairstyle pressed under a hat, for hats that flatten hair (see produce.py).
+        under = PIECES / 'recortes' / f"{p['id']}{UNDER_HAT_SUFFIX}.png"
+        if p['kind'] == 'hair' and under.exists():
+            layers[p['id'] + UNDER_HAT_SUFFIX] = export(under, p['id'] + UNDER_HAT_SUFFIX, 'hair-hat')
+            layers[p['id']]['underHat'] = p['id'] + UNDER_HAT_SUFFIX
         print(p['id'], end=' ', flush=True)
     print()
 
