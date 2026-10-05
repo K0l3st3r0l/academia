@@ -1,0 +1,266 @@
+{
+ "oa": "OA22",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA22",
+   "difficulty": "easy",
+   "text": "¿Cuál palabra está escrita correctamente en esta oración? La explicación debe ser ___ y fácil de entender.",
+   "options": [
+    "presisa",
+    "preciza",
+    "precisa",
+    "presiza"
+   ],
+   "correct": "precisa",
+   "hint": "Precisa se escribe con c antes de i y s antes de a.",
+   "clue": "Fíjate en qué letras aparecen después de cada sonido /s/.",
+   "option_notes": {
+    "presisa": "Cambia la primera c por s.",
+    "preciza": "Cambia la s por z.",
+    "presiza": "Cambia ambas letras de la palabra."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "easy",
+   "text": "¿Cuál versión presenta correctamente la intervención de Tomás y la aclaración de quién habla?",
+   "options": [
+    "-¿Vienes al museo? -preguntó Tomás.",
+    "—¿Vienes al museo? preguntó Tomás.",
+    "¿Vienes al museo? —preguntó Tomás.",
+    "—¿Vienes al museo? —preguntó Tomás."
+   ],
+   "correct": "—¿Vienes al museo? —preguntó Tomás.",
+   "hint": "La raya abre la intervención y también separa la aclaración del narrador.",
+   "clue": "Revisa el inicio del diálogo y el lugar donde aparece la voz del narrador.",
+   "option_notes": {
+    "¿Vienes al museo? —preguntó Tomás.": "Falta la raya que abre la intervención.",
+    "—¿Vienes al museo? preguntó Tomás.": "Falta la raya antes de la aclaración.",
+    "-¿Vienes al museo? -preguntó Tomás.": "Usa guiones cortos en vez de rayas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "easy",
+   "text": "¿Cuál palabra lleva tilde dierética, porque sus vocales se pronuncian en sílabas separadas?",
+   "options": [
+    "países",
+    "teatro",
+    "familia",
+    "camión"
+   ],
+   "correct": "países",
+   "hint": "En países, la tilde separa a e í: pa-í-ses.",
+   "clue": "Busca la palabra con vocales juntas que deben sonar en sílabas distintas.",
+   "option_notes": {
+    "camión": "Su tilde recae en un diptongo, no lo separa.",
+    "teatro": "Sus vocales ya forman hiato sin tilde dierética.",
+    "familia": "La secuencia ia se pronuncia como diptongo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "easy",
+   "text": "Para contar que un niño llevó su colación, selecciona la oración correcta.",
+   "options": [
+    "El llevó su colación.",
+    "Él llevo su colación.",
+    "El llevo su colación.",
+    "Él llevó su colación."
+   ],
+   "correct": "Él llevó su colación.",
+   "hint": "Él lleva tilde como pronombre, y llevó conserva la tilde de la acción pasada.",
+   "clue": "Distingue la palabra que nombra al niño de la que indica una acción pasada.",
+   "option_notes": {
+    "El llevó su colación.": "No marca con tilde el pronombre personal él.",
+    "Él llevo su colación.": "Escribe llevo sin la tilde de la acción pasada.",
+    "El llevo su colación.": "Quita la tilde del pronombre y de la forma verbal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "medium",
+   "text": "Completa la oración con la escritura correcta: «El ___ encontró una ___ junto al sendero.»",
+   "options": [
+    "El siclista encontró una zarza.",
+    "El ciclista encontró una sarsa.",
+    "El ciclista encontró una zarza.",
+    "El siclista encontró una sarsa."
+   ],
+   "correct": "El ciclista encontró una zarza.",
+   "hint": "Ciclista se escribe con c y s; zarza, con z al inicio y en el grupo rz.",
+   "clue": "Resuelve cada palabra por separado y revisa las letras que representan el sonido /s/.",
+   "option_notes": {
+    "El ciclista encontró una sarsa.": "Confunde la z de zarza con s.",
+    "El siclista encontró una zarza.": "Confunde la c inicial de ciclista con s.",
+    "El siclista encontró una sarsa.": "Confunde ambas palabras en c, s y z."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "medium",
+   "text": "Completa el diálogo con la puntuación correcta: «—Si quieres ___dijo Martina___ podemos compartir la merienda.»",
+   "options": [
+    "—Si quieres —dijo Martina, podemos compartir la merienda.",
+    "—Si quieres —dijo Martina—, podemos compartir la merienda.",
+    "—Si quieres —dijo Martina— podemos compartir la merienda.",
+    "—Si quieres, —dijo Martina— podemos compartir la merienda."
+   ],
+   "correct": "—Si quieres —dijo Martina—, podemos compartir la merienda.",
+   "hint": "La aclaración va entre dos rayas y la coma queda después de la segunda raya.",
+   "clue": "Decide dónde termina la aclaración; luego revisa la coma de la oración.",
+   "option_notes": {
+    "—Si quieres, —dijo Martina— podemos compartir la merienda.": "Pone la coma antes de cerrar la aclaración.",
+    "—Si quieres —dijo Martina, podemos compartir la merienda.": "No cierra la aclaración con una segunda raya.",
+    "—Si quieres —dijo Martina— podemos compartir la merienda.": "Cierra la aclaración, pero omite la coma necesaria."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "medium",
+   "text": "En esta oración, ¿cómo deben escribirse río, recibió y camión?",
+   "options": [
+    "El río recibió el camión.",
+    "El río recibio el camión.",
+    "El rio recibió el camión.",
+    "El río recibió el camion."
+   ],
+   "correct": "El río recibió el camión.",
+   "hint": "Río, recibió y camión llevan tilde según su separación silábica y acentuación.",
+   "clue": "Revisa cada palabra: una separa vocales y las otras marcan la sílaba tónica.",
+   "option_notes": {
+    "El rio recibió el camión.": "Quita la tilde dierética de río.",
+    "El río recibio el camión.": "Quita la tilde de la forma verbal recibió.",
+    "El río recibió el camion.": "Quita la tilde de camión."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "medium",
+   "text": "Agrega las comas donde corresponda: «La ranita de Darwin una especie nativa vive en los bosques del sur.»",
+   "options": [
+    "La ranita de Darwin una especie nativa vive en los bosques del sur.",
+    "La ranita de Darwin, una especie nativa, vive en los bosques del sur.",
+    "La ranita de Darwin una especie nativa, vive en los bosques del sur.",
+    "La ranita de Darwin, una especie nativa vive en los bosques del sur."
+   ],
+   "correct": "La ranita de Darwin, una especie nativa, vive en los bosques del sur.",
+   "hint": "La explicación extra «una especie nativa» queda encerrada entre dos comas.",
+   "clue": "La frase que explica qué es la ranita debe quedar separada del resto.",
+   "option_notes": {
+    "La ranita de Darwin una especie nativa, vive en los bosques del sur.": "Pone solo la coma de cierre.",
+    "La ranita de Darwin, una especie nativa vive en los bosques del sur.": "Pone solo la coma de apertura.",
+    "La ranita de Darwin una especie nativa vive en los bosques del sur.": "No separa la frase explicativa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "hard",
+   "text": "Corrige todos los errores de esta oración: «El zorro cruzo el serro y olio una flor de canelo.»",
+   "options": [
+    "El zorro cruzo el cerro y olio una flor de canelo.",
+    "El zorro cruzó el cerro y olió una flor de canelo.",
+    "El zorro cruzó el serro y olio una flor de canelo.",
+    "El sorro cruzó el cerro y olió una flor de canelo."
+   ],
+   "correct": "El zorro cruzó el cerro y olió una flor de canelo.",
+   "hint": "Cruzó y olió llevan tilde; cerro va con c y zorro conserva la z.",
+   "clue": "Revisa las letras c-s-z y luego busca las acciones que ocurrieron en pasado.",
+   "option_notes": {
+    "El sorro cruzó el cerro y olió una flor de canelo.": "Cambia la z inicial de zorro por s.",
+    "El zorro cruzo el cerro y olio una flor de canelo.": "Deja sin tilde las dos formas verbales pasadas.",
+    "El zorro cruzó el serro y olio una flor de canelo.": "Escribe cerro con s y deja olió sin tilde."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "hard",
+   "text": "Benjamín quiere decir: «Él llevará a su mamá, la veterinaria del pueblo, a la feria». ¿Cuál versión escribe correctamente su diálogo?",
+   "options": [
+    "—Él llevará a su mamá la veterinaria del pueblo, a la feria—dijo Benjamín.",
+    "—El llevará a su mamá, la veterinaria del pueblo a la feria —dijo Benjamín.",
+    "—Él llevará a su mamá, la veterinaria del pueblo, a la feria, —dijo Benjamín.",
+    "—Él llevará a su mamá, la veterinaria del pueblo, a la feria —dijo Benjamín."
+   ],
+   "correct": "—Él llevará a su mamá, la veterinaria del pueblo, a la feria —dijo Benjamín.",
+   "hint": "Hay que marcar él, encerrar la explicación entre comas y usar las dos rayas del diálogo.",
+   "clue": "Comprueba tildes de significado, comas dobles y rayas del diálogo.",
+   "option_notes": {
+    "—El llevará a su mamá, la veterinaria del pueblo a la feria —dijo Benjamín.": "Omite la tilde de él y la coma que cierra la explicación.",
+    "—Él llevará a su mamá la veterinaria del pueblo, a la feria—dijo Benjamín.": "No encierra la explicación entre comas y junta la raya final.",
+    "—Él llevará a su mamá, la veterinaria del pueblo, a la feria, —dijo Benjamín.": "Agrega una coma innecesaria antes de la raya del narrador."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "hard",
+   "text": "Vas a escribir sobre el cóndor. Debes incluir una explicación entre comas, «país» con tilde dierética y la forma «cruzó». ¿Cuál oración cumple?",
+   "options": [
+    "El cóndor, ave andina, cruzó el país.",
+    "El cóndor, ave andina cruzó el país.",
+    "El cóndor, ave andina, cruzo el pais.",
+    "El cóndor ave andina, cruzó el paíz."
+   ],
+   "correct": "El cóndor, ave andina, cruzó el país.",
+   "hint": "Comprueba las dos comas, el hiato de país y la z de cruzó.",
+   "clue": "Revisa las tres condiciones en cada opción, no solo una.",
+   "option_notes": {
+    "El cóndor, ave andina cruzó el país.": "No cierra con coma la explicación «ave andina».",
+    "El cóndor, ave andina, cruzo el pais.": "Quita las tildes de cruzó y país.",
+    "El cóndor ave andina, cruzó el paíz.": "No abre la explicación y cambia la s de país por z."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "hard",
+   "text": "Un compañero escribió: «—Raul el guia del curso cruzo el pais—dijo Ana.» ¿Qué revisión necesita para quedar correcta?",
+   "options": [
+    "Una tilde, dos puntos y mayúsculas al final.",
+    "Cambiar la z por s, quitar las rayas y unir el diálogo.",
+    "Cuatro tildes, dos comas y un espacio antes de la segunda raya.",
+    "Dos tildes, una coma y un punto final."
+   ],
+   "correct": "Cuatro tildes, dos comas y un espacio antes de la segunda raya.",
+   "hint": "Raúl, guía, cruzó y país llevan tilde; la explicación va entre dos comas y la raya necesita espacio.",
+   "clue": "Cuenta los errores y revisa acentos, comas y separación del diálogo.",
+   "option_notes": {
+    "Dos tildes, una coma y un punto final.": "Cuenta menos tildes y propone signos que no corresponden.",
+    "Cambiar la z por s, quitar las rayas y unir el diálogo.": "Confunde la z de cruzó y elimina las rayas del diálogo.",
+    "Una tilde, dos puntos y mayúsculas al final.": "No corrige todas las tildes ni reconoce las comas explicativas."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

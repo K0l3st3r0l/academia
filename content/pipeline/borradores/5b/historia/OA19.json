@@ -1,0 +1,264 @@
+{
+ "oa": "OA19",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "En Puerto Montt, una fundación reúne alimentos y los entrega a familias que los necesitan. ¿Qué caracteriza principalmente a esta organización?",
+   "options": [
+    "Reúne a personas solo para competir en un deporte",
+    "Vende productos para que sus dueños reciban ganancias",
+    "Apoya una causa social y usa sus recursos para ese propósito",
+    "Organiza elecciones para escoger autoridades"
+   ],
+   "correct": "Apoya una causa social y usa sus recursos para ese propósito",
+   "hint": "Una fundación reúne recursos y acciones para apoyar una causa o necesidad social.",
+   "clue": "Piensa en el propósito de la organización, no solo en lo que entrega.",
+   "option_notes": {
+    "Vende productos para que sus dueños reciban ganancias": "Confunde una fundación con una empresa comercial",
+    "Reúne a personas solo para competir en un deporte": "Confunde una causa social con una actividad recreativa",
+    "Organiza elecciones para escoger autoridades": "Confunde una fundación con una organización política"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "Si tú colaboras los sábados en un comedor comunitario sin recibir sueldo, ¿qué forma de participación estás realizando?",
+   "options": [
+    "Competir en un campeonato",
+    "Realizar un voluntariado",
+    "Trabajar en una empresa",
+    "Participar en una elección"
+   ],
+   "correct": "Realizar un voluntariado",
+   "hint": "El voluntariado consiste en ayudar de manera organizada sin recibir un sueldo por hacerlo.",
+   "clue": "Fíjate en si participas para ayudar, no para recibir un pago.",
+   "option_notes": {
+    "Trabajar en una empresa": "Confunde ayudar sin sueldo con tener un empleo",
+    "Participar en una elección": "Confunde la ayuda comunitaria con votar",
+    "Competir en un campeonato": "Confunde colaborar con competir"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "El 5°A quiere reunir $120.000 para comprar medicamentos para un consultorio rural. ¿Qué acción corresponde a una recolección de fondos?",
+   "options": [
+    "Organizar una venta de alimentos y guardar lo recaudado",
+    "Jugar un partido sin reunir dinero para la causa",
+    "Elegir al delegado del curso mediante una votación",
+    "Limpiar la sala y ordenar los cuadernos del curso"
+   ],
+   "correct": "Organizar una venta de alimentos y guardar lo recaudado",
+   "hint": "Una recolección de fondos obtiene dinero mediante actividades o aportes para una causa definida.",
+   "clue": "Busca la acción que obtiene dinero y lo destina al objetivo indicado.",
+   "option_notes": {
+    "Jugar un partido sin reunir dinero para la causa": "Confunde una actividad recreativa con reunir fondos",
+    "Elegir al delegado del curso mediante una votación": "Confunde una elección con una campaña de ayuda",
+    "Limpiar la sala y ordenar los cuadernos del curso": "Confunde una tarea escolar con recolectar dinero"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "Los vecinos de una villa quieren mejorar la plaza. ¿Qué muestra que están organizados para lograr una meta común?",
+   "options": [
+    "Esperan que una sola persona haga todo",
+    "Cada persona hace algo distinto sin conversar",
+    "Usan la plaza sin preocuparse por repararla",
+    "Acuerdan el objetivo y se reparten tareas"
+   ],
+   "correct": "Acuerdan el objetivo y se reparten tareas",
+   "hint": "Organizarse implica acordar una meta y coordinar responsabilidades para alcanzarla.",
+   "clue": "Observa si las personas comparten un propósito y coordinan lo que harán.",
+   "option_notes": {
+    "Cada persona hace algo distinto sin conversar": "Confunde actuar por separado con coordinarse",
+    "Esperan que una sola persona haga todo": "Confunde organización con dejar toda la responsabilidad a alguien",
+    "Usan la plaza sin preocuparse por repararla": "Confunde usar un espacio con resolver su problema"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "En una escuela de La Serena, una llave queda abierta y se pierde agua. ¿Cuál es la mejor primera respuesta organizada del curso?",
+   "options": [
+    "Seguir usando el agua y esperar que alguien más lo note",
+    "Juntar agua en botellas sin comunicar el problema",
+    "Repartir tareas: cerrar la llave y avisar para que la reparen",
+    "Discutir quién tuvo la culpa y dejar la llave abierta"
+   ],
+   "correct": "Repartir tareas: cerrar la llave y avisar para que la reparen",
+   "hint": "La respuesta combina una acción inmediata con avisar a quien puede solucionar la falla.",
+   "clue": "Piensa qué puede hacer el curso ahora y cómo conseguir ayuda responsable.",
+   "option_notes": {
+    "Seguir usando el agua y esperar que alguien más lo note": "No enfrenta el problema ni coordina una solución",
+    "Juntar agua en botellas sin comunicar el problema": "Actúa sin informar a quienes pueden reparar la llave",
+    "Discutir quién tuvo la culpa y dejar la llave abierta": "Busca culpables y mantiene el problema sin resolver"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "Una agrupación de Temuco junta libros y organiza una biblioteca para niñas y niños del barrio. ¿Cómo mejora la calidad de vida de otras personas?",
+   "options": [
+    "Reemplaza las clases por actividades sin propósito",
+    "Permite que solo sus integrantes usen todos los libros",
+    "Guarda los libros para aumentar su valor con el tiempo",
+    "Facilita el acceso a libros y oportunidades de aprendizaje"
+   ],
+   "correct": "Facilita el acceso a libros y oportunidades de aprendizaje",
+   "hint": "Una biblioteca compartida ofrece recursos para aprender, especialmente a quienes no los tenían disponibles.",
+   "clue": "Relaciona la biblioteca con las oportunidades que puede abrir para el barrio.",
+   "option_notes": {
+    "Permite que solo sus integrantes usen todos los libros": "Confunde una biblioteca comunitaria con un beneficio exclusivo",
+    "Reemplaza las clases por actividades sin propósito": "Confunde leer y aprender con dejar de estudiar",
+    "Guarda los libros para aumentar su valor con el tiempo": "Confunde compartir recursos con almacenarlos"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "Un grupo crea una pequeña empresa para vender mermelada de murta. ¿Qué muestra que se organiza para mejorar la vida de sus integrantes y de otros?",
+   "options": [
+    "Reparte tareas, ofrece trabajo y entrega bienes útiles",
+    "Deja de producir cuando aparece el primer problema",
+    "Reparte las tareas al azar y gasta todo sin acordar un objetivo",
+    "Vende solo a una persona y evita colaborar con la comunidad"
+   ],
+   "correct": "Reparte tareas, ofrece trabajo y entrega bienes útiles",
+   "hint": "Una empresa puede coordinar tareas, generar trabajo y ofrecer bienes o servicios útiles.",
+   "clue": "Fíjate en cómo se coordinan y en el uso que hacen de los recursos.",
+   "option_notes": {
+    "Reparte las tareas al azar y gasta todo sin acordar un objetivo": "Confunde organizarse con actuar sin planificación",
+    "Vende solo a una persona y evita colaborar con la comunidad": "Confunde una empresa con una actividad aislada",
+    "Deja de producir cuando aparece el primer problema": "Confunde resolver dificultades con abandonar la meta"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "El curso quiere juntar $80.000 para apoyar a un refugio de animales de Rancagua. ¿Qué acuerdo ayuda más a cumplir la meta?",
+   "options": [
+    "Vender cosas sin fijar meta ni anotar cuánto se recibe",
+    "Dejar que una sola persona organice, venda y guarde el dinero",
+    "Fijar una meta, repartir tareas y registrar el dinero reunido",
+    "Gastar el dinero en otra actividad antes de apoyar al refugio"
+   ],
+   "correct": "Fijar una meta, repartir tareas y registrar el dinero reunido",
+   "hint": "Una meta clara, responsabilidades y un registro ayudan a usar los fondos de manera responsable.",
+   "clue": "Busca el acuerdo que ordena el trabajo y permite saber cuánto se reunió.",
+   "option_notes": {
+    "Vender cosas sin fijar meta ni anotar cuánto se recibe": "Confunde recaudar con vender sin control ni planificación",
+    "Dejar que una sola persona organice, venda y guarde el dinero": "Confunde colaboración con concentrar todas las tareas",
+    "Gastar el dinero en otra actividad antes de apoyar al refugio": "Confunde la meta acordada con un gasto distinto"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "En Chiloé, una lluvia daña el camino que usan varias familias. ¿Qué plan muestra mejor cómo organizarse para resolver el problema y mejorar la vida de la comunidad?",
+   "options": [
+    "Elegir a una persona para trabajar y pagar todo por su cuenta",
+    "Crear un comité, repartir tareas y coordinar apoyo con el municipio",
+    "Publicar quejas en internet sin conversar con quienes pueden ayudar",
+    "Esperar que cada familia arregle sola el tramo de su casa"
+   ],
+   "correct": "Crear un comité, repartir tareas y coordinar apoyo con el municipio",
+   "hint": "Un comité coordina a varias personas y conecta sus acciones con la autoridad que puede apoyar la reparación.",
+   "clue": "Considera si el plan reúne a la comunidad y usa apoyos adecuados.",
+   "option_notes": {
+    "Esperar que cada familia arregle sola el tramo de su casa": "Confunde un problema comunitario con muchos problemas individuales",
+    "Publicar quejas en internet sin conversar con quienes pueden ayudar": "Confunde expresar molestia con organizar una solución",
+    "Elegir a una persona para trabajar y pagar todo por su cuenta": "Confunde colaborar con dejar toda la carga en una persona"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "En una escuela de Valdivia, se acumulan residuos después del recreo. ¿Qué propuesta muestra que el curso busca una meta común y duradera?",
+   "options": [
+    "Limpiar una vez, esconder la basura y no cambiar los hábitos",
+    "Reducir residuos, asignar turnos y revisar los resultados",
+    "Retar a quienes ensucian sin organizar ninguna acción",
+    "Esperar que el personal de aseo resuelva todo cada día"
+   ],
+   "correct": "Reducir residuos, asignar turnos y revisar los resultados",
+   "hint": "Una solución duradera combina una meta, tareas coordinadas y revisión para saber si funciona.",
+   "clue": "Busca la propuesta que cambia hábitos y permite comprobar avances.",
+   "option_notes": {
+    "Limpiar una vez, esconder la basura y no cambiar los hábitos": "Confunde ocultar el problema con solucionarlo",
+    "Esperar que el personal de aseo resuelva todo cada día": "Confunde ayudar a resolver con dejar toda la tarea a otros",
+    "Retar a quienes ensucian sin organizar ninguna acción": "Confunde criticar con realizar un plan común"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "Lee: «La agrupación Manos del Maule reúne aportes, compra alimentos y los entrega a familias afectadas por un incendio». ¿Qué se puede concluir?",
+   "options": [
+    "Decide qué autoridad ocupará un cargo público",
+    "Busca ganar dinero vendiendo alimentos a las familias",
+    "Solo reúne a sus integrantes para practicar una afición",
+    "Se organiza para ayudar a otras personas frente a una necesidad"
+   ],
+   "correct": "Se organiza para ayudar a otras personas frente a una necesidad",
+   "hint": "Reunir aportes, comprar alimentos y entregarlos muestra coordinación para apoyar a familias afectadas.",
+   "clue": "Relaciona las acciones descritas con el propósito y las personas beneficiadas.",
+   "option_notes": {
+    "Busca ganar dinero vendiendo alimentos a las familias": "Confunde una ayuda solidaria con una venta comercial",
+    "Solo reúne a sus integrantes para practicar una afición": "Confunde una acción de apoyo con una actividad recreativa",
+    "Decide qué autoridad ocupará un cargo público": "Confunde una agrupación solidaria con una organización política"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "Un grupo de estudiantes tiene $40.000 y quiere ayudar a una escuela rural: comprar un basurero cuesta $25.000 y plantar árboles cuesta $30.000. ¿Qué decisión organizada sirve mejor a la meta?",
+   "options": [
+    "Elegir una acción posible, repartir tareas y buscar apoyo para la otra",
+    "Usar todo el dinero en otra actividad y olvidar la meta",
+    "Comprar ambos de inmediato, aunque falte dinero para pagarlos",
+    "Dejar que una persona decida y haga sola todas las tareas"
+   ],
+   "correct": "Elegir una acción posible, repartir tareas y buscar apoyo para la otra",
+   "hint": "El presupuesto alcanza para una acción; organizarse permite hacerla y buscar apoyo para la segunda.",
+   "clue": "Compara el dinero disponible con los costos y piensa cómo continuar colaborando.",
+   "option_notes": {
+    "Comprar ambos de inmediato, aunque falte dinero para pagarlos": "Ignora el presupuesto y no planifica cómo cubrir la diferencia",
+    "Usar todo el dinero en otra actividad y olvidar la meta": "Abandona el objetivo acordado por el grupo",
+    "Dejar que una persona decida y haga sola todas las tareas": "Confunde organizarse con concentrar decisiones y trabajo"
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

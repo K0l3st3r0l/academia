@@ -1,0 +1,264 @@
+{
+ "oa": "OA12",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Calcula: 3,275 + 1,408 =",
+   "options": [
+    "4,573",
+    "4,755",
+    "4,683",
+    "4,323"
+   ],
+   "correct": "4,683",
+   "hint": "Alinea las comas y completa con ceros antes de sumar.",
+   "clue": "Escribe ambos números con tres cifras decimales antes de operar.",
+   "option_notes": {
+    "4,573": "Suma mal las milésimas: toma 275 + 408 como 573.",
+    "4,323": "Alinea mal 1,408 y cambia el valor de sus cifras.",
+    "4,755": "Interpreta 1,408 como 1,48 y omite el cero posicional."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Calcula: 8,125 - 3,407 =",
+   "options": [
+    "5,282",
+    "4,628",
+    "4,655",
+    "4,718"
+   ],
+   "correct": "4,718",
+   "hint": "Alinea las comas y pide prestado cuando una cifra de arriba es menor.",
+   "clue": "Revisa los préstamos desde las milésimas hacia la izquierda.",
+   "option_notes": {
+    "4,628": "Hace el préstamo desde la posición equivocada.",
+    "5,282": "Resta las partes decimales al revés y no hace préstamos.",
+    "4,655": "Lee 3,407 como 3,470 al cambiar el valor del cero."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "¿Qué número falta? 5,725 + ___ = 6,000",
+   "options": [
+    "0,725",
+    "0,275",
+    "0,375",
+    "1,275"
+   ],
+   "correct": "0,275",
+   "hint": "Busca cuánto le falta a 5,725 para llegar a 6,000; puedes restar.",
+   "clue": "Busca el complemento de 5,725 hasta el entero siguiente.",
+   "option_notes": {
+    "0,725": "Copia la parte decimal de 5,725 sin hallar el complemento.",
+    "1,275": "Suma 1,275 y llegas a 7,000, no a 6,000.",
+    "0,375": "Resta 5,625 en vez de 5,725 al buscar lo que falta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "En un paseo por Torres del Paine, caminas 2,7 km y luego 0,325 km. ¿Cuántos km caminas en total?",
+   "options": [
+    "3,025 km",
+    "2,725 km",
+    "3,125 km",
+    "2,325 km"
+   ],
+   "correct": "3,025 km",
+   "hint": "Escribe 2,7 como 2,700 y suma cada posición.",
+   "clue": "Convierte 2,7 en milésimas antes de sumar.",
+   "option_notes": {
+    "2,725 km": "Omite la cifra de las décimas de 0,325.",
+    "2,325 km": "Omite los 0,700 de 2,700.",
+    "3,125 km": "Suma mal una de las posiciones decimales."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "En un estanque hay 2,750 L. Agregas 1,125 L y luego usas 0,500 L. ¿Cuántos litros quedan?",
+   "options": [
+    "3,875 L",
+    "3,375 L",
+    "3,825 L",
+    "2,250 L"
+   ],
+   "correct": "3,375 L",
+   "hint": "Primero suma lo que entra y después resta lo que se usa: 2,750 + 1,125 - 0,500.",
+   "clue": "Hay una cantidad que entra y otra que sale.",
+   "option_notes": {
+    "3,875 L": "Solo agrega 1,125 L y olvida descontar 0,500 L.",
+    "2,250 L": "Solo descuenta 0,500 L del valor inicial.",
+    "3,825 L": "Lee 0,500 como 0,050 al hacer la resta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "En el Parque Nacional Conguillío, un sendero mide 5,250 km y otro 3,875 km. Al segundo le agregan un desvío de 0,500 km. ¿Cuál es la diferencia ahora?",
+   "options": [
+    "9,125 km",
+    "1,375 km",
+    "0,875 km",
+    "1,875 km"
+   ],
+   "correct": "0,875 km",
+   "hint": "El segundo mide 3,875 + 0,500 = 4,375 km; luego 5,250 - 4,375 = 0,875 km.",
+   "clue": "Actualiza el segundo sendero y luego compara las dos longitudes.",
+   "option_notes": {
+    "1,375 km": "No suma el desvío al segundo sendero.",
+    "1,875 km": "Resta el desvío en vez de sumarlo al segundo sendero.",
+    "9,125 km": "Suma las dos longitudes en lugar de hallar la diferencia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Para hacer sopaipillas, tienes 2,000 kg de ingredientes. Usas 0,750 kg de harina y 0,325 kg de zapallo. ¿Cuánto queda?",
+   "options": [
+    "1,675 kg",
+    "1,250 kg",
+    "0,925 kg",
+    "1,075 kg"
+   ],
+   "correct": "0,925 kg",
+   "hint": "0,750 + 0,325 = 1,075 kg; 2,000 - 1,075 = 0,925 kg.",
+   "clue": "Primero reúne los ingredientes usados; luego quítalos del total.",
+   "option_notes": {
+    "1,075 kg": "Suma lo usado, pero no lo resta del total.",
+    "1,250 kg": "Resta solo la harina del total.",
+    "1,675 kg": "Resta solo el zapallo del total."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Calcula: 9,000 - (2,375 + 1,625) =",
+   "options": [
+    "7,375",
+    "8,250",
+    "6,625",
+    "5,000"
+   ],
+   "correct": "5,000",
+   "hint": "Resuelve primero el paréntesis: 2,375 + 1,625 = 4,000; luego resta a 9,000.",
+   "clue": "El paréntesis se resuelve antes de la resta.",
+   "option_notes": {
+    "6,625": "Resta solo 2,375 y no suma el segundo número.",
+    "7,375": "Resta solo 1,625 y omite 2,375.",
+    "8,250": "Resta la diferencia entre 2,375 y 1,625."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Una botella contiene 3,000 L. Sirves 0,375 L y luego 0,250 L. Después agregas 0,500 L. ¿Cuánto contiene ahora?",
+   "options": [
+    "2,875 L",
+    "2,375 L",
+    "3,125 L",
+    "4,125 L"
+   ],
+   "correct": "2,875 L",
+   "hint": "Resta 0,375 y 0,250; después suma 0,500 a los 3,000 L.",
+   "clue": "Distingue lo que sale de la botella de lo que vuelve a entrar.",
+   "option_notes": {
+    "2,375 L": "Resta lo servido, pero olvida agregar los 0,500 L.",
+    "3,125 L": "Considera solo una cantidad servida antes de agregar.",
+    "4,125 L": "Suma las tres cantidades como si todas entraran."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Un estanque tenía cierta cantidad. Después de usar 1,275 L y agregar 0,875 L, quedan 3,500 L. ¿Cuántos litros había al principio?",
+   "options": [
+    "5,650 L",
+    "3,900 L",
+    "1,350 L",
+    "4,775 L"
+   ],
+   "correct": "3,900 L",
+   "hint": "Para deshacer los cambios: 3,500 + 1,275 - 0,875 = 3,900 L.",
+   "clue": "Piensa hacia atrás: deshaz los cambios en orden contrario.",
+   "option_notes": {
+    "5,650 L": "Suma al final tanto lo usado como lo agregado.",
+    "1,350 L": "Resta del final las dos cantidades, aunque una se agregó.",
+    "4,775 L": "Suma lo usado, pero ignora lo que se agregó."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "En una campaña, el 5°A reúne 2,375 kg y 0,850 kg; el 5°B reúne 1,625 kg y 1,250 kg. El 5°A entrega 0,500 kg. ¿Quién conserva más y por cuánto?",
+   "options": [
+    "El 5°B, por 0,150 kg",
+    "El 5°A, por 0,850 kg",
+    "El 5°A, por 0,350 kg",
+    "El 5°A, por 0,150 kg"
+   ],
+   "correct": "El 5°B, por 0,150 kg",
+   "hint": "El 5°A conserva 2,725 kg y el 5°B 2,875 kg; la diferencia es 0,150 kg.",
+   "clue": "Calcula lo que conserva cada curso después de la entrega y compáralos.",
+   "option_notes": {
+    "El 5°A, por 0,350 kg": "Olvida restar los 0,500 kg que entrega el 5°A.",
+    "El 5°A, por 0,850 kg": "Suma los 0,500 kg entregados al total del 5°A.",
+    "El 5°A, por 0,150 kg": "Calcula bien la diferencia, pero elige el curso equivocado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Una ruta mide 20,000 km. Avanzas 6,375 km, retrocedes 0,875 km y luego avanzas 4,500 km. ¿Cuántos km faltan?",
+   "options": [
+    "21,000 km",
+    "8,250 km",
+    "14,500 km",
+    "10,000 km"
+   ],
+   "correct": "10,000 km",
+   "hint": "Calcula el avance neto: 6,375 - 0,875 + 4,500; réstalo de 20,000.",
+   "clue": "Un retroceso reduce el avance hacia la meta.",
+   "option_notes": {
+    "8,250 km": "Resta el retroceso como si también fuera avance.",
+    "21,000 km": "Suma el primer avance en vez de restarlo de la ruta.",
+    "14,500 km": "Ignora el último avance y usa solo los dos primeros movimientos."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

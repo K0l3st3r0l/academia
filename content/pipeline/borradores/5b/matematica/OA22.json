@@ -1,0 +1,264 @@
+{
+ "oa": "OA22",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA22",
+   "difficulty": "easy",
+   "text": "¿Qué cálculo permite hallar el área de un triángulo si conoces su base y su altura?",
+   "options": [
+    "Sumar base y altura, y dividir por 2",
+    "Multiplicar base y altura, y dividir por 2",
+    "Sumar base y altura y multiplicar por 2",
+    "Multiplicar base y altura por 2"
+   ],
+   "correct": "Multiplicar base y altura, y dividir por 2",
+   "hint": "Un triángulo es la mitad de un rectángulo con igual base y altura.",
+   "clue": "Piensa en el rectángulo que se puede formar con dos triángulos iguales.",
+   "option_notes": {
+    "Sumar base y altura, y dividir por 2": "Confunde el cálculo del área con el promedio de dos medidas.",
+    "Multiplicar base y altura por 2": "Duplica el área en vez de tomar la mitad del rectángulo.",
+    "Sumar base y altura y multiplicar por 2": "Usa suma y doble, sin relacionar el triángulo con el rectángulo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "easy",
+   "text": "Una huerta de cilantro tiene forma de paralelogramo. Su base mide 9 m y su altura, 4 m. ¿Cuál es su área?",
+   "options": [
+    "36 m²",
+    "13 m²",
+    "18 m²",
+    "26 m²"
+   ],
+   "correct": "36 m²",
+   "hint": "En un paralelogramo, multiplica la base por la altura.",
+   "clue": "Usa la altura perpendicular a la base, no un lado inclinado.",
+   "option_notes": {
+    "18 m²": "Divide entre 2, como si fuera un triángulo.",
+    "13 m²": "Suma la base y la altura en vez de multiplicarlas.",
+    "26 m²": "Calcula el perímetro: 2 × (9 + 4)."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "easy",
+   "text": "Dos trapecios tienen altura 4 cm. El primero tiene bases de 5 y 9 cm; el segundo, bases de 6 y 8 cm. ¿Qué relación hay entre sus áreas?",
+   "options": [
+    "El segundo tiene mayor área.",
+    "El primero tiene mayor área.",
+    "Tienen la misma área.",
+    "No se puede saber con esos datos."
+   ],
+   "correct": "Tienen la misma área.",
+   "hint": "Las dos áreas usan la mitad de la suma de las bases por la altura; ambas sumas valen 14 cm.",
+   "clue": "No mires solo la base más larga; compara las dos bases juntas.",
+   "option_notes": {
+    "El primero tiene mayor área.": "Se fija en que su base mayor mide más, pero ignora la otra base.",
+    "El segundo tiene mayor área.": "Compara una base o suma las medidas de forma incorrecta.",
+    "No se puede saber con esos datos.": "No reconoce que la altura y la suma de bases permiten comparar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "easy",
+   "text": "Una figura irregular dibujada en una cuadrícula ocupa exactamente 14 cuadritos completos. Cada cuadrito representa 1 cm². ¿Cuál es su área?",
+   "options": [
+    "7 cm²",
+    "28 cm²",
+    "15 cm²",
+    "14 cm²"
+   ],
+   "correct": "14 cm²",
+   "hint": "Cada cuadrito aporta 1 cm²; contar 14 cuadritos da el área total.",
+   "clue": "Cuenta unidades de superficie, no lados ni bordes.",
+   "option_notes": {
+    "28 cm²": "Cuenta dos veces cada cuadrito.",
+    "7 cm²": "Toma la mitad del número de cuadritos.",
+    "15 cm²": "Cuenta un cuadrito de más."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "medium",
+   "text": "Una bandera con forma de paralelogramo mide 6 m de base y 4 m de altura. Se corta en dos partes de igual área. ¿Qué área tiene cada parte?",
+   "options": [
+    "10 m²",
+    "48 m²",
+    "24 m²",
+    "12 m²"
+   ],
+   "correct": "12 m²",
+   "hint": "Multiplica base por altura para hallar el total y divídelo en dos.",
+   "clue": "Primero calcula el área completa; después repártela en dos.",
+   "option_notes": {
+    "24 m²": "Calcula el área total, pero no la reparte entre las dos partes.",
+    "10 m²": "Suma la base y la altura en vez de hallar el área.",
+    "48 m²": "Multiplica por dos cuando debería dividir el área total."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "medium",
+   "text": "Al completar un triángulo de base 12 cm y altura 4 cm con una copia trasladada, se forma un rectángulo de 12 cm por 4 cm. ¿Cuál es el área del triángulo?",
+   "options": [
+    "16 cm²",
+    "24 cm²",
+    "20 cm²",
+    "48 cm²"
+   ],
+   "correct": "24 cm²",
+   "hint": "El triángulo ocupa la mitad del rectángulo: calcula 12 × 4 y divide por 2.",
+   "clue": "Calcula el rectángulo completo y luego toma una de las dos partes iguales.",
+   "option_notes": {
+    "48 cm²": "Usa el área del rectángulo completo y no toma la mitad.",
+    "16 cm²": "Suma 12 y 4 en vez de multiplicar y dividir por 2.",
+    "20 cm²": "Combina las medidas sin aplicar la mitad del rectángulo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "medium",
+   "text": "Un trapecio se divide en un rectángulo de 6 m por 3 m y un triángulo de base 4 m y altura 3 m. ¿Cuál es su área total?",
+   "options": [
+    "21 m²",
+    "24 m²",
+    "30 m²",
+    "18 m²"
+   ],
+   "correct": "24 m²",
+   "hint": "Calcula el rectángulo y el triángulo por separado; después suma ambas áreas.",
+   "clue": "Separa el problema en dos áreas conocidas.",
+   "option_notes": {
+    "30 m²": "Calcula el triángulo como 4 × 3, sin dividir por 2.",
+    "18 m²": "Considera solo el área del rectángulo.",
+    "21 m²": "Suma una medida del triángulo en vez de calcular su área."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "medium",
+   "text": "En una cuadrícula de 1 cm², una figura irregular cubre 8 cuadritos completos y 6 cuadritos a la mitad. ¿Cuál es un buen estimado de su área?",
+   "options": [
+    "11 cm²",
+    "14 cm²",
+    "3 cm²",
+    "8 cm²"
+   ],
+   "correct": "11 cm²",
+   "hint": "Los 6 medios cuadritos equivalen a 3 completos; luego suma los 8 enteros.",
+   "clue": "Convierte los medios cuadritos en cuadritos completos antes de sumar.",
+   "option_notes": {
+    "14 cm²": "Cuenta los 6 medios cuadritos como si fueran completos.",
+    "8 cm²": "Cuenta solo los cuadritos completos.",
+    "3 cm²": "Cuenta únicamente los medios cuadritos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "hard",
+   "text": "Un jardín irregular se obtiene al recortar, de dos esquinas de un rectángulo de 10 m por 6 m, un triángulo de base 2 m y altura 3 m en cada esquina. ¿Cuál es su área?",
+   "options": [
+    "54 m²",
+    "66 m²",
+    "48 m²",
+    "57 m²"
+   ],
+   "correct": "54 m²",
+   "hint": "Calcula 10 × 6 y réstale dos veces el área de un triángulo de 2 × 3 ÷ 2.",
+   "clue": "Primero halla el rectángulo; luego resta las dos esquinas triangulares.",
+   "option_notes": {
+    "57 m²": "Resta solo un triángulo en vez de dos.",
+    "48 m²": "Resta 2 × 3 por cada esquina, sin dividir por 2.",
+    "66 m²": "Suma los triángulos al área del rectángulo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "hard",
+   "text": "Una decoración para Fiestas Patrias tiene un paralelogramo de base 9 cm y altura 4 cm, unido sin superponerse a un triángulo de base 6 cm y altura 4 cm. ¿Cuál es el área total?",
+   "options": [
+    "60 cm²",
+    "42 cm²",
+    "48 cm²",
+    "36 cm²"
+   ],
+   "correct": "48 cm²",
+   "hint": "Calcula 9 × 4 para el paralelogramo, 6 × 4 ÷ 2 para el triángulo y suma.",
+   "clue": "Halla cada parte por separado y suma porque no se superponen.",
+   "option_notes": {
+    "42 cm²": "Usa la base del triángulo como si fuera su área.",
+    "60 cm²": "Calcula el triángulo sin dividir por 2.",
+    "36 cm²": "Considera solamente el área del paralelogramo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "hard",
+   "text": "Un trapecio tiene un área de 30 cm², altura de 4 cm y una base de 10 cm. ¿Cuánto mide la otra base?",
+   "options": [
+    "7,5 cm",
+    "20 cm",
+    "15 cm",
+    "5 cm"
+   ],
+   "correct": "5 cm",
+   "hint": "2 × 30 ÷ 4 = 15 es la suma de las bases; luego 15 − 10 = 5.",
+   "clue": "Busca primero la suma de las bases usando el área y la altura.",
+   "option_notes": {
+    "7,5 cm": "Divide el área por la altura y lo toma como la otra base.",
+    "15 cm": "Encuentra la suma de las bases, pero no resta la base conocida.",
+    "20 cm": "Suma la base conocida en vez de restarla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA22",
+   "difficulty": "hard",
+   "text": "Al completar por traslación una figura irregular, se forma un rectángulo de 9 m por 4 m. El espacio que faltaba ocupa 12 m². ¿Cuál era el área de la figura?",
+   "options": [
+    "36 m²",
+    "12 m²",
+    "24 m²",
+    "48 m²"
+   ],
+   "correct": "24 m²",
+   "hint": "Calcula el rectángulo completo y resta el espacio que faltaba: 9 × 4 − 12.",
+   "clue": "Halla primero el área del rectángulo que encierra la figura.",
+   "option_notes": {
+    "36 m²": "Usa el área del rectángulo sin quitar el espacio faltante.",
+    "12 m²": "Confunde el espacio añadido con el área de la figura original.",
+    "48 m²": "Suma el espacio faltante al área del rectángulo."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

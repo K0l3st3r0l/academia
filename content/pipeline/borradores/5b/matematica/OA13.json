@@ -1,0 +1,270 @@
+{
+ "oa": "OA13",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "En una bandeja vacía ocupas 2/8 de la bandeja con sopaipillas y agregas 3/8 más. ¿Qué fracción queda ocupada?",
+   "options": [
+    "6/8 de la bandeja",
+    "5/16 de la bandeja",
+    "5/8 de la bandeja",
+    "1/8 de la bandeja"
+   ],
+   "correct": "5/8 de la bandeja",
+   "hint": "Como los denominadores son iguales, suma los numeradores y conserva el denominador.",
+   "clue": "Fíjate en que cada octavo tiene el mismo tamaño.",
+   "option_notes": {
+    "5/16 de la bandeja": "Sumó numeradores y denominadores.",
+    "1/8 de la bandeja": "Restó 3/8 a 2/8 en vez de sumar.",
+    "6/8 de la bandeja": "Contó una parte de más al juntar las fracciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "Un bidón puede contener 2,500 L y tiene 0,375 L. ¿Cuántos litros faltan para llenarlo?",
+   "options": [
+    "2,500 L",
+    "1,875 L",
+    "2,125 L",
+    "2,875 L"
+   ],
+   "correct": "2,125 L",
+   "hint": "2,500 − 0,375 = 2,125 L; esa diferencia es lo que falta.",
+   "clue": "Compara la capacidad total con lo que ya contiene.",
+   "option_notes": {
+    "2,875 L": "Sumó la capacidad y el contenido.",
+    "2,500 L": "Repitió la capacidad sin restar lo que ya había.",
+    "1,875 L": "Se equivocó al restar las milésimas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "Un sendero del Parque Nacional Conguillío mide 7/9 km y otro mide 2/9 km. ¿Cuántos kilómetros más mide el primero?",
+   "options": [
+    "9/9 km",
+    "5/9 km",
+    "2/9 km",
+    "5/18 km"
+   ],
+   "correct": "5/9 km",
+   "hint": "Como son novenos, resta solo los numeradores: 7/9 − 2/9 = 5/9 km.",
+   "clue": "Busca la diferencia entre las dos distancias.",
+   "option_notes": {
+    "2/9 km": "Usó la medida del segundo sendero.",
+    "9/9 km": "Sumó las dos distancias en vez de compararlas.",
+    "5/18 km": "Sumó también los denominadores."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "En la feria compras 0,650 kg de tomates y 0,275 kg de papas. ¿Cuántos kilogramos llevas en total?",
+   "options": [
+    "0,925 kg",
+    "0,915 kg",
+    "0,815 kg",
+    "0,375 kg"
+   ],
+   "correct": "0,925 kg",
+   "hint": "Alineando las comas: 0,650 + 0,275 = 0,925 kg.",
+   "clue": "Alinea las comas y junta ambas cantidades.",
+   "option_notes": {
+    "0,375 kg": "Restó ambas cantidades en vez de sumarlas.",
+    "0,815 kg": "Alineó mal las cifras decimales.",
+    "0,915 kg": "Se equivocó al sumar las milésimas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "En una librería compras un cuaderno de $2.500 y un lápiz de $750. Pagas con $5.000. ¿Cuánto vuelto recibes?",
+   "options": [
+    "$3.250",
+    "$1.750",
+    "$4.250",
+    "$2.500"
+   ],
+   "correct": "$1.750",
+   "hint": "La compra cuesta $3.250; $5.000 − $3.250 = $1.750 de vuelto.",
+   "clue": "Primero suma los precios; después quita ese total a $5.000.",
+   "option_notes": {
+    "$2.500": "Restó solo el precio del cuaderno.",
+    "$3.250": "Calculó el total comprado, no el vuelto.",
+    "$4.250": "Restó solo el precio del lápiz."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del OA: opera con números naturales (pesos), no con fracciones propias ni decimales hasta la milésima."
+   ]
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "Una botella tiene 7/8 L de jugo. Sirves 2/8 L y luego agregas 1/8 L. ¿Cuánto jugo queda?",
+   "options": [
+    "6/8 de litro",
+    "10/8 de litro",
+    "4/8 de litro",
+    "5/8 de litro"
+   ],
+   "correct": "6/8 de litro",
+   "hint": "7/8 − 2/8 + 1/8 = 6/8 L; se resta lo servido y se suma lo agregado.",
+   "clue": "Haz una operación por cada cambio: primero servir y después agregar.",
+   "option_notes": {
+    "5/8 de litro": "Olvidó agregar 1/8 después de servir.",
+    "4/8 de litro": "Restó las dos cantidades de cambio.",
+    "10/8 de litro": "Sumó todas las cantidades, incluso lo servido."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "Una caminata mide 3,600 km. Recorres 1,250 km en la mañana y 0,875 km en la tarde. ¿Cuántos kilómetros faltan?",
+   "options": [
+    "5,725 km",
+    "2,350 km",
+    "2,725 km",
+    "1,475 km"
+   ],
+   "correct": "1,475 km",
+   "hint": "3,600 − 1,250 − 0,875 = 1,475 km.",
+   "clue": "A la distancia completa quítale los dos tramos recorridos.",
+   "option_notes": {
+    "2,350 km": "Restó solo el tramo de la mañana.",
+    "2,725 km": "Restó solo el tramo de la tarde.",
+    "5,725 km": "Sumó los trayectos a la distancia total."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "Para una preparación tienes 2/3 kg de mote y agregas 1/6 kg. Si necesitas 1 kg, ¿cuánto te falta?",
+   "options": [
+    "1/6 kg",
+    "5/6 kg",
+    "2/6 kg",
+    "3/6 kg"
+   ],
+   "correct": "1/6 kg",
+   "hint": "2/3 = 4/6; tienes 5/6 y para completar el kilo falta 1/6 kg.",
+   "clue": "Primero calcula cuánto mote tienes después de agregar; luego compáralo con 1 kg.",
+   "option_notes": {
+    "2/6 kg": "Calculó 1 − 2/3 y olvidó sumar 1/6.",
+    "5/6 kg": "Indicó lo que tiene, no lo que falta.",
+    "3/6 kg": "Restó 1/6 en vez de agregarlo a 2/3."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Elisa recorrió 3/8 km. Martín recorrió 2/8 km más que Elisa, y Josefa recorrió 1/8 km menos que Martín. ¿Cuánto recorrió Josefa?",
+   "options": [
+    "3/8 km",
+    "6/8 km",
+    "4/8 km",
+    "5/8 km"
+   ],
+   "correct": "4/8 km",
+   "hint": "Martín hizo 5/8 km; al quitar 1/8 km, Josefa hizo 4/8 km.",
+   "clue": "Calcula primero lo que recorrió Martín y después ajusta el recorrido de Josefa.",
+   "option_notes": {
+    "5/8 km": "Usó el recorrido de Martín sin restar 1/8.",
+    "3/8 km": "Supuso que Josefa recorrió lo mismo que Elisa.",
+    "6/8 km": "Sumó los dos cambios al recorrido de Elisa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Un camión aljibe sale con 12,500 L de agua. Entrega 3,250 L, carga 1,500 L y luego entrega 2,125 L. ¿Cuánta agua lleva?",
+   "options": [
+    "10,750 L",
+    "8,625 L",
+    "19,375 L",
+    "7,125 L"
+   ],
+   "correct": "8,625 L",
+   "hint": "12,500 − 3,250 + 1,500 − 2,125 = 8,625 L.",
+   "clue": "Las entregas disminuyen el agua; la carga la aumenta.",
+   "option_notes": {
+    "7,125 L": "No sumó la carga de 1,500 L.",
+    "10,750 L": "Olvidó la última entrega.",
+    "19,375 L": "Sumó cantidades sin considerar las entregas."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Error de hecho: un camión aljibe no transporta 12,5 L."
+   ]
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Una olla debe quedar con 1,000 L de caldo. Ya tiene 0,375 L, agregas una cantidad y se derraman 0,125 L. ¿Cuánto debes agregar antes del derrame?",
+   "options": [
+    "0,875 L",
+    "0,500 L",
+    "0,625 L",
+    "0,750 L"
+   ],
+   "correct": "0,750 L",
+   "hint": "Debe cumplirse 0,375 + cantidad − 0,125 = 1,000; la cantidad es 0,750 L.",
+   "clue": "El derrame también debe quedar compensado por lo que agregues.",
+   "option_notes": {
+    "0,625 L": "Calculó lo que falta e ignoró el derrame.",
+    "0,875 L": "Restó el derrame al objetivo y olvidó lo que ya había.",
+    "0,500 L": "Restó lo derramado además de lo que faltaba."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Una caja contiene 1 kg de fruta. 2/5 son manzanas y 1/4 son peras. El resto son naranjas. ¿Qué fracción de la fruta son naranjas?",
+   "options": [
+    "12/20 de la fruta",
+    "8/20 de la fruta",
+    "3/20 de la fruta",
+    "7/20 de la fruta"
+   ],
+   "correct": "7/20 de la fruta",
+   "hint": "1 = 20/20; 2/5 = 8/20 y 1/4 = 5/20. Quedan 7/20.",
+   "clue": "Expresa todas las partes con un mismo denominador antes de restarlas del total.",
+   "option_notes": {
+    "3/20 de la fruta": "Restó la parte de peras a la de manzanas.",
+    "12/20 de la fruta": "Restó solo las manzanas del total.",
+    "8/20 de la fruta": "Convirtió 1/4 en 4/20 en vez de 5/20."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del OA: los denominadores 5 y 4 no son iguales ni múltiplos entre sí."
+   ]
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

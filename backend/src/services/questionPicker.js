@@ -63,7 +63,7 @@ async function pickQuestions({ subject, gradeLevel, oaCodes = [], level = DEFAUL
     `SELECT q.*, c.label AS oa_label
      FROM questions q
      LEFT JOIN curriculum_oas c ON c.subject = q.subject AND c.grade_level = q.grade_level AND c.code = q.oa_code
-     WHERE q.subject = $1 AND q.active = true
+     WHERE q.subject = $1 AND q.active = true AND q.status = 'approved'
        AND ${byOa ? 'q.grade_level = $2 AND q.oa_code = ANY($3::text[])' : 'q.grade_level = ANY($2::text[])'}`,
     byOa ? [subject, gradeLevel, oaCodes] : [subject, levels]
   );

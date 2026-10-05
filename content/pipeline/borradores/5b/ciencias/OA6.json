@@ -1,0 +1,264 @@
+{
+ "oa": "OA6",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "¿Cuál es un efecto nocivo frecuente del humo del tabaco en el sistema respiratorio?",
+   "options": [
+    "Irrita las vías respiratorias y puede causar tos.",
+    "Aumenta la limpieza natural de los bronquios.",
+    "Aumenta el oxígeno disponible para el cuerpo.",
+    "Fortalece los pulmones y facilita respirar."
+   ],
+   "correct": "Irrita las vías respiratorias y puede causar tos.",
+   "hint": "El humo irrita las vías respiratorias; por eso puede provocar tos y dificultar la respiración.",
+   "clue": "Piensa en qué sucede cuando el humo entra en contacto con los bronquios.",
+   "option_notes": {
+    "Fortalece los pulmones y facilita respirar.": "Confunde un efecto dañino con un supuesto fortalecimiento pulmonar.",
+    "Aumenta la limpieza natural de los bronquios.": "Invierte el efecto: el humo perjudica la limpieza de los bronquios.",
+    "Aumenta el oxígeno disponible para el cuerpo.": "Supone que fumar aumenta el oxígeno disponible."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "¿Qué efecto puede producir la nicotina del cigarrillo en el sistema circulatorio?",
+   "options": [
+    "Hace latir más lento el corazón y baja la presión.",
+    "Relaja los vasos sanguíneos y mejora la circulación.",
+    "Acelera los latidos y puede elevar la presión arterial.",
+    "Hace que la sangre transporte más oxígeno a los tejidos."
+   ],
+   "correct": "Acelera los latidos y puede elevar la presión arterial.",
+   "hint": "La nicotina puede estimular el corazón y aumentar sus latidos y la presión arterial.",
+   "clue": "Relaciona la nicotina con el trabajo del corazón y el estado de los vasos.",
+   "option_notes": {
+    "Hace latir más lento el corazón y baja la presión.": "Invierte el efecto estimulante de la nicotina sobre el corazón.",
+    "Relaja los vasos sanguíneos y mejora la circulación.": "Confunde el estrechamiento de vasos con una relajación.",
+    "Hace que la sangre transporte más oxígeno a los tejidos.": "Atribuye al cigarrillo un aumento del oxígeno transportado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "¿Qué efecto tiene el monóxido de carbono del humo sobre la sangre?",
+   "options": [
+    "Hace que la sangre transporte aire en vez de oxígeno.",
+    "Limpia la sangre de sustancias dañinas.",
+    "Aumenta el oxígeno que llega a los músculos.",
+    "Reduce el oxígeno que la sangre puede transportar."
+   ],
+   "correct": "Reduce el oxígeno que la sangre puede transportar.",
+   "hint": "El monóxido de carbono dificulta que la sangre lleve suficiente oxígeno al cuerpo.",
+   "clue": "Piensa en la función de la sangre: llevar oxígeno desde los pulmones al cuerpo.",
+   "option_notes": {
+    "Aumenta el oxígeno que llega a los músculos.": "Invierte el efecto del monóxido de carbono sobre el oxígeno.",
+    "Limpia la sangre de sustancias dañinas.": "Supone que el humo limpia la sangre, en vez de contaminarla.",
+    "Hace que la sangre transporte aire en vez de oxígeno.": "Confunde el aire con el oxígeno que debe transportar la sangre."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "¿Qué parte del sistema respiratorio puede dañarse directamente por el humo del tabaco?",
+   "options": [
+    "El estómago, donde comienza la digestión.",
+    "Los riñones, que filtran la sangre.",
+    "Los huesos, que sostienen el cuerpo.",
+    "Los alvéolos, donde se intercambian gases."
+   ],
+   "correct": "Los alvéolos, donde se intercambian gases.",
+   "hint": "Los alvéolos son estructuras pulmonares delicadas y el humo puede dañarlas.",
+   "clue": "Ubica la estructura de los pulmones donde el oxígeno pasa a la sangre.",
+   "option_notes": {
+    "El estómago, donde comienza la digestión.": "Confunde una estructura digestiva con una parte respiratoria.",
+    "Los riñones, que filtran la sangre.": "Confunde un órgano excretor con una estructura pulmonar.",
+    "Los huesos, que sostienen el cuerpo.": "Confunde tejido de sostén con una estructura de intercambio gaseoso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Después de estar cerca de alguien que fuma, Diego corre y tose. ¿Qué explicación relaciona ambos efectos con el humo?",
+   "options": [
+    "El humo aumenta sus músculos y reduce su necesidad de respirar.",
+    "El humo enfría sus pulmones y mejora el intercambio de gases.",
+    "El humo fortalece sus bronquios y acelera la digestión.",
+    "El humo irrita sus bronquios y dificulta el paso del aire."
+   ],
+   "correct": "El humo irrita sus bronquios y dificulta el paso del aire.",
+   "hint": "La irritación de los bronquios puede provocar tos y hacer más difícil mover aire.",
+   "clue": "Relaciona la tos con el lugar por donde entra y circula el humo.",
+   "option_notes": {
+    "El humo enfría sus pulmones y mejora el intercambio de gases.": "Invierte los efectos del humo sobre los bronquios y el intercambio gaseoso.",
+    "El humo aumenta sus músculos y reduce su necesidad de respirar.": "Confunde el efecto respiratorio con ganar músculos y respirar menos.",
+    "El humo fortalece sus bronquios y acelera la digestión.": "Cree que el humo fortalece bronquios y favorece la digestión."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "En un control, una persona fumadora tiene el pulso acelerado. ¿Qué relación explica mejor ese resultado?",
+   "options": [
+    "La nicotina estimula el corazón y aumenta sus latidos.",
+    "El humo calma el corazón y reduce el número de latidos.",
+    "La nicotina fortalece el corazón y reduce su esfuerzo.",
+    "El pulmón transforma el humo en energía para el corazón."
+   ],
+   "correct": "La nicotina estimula el corazón y aumenta sus latidos.",
+   "hint": "La nicotina puede estimular el sistema circulatorio y hacer que el corazón lata más rápido.",
+   "clue": "Observa qué órgano produce el pulso y qué sustancia activa contiene el tabaco.",
+   "option_notes": {
+    "El humo calma el corazón y reduce el número de latidos.": "Invierte el efecto estimulante y supone que el corazón late menos.",
+    "La nicotina fortalece el corazón y reduce su esfuerzo.": "Interpreta el aumento del pulso como si el corazón trabajara menos.",
+    "El pulmón transforma el humo en energía para el corazón.": "Confunde la función pulmonar con la producción de energía."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "El monóxido de carbono pasa de los pulmones a la sangre. ¿Qué efecto se espera en el cuerpo?",
+   "options": [
+    "Los músculos reciben más oxígeno y se cansan menos.",
+    "Los músculos reciben menos oxígeno para funcionar.",
+    "La sangre deja de circular por los vasos.",
+    "El corazón ya no necesita bombear sangre."
+   ],
+   "correct": "Los músculos reciben menos oxígeno para funcionar.",
+   "hint": "Al transportar menos oxígeno, la sangre entrega menos a los músculos y estos funcionan con mayor dificultad.",
+   "clue": "Sigue el recorrido: del humo a la sangre y luego desde la sangre hacia los músculos.",
+   "option_notes": {
+    "La sangre deja de circular por los vasos.": "Confunde menor transporte de oxígeno con detener la circulación.",
+    "El corazón ya no necesita bombear sangre.": "Olvida que el corazón debe seguir bombeando sangre.",
+    "Los músculos reciben más oxígeno y se cansan menos.": "Invierte el efecto del monóxido de carbono en el oxígeno."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Martina respira humo de tabaco en una pieza cerrada. ¿Qué combinación de efectos es posible?",
+   "options": [
+    "Irritación respiratoria y mayor esfuerzo del corazón.",
+    "Pulmones más fuertes y presión arterial más baja.",
+    "Mejor limpieza bronquial y vasos más relajados.",
+    "Más oxígeno en la sangre y menos tos al respirar."
+   ],
+   "correct": "Irritación respiratoria y mayor esfuerzo del corazón.",
+   "hint": "El humo puede irritar las vías respiratorias y activar efectos circulatorios, incluso sin fumar directamente.",
+   "clue": "Considera al mismo tiempo los sistemas respiratorio y circulatorio.",
+   "option_notes": {
+    "Pulmones más fuertes y presión arterial más baja.": "Supone que el humo fortalece pulmones y reduce la presión.",
+    "Más oxígeno en la sangre y menos tos al respirar.": "Invierte los efectos sobre el oxígeno y la tos.",
+    "Mejor limpieza bronquial y vasos más relajados.": "Confunde el daño a la limpieza bronquial y a los vasos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Un resumen dice: “El humo irrita las vías respiratorias, daña alvéolos y puede alterar la circulación”. ¿Qué conclusión conecta mejor esos efectos?",
+   "options": [
+    "Puede mejorar el aire de los pulmones y la sangre.",
+    "Hace que los alvéolos produzcan oxígeno extra para la sangre.",
+    "Puede dificultar la respiración y el transporte de oxígeno.",
+    "Solo afecta la digestión, no los sistemas mencionados."
+   ],
+   "correct": "Puede dificultar la respiración y el transporte de oxígeno.",
+   "hint": "El daño respiratorio y circulatorio puede reducir tanto la entrada de aire como la entrega de oxígeno a los tejidos.",
+   "clue": "Une los efectos en pulmones con los efectos sobre la sangre y el transporte de oxígeno.",
+   "option_notes": {
+    "Puede mejorar el aire de los pulmones y la sangre.": "Invierte los efectos nocivos y los presenta como beneficios.",
+    "Solo afecta la digestión, no los sistemas mencionados.": "Cambia los sistemas afectados por el humo.",
+    "Hace que los alvéolos produzcan oxígeno extra para la sangre.": "Confunde el intercambio de gases con la producción de oxígeno."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "El humo daña los cilios de los bronquios, que normalmente mueven la mucosidad. ¿Qué consecuencia es más probable?",
+   "options": [
+    "Los bronquios quedan más limpios y permiten respirar mejor.",
+    "Se eliminan mejor las partículas y disminuye la tos.",
+    "Se acumulan la mucosidad y las partículas, y aumenta la tos.",
+    "La mucosidad se transforma en oxígeno dentro de los pulmones."
+   ],
+   "correct": "Se acumulan la mucosidad y las partículas, y aumenta la tos.",
+   "hint": "Si los cilios funcionan peor, limpian menos los bronquios y se acumulan mucosidad y partículas.",
+   "clue": "Piensa qué pasa cuando un sistema de limpieza deja de mover lo que debe retirar.",
+   "option_notes": {
+    "Se eliminan mejor las partículas y disminuye la tos.": "Invierte el efecto: los cilios dañados limpian peor.",
+    "La mucosidad se transforma en oxígeno dentro de los pulmones.": "Confunde la mucosidad con una sustancia que produce oxígeno.",
+    "Los bronquios quedan más limpios y permiten respirar mejor.": "Supone que dañar los cilios mejora la limpieza bronquial."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Tras fumar, una persona presenta pulso acelerado y se fatiga al caminar. El humo contiene nicotina y monóxido de carbono. ¿Qué explicación integra ambos signos?",
+   "options": [
+    "El pulmón produce energía extra y el corazón trabaja menos.",
+    "La nicotina acelera el corazón; el CO reduce el oxígeno en la sangre.",
+    "La sangre circula más lento y por eso produce energía.",
+    "El humo calma el corazón y entrega más oxígeno a los músculos."
+   ],
+   "correct": "La nicotina acelera el corazón; el CO reduce el oxígeno en la sangre.",
+   "hint": "La nicotina puede aumentar los latidos y el monóxido de carbono limita el oxígeno para los tejidos.",
+   "clue": "Relaciona cada signo con una sustancia del humo y con la función de la sangre.",
+   "option_notes": {
+    "El humo calma el corazón y entrega más oxígeno a los músculos.": "Invierte ambos efectos del humo.",
+    "El pulmón produce energía extra y el corazón trabaja menos.": "Confunde el intercambio de gases con la producción de energía.",
+    "La sangre circula más lento y por eso produce energía.": "Supone que la sangre produce energía y que circular más lento ayuda."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Una persona afirma: “Si no toso al fumar, el humo no daña mi cuerpo”. ¿Qué respuesta está mejor respaldada?",
+   "options": [
+    "Es correcto: la tos es la única señal de daño.",
+    "Es incorrecto: puede dañar pulmones y vasos sin causar tos inmediata.",
+    "Es correcto: el humo solo afecta a quienes sienten molestias.",
+    "Es incorrecto: la tos evita que el humo llegue a la sangre."
+   ],
+   "correct": "Es incorrecto: puede dañar pulmones y vasos sin causar tos inmediata.",
+   "hint": "La ausencia de tos no elimina los efectos del humo en pulmones, sangre, corazón o vasos.",
+   "clue": "Distingue entre una señal visible y los daños que pueden ocurrir dentro del cuerpo.",
+   "option_notes": {
+    "Es correcto: la tos es la única señal de daño.": "Confunde un síntoma con la única forma de daño.",
+    "Es correcto: el humo solo afecta a quienes sienten molestias.": "Supone que el daño siempre produce molestias inmediatas.",
+    "Es incorrecto: la tos evita que el humo llegue a la sangre.": "Cree que toser bloquea el paso del humo al organismo."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

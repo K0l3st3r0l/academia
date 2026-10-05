@@ -1,0 +1,268 @@
+{
+ "oa": "OA11",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "En la casa de Javiera, ¿qué situación muestra una importancia de la electricidad en la vida cotidiana?",
+   "options": [
+    "La escoba manual junta el polvo del piso.",
+    "El refrigerador mantiene fríos los alimentos.",
+    "La mesa sostiene los platos durante la comida.",
+    "La ventana deja entrar la luz natural del Sol."
+   ],
+   "correct": "El refrigerador mantiene fríos los alimentos.",
+   "hint": "El refrigerador usa electricidad para funcionar y conservar alimentos por más tiempo.",
+   "clue": "Piensa en cuál objeto necesita electricidad para cumplir su función.",
+   "option_notes": {
+    "La mesa sostiene los platos durante la comida.": "Confunde un objeto útil con un aparato que usa electricidad.",
+    "La ventana deja entrar la luz natural del Sol.": "Confunde la luz natural del Sol con energía eléctrica.",
+    "La escoba manual junta el polvo del piso.": "Confunde una herramienta manual con un aparato eléctrico."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "Antes de salir de una sala que quedará vacía, ¿qué acción demuestra un uso responsable de la electricidad?",
+   "options": [
+    "Encender otro ventilador para gastar la electricidad restante.",
+    "Dejar las luces encendidas para que la sala no quede oscura.",
+    "Abrir el refrigerador para enfriar la sala vacía.",
+    "Apagar las luces y el proyector que no se usarán."
+   ],
+   "correct": "Apagar las luces y el proyector que no se usarán.",
+   "hint": "Si nadie está en la sala, apagar equipos evita gastar electricidad sin necesidad.",
+   "clue": "Pregunta qué aparatos seguirían funcionando sin que alguien los necesite.",
+   "option_notes": {
+    "Dejar las luces encendidas para que la sala no quede oscura.": "Cree que iluminar una sala vacía es necesario.",
+    "Encender otro ventilador para gastar la electricidad restante.": "Piensa que la electricidad debe gastarse aunque no sea necesaria.",
+    "Abrir el refrigerador para enfriar la sala vacía.": "Cree que el refrigerador puede enfriar una sala."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos objetos transforma energía eléctrica en movimiento cuando está funcionando?",
+   "options": [
+    "Una licuadora encendida mueve sus cuchillas.",
+    "Una pelota permanece quieta en el suelo.",
+    "Un molino se mueve gracias al viento.",
+    "Una vela apagada permanece sobre la mesa."
+   ],
+   "correct": "Una licuadora encendida mueve sus cuchillas.",
+   "hint": "El motor de la licuadora usa electricidad para hacer girar sus cuchillas.",
+   "clue": "Busca el objeto que tiene un motor y se mueve al conectarse.",
+   "option_notes": {
+    "Un molino se mueve gracias al viento.": "Atribuye a la electricidad un movimiento producido por el viento.",
+    "Una pelota permanece quieta en el suelo.": "Elige un objeto sin movimiento ni motor eléctrico.",
+    "Una vela apagada permanece sobre la mesa.": "Confunde una fuente de luz apagada con un aparato eléctrico."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del OA11: evalúa la transformación de energía eléctrica en movimiento, no la importancia cotidiana ni el ahorro o uso responsable."
+   ]
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "¿Cuál es una razón importante para ahorrar electricidad cuando un aparato no se está usando?",
+   "options": [
+    "Ahorrar electricidad hace que el Sol brille más fuerte.",
+    "La electricidad guardada se vence dentro de los enchufes.",
+    "Se evita un consumo innecesario y se cuidan los recursos.",
+    "Los aparatos funcionan mejor si nunca se apagan durante el día."
+   ],
+   "correct": "Se evita un consumo innecesario y se cuidan los recursos.",
+   "hint": "Ahorrar evita usar energía sin propósito y ayuda a cuidar los recursos necesarios para producirla.",
+   "clue": "Piensa qué ocurre cuando un aparato funciona sin cumplir una tarea.",
+   "option_notes": {
+    "La electricidad guardada se vence dentro de los enchufes.": "Cree que la electricidad puede vencerse como un alimento.",
+    "Los aparatos funcionan mejor si nunca se apagan durante el día.": "Cree que mantenerlos encendidos siempre mejora su funcionamiento.",
+    "Ahorrar electricidad hace que el Sol brille más fuerte.": "Confunde el ahorro de energía con el brillo del Sol."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Martina estudia de día junto a una ventana. ¿Qué decisión ahorra electricidad sin impedirle leer?",
+   "options": [
+    "Encender el televisor para iluminar el cuaderno.",
+    "Cerrar la cortina y encender dos lámparas.",
+    "Dejar la lámpara encendida aunque salgas de la habitación.",
+    "Aprovechar la luz natural y apagar la lámpara."
+   ],
+   "correct": "Aprovechar la luz natural y apagar la lámpara.",
+   "hint": "La luz del Sol permite leer y, si basta, no hace falta encender una lámpara.",
+   "clue": "Compara qué opción entrega luz sin hacer funcionar un aparato.",
+   "option_notes": {
+    "Cerrar la cortina y encender dos lámparas.": "Cree que bloquear la luz natural y encender más lámparas ahorra.",
+    "Dejar la lámpara encendida aunque salgas de la habitación.": "No considera que una lámpara encendida sin uso consume electricidad.",
+    "Encender el televisor para iluminar el cuaderno.": "Propone usar un aparato innecesario para obtener luz."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Dos ampolletas iluminan igual: una LED de 10 W y otra incandescente de 60 W. Si se usan durante igual tiempo, ¿cuál decisión ahorra más?",
+   "options": [
+    "Usar la ampolleta incandescente de 60 W durante ese tiempo.",
+    "Usar la ampolleta LED de 10 W durante ese tiempo.",
+    "Dejar una encendida todo el día para ahorrar.",
+    "Encender las dos para repartir el consumo."
+   ],
+   "correct": "Usar la ampolleta LED de 10 W durante ese tiempo.",
+   "hint": "Con igual tiempo de uso, la ampolleta de menor potencia consume menos energía.",
+   "clue": "Compara los watts cuando ambas entregan la misma luz y duran igual encendidas.",
+   "option_notes": {
+    "Usar la ampolleta incandescente de 60 W durante ese tiempo.": "Cree que una mayor potencia ahorra más.",
+    "Encender las dos para repartir el consumo.": "Piensa que repartir el consumo entre dos ampolletas reduce el gasto.",
+    "Dejar una encendida todo el día para ahorrar.": "Confunde ahorrar con mantener la ampolleta encendida más tiempo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "La tableta de Benjamín terminó de cargarse, pero su cargador sigue conectado. ¿Qué debería hacer para ahorrar y usarlo responsablemente?",
+   "options": [
+    "Poner el cargador bajo una almohada para que no se vea.",
+    "Dejar la tableta conectada toda la noche, aunque esté llena.",
+    "Desconectar el cargador y guardarlo con cuidado.",
+    "Dejarlo conectado, porque ya no consume electricidad."
+   ],
+   "correct": "Desconectar el cargador y guardarlo con cuidado.",
+   "hint": "Desconectarlo evita un consumo innecesario y reduce riesgos al guardarlo.",
+   "clue": "Piensa qué aparato queda conectado aunque ya terminó su tarea.",
+   "option_notes": {
+    "Dejarlo conectado, porque ya no consume electricidad.": "Cree que un cargador conectado no consume nada.",
+    "Dejar la tableta conectada toda la noche, aunque esté llena.": "Cree que seguir cargando una batería llena es necesario.",
+    "Poner el cargador bajo una almohada para que no se vea.": "Ignora que cubrir un cargador puede calentarlo y ser peligroso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "En una tarde, la familia de Tomás hará una videollamada y cocinará. ¿Qué plan usa la electricidad de manera responsable?",
+   "options": [
+    "Usar solo la luz necesaria y apagar equipos al terminar.",
+    "Encender todas las luces y dejar el televisor prendido.",
+    "Abrir muchas veces el refrigerador mientras cocinan.",
+    "Dejar los cargadores conectados para tenerlos listos."
+   ],
+   "correct": "Usar solo la luz necesaria y apagar equipos al terminar.",
+   "hint": "El plan mantiene las actividades necesarias y evita luces o equipos funcionando sin uso.",
+   "clue": "Busca el plan que distingue lo necesario de lo que queda encendido sin razón.",
+   "option_notes": {
+    "Encender todas las luces y dejar el televisor prendido.": "Mantiene luces y un aparato encendidos aunque no sean necesarios.",
+    "Abrir muchas veces el refrigerador mientras cocinan.": "Pierde frío cada vez que abre el refrigerador y aumenta su trabajo.",
+    "Dejar los cargadores conectados para tenerlos listos.": "Deja cargadores conectados aunque no estén cumpliendo una tarea."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "En una caleta de Chiloé, un corte detiene el refrigerador y las luces. Cuando vuelve la luz, la familia apaga lo que no necesita. ¿Qué idea explica mejor ambas decisiones?",
+   "options": [
+    "La electricidad es útil a diario, pero no debe gastarse sin necesidad.",
+    "La electricidad solo importa cuando se cocina en la casa.",
+    "Todo aparato debe quedar encendido para aprovechar la electricidad.",
+    "Apagar las luces impide que el refrigerador conserve alimentos."
+   ],
+   "correct": "La electricidad es útil a diario, pero no debe gastarse sin necesidad.",
+   "hint": "La electricidad cumple funciones diarias, pero ahorrar evita usarla cuando no hace falta.",
+   "clue": "Relaciona lo que dejó de funcionar con su utilidad y con la decisión de apagar.",
+   "option_notes": {
+    "La electricidad solo importa cuando se cocina en la casa.": "Reduce la importancia de la electricidad a una sola actividad.",
+    "Todo aparato debe quedar encendido para aprovechar la electricidad.": "Cree que todos los aparatos deben funcionar continuamente.",
+    "Apagar las luces impide que el refrigerador conserve alimentos.": "Confunde la función de las luces con la del refrigerador."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Enunciado ambiguo: habla de «ambas decisiones», pero el corte de luz no es una decisión de la familia; solo apagar lo innecesario sí lo es."
+   ]
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "La escuela quiere bajar su consumo sin dejar de usar computadores para una clase. ¿Qué propuesta cumple mejor ese objetivo?",
+   "options": [
+    "Mantener todos los equipos encendidos durante el recreo.",
+    "Usar los computadores en la clase y apagar luces y equipos sin uso.",
+    "Usar computadores y encender más luces aunque haya sol.",
+    "Apagar los computadores, pero dejar encendidos los monitores."
+   ],
+   "correct": "Usar los computadores en la clase y apagar luces y equipos sin uso.",
+   "hint": "Se mantienen los equipos necesarios y se apagan los que no cumplen una función.",
+   "clue": "Busca una propuesta que conserve la actividad y quite solo el consumo innecesario.",
+   "option_notes": {
+    "Apagar los computadores, pero dejar encendidos los monitores.": "Apaga una parte, pero deja otro equipo consumiendo sin necesidad.",
+    "Mantener todos los equipos encendidos durante el recreo.": "Mantiene equipos funcionando cuando nadie los usa.",
+    "Usar computadores y encender más luces aunque haya sol.": "Agrega consumo de iluminación aunque ya hay luz natural."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "El refrigerador debe seguir encendido para conservar alimentos; el televisor y las luces están sin personas. Completa: para ahorrar sin perder esa función, la familia debe...",
+   "options": [
+    "Apagar el refrigerador y mantener todo lo demás encendido.",
+    "Encender más luces para que el refrigerador trabaje menos.",
+    "Mantener el refrigerador y apagar el televisor y las luces.",
+    "Desconectar el refrigerador cada hora y no cambiar nada más."
+   ],
+   "correct": "Mantener el refrigerador y apagar el televisor y las luces.",
+   "hint": "Se conserva el aparato que cumple una función necesaria y se apagan los que nadie está usando.",
+   "clue": "Identifica qué aparato cumple una función necesaria y cuáles están sin uso.",
+   "option_notes": {
+    "Apagar el refrigerador y mantener todo lo demás encendido.": "Apaga el aparato necesario y conserva consumos que no ayudan.",
+    "Desconectar el refrigerador cada hora y no cambiar nada más.": "Arriesga la conservación de alimentos y no elimina otros consumos.",
+    "Encender más luces para que el refrigerador trabaje menos.": "Cree que más iluminación puede reducir el trabajo del refrigerador."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "Camila tiene dos cargas normales de ropa. La lavadora puede lavarlas juntas sin superar su capacidad. ¿Qué opción ahorra electricidad?",
+   "options": [
+    "Lavar cada carga varias veces para que quede más limpia.",
+    "Dejar la lavadora encendida entre ambos ciclos.",
+    "Hacer dos ciclos pequeños, aunque caben en uno.",
+    "Lavar las dos cargas juntas en un solo ciclo."
+   ],
+   "correct": "Lavar las dos cargas juntas en un solo ciclo.",
+   "hint": "Un solo ciclo evita hacer funcionar la lavadora dos veces, si la carga cabe de forma segura.",
+   "clue": "Compara cuántas veces funciona la lavadora en cada opción.",
+   "option_notes": {
+    "Lavar cada carga varias veces para que quede más limpia.": "Aumenta los ciclos sin una necesidad indicada.",
+    "Hacer dos ciclos pequeños, aunque caben en uno.": "Usa dos ciclos cuando la ropa podría lavarse en uno.",
+    "Dejar la lavadora encendida entre ambos ciclos.": "Mantiene un aparato funcionando durante un tiempo innecesario."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

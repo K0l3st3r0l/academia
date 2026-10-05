@@ -1,0 +1,266 @@
+{
+ "oa": "OA19",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "En una medida de longitud, ¿qué significa el símbolo m?",
+   "options": [
+    "centímetro",
+    "milímetro",
+    "metro",
+    "kilómetro"
+   ],
+   "correct": "metro",
+   "hint": "El símbolo m corresponde a la unidad metro.",
+   "clue": "Recuerda los símbolos usados para medir longitudes.",
+   "option_notes": {
+    "centímetro": "Confunde m con cm, que incluye el prefijo centi.",
+    "milímetro": "Confunde m con mm, una unidad mucho más pequeña.",
+    "kilómetro": "Agrega el prefijo kilo y cambia el significado de m."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA y del nivel: solo pide el significado del símbolo m, sin medir ni resolver un problema (contenido de 3° básico)"
+   ]
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "El largo de un pasillo es 4 m. ¿Cuántos centímetros mide?",
+   "options": [
+    "40 cm",
+    "400 cm",
+    "4,4 cm",
+    "4.000 cm"
+   ],
+   "correct": "400 cm",
+   "hint": "Como 1 m son 100 cm, 4 m son 400 cm.",
+   "clue": "Recuerda cuántos centímetros contiene un metro.",
+   "option_notes": {
+    "40 cm": "Multiplica por 10 en vez de usar 100 cm por cada metro.",
+    "4,4 cm": "Confunde la conversión con un número decimal cercano a 4.",
+    "4.000 cm": "Multiplica por 1.000, como si cambiara a milímetros."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "Una huincha marca 3 cm al inicio de un lápiz y 12 cm en su punta. ¿Qué longitud mide el lápiz?",
+   "options": [
+    "3 cm",
+    "9 cm",
+    "15 cm",
+    "12 cm"
+   ],
+   "correct": "9 cm",
+   "hint": "La longitud se obtiene restando la marca inicial a la final: 12 cm − 3 cm = 9 cm.",
+   "clue": "Resta la marca donde comienza el lápiz de la marca donde termina.",
+   "option_notes": {
+    "15 cm": "Suma las dos marcas en vez de hallar la distancia entre ellas.",
+    "12 cm": "Toma la marca final como si fuera la longitud del lápiz.",
+    "3 cm": "Toma la marca inicial como la longitud medida."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "El grosor de una moneda se mide con precisión en milímetros. ¿Cuál medida es razonable?",
+   "options": [
+    "2 mm",
+    "2 m",
+    "20 m",
+    "2 cm"
+   ],
+   "correct": "2 mm",
+   "hint": "El grosor de una moneda es muy pequeño; 2 mm es una medida razonable.",
+   "clue": "Elige una medida pequeña, adecuada para un grosor delgado.",
+   "option_notes": {
+    "2 cm": "Escoge una unidad demasiado grande para el grosor de una moneda.",
+    "2 m": "Confunde el grosor con la longitud de un objeto grande.",
+    "20 m": "Ignora la escala del objeto y elige una medida enorme."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "Un rollo de cinta mide 3 m. Camila usa 75 cm. ¿Cuánto queda, expresado en metros y centímetros?",
+   "options": [
+    "2 m 75 cm",
+    "3 m 75 cm",
+    "2 m 25 cm",
+    "1 m 75 cm"
+   ],
+   "correct": "2 m 25 cm",
+   "hint": "3 m = 300 cm; 300 − 75 = 225 cm, que corresponde a 2 m 25 cm.",
+   "clue": "Convierte ambas cantidades a la misma unidad antes de restar.",
+   "option_notes": {
+    "2 m 75 cm": "Resta 75 cm de forma incorrecta al convertir los 3 m.",
+    "3 m 75 cm": "Suma los 75 cm usados al largo del rollo.",
+    "1 m 75 cm": "Usa 2 m como largo inicial y luego resta 25 cm."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "Para decorar una sala, se unen 4 tiras de 25 cm y luego se agregan 30 cm. ¿Qué longitud total se obtiene?",
+   "options": [
+    "2 m 30 cm",
+    "1 m",
+    "1 m 30 cm",
+    "1 m 55 cm"
+   ],
+   "correct": "1 m 30 cm",
+   "hint": "4 × 25 cm = 100 cm; al sumar 30 cm, obtienes 130 cm = 1 m 30 cm.",
+   "clue": "Calcula primero las cuatro tiras; después incorpora los 30 cm adicionales.",
+   "option_notes": {
+    "1 m": "Calcula las cuatro tiras, pero olvida sumar los 30 cm.",
+    "1 m 55 cm": "Suma solo una tira de 25 cm y los 30 cm extra.",
+    "2 m 30 cm": "Confunde el número de tiras con una cantidad de metros."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "Una cinta de 15 cm se divide en 5 partes iguales. ¿Cuánto mide cada parte en milímetros?",
+   "options": [
+    "75 mm",
+    "3 mm",
+    "300 mm",
+    "30 mm"
+   ],
+   "correct": "30 mm",
+   "hint": "15 cm son 150 mm; al dividir 150 mm en 5 partes, cada una mide 30 mm.",
+   "clue": "Pasa el largo total a milímetros y luego repártelo en 5 partes iguales.",
+   "option_notes": {
+    "3 mm": "Divide 15 entre 5 sin convertir primero los centímetros.",
+    "75 mm": "Multiplica 15 por 5 en vez de dividir el largo total.",
+    "300 mm": "Multiplica 150 mm por 2 en vez de repartirlo entre 5."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "Un volantín mide 85 cm de ancho y una cartulina mide 1 m de ancho. ¿Cuántos centímetros más mide la cartulina?",
+   "options": [
+    "15 cm",
+    "185 cm",
+    "5 cm",
+    "25 cm"
+   ],
+   "correct": "15 cm",
+   "hint": "1 m son 100 cm; 100 − 85 = 15 cm.",
+   "clue": "Transforma 1 m a centímetros y compara ambas medidas.",
+   "option_notes": {
+    "5 cm": "Usa una resta con una medida aproximada, no con 100 cm y 85 cm.",
+    "25 cm": "Resta 75 cm a 1 m en vez de restar 85 cm.",
+    "185 cm": "Suma los anchos en lugar de calcular cuánto más mide uno."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "Un huerto rectangular mide 2 m de largo y 75 cm de ancho. ¿Cuántos centímetros de malla necesitas para rodearlo completo?",
+   "options": [
+    "550 cm",
+    "350 cm",
+    "475 cm",
+    "275 cm"
+   ],
+   "correct": "550 cm",
+   "hint": "Convierte 2 m en 200 cm y calcula el perímetro: 2 × (200 + 75) = 550 cm.",
+   "clue": "Un rectángulo tiene dos largos y dos anchos.",
+   "option_notes": {
+    "275 cm": "Suma un largo y un ancho, sin rodear los cuatro lados.",
+    "350 cm": "Cuenta un largo y dos anchos, pero omite un largo.",
+    "475 cm": "Cuenta dos largos y un ancho, pero omite un ancho."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "Una tira mide 2 cm 5 mm y otra 1 cm 8 mm. Se unen y luego se cortan 6 mm. ¿Qué longitud queda?",
+   "options": [
+    "4 cm 3 mm",
+    "3 cm 7 mm",
+    "4 cm 9 mm",
+    "3 cm 1 mm"
+   ],
+   "correct": "3 cm 7 mm",
+   "hint": "25 mm + 18 mm = 43 mm; 43 − 6 = 37 mm, que son 3 cm 7 mm.",
+   "clue": "Trabaja todo en milímetros: primero une las tiras y después corta.",
+   "option_notes": {
+    "4 cm 3 mm": "Suma las tiras, pero olvida cortar los 6 mm.",
+    "3 cm 1 mm": "Resta una cantidad equivocada después de unir las tiras.",
+    "4 cm 9 mm": "Suma los 6 mm en vez de restarlos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "Para una repisa, tres tablas deben sumar 1 m 20 cm. Dos miden 35 cm y 28 cm. La tercera se corta en 3 partes iguales. ¿Cuánto mide cada parte?",
+   "options": [
+    "28 cm",
+    "18 cm",
+    "57 cm",
+    "19 cm"
+   ],
+   "correct": "19 cm",
+   "hint": "120 − 35 − 28 = 57 cm; al dividir en 3 partes iguales, cada una mide 19 cm.",
+   "clue": "Halla la longitud que falta y luego distribúyela entre las tres partes.",
+   "option_notes": {
+    "18 cm": "Suma mal las dos tablas conocidas antes de repartir el resto.",
+    "28 cm": "Copia la medida de una tabla dada y no resuelve el problema.",
+    "57 cm": "Calcula la tercera tabla, pero olvida dividirla en tres partes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "En una maqueta, el camino A mide 1 m 40 cm y se le agregan 85 cm. El camino B mide 2 m 10 cm. ¿Cuál es la diferencia?",
+   "options": [
+    "25 cm",
+    "70 cm",
+    "225 cm",
+    "15 cm"
+   ],
+   "correct": "15 cm",
+   "hint": "A mide 140 + 85 = 225 cm; B mide 210 cm; la diferencia es 15 cm.",
+   "clue": "Primero calcula la longitud completa de A; después compárala con B.",
+   "option_notes": {
+    "25 cm": "Compara el total de A solo con 2 m y omite los 10 cm de B.",
+    "70 cm": "Compara B con 1 m 40 cm y olvida los 85 cm agregados a A.",
+    "225 cm": "Responde con el total del camino A, sin calcular la diferencia."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

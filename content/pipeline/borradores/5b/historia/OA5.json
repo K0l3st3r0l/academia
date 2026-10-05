@@ -1,0 +1,268 @@
+{
+ "oa": "OA5",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "En la sociedad colonial chilena, ¿qué grupo estaba formado principalmente por personas nacidas en España?",
+   "options": [
+    "Peninsulares",
+    "Criollos",
+    "Pueblos originarios",
+    "Mestizos"
+   ],
+   "correct": "Peninsulares",
+   "hint": "Los peninsulares eran españoles nacidos en la península ibérica.",
+   "clue": "Fíjate en el lugar de nacimiento, no en la ascendencia.",
+   "option_notes": {
+    "Criollos": "Confunde a los nacidos en Chile de ascendencia española.",
+    "Mestizos": "Confunde la mezcla de ascendencia europea e indígena.",
+    "Pueblos originarios": "Confunde a comunidades indígenas con españoles nacidos en Europa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "En la época colonial, ¿qué tarea realizaba principalmente un arriero?",
+   "options": [
+    "Transportar personas y productos por caminos, usando animales de carga.",
+    "Organizar reuniones del cabildo para tomar decisiones.",
+    "Construir iglesias con pinturas y esculturas religiosas.",
+    "Cultivar papas en terrazas de alta montaña."
+   ],
+   "correct": "Transportar personas y productos por caminos, usando animales de carga.",
+   "hint": "Los arrieros transportaban personas y productos mediante animales de carga.",
+   "clue": "Piensa en un trabajo que conectaba distintos lugares.",
+   "option_notes": {
+    "Construir iglesias con pinturas y esculturas religiosas.": "Confunde al arriero con un artesano o artista religioso.",
+    "Organizar reuniones del cabildo para tomar decisiones.": "Confunde un oficio de transporte con una autoridad local.",
+    "Cultivar papas en terrazas de alta montaña.": "Confunde al arriero con una persona dedicada a la agricultura."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "¿Qué alimento de origen americano se incorporó a la alimentación colonial en Chile?",
+   "options": [
+    "Trigo",
+    "Papa",
+    "Arroz",
+    "Aceituna"
+   ],
+   "correct": "Papa",
+   "hint": "La papa era cultivada por pueblos originarios de América antes de la colonización.",
+   "clue": "Busca un alimento que ya cultivaban pueblos originarios de América.",
+   "option_notes": {
+    "Arroz": "Confunde un cultivo asiático con uno originario de América.",
+    "Trigo": "Confunde un cultivo europeo con un alimento americano.",
+    "Aceituna": "Confunde un cultivo mediterráneo con uno americano."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "¿Cuál de estas expresiones corresponde al arte colonial en Chile?",
+   "options": [
+    "Una escultura abstracta de acero",
+    "Un afiche de fútbol profesional",
+    "Un retrato digital de una familia",
+    "Una pintura religiosa en una iglesia"
+   ],
+   "correct": "Una pintura religiosa en una iglesia",
+   "hint": "En Chile colonial, muchas obras artísticas se relacionaban con la religión.",
+   "clue": "Fíjate en el tema de la obra y en el espacio donde aparece.",
+   "option_notes": {
+    "Un retrato digital de una familia": "Confunde una obra contemporánea con una expresión colonial.",
+    "Una escultura abstracta de acero": "Confunde una escultura moderna con el arte colonial.",
+    "Un afiche de fútbol profesional": "Confunde publicidad deportiva actual con arte colonial."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Martina nació en Santiago y sus padres eran españoles nacidos en Europa. Tomás nació en Santiago y sus padres eran de origen español, nacidos en Chile. ¿Cómo se clasificaban principalmente?",
+   "options": [
+    "Martina era peninsular y Tomás criollo.",
+    "Martina era criolla y Tomás también.",
+    "Martina era criolla y Tomás mestizo.",
+    "Martina era peninsular y Tomás peninsular."
+   ],
+   "correct": "Martina era criolla y Tomás también.",
+   "hint": "Criollo era quien tenía ascendencia española, pero había nacido en América.",
+   "clue": "Compara dónde nació cada persona y de qué origen era su familia.",
+   "option_notes": {
+    "Martina era peninsular y Tomás criollo.": "Confunde haber nacido en Chile con haber nacido en España.",
+    "Martina era criolla y Tomás mestizo.": "Confunde el origen español con una mezcla de ascendencias.",
+    "Martina era peninsular y Tomás peninsular.": "Confunde la ascendencia familiar con el lugar de nacimiento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Lee la situación: «En una hacienda de la zona central, unas personas sembraban trigo y otras cuidaban vacas y caballos». ¿Qué conclusión es correcta?",
+   "options": [
+    "La hacienda funcionaba principalmente como una escuela.",
+    "La hacienda dependía solamente de la pesca.",
+    "La hacienda se dedicaba solamente a la minería.",
+    "La hacienda combinaba agricultura y ganadería."
+   ],
+   "correct": "La hacienda combinaba agricultura y ganadería.",
+   "hint": "Sembrar cultivos es agricultura; criar animales es ganadería.",
+   "clue": "Busca dos trabajos distintos y relaciónalos con su actividad económica.",
+   "option_notes": {
+    "La hacienda se dedicaba solamente a la minería.": "Confunde el cultivo y la crianza con una actividad minera.",
+    "La hacienda funcionaba principalmente como una escuela.": "Confunde un lugar de producción con un lugar de enseñanza.",
+    "La hacienda dependía solamente de la pesca.": "Confunde actividades terrestres con una actividad marítima."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "En una casa colonial, la familia se alumbraba de noche con velas y cocinaba en un fogón. ¿Qué se puede inferir sobre su vida cotidiana?",
+   "options": [
+    "Dependían principalmente de teléfonos móviles.",
+    "Tenían electricidad y cocinas eléctricas.",
+    "Usaban formas sencillas de iluminación y cocina.",
+    "Vivían sin preparar alimentos en casa."
+   ],
+   "correct": "Usaban formas sencillas de iluminación y cocina.",
+   "hint": "Las velas y el fogón muestran formas de iluminación y cocina anteriores a la electricidad.",
+   "clue": "Relaciona cada objeto con la época en que podía usarse.",
+   "option_notes": {
+    "Tenían electricidad y cocinas eléctricas.": "Confunde prácticas coloniales con tecnologías actuales.",
+    "Dependían principalmente de teléfonos móviles.": "Incluye un objeto que no existía en la época colonial.",
+    "Vivían sin preparar alimentos en casa.": "Contradice que la familia cocinaba en un fogón."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Durante una fiesta religiosa colonial, el pueblo adornaba la iglesia, escuchaba música y recorría las calles. ¿Qué actividad describe mejor la escena?",
+   "options": [
+    "Una elección presidencial transmitida por radio.",
+    "Una procesión acompañada de música.",
+    "Una feria científica escolar.",
+    "Un partido profesional en un estadio."
+   ],
+   "correct": "Una procesión acompañada de música.",
+   "hint": "Una procesión es un recorrido colectivo, generalmente religioso, por un espacio público.",
+   "clue": "Considera la fiesta religiosa y el recorrido por las calles.",
+   "option_notes": {
+    "Una elección presidencial transmitida por radio.": "Confunde una celebración religiosa colonial con una actividad política moderna.",
+    "Un partido profesional en un estadio.": "Confunde un recorrido religioso con un espectáculo deportivo.",
+    "Una feria científica escolar.": "Confunde una celebración colonial con una actividad escolar actual."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "En un registro de la administración colonial, los cargos más altos aparecen ocupados por hombres nacidos en España. Una familia nacida en Chile posee tierras, pero no logra esos cargos. ¿Qué rasgo muestra el registro?",
+   "options": [
+    "La riqueza era el único factor de la posición social.",
+    "Los cargos se repartían por igual entre todos.",
+    "El origen y el nacimiento influían en las oportunidades sociales.",
+    "Nacer en Chile siempre daba más privilegios."
+   ],
+   "correct": "El origen y el nacimiento influían en las oportunidades sociales.",
+   "hint": "En la colonia, el lugar de nacimiento y la ascendencia podían afectar el acceso a cargos y privilegios.",
+   "clue": "Compara quién ocupa los cargos con quién queda fuera.",
+   "option_notes": {
+    "La riqueza era el único factor de la posición social.": "Supone que tener tierras borraba la jerarquía social.",
+    "Nacer en Chile siempre daba más privilegios.": "Confunde el nacimiento en Chile con mayores privilegios automáticos.",
+    "Los cargos se repartían por igual entre todos.": "Ignora la diferencia mostrada entre los grupos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Un texto colonial señala: «Desde el Norte Grande llegan minerales; desde la Zona Central, trigo y vino; desde la Zona Sur, madera». ¿Qué idea explica mejor el texto?",
+   "options": [
+    "Las actividades económicas variaban según los recursos de cada zona.",
+    "Todas las zonas producían exactamente los mismos bienes.",
+    "El clima no influía en lo que podía producirse.",
+    "Las ciudades solo vivían del intercambio con Europa."
+   ],
+   "correct": "Las actividades económicas variaban según los recursos de cada zona.",
+   "hint": "Los recursos, el clima y el relieve de cada zona favorecían actividades diferentes.",
+   "clue": "Compara los tres lugares y los productos que aparecen en la cita.",
+   "option_notes": {
+    "Todas las zonas producían exactamente los mismos bienes.": "Confunde actividades distintas con una producción idéntica.",
+    "Las ciudades solo vivían del intercambio con Europa.": "Olvida la producción local de minerales, alimentos y madera.",
+    "El clima no influía en lo que podía producirse.": "Desconoce la relación entre condiciones naturales y producción."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: error de hecho: el Norte Grande no formaba parte de Chile en la Colonia (pertenecía al Virreinato del Perú); la minería colonial chilena se concentraba sobre todo en el Norte Chico"
+   ]
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Lee: «Al amanecer, Diego acompaña a su padre al taller; al mediodía comen maíz y charqui; al anochecer rezan y se alumbran con velas». ¿Qué conclusión está mejor apoyada?",
+   "options": [
+    "La escuela organizaba el trabajo y la alimentación familiar.",
+    "La familia dependía de fábricas, supermercados y electricidad.",
+    "La vida unía trabajo familiar, alimentos locales y religión.",
+    "Las personas evitaban toda práctica religiosa cotidiana."
+   ],
+   "correct": "La vida unía trabajo familiar, alimentos locales y religión.",
+   "hint": "El relato une trabajo, alimentación, religión e iluminación, rasgos de la vida cotidiana colonial.",
+   "clue": "Busca una opción que reúna las tres acciones descritas.",
+   "option_notes": {
+    "La familia dependía de fábricas, supermercados y electricidad.": "Confunde la vida colonial con servicios y tecnologías actuales.",
+    "La escuela organizaba el trabajo y la alimentación familiar.": "Atribuye a la escuela decisiones que tomaba la familia.",
+    "Las personas evitaban toda práctica religiosa cotidiana.": "Contradice que la familia rezaba al anochecer."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "En una iglesia colonial de Chile, una escultura de madera pintada representa a un santo y se lleva en una procesión. ¿Qué relación se observa?",
+   "options": [
+    "Las procesiones eran competencias deportivas sin sentido religioso.",
+    "Las iglesias coloniales evitaban imágenes y esculturas.",
+    "Las esculturas coloniales se usaban solo para decorar casas.",
+    "El arte religioso también formaba parte de celebraciones comunitarias."
+   ],
+   "correct": "El arte religioso también formaba parte de celebraciones comunitarias.",
+   "hint": "La imagen religiosa podía venerarse en la iglesia y acompañar una procesión pública.",
+   "clue": "Relaciona el tema de la escultura con el uso que se le daba en la calle.",
+   "option_notes": {
+    "Las esculturas coloniales se usaban solo para decorar casas.": "Ignora que la escultura estaba en una iglesia y salía en procesión.",
+    "Las procesiones eran competencias deportivas sin sentido religioso.": "Confunde una celebración religiosa con una competencia deportiva.",
+    "Las iglesias coloniales evitaban imágenes y esculturas.": "Contradice la presencia de la escultura dentro de la iglesia."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

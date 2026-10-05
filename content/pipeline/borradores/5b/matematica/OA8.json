@@ -1,0 +1,270 @@
+{
+ "oa": "OA8",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "¿Cuál de estas fracciones es impropia?",
+   "options": [
+    "5/12",
+    "4/5",
+    "3/8",
+    "7/6"
+   ],
+   "correct": "7/6",
+   "hint": "Es impropia porque el numerador es mayor que el denominador: representa más de un entero.",
+   "clue": "Compara el número de arriba con el número de abajo en cada fracción.",
+   "option_notes": {
+    "3/8": "Eliges una fracción propia porque el numerador es menor.",
+    "4/5": "Confundes una fracción propia con una impropia.",
+    "5/12": "Confundes una fracción propia con una impropia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "Cada barra de chocolate se divide en 5 partes iguales. Si comes 7 partes, ¿qué fracción impropia representa lo que comiste?",
+   "options": [
+    "5/7",
+    "6/5",
+    "7/5",
+    "8/5"
+   ],
+   "correct": "7/5",
+   "hint": "Cada entero tiene 5 partes; al contar 7 partes, el denominador es 5 y el numerador es 7.",
+   "clue": "Fíjate en cuántas partes iguales tiene cada barra y cuántas partes se comen.",
+   "option_notes": {
+    "5/7": "Inviertes el total de partes y las partes comidas.",
+    "6/5": "Cuentas una parte menos de las que se comen.",
+    "8/5": "Cuentas una parte más de las que se comen."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "¿Qué fracción impropia equivale a 2 1/4?",
+   "options": [
+    "9/4",
+    "7/4",
+    "8/4",
+    "10/4"
+   ],
+   "correct": "9/4",
+   "hint": "Dos enteros son 8/4; al sumar 1/4, obtienes 9/4.",
+   "clue": "Convierte los enteros a cuartos y luego agrega la parte fraccionaria.",
+   "option_notes": {
+    "7/4": "Restas el cuarto a los 2 enteros en vez de sumarlo.",
+    "8/4": "Olvidas sumar el cuarto adicional.",
+    "10/4": "Agregas un cuarto de más al convertir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "En una recta de 0 a 1, el tramo está dividido en 8 partes iguales. Un punto está en la sexta marca después de 0. ¿Qué fracción señala?",
+   "options": [
+    "5/8",
+    "6/8",
+    "2/8",
+    "7/8"
+   ],
+   "correct": "6/8",
+   "hint": "Cada marca vale 1/8; la sexta marca reúne seis de esas partes.",
+   "clue": "Cuenta las marcas desde 0; el punto de partida no cuenta como una parte.",
+   "option_notes": {
+    "2/8": "Cuentas solo las dos primeras partes.",
+    "5/8": "Cuentas una marca menos de la posición indicada.",
+    "7/8": "Cuentas una marca más de la posición indicada."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "¿Qué pareja muestra la misma cantidad?",
+   "options": [
+    "9/4 y 2 1/4",
+    "9/4 y 1 3/4",
+    "8/4 y 2 1/4",
+    "7/4 y 2 1/4"
+   ],
+   "correct": "9/4 y 2 1/4",
+   "hint": "Dos enteros son 8/4; al agregar 1/4 se obtienen 9/4.",
+   "clue": "Convierte el número mixto a cuartos para compararlo.",
+   "option_notes": {
+    "9/4 y 1 3/4": "Confundes la parte fraccionaria y restas un cuarto.",
+    "8/4 y 2 1/4": "Olvidas sumar el cuarto del número mixto.",
+    "7/4 y 2 1/4": "Usas 7/4 en vez de los 8/4 de los dos enteros."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Para una receta de sopaipillas se usan 17/6 kg de harina. ¿Cómo expresas esa cantidad como número mixto?",
+   "options": [
+    "2 1/6",
+    "2 5/6",
+    "3 5/6",
+    "3 1/6"
+   ],
+   "correct": "2 5/6",
+   "hint": "17 sextos contienen 2 enteros, que son 12/6, y sobran 5/6.",
+   "clue": "Divide 17 entre 6: el cociente son enteros y el resto queda sobre 6.",
+   "option_notes": {
+    "2 1/6": "Confundes el resto 5 con 1.",
+    "3 1/6": "Tomas 18/6 como si fueran 17/6.",
+    "3 5/6": "Agregas un entero adicional al convertir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "¿Entre qué números enteros se ubica 13/5 en la recta numérica?",
+   "options": [
+    "Entre 3 y 4",
+    "Entre 1 y 2",
+    "Entre 0 y 1",
+    "Entre 2 y 3"
+   ],
+   "correct": "Entre 2 y 3",
+   "hint": "13/5 es mayor que 10/5=2 y menor que 15/5=3.",
+   "clue": "Compara 13 con los múltiplos de 5 que rodean esa fracción.",
+   "option_notes": {
+    "Entre 0 y 1": "Tratas 13/5 como si el numerador fuera menor que 5.",
+    "Entre 1 y 2": "Restas 5 una sola vez y olvidas que queda más de 2.",
+    "Entre 3 y 4": "Restas 5 tres veces y ubicas el resto después de 3."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Una app muestra 2 enteros divididos en 3 partes iguales y además 1 parte de otro entero. ¿Qué fracción impropia representa la pantalla?",
+   "options": [
+    "6/3",
+    "7/3",
+    "8/3",
+    "5/3"
+   ],
+   "correct": "7/3",
+   "hint": "Los 2 enteros aportan 6 tercios y la parte adicional aporta 1 tercio: 7/3.",
+   "clue": "Expresa cada entero como 3 tercios antes de contar la parte extra.",
+   "option_notes": {
+    "5/3": "Cuentas solo un entero y la parte adicional.",
+    "6/3": "Olvidas contar la parte adicional.",
+    "8/3": "Cuentas un tercio adicional que no aparece."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "En una caminata por el cerro San Cristóbal, Tomás recorrió 1 2/3 km en la mañana y 1/2 km en la tarde. ¿Cuánto recorrió en total, expresado como número mixto?",
+   "options": [
+    "2 1/6",
+    "2 5/6",
+    "1 5/6",
+    "3 1/6"
+   ],
+   "correct": "2 1/6",
+   "hint": "Convierte 2/3 en 4/6 y 1/2 en 3/6; suma y transforma los 6/6 en un entero.",
+   "clue": "Usa sextos para sumar las partes fraccionarias y revisa si forman otro entero.",
+   "option_notes": {
+    "1 5/6": "Sumas 2+3 y escribes 5/6 sin ajustar los numeradores.",
+    "2 5/6": "Convierte 2/3 en 5/6 en vez de 4/6.",
+    "3 1/6": "Agregas un entero de más al reunir los sextos."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Un dibujo tiene 3 pizzas, cada una dividida en 8 partes iguales. Si 5 partes quedan sin colorear, ¿qué número mixto está coloreado?",
+   "options": [
+    "2 5/8",
+    "3 3/8",
+    "2 3/8",
+    "3 5/8"
+   ],
+   "correct": "2 3/8",
+   "hint": "Hay 24 octavos en total; al quitar 5 quedan 19/8, que equivale a 2 3/8.",
+   "clue": "Calcula primero todos los octavos y resta los que no están coloreados.",
+   "option_notes": {
+    "2 5/8": "Restas 3 partes en vez de las 5 sin colorear.",
+    "3 3/8": "Mantienes 3 enteros y ajustas solo la fracción.",
+    "3 5/8": "Representas incorrectamente las partes sin colorear."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "En una recta, entre 2 y 3 hay 12 partes iguales. El punto está en la cuarta marca después de 2. ¿Cuál es su representación equivalente?",
+   "options": [
+    "2 1/3 = 25/12",
+    "2 1/4 = 29/12",
+    "2 1/4 = 27/12",
+    "2 1/3 = 28/12"
+   ],
+   "correct": "2 1/3 = 28/12",
+   "hint": "La cuarta marca vale 4/12=1/3; luego conviertes 2 1/3 a doceavos: 28/12.",
+   "clue": "Primero expresa la posición como 2 + 4/12; después simplifica y convierte.",
+   "option_notes": {
+    "2 1/3 = 25/12": "Tomas 1/3 como 1/12 al formar la fracción impropia.",
+    "2 1/4 = 27/12": "Confundes 4/12 con 1/4; la marca no corresponde a un cuarto.",
+    "2 1/4 = 29/12": "Confundes 4/12 con 1/4 y además sumas mal los doceavos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "En una corrida escolar, Elisa recorrió 2 5/10 km y Diego 29/12 km. ¿Quién recorrió más y por cuánto?",
+   "options": [
+    "Diego, por 1/6 km",
+    "Elisa, por 1/6 km",
+    "Elisa, por 1/12 km",
+    "Diego, por 1/12 km"
+   ],
+   "correct": "Elisa, por 1/12 km",
+   "hint": "5/10=1/2=6/12; Elisa recorrió 30/12 y Diego 29/12.",
+   "clue": "Convierte ambas partes fraccionarias al mismo denominador antes de comparar.",
+   "option_notes": {
+    "Diego, por 1/12 km": "Inviertes la comparación: 29/12 es menor que 30/12.",
+    "Elisa, por 1/6 km": "Calculas mal la diferencia entre 30/12 y 29/12.",
+    "Diego, por 1/6 km": "Inviertes la comparación y calculas mal la diferencia."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

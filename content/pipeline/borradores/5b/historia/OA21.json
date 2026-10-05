@@ -1,0 +1,264 @@
+{
+ "oa": "OA21",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "Después de cada recreo, el patio queda con envoltorios en el suelo. ¿Qué solución ayudaría mejor a prevenir el problema y mantenerlo limpio?",
+   "options": [
+    "Instalar basureros rotulados y acordar cómo usarlos",
+    "Dejar que solo los auxiliares limpien el patio",
+    "Poner un basurero grande y vaciarlo una vez al mes",
+    "Prohibir que lleves colación durante los recreos"
+   ],
+   "correct": "Instalar basureros rotulados y acordar cómo usarlos",
+   "hint": "Previene que los residuos queden en el suelo y compromete a quienes usan el patio.",
+   "clue": "Busca una medida que prevenga el problema y pueda mantenerse con participación.",
+   "option_notes": {
+    "Poner un basurero grande y vaciarlo una vez al mes": "No evita que se bote basura y la limpieza sería muy poco frecuente.",
+    "Dejar que solo los auxiliares limpien el patio": "Traslada toda la responsabilidad y no cambia la conducta del curso.",
+    "Prohibir que lleves colación durante los recreos": "Elimina la colación en vez de resolver el manejo de residuos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "En un huerto escolar del Norte Chico, el agua es escasa. ¿Qué solución permite regar las plantas usando menos agua?",
+   "options": [
+    "Regar al mediodía con una manguera abierta",
+    "Usar riego por goteo y revisar las mangueras",
+    "Inundar el huerto una vez por semana",
+    "Regar solo cuando las plantas ya estén marchitas"
+   ],
+   "correct": "Usar riego por goteo y revisar las mangueras",
+   "hint": "El goteo entrega agua cerca de las raíces y revisar fugas evita perderla.",
+   "clue": "Busca la opción que entregue el agua de manera controlada y evite pérdidas.",
+   "option_notes": {
+    "Regar al mediodía con una manguera abierta": "El calor aumenta la evaporación y la manguera desperdicia agua.",
+    "Inundar el huerto una vez por semana": "El exceso de agua puede perderse y no se entrega de manera controlada.",
+    "Regar solo cuando las plantas ya estén marchitas": "Esperar a que se marchiten daña las plantas y no ahorra de forma segura."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "En la biblioteca de tu escuela casi no hay libros sobre la historia de la comuna. ¿Qué solución ayuda mejor a reunir información confiable?",
+   "options": [
+    "Pedir a cada estudiante que invente un relato sobre la comuna",
+    "Esperar que llegue un libro nuevo sin realizar ninguna acción",
+    "Copiar datos de cualquier publicación que aparezca en internet",
+    "Entrevistar a vecinos y revisar documentos del museo local"
+   ],
+   "correct": "Entrevistar a vecinos y revisar documentos del museo local",
+   "hint": "Combina testimonios locales con documentos que permiten comprobar la información.",
+   "clue": "Considera una solución activa que use más de una fuente.",
+   "option_notes": {
+    "Copiar datos de cualquier publicación que aparezca en internet": "Confunde encontrar una publicación con comprobar que sea confiable.",
+    "Pedir a cada estudiante que invente un relato sobre la comuna": "Invita a inventar datos y no permite conocer la historia real.",
+    "Esperar que llegue un libro nuevo sin realizar ninguna acción": "No propone una acción para resolver la falta de información."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "En tu escuela, varias personas dejan las llaves abiertas después de lavarse las manos. ¿Cuál es la mejor solución para reducir ese desperdicio?",
+   "options": [
+    "Poner un aviso claro junto a cada llave y revisar si se cierran",
+    "Pedir que solo una persona use los baños",
+    "Cerrar el baño durante toda la jornada escolar",
+    "Usar más agua para limpiar los lavamanos cada tarde"
+   ],
+   "correct": "Poner un aviso claro junto a cada llave y revisar si se cierran",
+   "hint": "El aviso recuerda la conducta y la revisión permite saber si la medida funciona.",
+   "clue": "Elige una acción que prevenga el desperdicio sin impedir el uso del baño.",
+   "option_notes": {
+    "Cerrar el baño durante toda la jornada escolar": "Evita el desperdicio cerrando el baño, pero impide una necesidad básica.",
+    "Usar más agua para limpiar los lavamanos cada tarde": "Aumenta el consumo de agua y no cambia la conducta de quienes usan las llaves.",
+    "Pedir que solo una persona use los baños": "Restringe el uso del baño, pero no corrige las llaves abiertas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "El kiosco de la escuela produce muchos envases desechables. El curso busca reducirlos sin dejar de ofrecer bebidas. ¿Cuál propuesta conviene más?",
+   "options": [
+    "Retirar las bebidas del kiosco y dejar solo alimentos secos",
+    "Repartir un afiche y mantener los mismos envases",
+    "Ofrecer bebidas en envases retornables y organizar su devolución",
+    "Juntar los envases usados y guardarlos sin fecha de retiro"
+   ],
+   "correct": "Ofrecer bebidas en envases retornables y organizar su devolución",
+   "hint": "Reduce residuos desde la compra y agrega una forma concreta de recuperar los envases.",
+   "clue": "Busca una opción que reduzca el desecho y tenga un procedimiento continuo.",
+   "option_notes": {
+    "Repartir un afiche y mantener los mismos envases": "Informa, pero no cambia la cantidad de envases que se botan.",
+    "Juntar los envases usados y guardarlos sin fecha de retiro": "Acumula residuos sin resolver su retiro ni su reutilización.",
+    "Retirar las bebidas del kiosco y dejar solo alimentos secos": "Elimina una oferta en vez de mejorar el manejo de envases."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "Tu curso tiene $24.000 para mejorar un sendero del patio. Quiere evitar resbalones y que la mejora dure. ¿Qué opción se ajusta al presupuesto y cumple ambos objetivos?",
+   "options": [
+    "Instalar baldosas antideslizantes por $22.000 en la zona húmeda",
+    "Comprar una alfombra por $30.000 para cubrir todo el sendero",
+    "Comprar señalética por $10.000 y no reparar el piso",
+    "Pedir que nadie use el sendero durante todo el año"
+   ],
+   "correct": "Instalar baldosas antideslizantes por $22.000 en la zona húmeda",
+   "hint": "Cuesta menos que el presupuesto y mejora de forma duradera la superficie donde ocurren los resbalones.",
+   "clue": "Primero revisa el precio; luego comprueba si resuelve ambos objetivos.",
+   "option_notes": {
+    "Comprar señalética por $10.000 y no reparar el piso": "Advierte del peligro, pero deja la superficie resbalosa.",
+    "Comprar una alfombra por $30.000 para cubrir todo el sendero": "Supera el presupuesto y una alfombra puede moverse o deteriorarse.",
+    "Pedir que nadie use el sendero durante todo el año": "Evita el uso, pero no mejora el sendero ni ofrece una solución permanente."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "En una escuela de la Zona Sur, muchas personas esperan la locomoción bajo la lluvia. Hay espacio y materiales para construir una estructura fija. ¿Qué solución responde mejor al problema?",
+   "options": [
+    "Cambiar el horario de clases cada vez que llueva",
+    "Pedir que llegues más temprano y esperes en la calle",
+    "Poner una sombrilla pequeña que se guarde después de cada recreo",
+    "Instalar techo, canaleta y piso antideslizante en la entrada"
+   ],
+   "correct": "Instalar techo, canaleta y piso antideslizante en la entrada",
+   "hint": "El techo protege de la lluvia y la canaleta y el piso hacen más seguro el lugar.",
+   "clue": "Considera una medida permanente que proteja de la lluvia y evite otro riesgo.",
+   "option_notes": {
+    "Poner una sombrilla pequeña que se guarde después de cada recreo": "Es temporal y pequeña; no protege bien a todas las personas.",
+    "Cambiar el horario de clases cada vez que llueva": "Cambia horarios, pero no resuelve la espera bajo la lluvia.",
+    "Pedir que llegues más temprano y esperes en la calle": "Traslada el problema a la calle y no mejora la protección."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "En una plaza de la Zona Central falta sombra y el lugar queda con basura. El proyecto debe dar sombra a futuro y mantenerlo limpio. ¿Qué propuesta elegirías?",
+   "options": [
+    "Pintar un mural que recuerde cuidar la plaza",
+    "Limpiar la plaza una vez y esperar que el problema no vuelva",
+    "Plantar árboles adecuados y organizar turnos de riego y limpieza",
+    "Plantar cualquier árbol y dejarlo sin riego"
+   ],
+   "correct": "Plantar árboles adecuados y organizar turnos de riego y limpieza",
+   "hint": "Combina una medida que crea sombra con una organización para que el cuidado continúe.",
+   "clue": "Busca una propuesta que atienda los dos problemas y pueda sostenerse en el tiempo.",
+   "option_notes": {
+    "Pintar un mural que recuerde cuidar la plaza": "Aporta un mensaje, pero no crea sombra ni asegura la limpieza.",
+    "Plantar cualquier árbol y dejarlo sin riego": "Sin elegir ni cuidar los árboles, podrían morir antes de dar sombra.",
+    "Limpiar la plaza una vez y esperar que el problema no vuelva": "Resuelve la basura solo por un momento y no crea sombra."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "En una plaza del Norte Chico, la comunidad quiere más sombra para niños y personas mayores, pero dispone de $90.000 y poca agua. ¿Cuál propuesta cumple mejor esas condiciones?",
+   "options": [
+    "Pasto para toda la plaza y riego diario: $85.000",
+    "Techo liviano, bancas y plantas de bajo riego: $80.000",
+    "Fuente ornamental y bancas: $90.000",
+    "Diez árboles sin riego planificado: $60.000"
+   ],
+   "correct": "Techo liviano, bancas y plantas de bajo riego: $80.000",
+   "hint": "Cumple las dos necesidades, cabe en el presupuesto y considera la escasez de agua.",
+   "clue": "Compara cada propuesta con las tres condiciones del proyecto.",
+   "option_notes": {
+    "Pasto para toda la plaza y riego diario: $85.000": "Cabe en el presupuesto, pero exige mucha agua y no la usa eficientemente.",
+    "Fuente ornamental y bancas: $90.000": "Usa todo el presupuesto, pero no entrega sombra para quienes la necesitan.",
+    "Diez árboles sin riego planificado: $60.000": "Cuesta menos, pero sin riego planificado los árboles podrían no crecer."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "Un antiguo edificio ferroviario de una comuna tiene valor histórico y el techo deja entrar lluvia. El proyecto busca conservarlo y usarlo para talleres. ¿Qué solución evalúa mejor ambos objetivos?",
+   "options": [
+    "Demolerlo y construir una sala nueva con el mismo nombre",
+    "Reparar techo, conservar la estructura y hacer talleres seguros",
+    "Dejarlo cerrado para siempre y no realizar ninguna reparación",
+    "Pintarlo por fuera y usarlo sin revisar su seguridad"
+   ],
+   "correct": "Reparar techo, conservar la estructura y hacer talleres seguros",
+   "hint": "Protege el edificio histórico, soluciona la filtración y permite un uso comunitario seguro.",
+   "clue": "Una buena solución debe cuidar el patrimonio y permitir un uso seguro.",
+   "option_notes": {
+    "Pintarlo por fuera y usarlo sin revisar su seguridad": "Mejora su aspecto, pero no detiene la lluvia ni comprueba la seguridad.",
+    "Demolerlo y construir una sala nueva con el mismo nombre": "Cambia el edificio y pierde la construcción histórica que se quería conservar.",
+    "Dejarlo cerrado para siempre y no realizar ninguna reparación": "Evita riesgos de uso, pero deja avanzar el daño y no cumple el proyecto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "Una escuela de la Zona Sur está cerca de un río. En invierno puede subir el agua. El proyecto debe proteger a estudiantes, usar recursos simples y permitir responder rápido. ¿Cuál plan elegirías?",
+   "options": [
+    "Construir un muro enorme sin estudiar el terreno ni practicar",
+    "Poner carteles en salas y mantener las rutas habituales",
+    "Marcar rutas a zonas altas, practicar evacuación y guardar mochilas",
+    "Suspender las clases durante todo el invierno"
+   ],
+   "correct": "Marcar rutas a zonas altas, practicar evacuación y guardar mochilas",
+   "hint": "Combina prevención, práctica y recursos básicos, por lo que prepara una respuesta rápida sin cerrar la escuela.",
+   "clue": "Busca una medida que funcione antes y durante una emergencia, con recursos sencillos.",
+   "option_notes": {
+    "Construir un muro enorme sin estudiar el terreno ni practicar": "Puede ser costoso y no garantiza una respuesta si nadie practica.",
+    "Suspender las clases durante todo el invierno": "Reduce la exposición, pero impide aprender y funcionar durante meses.",
+    "Poner carteles en salas y mantener las rutas habituales": "Informa, pero conserva rutas que podrían ser peligrosas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "En una plaza, el camino se llena de barro y algunas personas no pueden llegar a los juegos. El proyecto puede mejorar el camino o plantar flores. ¿Qué decisión está mejor justificada?",
+   "options": [
+    "Cerrar los juegos: así nadie cruzará el barro",
+    "Plantar flores: son más importantes que mejorar los caminos",
+    "No hacer nada: el barro desaparecerá cuando llueva menos",
+    "Mejorar el camino: permite acceso seguro y después plantar flores"
+   ],
+   "correct": "Mejorar el camino: permite acceso seguro y después plantar flores",
+   "hint": "Prioriza el acceso seguro para más personas y deja abierta la posibilidad de mejorar también el entorno.",
+   "clue": "Considera qué problema impide usar la plaza y a quiénes afecta.",
+   "option_notes": {
+    "Plantar flores: son más importantes que mejorar los caminos": "Prefiere decorar, pero no resuelve la dificultad para llegar a los juegos.",
+    "No hacer nada: el barro desaparecerá cuando llueva menos": "Espera que el problema desaparezca y no propone una acción.",
+    "Cerrar los juegos: así nadie cruzará el barro": "Evita el barro cerrando el lugar, pero impide su uso."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

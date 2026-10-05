@@ -1,0 +1,264 @@
+{
+ "oa": "OA8",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "En una fotografía aparece la Casa Colorada de Santiago, con muros de adobe y fachada roja. ¿Qué tipo de patrimonio reconoces?",
+   "options": [
+    "Una costumbre del patrimonio colonial",
+    "Una obra de arte del patrimonio colonial",
+    "Un paisaje natural protegido de Chile",
+    "Un edificio del patrimonio colonial"
+   ],
+   "correct": "Un edificio del patrimonio colonial",
+   "hint": "La Casa Colorada es una construcción de la época colonial que todavía se conserva en Santiago.",
+   "clue": "Fíjate si la imagen muestra una construcción, una obra, una costumbre o un paisaje.",
+   "option_notes": {
+    "Una costumbre del patrimonio colonial": "Confunde un lugar construido con una práctica que se repite.",
+    "Una obra de arte del patrimonio colonial": "Confunde una casa histórica con una creación artística.",
+    "Un paisaje natural protegido de Chile": "Confunde una construcción histórica con un paisaje natural."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "¿Cuál ejemplo es una obra de arte colonial que aún puede encontrarse en Chile?",
+   "options": [
+    "Una fotografía satelital de la cordillera",
+    "Una escultura de acero contemporánea",
+    "Una pintura religiosa creada en la época colonial",
+    "Un mural digital diseñado recientemente"
+   ],
+   "correct": "Una pintura religiosa creada en la época colonial",
+   "hint": "Una pintura religiosa creada durante la colonia es una obra de arte, aunque se exhiba en una iglesia.",
+   "clue": "Busca una creación artística antigua, no una tecnología ni un paisaje.",
+   "option_notes": {
+    "Un mural digital diseñado recientemente": "Confunde una obra digital reciente con arte de la colonia.",
+    "Una fotografía satelital de la cordillera": "Confunde una imagen geográfica con una obra artística.",
+    "Una escultura de acero contemporánea": "Confunde una escultura contemporánea con una pieza colonial."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "¿Qué práctica que todavía se realiza en Chile puede ser una costumbre heredada de la época colonial?",
+   "options": [
+    "Usar una tarjeta para pagar",
+    "Participar en una procesión religiosa",
+    "Enviar mensajes por una aplicación",
+    "Ver una transmisión por internet"
+   ],
+   "correct": "Participar en una procesión religiosa",
+   "hint": "Las procesiones religiosas se realizaban en la colonia y algunas continúan como prácticas comunitarias.",
+   "clue": "Piensa en una práctica comunitaria que se repite en calles o plazas.",
+   "option_notes": {
+    "Enviar mensajes por una aplicación": "Elige una práctica propia de la tecnología actual.",
+    "Usar una tarjeta para pagar": "Confunde una forma moderna de pago con una tradición.",
+    "Ver una transmisión por internet": "Confunde una actividad reciente con una costumbre histórica."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "En Historia, ¿qué significa decir que un elemento es patrimonio colonial de Chile?",
+   "options": [
+    "Que fue creado hace poco y es famoso",
+    "Que tiene origen colonial y sigue presente",
+    "Que existe únicamente en libros antiguos",
+    "Que pertenece solo a la naturaleza"
+   ],
+   "correct": "Que tiene origen colonial y sigue presente",
+   "hint": "El patrimonio colonial reúne elementos nacidos en esa época que todavía podemos observar o practicar.",
+   "clue": "Busca algo que nació en la colonia y aún podemos encontrar o practicar.",
+   "option_notes": {
+    "Que fue creado hace poco y es famoso": "Confunde patrimonio colonial con algo creado recientemente.",
+    "Que pertenece solo a la naturaleza": "Confunde patrimonio cultural con patrimonio natural.",
+    "Que existe únicamente en libros antiguos": "Cree que el patrimonio solo existe en documentos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Debes elegir una foto que muestre un edificio colonial aún presente. ¿Cuál descripción cumple mejor?",
+   "options": [
+    "Una casa de adobe de la colonia, conservada y abierta al público",
+    "Un centro comercial de vidrio, de construcción reciente",
+    "Un bosque nativo, sin construcciones históricas",
+    "Un puente de hormigón, de construcción reciente"
+   ],
+   "correct": "Una casa de adobe de la colonia, conservada y abierta al público",
+   "hint": "Debe ser una construcción humana vinculada con la colonia y que todavía pueda verse.",
+   "clue": "Busca una construcción antigua que todavía pueda observarse.",
+   "option_notes": {
+    "Un centro comercial de vidrio, de construcción reciente": "Confunde una construcción actual con un edificio colonial.",
+    "Un puente de hormigón, de construcción reciente": "Confunde infraestructura reciente con patrimonio colonial.",
+    "Un bosque nativo, sin construcciones históricas": "Confunde naturaleza protegida con patrimonio construido."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "En Santiago, una casa construida en la colonia ahora se usa como museo. Un compañero dice que por eso ya no es patrimonio colonial. ¿Qué respuesta demuestra mejor comprensión?",
+   "options": [
+    "Un edificio deja de ser histórico al cambiar de uso",
+    "Todo museo contiene solo obras coloniales",
+    "Su uso cambió, pero conserva su origen colonial",
+    "Al ser museo, se transformó en una costumbre"
+   ],
+   "correct": "Su uso cambió, pero conserva su origen colonial",
+   "hint": "El uso actual puede cambiar, pero no borra que el edificio fue construido durante la colonia.",
+   "clue": "El uso que tiene un edificio no determina cuándo fue construido.",
+   "option_notes": {
+    "Al ser museo, se transformó en una costumbre": "Confunde un museo, que es un lugar, con una costumbre.",
+    "Todo museo contiene solo obras coloniales": "Generaliza y cree que todo museo guarda piezas coloniales.",
+    "Un edificio deja de ser histórico al cambiar de uso": "Cree que cambiar el uso borra la historia del edificio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "En la Zona Sur visitas la Iglesia de Achao, en Chiloé. La guía indica que fue construida durante la colonia y aún se conserva. ¿Qué conclusión puedes escribir?",
+   "options": [
+    "Es un edificio colonial que permanece presente",
+    "Es un paisaje natural porque está en una isla",
+    "Es una costumbre colonial porque reúne personas",
+    "Es una obra artística porque tiene madera"
+   ],
+   "correct": "Es un edificio colonial que permanece presente",
+   "hint": "La Iglesia de Achao es una construcción religiosa de Chiloé, Zona Sur, levantada durante la colonia.",
+   "clue": "Distingue un lugar construido por personas de una práctica, una obra o un paisaje.",
+   "option_notes": {
+    "Es una costumbre colonial porque reúne personas": "Confunde un edificio visitable con una práctica repetida.",
+    "Es una obra artística porque tiene madera": "Confunde una iglesia con una creación artística aislada.",
+    "Es un paisaje natural porque está en una isla": "Confunde patrimonio cultural con naturaleza sin construcciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Lee la ficha: «Imagen de madera policromada, creada en la colonia y conservada en un museo». ¿Qué aspecto permite clasificarla como patrimonio colonial?",
+   "options": [
+    "Parece una fotografía por sus detalles",
+    "Está en un museo construido hace pocos años",
+    "Fue creada en la colonia y se conserva actualmente",
+    "Tiene colores intensos, aunque es reciente"
+   ],
+   "correct": "Fue creada en la colonia y se conserva actualmente",
+   "hint": "La pieza pertenece a la colonia y sigue existiendo; esas dos ideas permiten reconocerla como patrimonio.",
+   "clue": "Fíjate en cuándo se creó la pieza y si todavía se conserva.",
+   "option_notes": {
+    "Tiene colores intensos, aunque es reciente": "Cree que los colores bastan, aunque la pieza sea reciente.",
+    "Está en un museo construido hace pocos años": "Confunde la antigüedad del edificio con la de la imagen.",
+    "Parece una fotografía por sus detalles": "Confunde una imagen religiosa con una fotografía."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Una pintura de un santo está en un museo moderno y tiene un marco nuevo. Su ficha indica que fue creada en la colonia. ¿Qué debes concluir?",
+   "options": [
+    "Es un edificio colonial por pertenecer al museo",
+    "Es una costumbre colonial porque representa una creencia",
+    "Es moderna porque está en un museo nuevo",
+    "Es una obra de arte colonial que sigue presente"
+   ],
+   "correct": "Es una obra de arte colonial que sigue presente",
+   "hint": "El museo y el marco pueden ser nuevos; lo decisivo es el origen colonial de la pintura y su permanencia.",
+   "clue": "Separa la antigüedad de la pintura del lugar y del marco donde la ves.",
+   "option_notes": {
+    "Es moderna porque está en un museo nuevo": "Confunde el museo actual con la época en que se creó la pintura.",
+    "Es un edificio colonial por pertenecer al museo": "Confunde la obra expuesta con el edificio que la contiene.",
+    "Es una costumbre colonial porque representa una creencia": "Confunde un tema religioso con una práctica o tradición."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Dos estudiantes observan una iglesia de Chiloé. Una dice «es colonial porque es vieja»; la otra revisa una ficha que confirma su construcción colonial y uso actual. ¿Quién fundamenta mejor?",
+   "options": [
+    "La primera, porque toda construcción vieja es colonial",
+    "La primera, porque Chiloé solo tiene paisajes naturales",
+    "Ninguna, porque las iglesias no son patrimonio",
+    "La segunda, porque usa origen y permanencia"
+   ],
+   "correct": "La segunda, porque usa origen y permanencia",
+   "hint": "La identificación se apoya en datos del período de origen y en que el elemento sigue presente.",
+   "clue": "No basta con que algo sea viejo: busca datos que confirmen su origen.",
+   "option_notes": {
+    "La primera, porque toda construcción vieja es colonial": "Cree que ser viejo basta para demostrar un origen colonial.",
+    "Ninguna, porque las iglesias no son patrimonio": "Niega que un edificio religioso pueda ser patrimonio.",
+    "La primera, porque Chiloé solo tiene paisajes naturales": "Reduce Chiloé a su naturaleza e ignora su patrimonio cultural."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Una procesión actual usa amplificadores y cambia su recorrido por el tráfico, pero mantiene la imagen religiosa y la celebración anual. ¿Qué inferencia corresponde?",
+   "options": [
+    "Es una actividad natural sin relación con la historia",
+    "Puede conservar una costumbre colonial adaptada",
+    "Se transformó en una obra de arte colonial",
+    "Dejó de ser patrimonio por cambiar algunos detalles"
+   ],
+   "correct": "Puede conservar una costumbre colonial adaptada",
+   "hint": "Cambiar la forma no elimina la continuidad si la práctica y su sentido principal se mantienen.",
+   "clue": "Compara los cambios actuales con lo que la comunidad todavía mantiene.",
+   "option_notes": {
+    "Dejó de ser patrimonio por cambiar algunos detalles": "Piensa que una tradición debe mantenerse exactamente igual.",
+    "Se transformó en una obra de arte colonial": "Confunde una práctica repetida con un objeto artístico.",
+    "Es una actividad natural sin relación con la historia": "Confunde una actividad cultural con un elemento natural."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Tu equipo observa: un puente de hormigón reciente, una casa de adobe de la colonia usada como biblioteca, un bosque nativo y un mural nuevo. ¿Qué registrarías como patrimonio colonial?",
+   "options": [
+    "La casa de adobe, porque conserva origen colonial y uso actual",
+    "El mural, porque está en un espacio público",
+    "El puente, porque toda obra grande es patrimonio",
+    "El bosque, porque todo lo antiguo es colonial"
+   ],
+   "correct": "La casa de adobe, porque conserva origen colonial y uso actual",
+   "hint": "La casa reúne el origen colonial y la permanencia actual; los otros elementos no cumplen ambos criterios.",
+   "clue": "Revisa el origen del elemento y si todavía forma parte del entorno.",
+   "option_notes": {
+    "El puente, porque toda obra grande es patrimonio": "Confunde el tamaño de una obra con su origen histórico.",
+    "El bosque, porque todo lo antiguo es colonial": "Confunde un espacio natural con patrimonio colonial.",
+    "El mural, porque está en un espacio público": "Confunde un mural público reciente con una obra colonial."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

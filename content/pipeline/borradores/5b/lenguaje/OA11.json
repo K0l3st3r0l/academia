@@ -1,0 +1,264 @@
+{
+ "oa": "OA11",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "Para investigar qué come el pudú chileno, ¿qué búsqueda en internet es más precisa?",
+   "options": [
+    "Bosques húmedos de Chile",
+    "Mamíferos pequeños de Chile",
+    "Animales nativos de Chile",
+    "Pudú chileno: alimentación"
+   ],
+   "correct": "Pudú chileno: alimentación",
+   "hint": "Incluye el animal y el aspecto exacto que necesitas conocer.",
+   "clue": "Busca palabras que nombren el tema y la información que necesitas.",
+   "option_notes": {
+    "Animales nativos de Chile": "Es demasiado amplio y no indica qué aspecto quieres conocer.",
+    "Bosques húmedos de Chile": "Nombra un ambiente, pero no el animal ni lo que quieres saber.",
+    "Mamíferos pequeños de Chile": "Incluye muchos animales y no señala la alimentación del pudú."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "Para ubicar en un mapa las regiones donde vive el huemul, ¿qué fuente te ayuda más?",
+   "options": [
+    "Una revista de recetas",
+    "Un diario deportivo",
+    "Un diccionario escolar",
+    "Un atlas de fauna chilena"
+   ],
+   "correct": "Un atlas de fauna chilena",
+   "hint": "Un atlas presenta mapas que permiten ubicar regiones y lugares.",
+   "clue": "Piensa en la fuente que representa lugares y regiones mediante mapas.",
+   "option_notes": {
+    "Un diccionario escolar": "Define palabras, pero no suele mostrar distribución en mapas.",
+    "Un diario deportivo": "Informa sobre deportes, no sobre la ubicación de animales.",
+    "Una revista de recetas": "Presenta preparaciones, no mapas de distribución animal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "En una enciclopedia buscas información sobre volcanes. ¿Qué parte te ayuda a encontrar la entrada rápidamente?",
+   "options": [
+    "La portada del libro",
+    "El índice alfabético",
+    "La dedicatoria inicial",
+    "La última ilustración"
+   ],
+   "correct": "El índice alfabético",
+   "hint": "El índice ordena los temas y señala en qué página aparece cada uno.",
+   "clue": "Busca la sección que organiza los temas y sus páginas.",
+   "option_notes": {
+    "La portada del libro": "Muestra el título, pero no indica dónde está cada tema.",
+    "La dedicatoria inicial": "Presenta un mensaje, no una lista de contenidos.",
+    "La última ilustración": "Puede decorar el libro, pero no ayuda a buscar una entrada."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "Investigas la alimentación del cóndor. ¿Cuál dato es el más relevante para tu investigación?",
+   "options": [
+    "Se alimenta principalmente de carroña.",
+    "Puede vivir durante varias décadas.",
+    "Tiene alas muy grandes y fuertes.",
+    "Habita principalmente zonas montañosas."
+   ],
+   "correct": "Se alimenta principalmente de carroña.",
+   "hint": "La pregunta guía pide saber qué come; la carroña responde directamente.",
+   "clue": "Elige el dato que responde directamente a qué come.",
+   "option_notes": {
+    "Puede vivir durante varias décadas.": "Confunde la alimentación con la duración de vida.",
+    "Tiene alas muy grandes y fuertes.": "Describe una característica física, no su dieta.",
+    "Habita principalmente zonas montañosas.": "Indica dónde vive, no qué come."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Tu tema es cómo ahorrar agua en la escuela. ¿Qué búsqueda te daría resultados más útiles para iniciar?",
+   "options": [
+    "Actividades escolares sobre animales de Chile",
+    "Medidas de ahorro de energía en escuelas de Chile",
+    "Medidas de ahorro de agua en escuelas de Chile",
+    "Causas de la contaminación del agua en Chile"
+   ],
+   "correct": "Medidas de ahorro de agua en escuelas de Chile",
+   "hint": "Combina la acción, el recurso y el lugar de tu pregunta de investigación.",
+   "clue": "Una buena búsqueda usa palabras del tema y de la pregunta.",
+   "option_notes": {
+    "Medidas de ahorro de energía en escuelas de Chile": "Cambia el agua por otro recurso.",
+    "Causas de la contaminación del agua en Chile": "Investiga contaminación, no ahorro de agua en escuelas.",
+    "Actividades escolares sobre animales de Chile": "Trata sobre animales y no sobre el uso del agua."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Quieres conocer hábitat, alimentación y tamaño de varias especies nativas. ¿Qué fuente se ajusta mejor?",
+   "options": [
+    "Una revista sobre manualidades",
+    "Un atlas con mapas políticos",
+    "Una enciclopedia de fauna chilena",
+    "Un diario con el pronóstico del tiempo"
+   ],
+   "correct": "Una enciclopedia de fauna chilena",
+   "hint": "Una enciclopedia reúne fichas con varios datos de muchas especies.",
+   "clue": "Elige una fuente que reúna información detallada de varias especies.",
+   "option_notes": {
+    "Un diario con el pronóstico del tiempo": "Entrega información meteorológica, no fichas de especies.",
+    "Una revista sobre manualidades": "Propone trabajos manuales, no datos sobre fauna.",
+    "Un atlas con mapas políticos": "Muestra territorios, pero no alimentación ni tamaño animal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Lees este fragmento: «El pudú vive en bosques húmedos. Sus crías nacen con manchas blancas. Mide cerca de 40 centímetros». Si investigas su hábitat, ¿qué dato anotas?",
+   "options": [
+    "Sus crías nacen con manchas blancas.",
+    "Mide cerca de 40 centímetros.",
+    "Se mueve principalmente durante la noche.",
+    "Vive en bosques húmedos."
+   ],
+   "correct": "Vive en bosques húmedos.",
+   "hint": "El hábitat es el lugar o ambiente donde vive un ser vivo.",
+   "clue": "Relaciona la pregunta «dónde vive» con una oración del fragmento.",
+   "option_notes": {
+    "Sus crías nacen con manchas blancas.": "Describe a las crías, pero no el lugar donde vive.",
+    "Mide cerca de 40 centímetros.": "Entrega un dato de tamaño, no de hábitat.",
+    "Se mueve principalmente durante la noche.": "Agrega una idea que no aparece en el fragmento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Investigas por qué ocurren los terremotos. ¿Qué resultado de búsqueda conviene abrir primero?",
+   "options": [
+    "Cómo preparar una mochila para viajar",
+    "¿Por qué ocurren los terremotos? | Enciclopedia",
+    "Los terremotos más recordados de Chile",
+    "Construye un sismógrafo con cartón"
+   ],
+   "correct": "¿Por qué ocurren los terremotos? | Enciclopedia",
+   "hint": "El primer título coincide directamente con la pregunta sobre la causa del fenómeno.",
+   "clue": "Busca el resultado cuyo título prometa responder tu pregunta exacta.",
+   "option_notes": {
+    "Los terremotos más recordados de Chile": "Se centra en hechos recordados, no en explicar sus causas.",
+    "Cómo preparar una mochila para viajar": "Trata sobre viajes y no sobre terremotos.",
+    "Construye un sismógrafo con cartón": "Explica una actividad, no por qué ocurren los terremotos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "Investigas cómo reducir residuos en el recreo. Encuentras una noticia sobre el problema y una guía con acciones. ¿Qué plan usa mejor ambas fuentes?",
+   "options": [
+    "Elegir la guía por sus consejos y omitir los datos que entrega.",
+    "Copiar solo la noticia, porque informa sobre un problema real.",
+    "Leer ambas, comparar datos y anotar los que respondan a la pregunta.",
+    "Anotar todo lo leído, aunque trate sobre otros residuos."
+   ],
+   "correct": "Leer ambas, comparar datos y anotar los que respondan a la pregunta.",
+   "hint": "Comparar fuentes ayuda a elegir datos relacionados y útiles para responder la pregunta.",
+   "clue": "Un buen plan considera lo que buscas y discrimina los datos que sí sirven.",
+   "option_notes": {
+    "Copiar solo la noticia, porque informa sobre un problema real.": "Usa una sola fuente y no selecciona acciones útiles.",
+    "Anotar todo lo leído, aunque trate sobre otros residuos.": "Incluye información que no responde al tema investigado.",
+    "Elegir la guía por sus consejos y omitir los datos que entrega.": "Descarta información útil y no compara las dos fuentes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "Un libro dice que el zorro culpeo pesa 6 kg y una página web dice 8 kg. ¿Qué haces antes de elegir un dato?",
+   "options": [
+    "Revisar autor y fecha, consultar otra fuente y comparar.",
+    "Usar el dato del libro sin revisar el tema de la página.",
+    "Escoger el número mayor, porque parece más completo.",
+    "Promediar ambos números y presentarlo como resultado."
+   ],
+   "correct": "Revisar autor y fecha, consultar otra fuente y comparar.",
+   "hint": "Si los datos difieren, comprueba su contexto y contrástalos con otra fuente.",
+   "clue": "Antes de elegir, averigua por qué pueden ser diferentes.",
+   "option_notes": {
+    "Escoger el número mayor, porque parece más completo.": "El tamaño del número no demuestra que sea correcto.",
+    "Usar el dato del libro sin revisar el tema de la página.": "Prefiere una fuente sin comprobar ninguna información.",
+    "Promediar ambos números y presentarlo como resultado.": "Inventa un dato que ninguna fuente entrega."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "Lee: «El quillay es nativo de Chile. Tiene hojas siempreverdes y, cuando crece, necesita poca agua. La plaza tiene bancas azules». Para investigar el árbol, ¿qué notas seleccionas?",
+   "options": [
+    "Hay una plaza, bancas azules y personas que caminan.",
+    "Es nativo, tiene hojas siempreverdes y necesita poca agua.",
+    "Tiene hojas siempreverdes, bancas azules y recibe muchas visitas.",
+    "Es nativo, tiene bancas azules y necesita poca agua."
+   ],
+   "correct": "Es nativo, tiene hojas siempreverdes y necesita poca agua.",
+   "hint": "Las tres ideas sobre el quillay responden al tema; las bancas describen la plaza.",
+   "clue": "Separa los datos del árbol de los datos del lugar donde está.",
+   "option_notes": {
+    "Es nativo, tiene bancas azules y necesita poca agua.": "Mezcla dos datos del árbol con un dato irrelevante de la plaza.",
+    "Tiene hojas siempreverdes, bancas azules y recibe muchas visitas.": "Incluye un dato de la plaza y otro que no aparece en el fragmento.",
+    "Hay una plaza, bancas azules y personas que caminan.": "Se concentra en la plaza y no entrega características del quillay."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "Pregunta: ¿Por qué conviene proteger el bosque esclerófilo? Fuente 1: almacena agua en el suelo. Fuente 2: es hogar del zorro culpeo y del picaflor. ¿Cuál conclusión está respaldada?",
+   "options": [
+    "Protegerlo ayuda a conservar agua y refugio para animales.",
+    "Protegerlo evita todos los incendios del país.",
+    "Protegerlo permite que crezcan animales en el océano.",
+    "Protegerlo sirve solo para aumentar el turismo."
+   ],
+   "correct": "Protegerlo ayuda a conservar agua y refugio para animales.",
+   "hint": "La conclusión reúne las dos ideas: cuidado del agua y hogar de fauna.",
+   "clue": "Busca una idea que pueda deducirse de ambos datos, sin exagerar.",
+   "option_notes": {
+    "Protegerlo sirve solo para aumentar el turismo.": "El turismo no aparece en las dos fuentes.",
+    "Protegerlo evita todos los incendios del país.": "Asegura un efecto total que las fuentes no respaldan.",
+    "Protegerlo permite que crezcan animales en el océano.": "No se relaciona con el bosque ni con los datos entregados."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,264 @@
+{
+ "oa": "OA7",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Lee el aviso: «La Dirección del Parque Nacional Conguillío informa que el sendero Sierra Nevada estará cerrado el sábado por mantención». ¿Quién emite el mensaje?",
+   "options": [
+    "Los vendedores de la entrada",
+    "La Dirección del Parque Nacional Conguillío",
+    "La municipalidad de la comuna",
+    "Los visitantes del parque"
+   ],
+   "correct": "La Dirección del Parque Nacional Conguillío",
+   "hint": "El emisor es la persona o institución que produce y comunica el aviso.",
+   "clue": "Busca la institución que aparece como responsable del aviso.",
+   "option_notes": {
+    "Los visitantes del parque": "Confunde a quienes reciben el aviso con quien lo emite.",
+    "Los vendedores de la entrada": "Supone que el personal de venta creó el aviso.",
+    "La municipalidad de la comuna": "Elige una autoridad cercana, pero no nombrada en el aviso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Lee: «Lava tus manos antes de cocinar. Usa agua y jabón durante 20 segundos». ¿Cuál es el propósito principal de este mensaje?",
+   "options": [
+    "Dar instrucciones para cuidar la higiene",
+    "Contar una experiencia de cocina",
+    "Invitar a comprar jabón líquido",
+    "Describir el origen del agua"
+   ],
+   "correct": "Dar instrucciones para cuidar la higiene",
+   "hint": "El mensaje busca orientar una conducta de higiene, no vender ni narrar.",
+   "clue": "Pregúntate qué acción espera provocar el mensaje.",
+   "option_notes": {
+    "Contar una experiencia de cocina": "Confunde una instrucción sanitaria con un relato personal.",
+    "Invitar a comprar jabón líquido": "Supone una venta, aunque el mensaje no ofrece ningún producto.",
+    "Describir el origen del agua": "Busca un dato que el mensaje no intenta explicar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "En un cartel de la biblioteca escolar se lee: «Recuerda devolver tus libros en la fecha indicada». ¿A quién se dirige principalmente?",
+   "options": [
+    "A las familias que venden textos",
+    "A los estudiantes con libros prestados",
+    "A los autores de los libros",
+    "Al personal que ordena estantes"
+   ],
+   "correct": "A los estudiantes con libros prestados",
+   "hint": "El recordatorio busca llegar a quienes tienen libros prestados y deben devolverlos.",
+   "clue": "Observa quién tendría libros que debe devolver.",
+   "option_notes": {
+    "A los autores de los libros": "Confunde a los autores con quienes deben devolver el libro.",
+    "A las familias que venden textos": "Inventa un rol comercial que no aparece en el cartel.",
+    "Al personal que ordena estantes": "Confunde al personal de la biblioteca con sus usuarios."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Lee: «En la feria de ciencias habrá una exposición sobre volcanes el viernes a las 15:00 en la Escuela Gabriela Mistral». ¿El texto basta para saber dónde será?",
+   "options": [
+    "No, porque no explica los volcanes",
+    "Sí, porque indica la escuela",
+    "Sí, porque informa quién expondrá",
+    "No, porque no señala el valor de entrada"
+   ],
+   "correct": "Sí, porque indica la escuela",
+   "hint": "Para saber dónde será, basta con ubicar el lugar mencionado: la Escuela Gabriela Mistral.",
+   "clue": "Busca un dato que responda directamente a «¿dónde?»",
+   "option_notes": {
+    "No, porque no explica los volcanes": "El texto no necesita explicar el tema para indicar el lugar.",
+    "Sí, porque informa quién expondrá": "Supone un expositor que el aviso no menciona.",
+    "No, porque no señala el valor de entrada": "Pide un precio, pero la pregunta solo requiere ubicar el evento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Lee: «La Oficina de Medio Ambiente de la Municipalidad de Rancagua invita: este sábado plantaremos quillayes en la plaza. Inscríbete en la oficina». ¿Qué opción identifica emisor y propósito?",
+   "options": [
+    "Una escuela; informar sobre una prueba de Ciencias",
+    "Un grupo de vecinos; contar una plantación pasada",
+    "Un vivero; vender árboles para el hogar",
+    "La municipalidad; invitar a participar en una plantación"
+   ],
+   "correct": "La municipalidad; invitar a participar en una plantación",
+   "hint": "La oficina municipal produce el aviso y busca que las personas se sumen a la plantación.",
+   "clue": "Señala quién anuncia y qué acción pide al lector.",
+   "option_notes": {
+    "Una escuela; informar sobre una prueba de Ciencias": "Confunde una invitación municipal con una actividad escolar.",
+    "Un vivero; vender árboles para el hogar": "Interpreta la plantación como una venta de árboles.",
+    "Un grupo de vecinos; contar una plantación pasada": "Toma una actividad futura como si ya hubiera ocurrido."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Lee: «Para preparar sopaipillas, mezcla harina, zapallo cocido, sal y agua. Amasa y fríe con ayuda de un adulto». ¿A quién se dirige y para qué se escribió?",
+   "options": [
+    "A quienes venden sopaipillas; anunciar una oferta",
+    "A los agricultores; explicar cómo plantar zapallos",
+    "A quienes quieren cocinar; enseñar una preparación",
+    "A los clientes de un restaurante; contar su historia"
+   ],
+   "correct": "A quienes quieren cocinar; enseñar una preparación",
+   "hint": "Los pasos muestran que el texto enseña a preparar sopaipillas a quien quiera cocinarlas.",
+   "clue": "Fíjate en los pasos y en la acción que el texto propone realizar.",
+   "option_notes": {
+    "A quienes venden sopaipillas; anunciar una oferta": "Confunde una receta con un aviso comercial.",
+    "A los agricultores; explicar cómo plantar zapallos": "Relaciona los ingredientes con plantar, no con cocinar.",
+    "A los clientes de un restaurante; contar su historia": "Supone un relato, aunque el texto da instrucciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Lee: «El bus a Valparaíso sale a las 9:00 desde el Terminal Alameda y cuesta $8.000». Camila debe llegar antes de las 12:00. ¿Basta el aviso para decidir si le sirve?",
+   "options": [
+    "Sí, porque sale antes del mediodía",
+    "No, porque no menciona al conductor",
+    "No, porque falta saber cuánto dura el viaje",
+    "Sí, porque indica el precio del pasaje"
+   ],
+   "correct": "No, porque falta saber cuánto dura el viaje",
+   "hint": "Para saber si llegará antes de las 12:00, necesita la duración o la hora de llegada.",
+   "clue": "Compara el dato que necesita Camila con los datos que sí aparecen.",
+   "option_notes": {
+    "Sí, porque sale antes del mediodía": "Confunde la hora de salida con la hora de llegada.",
+    "Sí, porque indica el precio del pasaje": "El precio no permite calcular si llegará a tiempo.",
+    "No, porque no menciona al conductor": "El nombre del conductor no responde a la decisión de Camila."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Un correo dice: «Estimadas familias: recuerden enviar una botella reutilizable para la salida pedagógica. Atentamente, profesora Daniela». ¿Cuál interpretación es correcta?",
+   "options": [
+    "La profesora vende botellas para la salida",
+    "Las familias informan una actividad ya realizada",
+    "La profesora recuerda un material a las familias",
+    "Las familias invitan a la profesora a una salida"
+   ],
+   "correct": "La profesora recuerda un material a las familias",
+   "hint": "La firma muestra que la profesora escribe y «recuerden» indica que avisa a las familias.",
+   "clue": "Mira la firma y fíjate en la acción que pide el mensaje.",
+   "option_notes": {
+    "Las familias invitan a la profesora a una salida": "Invierte quién escribe y quién recibe el correo.",
+    "La profesora vende botellas para la salida": "Confunde recordar un objeto con venderlo.",
+    "Las familias informan una actividad ya realizada": "Trata una actividad futura como si ya hubiera terminado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Texto A: «La biblioteca del colegio ofrece novelas, poemas y cómics para préstamo». Texto B: «La Biblioteca Municipal de Ñuñoa atiende lunes a viernes, de 9:00 a 17:00». Tu pregunta: «¿Puedo pedir un cómic en la biblioteca municipal el viernes a las 16:00?»",
+   "options": [
+    "Falta confirmar que la biblioteca municipal tenga y preste cómics.",
+    "Sí, porque el aviso A dice que hay cómics.",
+    "Sí, porque el aviso B confirma que está abierta.",
+    "No, porque una biblioteca municipal no presta cómics."
+   ],
+   "correct": "Falta confirmar que la biblioteca municipal tenga y preste cómics.",
+   "hint": "A habla de otra biblioteca y B solo informa el horario; falta saber si allí tienen y prestan cómics.",
+   "clue": "Compara con cuidado a qué biblioteca se refiere cada texto.",
+   "option_notes": {
+    "Sí, porque el aviso A dice que hay cómics.": "Traslada los cómics de la biblioteca escolar a la municipal.",
+    "Sí, porque el aviso B confirma que está abierta.": "Confunde conocer el horario con saber qué materiales presta.",
+    "No, porque una biblioteca municipal no presta cómics.": "Generaliza sobre bibliotecas sin apoyo en los textos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Lee: «Campaña de la Agencia de Sostenibilidad Energética: apaga las luces que no uses y desenchufa los cargadores. Así ahorrarás energía en tu hogar». ¿Qué interpretación reúne emisor, propósito y destinatario?",
+   "options": [
+    "La agencia; motivar a las personas a ahorrar energía en casa",
+    "Una tienda; vender cargadores a sus clientes",
+    "Una escuela; enseñar a reparar ampolletas",
+    "Los hogares; informar cuánto gastan en electricidad"
+   ],
+   "correct": "La agencia; motivar a las personas a ahorrar energía en casa",
+   "hint": "La agencia firma la campaña, usa consejos para convencer y habla a quienes actúan en su hogar.",
+   "clue": "Une tres pistas: quién firma, qué acción propone y quién puede realizarla.",
+   "option_notes": {
+    "Una tienda; vender cargadores a sus clientes": "Cambia una campaña de ahorro por una venta de productos.",
+    "Los hogares; informar cuánto gastan en electricidad": "Confunde a quienes reciben el consejo con quienes lo emiten.",
+    "Una escuela; enseñar a reparar ampolletas": "Atribuye a la escuela un tema y una acción que no aparecen."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Lee: «¡No te pierdas la visita al Museo de Historia Natural! Será en junio y costará $3.500. Inscríbete pronto». La profesora quiere que las familias organicen la salida. ¿Cumple ese propósito?",
+   "options": [
+    "No, porque una visita debe ser gratuita",
+    "Sí, porque usa un mensaje entusiasta",
+    "Sí, porque nombra el museo y el precio",
+    "No, porque faltan el día exacto y el horario"
+   ],
+   "correct": "No, porque faltan el día exacto y el horario",
+   "hint": "Para organizarse, las familias necesitan saber exactamente cuándo asistir; «en junio» no indica día ni hora.",
+   "clue": "Pregunta qué datos concretos necesita una familia para planificar.",
+   "option_notes": {
+    "Sí, porque nombra el museo y el precio": "Confunde tener lugar y precio con contar con un horario completo.",
+    "Sí, porque usa un mensaje entusiasta": "Cree que el entusiasmo reemplaza los datos necesarios.",
+    "No, porque una visita debe ser gratuita": "Supone sin base que toda visita debe ser gratis."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Lee: «Publicidad de Bicicletas Andina: ¡Llega más lejos! Modelo juvenil, marco liviano, $89.990. Ven a probarlo». Tu hermano quiere saber si le quedará bien. ¿Qué evaluación es más precisa?",
+   "options": [
+    "Es una noticia; falta el nombre del periodista",
+    "Es una invitación escolar; falta la sala",
+    "Es una receta; falta la cantidad de ingredientes",
+    "Es publicidad; falta la talla o altura recomendada"
+   ],
+   "correct": "Es publicidad; falta la talla o altura recomendada",
+   "hint": "El aviso busca motivar una compra, pero no indica qué talla sirve para su estatura.",
+   "clue": "Identifica el propósito del aviso y luego revisa si entrega el dato que necesita.",
+   "option_notes": {
+    "Es una noticia; falta el nombre del periodista": "Confunde un aviso comercial con una noticia informativa.",
+    "Es una receta; falta la cantidad de ingredientes": "Busca datos de cocina en un texto sobre bicicletas.",
+    "Es una invitación escolar; falta la sala": "Confunde una compra con una actividad de la escuela."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,266 @@
+{
+ "oa": "OA16",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA16",
+   "difficulty": "easy",
+   "text": "El punto P tiene coordenadas (3, 5). ¿Dónde debes ubicarlo desde el origen?",
+   "options": [
+    "3 unidades a la izquierda y 5 hacia arriba",
+    "5 unidades a la derecha y 3 hacia arriba",
+    "3 unidades a la derecha y 5 hacia arriba",
+    "3 unidades a la derecha y 5 hacia abajo"
+   ],
+   "correct": "3 unidades a la derecha y 5 hacia arriba",
+   "hint": "La ubicación (3, 5) indica 3 unidades en horizontal y 5 en vertical.",
+   "clue": "Lee las coordenadas en orden y piensa en las direcciones del primer cuadrante.",
+   "option_notes": {
+    "5 unidades a la derecha y 3 hacia arriba": "Intercambia las coordenadas horizontal y vertical.",
+    "3 unidades a la izquierda y 5 hacia arriba": "Cambia la dirección derecha por izquierda.",
+    "3 unidades a la derecha y 5 hacia abajo": "Cambia la dirección arriba por abajo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "easy",
+   "text": "En un plano, A=(2, 4), B=(4, 2), C=(2, 2) y D=(4, 4). ¿Qué punto queda más arriba y más a la derecha?",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "correct": "D",
+   "hint": "D tiene la mayor coordenada horizontal y la mayor coordenada vertical.",
+   "clue": "Compara por separado qué punto llega más a la derecha y cuál más arriba.",
+   "option_notes": {
+    "A": "Está arriba, pero no es el más a la derecha.",
+    "B": "Está a la derecha, pero queda más abajo.",
+    "C": "Queda abajo y a la izquierda de D."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos puntos está en el primer cuadrante del plano cartesiano?",
+   "options": [
+    "(0, 3)",
+    "(4, 3)",
+    "(4, -3)",
+    "(-4, 3)"
+   ],
+   "correct": "(4, 3)",
+   "hint": "En el primer cuadrante, ambas coordenadas son positivas.",
+   "clue": "Revisa si el punto queda a la derecha y arriba del origen.",
+   "option_notes": {
+    "(0, 3)": "Está sobre el eje vertical, no dentro del cuadrante.",
+    "(-4, 3)": "Tiene dirección horizontal hacia la izquierda.",
+    "(4, -3)": "Tiene dirección vertical hacia abajo."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "easy",
+   "text": "En el plano están P=(2, 5), Q=(4, 1), R=(1, 3) y S=(5, 4). ¿Cuál queda más cerca del eje x?",
+   "options": [
+    "Q",
+    "R",
+    "P",
+    "S"
+   ],
+   "correct": "Q",
+   "hint": "La distancia al eje x se observa en la coordenada vertical; Q tiene 1.",
+   "clue": "Mira cuánto sube cada punto desde el eje x.",
+   "option_notes": {
+    "P": "Su coordenada vertical es 5, la más lejana al eje x.",
+    "R": "Su coordenada vertical es 3, mayor que la de Q.",
+    "S": "Su coordenada vertical es 4, mayor que la de Q."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "medium",
+   "text": "En el plano de un parque, el bebedero está en (2, 3). Desde allí avanzas 3 unidades a la derecha y 1 hacia arriba. ¿Dónde terminas?",
+   "options": [
+    "(5, 2)",
+    "(2, 4)",
+    "(3, 5)",
+    "(5, 4)"
+   ],
+   "correct": "(5, 4)",
+   "hint": "Suma 3 a 2 y 1 a 3: las coordenadas finales son (5, 4).",
+   "clue": "La derecha cambia la primera coordenada; arriba cambia la segunda.",
+   "option_notes": {
+    "(3, 5)": "Intercambia el avance horizontal con el vertical.",
+    "(5, 2)": "Suma 3 a la horizontal, pero baja en vez de subir.",
+    "(2, 4)": "Solo considera el avance vertical."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "medium",
+   "text": "El punto M está en (7, 5). Para llegar a N, muévete 2 unidades a la izquierda y 3 hacia abajo. ¿Qué coordenadas tiene N?",
+   "options": [
+    "(5, 2)",
+    "(9, 2)",
+    "(9, 8)",
+    "(5, 8)"
+   ],
+   "correct": "(5, 2)",
+   "hint": "Izquierda resta 2 y abajo resta 3: (7−2, 5−3)=(5, 2).",
+   "clue": "Desde M, ambos movimientos hacen que las coordenadas disminuyan.",
+   "option_notes": {
+    "(9, 8)": "Suma ambos movimientos en vez de restarlos.",
+    "(5, 8)": "Resta a la horizontal, pero suma en la vertical.",
+    "(9, 2)": "Suma en la horizontal, pero resta en la vertical."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "medium",
+   "text": "La araucaria está en (3, 6) y el pudú en (3, 2). ¿Cuántas unidades debes bajar para ir de la araucaria al pudú?",
+   "options": [
+    "3 unidades",
+    "2 unidades",
+    "4 unidades",
+    "8 unidades"
+   ],
+   "correct": "4 unidades",
+   "hint": "Las coordenadas horizontales coinciden; baja 6−2=4 unidades.",
+   "clue": "Compara solo las coordenadas verticales.",
+   "option_notes": {
+    "8 unidades": "Suma las alturas en vez de calcular la diferencia.",
+    "3 unidades": "Usa la coordenada horizontal en vez de la diferencia vertical.",
+    "2 unidades": "Mira solo la altura final del pudú."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "medium",
+   "text": "Para ir de A=(2, 4) a B=(5, 1), ¿qué movimiento debes hacer?",
+   "options": [
+    "7 unidades a la izquierda y 5 hacia arriba",
+    "3 unidades a la derecha y 3 hacia abajo",
+    "7 unidades a la derecha y 5 hacia abajo",
+    "3 unidades a la izquierda y 3 hacia arriba"
+   ],
+   "correct": "3 unidades a la derecha y 3 hacia abajo",
+   "hint": "De 2 a 5 avanzas 3; de 4 a 1 bajas 3.",
+   "clue": "Compara primero las coordenadas horizontales y luego las verticales.",
+   "option_notes": {
+    "3 unidades a la izquierda y 3 hacia arriba": "Invierte las direcciones de ambos movimientos.",
+    "7 unidades a la derecha y 5 hacia abajo": "Suma las coordenadas en vez de calcular sus diferencias.",
+    "7 unidades a la izquierda y 5 hacia arriba": "Suma coordenadas y además invierte las direcciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "hard",
+   "text": "Desde el punto A=(2, 2), avanzas 3 unidades a la derecha, 2 hacia arriba y 1 a la izquierda. ¿En qué punto terminas?",
+   "options": [
+    "(4, 4)",
+    "(6, 4)",
+    "(4, 2)",
+    "(0, 0)"
+   ],
+   "correct": "(4, 4)",
+   "hint": "Quedas en (2 + 3 − 1, 2 + 2) = (4, 4).",
+   "clue": "Calcula el cambio horizontal neto y el cambio vertical neto.",
+   "option_notes": {
+    "(6, 4)": "Olvida el último movimiento de 1 unidad a la izquierda.",
+    "(4, 2)": "Olvida las 2 unidades que sube.",
+    "(0, 0)": "Toma los tres movimientos como retrocesos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "hard",
+   "text": "Busca el punto que está 2 unidades a la derecha de (1, 4) y 3 unidades abajo de (3, 7). ¿Cuáles son sus coordenadas?",
+   "options": [
+    "(4, 3)",
+    "(5, 4)",
+    "(1, 7)",
+    "(3, 4)"
+   ],
+   "correct": "(3, 4)",
+   "hint": "Ambas pistas coinciden en x=3 e y=4: el punto es (3, 4).",
+   "clue": "Calcula cada pista por separado y busca el punto común.",
+   "option_notes": {
+    "(4, 3)": "Intercambia las coordenadas horizontal y vertical.",
+    "(1, 7)": "Sube 3 desde (1, 4) y no verifica la segunda pista.",
+    "(5, 4)": "Suma 2 a x=3 en vez de encontrar el punto común."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "hard",
+   "text": "A=(1, 2), B=(5, 2) y C=(5, 6) son vértices de un rectángulo con lados horizontales y verticales. ¿Dónde ubicas D para cerrarlo?",
+   "options": [
+    "(6, 1)",
+    "(1, 2)",
+    "(1, 6)",
+    "(5, 6)"
+   ],
+   "correct": "(1, 6)",
+   "hint": "D debe compartir x=1 con A e y=6 con C: (1, 6).",
+   "clue": "El vértice faltante combina la horizontal de A con la vertical de C.",
+   "option_notes": {
+    "(5, 6)": "Repite C en vez de buscar el vértice faltante.",
+    "(1, 2)": "Repite A en vez de completar el rectángulo.",
+    "(6, 1)": "Intercambia las coordenadas para ubicar la esquina."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "hard",
+   "text": "El cóndor está en (2, 6). El mirador queda 4 unidades a la derecha. Desde allí, la laguna está 3 unidades abajo y 1 a la izquierda. ¿Dónde está la laguna?",
+   "options": [
+    "(5, 9)",
+    "(5, 3)",
+    "(2, 3)",
+    "(7, 3)"
+   ],
+   "correct": "(5, 3)",
+   "hint": "Mirador: (6, 6); luego (6−1, 6−3)=(5, 3).",
+   "clue": "Actualiza las coordenadas después de cada tramo.",
+   "option_notes": {
+    "(7, 3)": "Baja 3, pero no resta 1 a la coordenada horizontal.",
+    "(5, 9)": "Resta a la horizontal, pero suma en vez de bajar.",
+    "(2, 3)": "Solo aplica el movimiento vertical y olvida los horizontales."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

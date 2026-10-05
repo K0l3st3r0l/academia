@@ -67,6 +67,7 @@ export default function RoundReport({ report }) {
                 {q.topWrong && q.topWrong.count > 1 && (
                   <p className="text-xs text-gray-400 mt-1">
                     {q.topWrong.count} de {q.answered} eligieron <span className="text-wrong">«{q.topWrong.answer}»</span>
+                    {q.topWrong.note && <span className="block text-gray-500 mt-0.5">Error probable: {q.topWrong.note}</span>}
                   </p>
                 )}
               </li>

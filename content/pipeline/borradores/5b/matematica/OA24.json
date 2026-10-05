@@ -1,0 +1,276 @@
+{
+ "oa": "OA24",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA24",
+   "difficulty": "easy",
+   "text": "En una caja hay 10 tarjetas: 9 dicen «Sol» y 1 dice «Lluvia». Sacas una sin mirar. ¿Qué tan posible es sacar «Lluvia»?",
+   "options": [
+    "Poco posible",
+    "Seguro",
+    "Imposible",
+    "Posible"
+   ],
+   "correct": "Poco posible",
+   "hint": "Solo 1 de las 10 tarjetas dice «Lluvia», por eso ese resultado tiene poca posibilidad de ocurrir.",
+   "clue": "Compara cuántas tarjetas favorecen cada resultado.",
+   "option_notes": {
+    "Seguro": "Confunde que sacarás una tarjeta con que necesariamente diga «Lluvia».",
+    "Posible": "Nota que puede salir, pero no considera que aparece en muy pocas tarjetas.",
+    "Imposible": "Cree que una tarjeta escasa no puede salir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "easy",
+   "text": "Se revuelven 5 tarjetas numeradas del 1 al 5 y sacas una. ¿Cuál evento es imposible?",
+   "options": [
+    "Sacar un número impar.",
+    "Sacar un número mayor que 5.",
+    "Sacar un número par.",
+    "Sacar un número menor que 6."
+   ],
+   "correct": "Sacar un número mayor que 5.",
+   "hint": "Los únicos resultados son 1, 2, 3, 4 y 5; compáralos con cada evento.",
+   "clue": "Enumera primero los resultados que sí pueden aparecer.",
+   "option_notes": {
+    "Sacar un número menor que 6.": "Confunde un evento seguro con uno imposible.",
+    "Sacar un número par.": "Olvida que hay tarjetas con 2 y 4.",
+    "Sacar un número impar.": "Olvida que hay tarjetas con 1, 3 y 5."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "easy",
+   "text": "En una bolsa hay 2 fichas rojas y 1 azul. Sacas una ficha. ¿Cuál evento es posible?",
+   "options": [
+    "Sacar una ficha blanca.",
+    "Sacar una ficha verde.",
+    "Sacar dos fichas a la vez.",
+    "Sacar una ficha roja."
+   ],
+   "correct": "Sacar una ficha roja.",
+   "hint": "Hay fichas rojas, así que pueden salir; el experimento pide sacar solo una ficha.",
+   "clue": "Revisa los colores de las fichas y cuántas debes sacar.",
+   "option_notes": {
+    "Sacar una ficha verde.": "Agrega un color que no está en la bolsa.",
+    "Sacar dos fichas a la vez.": "Olvida que el experimento indica sacar una sola ficha.",
+    "Sacar una ficha blanca.": "Agrega otro color que no está en la bolsa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "easy",
+   "text": "En un experimento aleatorio, un evento ocurre cada vez que lo repites. ¿Qué término lo describe?",
+   "options": [
+    "Poco posible",
+    "Imposible",
+    "Posible",
+    "Seguro"
+   ],
+   "correct": "Seguro",
+   "hint": "Si ocurre en cada repetición, el evento es seguro.",
+   "clue": "Busca la palabra para algo que no falla nunca.",
+   "option_notes": {
+    "Posible": "Confunde que pueda ocurrir con que ocurra siempre.",
+    "Poco posible": "Confunde una ocurrencia frecuente con una posibilidad pequeña.",
+    "Imposible": "Invierte el significado: imposible significa que nunca ocurre."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "medium",
+   "text": "En una bolsa hay 6 fichas iguales: 4 verdes y 2 amarillas. Sacas una sin mirar. ¿Qué comparación es correcta?",
+   "options": [
+    "Ambos colores son imposibles.",
+    "Sacar amarilla es más posible que sacar verde.",
+    "Ambos colores son igual de posibles.",
+    "Sacar verde es más posible que sacar amarilla."
+   ],
+   "correct": "Sacar verde es más posible que sacar amarilla.",
+   "hint": "Hay 4 oportunidades para verde y solo 2 para amarilla; verde tiene mayor posibilidad.",
+   "clue": "Cuenta las fichas de cada color antes de comparar.",
+   "option_notes": {
+    "Sacar amarilla es más posible que sacar verde.": "Invierte cuál color tiene más fichas.",
+    "Ambos colores son igual de posibles.": "Supone que tener colores distintos da la misma cantidad de oportunidades.",
+    "Ambos colores son imposibles.": "Olvida que sí existen fichas de ambos colores."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "medium",
+   "text": "En una bolsa hay 3 fichas blancas y 1 negra. Sacas dos, sin devolver la primera. ¿Qué tan posible es sacar dos negras?",
+   "options": [
+    "Poco posible",
+    "Posible",
+    "Imposible",
+    "Seguro"
+   ],
+   "correct": "Imposible",
+   "hint": "Solo existe una ficha negra y no la devuelves, así que no puedes sacar dos negras.",
+   "clue": "Observa cuántas fichas negras hay antes de sacar dos.",
+   "option_notes": {
+    "Seguro": "Cree que la extracción siempre entrega fichas negras.",
+    "Posible": "Confunde que pueda salir una negra con sacar dos.",
+    "Poco posible": "Piensa que una segunda negra aparece aunque no existe."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel: evento compuesto con dos extracciones sin reposición."
+   ]
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "medium",
+   "text": "En un juego eliges una tarjeta al azar. La caja A tiene 1 premio entre 4; la B, 2 premios entre 8. ¿En cuál es más posible ganar?",
+   "options": [
+    "En ambas por igual.",
+    "En la caja con menos tarjetas.",
+    "En la caja A.",
+    "En la caja B."
+   ],
+   "correct": "En ambas por igual.",
+   "hint": "1 de 4 y 2 de 8 representan la misma proporción: una cuarta parte.",
+   "clue": "Compara los premios con el total de tarjetas en cada caja.",
+   "option_notes": {
+    "En la caja A.": "Mira que A tiene un solo premio, sin comparar el total.",
+    "En la caja B.": "Mira que B tiene más premios, sin considerar que también tiene más tarjetas.",
+    "En la caja con menos tarjetas.": "Cree que una caja pequeña siempre ofrece mayor posibilidad."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del OA24 y del nivel: compara probabilidades como fracciones equivalentes (1/4 = 2/8), propio de 7° básico."
+   ]
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "medium",
+   "text": "Una bolsa tiene 2 fichas rojas y 2 azules. Agregas 3 fichas rojas y mezclas. ¿Qué ocurre con la posibilidad de sacar una roja?",
+   "options": [
+    "Disminuye, porque ahora hay más fichas.",
+    "Aumenta, porque ahora hay más rojas en relación con el total.",
+    "No cambia, porque siguen siendo dos colores.",
+    "Se vuelve imposible, porque se agregaron fichas."
+   ],
+   "correct": "Aumenta, porque ahora hay más rojas en relación con el total.",
+   "hint": "Antes era 2 de 4; después es 5 de 7, una proporción mayor.",
+   "clue": "Compara la parte roja antes y después.",
+   "option_notes": {
+    "Disminuye, porque ahora hay más fichas.": "Mira el total, pero ignora que las rojas aumentaron más.",
+    "No cambia, porque siguen siendo dos colores.": "Cree que solo importa el número de colores.",
+    "Se vuelve imposible, porque se agregaron fichas.": "Confunde agregar fichas con eliminar la posibilidad."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del OA24: no emplea los términos seguro, posible, poco posible e imposible; razona con proporciones."
+   ]
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "hard",
+   "text": "En una bolsa hay fichas rojas y azules. Al sacar una sin mirar, roja es más posible que azul, pero azul no es imposible. ¿Qué contenido podría tener?",
+   "options": [
+    "2 rojas y 2 azules.",
+    "1 roja y 3 azules.",
+    "3 rojas y 1 azul.",
+    "4 rojas y ninguna azul."
+   ],
+   "correct": "3 rojas y 1 azul.",
+   "hint": "Debe haber más rojas que azules, y al menos una azul para que ambas puedan salir.",
+   "clue": "Busca una opción con más rojas que azules y al menos una azul.",
+   "option_notes": {
+    "1 roja y 3 azules.": "Invierte cuál color tiene mayor posibilidad.",
+    "4 rojas y ninguna azul.": "Hace imposible sacar una ficha azul.",
+    "2 rojas y 2 azules.": "Hace que ambos colores tengan la misma posibilidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "hard",
+   "text": "Una ruleta tiene 4 sectores iguales: 3 con estrella y 1 con luna. La giras dos veces. ¿Qué tan posible es obtener luna en los dos giros?",
+   "options": [
+    "Seguro",
+    "Posible",
+    "Poco posible",
+    "Imposible"
+   ],
+   "correct": "Poco posible",
+   "hint": "Luna aparece en 1 de 4 sectores; pedirla dos veces seguidas es una oportunidad de 1 entre 16.",
+   "clue": "Considera la posibilidad de luna en cada giro y exige que ocurra dos veces.",
+   "option_notes": {
+    "Seguro": "Confunde que la ruleta se gira dos veces con que salga luna siempre.",
+    "Posible": "Ve que puede ocurrir, pero ignora que debe repetirse dos veces.",
+    "Imposible": "Cree que un resultado poco frecuente no puede suceder."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel: evento compuesto (dos giros independientes)."
+   ]
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "hard",
+   "text": "Para ganar debes sacar dos tarjetas con premio, sin devolver la primera. Juego A: 2 premios y 2 sin premio. Juego B: 3 premios y 3 sin premio. ¿En cuál es más posible ganar?",
+   "options": [
+    "En A, porque 2/4 supera a 3/6.",
+    "En B, porque 1/5 es mayor que 1/6.",
+    "En B, porque sacar dos premios es seguro.",
+    "En A, porque 1/6 es mayor que 1/5."
+   ],
+   "correct": "En B, porque 1/5 es mayor que 1/6.",
+   "hint": "La posibilidad de dos premios es 1/6 en A y 1/5 en B; 1/5 es mayor.",
+   "clue": "Calcula la posibilidad de obtener premio en ambas extracciones.",
+   "option_notes": {
+    "En A, porque 1/6 es mayor que 1/5.": "Invierte la comparación de las probabilidades finales.",
+    "En A, porque 2/4 supera a 3/6.": "Confunde las probabilidades del primer saque, que son iguales.",
+    "En B, porque sacar dos premios es seguro.": "Confunde una posibilidad favorable con un resultado seguro."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel y del OA24: probabilidad compuesta sin reposición y comparación de fracciones (1/5 vs 1/6)."
+   ]
+  },
+  {
+   "oa_code": "OA24",
+   "difficulty": "hard",
+   "text": "En un juego giras dos veces una ruleta con números 1, 2, 3 y 4, todos con igual tamaño, y sumas los resultados. ¿Cuál evento es imposible?",
+   "options": [
+    "Obtener una suma de 1.",
+    "Obtener una suma de 8.",
+    "Obtener una suma de 4.",
+    "Obtener una suma del 2 al 8."
+   ],
+   "correct": "Obtener una suma de 1.",
+   "hint": "La menor suma ocurre con 1 + 1; ninguna suma puede ser menor que 2.",
+   "clue": "Busca primero la suma mínima de dos giros.",
+   "option_notes": {
+    "Obtener una suma de 4.": "Olvida que dos resultados pueden sumar 4.",
+    "Obtener una suma de 8.": "Cree que el máximo no se puede alcanzar.",
+    "Obtener una suma del 2 al 8.": "Confunde un evento seguro con uno imposible."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel: experimento compuesto (dos giros y suma)."
+   ]
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

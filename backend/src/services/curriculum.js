@@ -56,7 +56,8 @@ async function getCurriculum({ subject, gradeLevel }) {
   );
   const { rows: oas } = await pool.query(`
     SELECT c.code, c.number, c.eje, c.label, c.text, c.quiz, c.note, c.units, c.all_year,
-           COUNT(q.id) FILTER (WHERE q.active)::int AS active_questions
+           COUNT(q.id) FILTER (WHERE q.active AND q.status = 'approved')::int AS active_questions,
+           COUNT(q.id) FILTER (WHERE q.status = 'draft')::int AS draft_questions
     FROM curriculum_oas c
     LEFT JOIN questions q
       ON q.subject = c.subject AND q.grade_level = c.grade_level AND q.oa_code = c.code

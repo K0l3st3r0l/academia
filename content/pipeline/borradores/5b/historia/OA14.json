@@ -1,0 +1,264 @@
+{
+ "oa": "OA14",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "En el recreo, el curso de Martina ocupa la cancha, pero otro curso tiene el turno anotado. ¿Qué debería hacer Martina para respetar los derechos de los demás?",
+   "options": [
+    "Esperar su turno antes de usar la cancha",
+    "Pedir que el otro curso se vaya",
+    "Tomar el balón para terminar el partido",
+    "Entrar porque llegó primero"
+   ],
+   "correct": "Esperar su turno antes de usar la cancha",
+   "hint": "Respetar los derechos de otros implica considerar sus turnos y oportunidades.",
+   "clue": "Piensa qué acción considera el turno que ya fue acordado.",
+   "option_notes": {
+    "Entrar porque llegó primero": "Cree que llegar antes permite ignorar un acuerdo previo.",
+    "Pedir que el otro curso se vaya": "Confunde su deseo con un derecho superior.",
+    "Tomar el balón para terminar el partido": "Intenta imponer su actividad sin respetar al otro curso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "¿Cuál situación muestra mejor que una persona cumple el deber de respetar las leyes?",
+   "options": [
+    "Cruzar por cualquier lugar si no vienen vehículos",
+    "Cumplir solo las normas que parecen justas",
+    "Esperar la luz verde y cruzar por el paso habilitado",
+    "Esperar que alguien recuerde cada norma"
+   ],
+   "correct": "Esperar la luz verde y cruzar por el paso habilitado",
+   "hint": "Respetar las leyes significa cumplirlas también cuando nadie te está vigilando.",
+   "clue": "Busca la acción que sigue una norma aunque parezca innecesaria.",
+   "option_notes": {
+    "Cruzar por cualquier lugar si no vienen vehículos": "Cree que puede decidir cuándo se aplica la norma.",
+    "Cumplir solo las normas que parecen justas": "Confunde su opinión personal con una obligación legal.",
+    "Esperar que alguien recuerde cada norma": "Piensa que cumplir depende de que alguien lo controle."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Una localidad rural tiene pocos recursos para mantener su escuela. ¿Qué acción corresponde al deber del Estado de asegurar el derecho a la educación?",
+   "options": [
+    "Pedir que solo estudien quienes puedan pagar",
+    "Esperar que una familia mantenga toda la escuela",
+    "Garantizar recursos para que la escuela pueda funcionar",
+    "Cerrar la escuela y dejar la decisión a cada familia"
+   ],
+   "correct": "Garantizar recursos para que la escuela pueda funcionar",
+   "hint": "El Estado debe crear condiciones para que las personas puedan ejercer su derecho a educarse.",
+   "clue": "Identifica quién debe asegurar que el servicio educativo siga disponible.",
+   "option_notes": {
+    "Cerrar la escuela y dejar la decisión a cada familia": "Supone que educarse es solo una responsabilidad familiar.",
+    "Pedir que solo estudien quienes puedan pagar": "Confunde un derecho con un servicio reservado para algunos.",
+    "Esperar que una familia mantenga toda la escuela": "Traslada una responsabilidad estatal a una sola familia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "¿Cuál acción representa el derecho a sufragio de una persona?",
+   "options": [
+    "Elegir un sabor de helado en una tienda",
+    "Cambiar el uniforme para jugar fútbol",
+    "Escoger un programa para ver en casa",
+    "Votar en una elección de acuerdo con la ley"
+   ],
+   "correct": "Votar en una elección de acuerdo con la ley",
+   "hint": "El sufragio permite participar en decisiones públicas mediante elecciones.",
+   "clue": "Busca una acción ligada a elegir autoridades o representantes.",
+   "option_notes": {
+    "Elegir un sabor de helado en una tienda": "Confunde una elección personal con una decisión pública.",
+    "Cambiar el uniforme para jugar fútbol": "Relaciona elegir con una actividad recreativa.",
+    "Escoger un programa para ver en casa": "Confunde una preferencia personal con participación ciudadana."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "En una isla del sur, la única posta no alcanza a atender a todas las familias. ¿Qué respuesta refleja la responsabilidad del Estado?",
+   "options": [
+    "Dejar el problema solo en manos de los vecinos",
+    "Buscar una forma de asegurar atención de salud a la comunidad",
+    "Atender primero a quien pueda pagar más",
+    "Esperar que la falta de atención se resuelva sola"
+   ],
+   "correct": "Buscar una forma de asegurar atención de salud a la comunidad",
+   "hint": "El Estado debe tomar medidas para que las personas puedan ejercer su derecho a la salud.",
+   "clue": "Relaciona el problema de acceso con la responsabilidad de las autoridades.",
+   "option_notes": {
+    "Atender primero a quien pueda pagar más": "Cree que la atención depende principalmente del dinero.",
+    "Dejar el problema solo en manos de los vecinos": "Traslada una responsabilidad pública a la comunidad.",
+    "Esperar que la falta de atención se resuelva sola": "Supone que un derecho se asegura sin tomar medidas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "En una escuela pública, un grupo quiere expresar una opinión sobre el reglamento. ¿Qué decisión ayuda a proteger su libertad de expresión?",
+   "options": [
+    "Permitir que insulten para ser libres",
+    "Escuchar solo a quienes están de acuerdo",
+    "Prohibir toda crítica al reglamento",
+    "Darles un espacio para opinar respetuosamente"
+   ],
+   "correct": "Darles un espacio para opinar respetuosamente",
+   "hint": "Puedes expresar tus ideas, pero debes respetar la dignidad y los derechos de otras personas.",
+   "clue": "Considera a la vez el derecho a opinar y el deber de respetar.",
+   "option_notes": {
+    "Prohibir toda crítica al reglamento": "Confunde proteger el orden con impedir toda opinión.",
+    "Escuchar solo a quienes están de acuerdo": "Cree que expresar ideas exige pensar igual que la autoridad.",
+    "Permitir que insulten para ser libres": "Confunde libertad de expresión con agredir a otros."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Una familia tiene una casa y documentos que acreditan que es suya. ¿Qué acción estatal protege mejor su derecho a la propiedad privada?",
+   "options": [
+    "Quitarla sin explicar la razón",
+    "Permitir que cualquiera la use sin autorización",
+    "Exigir que la familia la preste siempre",
+    "Hacer cumplir las leyes que protegen esa propiedad"
+   ],
+   "correct": "Hacer cumplir las leyes que protegen esa propiedad",
+   "hint": "El Estado debe proteger la propiedad privada mediante leyes y autoridades.",
+   "clue": "Busca una acción que proteja legalmente a la familia dueña.",
+   "option_notes": {
+    "Permitir que cualquiera la use sin autorización": "Desconoce que la propiedad tiene una persona dueña.",
+    "Quitarla sin explicar la razón": "Supone que el Estado puede actuar sin respetar derechos.",
+    "Exigir que la familia la preste siempre": "Confunde propiedad privada con obligación de compartirla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Dos personas cometen la misma infracción de tránsito. Una es conocida y la otra no. ¿Qué debe hacer la autoridad para respetar la igualdad ante la ley?",
+   "options": [
+    "Perdonar a la persona conocida",
+    "Castigar más a quien tiene menos recursos",
+    "Aplicar la misma norma y procedimiento a ambas",
+    "Dejar que cada persona elija su sanción"
+   ],
+   "correct": "Aplicar la misma norma y procedimiento a ambas",
+   "hint": "La fama o el dinero no deben cambiar la forma en que se aplica la ley.",
+   "clue": "Compara el trato, no la fama ni los recursos de las personas.",
+   "option_notes": {
+    "Perdonar a la persona conocida": "Cree que la fama permite recibir un trato especial.",
+    "Castigar más a quien tiene menos recursos": "Confunde justicia con discriminar por situación económica.",
+    "Dejar que cada persona elija su sanción": "Supone que las normas no deben aplicarse de manera común."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "En Villa Las Araucarias, varias calles tienen basura acumulada. ¿Qué acción usa una forma de participación social para buscar una solución?",
+   "options": [
+    "Formar una junta de vecinos y solicitar ayuda municipal",
+    "Esperar que una sola familia limpie todas las calles",
+    "Crear un partido político para retirar la basura",
+    "Dejar el problema hasta que otra persona reclame"
+   ],
+   "correct": "Formar una junta de vecinos y solicitar ayuda municipal",
+   "hint": "Una junta de vecinos organiza a la comunidad para plantear necesidades ante las autoridades.",
+   "clue": "La situación afecta al barrio y requiere organizar a sus vecinos.",
+   "option_notes": {
+    "Esperar que una sola familia limpie todas las calles": "Cree que un problema común es tarea de una sola familia.",
+    "Crear un partido político para retirar la basura": "Confunde una organización política con una organización vecinal.",
+    "Dejar el problema hasta que otra persona reclame": "Supone que no participar también ayuda a resolverlo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Una agrupación quiere presentar un programa para el país, apoyar candidaturas y participar en elecciones. ¿Qué forma de organización corresponde?",
+   "options": [
+    "Abrir un negocio para financiar actividades",
+    "Participar en un partido político",
+    "Formar una junta de vecinos del barrio",
+    "Crear un club deportivo para reunir personas"
+   ],
+   "correct": "Participar en un partido político",
+   "hint": "Los partidos políticos reúnen personas que participan en elecciones y asuntos de gobierno.",
+   "clue": "Distingue una organización que busca influir en el gobierno de una que atiende un barrio.",
+   "option_notes": {
+    "Formar una junta de vecinos del barrio": "Confunde una organización territorial con una política.",
+    "Abrir un negocio para financiar actividades": "Cree que una actividad comercial reemplaza la participación cívica.",
+    "Crear un club deportivo para reunir personas": "Confunde una organización recreativa con una política."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Una municipalidad sostiene que las juntas de vecinos no deben presentar propuestas, porque solo las autoridades pueden participar. ¿Qué evaluación respeta mejor los derechos y deberes de las personas?",
+   "options": [
+    "La autoridad debe respetar la participación organizada según la ley",
+    "Las juntas deben reemplazar a las autoridades elegidas",
+    "Participar en la vida pública significa solo votar en elecciones",
+    "Las juntas solo pueden reunirse para organizar actividades recreativas"
+   ],
+   "correct": "La autoridad debe respetar la participación organizada según la ley",
+   "hint": "El Estado debe asegurar que las personas puedan organizarse y participar en la vida pública.",
+   "clue": "Recuerda que participar no se limita a votar en elecciones.",
+   "option_notes": {
+    "Participar en la vida pública significa solo votar en elecciones": "Desconoce otras formas legales de participación social.",
+    "Las juntas solo pueden reunirse para organizar actividades recreativas": "Reduce las organizaciones vecinales a funciones recreativas.",
+    "Las juntas deben reemplazar a las autoridades elegidas": "Confunde participar con asumir las funciones de una autoridad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Durante una campaña, un grupo pega afiches en muros de casas sin permiso y dice que ejerce su libertad de expresión. ¿Qué conducta respeta mejor los derechos de los demás?",
+   "options": [
+    "Ignorar la ley si el grupo está de acuerdo",
+    "Pedir permiso antes de usar una propiedad ajena",
+    "Prohibir toda campaña para evitar conflictos",
+    "Usar cualquier muro si el mensaje es político"
+   ],
+   "correct": "Pedir permiso antes de usar una propiedad ajena",
+   "hint": "La libertad de expresión no autoriza a ocupar bienes ajenos ni a ignorar las leyes.",
+   "clue": "Piensa si ejercer un derecho permite pasar por encima del derecho de otra persona.",
+   "option_notes": {
+    "Usar cualquier muro si el mensaje es político": "Cree que una opinión política elimina el derecho de propiedad.",
+    "Prohibir toda campaña para evitar conflictos": "Confunde prevenir un problema con eliminar un derecho.",
+    "Ignorar la ley si el grupo está de acuerdo": "Supone que un acuerdo entre personas reemplaza la ley."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

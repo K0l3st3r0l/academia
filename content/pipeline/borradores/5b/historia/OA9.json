@@ -1,0 +1,264 @@
+{
+ "oa": "OA9",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "¿Dónde se ubica principalmente el Norte Grande de Chile?",
+   "options": [
+    "Entre Valparaíso y la región del Biobío, aproximadamente.",
+    "En el extremo norte, junto a la frontera con Perú.",
+    "Desde Chiloé hasta el extremo sur de Chile.",
+    "En la Patagonia, cerca de los canales australes."
+   ],
+   "correct": "En el extremo norte, junto a la frontera con Perú.",
+   "hint": "El Norte Grande ocupa el extremo norte de Chile, junto a Perú y Bolivia.",
+   "clue": "Piensa en la zona que comienza junto a la frontera peruana.",
+   "option_notes": {
+    "Entre Valparaíso y la región del Biobío, aproximadamente.": "Lo ubica en la Zona Central, donde están varias de esas ciudades.",
+    "Desde Chiloé hasta el extremo sur de Chile.": "Confunde las zonas Sur y Austral con el Norte Grande.",
+    "En la Patagonia, cerca de los canales australes.": "Asocia el extremo sur patagónico con una zona del norte."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "¿Cuál combinación describe mejor el clima del Norte Grande?",
+   "options": [
+    "Lluvias muy escasas y gran diferencia térmica entre día y noche",
+    "Lluvias de verano y temperaturas suaves durante todo el año",
+    "Lluvias abundantes todo el año y temperaturas bajas",
+    "Lluvias de invierno y bosques verdes en todo el territorio"
+   ],
+   "correct": "Lluvias muy escasas y gran diferencia térmica entre día y noche",
+   "hint": "El Norte Grande es muy árido y presenta una gran variación de temperatura entre el día y la noche.",
+   "clue": "Busca la alternativa que describa un ambiente desértico.",
+   "option_notes": {
+    "Lluvias abundantes todo el año y temperaturas bajas": "Confunde la aridez del norte con el clima lluvioso y frío del sur.",
+    "Lluvias de invierno y bosques verdes en todo el territorio": "Atribuye al Norte Grande lluvias y bosques de zonas más húmedas.",
+    "Lluvias de verano y temperaturas suaves durante todo el año": "Confunde algunas lluvias del altiplano con el clima de toda la zona."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "¿Qué paisaje se asocia mejor con la Zona Austral?",
+   "options": [
+    "Bosques templados, lagos y volcanes",
+    "Valles agrícolas y ciudades muy pobladas",
+    "Desierto, salares y pampas secas",
+    "Canales, fiordos, islas y montañas"
+   ],
+   "correct": "Canales, fiordos, islas y montañas",
+   "hint": "La Zona Austral tiene costas recortadas por canales y fiordos, además de islas y montañas.",
+   "clue": "Piensa en el extremo sur y en las costas muy recortadas.",
+   "option_notes": {
+    "Desierto, salares y pampas secas": "Relaciona paisajes áridos del Norte Grande con la Zona Austral.",
+    "Valles agrícolas y ciudades muy pobladas": "Confunde paisajes de la Zona Central con los australes.",
+    "Bosques templados, lagos y volcanes": "Asocia la Zona Austral con el paisaje típico de la Zona Sur."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "¿Qué recurso natural se extrae especialmente en el Norte Grande?",
+   "options": [
+    "Bosques usados para producir madera",
+    "Trigo cultivado en grandes llanuras",
+    "Salmones criados en fiordos",
+    "Minerales como el cobre"
+   ],
+   "correct": "Minerales como el cobre",
+   "hint": "El Norte Grande destaca por la minería, especialmente por la extracción de cobre.",
+   "clue": "Piensa en las grandes faenas mineras del desierto.",
+   "option_notes": {
+    "Bosques usados para producir madera": "Relaciona la minería del norte con los bosques productivos del sur.",
+    "Trigo cultivado en grandes llanuras": "Confunde un cultivo de zonas agrícolas con un recurso minero.",
+    "Salmones criados en fiordos": "Asocia los fiordos y la salmonicultura del sur con el Norte Grande."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "Un agricultor de la Zona Central guarda agua para usarla en verano. ¿Qué característica climática explica su decisión?",
+   "options": [
+    "Las precipitaciones casi no existen durante el año",
+    "Las lluvias se concentran principalmente en verano",
+    "Las lluvias se concentran principalmente en invierno",
+    "Las lluvias son abundantes y parejas todo el año"
+   ],
+   "correct": "Las lluvias se concentran principalmente en invierno",
+   "hint": "En la Zona Central suele llover más en invierno, por lo que el agua se reserva para los meses secos.",
+   "clue": "Relaciona la estación lluviosa con la estación en que se necesita guardar agua.",
+   "option_notes": {
+    "Las lluvias se concentran principalmente en verano": "Invierte la estación seca y la estación lluviosa de la Zona Central.",
+    "Las lluvias son abundantes y parejas todo el año": "Confunde la Zona Central con zonas de lluvias más regulares.",
+    "Las precipitaciones casi no existen durante el año": "Atribuye a la Zona Central la aridez extrema del Norte Grande."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "Una familia busca muchas escuelas, hospitales, trabajos y transporte. ¿En qué zona natural hallaría más concentración de esos servicios?",
+   "options": [
+    "En la Zona Austral, por sus numerosas islas y canales",
+    "En el Norte Chico, por sus valles agrícolas y ciudades",
+    "En la Zona Central, donde se concentran población y ciudades",
+    "En el Norte Grande, por sus grandes ciudades mineras y puertos"
+   ],
+   "correct": "En la Zona Central, donde se concentran población y ciudades",
+   "hint": "La Zona Central concentra la mayor parte de la población y muchas ciudades y servicios.",
+   "clue": "Piensa en la zona donde se ubican Santiago y otras grandes ciudades.",
+   "option_notes": {
+    "En el Norte Grande, por sus grandes ciudades mineras y puertos": "Confunde ciudades mineras importantes con la mayor concentración del país.",
+    "En la Zona Austral, por sus numerosas islas y canales": "Se fija en el paisaje austral, pero no en la distribución de la población.",
+    "En el Norte Chico, por sus valles agrícolas y ciudades": "Confunde agricultura y algunas ciudades con la concentración urbana central."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "Viajas desde La Serena hacia Santiago y notas más lluvias, valles más verdes y más cultivos. ¿Qué cambio entre zonas observas?",
+   "options": [
+    "De la Zona Sur a la Zona Austral",
+    "Del Norte Grande a la Zona Central",
+    "Del Norte Chico a la Zona Central",
+    "De la Zona Central al Norte Chico"
+   ],
+   "correct": "Del Norte Chico a la Zona Central",
+   "hint": "La Serena pertenece al Norte Chico y Santiago a la Zona Central, que recibe más lluvias.",
+   "clue": "Ubica primero La Serena y luego Santiago en un mapa de Chile.",
+   "option_notes": {
+    "Del Norte Grande a la Zona Central": "Confunde La Serena con una ciudad del Norte Grande.",
+    "De la Zona Central al Norte Chico": "Invierte el sentido del recorrido entre ambas ciudades.",
+    "De la Zona Sur a la Zona Austral": "Usa dos zonas del sur que no corresponden a ese viaje."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "En la Zona Sur encuentras lagos, ríos caudalosos, bosques y volcanes. ¿Qué combinación ayuda a explicar este paisaje?",
+   "options": [
+    "Clima muy seco y salares rodeados de montañas",
+    "Abundantes precipitaciones y relieve con lagos y volcanes",
+    "Escasas precipitaciones y extensas dunas del desierto",
+    "Lluvias solo en invierno y valles agrícolas densamente poblados"
+   ],
+   "correct": "Abundantes precipitaciones y relieve con lagos y volcanes",
+   "hint": "La Zona Sur es lluviosa y posee un relieve con muchos lagos y volcanes.",
+   "clue": "Relaciona la abundancia de agua con lagos, ríos y bosques.",
+   "option_notes": {
+    "Escasas precipitaciones y extensas dunas del desierto": "Confunde el paisaje húmedo del sur con la aridez del desierto.",
+    "Clima muy seco y salares rodeados de montañas": "Asocia salares y sequedad con una zona de lagos y bosques.",
+    "Lluvias solo en invierno y valles agrícolas densamente poblados": "Reduce el clima de la Zona Sur a lluvias solo invernales."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "Lee: «Hay pampas, fuertes vientos, temperaturas bajas y poca población; se crían ovejas». ¿Qué zona natural describe mejor?",
+   "options": [
+    "La Zona Central",
+    "El Norte Chico",
+    "El Norte Grande",
+    "La Zona Austral"
+   ],
+   "correct": "La Zona Austral",
+   "hint": "La Zona Austral combina estepas o pampas, clima frío y ventoso, baja población y ganadería ovina.",
+   "clue": "Relaciona el frío, el viento y la crianza de ovejas con el extremo sur.",
+   "option_notes": {
+    "El Norte Grande": "Se fija en la baja población, pero olvida el frío, el viento y las ovejas.",
+    "La Zona Central": "Confunde agricultura y ciudades centrales con las pampas australes.",
+    "El Norte Chico": "Asocia la ganadería con una zona seca, pero no fría y ventosa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "Una zona tiene veranos secos, lluvias de invierno, ríos que bajan de los Andes, valles agrícolas y la mayor concentración de población. ¿Cuál es?",
+   "options": [
+    "La Zona Central",
+    "La Zona Sur",
+    "La Zona Austral",
+    "El Norte Chico"
+   ],
+   "correct": "La Zona Central",
+   "hint": "La Zona Central combina lluvias invernales, veranos secos, valles agrícolas y la mayor concentración urbana.",
+   "clue": "Une las pistas de clima, ríos, agricultura y población.",
+   "option_notes": {
+    "El Norte Chico": "Reconoce los valles y la sequedad, pero olvida la mayor población central.",
+    "La Zona Sur": "Confunde una zona más lluviosa y boscosa con la Zona Central.",
+    "La Zona Austral": "Confunde el extremo frío y poco poblado con una zona agrícola urbana."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "En un viaje ves un altiplano, volcanes, salares y cursos de agua que terminan en lagunas interiores. ¿Qué zona recorres?",
+   "options": [
+    "La Zona Sur, donde predominan bosques, lagos y volcanes",
+    "El Norte Grande, donde hay altiplano, volcanes y salares",
+    "La Zona Central, donde se concentran valles y ciudades",
+    "La Zona Austral, donde destacan canales y fiordos"
+   ],
+   "correct": "El Norte Grande, donde hay altiplano, volcanes y salares",
+   "hint": "El Norte Grande incluye el altiplano y paisajes con volcanes, salares y aguas que no siempre llegan al mar.",
+   "clue": "Busca la alternativa que combine altiplano, volcanes y salares.",
+   "option_notes": {
+    "La Zona Austral, donde destacan canales y fiordos": "Confunde canales y fiordos australes con salares del altiplano.",
+    "La Zona Sur, donde predominan bosques, lagos y volcanes": "Se queda con los volcanes y olvida el altiplano y la aridez.",
+    "La Zona Central, donde se concentran valles y ciudades": "Asocia valles y ciudades centrales con un paisaje altiplánico."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "Una guía describe una zona con lluvias principalmente invernales, veranos secos y cálidos, valles transversales y cultivos de uva. ¿Qué zona y actividad identifica mejor?",
+   "options": [
+    "Norte Chico: valles agrícolas y cultivos de uva",
+    "Norte Grande: minería de cobre en el desierto",
+    "Zona Sur: bosques y lagos de origen glaciar",
+    "Zona Austral: canales y cultivos tropicales"
+   ],
+   "correct": "Norte Chico: valles agrícolas y cultivos de uva",
+   "hint": "El Norte Chico tiene lluvias de invierno, veranos secos, valles transversales y agricultura de frutas, como la uva.",
+   "clue": "Identifica la zona que está entre el desierto extremo y la Zona Central.",
+   "option_notes": {
+    "Norte Grande: minería de cobre en el desierto": "Se fija en el cobre, pero la descripción indica valles y lluvias invernales.",
+    "Zona Sur: bosques y lagos de origen glaciar": "Confunde los lagos y bosques del sur con los valles secos del Norte Chico.",
+    "Zona Austral: canales y cultivos tropicales": "Atribuye cultivos tropicales a una zona fría y austral."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

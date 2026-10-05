@@ -1,0 +1,266 @@
+{
+ "oa": "OA18",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA18",
+   "difficulty": "easy",
+   "text": "Dos figuras tienen la misma forma y el mismo tamaño, aunque una está girada. ¿Qué puedes afirmar?",
+   "options": [
+    "Son figuras paralelas.",
+    "Son de distinto tamaño.",
+    "Son de distinta forma.",
+    "Son congruentes."
+   ],
+   "correct": "Son congruentes.",
+   "hint": "Las figuras congruentes conservan forma, tamaño y medidas aunque cambien de posición u orientación.",
+   "clue": "Fíjate en si cambian la forma o el tamaño, no en cómo están orientadas.",
+   "option_notes": {
+    "Son de distinto tamaño.": "Confunde el giro con un cambio de tamaño.",
+    "Son de distinta forma.": "Confunde la orientación con una forma diferente.",
+    "Son figuras paralelas.": "Usa una idea de rectas que no corresponde a figuras."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "easy",
+   "text": "En una cuadrícula, una figura avanza 3 casillas a la derecha sin girar ni cambiar de tamaño. ¿Qué transformación se realizó?",
+   "options": [
+    "Una reflexión.",
+    "Una traslación.",
+    "Una ampliación.",
+    "Una rotación."
+   ],
+   "correct": "Una traslación.",
+   "hint": "Una traslación desplaza todos los puntos la misma distancia y mantiene la orientación.",
+   "clue": "Observa si la figura cambia de lugar, de orientación o de tamaño.",
+   "option_notes": {
+    "Una reflexión.": "Confunde mover una figura con invertirla.",
+    "Una rotación.": "Confunde el desplazamiento con un giro.",
+    "Una ampliación.": "Confunde conservar el tamaño con agrandarlo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "easy",
+   "text": "Una flecha apunta hacia arriba. Gira un cuarto de vuelta hacia la derecha, sin cambiar de tamaño. ¿Hacia dónde apuntará?",
+   "options": [
+    "Hacia la izquierda.",
+    "Hacia arriba.",
+    "Hacia abajo.",
+    "Hacia la derecha."
+   ],
+   "correct": "Hacia la derecha.",
+   "hint": "Un cuarto de vuelta son 90°; desde arriba, un giro horario apunta a la derecha.",
+   "clue": "Piensa en los cuatro sentidos de la cuadrícula y gira un solo cuarto.",
+   "option_notes": {
+    "Hacia arriba.": "Olvida realizar el giro.",
+    "Hacia abajo.": "Confunde un cuarto de vuelta con media vuelta.",
+    "Hacia la izquierda.": "Gira en sentido contrario."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "easy",
+   "text": "En un software geométrico quieres trasladar un triángulo 2 casillas hacia arriba. ¿Qué acción corresponde?",
+   "options": [
+    "Alargar cada lado 2 casillas.",
+    "Reflejarlo respecto de una línea horizontal.",
+    "Mover cada vértice 2 casillas hacia arriba.",
+    "Girar el triángulo 2° hacia arriba."
+   ],
+   "correct": "Mover cada vértice 2 casillas hacia arriba.",
+   "hint": "En una traslación, todos los vértices se desplazan igual distancia y en la misma dirección.",
+   "clue": "Busca una acción que mantenga el tamaño y la orientación.",
+   "option_notes": {
+    "Girar el triángulo 2° hacia arriba.": "Confunde moverlo con girarlo y mezcla grados con casillas.",
+    "Reflejarlo respecto de una línea horizontal.": "Confunde una inversión con un desplazamiento.",
+    "Alargar cada lado 2 casillas.": "Confunde trasladar con cambiar el tamaño."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "medium",
+   "text": "En una cuadrícula con coordenadas, A está en (2,3). Se traslada 3 unidades a la derecha y 1 hacia arriba. ¿En qué punto queda?",
+   "options": [
+    "(-1, 4)",
+    "(2, 4)",
+    "(5, 4)",
+    "(5, 2)"
+   ],
+   "correct": "(5, 4)",
+   "hint": "Suma 3 a la coordenada horizontal y 1 a la vertical: (2+3, 3+1).",
+   "clue": "Separa el movimiento horizontal del vertical antes de calcular.",
+   "option_notes": {
+    "(5, 2)": "Suma a la derecha, pero baja una unidad en vez de subir.",
+    "(-1, 4)": "Resta 3 horizontalmente en vez de sumar.",
+    "(2, 4)": "Solo considera el movimiento hacia arriba."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "medium",
+   "text": "El punto B está 4 cuadritos a la derecha y 2 arriba de O. Primero se refleja en el eje vertical que pasa por O y luego sube 2 cuadritos. ¿Dónde queda respecto de O?",
+   "options": [
+    "4 a la derecha y 4 arriba de O.",
+    "4 a la izquierda y 4 arriba de O.",
+    "4 a la izquierda y 2 arriba de O.",
+    "2 a la izquierda y 4 arriba de O."
+   ],
+   "correct": "4 a la izquierda y 4 arriba de O.",
+   "hint": "La reflexión cambia derecha por izquierda y el ascenso agrega 2 a la altura inicial.",
+   "clue": "Haz primero la reflexión y conserva la distancia al eje; después suma el nuevo movimiento.",
+   "option_notes": {
+    "4 a la derecha y 4 arriba de O.": "No aplica la reflexión y solo considera el ascenso.",
+    "4 a la izquierda y 2 arriba de O.": "Aplica la reflexión, pero olvida subir 2 cuadritos.",
+    "2 a la izquierda y 4 arriba de O.": "Cambia también la distancia horizontal sin razón."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "medium",
+   "text": "El punto P está 3 cuadritos a la derecha del centro O. Gira 90° en sentido antihorario alrededor de O. ¿Dónde queda?",
+   "options": [
+    "3 cuadritos arriba de O.",
+    "3 cuadritos abajo de O.",
+    "3 cuadritos a la derecha de O.",
+    "3 cuadritos a la izquierda de O."
+   ],
+   "correct": "3 cuadritos arriba de O.",
+   "hint": "Un giro antihorario lleva la dirección derecha hacia arriba y mantiene los 3 cuadritos.",
+   "clue": "Imagina una vuelta desde la posición derecha, contra las agujas del reloj.",
+   "option_notes": {
+    "3 cuadritos a la derecha de O.": "No realiza el giro.",
+    "3 cuadritos abajo de O.": "Usa el sentido horario en vez del antihorario.",
+    "3 cuadritos a la izquierda de O.": "Confunde 90° con media vuelta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "medium",
+   "text": "En un software, Martín gira un triángulo 90° y luego lo mueve 4 cm. ¿Qué debe observar para comprobar que la figura final es congruente con la original?",
+   "options": [
+    "Que conserve las medidas de lados y ángulos.",
+    "Que quede en la misma posición y color.",
+    "Que tenga lados más largos y el mismo número de vértices.",
+    "Que cambie sus ángulos, pero conserve el perímetro."
+   ],
+   "correct": "Que conserve las medidas de lados y ángulos.",
+   "hint": "Giros y traslaciones conservan las longitudes de los lados y las medidas de los ángulos.",
+   "clue": "Compara las medidas de la figura, no el lugar donde quedó.",
+   "option_notes": {
+    "Que quede en la misma posición y color.": "Confunde congruencia con ocupar el mismo lugar o verse igual.",
+    "Que tenga lados más largos y el mismo número de vértices.": "Cree que cambiar el tamaño no afecta la congruencia.",
+    "Que cambie sus ángulos, pero conserve el perímetro.": "Ignora que los ángulos también deben conservarse."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "hard",
+   "text": "En una cuadrícula con ejes, un triángulo tiene vértices A(1,1), B(3,1) y C(1,2). Se traslada 2 a la derecha y luego se refleja en el eje horizontal. ¿Qué vértices quedan?",
+   "options": [
+    "A'(1,-1), B'(3,-1), C'(1,-2)",
+    "A'(3,1), B'(5,1), C'(3,2)",
+    "A'(3,-1), B'(5,-1), C'(3,-2)",
+    "A'(-1,-1), B'(1,-1), C'(-1,-2)"
+   ],
+   "correct": "A'(3,-1), B'(5,-1), C'(3,-2)",
+   "hint": "Primero suma 2 a cada coordenada horizontal; luego cambia el signo vertical al reflejar en el eje horizontal.",
+   "clue": "Resuelve todos los vértices en el orden de las dos transformaciones.",
+   "option_notes": {
+    "A'(3,1), B'(5,1), C'(3,2)": "Hace la traslación, pero olvida la reflexión.",
+    "A'(1,-1), B'(3,-1), C'(1,-2)": "Solo refleja la figura y olvida trasladarla.",
+    "A'(-1,-1), B'(1,-1), C'(-1,-2)": "Traslada 2 a la izquierda en vez de a la derecha y refleja."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel: las alternativas usan coordenadas negativas (números enteros y cuadrantes, propios de 7° básico)."
+   ]
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "hard",
+   "text": "Tras mover una figura 3 casillas a la derecha y 2 hacia arriba, sus vértices quedan (5,4), (7,4) y (5,6). ¿Cuáles eran los vértices originales?",
+   "options": [
+    "(2,2), (4,2) y (2,4)",
+    "(5,2), (7,2) y (5,4)",
+    "(2,6), (4,6) y (2,8)",
+    "(8,6), (10,6) y (8,8)"
+   ],
+   "correct": "(2,2), (4,2) y (2,4)",
+   "hint": "Para recuperar la figura original, resta 3 a cada x y 2 a cada y.",
+   "clue": "Deshaz el desplazamiento usando la operación contraria en cada coordenada.",
+   "option_notes": {
+    "(8,6), (10,6) y (8,8)": "Suma el desplazamiento otra vez, en lugar de deshacerlo.",
+    "(2,6), (4,6) y (2,8)": "Resta horizontalmente, pero suma verticalmente.",
+    "(5,2), (7,2) y (5,4)": "Solo deshace el movimiento vertical."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "hard",
+   "text": "X está 2 cuadritos arriba de O; Y está 2 a la derecha. La figura gira 90° en sentido horario alrededor de O y luego se refleja en el eje vertical que pasa por O. ¿Dónde quedan X e Y?",
+   "options": [
+    "2 a la derecha y 2 arriba de O, respectivamente.",
+    "2 arriba y 2 a la derecha de O, respectivamente.",
+    "2 a la derecha y 2 abajo de O, respectivamente.",
+    "2 a la izquierda y 2 abajo de O, respectivamente."
+   ],
+   "correct": "2 a la izquierda y 2 abajo de O, respectivamente.",
+   "hint": "Calcula el giro de cada punto y después invierte derecha e izquierda con la reflexión.",
+   "clue": "Sigue cada punto por separado y respeta el orden de las dos transformaciones.",
+   "option_notes": {
+    "2 a la derecha y 2 abajo de O, respectivamente.": "Olvida la reflexión; aplica solo el giro horario.",
+    "2 a la derecha y 2 arriba de O, respectivamente.": "Usa un giro antihorario en vez de horario.",
+    "2 arriba y 2 a la derecha de O, respectivamente.": "Confunde las posiciones iniciales con las posiciones transformadas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "hard",
+   "text": "En un software, un cuadrilátero conserva las medidas de todos sus lados, pero cambia la medida de un ángulo. ¿Qué concluyes sobre su congruencia con la original?",
+   "options": [
+    "Las figuras son congruentes: tienen igual cantidad de vértices.",
+    "Las figuras no son congruentes: un ángulo cambió.",
+    "Las figuras son congruentes: solo cambió su posición.",
+    "Las figuras son congruentes: bastan los lados."
+   ],
+   "correct": "Las figuras no son congruentes: un ángulo cambió.",
+   "hint": "La congruencia exige conservar tanto las longitudes como las medidas de los ángulos correspondientes.",
+   "clue": "No basta comparar los lados; revisa también los ángulos.",
+   "option_notes": {
+    "Las figuras son congruentes: bastan los lados.": "Cree que conservar los lados siempre basta en un cuadrilátero.",
+    "Las figuras son congruentes: solo cambió su posición.": "Confunde cambiar la posición con cambiar la forma.",
+    "Las figuras son congruentes: tienen igual cantidad de vértices.": "Confunde tener igual cantidad de vértices con ser congruente."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

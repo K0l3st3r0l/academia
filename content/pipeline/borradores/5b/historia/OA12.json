@@ -1,0 +1,264 @@
+{
+ "oa": "OA12",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "¿Qué fenómeno ocurre cuando el suelo se mueve de manera repentina por la liberación de energía dentro de la Tierra?",
+   "options": [
+    "Un derrumbe",
+    "Una erupción volcánica",
+    "Una inundación",
+    "Un sismo"
+   ],
+   "correct": "Un sismo",
+   "hint": "Un sismo es el movimiento repentino del suelo causado por energía liberada en la Tierra.",
+   "clue": "Busca el fenómeno cuyo nombre se relaciona directamente con el movimiento del suelo.",
+   "option_notes": {
+    "Una inundación": "Confunde el movimiento del suelo con la entrada de agua en calles y casas.",
+    "Un derrumbe": "Confunde el movimiento del suelo con la caída de tierra o rocas.",
+    "Una erupción volcánica": "Confunde el sismo con la salida de lava, ceniza y gases."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Tras varios días de lluvia, el río sale de su cauce y cubre calles y casas. ¿Qué riesgo natural se presenta?",
+   "options": [
+    "Volcanismo",
+    "Una inundación",
+    "Un derrumbe",
+    "Un maremoto"
+   ],
+   "correct": "Una inundación",
+   "hint": "Una inundación ocurre cuando el agua cubre lugares que normalmente están secos.",
+   "clue": "Fíjate en qué elemento sale de su lugar y cubre las calles.",
+   "option_notes": {
+    "Un maremoto": "Confunde el desborde de un río con olas causadas por un sismo marino.",
+    "Volcanismo": "Relaciona cualquier desastre con un volcán, aunque no hay lava ni ceniza.",
+    "Un derrumbe": "Confunde el agua que cubre el terreno con tierra o rocas que caen."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Un sismo fuerte ocurre bajo el mar y después grandes olas avanzan hacia la costa. ¿Cómo se llama este riesgo?",
+   "options": [
+    "Una erupción volcánica",
+    "Una inundación",
+    "Un maremoto",
+    "Un derrumbe"
+   ],
+   "correct": "Un maremoto",
+   "hint": "Un maremoto puede producir grandes olas después de un sismo bajo el mar.",
+   "clue": "Relaciona el lugar del sismo con lo que ocurre después en el mar.",
+   "option_notes": {
+    "Una inundación": "Confunde el efecto del agua sobre la costa con el fenómeno que origina las olas.",
+    "Un derrumbe": "Piensa en tierra que cae, aunque el caso ocurre en el mar.",
+    "Una erupción volcánica": "Relaciona las olas con lava o ceniza y olvida el sismo marino."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "¿Qué característica de una vivienda ayuda a que resista mejor los sismos?",
+   "options": [
+    "Adornos pesados sobre muebles altos",
+    "Ventanas grandes sin cierres firmes",
+    "Construcción sobre terreno de relleno suelto",
+    "Muros y uniones diseñados para resistir"
+   ],
+   "correct": "Muros y uniones diseñados para resistir",
+   "hint": "Las construcciones antisísmicas usan diseño, materiales y uniones que ayudan a soportar el movimiento.",
+   "clue": "Piensa en lo que hace firme a la estructura completa, no en la decoración.",
+   "option_notes": {
+    "Adornos pesados sobre muebles altos": "Cree que poner objetos pesados ayuda a resistir el movimiento.",
+    "Ventanas grandes sin cierres firmes": "Cree que una vivienda abierta es automáticamente más resistente.",
+    "Construcción sobre terreno de relleno suelto": "Ignora que un terreno de relleno suelto puede aumentar los daños."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Vives en una localidad costera. Sientes un sismo fuerte y luego el mar se retira mucho. ¿Qué haces?",
+   "options": [
+    "Evacuar de inmediato hacia una zona alta señalizada",
+    "Entrar al río para alejarte de las olas",
+    "Ir a la playa para observar el fondo marino",
+    "Esperar junto a la costa hasta que vuelva el agua"
+   ],
+   "correct": "Evacuar de inmediato hacia una zona alta señalizada",
+   "hint": "Un sismo fuerte y el retiro extraño del mar son señales para evacuar hacia un lugar alto.",
+   "clue": "Primero interpreta las dos señales; después elige el lugar que te aleja del agua.",
+   "option_notes": {
+    "Ir a la playa para observar el fondo marino": "Se acerca al peligro y no reconoce el retiro del mar como alerta.",
+    "Esperar junto a la costa hasta que vuelva el agua": "No actúa ante una señal natural que exige alejarse de la costa.",
+    "Entrar al río para alejarte de las olas": "Cree que el río protege, aunque las olas también pueden avanzar por él."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Durante un sismo estás en la sala de clases. ¿Qué secuencia es más segura?",
+   "options": [
+    "Usar el ascensor y volver por tus pertenencias",
+    "Correr al patio apenas empiece y empujar a los demás",
+    "Protegerte, mantener la calma y evacuar cuando se indique",
+    "Acercarte a las ventanas para mirar qué ocurre"
+   ],
+   "correct": "Protegerte, mantener la calma y evacuar cuando se indique",
+   "hint": "Durante el movimiento protégete; después evacúa ordenadamente siguiendo las instrucciones de la escuela.",
+   "clue": "La acción segura cambia cuando termina el movimiento y comienza la evacuación.",
+   "option_notes": {
+    "Correr al patio apenas empiece y empujar a los demás": "Confunde la rapidez con la seguridad y olvida protegerse durante el movimiento.",
+    "Acercarte a las ventanas para mirar qué ocurre": "Se expone a vidrios y objetos que pueden caer.",
+    "Usar el ascensor y volver por tus pertenencias": "Olvida que el ascensor puede fallar y que no debe buscar pertenencias."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "En la Zona Sur, una localidad está junto a una ladera empinada. Tras lluvias intensas, ¿qué riesgo conviene ubicar y vigilar?",
+   "options": [
+    "Una inundación en la parte más alta de la ladera",
+    "Un maremoto en la ladera alejada del mar",
+    "Un derrumbe en la ladera que está sobre el camino",
+    "Volcanismo en cualquier calle de la localidad"
+   ],
+   "correct": "Un derrumbe en la ladera que está sobre el camino",
+   "hint": "La lluvia puede saturar una ladera y hacer que tierra y rocas se desplacen hacia abajo.",
+   "clue": "Une la pendiente del terreno con la lluvia y luego ubica el peligro.",
+   "option_notes": {
+    "Una inundación en la parte más alta de la ladera": "Confunde una pendiente con una zona baja donde se acumularía agua.",
+    "Un maremoto en la ladera alejada del mar": "Ubica un maremoto lejos del mar y no considera las señales del caso.",
+    "Volcanismo en cualquier calle de la localidad": "Atribuye el riesgo a un volcán sin que el escenario entregue esa señal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Durante una alerta de inundación estás en una plaza cercana al río. ¿Qué decisión te protege mejor?",
+   "options": [
+    "Seguir la ruta señalizada hacia un terreno alto",
+    "Quedarte bajo un puente hasta que baje el agua",
+    "Acercarte a la ribera para avisar a otras personas",
+    "Cruzar el río para llegar más rápido a casa"
+   ],
+   "correct": "Seguir la ruta señalizada hacia un terreno alto",
+   "hint": "Ante una inundación, aléjate del cauce y sigue la evacuación hacia un lugar alto y seguro.",
+   "clue": "La ruta segura debe aumentar la distancia al río y al agua que sube.",
+   "option_notes": {
+    "Cruzar el río para llegar más rápido a casa": "Subestima la fuerza y profundidad del agua en movimiento.",
+    "Quedarte bajo un puente hasta que baje el agua": "Cree que un puente protege, aunque puede dañarse o quedar rodeado.",
+    "Acercarte a la ribera para avisar a otras personas": "Prioriza avisar desde un lugar peligroso en vez de evacuar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Para investigar los riesgos de tu localidad, ¿qué procedimiento entrega información más confiable?",
+   "options": [
+    "Usar fotos de otra región y aplicarlas sin observar tu localidad",
+    "Preguntar a una persona y aceptar su respuesta sin comprobarla",
+    "Elegir el riesgo más conocido y copiarlo sin revisar la localidad",
+    "Consultar mapas, observar el lugar y contrastar relatos de vecinos"
+   ],
+   "correct": "Consultar mapas, observar el lugar y contrastar relatos de vecinos",
+   "hint": "Investigar exige reunir evidencias del lugar y contrastar información de distintas fuentes.",
+   "clue": "Busca la opción que combina observación local con más de una fuente.",
+   "option_notes": {
+    "Elegir el riesgo más conocido y copiarlo sin revisar la localidad": "Reemplaza la investigación local por una suposición general.",
+    "Preguntar a una persona y aceptar su respuesta sin comprobarla": "Usa una sola opinión y no comprueba si coincide con evidencias.",
+    "Usar fotos de otra región y aplicarlas sin observar tu localidad": "Traslada información de otra región sin considerar el lugar estudiado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Un plano muestra la escuela entre un río y una ladera inestable; la zona alta queda al norte. Hay alerta de lluvias. ¿Qué plan es más seguro?",
+   "options": [
+    "Refugiarse bajo la ladera para quedar cerca de la escuela",
+    "Evacuar al norte por una ruta alejada del río y la ladera",
+    "Avanzar hacia el sur, aunque la ruta bordee el río",
+    "Bajar al río para comprobar cuánto ha subido el agua"
+   ],
+   "correct": "Evacuar al norte por una ruta alejada del río y la ladera",
+   "hint": "El plan combina terreno alto con distancia de los dos peligros: el río y la ladera inestable.",
+   "clue": "Compara cada ruta con los dos peligros y busca la dirección indicada como alta.",
+   "option_notes": {
+    "Bajar al río para comprobar cuánto ha subido el agua": "Se acerca al agua en movimiento para medir el peligro.",
+    "Refugiarse bajo la ladera para quedar cerca de la escuela": "Olvida que una ladera inestable puede desprenderse.",
+    "Avanzar hacia el sur, aunque la ruta bordee el río": "Elige una dirección sin considerar que la ruta bordea el río."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Un centro comunitario está en una zona sísmica. ¿Qué propuesta combina prevención de daños y preparación para evacuar?",
+   "options": [
+    "Bloquear salidas, abrir ventanas y guardar agua en altura",
+    "Reforzar la estructura, fijar muebles y practicar evacuación",
+    "Construir sin revisar el terreno y correr sin un plan",
+    "Decorar la entrada, subir muebles y esperar que pase todo"
+   ],
+   "correct": "Reforzar la estructura, fijar muebles y practicar evacuación",
+   "hint": "La prevención combina una estructura firme, objetos asegurados y práctica de evacuación.",
+   "clue": "Busca una propuesta que actúe sobre el edificio, los objetos y la evacuación.",
+   "option_notes": {
+    "Decorar la entrada, subir muebles y esperar que pase todo": "Confunde decorar con reforzar la estructura y no prepara una salida.",
+    "Bloquear salidas, abrir ventanas y guardar agua en altura": "Bloquea las salidas y usa medidas que no reducen esos riesgos.",
+    "Construir sin revisar el terreno y correr sin un plan": "Corre sin plan y no considera la resistencia de la construcción."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "En la Zona Sur, una erupción cubre de ceniza un pueblo y la autoridad ordena evacuar. ¿Qué plan es más seguro?",
+   "options": [
+    "Cubrir nariz y boca, seguir la ruta y alejarse del volcán",
+    "Seguir el cauce del río porque lleva fuera del pueblo",
+    "Esperar en la plaza y abrir ventanas para sacar la ceniza",
+    "Subir al volcán para mirar la erupción y sacar fotos"
+   ],
+   "correct": "Cubrir nariz y boca, seguir la ruta y alejarse del volcán",
+   "hint": "Durante una erupción debes protegerte de la ceniza y cumplir la evacuación indicada, lejos del volcán.",
+   "clue": "Combina protección frente a la ceniza con la ruta que ordenó la autoridad.",
+   "option_notes": {
+    "Subir al volcán para mirar la erupción y sacar fotos": "Se acerca al volcán y se expone a la erupción y la ceniza.",
+    "Seguir el cauce del río porque lleva fuera del pueblo": "Olvida que un cauce puede transportar agua, barro y materiales volcánicos.",
+    "Esperar en la plaza y abrir ventanas para sacar la ceniza": "Se queda expuesto y deja entrar ceniza en vez de evacuar."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

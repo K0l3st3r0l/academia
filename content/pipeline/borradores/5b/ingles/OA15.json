@@ -1,0 +1,264 @@
+{
+ "oa": "OA15",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "¿Cuál frase significa «Yo corro»?",
+   "options": [
+    "I read.",
+    "I run.",
+    "I sleep.",
+    "I eat."
+   ],
+   "correct": "I run.",
+   "hint": "“I” significa “yo” y “run” significa “corro”.",
+   "clue": "Busca el verbo que nombra la acción de moverse corriendo.",
+   "option_notes": {
+    "I sleep.": "Confunde run con la acción de dormir.",
+    "I read.": "Confunde run con la acción de leer.",
+    "I eat.": "Confunde run con la acción de comer."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "Camila: «I ___ soup». Completa para decir que no le gusta la sopa.",
+   "options": [
+    "do eat",
+    "don't eat",
+    "do like",
+    "don't like"
+   ],
+   "correct": "don't like",
+   "hint": "Después de “I”, “don't like” expresa que a Camila no le gusta la sopa.",
+   "clue": "Busca el verbo de gusto y agrega la negación de “no”.",
+   "option_notes": {
+    "do like": "Quita la negación y expresa que sí le gusta.",
+    "don't eat": "Confunde no gustar con no comer.",
+    "do eat": "Expresa comer, no una preferencia negativa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "En una mesa hay un cuaderno. Para expresar que hay uno, ¿qué escribes en inglés?",
+   "options": [
+    "There are one notebook.",
+    "There is two notebooks.",
+    "There is one notebook.",
+    "There are two notebook."
+   ],
+   "correct": "There is one notebook.",
+   "hint": "Para un objeto, usa “There is”; “one” indica que hay uno.",
+   "clue": "Primero decide si hablas de uno o de varios cuadernos.",
+   "option_notes": {
+    "There are one notebook.": "Usa “are” aunque hay un solo cuaderno.",
+    "There is two notebooks.": "Usa “is” para dos cuadernos.",
+    "There are two notebook.": "Cambia uno por dos y olvida el plural."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "En un cuento, el cielo de Punta Arenas tiene muchas nubes. ¿Qué adjetivo describe el clima?",
+   "options": [
+    "sunny",
+    "windy",
+    "cloudy",
+    "snowy"
+   ],
+   "correct": "cloudy",
+   "hint": "“Cloudy” describe un día con muchas nubes.",
+   "clue": "Busca el adjetivo del clima relacionado con las nubes.",
+   "option_notes": {
+    "sunny": "Confunde muchas nubes con un día soleado.",
+    "windy": "Confunde las nubes con viento.",
+    "snowy": "Agrega nieve, que no aparece en la descripción."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Diego muestra una bicicleta que le pertenece. ¿Qué diría para presentarla?",
+   "options": [
+    "These is my bike.",
+    "This is my bike.",
+    "This is your bike.",
+    "This are my bikes."
+   ],
+   "correct": "This is my bike.",
+   "hint": "“My” significa “mi” y una bicicleta se presenta con “This is”.",
+   "clue": "Busca la palabra inglesa para “mi” y fíjate que hay una sola bicicleta.",
+   "option_notes": {
+    "This is your bike.": "Confunde “my” (mi) con “your” (tu).",
+    "These is my bike.": "Mezcla “these” con “is”; no concuerdan.",
+    "This are my bikes.": "Usa “are” y plural para una sola bicicleta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "El pudú es pequeño y café. ¿Cómo lo describirías en inglés agregando ambas características?",
+   "options": [
+    "The pudu is big and brown.",
+    "The pudu are small and brown.",
+    "The pudu is small and black.",
+    "The pudu is small and brown."
+   ],
+   "correct": "The pudu is small and brown.",
+   "hint": "“Small” es pequeño, “brown” es café y “and” une ambas características.",
+   "clue": "Busca las dos características dadas y la palabra que las une.",
+   "option_notes": {
+    "The pudu is big and brown.": "Cambia “small” por su opuesto, “big”.",
+    "The pudu is small and black.": "Cambia “brown” por “black”.",
+    "The pudu are small and brown.": "Usa “are” aunque “the pudu” es singular."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "En un dibujo hay un gato debajo de una silla. ¿Qué oración lo describe?",
+   "options": [
+    "The cat is under the chair.",
+    "The chair is under the cat.",
+    "The cat is in the chair.",
+    "The cat is on the chair."
+   ],
+   "correct": "The cat is under the chair.",
+   "hint": "“Under” significa “debajo de”, y el gato es el sujeto de la oración.",
+   "clue": "Relaciona “debajo de” con una palabra de posición.",
+   "option_notes": {
+    "The cat is on the chair.": "Confunde “on” (sobre) con “under” (debajo).",
+    "The cat is in the chair.": "Confunde “in” (dentro) con “under”.",
+    "The chair is under the cat.": "Invierte el gato y la silla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Lee: «Araucaria trees are tall. They have long branches and grow in the south of Chile». ¿Cuál afirmación coincide con el texto?",
+   "options": [
+    "They have long leaves.",
+    "They have blue branches.",
+    "They have short branches.",
+    "They have long branches."
+   ],
+   "correct": "They have long branches.",
+   "hint": "El texto dice “They have long branches”: las araucarias tienen ramas largas.",
+   "clue": "Busca en el texto una característica que sí se menciona.",
+   "option_notes": {
+    "They have blue branches.": "Cambia “long” por un color no mencionado.",
+    "They have short branches.": "Cambia “long” por su opuesto, “short”.",
+    "They have long leaves.": "Confunde ramas con hojas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "En una caja hay 7 manzanas rojas y 5 verdes. Suma ambas cantidades: ¿cómo informas el total en inglés?",
+   "options": [
+    "There are five apples.",
+    "There are twelve apples.",
+    "There is twelve apples.",
+    "There are seven apples."
+   ],
+   "correct": "There are twelve apples.",
+   "hint": "7 + 5 = 12; como hay varias manzanas, corresponde “There are twelve apples.”",
+   "clue": "Cuenta las manzanas rojas y verdes juntas antes de elegir.",
+   "option_notes": {
+    "There are seven apples.": "Cuenta solo las manzanas rojas.",
+    "There are five apples.": "Cuenta solo las manzanas verdes.",
+    "There is twelve apples.": "Usa “is” aunque “apples” está en plural."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "En la biblioteca escolar, el diccionario está sobre la mesa. ¿Qué intercambio pregunta y responde por su ubicación?",
+   "options": [
+    "A: What is the dictionary? B: It is a book.",
+    "A: Is the dictionary under the table? B: Yes, it is.",
+    "A: Where is the dictionary? B: It is on the table.",
+    "A: Where are the dictionary? B: They are on the table."
+   ],
+   "correct": "A: Where is the dictionary? B: It is on the table.",
+   "hint": "“Where is...?” pregunta por el lugar de un objeto singular; “It is on...” da la ubicación.",
+   "clue": "La palabra “where” pregunta por un lugar.",
+   "option_notes": {
+    "A: What is the dictionary? B: It is a book.": "Pregunta qué es, no dónde está.",
+    "A: Where are the dictionary? B: They are on the table.": "Usa plural para un solo diccionario.",
+    "A: Is the dictionary under the table? B: Yes, it is.": "Confunde “under” con “on”."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Valentina muestra una mochila y un sombrero. Dice: «This is my backpack. This is a hat». Su amiga señala el sombrero: «Is this your backpack?» ¿Qué responde?",
+   "options": [
+    "No, it isn't.",
+    "No, they aren't.",
+    "Yes, he is.",
+    "Yes, it is."
+   ],
+   "correct": "No, it isn't.",
+   "hint": "Señala el sombrero, no la mochila; la respuesta negativa usa “it” para ese objeto.",
+   "clue": "Compara el objeto señalado con el objeto nombrado en la pregunta.",
+   "option_notes": {
+    "Yes, it is.": "No relaciona el objeto señalado con la mochila.",
+    "Yes, he is.": "Usa “he” para una persona, no “it” para un objeto.",
+    "No, they aren't.": "Usa “they are” para un objeto singular."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Lee: «The llamas are in the Andes. They have thick wool and eat grass». Según el texto, selecciona el diálogo correcto.",
+   "options": [
+    "A: What do they eat? B: They eat grass.",
+    "A: Are they in the Andes? B: No, they aren't.",
+    "A: What do they eat? B: They eat wool.",
+    "A: Where are they? B: They have thick wool."
+   ],
+   "correct": "A: What do they eat? B: They eat grass.",
+   "hint": "“What do they eat?” pregunta por el alimento y el texto responde “They eat grass.”",
+   "clue": "Une cada pregunta con el dato que responde: lugar, lana o alimento.",
+   "option_notes": {
+    "A: Where are they? B: They have thick wool.": "Responde sobre la lana, no sobre el lugar.",
+    "A: What do they eat? B: They eat wool.": "Cambia el alimento mencionado en el texto.",
+    "A: Are they in the Andes? B: No, they aren't.": "Niega un dato que el texto confirma."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

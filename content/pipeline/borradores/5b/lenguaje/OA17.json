@@ -1,0 +1,264 @@
+{
+ "oa": "OA17",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA17",
+   "difficulty": "easy",
+   "text": "Sofía quiere escribir instrucciones para que sus compañeros preparen una colación saludable. ¿Quién es el destinatario principal?",
+   "options": [
+    "Las familias de sus compañeros.",
+    "La directora del colegio.",
+    "Los vendedores del quiosco.",
+    "Sus compañeros."
+   ],
+   "correct": "Sus compañeros.",
+   "hint": "El destinatario es la persona o grupo que leerá y usará el texto.",
+   "clue": "Busca quién necesita seguir los pasos de la colación.",
+   "option_notes": {
+    "Las familias de sus compañeros.": "Confunde a quienes podrían apoyar con quienes usarán las instrucciones.",
+    "La directora del colegio.": "Elige una autoridad que no necesita preparar la colación.",
+    "Los vendedores del quiosco.": "Confunde al lector con quienes venden alimentos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "easy",
+   "text": "Martín reunirá datos sobre el zorro culpeo para explicar dónde vive, qué come y cómo se protege. ¿Cuál es el propósito de su texto?",
+   "options": [
+    "Dar instrucciones para cuidar un jardín.",
+    "Entretener con una historia sobre un zorro.",
+    "Convencer de proteger al zorro culpeo.",
+    "Informar sobre el zorro culpeo."
+   ],
+   "correct": "Informar sobre el zorro culpeo.",
+   "hint": "El propósito es informar cuando el texto busca explicar datos y características.",
+   "clue": "Mira qué hará Martín con los datos: explicar, convencer, entretener o enseñar pasos.",
+   "option_notes": {
+    "Convencer de proteger al zorro culpeo.": "Confunde presentar datos con intentar cambiar la opinión del lector.",
+    "Entretener con una historia sobre un zorro.": "Confunde informar con divertir mediante una historia.",
+    "Dar instrucciones para cuidar un jardín.": "Elige un tema y propósito distintos de los datos reunidos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "easy",
+   "text": "Al planificar un texto sobre los humedales de Valdivia, ¿qué acción te ayuda a generar ideas desde tus conocimientos y una investigación?",
+   "options": [
+    "Inventar datos y escogerlos solo porque suenan interesantes.",
+    "Copiar un texto completo sin pensar en lo que ya sabes.",
+    "Anotar lo que sabes y buscar datos en una fuente confiable.",
+    "Decorar la hoja y elegir un título llamativo."
+   ],
+   "correct": "Anotar lo que sabes y buscar datos en una fuente confiable.",
+   "hint": "Generar ideas combina lo que ya sabes con información obtenida al investigar.",
+   "clue": "Piensa en una acción que use tu experiencia y también una fuente.",
+   "option_notes": {
+    "Copiar un texto completo sin pensar en lo que ya sabes.": "Copia información, pero no genera ideas propias desde tus conocimientos.",
+    "Inventar datos y escogerlos solo porque suenan interesantes.": "Reemplaza la investigación por información sin comprobar.",
+    "Decorar la hoja y elegir un título llamativo.": "Se ocupa de la presentación, no de generar ideas para el texto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "easy",
+   "text": "Para planificar una explicación sobre cómo reciclar en tu escuela, ¿qué ayuda a organizar las ideas?",
+   "options": [
+    "Adornar cada idea con un color diferente.",
+    "Ordenarlas en inicio, pasos y cierre.",
+    "Escribirlas en cualquier orden y repetir las más largas.",
+    "Elegir un título antes de pensar el contenido."
+   ],
+   "correct": "Ordenarlas en inicio, pasos y cierre.",
+   "hint": "Organizar es decidir qué va primero, qué sigue y cómo termina.",
+   "clue": "Busca la alternativa que indique una secuencia comprensible.",
+   "option_notes": {
+    "Escribirlas en cualquier orden y repetir las más largas.": "No establece una secuencia ni distingue qué ideas son necesarias.",
+    "Adornar cada idea con un color diferente.": "Cambia la apariencia, pero no organiza el contenido.",
+    "Elegir un título antes de pensar el contenido.": "Un título no ordena las ideas que compondrán la explicación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "medium",
+   "text": "El curso hará un afiche para que visitantes cuiden el Parque Nacional Conguillío. ¿Qué opción define propósito y destinatario?",
+   "options": [
+    "Convencer a los visitantes de cuidar el parque.",
+    "Informar a los visitantes sobre los volcanes del parque.",
+    "Entretener a tus compañeros con leyendas del parque.",
+    "Dar instrucciones a guardaparques sobre nuevos senderos."
+   ],
+   "correct": "Convencer a los visitantes de cuidar el parque.",
+   "hint": "El propósito es convencer y el destinatario son los visitantes del parque.",
+   "clue": "Piensa en lo que se quiere lograr y en quién recibirá el afiche.",
+   "option_notes": {
+    "Informar a los visitantes sobre los volcanes del parque.": "Mantiene el destinatario, pero cambia la meta de cuidar el parque.",
+    "Entretener a tus compañeros con leyendas del parque.": "Cambia tanto la meta como las personas que leerán el afiche.",
+    "Dar instrucciones a guardaparques sobre nuevos senderos.": "Elige otro destinatario y una tarea distinta de cuidar el parque."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "medium",
+   "text": "Vas a planificar un texto para 5° básico sobre el copihue. ¿Qué nota combina una idea que ya conoces con otra que investigarás?",
+   "options": [
+    "Es la flor nacional de Chile y crece en cualquier lugar.",
+    "Buscaré dónde crece y escribiré una leyenda sobre ella.",
+    "Tiene pétalos rojos y dibujaré varios diseños.",
+    "Es la flor nacional de Chile; averiguaré dónde crece."
+   ],
+   "correct": "Es la flor nacional de Chile; averiguaré dónde crece.",
+   "hint": "Una idea conocida sirve de base; investigar agrega información nueva y comprobable.",
+   "clue": "Identifica qué parte ya sabes y cuál anuncia una búsqueda.",
+   "option_notes": {
+    "Es la flor nacional de Chile y crece en cualquier lugar.": "Agrega una afirmación sin investigación y presenta un dato incorrecto.",
+    "Buscaré dónde crece y escribiré una leyenda sobre ella.": "Confunde investigar información con escribir una historia.",
+    "Tiene pétalos rojos y dibujaré varios diseños.": "Incluye una actividad visual, no un dato que debas investigar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "medium",
+   "text": "Tu propósito es informar a estudiantes de 5° sobre ahorrar agua. ¿Qué grupo de ideas conviene incluir en la planificación?",
+   "options": [
+    "Precios de piscinas, marcas y ofertas de verano.",
+    "Qué significa ahorrar agua, ejemplos en casa y sus beneficios.",
+    "Una aventura fantástica, chistes y un final inesperado.",
+    "Reglas de una competencia, equipos y premios."
+   ],
+   "correct": "Qué significa ahorrar agua, ejemplos en casa y sus beneficios.",
+   "hint": "Las ideas deben explicar el tema con ejemplos cercanos y datos útiles para ese público.",
+   "clue": "Elige ideas que expliquen el tema, no que cambien el tema o el propósito.",
+   "option_notes": {
+    "Una aventura fantástica, chistes y un final inesperado.": "Cambia informar por entretener y no desarrolla el tema del agua.",
+    "Precios de piscinas, marcas y ofertas de verano.": "Reúne datos comerciales que no explican cómo ahorrar agua.",
+    "Reglas de una competencia, equipos y premios.": "Presenta ideas para una actividad, no para informar sobre el ahorro."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "medium",
+   "text": "Los estudiantes no conocen los humedales. Si partes de la idea general y terminas con una recomendación, ¿qué secuencia elegirías?",
+   "options": [
+    "Importancia, cuidado, definición y ejemplos.",
+    "Cuidado, ejemplos, definición e importancia.",
+    "Definición, importancia, ejemplos y cuidado.",
+    "Ejemplos, cuidado, importancia y definición."
+   ],
+   "correct": "Definición, importancia, ejemplos y cuidado.",
+   "hint": "Primero se presenta el tema, luego se desarrolla y al final se propone cómo cuidarlo.",
+   "clue": "Fíjate en qué opción comienza explicando el tema y termina con una acción.",
+   "option_notes": {
+    "Cuidado, ejemplos, definición e importancia.": "Comienza con una recomendación antes de explicar el tema.",
+    "Ejemplos, cuidado, importancia y definición.": "Parte de detalles y deja la explicación general para el final.",
+    "Importancia, cuidado, definición y ejemplos.": "Termina con ejemplos, no con la recomendación pedida."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "hard",
+   "text": "Quieres convencer a niñas y niños que visitan un parque de cuidar el río Mapocho. ¿Qué planificación se ajusta mejor a ese propósito y destinatario?",
+   "options": [
+    "Contar una leyenda del río sin pedir ningún cambio.",
+    "Explicar el problema, proponer acciones simples y dar razones.",
+    "Describir tareas para guardaparques usando palabras especializadas.",
+    "Presentar cifras técnicas y fórmulas para científicos."
+   ],
+   "correct": "Explicar el problema, proponer acciones simples y dar razones.",
+   "hint": "Para convencer a niños, presenta razones claras y acciones posibles para ellos.",
+   "clue": "Considera tanto lo que quieres lograr como quién leerá el mensaje.",
+   "option_notes": {
+    "Presentar cifras técnicas y fórmulas para científicos.": "Usa recursos y un público propio de especialistas, no de niños.",
+    "Contar una leyenda del río sin pedir ningún cambio.": "Busca entretener, pero no incluye una idea para convencer ni actuar.",
+    "Describir tareas para guardaparques usando palabras especializadas.": "Se dirige a guardaparques y usa un lenguaje poco adecuado al público."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "hard",
+   "text": "El museo solicita un texto sobre pueblos originarios para estudiantes de 5° y especialistas, pero solo publicará uno. ¿Qué decisión conviene tomar primero?",
+   "options": [
+    "Acordar un público principal y adaptar propósito, lenguaje e ideas.",
+    "Mezclar palabras técnicas y chistes para conformar a todos.",
+    "Escribir sin elegir público y ordenar después las ideas.",
+    "Copiar datos difíciles y quitar ejemplos para abreviar."
+   ],
+   "correct": "Acordar un público principal y adaptar propósito, lenguaje e ideas.",
+   "hint": "Un solo texto necesita un destinatario principal para elegir propósito, lenguaje y contenidos.",
+   "clue": "Antes de organizar, resuelve para quién se escribirá el texto.",
+   "option_notes": {
+    "Mezclar palabras técnicas y chistes para conformar a todos.": "Mezcla estilos sin definir un destinatario ni una meta clara.",
+    "Copiar datos difíciles y quitar ejemplos para abreviar.": "Prioriza acumular información y no considera quién la comprenderá.",
+    "Escribir sin elegir público y ordenar después las ideas.": "Omite una decisión básica que debe tomarse al planificar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "hard",
+   "text": "Escribirás para convencer a la comunidad escolar de plantar quillayes. ¿Qué plan incluye propósito, destinatario, ideas y orden adecuados?",
+   "options": [
+    "Convencer a la comunidad; buscar beneficios y ordenar acciones.",
+    "Entretener a niños; inventar una leyenda y sus beneficios.",
+    "Instruir a jardineros; listar materiales sin explicar el motivo.",
+    "Informar a científicos; copiar datos del quillay sin ordenarlos."
+   ],
+   "correct": "Convencer a la comunidad; buscar beneficios y ordenar acciones.",
+   "hint": "El plan correcto coincide en propósito y público, usa ideas investigadas y les da un orden.",
+   "clue": "Revisa si cada parte del plan responde a convencer a la comunidad escolar.",
+   "option_notes": {
+    "Informar a científicos; copiar datos del quillay sin ordenarlos.": "Cambia el destinatario y olvida ordenar las ideas para convencer.",
+    "Entretener a niños; inventar una leyenda y sus beneficios.": "Cambia el propósito y reemplaza la investigación por información inventada.",
+    "Instruir a jardineros; listar materiales sin explicar el motivo.": "Se dirige a otro público y no explica por qué conviene plantar quillayes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "hard",
+   "text": "Lee: “En la feria científica, Sofía explicará cómo se forman los volcanes a apoderados que no conocen el tema. Tendrá cinco minutos y usará datos de una entrevista y un libro.” ¿Cuál es el mejor plan?",
+   "options": [
+    "Convencer a expertos; copiar completa la entrevista y el libro.",
+    "Dar instrucciones a apoderados; inventar datos sobre volcanes.",
+    "Informar a apoderados; elegir datos claros y ordenar causas y proceso.",
+    "Entretener a niños con una leyenda y mezclar los datos."
+   ],
+   "correct": "Informar a apoderados; elegir datos claros y ordenar causas y proceso.",
+   "hint": "El plan informa al público indicado, selecciona fuentes y ordena la explicación para el tiempo disponible.",
+   "clue": "Relaciona propósito, público, fuentes y tiempo antes de elegir.",
+   "option_notes": {
+    "Entretener a niños con una leyenda y mezclar los datos.": "Cambia el propósito y el público, y no organiza la información.",
+    "Convencer a expertos; copiar completa la entrevista y el libro.": "Cambia el destinatario y copia demasiado en vez de seleccionar ideas.",
+    "Dar instrucciones a apoderados; inventar datos sobre volcanes.": "Confunde explicar con dar instrucciones e inventa información."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -11,8 +11,11 @@ const authenticateToken = (req, res, next) => {
   }
 };
 
+// Staff: teachers, UTP (curriculum heads, who also approve questions) and administrators.
+const STAFF_ROLES = ['teacher', 'admin', 'docente', 'director', 'utp'];
+
 const requireTeacher = (req, res, next) => {
-  if (!req.user?.roles?.some(r => ['teacher', 'admin', 'docente', 'director'].includes(r))) {
+  if (!req.user?.roles?.some(r => STAFF_ROLES.includes(r))) {
     return res.status(403).json({ error: 'Solo docentes pueden realizar esta acción' });
   }
   next();
@@ -32,4 +35,4 @@ const requireAdmin = (req, res, next) => {
   next();
 };
 
-module.exports = { authenticateToken, requireTeacher, requireStudent, requireAdmin };
+module.exports = { authenticateToken, requireTeacher, requireStudent, requireAdmin, STAFF_ROLES };

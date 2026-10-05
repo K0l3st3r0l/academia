@@ -1,0 +1,264 @@
+{
+ "oa": "OA3",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿Cuál es el resultado de 21 × 13?",
+   "options": [
+    "210",
+    "273",
+    "231",
+    "63"
+   ],
+   "correct": "273",
+   "hint": "21 × 13 = 21 × 10 + 21 × 3 = 210 + 63 = 273.",
+   "clue": "Descompón 13 en 10 y 3.",
+   "option_notes": {
+    "63": "Calculó solo 21 × 3 y olvidó el producto por 10.",
+    "210": "Calculó solo 21 × 10 y olvidó el producto por 3.",
+    "231": "Usó 10 y 1 en vez de 10 y 3."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "Al redondear cada factor a la decena más cercana, ¿qué estimación obtienes para 48 × 21?",
+   "options": [
+    "1.000",
+    "500",
+    "100",
+    "2.000"
+   ],
+   "correct": "1.000",
+   "hint": "48 se aproxima a 50 y 21 a 20; 50 × 20 está cerca de 1.000.",
+   "clue": "Redondea cada factor a la decena más cercana.",
+   "option_notes": {
+    "100": "Redondeó 48 a 5 en vez de 50 antes de multiplicar.",
+    "500": "Usó 50 × 10, redondeando 21 a una decena demasiado baja.",
+    "2.000": "Usó 100 × 20, redondeando 48 demasiado hacia arriba."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿Qué descomposición ayuda a calcular mentalmente 32 × 15?",
+   "options": [
+    "32 × 15 + 32 × 5",
+    "32 × 10 + 15 × 5",
+    "32 × 10 + 32 × 5",
+    "32 × 10 + 15 × 10"
+   ],
+   "correct": "32 × 10 + 32 × 5",
+   "hint": "Como 15 = 10 + 5, multiplica 32 por cada parte y suma.",
+   "clue": "Descompón 15 en dos números fáciles de multiplicar por 32.",
+   "option_notes": {
+    "32 × 10 + 15 × 5": "Cambió el segundo factor de una parte por 15, no por 32.",
+    "32 × 15 + 32 × 5": "Agregó un producto extra que no pertenece a 15.",
+    "32 × 10 + 15 × 10": "Usó 10 + 10, que no forma 15."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "En el algoritmo de 24 × 13, ¿qué representa el 240?",
+   "options": [
+    "24 × 10, el producto de 24 por una decena",
+    "24 × 3, el producto de 24 por tres unidades",
+    "24 + 10, la suma de los factores",
+    "2 × 4, el producto de sus cifras"
+   ],
+   "correct": "24 × 10, el producto de 24 por una decena",
+   "hint": "En 13, el 1 vale una decena; por eso 24 × 10 = 240.",
+   "clue": "Mira el valor posicional del 1 en 13.",
+   "option_notes": {
+    "24 × 3, el producto de 24 por tres unidades": "Confundió la fila de las unidades con la de las decenas.",
+    "24 + 10, la suma de los factores": "Sumó los números en vez de multiplicarlos.",
+    "2 × 4, el producto de sus cifras": "Multiplicó solo las cifras visibles de 24."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Una escuela compra 13 cajas con 24 lápices cada una y los reparte por igual entre 12 salas. ¿Cuántos lápices recibe cada sala?",
+   "options": [
+    "39 lápices",
+    "312 lápices",
+    "26 lápices",
+    "24 lápices"
+   ],
+   "correct": "26 lápices",
+   "hint": "Primero calcula 13 × 24 = 312; luego reparte 312 entre 12: tocan 26.",
+   "clue": "Halla el total de lápices y después divídelo entre las salas.",
+   "option_notes": {
+    "24 lápices": "Tomó la cantidad de una caja y no repartió las cajas.",
+    "39 lápices": "Dividió 312 por una cantidad distinta de 12 salas.",
+    "312 lápices": "Calculó el total, pero olvidó repartirlo entre 12."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Para calcular 36 × 25, multiplica 36 por 100 y luego divide por 4. ¿Cuál es el resultado?",
+   "options": [
+    "3.600",
+    "1.440",
+    "360",
+    "900"
+   ],
+   "correct": "900",
+   "hint": "36 × 100 = 3.600 y 3.600 ÷ 4 = 900.",
+   "clue": "Sigue las dos operaciones indicadas, en ese orden.",
+   "option_notes": {
+    "360": "Multiplicó 36 solo por 10, no por 100.",
+    "1.440": "Multiplicó 36 × 40, sin aplicar la estrategia indicada.",
+    "3.600": "Multiplicó por 100, pero olvidó dividir por 4."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Al resolver 42 × 17, Tomás calcula 42 × 7 = 294 y 42 × 10 = 420. ¿Qué debe hacer después?",
+   "options": [
+    "Sumar 42 y 17",
+    "Multiplicar 294 por 420",
+    "Sumar 294 y 420",
+    "Restar 294 de 420"
+   ],
+   "correct": "Sumar 294 y 420",
+   "hint": "Los dos resultados parciales forman el producto total, así que se suman: 294 + 420 = 714.",
+   "clue": "Los productos parciales representan partes del mismo total.",
+   "option_notes": {
+    "Restar 294 de 420": "Restó los productos parciales, aunque deben juntarse.",
+    "Multiplicar 294 por 420": "Multiplicó entre sí los resultados parciales.",
+    "Sumar 42 y 17": "Sumó los factores en vez de combinar los productos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Un bus recorre 18 km en cada vuelta. Hace 24 vueltas y luego avanza 15 km más. ¿Cuántos km recorre en total?",
+   "options": [
+    "447 km",
+    "432 km",
+    "450 km",
+    "414 km"
+   ],
+   "correct": "447 km",
+   "hint": "24 × 18 = 432 km; al sumar los 15 km extra, obtienes 447 km.",
+   "clue": "Primero calcula las vueltas y después incorpora el tramo adicional.",
+   "option_notes": {
+    "432 km": "Calculó las vueltas, pero olvidó sumar los 15 km extra.",
+    "450 km": "Sumó 18 y 24, y luego agregó 15.",
+    "414 km": "Restó los 15 km en vez de sumarlos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Un vivero planta 23 hileras con 14 quillayes cada una. Retira 18 dañados y reparte los restantes en 8 sectores iguales. ¿Cuántos por sector?",
+   "options": [
+    "36 quillayes",
+    "304 quillayes",
+    "40 quillayes",
+    "38 quillayes"
+   ],
+   "correct": "38 quillayes",
+   "hint": "23 × 14 = 322; 322 − 18 = 304; 304 ÷ 8 = 38.",
+   "clue": "Resuelve en orden: total, quitar dañados y repartir.",
+   "option_notes": {
+    "36 quillayes": "Cometió un error al calcular o repartir el total.",
+    "40 quillayes": "Redondeó el total antes de repartirlo en 8 sectores.",
+    "304 quillayes": "Calculó los restantes, pero olvidó dividirlos entre 8."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "El resultado de una multiplicación es 1.008 y uno de sus factores es 42. ¿Cuál es el otro factor?",
+   "options": [
+    "26",
+    "24",
+    "32",
+    "18"
+   ],
+   "correct": "24",
+   "hint": "Busca el número de dos dígitos que, multiplicado por 42, da 1.008: 42 × 24 = 1.008.",
+   "clue": "Parte con 42 × 20 y completa lo que falta hasta 1.008.",
+   "option_notes": {
+    "18": "Calculó 42 × 18 = 756, menor que 1.008.",
+    "26": "Calculó 42 × 26 = 1.092, mayor que 1.008.",
+    "32": "Calculó 42 × 32 = 1.344, mayor que 1.008."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Una ruta tiene 19 tramos de 27 m y se agregan 3 tramos iguales. Si se redondea a la centena más cercana, ¿cuál es la longitud estimada?",
+   "options": [
+    "900 m",
+    "600 m",
+    "700 m",
+    "500 m"
+   ],
+   "correct": "600 m",
+   "hint": "Hay 22 tramos; 22 × 27 = 594, que redondeado a la centena es 600.",
+   "clue": "Suma los tramos primero y luego aproxima el producto.",
+   "option_notes": {
+    "500 m": "Redondeó 594 hacia abajo a una centena incorrecta.",
+    "700 m": "Redondeó 594 hacia arriba más de una centena.",
+    "900 m": "Usó 30 × 30, sin ajustar la cantidad real de tramos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Un patio rectangular mide 24 m de largo y 16 m de ancho. Se deja 1/4 para juegos y el resto para pasto. ¿Cuántos m² de pasto habrá?",
+   "options": [
+    "384 m²",
+    "96 m²",
+    "240 m²",
+    "288 m²"
+   ],
+   "correct": "288 m²",
+   "hint": "El patio tiene 24 × 16 = 384 m²; 1/4 es 96, así que quedan 288 m².",
+   "clue": "Calcula el área total, halla 1/4 y réstalo.",
+   "option_notes": {
+    "96 m²": "Calculó solo el cuarto destinado a juegos.",
+    "384 m²": "Calculó el área total, sin quitar la zona de juegos.",
+    "240 m²": "Restó 1/4 como si fueran 144 m², no 96."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

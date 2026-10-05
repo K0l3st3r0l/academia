@@ -1,0 +1,264 @@
+{
+ "oa": "OA9",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "Ves una portada: el título es “Animals of Chile” y aparece un pudú. Antes de leer, ¿qué estrategia usas?",
+   "options": [
+    "Hacer una predicción con el título y la imagen.",
+    "Leer primero el último párrafo.",
+    "Copiar el título en tu cuaderno.",
+    "Traducir cada palabra del título al español."
+   ],
+   "correct": "Hacer una predicción con el título y la imagen.",
+   "hint": "Es una estrategia de prelectura: anticipas el tema con la portada y lo que ya sabes.",
+   "clue": "Piensa en lo que puedes anticipar antes de comenzar a leer.",
+   "option_notes": {
+    "Traducir cada palabra del título al español.": "Confunde predecir el tema con traducir vocabulario.",
+    "Copiar el título en tu cuaderno.": "Confunde observar la portada con registrar información.",
+    "Leer primero el último párrafo.": "Empieza por una parte del texto y no usa la portada."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "El título y los subtítulos te ayudan a ordenar la lectura. Esto significa que debes…",
+   "options": [
+    "Leer solo las palabras que parecen conocidas.",
+    "Escribir una opinión antes de leer.",
+    "Memorizar todas las oraciones del texto.",
+    "Usarlos como organizadores para guiar tu lectura."
+   ],
+   "correct": "Usarlos como organizadores para guiar tu lectura.",
+   "hint": "Títulos y subtítulos son organizadores que muestran cómo se ordena la información.",
+   "clue": "Piensa en qué elementos te ayudan a ubicar cada tema.",
+   "option_notes": {
+    "Leer solo las palabras que parecen conocidas.": "Confunde orientarse con leer únicamente vocabulario conocido.",
+    "Memorizar todas las oraciones del texto.": "Confunde organizar la lectura con aprender el texto de memoria.",
+    "Escribir una opinión antes de leer.": "Usa una acción personal, pero no un organizador del texto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "Lees: “The fox sleeps during the day.” No entiendes bien la oración. ¿Cuál acción corresponde a releer?",
+   "options": [
+    "Inventar un final diferente.",
+    "Mirar solo la primera imagen.",
+    "Releer la oración y el texto cercano.",
+    "Copiar la oración sin volver a leerla."
+   ],
+   "correct": "Releer la oración y el texto cercano.",
+   "hint": "Releer ayuda a aclarar una idea que no comprendiste al primer intento.",
+   "clue": "Cuando una idea no está clara, vuelve a buscarla en el texto.",
+   "option_notes": {
+    "Mirar solo la primera imagen.": "Se fija en un elemento visual, pero no vuelve a leer la idea.",
+    "Inventar un final diferente.": "Crea información nueva en vez de comprobar el texto.",
+    "Copiar la oración sin volver a leerla.": "Registra la oración, pero no intenta comprenderla mejor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "Después de leer sobre el ciclo de una planta, dibujas flechas y escribes “seed”, “sprout” y “plant”. Lo que hiciste se llama…",
+   "options": [
+    "Leer el texto sin detenerte.",
+    "Buscar una palabra en el diccionario.",
+    "Organizar la información en un diagrama.",
+    "Predecir el tema mirando solo el título."
+   ],
+   "correct": "Organizar la información en un diagrama.",
+   "hint": "Las flechas y las palabras ordenan las ideas en un diagrama después de leer.",
+   "clue": "Fíjate en las flechas: muestran cómo estás ordenando la información.",
+   "option_notes": {
+    "Predecir el tema mirando solo el título.": "Es una acción de prelectura y no describe lo que hiciste después.",
+    "Buscar una palabra en el diccionario.": "Ayuda con vocabulario, pero no organiza las etapas.",
+    "Leer el texto sin detenerte.": "Describe una forma de leer, no de ordenar información."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "El título es “A trip to Chiloé” y la portada muestra una lancha bajo la lluvia. Antes de leer, ¿qué predicción usa ambas pistas?",
+   "options": [
+    "Contará las reglas de un partido de fútbol.",
+    "Hablará de un viaje en lancha durante un día lluvioso.",
+    "Enseñará a cocinar empanadas en una casa.",
+    "Explicará cómo cuidar un pudú en el bosque."
+   ],
+   "correct": "Hablará de un viaje en lancha durante un día lluvioso.",
+   "hint": "Relacionas el título, la imagen y lo que sabes de Chiloé para anticipar el tema.",
+   "clue": "Une el lugar y la acción del título con lo que muestra la portada.",
+   "option_notes": {
+    "Explicará cómo cuidar un pudú en el bosque.": "Se fija en un animal chileno, pero ignora el título y la lluvia.",
+    "Contará las reglas de un partido de fútbol.": "Elige un tema conocido sin usar las pistas de la portada.",
+    "Enseñará a cocinar empanadas en una casa.": "Usa una asociación con Chiloé, pero no las dos pistas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "Lees una página con título “My Healthy Lunch”, subtítulo “Fruit and water” y dibujos de una manzana y una botella. ¿Qué haces?",
+   "options": [
+    "Fijarte solo en las palabras más largas.",
+    "Leer primero la última oración de la página.",
+    "Copiar los dibujos sin relacionarlos con el texto.",
+    "Usar el título, el subtítulo y los dibujos como guías."
+   ],
+   "correct": "Usar el título, el subtítulo y los dibujos como guías.",
+   "hint": "Estos elementos organizan y orientan la lectura hacia la idea principal.",
+   "clue": "Considera qué elementos te ayudan a ubicar el tema de la página.",
+   "option_notes": {
+    "Leer primero la última oración de la página.": "Elige una parte al azar y no usa los organizadores.",
+    "Fijarte solo en las palabras más largas.": "Confunde el tamaño de las palabras con las pistas del texto.",
+    "Copiar los dibujos sin relacionarlos con el texto.": "Observa las imágenes, pero no las usa para comprender."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "Lees: “First, Tom washes the apple. Then, he cuts it. Finally, he eats it.” ¿Cuál organizador sería más adecuado después de leer?",
+   "options": [
+    "Una copia del texto sin marcar el orden.",
+    "Un diagrama de secuencia con las tres acciones.",
+    "Un dibujo sin palabras sobre una manzana.",
+    "Una lista alfabética con todas las palabras."
+   ],
+   "correct": "Un diagrama de secuencia con las tres acciones.",
+   "hint": "El diagrama de secuencia muestra las acciones en el orden en que ocurren.",
+   "clue": "Mira las palabras First, Then y Finally: señalan un orden.",
+   "option_notes": {
+    "Una lista alfabética con todas las palabras.": "Ordena palabras, no las acciones que ocurren.",
+    "Un dibujo sin palabras sobre una manzana.": "Representa un objeto, pero no organiza las tres acciones.",
+    "Una copia del texto sin marcar el orden.": "Mantiene el texto, pero no muestra cómo se ordenan las acciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "Después de leer un texto sobre el huemul, una oración no te queda clara. Ya miraste su foto y el subtítulo. La siguiente acción más útil es…",
+   "options": [
+    "Saltar esa parte y responder al azar.",
+    "Volver a leer esa parte y buscar pistas cercanas.",
+    "Leer únicamente el título una segunda vez.",
+    "Reemplazar la oración por una inventada."
+   ],
+   "correct": "Volver a leer esa parte y buscar pistas cercanas.",
+   "hint": "Releer la oración y su contexto puede aclarar el significado.",
+   "clue": "Ya usaste imagen y subtítulo; ahora vuelve a la parte difícil.",
+   "option_notes": {
+    "Saltar esa parte y responder al azar.": "Evita la dificultad y no comprueba la información.",
+    "Reemplazar la oración por una inventada.": "Crea una respuesta que no aparece en el texto.",
+    "Leer únicamente el título una segunda vez.": "Revisa una pista general, pero no la oración confusa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "Antes de leer, ves el título “A Rainy Day in Valdivia” y una niña con botas y paraguas. ¿Qué predicción es más razonable?",
+   "options": [
+    "Enseñará a fabricar botas para la lluvia.",
+    "Explicará cómo crecen los árboles de la zona.",
+    "Narrará un viaje en avión desde Valdivia.",
+    "Contará actividades de un día lluvioso en Valdivia."
+   ],
+   "correct": "Contará actividades de un día lluvioso en Valdivia.",
+   "hint": "La predicción conecta el lugar y la lluvia del título con la imagen.",
+   "clue": "Elige la idea que explica las dos pistas de la portada.",
+   "option_notes": {
+    "Explicará cómo crecen los árboles de la zona.": "Usa una idea sobre el lugar, pero ignora la lluvia y la imagen.",
+    "Enseñará a fabricar botas para la lluvia.": "Se fija en un objeto, pero lo confunde con el tema central.",
+    "Narrará un viaje en avión desde Valdivia.": "Inventa un tema que no aparece en el título ni en la imagen."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "Sofía lee un texto sobre la ranita de Darwin y crea un diagrama. Una idea de su diagrama no coincide con el texto. ¿Cómo repara su organizador?",
+   "options": [
+    "Releer la parte relacionada y corregir el diagrama.",
+    "Inventar una idea para completar el diagrama.",
+    "Copiar la imagen y borrar las ideas escritas.",
+    "Mirar solo el título y dejar el diagrama igual."
+   ],
+   "correct": "Releer la parte relacionada y corregir el diagrama.",
+   "hint": "Releer permite comprobar la información y ajustar el diagrama al texto.",
+   "clue": "Comprueba la idea en el texto antes de cambiar tu organizador.",
+   "option_notes": {
+    "Mirar solo el título y dejar el diagrama igual.": "No comprueba el dato que quedó mal organizado.",
+    "Inventar una idea para completar el diagrama.": "Agrega información que no fue leída en el texto.",
+    "Copiar la imagen y borrar las ideas escritas.": "Reemplaza la información en vez de corregirla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "En una tablet ves el título “Our School Garden”, el subtítulo “Tools” y una foto de niños con una pala. Predices que hablará de flores. Al leer, ¿qué haces para revisar tu predicción?",
+   "options": [
+    "Relees la sección “Tools” y comparas sus datos con tu predicción.",
+    "Copias la palabra “Tools” sin relacionarla con el texto.",
+    "Saltas la sección y buscas flores en otra página.",
+    "Te quedas con la predicción porque la foto muestra un jardín."
+   ],
+   "correct": "Relees la sección “Tools” y comparas sus datos con tu predicción.",
+   "hint": "El subtítulo orienta la búsqueda y releer permite comparar la información con tu predicción.",
+   "clue": "Usa el subtítulo para volver a la parte que puede confirmar o cambiar tu idea.",
+   "option_notes": {
+    "Te quedas con la predicción porque la foto muestra un jardín.": "Confía solo en la imagen y no comprueba el texto.",
+    "Copias la palabra “Tools” sin relacionarla con el texto.": "Mira el subtítulo como palabra aislada, sin usar su información.",
+    "Saltas la sección y buscas flores en otra página.": "Abandona el texto en vez de revisar la sección relevante."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "Título: “The Quillay Tree”. Texto: “The quillay is a Chilean tree. It has green leaves. People use its bark to make soap.” Después, ¿qué plan muestra mejor las estrategias?",
+   "options": [
+    "Ordenas las palabras alfabéticamente y borras las oraciones.",
+    "Copias solo el título y miras otro árbol.",
+    "Haces un diagrama y relees la oración sobre la corteza.",
+    "Inventas un uso del quillay y no vuelves al texto."
+   ],
+   "correct": "Haces un diagrama y relees la oración sobre la corteza.",
+   "hint": "El diagrama organiza las ideas y la relectura permite comprobar un dato específico.",
+   "clue": "Busca un plan que ordene ideas y permita verificar un dato.",
+   "option_notes": {
+    "Copias solo el título y miras otro árbol.": "Registra una pista general, pero no organiza ni verifica los datos.",
+    "Ordenas las palabras alfabéticamente y borras las oraciones.": "Ordena vocabulario y elimina la información importante.",
+    "Inventas un uso del quillay y no vuelves al texto.": "Agrega información sin comprobarla en la lectura."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

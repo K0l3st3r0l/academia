@@ -1,0 +1,264 @@
+{
+ "oa": "OA3",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "Lee: «El zorro prometió ayudar a la gallina, pero se quedó con sus granos. Desde entonces, nadie confió en sus promesas». ¿Qué tipo de relato es?",
+   "options": [
+    "Leyenda",
+    "Fábula",
+    "Mito",
+    "Novela"
+   ],
+   "correct": "Fábula",
+   "hint": "Los animales actúan como personas y el relato deja una enseñanza sobre la conducta.",
+   "clue": "Fíjate en quiénes actúan y en la enseñanza del final.",
+   "option_notes": {
+    "Leyenda": "Confunde una enseñanza con un relato ligado a un lugar o tradición.",
+    "Mito": "Confunde animales personificados con dioses o explicaciones de orígenes.",
+    "Novela": "Confunde un relato breve con una narración extensa, a menudo dividida en capítulos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "Lee: «La lluvia toca el techo, / con dedos de cristal; / despierta a los geranios / y vuelve a descansar». ¿Qué rasgo confirma que pertenece a un poema?",
+   "options": [
+    "Está organizado en versos y usa imágenes.",
+    "Presenta viñetas y globos de diálogo.",
+    "Cuenta una tradición de una localidad.",
+    "Explica un origen con dioses."
+   ],
+   "correct": "Está organizado en versos y usa imágenes.",
+   "hint": "Las líneas separadas y la expresión «dedos de cristal» son recursos poéticos.",
+   "clue": "Mira la forma del fragmento y las palabras que crean una imagen.",
+   "option_notes": {
+    "Presenta viñetas y globos de diálogo.": "Confunde un poema con una historieta.",
+    "Explica un origen con dioses.": "Confunde una imagen poética con un mito.",
+    "Cuenta una tradición de una localidad.": "Confunde un poema con una leyenda."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "Lee: «En una isla de Chiloé, una campana aparece cada invierno para recordar una antigua promesa de los habitantes». ¿Qué razón permite clasificarla como leyenda?",
+   "options": [
+    "Explica el origen del universo con dioses.",
+    "Presenta animales que dejan una moraleja.",
+    "Se vincula con un lugar y una tradición local.",
+    "Está escrita en versos con rima pareja."
+   ],
+   "correct": "Se vincula con un lugar y una tradición local.",
+   "hint": "Las leyendas suelen relacionarse con lugares, hechos o creencias que una comunidad transmite.",
+   "clue": "Busca el dato que une el relato con la memoria de una comunidad.",
+   "option_notes": {
+    "Está escrita en versos con rima pareja.": "Confunde una leyenda con un poema por fijarse en su forma.",
+    "Presenta animales que dejan una moraleja.": "Confunde una leyenda con una fábula y su enseñanza.",
+    "Explica el origen del universo con dioses.": "Confunde una leyenda local con un mito sobre los orígenes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "Imagina cuatro cuadros: en el primero, Javiera corre; en el segundo, aparece un perro; en los dos últimos, ella habla en globos y resuelve el problema. ¿Qué tipo de texto es?",
+   "options": [
+    "Mito",
+    "Novela",
+    "Historieta",
+    "Poema"
+   ],
+   "correct": "Historieta",
+   "hint": "La historia se organiza en cuadros y usa globos de diálogo, rasgos propios de una historieta.",
+   "clue": "Piensa en el texto que combina cuadros y globos.",
+   "option_notes": {
+    "Novela": "Confunde una narración extensa con un relato contado en cuadros.",
+    "Poema": "Confunde lenguaje literario con la organización visual en cuadros.",
+    "Mito": "Confunde una historia con personajes con un relato sobre dioses u orígenes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Lee: «En la feria de San Pedro de Atacama se cuenta, desde hace generaciones, el viaje de una niña para encontrar agua. Cada familia lo narra con pequeños cambios». ¿Qué tipo es más probable?",
+   "options": [
+    "Artículo informativo",
+    "Fábula",
+    "Cuento de autor",
+    "Cuento folclórico"
+   ],
+   "correct": "Cuento folclórico",
+   "hint": "La transmisión comunitaria y las distintas versiones son rasgos del cuento folclórico.",
+   "clue": "Considera cómo se transmite y si existe una versión única.",
+   "option_notes": {
+    "Cuento de autor": "Supone una obra fijada por una autora o un autor identificable.",
+    "Fábula": "Busca animales personificados y una moraleja, que aquí no aparecen.",
+    "Artículo informativo": "Confunde un relato tradicional con un texto cuyo fin principal es informar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Lee: «En la biblioteca de Temuco, Diego encontró un paraguas que hablaba y lo llevó a conocer la lluvia». ¿Qué dato ayudaría más a decidir si es un cuento de autor?",
+   "options": [
+    "El precio del libro y su tamaño",
+    "Su autora o autor y la versión publicada",
+    "El color de la portada y sus dibujos",
+    "La cantidad de lectores de la biblioteca"
+   ],
+   "correct": "Su autora o autor y la versión publicada",
+   "hint": "Un cuento de autor tiene una persona creadora identificable y una versión escrita concreta.",
+   "clue": "Busca el dato relacionado con quién creó el relato y cómo quedó escrito.",
+   "option_notes": {
+    "El precio del libro y su tamaño": "Confunde datos físicos o comerciales con la autoría del relato.",
+    "El color de la portada y sus dibujos": "Confunde elementos visuales con la persona que creó la historia.",
+    "La cantidad de lectores de la biblioteca": "Confunde la recepción del cuento con su origen y autoría."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Lee: «En la caleta, las abuelas cuentan que una estrella guía a los pescadores de regreso. Los niños escuchan la historia y aprenden por qué la comunidad celebra esa noche». ¿Qué valor cultural se reconoce?",
+   "options": [
+    "Demostrar que todas las historias son verdaderas.",
+    "Conservar una memoria y una celebración compartidas.",
+    "Reemplazar las costumbres por explicaciones científicas.",
+    "Aprender a calcular la distancia entre estrellas."
+   ],
+   "correct": "Conservar una memoria y una celebración compartidas.",
+   "hint": "El relato une a la comunidad con una memoria y una celebración que se transmiten.",
+   "clue": "Piensa qué aprende la comunidad sobre sí misma, no sobre astronomía.",
+   "option_notes": {
+    "Aprender a calcular la distancia entre estrellas.": "Confunde una enseñanza cultural con un dato científico de astronomía.",
+    "Demostrar que todas las historias son verdaderas.": "Confunde valorar una tradición con comprobar literalmente cada relato.",
+    "Reemplazar las costumbres por explicaciones científicas.": "Confunde conocer una tradición con eliminarla o sustituirla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Lee: «Al comenzar el tiempo, una diosa escondió su fuego bajo el mar; por eso las estrellas brillan en la noche». ¿Cuál explicación justifica mejor que sea un mito?",
+   "options": [
+    "Ordena viñetas con diálogos breves.",
+    "Relata una noticia comprobada en un lugar.",
+    "Presenta una moraleja con animales parlantes.",
+    "Explica un fenómeno mediante un ser sobrenatural."
+   ],
+   "correct": "Explica un fenómeno mediante un ser sobrenatural.",
+   "hint": "Los mitos suelen usar seres sobrenaturales para explicar orígenes o fenómenos del mundo.",
+   "clue": "Relaciona la diosa con la explicación del brillo de las estrellas.",
+   "option_notes": {
+    "Relata una noticia comprobada en un lugar.": "Confunde una explicación imaginaria con información periodística verificable.",
+    "Presenta una moraleja con animales parlantes.": "Confunde un mito con una fábula.",
+    "Ordena viñetas con diálogos breves.": "Confunde un relato mítico con una historieta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Lee: «El pudú escondió las semillas que todos habían juntado. Cuando llegó el invierno, nadie compartió con él y pasó hambre. El zorro le ofreció ayuda, pero le pidió devolver lo recibido». ¿Qué acción aplica mejor la enseñanza?",
+   "options": [
+    "Usar lo ajeno sin avisar si la tarea es urgente.",
+    "Guardar los materiales propios y pedir más al final.",
+    "Compartir los materiales y devolverlos después de usarlos.",
+    "Prestar solo a los amigos y negar ayuda al resto."
+   ],
+   "correct": "Compartir los materiales y devolverlos después de usarlos.",
+   "hint": "La fábula sugiere que la ayuda y la responsabilidad deben ser recíprocas.",
+   "clue": "Piensa qué conducta responde a la ayuda recibida y cuida lo que es de todos.",
+   "option_notes": {
+    "Guardar los materiales propios y pedir más al final.": "Elige acumular recursos sin colaborar ni asumir responsabilidad.",
+    "Prestar solo a los amigos y negar ayuda al resto.": "Reduce la solidaridad a un grupo pequeño.",
+    "Usar lo ajeno sin avisar si la tarea es urgente.": "Confunde necesitar ayuda con tener permiso para apropiarse de ella."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Lee: «A: El cerro se puso su manta blanca / y saludó al amanecer. B: La gente cuenta que una pastora convirtió en estrella una piedra del valle». ¿Cuál relación es correcta?",
+   "options": [
+    "A es noticia por el valle; B es poema por la estrella.",
+    "A es mito por el cerro; B es fábula por la pastora.",
+    "A es historieta por sus hechos; B es de autor por parecer inventado.",
+    "A es poema por sus versos; B es leyenda por su tradición local."
+   ],
+   "correct": "A es poema por sus versos; B es leyenda por su tradición local.",
+   "hint": "A usa versos e imágenes; B se presenta como relato transmitido por la gente y ligado a un lugar.",
+   "clue": "Compara la forma de A con la manera en que se transmite B.",
+   "option_notes": {
+    "A es mito por el cerro; B es fábula por la pastora.": "Confunde una imagen poética y una tradición local con otros géneros.",
+    "A es noticia por el valle; B es poema por la estrella.": "Confunde lenguaje imaginativo y tradición local con noticia y poema.",
+    "A es historieta por sus hechos; B es de autor por parecer inventado.": "Confunde dos fragmentos escritos con viñetas y autoría individual."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Martín quiere transformar una historieta sobre una visita al museo en un capítulo de novela. ¿Qué cambio conserva la historia y adapta su forma?",
+   "options": [
+    "Pasar viñetas y globos a párrafos, conservando personajes y problema.",
+    "Eliminar los hechos y dejar solo los dibujos de cada escena.",
+    "Agregar rimas a los diálogos y cambiar la visita por una leyenda.",
+    "Copiar los globos sin narración y llamarlos capítulo de novela."
+   ],
+   "correct": "Pasar viñetas y globos a párrafos, conservando personajes y problema.",
+   "hint": "Adaptar cambia la forma de contar, pero mantiene los hechos centrales, personajes y problema.",
+   "clue": "Distingue lo propio del formato de la historieta de lo que pertenece a la historia.",
+   "option_notes": {
+    "Eliminar los hechos y dejar solo los dibujos de cada escena.": "Elimina el contenido narrativo en vez de adaptarlo a párrafos.",
+    "Agregar rimas a los diálogos y cambiar la visita por una leyenda.": "Cambia el género y la historia, en lugar de conservar el conflicto.",
+    "Copiar los globos sin narración y llamarlos capítulo de novela.": "Mantiene un elemento de historieta, pero no crea narración de novela."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "La profesora quiere que el curso conozca muchos tipos de literatura durante tres unidades. ¿Qué proyecto combina mejor leer diversos textos, imaginar mundos y valorar culturas?",
+   "options": [
+    "Leer cuentos, poemas, leyendas y novelas; imaginar y valorar culturas.",
+    "Memorizar géneros y responder sin leer los textos.",
+    "Ver historietas sin leerlas; ordenar títulos por extensión.",
+    "Leer solo novelas de aventuras; copiar personajes en el cuaderno."
+   ],
+   "correct": "Leer cuentos, poemas, leyendas y novelas; imaginar y valorar culturas.",
+   "hint": "Un repertorio amplio permite conocer formas diversas, imaginar y comprender culturas.",
+   "clue": "Elige el plan que incluya variedad de lecturas y una reflexión sobre sus aportes.",
+   "option_notes": {
+    "Leer solo novelas de aventuras; copiar personajes en el cuaderno.": "Limita el repertorio y se concentra en copiar, no en comprender.",
+    "Memorizar géneros y responder sin leer los textos.": "Aprende etiquetas, pero no se familiariza con la literatura.",
+    "Ver historietas sin leerlas; ordenar títulos por extensión.": "No lee los textos ni relaciona su contenido con culturas o imaginación."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

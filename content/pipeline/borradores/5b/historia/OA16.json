@@ -1,0 +1,264 @@
+{
+ "oa": "OA16",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA16",
+   "difficulty": "easy",
+   "text": "En tu curso acordaron dejar los materiales ordenados al terminar. ¿Qué acción demuestra responsabilidad?",
+   "options": [
+    "Salir rápido y dejar los materiales sobre la mesa",
+    "Ayudar a dejar todos los materiales en su lugar",
+    "Esperar que otra persona cumpla el acuerdo",
+    "Guardar solo lo que ocupaste tú"
+   ],
+   "correct": "Ayudar a dejar todos los materiales en su lugar",
+   "hint": "Cumplir un acuerdo común y hacerse cargo del orden demuestra responsabilidad.",
+   "clue": "Piensa en qué acción cumple el acuerdo aunque tengas prisa.",
+   "option_notes": {
+    "Salir rápido y dejar los materiales sobre la mesa": "Prioriza la rapidez y deja de cumplir el acuerdo común.",
+    "Guardar solo lo que ocupaste tú": "Confunde la responsabilidad personal con cumplir un acuerdo de todo el curso.",
+    "Esperar que otra persona cumpla el acuerdo": "Deja la responsabilidad en otra persona."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "easy",
+   "text": "Martina quiere ver una película que su familia no compró. ¿Qué opción respeta la autoría?",
+   "options": [
+    "Pedir a un amigo una copia pirateada",
+    "Descargar una copia desde cualquier página",
+    "Grabar la pantalla de una película prestada",
+    "Elegir una plataforma autorizada para verla"
+   ],
+   "correct": "Elegir una plataforma autorizada para verla",
+   "hint": "Usar una plataforma autorizada respeta el trabajo y los derechos de quienes hicieron la película.",
+   "clue": "Busca una forma permitida de acceder a la película.",
+   "option_notes": {
+    "Descargar una copia desde cualquier página": "Supone que cualquier sitio permite copiar una película.",
+    "Pedir a un amigo una copia pirateada": "Confunde pedir prestado con compartir una copia no autorizada.",
+    "Grabar la pantalla de una película prestada": "Copia la obra sin contar con autorización."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "easy",
+   "text": "En una actividad, Tomás usa muletas. ¿Qué actitud demuestra respeto?",
+   "options": [
+    "Elegir por él una tarea sin preguntarle",
+    "Hacer bromas sobre sus muletas para integrarlo",
+    "Preguntarle qué apoyo necesita e incluirlo en la actividad",
+    "Dejarlo como espectador para evitar que se esfuerce"
+   ],
+   "correct": "Preguntarle qué apoyo necesita e incluirlo en la actividad",
+   "hint": "Preguntar y adaptar el apoyo permite incluirlo sin decidir por él ni burlarse.",
+   "clue": "El respeto incluye preguntar a la persona y darle oportunidades de participar.",
+   "option_notes": {
+    "Dejarlo como espectador para evitar que se esfuerce": "Lo excluye, aunque parezca una forma de protegerlo.",
+    "Elegir por él una tarea sin preguntarle": "Decide por él y no considera sus preferencias o necesidades.",
+    "Hacer bromas sobre sus muletas para integrarlo": "Confunde la inclusión con burlarse de una condición física."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "easy",
+   "text": "Al salir de la sala durante el recreo, ¿qué acción cuida el medioambiente?",
+   "options": [
+    "Encender más luces para que la sala se vea mejor",
+    "Dejar las luces encendidas para encontrar todo al volver",
+    "Apagar las luces y el proyector que no se usarán",
+    "Dejar el proyector funcionando para no encenderlo después"
+   ],
+   "correct": "Apagar las luces y el proyector que no se usarán",
+   "hint": "Apagar aparatos y luces que no se necesitan evita gastar energía.",
+   "clue": "Elige la acción que evita un consumo innecesario de energía.",
+   "option_notes": {
+    "Dejar las luces encendidas para encontrar todo al volver": "Gasta energía sin necesidad durante el recreo.",
+    "Encender más luces para que la sala se vea mejor": "Aumenta el consumo aunque la sala ya esté iluminada.",
+    "Dejar el proyector funcionando para no encenderlo después": "Mantiene un aparato encendido sin que nadie lo use."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "medium",
+   "text": "Para una tarea sobre los pueblos originarios, Camila encuentra un párrafo en internet. ¿Qué debe hacer para actuar con honestidad?",
+   "options": [
+    "Cambiar algunas palabras y no decir de dónde salió",
+    "Usarlo sin leerlo, porque está publicado en internet",
+    "Copiarlo completo y poner solo su nombre",
+    "Explicarlo con sus palabras y mencionar la fuente"
+   ],
+   "correct": "Explicarlo con sus palabras y mencionar la fuente",
+   "hint": "Expresar la idea con palabras propias y reconocer la fuente evita el plagio.",
+   "clue": "Una tarea honesta muestra qué parte pensaste tú y de dónde obtuviste la información.",
+   "option_notes": {
+    "Copiarlo completo y poner solo su nombre": "Presenta como propio un texto escrito por otra persona.",
+    "Cambiar algunas palabras y no decir de dónde salió": "Oculta la fuente, aunque modifique parte del texto.",
+    "Usarlo sin leerlo, porque está publicado en internet": "Cree que publicar algo permite usarlo sin comprenderlo ni citarlo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "medium",
+   "text": "En un debate sobre cuidar el agua, Sofía opina distinto a ti. ¿Qué haces primero?",
+   "options": [
+    "Escucharla sin interrumpir y preguntar por sus razones",
+    "Interrumpirla para demostrar que estás en lo correcto",
+    "Reírte de su idea y pedir que cambien de tema",
+    "Dejar de participar para no escuchar opiniones distintas"
+   ],
+   "correct": "Escucharla sin interrumpir y preguntar por sus razones",
+   "hint": "Escuchar y preguntar con respeto permite comprender una opinión diferente antes de responder.",
+   "clue": "Antes de defender tu idea, muestra que puedes atender la de otra persona.",
+   "option_notes": {
+    "Interrumpirla para demostrar que estás en lo correcto": "Prioriza ganar la discusión en vez de escuchar.",
+    "Reírte de su idea y pedir que cambien de tema": "Descalifica una opinión distinta y evita dialogar.",
+    "Dejar de participar para no escuchar opiniones distintas": "Evita convivir con ideas diferentes en vez de respetarlas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "medium",
+   "text": "En el recreo encuentras un estuche en una banca. ¿Qué haces para respetar la propiedad de otra persona?",
+   "options": [
+    "Entregarlo en inspectoría para que encuentren a su dueño",
+    "Repartir lo que tiene entre tus amigos",
+    "Guardarlo en tu mochila hasta el final del día",
+    "Dejarlo donde está y seguir jugando"
+   ],
+   "correct": "Entregarlo en inspectoría para que encuentren a su dueño",
+   "hint": "Entregar un objeto perdido ayuda a que vuelva a su dueño y evita apropiarte de él.",
+   "clue": "Piensa en la acción que protege el objeto y busca a quien lo perdió.",
+   "option_notes": {
+    "Guardarlo en tu mochila hasta el final del día": "Se apropia temporalmente de algo que no te pertenece.",
+    "Repartir lo que tiene entre tus amigos": "Trata una pertenencia ajena como si fuera propia.",
+    "Dejarlo donde está y seguir jugando": "No ayuda a protegerlo ni a encontrar a su dueño."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "medium",
+   "text": "Tu curso visita un sitio patrimonial de Chile y ve basura cerca. ¿Qué propuesta combina cuidado y respeto por el patrimonio?",
+   "options": [
+    "Pintar mensajes en las paredes para que otros lo conozcan",
+    "Campaña: informar, recoger residuos y no dañar el sitio",
+    "Tomar piedras del lugar como recuerdo y mostrarlas en clase",
+    "Esconder la basura detrás de un muro para que no se vea"
+   ],
+   "correct": "Campaña: informar, recoger residuos y no dañar el sitio",
+   "hint": "Informar y retirar residuos sin alterar el sitio ayuda a conservarlo para todos.",
+   "clue": "El patrimonio se cuida con acciones que lo protegen, no que lo modifican.",
+   "option_notes": {
+    "Esconder la basura detrás de un muro para que no se vea": "Oculta el problema y no protege realmente el lugar.",
+    "Tomar piedras del lugar como recuerdo y mostrarlas en clase": "Daña el sitio al llevarse elementos que pertenecen a él.",
+    "Pintar mensajes en las paredes para que otros lo conozcan": "Altera el patrimonio y confunde informar con rayar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "hard",
+   "text": "En un trabajo grupal, Benjamín llega callado porque olvidó sus materiales y sus compañeros se enojan. ¿Qué respuesta ayuda más a resolver el problema?",
+   "options": [
+    "Escuchar, compartir materiales y acordar cómo organizarse después",
+    "Reprenderlo delante del curso y excluirlo del trabajo",
+    "Decir que no importa y dejar que el grupo trabaje sin él",
+    "Resolverlo sin preguntarle y exigirle el doble mañana"
+   ],
+   "correct": "Escuchar, compartir materiales y acordar cómo organizarse después",
+   "hint": "Escuchar permite comprenderlo; compartir y acordar responsabilidades ayuda a reparar el problema.",
+   "clue": "Una solución pacífica considera lo ocurrido y también la responsabilidad futura.",
+   "option_notes": {
+    "Reprenderlo delante del curso y excluirlo del trabajo": "Lo humilla y deja sin solución el problema del grupo.",
+    "Resolverlo sin preguntarle y exigirle el doble mañana": "Decide sin escuchar y responde con un castigo desproporcionado.",
+    "Decir que no importa y dejar que el grupo trabaje sin él": "Ignora el problema y excluye a un integrante."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "hard",
+   "text": "En una salida, el curso puede usar botellas desechables o llevar botellas reutilizables y rellenarlas. ¿Por qué la segunda opción es más responsable?",
+   "options": [
+    "Permite gastar más agua en cada recreo",
+    "Reduce residuos y evita usar una botella nueva cada vez",
+    "Evita que el curso tenga que cuidar sus pertenencias",
+    "Es mejor solo porque las botellas son más grandes"
+   ],
+   "correct": "Reduce residuos y evita usar una botella nueva cada vez",
+   "hint": "Reutilizar una botella disminuye la basura y la necesidad de producir otras nuevas.",
+   "clue": "Relaciona la reutilización con la cantidad de residuos y recursos usados.",
+   "option_notes": {
+    "Permite gastar más agua en cada recreo": "Confunde reutilizar un envase con gastar más agua.",
+    "Evita que el curso tenga que cuidar sus pertenencias": "Presenta como ventaja dejar de ser responsable.",
+    "Es mejor solo porque las botellas son más grandes": "Se fija en el tamaño y no en reducir residuos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "hard",
+   "text": "En una feria, un grupo presenta una comida tradicional mapuche. Un estudiante dice que es «rara». ¿Qué respuesta demuestra respeto y ayuda a aprender?",
+   "options": [
+    "Probarla sin permiso y cambiar la receta para hacerla normal",
+    "Decir que solo las comidas conocidas merecen respeto",
+    "Evitar burlas, escuchar la explicación y preguntar por su origen",
+    "Reírse para que el grupo no se sienta especial"
+   ],
+   "correct": "Evitar burlas, escuchar la explicación y preguntar por su origen",
+   "hint": "Escuchar y preguntar sin burlas reconoce la cultura presentada y permite comprenderla mejor.",
+   "clue": "Una diferencia cultural se conoce mejor con respeto y curiosidad.",
+   "option_notes": {
+    "Reírse para que el grupo no se sienta especial": "Mantiene la burla y no reconoce la diferencia cultural.",
+    "Decir que solo las comidas conocidas merecen respeto": "Discrimina lo desconocido y niega la diversidad cultural.",
+    "Probarla sin permiso y cambiar la receta para hacerla normal": "No respeta al grupo ni la tradición que presenta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA16",
+   "difficulty": "hard",
+   "text": "Tu equipo hará un afiche sobre un parque nacional de Chile. Una integrante propone copiar una imagen sin permiso y otra quiere inventar datos. ¿Qué decisión demuestra ciudadanía?",
+   "options": [
+    "Inventar datos atractivos y usar cualquier imagen",
+    "Usar la imagen sin permiso, pero escribir la fuente al final",
+    "Copiar todo rápido y borrar los nombres de las fuentes",
+    "Elegir imágenes autorizadas, comprobar los datos y citar las fuentes"
+   ],
+   "correct": "Elegir imágenes autorizadas, comprobar los datos y citar las fuentes",
+   "hint": "La honestidad exige datos comprobados, fuentes reconocidas y respeto por la autoría de imágenes.",
+   "clue": "La decisión debe cuidar a la vez la verdad de la información y la autoría.",
+   "option_notes": {
+    "Copiar todo rápido y borrar los nombres de las fuentes": "Oculta el trabajo ajeno y evita comprobar la información.",
+    "Inventar datos atractivos y usar cualquier imagen": "Prefiere llamar la atención, aunque engañe y no respete la autoría.",
+    "Usar la imagen sin permiso, pero escribir la fuente al final": "Reconocer la fuente no reemplaza tener autorización para usarla."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

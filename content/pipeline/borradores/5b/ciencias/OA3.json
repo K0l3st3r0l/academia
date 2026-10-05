@@ -1,0 +1,264 @@
+{
+ "oa": "OA3",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿Por qué parte del sistema respiratorio entra primero el aire del ambiente?",
+   "options": [
+    "Los bronquios",
+    "La tráquea",
+    "La nariz",
+    "Los alvéolos"
+   ],
+   "correct": "La nariz",
+   "hint": "La nariz es la entrada habitual del aire al sistema respiratorio.",
+   "clue": "Piensa en la primera parte que toca el aire al entrar al cuerpo.",
+   "option_notes": {
+    "La tráquea": "Es un tubo interno por donde el aire sigue después de entrar.",
+    "Los bronquios": "Son ramas que reciben el aire más adelante.",
+    "Los alvéolos": "Son sacos donde ocurre el intercambio de gases."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿En qué órganos se encuentran los alvéolos, pequeños sacos donde se intercambian oxígeno y dióxido de carbono?",
+   "options": [
+    "La nariz",
+    "Los pulmones",
+    "Los bronquios",
+    "La tráquea"
+   ],
+   "correct": "Los pulmones",
+   "hint": "Los pulmones contienen muchos alvéolos donde ocurre el intercambio de gases.",
+   "clue": "Busca la opción que nombre los dos órganos principales de la respiración.",
+   "option_notes": {
+    "La nariz": "Es la entrada del aire, no el órgano que contiene los alvéolos.",
+    "La tráquea": "Es un conducto de paso, no el órgano donde están los alvéolos.",
+    "Los bronquios": "Son ramas que llevan aire, pero no son los órganos principales."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿Qué estructura es el tubo que lleva el aire desde la garganta hasta los bronquios?",
+   "options": [
+    "La tráquea",
+    "El esófago",
+    "Los alvéolos",
+    "Los pulmones"
+   ],
+   "correct": "La tráquea",
+   "hint": "La tráquea es el conducto que conecta la garganta con los bronquios.",
+   "clue": "Piensa en un tubo por donde pasa aire, no alimentos.",
+   "option_notes": {
+    "El esófago": "Lleva alimentos hacia el estómago, no aire hacia los pulmones.",
+    "Los alvéolos": "Son sacos pequeños y están después de los bronquios.",
+    "Los pulmones": "Son órganos que contienen los conductos y alvéolos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿Qué gas necesita recibir la sangre en los alvéolos para que las células lo usen?",
+   "options": [
+    "Nitrógeno",
+    "Oxígeno",
+    "Ozono",
+    "Dióxido de carbono"
+   ],
+   "correct": "Oxígeno",
+   "hint": "El oxígeno pasa desde los alvéolos a la sangre y luego llega a las células.",
+   "clue": "Recuerda qué gas necesita el cuerpo para obtener energía.",
+   "option_notes": {
+    "Dióxido de carbono": "Es un desecho que pasa desde la sangre hacia los alvéolos.",
+    "Nitrógeno": "Es abundante en el aire, pero no es el gas que usan las células.",
+    "Ozono": "No es el gas que el sistema respiratorio entrega a las células."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Si sigues una porción de aire desde que entra al cuerpo, ¿qué recorrido representa mejor su camino?",
+   "options": [
+    "Nariz → alvéolos → tráquea → bronquios",
+    "Tráquea → nariz → alvéolos → bronquios",
+    "Alvéolos → bronquios → tráquea → nariz",
+    "Nariz → tráquea → bronquios → alvéolos"
+   ],
+   "correct": "Nariz → tráquea → bronquios → alvéolos",
+   "hint": "El aire avanza desde la entrada, por conductos, hasta los sacos de intercambio.",
+   "clue": "Ordena las estructuras desde la entrada del aire hasta el lugar del intercambio.",
+   "option_notes": {
+    "Nariz → alvéolos → tráquea → bronquios": "Pone los alvéolos antes de los conductos que llevan el aire.",
+    "Alvéolos → bronquios → tráquea → nariz": "Invierte el recorrido, comenzando en el lugar de intercambio.",
+    "Tráquea → nariz → alvéolos → bronquios": "Confunde la entrada con un paso posterior y desordena las estructuras."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "En un modelo, al tirar hacia abajo una membrana, dos globos se agrandan y entra aire. ¿Qué proceso representa?",
+   "options": [
+    "Espiración",
+    "Inspiración",
+    "Circulación sanguínea",
+    "Intercambio de gases"
+   ],
+   "correct": "Inspiración",
+   "hint": "La inspiración ocurre cuando el aire entra a los pulmones.",
+   "clue": "Observa si el aire entra o sale cuando los globos cambian de tamaño.",
+   "option_notes": {
+    "Espiración": "Es cuando el aire sale y los globos disminuyen su tamaño.",
+    "Intercambio de gases": "Ocurre en los alvéolos, no describe la entrada de aire completa.",
+    "Circulación sanguínea": "Es el movimiento de la sangre, no el proceso mostrado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "En los alvéolos, el oxígeno pasa a la sangre. ¿Qué ocurre con el dióxido de carbono?",
+   "options": [
+    "Sale de la sangre hacia los alvéolos",
+    "Entra de los alvéolos a la sangre",
+    "Se convierte en oxígeno dentro del pulmón",
+    "Se queda almacenado en la tráquea"
+   ],
+   "correct": "Sale de la sangre hacia los alvéolos",
+   "hint": "El dióxido de carbono viaja desde la sangre hasta los alvéolos para salir al exhalar.",
+   "clue": "Para salir del cuerpo, sigue el camino inverso al oxígeno.",
+   "option_notes": {
+    "Entra de los alvéolos a la sangre": "Confunde el sentido del dióxido de carbono con el del oxígeno.",
+    "Se convierte en oxígeno dentro del pulmón": "Supone que un gas se transforma en otro dentro del pulmón.",
+    "Se queda almacenado en la tráquea": "Imagina que la tráquea almacena gases, pero solo los conduce."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Cuando los pulmones disminuyen su volumen, ¿qué sucede normalmente con el aire que contienen?",
+   "options": [
+    "Se transforma en sangre",
+    "Se queda en los alvéolos",
+    "Entra desde la nariz",
+    "Sale hacia el exterior"
+   ],
+   "correct": "Sale hacia el exterior",
+   "hint": "Al disminuir el volumen pulmonar, el aire es expulsado: eso es la espiración.",
+   "clue": "Relaciona una disminución del volumen con la salida de aire.",
+   "option_notes": {
+    "Entra desde la nariz": "Es lo contrario: el aire entra cuando los pulmones aumentan su volumen.",
+    "Se transforma en sangre": "El aire no se transforma en sangre durante la respiración.",
+    "Se queda en los alvéolos": "El aire no permanece allí; debe salir al disminuir el volumen pulmonar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Después de correr en el Parque O'Higgins, Tomás respira más rápido. ¿Cuál es la mejor explicación?",
+   "options": [
+    "Sus pulmones fabrican oxígeno y guardan dióxido de carbono",
+    "Sus alvéolos dejan de intercambiar gases por unos minutos",
+    "Su nariz convierte el dióxido de carbono en oxígeno",
+    "Sus células necesitan más oxígeno y producen más dióxido de carbono"
+   ],
+   "correct": "Sus células necesitan más oxígeno y producen más dióxido de carbono",
+   "hint": "Al hacer ejercicio, las células usan más oxígeno y producen más dióxido de carbono.",
+   "clue": "Relaciona el esfuerzo de las células con los dos gases que el cuerpo intercambia.",
+   "option_notes": {
+    "Sus pulmones fabrican oxígeno y guardan dióxido de carbono": "Confunde el trabajo de los pulmones con la producción y el almacenamiento de gases.",
+    "Su nariz convierte el dióxido de carbono en oxígeno": "Atribuye a la nariz un cambio de gases que no realiza.",
+    "Sus alvéolos dejan de intercambiar gases por unos minutos": "Supone que el ejercicio detiene el intercambio, cuando lo aumenta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Una estudiante modela el camino del aire así: nariz → bronquios → tráquea → alvéolos. ¿Qué debe corregir?",
+   "options": [
+    "Ubicar la tráquea antes de los bronquios",
+    "Ubicar los bronquios después de los alvéolos",
+    "Ubicar la nariz después de los alvéolos",
+    "Ubicar los alvéolos antes de la nariz"
+   ],
+   "correct": "Ubicar la tráquea antes de los bronquios",
+   "hint": "El aire pasa por la nariz, luego por la tráquea y los bronquios, y llega a los alvéolos.",
+   "clue": "Busca qué dos estructuras están invertidas en la flecha.",
+   "option_notes": {
+    "Ubicar los alvéolos antes de la nariz": "Los alvéolos son el destino final del aire, no la entrada.",
+    "Ubicar la nariz después de los alvéolos": "La nariz debe aparecer al comienzo del recorrido.",
+    "Ubicar los bronquios después de los alvéolos": "Los bronquios llevan el aire hacia los alvéolos, no al revés."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "El aire que exhalas contiene más dióxido de carbono que el aire que inhalas. ¿Qué recorrido explica ese aumento?",
+   "options": [
+    "Los pulmones lo convierten en oxígeno y la sangre lo devuelve",
+    "La nariz lo absorbe, los bronquios lo cambian y llega a las células",
+    "Las células lo producen, la sangre lo lleva a los alvéolos y sale",
+    "Los alvéolos lo fabrican, la tráquea lo guarda y luego sale"
+   ],
+   "correct": "Las células lo producen, la sangre lo lleva a los alvéolos y sale",
+   "hint": "Las células producen dióxido de carbono; la sangre lo lleva a los alvéolos para eliminarlo.",
+   "clue": "Sigue el dióxido de carbono desde las células hasta el exterior.",
+   "option_notes": {
+    "Los alvéolos lo fabrican, la tráquea lo guarda y luego sale": "Los alvéolos realizan intercambio, pero no fabrican el dióxido de carbono.",
+    "La nariz lo absorbe, los bronquios lo cambian y llega a las células": "La tráquea y los bronquios conducen aire, pero no cambian ese gas.",
+    "Los pulmones lo convierten en oxígeno y la sangre lo devuelve": "El dióxido de carbono no se convierte en oxígeno en los pulmones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "En una maqueta, una bolsa representa un alvéolo y otra, un vaso sanguíneo. ¿Qué debería mostrar el modelo para representar bien el intercambio?",
+   "options": [
+    "Ambos gases desde la sangre hacia el alvéolo",
+    "Dióxido de carbono hacia la sangre y oxígeno hacia el alvéolo",
+    "Oxígeno hacia la sangre y dióxido de carbono hacia el alvéolo",
+    "Ambos gases desde el alvéolo hacia la sangre"
+   ],
+   "correct": "Oxígeno hacia la sangre y dióxido de carbono hacia el alvéolo",
+   "hint": "En los alvéolos, el oxígeno entra a la sangre y el dióxido de carbono sale de ella.",
+   "clue": "Cada gas cruza en una dirección distinta entre el alvéolo y la sangre.",
+   "option_notes": {
+    "Ambos gases desde la sangre hacia el alvéolo": "Confunde el sentido del oxígeno y omite su entrada a la sangre.",
+    "Ambos gases desde el alvéolo hacia la sangre": "Supone que ambos gases se mueven siempre en la misma dirección.",
+    "Dióxido de carbono hacia la sangre y oxígeno hacia el alvéolo": "Invierte las direcciones normales de ambos gases."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

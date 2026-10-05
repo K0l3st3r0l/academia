@@ -1,0 +1,268 @@
+{
+ "oa": "OA7",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "¿Cuál de estas fracciones es propia?",
+   "options": [
+    "7/4",
+    "4/4",
+    "5/3",
+    "3/5"
+   ],
+   "correct": "3/5",
+   "hint": "Una fracción propia tiene el numerador menor que el denominador.",
+   "clue": "Mira cuál representa menos de un entero.",
+   "option_notes": {
+    "5/3": "Invierte el numerador y el denominador.",
+    "7/4": "Cree que una fracción propia puede ser mayor que un entero.",
+    "4/4": "Confunde una fracción igual a un entero con una fracción propia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Una barra de chocolate se divide en 8 partes iguales y comes 3. ¿Qué fracción de la barra comiste?",
+   "options": [
+    "8/3",
+    "3/5",
+    "3/8",
+    "5/8"
+   ],
+   "correct": "3/8",
+   "hint": "El numerador cuenta las partes comidas y el denominador, todas las partes iguales.",
+   "clue": "Primero identifica el total de partes.",
+   "option_notes": {
+    "5/8": "Cuenta las partes que quedaron.",
+    "8/3": "Invierte el total de partes y las comidas.",
+    "3/5": "Usa como total solo las partes que no comiste."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Un círculo está dividido en 6 partes iguales y 4 están sombreadas. ¿Qué fracción simplificada representa la parte sombreada?",
+   "options": [
+    "4/6",
+    "6/4",
+    "2/6",
+    "2/3"
+   ],
+   "correct": "2/3",
+   "hint": "4/6 se divide arriba y abajo por 2, y queda 2/3.",
+   "clue": "Escribe las partes sombreadas sobre el total; luego reduce ambos números.",
+   "option_notes": {
+    "4/6": "Representa la figura, pero no simplifica la fracción.",
+    "6/4": "Invierte el total y las partes sombreadas.",
+    "2/6": "Reduce solo el numerador y cambia el valor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "¿Cuál fracción es equivalente a 1/2?",
+   "options": [
+    "2/4",
+    "4/6",
+    "3/5",
+    "2/3"
+   ],
+   "correct": "2/4",
+   "hint": "Fracciones equivalentes representan la misma cantidad, aunque tengan números distintos.",
+   "clue": "Busca una fracción que conserve la mitad.",
+   "option_notes": {
+    "2/3": "Suma 1 a ambos términos, en vez de multiplicarlos.",
+    "3/5": "Aumenta ambos números sin mantener la proporción.",
+    "4/6": "Multiplica numerador y denominador por factores distintos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Amplifica 2/3 por 3. ¿Qué fracción equivalente obtienes?",
+   "options": [
+    "6/3",
+    "5/6",
+    "2/9",
+    "6/9"
+   ],
+   "correct": "6/9",
+   "hint": "Para amplificar por 3, multiplica numerador y denominador por 3.",
+   "clue": "El mismo factor se aplica arriba y abajo.",
+   "option_notes": {
+    "5/6": "Suma 3 a ambos números.",
+    "2/9": "Multiplica solo el denominador.",
+    "6/3": "Multiplica solo el numerador."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Reduce 6/12 a su forma más simple. ¿Cuál obtienes?",
+   "options": [
+    "3/4",
+    "6/6",
+    "1/2",
+    "2/6"
+   ],
+   "correct": "1/2",
+   "hint": "Divide numerador y denominador por 6, el mayor divisor común.",
+   "clue": "Busca un número que divida exactamente a 6 y a 12.",
+   "option_notes": {
+    "2/6": "Simplifica, pero no hasta la forma más simple.",
+    "3/4": "Divide numerador y denominador por números diferentes.",
+    "6/6": "Divide solo el denominador y deja el numerador igual."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "En una feria, Ana compra 3/8 kg de frutillas y Diego 5/8 kg. ¿Quién compra más y cuánto más?",
+   "options": [
+    "Diego, 2/8 kg",
+    "Ana, 2/8 kg",
+    "Diego, 8/8 kg",
+    "Ana, 8/8 kg"
+   ],
+   "correct": "Diego, 2/8 kg",
+   "hint": "Con igual denominador, compara numeradores y resta 5 − 3 = 2.",
+   "clue": "Como los octavos son iguales, compara cuántos tiene cada uno.",
+   "option_notes": {
+    "Ana, 2/8 kg": "Elige la fracción con el numerador menor.",
+    "Diego, 8/8 kg": "Suma 3 y 5 en vez de hallar la diferencia.",
+    "Ana, 8/8 kg": "Suma las partes y además elige a Ana."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Dos tiras del mismo largo están divididas en partes iguales. En la primera se pintan 2 de 3 partes y en la segunda, 3 de 5. ¿Qué tira muestra una parte pintada mayor?",
+   "options": [
+    "No se puede saber",
+    "La primera",
+    "La segunda",
+    "Muestran lo mismo"
+   ],
+   "correct": "La primera",
+   "hint": "Puedes comparar con quinceavos: 2/3 = 10/15 y 3/5 = 9/15.",
+   "clue": "Imagina ambas tiras completas y compara partes del mismo tamaño.",
+   "option_notes": {
+    "La segunda": "Compara solo los numeradores y cree que 3 es mayor que 2.",
+    "Muestran lo mismo": "Cree que fracciones distintas son iguales sin comprobar.",
+    "No se puede saber": "Piensa que no se pueden comparar denominadores distintos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "De una torta, 3/4 está con manjar. Cada cuarto se corta en 2 trozos iguales y se come 1 trozo con manjar. ¿Qué fracción queda con manjar?",
+   "options": [
+    "5/8",
+    "3/8",
+    "6/8",
+    "5/4"
+   ],
+   "correct": "5/8",
+   "hint": "Los 3 cuartos son 6 octavos; al quitar 1 octavo quedan 5 octavos.",
+   "clue": "Primero expresa los cuartos como octavos y después descuenta un trozo.",
+   "option_notes": {
+    "6/8": "Amplifica los cuartos, pero olvida quitar el trozo comido.",
+    "3/8": "Cambia el denominador sin duplicar las 3 partes con manjar.",
+    "5/4": "Resta números sin expresar todo en el mismo tipo de parte."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: exige restar fracciones (OA9), no solo representar, equivaler o comparar"
+   ]
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "En una caminata, Sofía recorrió 2/3 de 12 km y Benjamín, 3/4 de 8 km. ¿Quién recorrió más y por cuántos kilómetros?",
+   "options": [
+    "Sofía, por 4 km",
+    "Sofía, por 2 km",
+    "Benjamín, por 4 km",
+    "Benjamín, por 2 km"
+   ],
+   "correct": "Sofía, por 2 km",
+   "hint": "Calcula 2/3 de 12 = 8 y 3/4 de 8 = 6; luego compara.",
+   "clue": "Halla primero la distancia de cada persona, no compares solo las fracciones.",
+   "option_notes": {
+    "Benjamín, por 2 km": "Confunde 6 km con la distancia mayor.",
+    "Sofía, por 4 km": "Calcula mal la diferencia entre 8 km y 6 km.",
+    "Benjamín, por 4 km": "Confunde quién recorrió más y calcula mal la diferencia."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA: calcula la fracción de un número natural (multiplicación), habilidad de 6° básico"
+   ]
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Un software educativo muestra 2/3 = 8/12. Diego escribe 8/10. ¿Qué afirmación explica bien el error?",
+   "options": [
+    "Solo importa que el numerador sea 8.",
+    "8/12 sí; 8/10 no, porque no multiplica ambos por el mismo número.",
+    "8/12 y 8/10 son equivalentes.",
+    "2/3 y 8/10 son equivalentes."
+   ],
+   "correct": "8/12 sí; 8/10 no, porque no multiplica ambos por el mismo número.",
+   "hint": "De 2/3 a 8/12 se multiplica arriba y abajo por 4; 8/10 no conserva esa proporción.",
+   "clue": "Revisa si el mismo factor cambia numerador y denominador.",
+   "option_notes": {
+    "8/12 y 8/10 son equivalentes.": "Cree que basta compartir el numerador.",
+    "Solo importa que el numerador sea 8.": "Ignora que el denominador también debe cambiar.",
+    "2/3 y 8/10 son equivalentes.": "Confunde amplificar con cambiar un solo número."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Ordena de menor a mayor: 1/2, 3/8 y 2/3.",
+   "options": [
+    "1/2, 3/8, 2/3",
+    "2/3, 1/2, 3/8",
+    "3/8, 1/2, 2/3",
+    "3/8, 2/3, 1/2"
+   ],
+   "correct": "3/8, 1/2, 2/3",
+   "hint": "Con denominador 24: 3/8 = 9/24, 1/2 = 12/24 y 2/3 = 16/24.",
+   "clue": "Transforma las tres a fracciones con el mismo denominador.",
+   "option_notes": {
+    "1/2, 3/8, 2/3": "Confunde el orden de 3/8 y 1/2.",
+    "2/3, 1/2, 3/8": "Ordena las fracciones de mayor a menor.",
+    "3/8, 2/3, 1/2": "Confunde 2/3 con una fracción menor que 1/2."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

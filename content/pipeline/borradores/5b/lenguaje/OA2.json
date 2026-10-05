@@ -1,0 +1,264 @@
+{
+ "oa": "OA2",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "Lee: «El copihue es una planta nativa del sur de Chile. Crece en bosques húmedos y trepa por los árboles para acercarse a la luz.» ¿Cuál es la idea más importante?",
+   "options": [
+    "El copihue es una planta del sur que crece y trepa en bosques húmedos.",
+    "Los árboles del sur necesitan mucha luz para crecer.",
+    "Todas las plantas nativas trepan por los árboles.",
+    "El copihue busca luz trepando por los árboles."
+   ],
+   "correct": "El copihue es una planta del sur que crece y trepa en bosques húmedos.",
+   "hint": "Resume dónde crece el copihue y cómo se desarrolla, en vez de mencionar solo un detalle.",
+   "clue": "Busca la alternativa que reúna la mayor parte de la información.",
+   "option_notes": {
+    "El copihue busca luz trepando por los árboles.": "Se queda con un detalle y no con la idea que reúne el texto.",
+    "Los árboles del sur necesitan mucha luz para crecer.": "Cambia el sujeto principal y afirma algo que el texto no dice.",
+    "Todas las plantas nativas trepan por los árboles.": "Generaliza lo dicho solo sobre el copihue."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "Lee: «El zorro culpeo es crepuscular: busca alimento cuando baja el sol». Si no entiendes «crepuscular», ¿qué haces primero?",
+   "options": [
+    "Relees la oración y buscas pistas en ella.",
+    "Saltas el texto y cambias de tema.",
+    "Preguntas la respuesta sin volver a leer.",
+    "Eliges la palabra más larga de la oración."
+   ],
+   "correct": "Relees la oración y buscas pistas en ella.",
+   "hint": "La oración entrega pistas; releer ayuda a relacionar la palabra con lo que hace el zorro.",
+   "clue": "Observa si la oración entrega alguna pista sobre la palabra desconocida.",
+   "option_notes": {
+    "Eliges la palabra más larga de la oración.": "Usa la longitud de la palabra como pista, aunque no aporta significado.",
+    "Saltas el texto y cambias de tema.": "Abandona la comprensión en vez de revisar la parte difícil.",
+    "Preguntas la respuesta sin volver a leer.": "Pide una respuesta sin intentar comprender el contexto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "Lee: «El huemul vive en zonas cordilleranas de Chile y Argentina. Se alimenta de pastos, hojas y ramas y suele moverse con tranquilidad.» ¿Qué pregunta se responde directamente?",
+   "options": [
+    "¿Cómo se protege el huemul de los peligros?",
+    "¿Por qué el huemul prefiere la cordillera?",
+    "¿Qué alimentos consume el huemul?",
+    "¿Qué animales compiten con el huemul?"
+   ],
+   "correct": "¿Qué alimentos consume el huemul?",
+   "hint": "La respuesta aparece escrita en el texto: busca una pregunta cuya información esté explícita.",
+   "clue": "Distingue los datos que el texto dice de las ideas que tendrías que imaginar.",
+   "option_notes": {
+    "¿Por qué el huemul prefiere la cordillera?": "Busca una causa que el texto no explica.",
+    "¿Qué animales compiten con el huemul?": "Inventa un peligro que no aparece en la lectura.",
+    "¿Cómo se protege el huemul de los peligros?": "Supone una acción de protección que no se menciona."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "Lee: «El cóndor tiene alas grandes, plumas oscuras y una franja blanca en el cuello.» En un esquema, ¿qué título pondrías sobre esos datos?",
+   "options": [
+    "Acciones para proteger al cóndor",
+    "Características físicas del cóndor",
+    "Lugares donde duerme el cóndor",
+    "Alimentación del cóndor en la cordillera"
+   ],
+   "correct": "Características físicas del cóndor",
+   "hint": "Los datos describen partes y colores del animal; el título debe nombrar ese tipo de información.",
+   "clue": "Pregúntate qué tienen en común las alas, las plumas y la franja.",
+   "option_notes": {
+    "Alimentación del cóndor en la cordillera": "Confunde rasgos del cuerpo con lo que el animal come.",
+    "Lugares donde duerme el cóndor": "Confunde características físicas con un lugar.",
+    "Acciones para proteger al cóndor": "Confunde describir al animal con proponer una acción."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Lee: «En la feria de Talca, Diego rechazó una bolsa plástica y llevó una de tela. Después guardó la de tela para comprar la próxima semana.» ¿Qué conocimiento permite inferir la razón de su elección?",
+   "options": [
+    "Las bolsas de tela solo sirven para guardar ropa.",
+    "Una bolsa reutilizable reduce el uso de bolsas desechables.",
+    "Las frutas de feria pesan menos dentro de una bolsa.",
+    "Las bolsas plásticas deben guardarse durante una semana."
+   ],
+   "correct": "Una bolsa reutilizable reduce el uso de bolsas desechables.",
+   "hint": "Al usar de nuevo la bolsa de tela, Diego evita pedir otra bolsa desechable.",
+   "clue": "Relaciona llevar tela y guardarla con un posible efecto ambiental.",
+   "option_notes": {
+    "Las bolsas de tela solo sirven para guardar ropa.": "Generaliza que la tela solo sirve para un uso distinto.",
+    "Las frutas de feria pesan menos dentro de una bolsa.": "Inventa una relación entre el peso de la fruta y la bolsa.",
+    "Las bolsas plásticas deben guardarse durante una semana.": "Supone una regla de guardado que el texto no menciona."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Lee: «En la Reserva Nacional Pingüino de Humboldt, los pingüinos encuentran peces y lugares para anidar. Por eso, la zona es importante para protegerlos.» ¿Qué respuesta completa mejor la pregunta «¿Por qué es importante proteger la zona?»",
+   "options": [
+    "Porque todos los pingüinos pueden volar sobre el mar.",
+    "Porque los pingüinos solo comen plantas acuáticas.",
+    "Porque allí encuentran peces y lugares para anidar.",
+    "Porque la reserva tiene árboles para sus nidos."
+   ],
+   "correct": "Porque allí encuentran peces y lugares para anidar.",
+   "hint": "La respuesta debe explicar la importancia de la zona usando los dos recursos que menciona el texto.",
+   "clue": "Busca la causa escrita después de describir lo que encuentran los pingüinos.",
+   "option_notes": {
+    "Porque todos los pingüinos pueden volar sobre el mar.": "Confunde proteger la zona con una característica de los pingüinos.",
+    "Porque la reserva tiene árboles para sus nidos.": "Cambia los lugares para anidar por árboles, dato no mencionado.",
+    "Porque los pingüinos solo comen plantas acuáticas.": "Reemplaza los peces por un alimento que el texto no nombra."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Lee: «Para salir al cerro, revisa el pronóstico, lleva agua, usa zapatos firmes y avisa a un adulto la ruta.» Si tu propósito es preparar una salida segura, ¿qué información debes conservar?",
+   "options": [
+    "Revisar el clima, llevar agua, usar calzado firme y avisar la ruta.",
+    "Llevar una mochila, comer fruta y caminar rápido.",
+    "Elegir un cerro alto, salir temprano y descansar.",
+    "Visitar el cerro, mirar el paisaje y tomar fotografías."
+   ],
+   "correct": "Revisar el clima, llevar agua, usar calzado firme y avisar la ruta.",
+   "hint": "Como tu propósito es la seguridad, conserva los cuatro consejos que previenen problemas en la salida.",
+   "clue": "Elige la opción que reúne las ideas útiles para evitar riesgos.",
+   "option_notes": {
+    "Visitar el cerro, mirar el paisaje y tomar fotografías.": "Elige actividades agradables, pero no consejos de seguridad del texto.",
+    "Llevar una mochila, comer fruta y caminar rápido.": "Incluye acciones posibles, pero omite varios datos clave.",
+    "Elegir un cerro alto, salir temprano y descansar.": "Agrega horarios y lugares que la lectura no señala."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Lee: «El agua de lluvia entra al suelo, se reúne en ríos y lagos, llega al mar y se evapora con el calor del Sol.» ¿Qué esquema de flechas conserva el orden presentado?",
+   "options": [
+    "Evaporación → lluvia → suelo → ríos y lagos → mar.",
+    "Mar → ríos y lagos → lluvia → suelo → evaporación.",
+    "Suelo → lluvia → mar → ríos y lagos → evaporación.",
+    "Lluvia → suelo → ríos y lagos → mar → evaporación."
+   ],
+   "correct": "Lluvia → suelo → ríos y lagos → mar → evaporación.",
+   "hint": "El esquema correcto mantiene la secuencia: lluvia, suelo, ríos y lagos, mar y evaporación.",
+   "clue": "Compara cada flecha con el orden en que aparecen las etapas.",
+   "option_notes": {
+    "Evaporación → lluvia → suelo → ríos y lagos → mar.": "Invierte el orden presentado y comienza por la evaporación.",
+    "Suelo → lluvia → mar → ríos y lagos → evaporación.": "Intercambia el suelo con la lluvia y cambia la secuencia.",
+    "Mar → ríos y lagos → lluvia → suelo → evaporación.": "Confunde el recorrido del agua y coloca el mar al inicio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Lee: «El patio amaneció con el pasto mojado y las ventanas empañadas. Durante la noche no llovió ni se regó, y el cielo está despejado.» ¿Qué explicación relaciona mejor las pistas con tus conocimientos?",
+   "options": [
+    "Las ventanas produjeron lluvia dentro de la casa.",
+    "Durante la noche bajó la temperatura y el vapor formó gotas.",
+    "El cielo despejado hizo caer agua sobre el patio.",
+    "El Sol calentó tanto el pasto que apareció agua."
+   ],
+   "correct": "Durante la noche bajó la temperatura y el vapor formó gotas.",
+   "hint": "El enfriamiento nocturno puede convertir el vapor del aire en gotas sobre superficies frías.",
+   "clue": "Relaciona la hora, la ausencia de lluvia y las gotas observadas.",
+   "option_notes": {
+    "El Sol calentó tanto el pasto que apareció agua.": "Confunde el calentamiento con el enfriamiento que forma gotas.",
+    "Las ventanas produjeron lluvia dentro de la casa.": "Imagina que las ventanas producen lluvia por sí solas.",
+    "El cielo despejado hizo caer agua sobre el patio.": "Toma el cielo despejado como causa de lluvia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Lee: «En la caleta, los pescadores llevaron sus embarcaciones al mar al amanecer. El viento aumentó y las olas golpearon el muelle. Por eso, decidieron vararlas y esperar.» Si no entiendes «vararlas», ¿qué significado infieres al releer?",
+   "options": [
+    "Cubrirlas con redes para pescar.",
+    "Hacerlas avanzar más rápido hacia el mar.",
+    "Dejarlas flotando junto al muelle.",
+    "Sacarlas del agua y dejarlas en tierra."
+   ],
+   "correct": "Sacarlas del agua y dejarlas en tierra.",
+   "hint": "El viento y las olas aumentan el riesgo; por eso las embarcaciones se dejan fuera del agua.",
+   "clue": "Usa la causa indicada por «por eso» para interpretar la palabra desconocida.",
+   "option_notes": {
+    "Hacerlas avanzar más rápido hacia el mar.": "Interpreta la decisión como si quisieran avanzar hacia el mar.",
+    "Cubrirlas con redes para pescar.": "Confunde la embarcación con los implementos de pesca.",
+    "Dejarlas flotando junto al muelle.": "Ignora que el mal tiempo motiva la decisión de esperar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Lee: «El huerto de la escuela usa botellas cortadas como maceteros. Así reutiliza plástico y permite cultivar lechugas en poco espacio. Los cursos riegan por turnos.» Quieres saber cómo ayuda al ambiente. ¿Qué pregunta y respuesta elegirías?",
+   "options": [
+    "¿Qué se cultiva? Botellas cortadas como maceteros.",
+    "¿Cuándo riegan? Los cursos lo hacen por turnos.",
+    "¿Cómo ayuda al ambiente? Reutiliza botellas plásticas.",
+    "¿Dónde está el huerto? En la escuela."
+   ],
+   "correct": "¿Cómo ayuda al ambiente? Reutiliza botellas plásticas.",
+   "hint": "La pregunta debe coincidir con tu propósito y la respuesta debe explicar el beneficio ambiental mencionado.",
+   "clue": "Primero piensa qué quieres averiguar; luego comprueba que la respuesta lo explica.",
+   "option_notes": {
+    "¿Cuándo riegan? Los cursos lo hacen por turnos.": "Responde un dato verdadero, pero no explica el beneficio ambiental.",
+    "¿Qué se cultiva? Botellas cortadas como maceteros.": "Confunde lo que se cultiva con el material reutilizado.",
+    "¿Dónde está el huerto? En la escuela.": "Pregunta por el lugar y deja de lado el propósito ambiental."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Lee: «El cisne de cuello negro vive en humedales, come plantas acuáticas y construye su nido entre juncos.» ¿Qué esquema conceptual organiza mejor estas ideas?",
+   "options": [
+    "Humedales → plantas → juncos, como una cadena de acciones.",
+    "Nido: humedales; hábitat: plantas; alimento: juncos.",
+    "Alimento: humedales; hábitat: juncos; nido: plantas.",
+    "Hábitat: humedales; alimento: plantas acuáticas; nido: juncos."
+   ],
+   "correct": "Hábitat: humedales; alimento: plantas acuáticas; nido: juncos.",
+   "hint": "Cada dato va bajo su categoría: lugar donde vive, comida y lugar donde construye el nido.",
+   "clue": "Relaciona cada elemento con la categoría que indica la oración.",
+   "option_notes": {
+    "Alimento: humedales; hábitat: juncos; nido: plantas.": "Intercambia el lugar, la comida y el material del nido.",
+    "Humedales → plantas → juncos, como una cadena de acciones.": "Ordena los datos como pasos, aunque no hay una secuencia.",
+    "Nido: humedales; hábitat: plantas; alimento: juncos.": "Confunde el hábitat, el alimento y el sitio del nido."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

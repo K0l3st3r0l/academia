@@ -1,0 +1,266 @@
+{
+ "oa": "OA2",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "¿Qué actor autorizaba las expediciones españolas y representaba la autoridad política sobre los territorios conquistados?",
+   "options": [
+    "La Corona española",
+    "La Iglesia católica",
+    "El cabildo de cada ciudad",
+    "Los pueblos originarios"
+   ],
+   "correct": "La Corona española",
+   "hint": "La Corona española autorizaba expediciones y ejercía el poder político sobre los territorios conquistados.",
+   "clue": "Piensa en quién gobernaba España y daba autoridad a los conquistadores.",
+   "option_notes": {
+    "El cabildo de cada ciudad": "Confunde la autoridad local de una ciudad con el poder del monarca.",
+    "La Iglesia católica": "Confunde una función religiosa con la autoridad política.",
+    "Los pueblos originarios": "Confunde a los pueblos conquistados con quienes ejercían el dominio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "¿Quién encabezó la expedición española que fundó Santiago de Nueva Extremadura en 1541?",
+   "options": [
+    "Francisco Pizarro",
+    "Hernán Cortés",
+    "Diego de Almagro",
+    "Pedro de Valdivia"
+   ],
+   "correct": "Pedro de Valdivia",
+   "hint": "Pedro de Valdivia dirigió la expedición que fundó Santiago en 1541.",
+   "clue": "Relaciona la fundación de Santiago con la expedición que permaneció en Chile.",
+   "option_notes": {
+    "Diego de Almagro": "Confunde a quien exploró Chile antes con quien se estableció y fundó Santiago.",
+    "Hernán Cortés": "Relaciona a Cortés con Chile, aunque su conquista fue en México.",
+    "Francisco Pizarro": "Relaciona a Pizarro con Chile, aunque su conquista fue en Perú."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "¿Cuál fue una tarea importante de la Iglesia católica durante la conquista?",
+   "options": [
+    "Evangelizar a los pueblos originarios",
+    "Recaudar impuestos para cada cabildo",
+    "Organizar las rutas de las expediciones",
+    "Elegir al monarca de España"
+   ],
+   "correct": "Evangelizar a los pueblos originarios",
+   "hint": "La Iglesia católica difundía el cristianismo mediante la evangelización.",
+   "clue": "Piensa en una función relacionada con la religión.",
+   "option_notes": {
+    "Organizar las rutas de las expediciones": "Confunde la labor religiosa con la organización militar de expediciones.",
+    "Recaudar impuestos para cada cabildo": "Confunde la labor religiosa con la recaudación de impuestos locales.",
+    "Elegir al monarca de España": "Confunde la monarquía con una institución que podía elegir al rey."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "¿Qué mostraba principalmente la fundación de una ciudad española en América?",
+   "options": [
+    "El deseo de regresar pronto a España",
+    "La creación de un territorio sin autoridades",
+    "La decisión de evitar todo contacto local",
+    "La intención de quedarse, organizarse y expandirse"
+   ],
+   "correct": "La intención de quedarse, organizarse y expandirse",
+   "hint": "Fundar ciudades permitía establecer población, autoridades y una base para avanzar.",
+   "clue": "Observa que construir una ciudad requiere permanecer y organizar el lugar.",
+   "option_notes": {
+    "El deseo de regresar pronto a España": "Confunde fundar una ciudad con explorar y regresar rápidamente.",
+    "La decisión de evitar todo contacto local": "Supone que la presencia española fue breve, aunque la ciudad permanece.",
+    "La creación de un territorio sin autoridades": "Supone que una ciudad podía funcionar sin autoridades ni organización."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Una expedición española encuentra resistencia armada y necesita negociar con algunos grupos locales. ¿Qué conclusión describe mejor la conquista?",
+   "options": [
+    "Dependió solo de la ayuda de la Iglesia católica",
+    "Fue un viaje sin enfrentamientos ni decisiones políticas",
+    "Combinó conflictos, acuerdos y participación de distintos grupos",
+    "Terminó cuando los españoles vieron el territorio"
+   ],
+   "correct": "Combinó conflictos, acuerdos y participación de distintos grupos",
+   "hint": "La conquista incluyó enfrentamientos, acuerdos y decisiones de distintos actores.",
+   "clue": "Mira las dos acciones del relato: resistir y negociar.",
+   "option_notes": {
+    "Fue un viaje sin enfrentamientos ni decisiones políticas": "Reduce la conquista a una guerra y olvida acuerdos y otros actores.",
+    "Dependió solo de la ayuda de la Iglesia católica": "Confunde una parte del proceso con la acción de una institución.",
+    "Terminó cuando los españoles vieron el territorio": "Confunde el final de una expedición con la complejidad del proceso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "En 1535, una expedición cruzó los Andes hacia Chile, pero volvió al Perú sin fundar ciudades. ¿A quién se refiere?",
+   "options": [
+    "Pedro de Valdivia",
+    "Francisco Pizarro",
+    "Diego de Almagro",
+    "Hernán Cortés"
+   ],
+   "correct": "Diego de Almagro",
+   "hint": "Diego de Almagro exploró Chile en 1535 y regresó al Perú; Valdivia llegó después.",
+   "clue": "Compara el año, el cruce de los Andes y el regreso sin fundaciones.",
+   "option_notes": {
+    "Pedro de Valdivia": "Confunde la expedición de Almagro con el posterior asentamiento de Valdivia.",
+    "Hernán Cortés": "Confunde a Valdivia con una expedición anterior que no fundó ciudades.",
+    "Francisco Pizarro": "Confunde la conquista del Perú con la expedición que cruzó hacia Chile."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "En una ciudad recién fundada, un funcionario aplica órdenes del rey y un sacerdote enseña el cristianismo. ¿Qué relación representa?",
+   "options": [
+    "Los pueblos originarios nombran al rey y al sacerdote",
+    "La Iglesia organiza el gobierno y la Corona celebra misas",
+    "El cabildo evangeliza y la Iglesia cobra impuestos",
+    "La Corona organiza el gobierno y la Iglesia evangeliza"
+   ],
+   "correct": "La Corona organiza el gobierno y la Iglesia evangeliza",
+   "hint": "El funcionario actúa en nombre del poder real; el sacerdote cumple una tarea religiosa.",
+   "clue": "Asocia cada acción con su institución.",
+   "option_notes": {
+    "La Iglesia organiza el gobierno y la Corona celebra misas": "Intercambia las tareas políticas de la Corona y religiosas de la Iglesia.",
+    "El cabildo evangeliza y la Iglesia cobra impuestos": "Confunde al cabildo con la Iglesia y los impuestos con la evangelización.",
+    "Los pueblos originarios nombran al rey y al sacerdote": "Confunde a las autoridades locales y religiosas con la monarquía española."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "En un pueblo colonial vivían personas españolas, indígenas y mestizas, con nuevas costumbres y formas de trabajo. ¿Qué evidencia entrega este caso?",
+   "options": [
+    "La separación total entre todos los grupos",
+    "El surgimiento de una sociedad nueva y diversa",
+    "La permanencia de una sociedad formada por un solo grupo",
+    "La ausencia de cambios después de la conquista"
+   ],
+   "correct": "El surgimiento de una sociedad nueva y diversa",
+   "hint": "La convivencia y las nuevas relaciones entre grupos muestran un cambio social.",
+   "clue": "Busca la opción que explique la convivencia y los cambios mencionados.",
+   "option_notes": {
+    "La permanencia de una sociedad formada por un solo grupo": "Supone que la presencia española no cambió la composición de la sociedad.",
+    "La ausencia de cambios después de la conquista": "Niega los cambios sociales que muestra la convivencia de distintos grupos.",
+    "La separación total entre todos los grupos": "Interpreta la convivencia como separación completa entre las personas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Lee la situación: una expedición cruza los Andes, elige en la Zona Central un lugar con agua y tierras cultivables, funda Santiago, instala un cabildo y avanza hacia otros valles. ¿Qué interpretación es más completa?",
+   "options": [
+    "Intentó enseñar religión sin crear un gobierno",
+    "Buscó asentarse, gobernar y expandir el dominio español",
+    "Fundó una ciudad para aislarse de los pueblos cercanos",
+    "Solo quiso conocer el paisaje y volver al Perú"
+   ],
+   "correct": "Buscó asentarse, gobernar y expandir el dominio español",
+   "hint": "La ciudad, sus autoridades y el avance territorial muestran permanencia, gobierno y expansión.",
+   "clue": "Relaciona la ciudad fundada con el cabildo y el avance territorial.",
+   "option_notes": {
+    "Solo quiso conocer el paisaje y volver al Perú": "Confunde una fundación con una visita breve sin ocupación permanente.",
+    "Intentó enseñar religión sin crear un gobierno": "Reduce la acción española a evangelizar y olvida el gobierno local.",
+    "Fundó una ciudad para aislarse de los pueblos cercanos": "Interpreta la fundación como aislamiento, no como expansión territorial."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Un relato señala que la Corona autorizó la expedición; hubo combates y acuerdos; la Iglesia evangelizó; después se formaron familias mestizas. ¿Qué proceso resume?",
+   "options": [
+    "Una misión religiosa sin autoridades políticas ni conflictos",
+    "Una conquista que creó una sociedad nueva en territorios dominados",
+    "Una guerra europea sin relación con América",
+    "Una exploración sin ocupación ni cambios permanentes"
+   ],
+   "correct": "Una conquista que creó una sociedad nueva en territorios dominados",
+   "hint": "El relato reúne autoridad real, conflictos, evangelización y cambios sociales propios de la conquista.",
+   "clue": "Busca la alternativa que reúna todas las partes del relato.",
+   "option_notes": {
+    "Una exploración sin ocupación ni cambios permanentes": "Confunde la conquista con una exploración que no deja asentamientos.",
+    "Una misión religiosa sin autoridades políticas ni conflictos": "Reduce todo el proceso a la religión y omite Corona y conflictos.",
+    "Una guerra europea sin relación con América": "Traslada un proceso americano a una guerra sin relación con América."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Un relato cuenta que Inés de Suárez acompañó a Valdivia y colaboró en la defensa de Santiago en 1541. ¿Qué idea apoya mejor?",
+   "options": [
+    "Las mujeres llegaron a Chile solo después de la conquista",
+    "Inés de Suárez gobernó la Corona española desde Santiago",
+    "Las mujeres también participaron activamente en la conquista",
+    "La defensa de Santiago fue obra exclusiva de la Iglesia"
+   ],
+   "correct": "Las mujeres también participaron activamente en la conquista",
+   "hint": "La participación de Inés de Suárez muestra que las mujeres también fueron protagonistas.",
+   "clue": "Fíjate en quiénes participaron, no solo en el resultado militar.",
+   "option_notes": {
+    "Las mujeres llegaron a Chile solo después de la conquista": "Generaliza un hecho posterior y desconoce la presencia femenina desde el inicio.",
+    "Inés de Suárez gobernó la Corona española desde Santiago": "Confunde a una protagonista local con la autoridad política de España.",
+    "La defensa de Santiago fue obra exclusiva de la Iglesia": "Confunde una acción militar de la ciudad con una tarea religiosa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Un registro colonial menciona un cabildo, una iglesia, normas españolas, trabajo indígena, comidas locales y personas mestizas. ¿Qué inferencia integra mejor esas evidencias?",
+   "options": [
+    "La conquista originó una sociedad nueva con grupos y elementos culturales diversos",
+    "Las costumbres locales desaparecieron sin dejar huellas",
+    "Solo la Iglesia organizó la vida política y económica",
+    "Los españoles mantuvieron su sociedad sin relacionarse con el territorio"
+   ],
+   "correct": "La conquista originó una sociedad nueva con grupos y elementos culturales diversos",
+   "hint": "Las instituciones, los grupos y las costumbres muestran una sociedad nueva bajo dominio español.",
+   "clue": "Considera instituciones, personas y costumbres al mismo tiempo.",
+   "option_notes": {
+    "Los españoles mantuvieron su sociedad sin relacionarse con el territorio": "Confunde la presencia española con una sociedad sin contacto ni cambios.",
+    "Las costumbres locales desaparecieron sin dejar huellas": "Supone que las costumbres locales desaparecieron por completo.",
+    "Solo la Iglesia organizó la vida política y económica": "Reduce toda la organización social a la función de la Iglesia."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

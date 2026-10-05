@@ -1,0 +1,268 @@
+{
+ "oa": "OA14",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "En una narración clara, ¿qué información suele aparecer al inicio?",
+   "options": [
+    "La situación inicial, los personajes y el lugar.",
+    "El momento más emocionante y el desenlace.",
+    "El problema resuelto y la enseñanza final.",
+    "Las consecuencias antes de contar lo ocurrido."
+   ],
+   "correct": "La situación inicial, los personajes y el lugar.",
+   "hint": "El inicio ubica al lector: presenta quiénes participan, dónde están y qué ocurre al comenzar.",
+   "clue": "Piensa en la información que necesitas para ubicarte antes de que aparezca el problema.",
+   "option_notes": {
+    "El problema resuelto y la enseñanza final.": "Confunde el inicio con el cierre de la narración.",
+    "El momento más emocionante y el desenlace.": "Ubica el clímax y la solución al comienzo.",
+    "Las consecuencias antes de contar lo ocurrido.": "Invierte el orden de los acontecimientos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Martina guardó la bicicleta. ___, cerró el portón. ¿Qué conector completa mejor la oración?",
+   "options": [
+    "Aunque",
+    "Porque",
+    "Sin embargo",
+    "Después"
+   ],
+   "correct": "Después",
+   "hint": "«Después» indica que cerrar el portón ocurre luego de guardar la bicicleta.",
+   "clue": "Busca una palabra que indique qué acción ocurre más tarde.",
+   "option_notes": {
+    "Porque": "Expresa una causa, pero aquí se ordenan acciones.",
+    "Aunque": "Introduce un contraste que no aparece.",
+    "Sin embargo": "Marca contraste, no una acción posterior."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "¿Cuál oración describe mejor el ambiente de una historia ambientada en Chiloé?",
+   "options": [
+    "Benjamín cruzó el patio con su mochila.",
+    "El pescador encontró una llave oxidada.",
+    "—¡Espérame en el muelle! —gritó Rosa.",
+    "La lluvia fina golpeaba el techo de tejuelas."
+   ],
+   "correct": "La lluvia fina golpeaba el techo de tejuelas.",
+   "hint": "La oración presenta sonidos y elementos del lugar, por eso ayuda a imaginar el ambiente.",
+   "clue": "Busca la oración que muestre cómo se siente o se ve el lugar.",
+   "option_notes": {
+    "Benjamín cruzó el patio con su mochila.": "Cuenta una acción, pero no describe cómo es el ambiente.",
+    "—¡Espérame en el muelle! —gritó Rosa.": "Presenta diálogo, no una descripción del ambiente.",
+    "El pescador encontró una llave oxidada.": "Narra un hallazgo, sin mostrar el ambiente."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "¿Cómo se llama la parte de una narración que cierra la historia al resolver el problema?",
+   "options": [
+    "La descripción, donde se presenta el ambiente.",
+    "El desarrollo, donde avanzan los hechos.",
+    "El desenlace, donde se resuelve el problema.",
+    "La situación inicial, donde comienza la historia."
+   ],
+   "correct": "El desenlace, donde se resuelve el problema.",
+   "hint": "El desenlace es la parte final, porque allí se resuelve el conflicto de la narración.",
+   "clue": "Piensa en el nombre de la parte final de una historia.",
+   "option_notes": {
+    "El desarrollo, donde avanzan los hechos.": "Confunde la parte central con el cierre de la historia.",
+    "La descripción, donde se presenta el ambiente.": "Confunde un recurso descriptivo con la parte final.",
+    "La situación inicial, donde comienza la historia.": "Confunde el comienzo de la historia con su cierre."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "¿Cuál oración explica con claridad la causa de la suspensión del partido?",
+   "options": [
+    "El partido se suspendió porque comenzó una tormenta eléctrica.",
+    "El partido se suspendió después de una tormenta eléctrica.",
+    "El partido se suspendió aunque comenzó una tormenta eléctrica.",
+    "El partido se suspendió y comenzó una tormenta eléctrica."
+   ],
+   "correct": "El partido se suspendió porque comenzó una tormenta eléctrica.",
+   "hint": "«Porque» une la suspensión con el hecho que la provoca: la tormenta eléctrica.",
+   "clue": "Busca la oración que responda directamente: «¿por qué se suspendió?»",
+   "option_notes": {
+    "El partido se suspendió después de una tormenta eléctrica.": "Indica cuándo ocurrió, pero no explica la causa de la suspensión.",
+    "El partido se suspendió aunque comenzó una tormenta eléctrica.": "Presenta un contraste, no una relación de causa.",
+    "El partido se suspendió y comenzó una tormenta eléctrica.": "Solo suma dos hechos sin explicar cuál provoca al otro."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "¿Qué orden cuenta con claridad la historia de Camila y el perro perdido?",
+   "options": [
+    "Lo reúne con su familia, encuentra al perro y busca a su dueño.",
+    "Encuentra al perro, busca a su dueño y lo reúne con su familia.",
+    "Busca a su dueño, lo reúne con su familia y encuentra al perro.",
+    "Encuentra al perro, lo reúne con su familia y busca a su dueño."
+   ],
+   "correct": "Encuentra al perro, busca a su dueño y lo reúne con su familia.",
+   "hint": "Primero aparece el hallazgo, luego la búsqueda y al final la reunión con la familia.",
+   "clue": "Ordena las acciones desde el descubrimiento del problema hasta su solución.",
+   "option_notes": {
+    "Lo reúne con su familia, encuentra al perro y busca a su dueño.": "Empieza por la solución y deja el hallazgo para después.",
+    "Busca a su dueño, lo reúne con su familia y encuentra al perro.": "Busca al dueño antes de encontrar al perro.",
+    "Encuentra al perro, lo reúne con su familia y busca a su dueño.": "Reúne al perro antes de ubicar a su dueño."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Para continuar un cuento sobre una excursión al Cajón del Maipo, ¿qué oración desarrolla el ambiente y la reacción de Antonia?",
+   "options": [
+    "Antonia llegó al cerro y después caminó por el sendero.",
+    "El viento helado bajaba del cerro y Antonia apretó su chaqueta.",
+    "El cerro estaba allí y Antonia era una niña tranquila.",
+    "—Vamos, Antonia —dijo su papá mientras avanzaban."
+   ],
+   "correct": "El viento helado bajaba del cerro y Antonia apretó su chaqueta.",
+   "hint": "La oración une un rasgo del entorno con una reacción visible de la protagonista.",
+   "clue": "Busca una oración que muestre cómo es el lugar y qué provoca en el personaje.",
+   "option_notes": {
+    "Antonia llegó al cerro y después caminó por el sendero.": "Muestra acciones, pero no describe el ambiente ni la reacción.",
+    "El cerro estaba allí y Antonia era una niña tranquila.": "Nombra el lugar y al personaje, pero sin desarrollarlos.",
+    "—Vamos, Antonia —dijo su papá mientras avanzaban.": "Incluye diálogo y acción, pero no describe el ambiente."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Lee: «El cielo estaba despejado; sin embargo, comenzó a llover.» ¿Qué oración mantiene la misma relación entre las ideas?",
+   "options": [
+    "El cielo estaba despejado; luego, comenzó a llover.",
+    "El cielo estaba despejado; por eso, comenzó a llover.",
+    "El cielo estaba despejado; además, comenzó a llover.",
+    "El cielo estaba despejado; aun así, comenzó a llover."
+   ],
+   "correct": "El cielo estaba despejado; aun así, comenzó a llover.",
+   "hint": "«Aun así» también marca contraste: la lluvia ocurre pese al cielo despejado.",
+   "clue": "Compara si cada conector indica contraste, causa, tiempo o suma.",
+   "option_notes": {
+    "El cielo estaba despejado; por eso, comenzó a llover.": "«Por eso» indica causa, no contraste.",
+    "El cielo estaba despejado; luego, comenzó a llover.": "«Luego» ordena el tiempo, pero no expresa contraste.",
+    "El cielo estaba despejado; además, comenzó a llover.": "«Además» suma información, sin oponer ideas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Lee: «Tomás dejó su cuaderno en la biblioteca. Volvió corriendo, pero la puerta estaba cerrada. ___» ¿Qué oración completa mejor el desenlace?",
+   "options": [
+    "Mientras tanto, la biblioteca tenía ventanas.",
+    "Después, Tomás pensó en los cuadernos.",
+    "Finalmente, pidió ayuda y recuperó el cuaderno.",
+    "Al principio, había salido de su casa."
+   ],
+   "correct": "Finalmente, pidió ayuda y recuperó el cuaderno.",
+   "hint": "El desenlace debe resolver el problema del cuaderno perdido, no agregar un dato aislado.",
+   "clue": "Busca una acción que responda al problema de la puerta cerrada y cierre la historia.",
+   "option_notes": {
+    "Al principio, había salido de su casa.": "Vuelve al comienzo e ignora el problema de la puerta.",
+    "Mientras tanto, la biblioteca tenía ventanas.": "Agrega una descripción, pero no resuelve el problema.",
+    "Después, Tomás pensó en los cuadernos.": "Cuenta un pensamiento y deja el cuaderno sin recuperar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Lee este relato: «Primero, Diego buscó su cometa en el suelo. Luego, su hermana dijo que allí no estaba. Finalmente, la encontró en un árbol.» ¿Dónde ubicarías «Por eso, miró hacia arriba»?",
+   "options": [
+    "Entre «Luego» y «Finalmente».",
+    "Entre «Primero» y «Luego».",
+    "Después de «Finalmente».",
+    "Antes de «Primero»."
+   ],
+   "correct": "Entre «Luego» y «Finalmente».",
+   "hint": "«Por eso» explica la mirada hacia arriba después de saber que la cometa no estaba en el suelo.",
+   "clue": "Ubica la oración después de la información que provoca mirar hacia arriba y antes del hallazgo.",
+   "option_notes": {
+    "Antes de «Primero».": "Pone la consecuencia antes de la información que la provoca.",
+    "Entre «Primero» y «Luego».": "Interrumpe la búsqueda antes de conocer el dato de la hermana.",
+    "Después de «Finalmente».": "Deja la reacción después de descubrir la cometa."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: español no chileno: en Chile un niño de 5° básico dice «volantín», no «cometa»."
+   ]
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Una historia ya mostró que Antonia es valiente y que el lago está tranquilo. Su kayak queda atrapado entre rocas y el guardaparques está lejos. ¿Qué diálogo conviene incluir?",
+   "options": [
+    "—Qué lindo está el lago y qué azul es el cielo —comentó Antonia.",
+    "—Pidamos ayuda por radio y alejémonos de las rocas —propuso Antonia.",
+    "—Mi chaleco es amarillo y mi remo es largo —dijo Antonia.",
+    "—Ayer comí sopaipillas y después tomé leche —contó Antonia."
+   ],
+   "correct": "—Pidamos ayuda por radio y alejémonos de las rocas —propuso Antonia.",
+   "hint": "La opción correcta propone una acción frente al kayak atrapado y hace avanzar el conflicto.",
+   "clue": "Descarta las frases que repiten datos o hablan de temas sin relación con el problema.",
+   "option_notes": {
+    "—Mi chaleco es amarillo y mi remo es largo —dijo Antonia.": "Repite descripciones ya conocidas y no enfrenta el conflicto.",
+    "—Qué lindo está el lago y qué azul es el cielo —comentó Antonia.": "Repite el ambiente, pero no propone una acción.",
+    "—Ayer comí sopaipillas y después tomé leche —contó Antonia.": "Cuenta un recuerdo ajeno al problema y detiene la trama."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Un compañero escribió: «Al principio, el zorro quedó atrapado. Finalmente, encontró una abertura. Por eso, siguió encerrado». ¿Qué opción corrige el orden y el sentido?",
+   "options": [
+    "Finalmente quedó atrapado. Luego halló una abertura; por eso, escapó.",
+    "Luego quedó atrapado. Finalmente siguió encerrado; por eso, escapó.",
+    "Primero quedó atrapado. Luego halló una abertura; por eso, escapó.",
+    "Primero escapó. Por eso quedó atrapado; finalmente, buscó una abertura."
+   ],
+   "correct": "Primero quedó atrapado. Luego halló una abertura; por eso, escapó.",
+   "hint": "La versión correcta ordena el encierro, el hallazgo de la abertura y la escapatoria, y relaciona la causa.",
+   "clue": "Revisa qué ocurre primero y si el conector explica una consecuencia lógica.",
+   "option_notes": {
+    "Finalmente quedó atrapado. Luego halló una abertura; por eso, escapó.": "Usa «finalmente» para el inicio y rompe el orden temporal.",
+    "Primero escapó. Por eso quedó atrapado; finalmente, buscó una abertura.": "Cambia la secuencia y relaciona mal las acciones.",
+    "Luego quedó atrapado. Finalmente siguió encerrado; por eso, escapó.": "Afirma que sigue encerrado y después que escapa."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

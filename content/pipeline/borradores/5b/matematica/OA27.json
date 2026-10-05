@@ -1,0 +1,278 @@
+{
+ "oa": "OA27",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA27",
+   "difficulty": "easy",
+   "text": "En una muestra aleatoria de observaciones de pudúes en Chiloé, el diagrama registra minutos de observación. Clave: 1 | 4 = 14 min. Diagrama: 1 | 2 4 7; 2 | 0 3 5 9; 3 | 1. ¿Qué duración representa la hoja 7 del tallo 1?",
+   "options": [
+    "71 min",
+    "17 min",
+    "14 min",
+    "7 min"
+   ],
+   "correct": "17 min",
+   "hint": "El tallo 1 indica las decenas y la hoja 7 las unidades: 17 minutos.",
+   "clue": "Fíjate en cómo la clave combina el tallo con la hoja.",
+   "option_notes": {
+    "14 min": "Usa el valor de la clave en vez de leer la hoja 7.",
+    "7 min": "Lee solo la hoja y no la combina con el tallo.",
+    "71 min": "Invierte el orden del tallo y la hoja."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "easy",
+   "text": "Se escogieron al azar hojas de quillay y se midió su largo. Clave: 2 | 3 = 23 cm. Diagrama: 2 | 3 7; 3 | 0 2 2 8; 4 | 1 6. ¿Cuál fue el menor largo?",
+   "options": [
+    "41 cm",
+    "30 cm",
+    "23 cm",
+    "27 cm"
+   ],
+   "correct": "23 cm",
+   "hint": "El primer dato es 2 | 3; según la clave, representa 23 cm.",
+   "clue": "Busca el primer tallo y, dentro de él, la hoja menor.",
+   "option_notes": {
+    "27 cm": "Escoge la segunda hoja del primer tallo.",
+    "30 cm": "Escoge el primer dato del tallo siguiente.",
+    "41 cm": "Toma el último dato como si fuera el menor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "easy",
+   "text": "En una muestra aleatoria de precios de empanadas, el diagrama usa la clave 1 | 5 = $1.500. Diagrama: 1 | 2 5 8; 2 | 0 3 3 7; 3 | 1. ¿Cuántos precios se registraron?",
+   "options": [
+    "11 precios",
+    "8 precios",
+    "7 precios",
+    "9 precios"
+   ],
+   "correct": "8 precios",
+   "hint": "Hay 3 + 4 + 1 hojas; cada una representa un precio, así que son 8 precios.",
+   "clue": "Cuenta las hojas de cada tallo y luego junta esas cantidades.",
+   "option_notes": {
+    "7 precios": "Olvida una hoja al contar.",
+    "9 precios": "Cuenta una hoja dos veces.",
+    "11 precios": "Suma también los tres tallos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "easy",
+   "text": "Se registraron al azar temperaturas máximas de localidades del sur de Chile. Clave: 3 | 1 = 31 °C. Diagrama: 2 | 4 8; 3 | 1 1 1 5; 4 | 0 7. ¿Qué temperatura se repitió más?",
+   "options": [
+    "35 °C",
+    "13 °C",
+    "41 °C",
+    "31 °C"
+   ],
+   "correct": "31 °C",
+   "hint": "La hoja 1 aparece tres veces en el tallo 3, por eso 31 °C es el valor más frecuente.",
+   "clue": "Busca la combinación de tallo y hoja que aparece más veces.",
+   "option_notes": {
+    "13 °C": "Invierte el tallo y la hoja al leer 3 | 1.",
+    "35 °C": "Elige la última hoja del tallo que tiene más datos.",
+    "41 °C": "Usa el tallo 4 con la hoja 1, aunque no aparece."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "medium",
+   "text": "En una muestra aleatoria de distancias recorridas en un parque de La Araucanía, el diagrama está en km. Clave: 1 | 2 = 12 km. Diagrama: 1 | 2 5 9; 2 | 1 4 8; 3 | 0 6. ¿Cuál es el rango?",
+   "options": [
+    "36 km",
+    "24 km",
+    "48 km",
+    "12 km"
+   ],
+   "correct": "24 km",
+   "hint": "El mayor es 36 y el menor 12; 36 − 12 = 24 km.",
+   "clue": "Rango = dato mayor − dato menor.",
+   "option_notes": {
+    "12 km": "Confunde el rango con el dato menor.",
+    "36 km": "Confunde el rango con el dato mayor.",
+    "48 km": "Suma el dato mayor y el menor en vez de restarlos."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel o del OA: el rango se enseña en 6° (OA22) y 7° (OA14), no en el OA27 de 5°."
+   ]
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "medium",
+   "text": "Se eligieron al azar 8 tiempos de viaje en bus, en minutos. Clave: 1 | 4 = 14 min. Diagrama: 1 | 4 8; 2 | 1 3 6 9; 3 | 0 4. ¿Cuál es la mediana?",
+   "options": [
+    "29 min",
+    "26 min",
+    "23 min",
+    "24,5 min"
+   ],
+   "correct": "24,5 min",
+   "hint": "Los valores centrales son 23 y 26; su promedio es (23 + 26) ÷ 2 = 24,5 min.",
+   "clue": "Con una cantidad par de datos, usa los dos valores centrales.",
+   "option_notes": {
+    "23 min": "Elige solo el valor central izquierdo.",
+    "26 min": "Elige solo el valor central derecho.",
+    "29 min": "Toma el último dato del tallo 2 como si fuera el centro."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel o del OA: la mediana se enseña en 7° básico, no en 5° OA27."
+   ]
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "medium",
+   "text": "Una muestra aleatoria de tiempos de espera (s) tiene 6 datos. Diagrama parcial: clave 1 | 4 = 14 s; 1 | 4 8; 2 | 1 6; 3 | 2. La suma es 137 s. ¿Qué dato falta?",
+   "options": [
+    "26 s",
+    "36 s",
+    "16 s",
+    "46 s"
+   ],
+   "correct": "26 s",
+   "hint": "Los datos visibles suman 111 s; 137 − 111 = 26 s.",
+   "clue": "Suma los cinco datos visibles y réstalos de la suma total.",
+   "option_notes": {
+    "16 s": "Suma 10 s de más en los datos visibles.",
+    "36 s": "Confunde el tallo 2 con el tallo 3 al completar.",
+    "46 s": "Agrega una decena al dato correcto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "medium",
+   "text": "Dos muestras aleatorias registran tiempos de viaje (min). Clave: 2 | 5 = 25 min. A: 1 | 4 8; 2 | 1 5 7; 3 | 0 2. B: 1 | 6; 2 | 0 4 8; 3 | 1 3 5. ¿Cuántos datos más que 25 hay en B que en A?",
+   "options": [
+    "1 dato",
+    "0 datos",
+    "3 datos",
+    "4 datos"
+   ],
+   "correct": "1 dato",
+   "hint": "A tiene 3 datos mayores que 25 y B tiene 4; la diferencia es 1 dato.",
+   "clue": "No cuentes el 25; compara solo los datos estrictamente mayores que 25.",
+   "option_notes": {
+    "0 datos": "Incluye el 25 en A y las cantidades parecen iguales.",
+    "3 datos": "Cuenta solo los datos mayores de 25 en A.",
+    "4 datos": "Confunde la cantidad de datos de B con la diferencia."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel o del OA: comparar dos muestras con tallo y hojas corresponde al OA22 de 6° básico."
+   ]
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "hard",
+   "text": "En una muestra aleatoria de longitudes (cm), el diagrama dice: clave 1 | 2 = 12 cm; 1 | 2 5; 2 | 0 4 4; 3 | 1 7; 4 | 2. ¿Qué afirmación es correcta?",
+   "options": [
+    "La mediana es 24 cm y la moda es 24 cm.",
+    "La mediana es 20 cm y la moda es 24 cm.",
+    "El rango es 24 cm y la moda es 42 cm.",
+    "La mediana es 24 cm y la moda es 31 cm."
+   ],
+   "correct": "La mediana es 24 cm y la moda es 24 cm.",
+   "hint": "Los datos centrales son 24 y 24, y 24 es el único valor que se repite.",
+   "clue": "Ordena los datos: localiza los dos centrales y el valor que más se repite.",
+   "option_notes": {
+    "La mediana es 20 cm y la moda es 24 cm.": "Toma 20 cm, el primer dato del tallo 2, como mediana.",
+    "La mediana es 24 cm y la moda es 31 cm.": "Elige 31 cm por ser el primer dato del tallo 3.",
+    "El rango es 24 cm y la moda es 42 cm.": "Confunde el rango con otro resultado y la moda con el máximo."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel o del OA: la mediana es de 7° básico y la moda se enfatiza en 6° (OA22)."
+   ]
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "hard",
+   "text": "Se escogieron al azar 6 tiempos de viaje (min). Clave: 1 | 8 = 18 min. Diagrama: 1 | 8; 2 | 2 5 7; 3 | 3 5. Si quitas un dato, el promedio de los 5 restantes debe ser 25 min. ¿Cuál quitas?",
+   "options": [
+    "22 min",
+    "27 min",
+    "35 min",
+    "25 min"
+   ],
+   "correct": "35 min",
+   "hint": "Los seis suman 160; cinco con promedio 25 deben sumar 125. Debes quitar 35 min.",
+   "clue": "Primero calcula cuánto deben sumar los cinco datos restantes.",
+   "option_notes": {
+    "22 min": "Confunde el dato más cercano al promedio con el que se debe quitar.",
+    "25 min": "Confunde el promedio buscado con el dato que debe quitarse.",
+    "27 min": "Suma mal los seis tiempos y obtiene una diferencia menor."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del OA: evalúa el promedio (OA26 de 5°), no el OA27."
+   ]
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "hard",
+   "text": "En una muestra aleatoria de distancias (km), el diagrama es: clave 1 | 2 = 12 km; 1 | 2 8; 2 | 1 4 9; 3 | 1 6. Si cada distancia aumenta 5 km, ¿cuáles serán la nueva mediana y el nuevo rango?",
+   "options": [
+    "Mediana 29 km y rango 29 km",
+    "Mediana 24 km y rango 29 km",
+    "Mediana 29 km y rango 24 km",
+    "Mediana 24 km y rango 24 km"
+   ],
+   "correct": "Mediana 29 km y rango 24 km",
+   "hint": "La mediana inicial es 24 y pasa a 29; los extremos suben igual, por eso el rango sigue en 24 km.",
+   "clue": "Calcula mediana y rango iniciales; luego observa qué cambia al sumar 5 a todos.",
+   "option_notes": {
+    "Mediana 24 km y rango 24 km": "Olvida sumar 5 a la mediana.",
+    "Mediana 29 km y rango 29 km": "Suma 5 también al rango.",
+    "Mediana 24 km y rango 29 km": "No cambia la mediana y altera el rango."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel o del OA: mediana (7°) y rango (6°); el efecto de sumar una constante es avanzado para 5°."
+   ]
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "hard",
+   "text": "Se escogieron al azar tiempos de dos recorridos (min). Clave: 1 | 2 = 12 min. A: 1 | 2 4 6; 2 | 0 2 4; 3 | 0. B: 1 | 5 8; 2 | 1 3 5. ¿Qué muestra tiene mayor mediana y menor rango?",
+   "options": [
+    "La muestra A: mediana 20 min y rango 18 min.",
+    "La muestra B: mediana 20 min y rango 18 min.",
+    "La muestra A: mediana 21 min y rango 10 min.",
+    "La muestra B: mediana 21 min y rango 10 min."
+   ],
+   "correct": "La muestra B: mediana 21 min y rango 10 min.",
+   "hint": "A tiene mediana 20 y rango 18; B, mediana 21 y rango 10. Por eso cumple B.",
+   "clue": "Calcula la mediana y el rango de cada muestra antes de comparar.",
+   "option_notes": {
+    "La muestra A: mediana 20 min y rango 18 min.": "Elige A sin comparar cuál tiene la mediana mayor y el rango menor.",
+    "La muestra A: mediana 21 min y rango 10 min.": "Asigna a A los valores centrales y extremos de B.",
+    "La muestra B: mediana 20 min y rango 18 min.": "Intercambia las medianas y los rangos de las muestras."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel o del OA: comparar dos muestras es de 6° (OA22); mediana y rango son de 6°/7°."
+   ]
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

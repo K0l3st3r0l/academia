@@ -1,0 +1,264 @@
+{
+ "oa": "OA15",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "Quieres escribir un artículo informativo sobre el pudú. ¿Cuál oración presenta el tema al comenzar?",
+   "options": [
+    "¡Qué hermoso es el pequeño pudú de Chile!",
+    "Debemos proteger todos los bosques donde vive.",
+    "El pudú es un mamífero nativo de los bosques de Chile.",
+    "Su cuerpo mide cerca de 40 centímetros de largo."
+   ],
+   "correct": "El pudú es un mamífero nativo de los bosques de Chile.",
+   "hint": "La primera oración debe anunciar de manera general el tema del artículo: el pudú.",
+   "clue": "Busca la oración que dice claramente de qué tratará el artículo.",
+   "option_notes": {
+    "Su cuerpo mide cerca de 40 centímetros de largo.": "Entrega un detalle del pudú, pero no presenta el tema general.",
+    "¡Qué hermoso es el pequeño pudú de Chile!": "Expresa una opinión, no información para presentar el tema.",
+    "Debemos proteger todos los bosques donde vive.": "Propone una acción en vez de anunciar el tema."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "Lee: \"El huemul vive en zonas cordilleranas. Se alimenta de hierbas y arbustos. También necesita agua limpia.\" ¿Cuál es la idea central?",
+   "options": [
+    "El huemul vive solamente cerca de ríos.",
+    "El agua limpia es más importante que la comida.",
+    "El huemul necesita distintas condiciones para vivir.",
+    "El huemul se alimenta de hierbas y arbustos."
+   ],
+   "correct": "El huemul necesita distintas condiciones para vivir.",
+   "hint": "La idea central reúne las tres informaciones sobre lo que el huemul necesita para vivir.",
+   "clue": "Elige la opción que abarque las tres oraciones, no solo un dato.",
+   "option_notes": {
+    "El huemul se alimenta de hierbas y arbustos.": "Repite solo una información específica del párrafo.",
+    "El huemul vive solamente cerca de ríos.": "Agrega una ubicación que el texto no afirma.",
+    "El agua limpia es más importante que la comida.": "Hace una comparación que el texto no permite realizar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "Al final de un artículo sobre volcanes chilenos, ¿cuál opción es una fuente utilizada?",
+   "options": [
+    "Mi opinión sobre los volcanes de Chile y sus paisajes.",
+    "Servicio Nacional de Geología y Minería, ficha sobre volcanes.",
+    "Los volcanes chilenos son muy interesantes y sorprendentes.",
+    "Un dibujo de un volcán activo y una nube de humo."
+   ],
+   "correct": "Servicio Nacional de Geología y Minería, ficha sobre volcanes.",
+   "hint": "Una fuente es el material o institución de donde se obtiene la información.",
+   "clue": "Busca algo que pueda entregar datos, no una opinión o un dibujo.",
+   "option_notes": {
+    "Los volcanes chilenos son muy interesantes y sorprendentes.": "Es una afirmación sobre el tema, no el origen de la información.",
+    "Mi opinión sobre los volcanes de Chile y sus paisajes.": "Expresa una opinión personal, no identifica una fuente.",
+    "Un dibujo de un volcán activo y una nube de humo.": "Confunde una ilustración con un material informativo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "El párrafo explica cómo el zorro culpeo se protege del frío. ¿Cuál oración desarrolla esa idea?",
+   "options": [
+    "El zorro culpeo vive en varias zonas de Chile.",
+    "Su pelaje espeso conserva el calor de su cuerpo.",
+    "El zorro culpeo pertenece a la familia de los cánidos.",
+    "Me gustaría observar un zorro culpeo en la naturaleza."
+   ],
+   "correct": "Su pelaje espeso conserva el calor de su cuerpo.",
+   "hint": "El pelaje espeso es una característica que ayuda directamente a conservar el calor.",
+   "clue": "Elige el dato que explique una adaptación frente al frío.",
+   "option_notes": {
+    "El zorro culpeo pertenece a la familia de los cánidos.": "Entrega una clasificación del animal, no explica cómo enfrenta el frío.",
+    "El zorro culpeo vive en varias zonas de Chile.": "Indica dónde vive, pero no cómo se protege del frío.",
+    "Me gustaría observar un zorro culpeo en la naturaleza.": "Cuenta un gusto personal, no desarrolla la idea del párrafo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Para un artículo sobre los humedales de Valdivia, ¿qué combinación presenta el tema y luego una idea central?",
+   "options": [
+    "Tema: agua de los humedales. Idea: ¡Qué bonito es este lugar!",
+    "Tema: humedales de Valdivia. Idea: albergan muchas especies.",
+    "Tema: coipos y garzas. Idea: nadan en sus aguas.",
+    "Tema: mi visita. Idea: Valdivia es entretenida."
+   ],
+   "correct": "Tema: humedales de Valdivia. Idea: albergan muchas especies.",
+   "hint": "La primera parte nombra el tema completo y la segunda agrega una idea general y comprobable.",
+   "clue": "Compara cada combinación con el tema indicado y distingue idea general, detalle y opinión.",
+   "option_notes": {
+    "Tema: coipos y garzas. Idea: nadan en sus aguas.": "Nombra animales del lugar, pero no presenta el tema general del artículo.",
+    "Tema: mi visita. Idea: Valdivia es entretenida.": "Comienza desde una experiencia personal y no desde el tema informativo.",
+    "Tema: agua de los humedales. Idea: ¡Qué bonito es este lugar!": "Usa un tema demasiado amplio y luego una opinión."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Un párrafo explica cómo cuidar un huerto escolar. ¿Qué oración debes quitar para mantener una sola idea central?",
+   "options": [
+    "Usamos guantes para proteger nuestras manos.",
+    "Quitamos las malezas con cuidado.",
+    "En la entrada hay un mural de colores.",
+    "Regamos las plantas cuando la tierra está seca."
+   ],
+   "correct": "En la entrada hay un mural de colores.",
+   "hint": "El mural no aporta información sobre el cuidado del huerto, por eso rompe la idea central.",
+   "clue": "Busca la oración que no explica una tarea o cuidado del huerto.",
+   "option_notes": {
+    "Regamos las plantas cuando la tierra está seca.": "Confunde una oración relacionada con el huerto con la que rompe el tema.",
+    "Quitamos las malezas con cuidado.": "Elige una tarea del huerto en vez de detectar la oración ajena.",
+    "Usamos guantes para proteger nuestras manos.": "Confunde una medida de cuidado con la oración que no corresponde."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Ordena estas partes de un artículo breve: 1) fuentes consultadas, 2) presentación del tema, 3) desarrollo. ¿Qué orden organiza mejor el texto?",
+   "options": [
+    "2, 3, 1",
+    "3, 1, 2",
+    "2, 1, 3",
+    "1, 2, 3"
+   ],
+   "correct": "2, 3, 1",
+   "hint": "Primero se presenta el tema, luego se desarrolla y finalmente se registran las fuentes.",
+   "clue": "Piensa qué debe conocer el lector antes de leer los detalles.",
+   "option_notes": {
+    "1, 2, 3": "Pone las fuentes antes de explicar el tema y su desarrollo.",
+    "3, 1, 2": "Comienza con detalles antes de presentar el tema y las fuentes.",
+    "2, 1, 3": "Interrumpe el desarrollo al poner las fuentes antes de terminar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Consultaste el libro La llama de Chile, de Rojas (2022), y una ficha de CONAF. ¿Qué lista agrega mejor las fuentes?",
+   "options": [
+    "Fuentes: Rojas, La llama de Chile (2022); CONAF, ficha de la llama.",
+    "Fuentes: La llama de Chile, sin autor ni ficha de CONAF.",
+    "Fuentes: Mi cuaderno y lo que sé sobre las llamas.",
+    "Fuentes: Una llama, una foto y un dibujo."
+   ],
+   "correct": "Fuentes: Rojas, La llama de Chile (2022); CONAF, ficha de la llama.",
+   "hint": "La lista correcta identifica cada material consultado con datos suficientes para reconocerlo.",
+   "clue": "Revisa si aparecen los dos materiales y datos que los distinguen.",
+   "option_notes": {
+    "Fuentes: Mi cuaderno y lo que sé sobre las llamas.": "Menciona recuerdos personales, pero no los materiales consultados.",
+    "Fuentes: Una llama, una foto y un dibujo.": "Confunde objetos o imágenes con las fuentes de información.",
+    "Fuentes: La llama de Chile, sin autor ni ficha de CONAF.": "Omite el autor y la ficha de CONAF."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Un artículo comienza: \"Las abejas nativas cumplen un papel importante en los ecosistemas. El primer párrafo explica dónde viven.\" ¿Cuál oración inicia mejor el segundo párrafo?",
+   "options": [
+    "Sus cuerpos pueden tener distintos tamaños y colores.",
+    "En Chile hay flores de muchos colores y formas.",
+    "Me gustan las abejas porque son pequeñas y trabajadoras.",
+    "Además, polinizan flores y ayudan a que se formen frutos."
+   ],
+   "correct": "Además, polinizan flores y ayudan a que se formen frutos.",
+   "hint": "Después de presentar el hábitat, conviene desarrollar la función de las abejas anunciada en el inicio.",
+   "clue": "Relaciona el segundo párrafo con la idea de «papel importante».",
+   "option_notes": {
+    "Sus cuerpos pueden tener distintos tamaños y colores.": "Aporta una característica, pero no desarrolla su papel en el ecosistema.",
+    "En Chile hay flores de muchos colores y formas.": "Menciona flores, pero no explica qué hacen las abejas.",
+    "Me gustan las abejas porque son pequeñas y trabajadoras.": "Expresa una opinión, no información para desarrollar el artículo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Notas sobre el pingüino de Humboldt: vive en costas rocosas; anida en cuevas; come peces; busca alimento en el mar. ¿Qué agrupación forma dos párrafos con una idea central cada uno?",
+   "options": [
+    "Hábitat: peces y mar; alimentación: costas y cuevas.",
+    "Hábitat: costas y peces; alimentación: cuevas y mar.",
+    "Hábitat: cuevas y peces; alimentación: costas y mar.",
+    "Hábitat: costas y cuevas; alimentación: come peces en el mar."
+   ],
+   "correct": "Hábitat: costas y cuevas; alimentación: come peces en el mar.",
+   "hint": "Las costas y cuevas responden dónde vive; peces y mar, cómo consigue alimento.",
+   "clue": "Agrupa las notas según indiquen dónde vive o qué come.",
+   "option_notes": {
+    "Hábitat: costas y peces; alimentación: cuevas y mar.": "Mezcla una característica del hábitat con una de la alimentación.",
+    "Hábitat: peces y mar; alimentación: costas y cuevas.": "Intercambia los datos de hábitat y alimentación.",
+    "Hábitat: cuevas y peces; alimentación: costas y mar.": "Distribuye datos de ambos temas en los dos párrafos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Quieres escribir sobre los parques nacionales de Chile. ¿Qué plan respeta mejor la estructura de un artículo informativo?",
+   "options": [
+    "Inicio: un parque; P1: parques; P2: flora y fauna; sin fuentes.",
+    "Inicio: opinión; P1: flora y fauna; cierre: una pregunta final.",
+    "Inicio: tema; P1: flora, fauna y cómo llegar; cierre: fuentes.",
+    "Inicio: tema; P1: flora; P2: fauna; cierre: fuentes consultadas."
+   ],
+   "correct": "Inicio: tema; P1: flora; P2: fauna; cierre: fuentes consultadas.",
+   "hint": "Incluye una presentación del tema, separa flora y fauna en párrafos distintos y registra las fuentes.",
+   "clue": "Comprueba las tres partes: tema al inicio, una idea por párrafo y fuentes.",
+   "option_notes": {
+    "Inicio: opinión; P1: flora y fauna; cierre: una pregunta final.": "Empieza con una opinión, mezcla ideas y no agrega fuentes.",
+    "Inicio: un parque; P1: parques; P2: flora y fauna; sin fuentes.": "No presenta el tema general y reemplaza las fuentes por una pregunta.",
+    "Inicio: tema; P1: flora, fauna y cómo llegar; cierre: fuentes.": "Junta flora, fauna y recorrido en un mismo párrafo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Usaste una ficha de CONAF sobre el hábitat del pudú y un libro de Ana Rojas sobre su alimentación. ¿Cuál oración agrega correctamente una fuente?",
+   "options": [
+    "Según CONAF, el pudú vive en bosques húmedos.",
+    "Según Ana Rojas, el pudú vive en bosques húmedos.",
+    "El pudú vive en bosques húmedos, según mi opinión.",
+    "Según CONAF, el pudú come hojas y frutos."
+   ],
+   "correct": "Según CONAF, el pudú vive en bosques húmedos.",
+   "hint": "La fuente debe acompañar un dato del mismo tema que trata esa fuente.",
+   "clue": "Relaciona cada dato con el tema de la fuente que lo entrega.",
+   "option_notes": {
+    "Según Ana Rojas, el pudú vive en bosques húmedos.": "Atribuye el dato del hábitat al libro que trata sobre alimentación.",
+    "Según CONAF, el pudú come hojas y frutos.": "Atribuye el dato de alimentación a la ficha sobre hábitat.",
+    "El pudú vive en bosques húmedos, según mi opinión.": "Usa una opinión como si fuera una fuente informativa."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

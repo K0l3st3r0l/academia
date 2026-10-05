@@ -2,6 +2,10 @@
 .env.mail
 /content/*
 !/content/questions/
+# Question drafting (content/pipeline/preguntas.py) and its per-OA drafts; pending job ids stay local.
+!/content/pipeline/
+/content/pipeline/**/*.job
+/content/pipeline/**/*.check-job
 /backend/node_modules/
 /frontend/node_modules/
 /frontend/dist/
@@ -21,3 +25,4 @@ graphify-out/
 !/art/piezas/plantilla-ropa-nino.png
 __pycache__/
 !/art/piezas/maestra-cara.png
+!/art/piezas/maestra-gorro.png

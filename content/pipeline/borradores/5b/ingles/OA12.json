@@ -1,0 +1,264 @@
+{
+ "oa": "OA12",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Llegas a tu sala a las 8:00 y ves a tu profesora. Selecciona el saludo correcto.",
+   "options": [
+    "Thank you, teacher!",
+    "Goodbye, teacher!",
+    "Good morning, teacher!",
+    "Good afternoon, teacher!"
+   ],
+   "correct": "Good morning, teacher!",
+   "hint": "“Good morning” se usa para saludar durante la mañana.",
+   "clue": "Piensa en una expresión para comenzar el encuentro.",
+   "option_notes": {
+    "Good afternoon, teacher!": "Confunde la mañana con la tarde.",
+    "Goodbye, teacher!": "Confunde saludar con despedirse.",
+    "Thank you, teacher!": "Usa una expresión de agradecimiento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Terminó la visita de tu primo en Valdivia. ¿Qué le dices al despedirte?",
+   "options": [
+    "Hello, Ben!",
+    "Goodbye, Ben!",
+    "May I come in, Ben?",
+    "Thank you, Ben!"
+   ],
+   "correct": "Goodbye, Ben!",
+   "hint": "“Goodbye” se usa cuando una visita o encuentro termina.",
+   "clue": "Busca la expresión que se usa al finalizar el encuentro.",
+   "option_notes": {
+    "Hello, Ben!": "Usa un saludo para comenzar el encuentro.",
+    "Thank you, Ben!": "Agradece, pero no se despide.",
+    "May I come in, Ben?": "Pide permiso para entrar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "La profesora dice: «Please close the door». ¿Qué acción debes hacer?",
+   "options": [
+    "Close the door, please.",
+    "Open the door, please.",
+    "Look at the board, please.",
+    "Sit on the chair, please."
+   ],
+   "correct": "Close the door, please.",
+   "hint": "“Close” significa cerrar y “door” significa puerta.",
+   "clue": "Fíjate en el verbo close y en el objeto door.",
+   "option_notes": {
+    "Open the door, please.": "Confunde close con open.",
+    "Sit on the chair, please.": "Cambia la puerta por la silla.",
+    "Look at the board, please.": "Cambia la acción y el objeto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Después de levantarte y antes de ir a clases, ¿qué oración describe una acción cotidiana?",
+   "options": [
+    "I brush my teeth.",
+    "I play after school.",
+    "I eat lunch.",
+    "I sleep at night."
+   ],
+   "correct": "I brush my teeth.",
+   "hint": "Brush my teeth describe lavarse o cepillarse los dientes.",
+   "clue": "Busca una acción que normalmente haces al comenzar el día.",
+   "option_notes": {
+    "I sleep at night.": "Relaciona dormir con la noche.",
+    "I eat lunch.": "Ubica el almuerzo antes de tiempo.",
+    "I play after school.": "Confunde antes de clases con después."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Tu compañero Diego te presta un lápiz. ¿Qué respondes para agradecerle?",
+   "options": [
+    "Goodbye with the pencil.",
+    "Sorry for the pencil.",
+    "May I use the pencil?",
+    "Thank you for the pencil."
+   ],
+   "correct": "Thank you for the pencil.",
+   "hint": "“Thank you” es la expresión adecuada para agradecer un favor.",
+   "clue": "Piensa qué dices cuando alguien te presta algo.",
+   "option_notes": {
+    "Sorry for the pencil.": "Usa una disculpa en vez de un agradecimiento.",
+    "Goodbye with the pencil.": "Mezcla una despedida con el objeto.",
+    "May I use the pencil?": "Pide permiso para usarlo, pero no agradece."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Quieres usar el baño de la escuela. ¿Cómo pides permiso a tu profesora?",
+   "options": [
+    "Thank you for the bathroom, please.",
+    "Where is the bathroom, please?",
+    "I am in the bathroom, please.",
+    "May I use the bathroom, please?"
+   ],
+   "correct": "May I use the bathroom, please?",
+   "hint": "“May I...?” se usa para pedir permiso de manera adecuada.",
+   "clue": "Busca la pregunta que solicita autorización.",
+   "option_notes": {
+    "Where is the bathroom, please?": "Pregunta por un lugar, no pide permiso.",
+    "I am in the bathroom, please.": "Informa dónde está, pero no solicita autorización.",
+    "Thank you for the bathroom, please.": "Agradece de forma incorrecta y no pide permiso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Sin querer, botas al suelo el cuaderno de Camila. ¿Cómo te disculpas?",
+   "options": [
+    "Thank you, Camila.",
+    "I’m sorry, Camila.",
+    "Goodbye, Camila.",
+    "May I borrow it, Camila?"
+   ],
+   "correct": "I’m sorry, Camila.",
+   "hint": "“I’m sorry” se usa para disculparse por un accidente o error.",
+   "clue": "Piensa qué dices después de hacer algo accidentalmente.",
+   "option_notes": {
+    "Thank you, Camila.": "Agradece, pero no se disculpa.",
+    "May I borrow it, Camila?": "Pide prestado el cuaderno.",
+    "Goodbye, Camila.": "Usa una despedida fuera de contexto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Durante un paseo por el Parque Nacional Conguillío, hay sol y a Martín le gusta ese clima. Si Martín habla, ¿qué expresión comunica ambas ideas?",
+   "options": [
+    "Today are sunny and I like it.",
+    "Today is rainy and I don’t like it.",
+    "Today is sunny and I like it.",
+    "Today am sunny and I like it."
+   ],
+   "correct": "Today is sunny and I like it.",
+   "hint": "La oración usa is para el clima y agrega la preferencia con and.",
+   "clue": "Comprueba el clima, la opinión de Martín y la forma correcta de unirlos.",
+   "option_notes": {
+    "Today are sunny and I like it.": "Usa are con today, que es singular.",
+    "Today is rainy and I don’t like it.": "Cambia el clima y la preferencia de Martín.",
+    "Today am sunny and I like it.": "Usa am después de today de forma incorrecta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "En una viñeta de tu sala se ve una mochila roja de Tomás debajo de la mesa. ¿Qué oración describe correctamente la escena?",
+   "options": [
+    "That are his blue bag, and it is in the table.",
+    "This is her red bag, and they are under the table.",
+    "These are his red bag, and it is on the table.",
+    "This is his red bag, and it is under the table."
+   ],
+   "correct": "This is his red bag, and it is under the table.",
+   "hint": "La oración concuerda en singular y expresa dueño, color, objeto y posición.",
+   "clue": "Revisa quién es dueño, el color de la mochila y dónde está.",
+   "option_notes": {
+    "These are his red bag, and it is on the table.": "Confunde singular y plural, y cambia under por on.",
+    "This is her red bag, and they are under the table.": "Confunde el dueño y usa they para un solo objeto.",
+    "That are his blue bag, and it is in the table.": "Cambia color y posición, además de usar una forma incorrecta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "En una caja hay 12 lápices y 1 regla. La regla está dentro de la caja. ¿Cuál expresión informa correctamente sobre su contenido?",
+   "options": [
+    "There are twelve pencils and one ruler in the box.",
+    "There are twenty pencils and one ruler on the box.",
+    "There is twelve pencil and two rulers in the box.",
+    "There is twelve pencils and one ruler in the box."
+   ],
+   "correct": "There are twelve pencils and one ruler in the box.",
+   "hint": "There are acompaña a los objetos contables y las cantidades coinciden con el enunciado.",
+   "clue": "Compara cada número y observa si hay una o más cosas.",
+   "option_notes": {
+    "There is twelve pencils and one ruler in the box.": "Usa there is con un grupo plural.",
+    "There are twenty pencils and one ruler on the box.": "Cambia twelve por twenty y pone objetos sobre la caja.",
+    "There is twelve pencil and two rulers in the box.": "Cambia las cantidades y usa formas singulares incorrectas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Lee: «The pudú is a small Chilean deer. It eats plants and lives in forests.» ¿Qué pregunta y respuesta usan correctamente esa información?",
+   "options": [
+    "Where does it live? It lives in the city.",
+    "What is it? It is a big Chilean deer.",
+    "What is it? It is a small Chilean deer.",
+    "What does it eat? It eats pizza."
+   ],
+   "correct": "What is it? It is a small Chilean deer.",
+   "hint": "La pregunta y la respuesta coinciden con la especie y su tamaño descritos.",
+   "clue": "Busca la opción que respeta el tamaño, el alimento y el lugar del texto.",
+   "option_notes": {
+    "What is it? It is a big Chilean deer.": "Cambia small por big.",
+    "What does it eat? It eats pizza.": "Cambia plants por pizza.",
+    "Where does it live? It lives in the city.": "Cambia forests por the city."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Imagina tres viñetas: una niña ve un perro, el perro corre al parque y luego juega con ella. ¿Cuál oración recontaría mejor la secuencia?",
+   "options": [
+    "The girl sees a cat. It sleeps in the park and plays with her.",
+    "The girl sees a dog. It runs to the park and plays with her.",
+    "The girl sees a dog. It run to the park and play with her.",
+    "The girl sees a dog. They runs to the park and plays with her."
+   ],
+   "correct": "The girl sees a dog. It runs to the park and plays with her.",
+   "hint": "La oración mantiene los personajes, el orden de las acciones y la concordancia verbal.",
+   "clue": "Sigue el orden: ver, correr al parque y jugar.",
+   "option_notes": {
+    "The girl sees a cat. It sleeps in the park and plays with her.": "Cambia el animal y las acciones de la secuencia.",
+    "The girl sees a dog. They runs to the park and plays with her.": "Usa they y runs sin concordancia.",
+    "The girl sees a dog. It run to the park and play with her.": "Omite la terminación -s en los verbos."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,264 @@
+{
+ "oa": "OA14",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Mira la sucesión: 7, 12, 17, 22. ¿Qué regla la explica?",
+   "options": [
+    "Multiplicar por 5 cada término.",
+    "Restar 5 al término anterior.",
+    "Sumar 7 al término anterior.",
+    "Sumar 5 al término anterior."
+   ],
+   "correct": "Sumar 5 al término anterior.",
+   "hint": "Cada término aumenta en 5: 7+5=12, 12+5=17 y 17+5=22.",
+   "clue": "Compara cuánto cambia un término respecto del anterior.",
+   "option_notes": {
+    "Sumar 7 al término anterior.": "Usa el primer término como aumento.",
+    "Restar 5 al término anterior.": "Invierte el sentido del cambio.",
+    "Multiplicar por 5 cada término.": "Confunde sumar 5 con multiplicar por 5."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Completa la sucesión: 48, 42, ___, 30. Todos los pasos siguen la misma regla.",
+   "options": [
+    "40",
+    "34",
+    "38",
+    "36"
+   ],
+   "correct": "36",
+   "hint": "Se resta 6 cada vez: 48, 42, 36 y 30.",
+   "clue": "Calcula cuánto baja de 48 a 42 y repite esa cantidad.",
+   "option_notes": {
+    "34": "Resta 8 en vez de 6.",
+    "38": "Resta 4 en vez de 6.",
+    "40": "Resta 2 en vez de 6."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "En una caminata, al final de cada minuto se registran 100 m, 200 m, 300 m y 400 m. Si la regla sigue, ¿qué registrarás al minuto 5?",
+   "options": [
+    "600 m",
+    "500 m",
+    "450 m",
+    "800 m"
+   ],
+   "correct": "500 m",
+   "hint": "Cada minuto se suman 100 m; después de 400 m viene 500 m.",
+   "clue": "Mira cuánto aumenta el registro entre minutos consecutivos.",
+   "option_notes": {
+    "450 m": "Aumenta 50 m en vez de 100 m.",
+    "600 m": "Salta el registro de 500 m.",
+    "800 m": "Duplica 400 m para hallar el siguiente."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Una sucesión comienza en 9 y cada término se obtiene multiplicando el anterior por 2. ¿Qué lista cumple la regla?",
+   "options": [
+    "9, 18, 20, 40",
+    "9, 11, 13, 15",
+    "9, 27, 54, 108",
+    "9, 18, 36, 72"
+   ],
+   "correct": "9, 18, 36, 72",
+   "hint": "9×2=18, 18×2=36 y 36×2=72.",
+   "clue": "Revisa cada término comparándolo con el anterior.",
+   "option_notes": {
+    "9, 11, 13, 15": "Suma 2 en vez de multiplicar por 2.",
+    "9, 18, 20, 40": "Multiplica por 2 solo en algunos pasos.",
+    "9, 27, 54, 108": "Multiplica el primer paso por 3."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Observa: 4, 7, 11, 14, 18. ¿Qué número sigue y qué regla se repite?",
+   "options": [
+    "25: alternar aumentos de 3 y 5.",
+    "21: alternar aumentos de 3 y 4.",
+    "22: usar siempre un aumento de 4.",
+    "21: usar siempre un aumento de 3."
+   ],
+   "correct": "21: alternar aumentos de 3 y 4.",
+   "hint": "Los aumentos son +3, +4, +3, +4; después de 18 toca sumar 3.",
+   "clue": "Anota los cambios entre términos consecutivos y busca si se repiten.",
+   "option_notes": {
+    "22: usar siempre un aumento de 4.": "Considera constante el último aumento.",
+    "21: usar siempre un aumento de 3.": "Considera constante el primer aumento.",
+    "25: alternar aumentos de 3 y 5.": "Cambia el segundo aumento de 4 por 5."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "En una feria, la primera bolsa de mote cuesta $1.500 y cada bolsa siguiente cuesta $500 más. ¿Cuánto cuestan la cuarta y la quinta?",
+   "options": [
+    "$2.000 y $2.500",
+    "$3.500 y $4.000",
+    "$3.000 y $3.500",
+    "$2.500 y $3.000"
+   ],
+   "correct": "$3.000 y $3.500",
+   "hint": "Se suman $500: 1.500, 2.000, 2.500, 3.000 y 3.500.",
+   "clue": "Escribe los precios intermedios sumando $500 cada vez.",
+   "option_notes": {
+    "$2.500 y $3.000": "Cuenta solo dos aumentos desde la primera bolsa.",
+    "$3.500 y $4.000": "Cuenta un aumento extra antes de cada precio.",
+    "$2.000 y $2.500": "Suma $500 solo una vez desde el precio inicial."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "En un juego, avanzas 2 casillas en la primera jugada y 2 más que antes en cada jugada. ¿Cuántas casillas habrás avanzado en total tras 5 jugadas?",
+   "options": [
+    "30 casillas",
+    "20 casillas",
+    "32 casillas",
+    "28 casillas"
+   ],
+   "correct": "30 casillas",
+   "hint": "Los avances son 2, 4, 6, 8 y 10; al sumarlos obtienes 30 casillas.",
+   "clue": "Primero encuentra los cinco avances y después súmalos.",
+   "option_notes": {
+    "20 casillas": "Suma solo hasta la cuarta jugada.",
+    "28 casillas": "Repite el avance de 8 en vez de usar 10.",
+    "32 casillas": "Usa 12 como quinto avance en vez de 10."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Una ciclista recorre 1,5 km en la primera vuelta y aumenta 0,5 km en cada vuelta. ¿Cuántos kilómetros recorre en total tras 4 vueltas?",
+   "options": [
+    "11 km",
+    "8 km",
+    "9 km",
+    "10 km"
+   ],
+   "correct": "9 km",
+   "hint": "Las distancias son 1,5; 2; 2,5 y 3 km; su total es 9 km.",
+   "clue": "Calcula las cuatro distancias y luego suma todas.",
+   "option_notes": {
+    "8 km": "Elimina los 0,5 km de las distancias antes de sumar.",
+    "10 km": "Redondea hacia arriba las distancias con 0,5.",
+    "11 km": "Agrega una vuelta extra al total."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "En la sucesión 3, 5, 9, 15, 23, ¿qué afirmación permite predecir el término siguiente?",
+   "options": [
+    "Se suma 8 siempre; sigue 31.",
+    "Se suman 2, 4, 6 y 8; sigue 33.",
+    "Se suma 12 después de 23; sigue 35.",
+    "Se duplica el último aumento; sigue 39."
+   ],
+   "correct": "Se suman 2, 4, 6 y 8; sigue 33.",
+   "hint": "Las diferencias son 2, 4, 6 y 8; sigue +10, así que 23+10=33.",
+   "clue": "No mires solo los términos: calcula las diferencias entre ellos.",
+   "option_notes": {
+    "Se suma 8 siempre; sigue 31.": "Repite el último aumento en vez de continuar la serie.",
+    "Se suma 12 después de 23; sigue 35.": "Salta el aumento 10 y usa 12.",
+    "Se duplica el último aumento; sigue 39.": "Duplica 8, aunque el aumento crece de 2 en 2."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "En un vivero, las filas tienen 1, 4, 9 y 16 plantas. Los aumentos siguen 3, 5, 7 y crecen de 2 en 2. ¿Cuántas plantas habrá en la séptima fila?",
+   "options": [
+    "64 plantas",
+    "25 plantas",
+    "49 plantas",
+    "36 plantas"
+   ],
+   "correct": "49 plantas",
+   "hint": "Los aumentos continúan con 9, 11 y 13: 16+9+11+13=49.",
+   "clue": "Continúa la secuencia de aumentos impares sin saltarte filas.",
+   "option_notes": {
+    "25 plantas": "Se detiene en la quinta fila.",
+    "36 plantas": "Se detiene en la sexta fila.",
+    "64 plantas": "Confunde la séptima fila con el cuadrado de 8."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Observa: 2, 9, 4, 11, 6, 13, 8. Hay dos patrones alternados. ¿Qué término ocupará la posición 8?",
+   "options": [
+    "15",
+    "14",
+    "16",
+    "17"
+   ],
+   "correct": "15",
+   "hint": "Los términos en posiciones pares son 9, 11 y 13; la posición 8 continúa con 15.",
+   "clue": "Separa los términos de posiciones pares e impares.",
+   "option_notes": {
+    "14": "Suma 1 al último término 13.",
+    "16": "Suma 3 al último término en vez de 2.",
+    "17": "Suma 4 al último término en vez de 2."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Un juego entrega puntos así: ronda 1: 2; ronda 2: 4; ronda 3: 7; ronda 4: 11. Si cada aumento crece en 1, ¿cuántos puntos entrega en la ronda 7?",
+   "options": [
+    "29 puntos",
+    "23 puntos",
+    "30 puntos",
+    "26 puntos"
+   ],
+   "correct": "29 puntos",
+   "hint": "Los aumentos son +2, +3, +4, +5, +6 y +7; desde 11 llegas a 29.",
+   "clue": "Desde 11, aplica aumentos consecutivos: 5, luego 6 y luego 7.",
+   "option_notes": {
+    "23 puntos": "Mantiene el aumento 4 en las tres rondas siguientes.",
+    "26 puntos": "Mantiene el aumento 5 después de la ronda 4.",
+    "30 puntos": "Usa 8 como último aumento en vez de 7."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

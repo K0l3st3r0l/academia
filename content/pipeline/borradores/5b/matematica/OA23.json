@@ -1,0 +1,264 @@
+{
+ "oa": "OA23",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA23",
+   "difficulty": "easy",
+   "text": "En cinco días, un grupo reunió 20 kg de papel para reciclar en partes iguales. ¿Qué cantidad representa el promedio reunido por día?",
+   "options": [
+    "15 kg por día",
+    "25 kg por día",
+    "5 kg por día",
+    "4 kg por día"
+   ],
+   "correct": "4 kg por día",
+   "hint": "El promedio se obtiene repartiendo el total, 20 kg, entre los cinco días.",
+   "clue": "Imagina que distribuyes todo el papel de manera equitativa entre los días.",
+   "option_notes": {
+    "5 kg por día": "Divide 20 kg entre cuatro en vez de entre cinco.",
+    "15 kg por día": "Resta cinco al total, en lugar de repartirlo entre los días.",
+    "25 kg por día": "Suma cinco al total, en lugar de calcular una repartición."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "easy",
+   "text": "En cuatro cursos, el promedio de libros leídos en un mes fue 6 por curso. ¿Qué significa ese promedio?",
+   "options": [
+    "Al repartirlos por igual, corresponderían 6 libros a cada curso.",
+    "Cada curso leyó exactamente 6 libros ese mes.",
+    "Entre los cuatro cursos leyeron solo 6 libros.",
+    "El curso con más libros leyó 6 libros más que los otros."
+   ],
+   "correct": "Al repartirlos por igual, corresponderían 6 libros a cada curso.",
+   "hint": "El promedio indica cuánto correspondería a cada curso si el total se repartiera equitativamente.",
+   "clue": "Distingue entre lo que representa el promedio y lo que ocurrió en cada curso.",
+   "option_notes": {
+    "Cada curso leyó exactamente 6 libros ese mes.": "Confunde el promedio con lo que necesariamente leyó cada curso.",
+    "Entre los cuatro cursos leyeron solo 6 libros.": "Confunde el promedio por curso con el total de libros.",
+    "El curso con más libros leyó 6 libros más que los otros.": "Confunde el promedio con una diferencia entre cursos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "easy",
+   "text": "En una feria, tres bolsas de mote cuestan $1.000, $2.000 y $3.000. ¿Cuál es el precio promedio?",
+   "options": [
+    "$2.000",
+    "$6.000",
+    "$3.000",
+    "$1.000"
+   ],
+   "correct": "$2.000",
+   "hint": "Suma los tres precios y divide el total entre las tres bolsas.",
+   "clue": "El promedio es un precio representativo entre el menor y el mayor.",
+   "option_notes": {
+    "$1.000": "Elige el precio menor en vez de calcular el promedio.",
+    "$3.000": "Elige el precio mayor en vez de calcular el promedio.",
+    "$6.000": "Suma los precios, pero olvida dividir entre tres."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "easy",
+   "text": "Para hallar el promedio de 4 m, 6 m y 8 m, ¿qué operación debes hacer?",
+   "options": [
+    "4 + 6 + 8 ÷ 3",
+    "(4 + 6 + 8) ÷ 2",
+    "(4 + 6) ÷ 8",
+    "(4 + 6 + 8) ÷ 3"
+   ],
+   "correct": "(4 + 6 + 8) ÷ 3",
+   "hint": "Primero sumas todos los datos y luego divides por cuántos datos hay.",
+   "clue": "Cuenta los datos y reúne sus valores antes de dividir.",
+   "option_notes": {
+    "(4 + 6 + 8) ÷ 2": "Divide entre dos, aunque hay tres datos.",
+    "(4 + 6) ÷ 8": "Deja fuera un dato y divide por otro valor.",
+    "4 + 6 + 8 ÷ 3": "No agrupa la suma antes de dividir; aplica mal el orden."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "medium",
+   "text": "Una familia caminó 3 km el lunes, 5 km el martes, 4 km el miércoles y 8 km el jueves. ¿Cuántos km más que el promedio caminó el jueves?",
+   "options": [
+    "5 km",
+    "2 km",
+    "3 km",
+    "8 km"
+   ],
+   "correct": "3 km",
+   "hint": "El promedio es 20 ÷ 4 = 5 km; luego compara los 8 km del jueves con ese valor.",
+   "clue": "Primero calcula el promedio de los cuatro días y después compáralo con el jueves.",
+   "option_notes": {
+    "2 km": "Calcula una diferencia usando datos incompletos, no el promedio de los cuatro días.",
+    "5 km": "Confunde el promedio con cuánto superó el jueves.",
+    "8 km": "Responde con la distancia del jueves, no con la diferencia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "medium",
+   "text": "El promedio de residuos reciclados en cinco días fue 4 kg. El lunes y martes se juntaron 2 kg y 5 kg. ¿Cuántos kg se juntaron en los otros tres días?",
+   "options": [
+    "17 kg",
+    "12 kg",
+    "13 kg",
+    "20 kg"
+   ],
+   "correct": "13 kg",
+   "hint": "Primero transforma el promedio en total: 4 × 5; después quita 2 y 5.",
+   "clue": "Convierte el promedio de cinco días en el total de esos días.",
+   "option_notes": {
+    "12 kg": "Calcula 4 × 3 y no considera que el promedio cubre cinco días.",
+    "17 kg": "Resta solo los 2 kg del lunes al total de 20 kg.",
+    "20 kg": "Usa el total de los cinco días como si fueran solo los otros tres."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "medium",
+   "text": "Camila caminó 2, 4 y 6 km; Diego caminó 3, 3 y 6 km. ¿Qué conclusión sobre sus promedios es correcta?",
+   "options": [
+    "Camila promedia 2 km por día.",
+    "Camila promedia 6 km y Diego, 3 km.",
+    "Diego promedia 5 km por día.",
+    "Ambos promedian 4 km por día."
+   ],
+   "correct": "Ambos promedian 4 km por día.",
+   "hint": "Cada total es 12 km; al dividir cada uno entre sus tres días, ambos dan el mismo promedio.",
+   "clue": "Calcula por separado el total y el promedio de cada persona.",
+   "option_notes": {
+    "Camila promedia 2 km por día.": "Confunde la menor distancia con el promedio de Camila.",
+    "Diego promedia 5 km por día.": "Combina los datos de Diego de forma incorrecta y obtiene 5 km.",
+    "Camila promedia 6 km y Diego, 3 km.": "Confunde una distancia individual con el promedio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "medium",
+   "text": "El promedio de cinco mediciones de una planta fue 6 cm. Se agrega una medición de 6 cm. ¿Cuál es el nuevo promedio de las seis mediciones?",
+   "options": [
+    "5 cm por medición",
+    "6 cm por medición",
+    "36 cm por medición",
+    "7 cm por medición"
+   ],
+   "correct": "6 cm por medición",
+   "hint": "Las cinco mediciones suman 30 cm; al agregar 6, quedan 36 cm, que se dividen entre 6.",
+   "clue": "Usa el promedio original para hallar el total antes de agregar la nueva medición.",
+   "option_notes": {
+    "5 cm por medición": "Divide el promedio original entre el nuevo número de mediciones.",
+    "7 cm por medición": "Suma 6 al promedio sin considerar el total original.",
+    "36 cm por medición": "Calcula el total de seis mediciones, pero lo llama promedio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "hard",
+   "text": "Un grupo recorrió 2, 3, 3, 4 y 8 km en cinco días. Si quita el registro de 8 km, ¿en cuánto disminuye el promedio?",
+   "options": [
+    "3 km",
+    "4 km",
+    "1 km",
+    "2 km"
+   ],
+   "correct": "1 km",
+   "hint": "Antes es 20 ÷ 5 = 4; después, 12 ÷ 4 = 3. La diferencia es 1 km.",
+   "clue": "Calcula el promedio con cinco datos y luego vuelve a calcularlo con cuatro.",
+   "option_notes": {
+    "2 km": "Resta los promedios o divide el dato quitado de manera incorrecta.",
+    "3 km": "Toma el nuevo promedio como si fuera la disminución.",
+    "4 km": "Toma el promedio original como la disminución."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "hard",
+   "text": "En 5° A, 4 estudiantes reciclaron en promedio 3 kg cada uno; en 5° B, 6 estudiantes reciclaron en promedio 5 kg cada uno. ¿Cuál fue el promedio de los 10?",
+   "options": [
+    "4 kg por estudiante",
+    "4,2 kg por estudiante",
+    "5 kg por estudiante",
+    "42 kg por estudiante"
+   ],
+   "correct": "4,2 kg por estudiante",
+   "hint": "Calcula 4 × 3 y 6 × 5; suma ambos totales y divide por los 10 estudiantes.",
+   "clue": "No basta promediar 3 y 5: primero considera cuántos estudiantes hay en cada curso.",
+   "option_notes": {
+    "4 kg por estudiante": "Promedia 3 y 5 sin considerar que los grupos tienen distinto tamaño.",
+    "5 kg por estudiante": "Usa el promedio del grupo con más estudiantes como resultado total.",
+    "42 kg por estudiante": "Calcula el total, pero no lo divide entre los 10 estudiantes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "hard",
+   "text": "¿Qué conjunto de cuatro distancias tiene un promedio de 6 km y exactamente una distancia mayor que 8 km?",
+   "options": [
+    "4 km, 5 km, 7 km y 8 km",
+    "3 km, 5 km, 7 km y 9 km",
+    "5 km, 6 km, 7 km y 8 km",
+    "2 km, 6 km, 8 km y 10 km"
+   ],
+   "correct": "3 km, 5 km, 7 km y 9 km",
+   "hint": "Revisa la suma de cada conjunto y cuántos valores son mayores que 8.",
+   "clue": "Deben cumplirse las dos condiciones al mismo tiempo.",
+   "option_notes": {
+    "4 km, 5 km, 7 km y 8 km": "Tiene promedio 6 km, pero ninguna distancia supera 8 km.",
+    "5 km, 6 km, 7 km y 8 km": "Su promedio es 6,5 km y ninguna distancia supera 8 km.",
+    "2 km, 6 km, 8 km y 10 km": "Tiene una distancia mayor que 8 km, pero su promedio es 6,5 km."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "hard",
+   "text": "En un experimento escolar, el promedio de 6 mediciones era 5 cm. Una medición anotada como 2 cm debía ser 8 cm. ¿Cuál es el promedio corregido?",
+   "options": [
+    "6 cm",
+    "5 cm",
+    "4 cm",
+    "8 cm"
+   ],
+   "correct": "6 cm",
+   "hint": "El total aumenta 6 cm, de 30 a 36; al dividir 36 entre 6, resulta 6 cm.",
+   "clue": "Calcula el total original, corrige ese total y vuelve a repartirlo entre seis.",
+   "option_notes": {
+    "4 cm": "Resta 6 cm al promedio, sin considerar cómo se reparte el cambio.",
+    "5 cm": "No corrige la medición y mantiene el promedio anterior.",
+    "8 cm": "Confunde la medición corregida con el promedio."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

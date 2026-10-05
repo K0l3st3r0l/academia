@@ -1,0 +1,268 @@
+{
+ "oa": "OA13",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "¿Qué significa que todas las personas sean sujetos de derecho?",
+   "options": [
+    "Que deben ganar derechos con buenas notas.",
+    "Que tienen derechos que deben ser respetados.",
+    "Que el Estado puede quitarles derechos sin razón.",
+    "Que solo los adultos tienen derechos importantes."
+   ],
+   "correct": "Que tienen derechos que deben ser respetados.",
+   "hint": "Ser sujeto de derecho significa tener derechos por ser persona y merecer respeto.",
+   "clue": "Piensa qué tienen en común todas las personas, aunque sean diferentes.",
+   "option_notes": {
+    "Que deben ganar derechos con buenas notas.": "Confunde los derechos con premios por cumplir bien una tarea.",
+    "Que solo los adultos tienen derechos importantes.": "Cree que la edad hace que algunos derechos pertenezcan solo a adultos.",
+    "Que el Estado puede quitarles derechos sin razón.": "Piensa que los derechos dependen totalmente de la autoridad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "En el recreo, Tomás se burla de Rayen porque habla mapudungun con su abuela. ¿Qué acción respeta mejor sus derechos?",
+   "options": [
+    "Pedirle a Rayen que se aleje un rato del grupo.",
+    "Decirle a Rayen que use solo español durante el recreo.",
+    "Detener la burla y tratar a Rayen con respeto.",
+    "Ignorar la burla para evitar problemas en el recreo."
+   ],
+   "correct": "Detener la burla y tratar a Rayen con respeto.",
+   "hint": "Respetar los derechos significa rechazar la burla y valorar la lengua y la cultura de Rayen.",
+   "clue": "Observa si la solución detiene la falta de respeto o le exige cambiar a quien la recibe.",
+   "option_notes": {
+    "Ignorar la burla para evitar problemas en el recreo.": "Piensa que ignorar una burla evita el problema y no daña a nadie.",
+    "Decirle a Rayen que use solo español durante el recreo.": "Cree que Rayen debe abandonar su lengua para ser respetada.",
+    "Pedirle a Rayen que se aleje un rato del grupo.": "Confunde proteger derechos con apartar a quien recibe la burla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "Camila nació en Arica y Benjamín en Santiago. Son de distinto sexo. ¿Qué corresponde afirmar sobre sus derechos?",
+   "options": [
+    "El niño tiene más derechos que la niña.",
+    "Cada uno tiene derechos solo en su ciudad de origen.",
+    "Quien nació en Santiago tiene más derechos.",
+    "Ambos tienen los mismos derechos, aunque sean diferentes."
+   ],
+   "correct": "Ambos tienen los mismos derechos, aunque sean diferentes.",
+   "hint": "Los derechos corresponden a ambos; no dependen del sexo ni del lugar de nacimiento.",
+   "clue": "Busca la alternativa que no use una diferencia personal para dar más o menos derechos.",
+   "option_notes": {
+    "Quien nació en Santiago tiene más derechos.": "Cree que el lugar de nacimiento cambia la cantidad de derechos.",
+    "El niño tiene más derechos que la niña.": "Cree que el sexo permite que una persona tenga más derechos.",
+    "Cada uno tiene derechos solo en su ciudad de origen.": "Confunde pertenecer a una ciudad con tener derechos solo allí."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "¿Cuál es una responsabilidad del Estado para respetar los derechos de las personas?",
+   "options": [
+    "Permitir servicios públicos solo a quienes pueden pagarlos.",
+    "Elegir qué personas merecen tener derechos.",
+    "Crear y hacer cumplir leyes que protejan a todas las personas.",
+    "Dejar que cada escuela decida quién tiene derechos."
+   ],
+   "correct": "Crear y hacer cumplir leyes que protejan a todas las personas.",
+   "hint": "El Estado debe proteger los derechos mediante normas y acciones que alcancen a todas las personas.",
+   "clue": "Piensa en una tarea que proteja a toda la población, no que seleccione a unos pocos.",
+   "option_notes": {
+    "Elegir qué personas merecen tener derechos.": "Piensa que la autoridad puede decidir quién merece derechos.",
+    "Permitir servicios públicos solo a quienes pueden pagarlos.": "Confunde un derecho con un servicio reservado a quien paga.",
+    "Dejar que cada escuela decida quién tiene derechos.": "Cree que cada escuela puede negar derechos a su arbitrio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "En una escuela de Iquique llega una estudiante de otro país. Algunos dicen que no debería usar la biblioteca. ¿Qué decisión respeta sus derechos?",
+   "options": [
+    "Negarle el acceso hasta conocer mejor su lugar de nacimiento.",
+    "Permitirle usarla en las mismas condiciones que sus compañeros.",
+    "Dejarla entrar solo si aprende primero las costumbres locales.",
+    "Permitirle usarla únicamente si alguien de Chile la acompaña."
+   ],
+   "correct": "Permitirle usarla en las mismas condiciones que sus compañeros.",
+   "hint": "Nacer en otro país no cambia el derecho de una estudiante a participar y usar servicios escolares.",
+   "clue": "La diferencia de origen no responde la pregunta: busca una regla válida para todos.",
+   "option_notes": {
+    "Dejarla entrar solo si aprende primero las costumbres locales.": "Cree que adaptarse a las costumbres da acceso a un derecho.",
+    "Permitirle usarla únicamente si alguien de Chile la acompaña.": "Piensa que el origen exige vigilancia o compañía especial.",
+    "Negarle el acceso hasta conocer mejor su lugar de nacimiento.": "Cree que el lugar de nacimiento permite negar servicios escolares."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "Un consultorio municipal atiende a niñas y niños. ¿Qué medida muestra que la comunidad y el Estado respetan sus derechos?",
+   "options": [
+    "Negar atención a quien llegó hace poco a la comuna.",
+    "Atender primero a las familias más conocidas del barrio.",
+    "Atender solo a quienes tienen apellidos chilenos.",
+    "Usar reglas iguales y priorizar según la urgencia médica."
+   ],
+   "correct": "Usar reglas iguales y priorizar según la urgencia médica.",
+   "hint": "El origen no debe decidir la atención; una prioridad válida es la urgencia de salud.",
+   "clue": "Distingue entre una razón relacionada con la salud y una razón basada en quién es la persona.",
+   "option_notes": {
+    "Atender primero a las familias más conocidas del barrio.": "Prefiere beneficiar a familias conocidas, aunque no sea un criterio justo.",
+    "Atender solo a quienes tienen apellidos chilenos.": "Cree que el apellido indica quién merece atención.",
+    "Negar atención a quien llegó hace poco a la comuna.": "Piensa que llegar después a la comuna elimina derechos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "Para elegir representante de curso, proponen excluir a Isidora porque usa silla de ruedas. ¿Qué respuesta aplica mejor el principio de igualdad de derechos?",
+   "options": [
+    "Permitirle participar y valorar sus ideas con los mismos criterios.",
+    "Dejarla participar solo si otro estudiante habla por ella.",
+    "Elegirla sin escuchar sus ideas para demostrar inclusión.",
+    "Excluirla, porque el cargo exige que todos caminen igual."
+   ],
+   "correct": "Permitirle participar y valorar sus ideas con los mismos criterios.",
+   "hint": "Una discapacidad no quita derechos; la elección debe considerar propuestas y permitir apoyos necesarios.",
+   "clue": "La condición física no reemplaza la evaluación de sus ideas ni su derecho a participar.",
+   "option_notes": {
+    "Elegirla sin escuchar sus ideas para demostrar inclusión.": "Confunde inclusión con elegir a alguien sin considerar sus ideas.",
+    "Excluirla, porque el cargo exige que todos caminen igual.": "Cree que usar silla de ruedas impide ejercer un cargo.",
+    "Dejarla participar solo si otro estudiante habla por ella.": "Supone que otra persona debe reemplazar su voz."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "Una junta de vecinos organizará talleres gratuitos. ¿Qué acuerdo respeta los derechos de quienes viven en la comuna?",
+   "options": [
+    "Reservar los talleres para quienes nacieron en la comuna.",
+    "Separar a los participantes en grupos según su etnia.",
+    "Inscribir solo a quienes llevan más años en el barrio.",
+    "Inscribir a cualquier vecino sin exigir sexo, etnia u origen."
+   ],
+   "correct": "Inscribir a cualquier vecino sin exigir sexo, etnia u origen.",
+   "hint": "Un servicio comunitario debe ofrecerse sin usar características personales para incluir o excluir.",
+   "clue": "Revisa qué criterio se relaciona con participar en el taller y cuál juzga a la persona.",
+   "option_notes": {
+    "Inscribir solo a quienes llevan más años en el barrio.": "Cree que solo quienes tienen más antigüedad merecen participar.",
+    "Reservar los talleres para quienes nacieron en la comuna.": "Confunde vivir hoy en la comuna con haber nacido allí.",
+    "Separar a los participantes en grupos según su etnia.": "Piensa que separar por etnia evita la discriminación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "En un campeonato escolar, un solo cupo queda para representar al curso. Hay estudiantes de distintos lugares de nacimiento. ¿Qué forma de elegir respeta sus derechos?",
+   "options": [
+    "Usar los mismos criterios deportivos para todos y explicar el resultado.",
+    "Dar el cupo a quien llegó primero, aunque no cumpla los criterios.",
+    "Excluir a quien tenga menos experiencia para evitar comparaciones.",
+    "Elegir a quien nació en Chile para representar mejor al país."
+   ],
+   "correct": "Usar los mismos criterios deportivos para todos y explicar el resultado.",
+   "hint": "La igualdad exige una oportunidad y criterios pertinentes para todos, no un cupo por nacionalidad.",
+   "clue": "Busca un criterio relacionado con la actividad y que se aplique de la misma manera.",
+   "option_notes": {
+    "Elegir a quien nació en Chile para representar mejor al país.": "Usa la nacionalidad como criterio para elegir al representante.",
+    "Dar el cupo a quien llegó primero, aunque no cumpla los criterios.": "Confunde el orden de llegada con el criterio adecuado para competir.",
+    "Excluir a quien tenga menos experiencia para evitar comparaciones.": "Cree que proteger a alguien significa excluirlo de la oportunidad."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Una biblioteca pública recibe fondos para mejorar el acceso. En la comuna viven personas de distintas edades, etnias y lugares de nacimiento. ¿Qué plan respeta mejor sus derechos?",
+   "options": [
+    "Mantener las barreras para tratar a todos exactamente igual.",
+    "Ofrecerlo a todos y quitar barreras a quienes necesiten apoyo.",
+    "Reservarlo para personas nacidas en la comuna y sus familias.",
+    "Entregarlo solo a la etnia más numerosa de la comuna."
+   ],
+   "correct": "Ofrecerlo a todos y quitar barreras a quienes necesiten apoyo.",
+   "hint": "Respetar derechos combina acceso para todos con apoyos que permitan superar barreras.",
+   "clue": "No basta con decir «igual para todos»: piensa quiénes podrían quedar sin poder usar el servicio.",
+   "option_notes": {
+    "Entregarlo solo a la etnia más numerosa de la comuna.": "Cree que la mayoría puede quedarse con un servicio público.",
+    "Reservarlo para personas nacidas en la comuna y sus familias.": "Confunde haber nacido en la comuna con merecer el servicio.",
+    "Mantener las barreras para tratar a todos exactamente igual.": "Confunde igualdad con dejar sin apoyo a quien enfrenta barreras."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "En una plaza de Antofagasta, algunas personas quieren impedir que una familia peruana la use. La municipalidad recibe el reclamo. ¿Qué respuesta protege mejor sus derechos y la convivencia?",
+   "options": [
+    "Cerrar la plaza temporalmente para evitar conflictos entre grupos.",
+    "Permitirla solo a familias nacidas en Chile y sus visitas.",
+    "Permitir la plaza a todos y aplicar las mismas reglas de convivencia.",
+    "Dejar que los vecinos antiguos decidan quién puede entrar."
+   ],
+   "correct": "Permitir la plaza a todos y aplicar las mismas reglas de convivencia.",
+   "hint": "El lugar de nacimiento no elimina el derecho a usar un espacio público; las reglas deben proteger la convivencia de todos.",
+   "clue": "Separa una regla de convivencia válida para cualquiera de una prohibición basada en el origen.",
+   "option_notes": {
+    "Permitirla solo a familias nacidas en Chile y sus visitas.": "Usa el origen nacional para decidir quién puede ocupar la plaza.",
+    "Dejar que los vecinos antiguos decidan quién puede entrar.": "Entrega a unos vecinos un poder que corresponde a la autoridad y las reglas.",
+    "Cerrar la plaza temporalmente para evitar conflictos entre grupos.": "Cree que evitar el conflicto justifica quitar un espacio a todos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Un reglamento escolar dice: «Todos pueden postular a la directiva, pero las niñas no pueden ser presidentas». ¿Qué análisis es correcto?",
+   "options": [
+    "La regla discrimina por sexo y debe permitir postular a todos.",
+    "La regla es justa porque niños y niñas pueden ocupar otros cargos.",
+    "La regla solo sería injusta si también excluyera a los niños.",
+    "La regla vale si la mayoría del curso la aprueba."
+   ],
+   "correct": "La regla discrimina por sexo y debe permitir postular a todos.",
+   "hint": "Una regla no respeta derechos si limita un cargo por sexo, aunque permita otras formas de participar.",
+   "clue": "Compara la primera parte de la regla con la condición que aparece después.",
+   "option_notes": {
+    "La regla es justa porque niños y niñas pueden ocupar otros cargos.": "Cree que otros cargos compensan excluir a las niñas de la presidencia.",
+    "La regla vale si la mayoría del curso la aprueba.": "Confunde la aprobación de la mayoría con el respeto de los derechos.",
+    "La regla solo sería injusta si también excluyera a los niños.": "Piensa que discriminar solo sería problema si afecta a los niños."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: enunciado ambiguo"
+   ]
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

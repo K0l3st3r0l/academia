@@ -160,7 +160,8 @@ function buildRoundReport(state) {
       correctAnswer: q.correct,
       answered: answers.length,
       correct: answers.filter(a => a.isCorrect).length,
-      topWrong: topWrong ? { answer: topWrong[0], count: topWrong[1] } : null,
+      // The mistake that usually leads to that answer, when the question was written with one.
+      topWrong: topWrong ? { answer: topWrong[0], count: topWrong[1], note: q.optionNotes?.[topWrong[0]] ?? null } : null,
     };
   });
   const oas = new Map();
@@ -533,6 +534,7 @@ function setupGameSocket(io) {
         options: q.options,
         correct: q.correct,
         hint: q.hint || '',
+        optionNotes: q.option_notes || null,
       }));
       state.status = 'playing';
       state.currentQuestionIndex = -1;

@@ -1,0 +1,264 @@
+{
+ "oa": "OA2",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "Calcula mentalmente: 7 × 40 =",
+   "options": [
+    "2.800",
+    "47",
+    "280",
+    "28"
+   ],
+   "correct": "280",
+   "hint": "Multiplicar por 40 es multiplicar por 4 y anexar un cero: 7 × 4 = 28.",
+   "clue": "Separa 40 como 4 × 10.",
+   "option_notes": {
+    "28": "Olvida anexar el cero al multiplicar por 10.",
+    "2.800": "Anexa dos ceros en vez de uno.",
+    "47": "Suma 7 + 40 en vez de multiplicar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "El doble de 35 es:",
+   "options": [
+    "70",
+    "350",
+    "35",
+    "105"
+   ],
+   "correct": "70",
+   "hint": "Doblar 35 es sumar 35 + 35, o multiplicar 35 × 2: da 70.",
+   "clue": "Suma 35 consigo mismo.",
+   "option_notes": {
+    "35": "No realiza el doble; repite el número una sola vez.",
+    "105": "Suma 35 + 70, agregando un doble extra.",
+    "350": "Multiplica por 10 en vez de por 2."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "¿Qué igualdad muestra la propiedad conmutativa de la multiplicación?",
+   "options": [
+    "6 × 8 = 8 × 8",
+    "6 × 8 = 6 + 8",
+    "6 × 8 = 8 × 6",
+    "6 × 8 = 6 × 6"
+   ],
+   "correct": "6 × 8 = 8 × 6",
+   "hint": "La propiedad conmutativa permite cambiar el orden de los factores sin cambiar el producto.",
+   "clue": "Busca la igualdad que invierte el orden de 6 y 8.",
+   "option_notes": {
+    "6 × 8 = 6 + 8": "Confunde multiplicar con sumar los factores.",
+    "6 × 8 = 6 × 6": "Repite el 6 y cambia el otro factor.",
+    "6 × 8 = 8 × 8": "Repite el 8 y cambia el otro factor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "¿Cuál expresión es equivalente a 3 × (4 × 5) por la propiedad asociativa?",
+   "options": [
+    "(3 + 4) × 5",
+    "(3 × 5) + 4",
+    "3 × (4 + 5)",
+    "(3 × 4) × 5"
+   ],
+   "correct": "(3 × 4) × 5",
+   "hint": "La propiedad asociativa cambia la agrupación, pero conserva los factores y las multiplicaciones.",
+   "clue": "Observa los paréntesis: los tres factores deben mantenerse.",
+   "option_notes": {
+    "3 × (4 + 5)": "Cambia una multiplicación interna por una suma.",
+    "(3 + 4) × 5": "Suma los dos primeros factores.",
+    "(3 × 5) + 4": "Saca un factor del producto y lo suma."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "En una feria, cada caja contiene 30 naranjas. Si hay 12 cajas, ¿cuántas naranjas hay?",
+   "options": [
+    "300",
+    "36",
+    "360",
+    "3.600"
+   ],
+   "correct": "360",
+   "hint": "Calcula 12 × 3 = 36 y anexa un cero porque 30 es 3 × 10.",
+   "clue": "Multiplica primero por 3 y después por 10.",
+   "option_notes": {
+    "36": "Calcula 12 × 3 y olvida anexar el cero.",
+    "300": "Cuenta solo 10 cajas y olvida 2.",
+    "3.600": "Anexa dos ceros en vez de uno."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Calcula 7 × 18 separando 18 en 10 y 8.",
+   "options": [
+    "140",
+    "126",
+    "144",
+    "70"
+   ],
+   "correct": "126",
+   "hint": "7 × 18 = 7 × 10 + 7 × 8 = 70 + 56 = 126.",
+   "clue": "Convierte 18 en una suma de dos números fáciles.",
+   "option_notes": {
+    "70": "Calcula solo 7 × 10 y olvida 7 × 8.",
+    "140": "Redondea 18 a 20 y calcula 7 × 20.",
+    "144": "Multiplica 8 × 18 y no distribuye correctamente."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Un kiosco arma 3 bolsas con 4 paquetes de 25 servilletas cada una. ¿Cuántas servilletas reúne?",
+   "options": [
+    "100",
+    "75",
+    "325",
+    "300"
+   ],
+   "correct": "300",
+   "hint": "Agrupa 4 × 25 = 100; luego multiplica 3 × 100 = 300.",
+   "clue": "Junta primero los factores que forman 100.",
+   "option_notes": {
+    "75": "Multiplica solo 3 × 25 y olvida los 4 paquetes.",
+    "100": "Multiplica solo 4 × 25 y olvida las 3 bolsas.",
+    "325": "Suma 25 al resultado, como si hubiera un paquete extra."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Para calcular 16 × 25, divide 16 por 2 y duplica 25. Repite esa estrategia una vez. ¿Qué producto equivalente obtienes al final?",
+   "options": [
+    "800",
+    "400",
+    "200",
+    "100"
+   ],
+   "correct": "400",
+   "hint": "16 × 25 = 8 × 50 = 4 × 100 = 400; una mitad compensa cada doble.",
+   "clue": "Cada vez, un factor se reduce a la mitad y el otro se duplica.",
+   "option_notes": {
+    "100": "Divide 16 dos veces y no compensa con dobles en 25.",
+    "200": "Hace dos mitades en 16, pero solo un doble en 25.",
+    "800": "Duplica 25 sin dividir el otro factor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Una escuela compra 29 cajas con 6 lápices cada una. Sin hacer directamente 29 × 6, ¿cuántos lápices compra?",
+   "options": [
+    "174",
+    "168",
+    "180",
+    "164"
+   ],
+   "correct": "174",
+   "hint": "Usa 29 = 30 − 1: 30 × 6 − 6 = 180 − 6 = 174.",
+   "clue": "Convierte 29 en 30 y luego corrige una caja.",
+   "option_notes": {
+    "164": "Resta 16, no una caja de 6 lápices.",
+    "168": "Usa 28 cajas, restando una en vez de acercarte a 30.",
+    "180": "Calcula 30 × 6 y no corrige la caja extra."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Un vivero prepara 48 bolsas con 25 semillas de peumo cada una. ¿Cuántas semillas prepara? Usa mitades y dobles.",
+   "options": [
+    "1.200",
+    "1.000",
+    "960",
+    "1.250"
+   ],
+   "correct": "1.200",
+   "hint": "48 × 25 = 24 × 50 = 12 × 100 = 1.200.",
+   "clue": "Divide 48 por 2 y duplica 25; repite una vez.",
+   "option_notes": {
+    "960": "Usa 48 × 20 y olvida las 5 restantes.",
+    "1.000": "Aproxima 48 a 40 al combinar con 25.",
+    "1.250": "Calcula 50 × 25 y no resta las 2 bolsas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Para calcular 8 × 125 × 5 mentalmente, ¿qué opción usa la propiedad asociativa y da el resultado correcto?",
+   "options": [
+    "8 × (125 + 5) = 1.040",
+    "(8 × 125) + 5 = 1.005",
+    "(8 + 125) × 5 = 665",
+    "(8 × 125) × 5 = 5.000"
+   ],
+   "correct": "(8 × 125) × 5 = 5.000",
+   "hint": "Agrupar 8 × 125 da 1.000; luego 1.000 × 5 = 5.000.",
+   "clue": "Busca primero dos factores cuyo producto sea 1.000.",
+   "option_notes": {
+    "8 × (125 + 5) = 1.040": "Suma 125 y 5 antes de multiplicar.",
+    "(8 + 125) × 5 = 665": "Suma 8 y 125 antes de multiplicar por 5.",
+    "(8 × 125) + 5 = 1.005": "Suma 5 al producto de los dos primeros factores."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Dos estudiantes calculan 18 × 5. Ana dice: 9 × 10 = 90. Benjamín dice: 36 × 10 = 360. ¿Qué explicación es correcta?",
+   "options": [
+    "Benjamín: sumar los factores conserva el producto.",
+    "Ana: dividir 18 por 2 y duplicar 5 conserva el producto.",
+    "Benjamín: duplicar ambos factores conserva el producto.",
+    "Ana: dividir ambos factores por 2 conserva el producto."
+   ],
+   "correct": "Ana: dividir 18 por 2 y duplicar 5 conserva el producto.",
+   "hint": "Ana conserva el producto al dividir un factor por 2 y duplicar el otro: 18 × 5 = 9 × 10 = 90.",
+   "clue": "Compara qué pasa cuando un factor se parte en dos y el otro se duplica.",
+   "option_notes": {
+    "Benjamín: duplicar ambos factores conserva el producto.": "Cree que duplicar ambos factores no cambia el producto.",
+    "Ana: dividir ambos factores por 2 conserva el producto.": "Cree que dividir ambos factores mantiene el producto.",
+    "Benjamín: sumar los factores conserva el producto.": "Confunde sumar factores con una estrategia de multiplicación."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

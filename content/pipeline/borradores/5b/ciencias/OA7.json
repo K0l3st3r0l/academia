@@ -1,0 +1,268 @@
+{
+ "oa": "OA7",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos microorganismos se usa para que el pan aumente de tamaño al hornearse?",
+   "options": [
+    "El virus que causa influenza",
+    "La bacteria que causa salmonela",
+    "El hongo que causa pie de atleta",
+    "La levadura, que es un hongo"
+   ],
+   "correct": "La levadura, que es un hongo",
+   "hint": "La levadura libera gas en la masa, lo que ayuda a formar el volumen del pan.",
+   "clue": "Relaciona el alimento con el microorganismo usado en su preparación.",
+   "option_notes": {
+    "El virus que causa influenza": "Se asocia con una enfermedad respiratoria, no con hacer subir pan.",
+    "La bacteria que causa salmonela": "Es dañina y no es la levadura usada para el pan.",
+    "El hongo que causa pie de atleta": "Es dañino para la piel, no el hongo usado en pan."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Algunas bacterias viven en el intestino. ¿Qué beneficio pueden entregar?",
+   "options": [
+    "Eliminar la necesidad de lavarse",
+    "Convertirse en células del cuerpo",
+    "Provocar siempre una gripe",
+    "Apoyar la digestión de algunos alimentos"
+   ],
+   "correct": "Apoyar la digestión de algunos alimentos",
+   "hint": "Algunas bacterias intestinales ayudan a descomponer alimentos durante la digestión.",
+   "clue": "Piensa en una función que ocurre dentro del sistema digestivo.",
+   "option_notes": {
+    "Provocar siempre una gripe": "Confunde las bacterias beneficiosas con los microorganismos que causan enfermedades.",
+    "Convertirse en células del cuerpo": "Supone que una bacteria puede transformarse en una célula humana.",
+    "Eliminar la necesidad de lavarse": "Olvida que la higiene ayuda a prevenir microorganismos dañinos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "¿Cuál afirmación describe a un virus dañino para la salud?",
+   "options": [
+    "Es una bacteria que ayuda a digerir alimentos",
+    "Puede causar una enfermedad como la influenza",
+    "Es un animal pequeño que vive en la piel",
+    "Es un hongo usado para hacer pan"
+   ],
+   "correct": "Puede causar una enfermedad como la influenza",
+   "hint": "Algunos virus entran a las células y pueden producir enfermedades.",
+   "clue": "Relaciona cada opción con el tipo de microorganismo que nombra.",
+   "option_notes": {
+    "Es una bacteria que ayuda a digerir alimentos": "Confunde un virus con una bacteria beneficiosa.",
+    "Es un hongo usado para hacer pan": "Confunde un virus con un hongo usado en alimentos.",
+    "Es un animal pequeño que vive en la piel": "Confunde un microorganismo con un animal visible."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos problemas puede ser causado por un hongo?",
+   "options": [
+    "Una torcedura de tobillo",
+    "Una fractura en un dedo",
+    "Una micosis en la piel, como el pie de atleta",
+    "Una quemadura por agua caliente"
+   ],
+   "correct": "Una micosis en la piel, como el pie de atleta",
+   "hint": "Los hongos pueden crecer en la piel y causar infecciones llamadas micosis.",
+   "clue": "Busca una enfermedad producida por un ser vivo muy pequeño.",
+   "option_notes": {
+    "Una fractura en un dedo": "Es una lesión de un hueso, no una infección por hongos.",
+    "Una torcedura de tobillo": "Es una lesión causada por un movimiento brusco.",
+    "Una quemadura por agua caliente": "Es una lesión producida por el calor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Después de jugar en la plaza, vas a comer una colación. ¿Qué debes hacer primero para reducir el ingreso de microorganismos dañinos a tu cuerpo?",
+   "options": [
+    "Lavarte las manos con agua y jabón",
+    "Esperar sin tocarlas",
+    "Pasarte las manos por el pelo",
+    "Limpiarlas en la ropa"
+   ],
+   "correct": "Lavarte las manos con agua y jabón",
+   "hint": "El lavado de manos retira suciedad y muchos microorganismos antes de tocar los alimentos.",
+   "clue": "Piensa en la parte del cuerpo que tuvo contacto con muchas superficies.",
+   "option_notes": {
+    "Pasarte las manos por el pelo": "Puede transferir más microorganismos desde el pelo o la piel.",
+    "Limpiarlas en la ropa": "La ropa no limpia bien ni elimina los microorganismos.",
+    "Esperar sin tocarlas": "Los microorganismos pueden permanecer en las manos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Tu compañero estornuda cerca de ti. ¿Qué acción ayuda más a disminuir el contagio de microorganismos que viajan en gotitas?",
+   "options": [
+    "Compartir la botella de agua",
+    "Taparse los oídos con las manos",
+    "Acercarse para hablarle",
+    "Cubrirse nariz y boca con el antebrazo"
+   ],
+   "correct": "Cubrirse nariz y boca con el antebrazo",
+   "hint": "Las secreciones de la tos y los estornudos pueden transportar microorganismos.",
+   "clue": "Considera qué conducta detiene las gotitas sin usar las manos.",
+   "option_notes": {
+    "Taparse los oídos con las manos": "Protege los oídos, pero no evita que salgan gotitas.",
+    "Compartir la botella de agua": "Puede facilitar el intercambio de microorganismos.",
+    "Acercarse para hablarle": "Aumenta la posibilidad de recibir gotitas respiratorias."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: enunciado ambiguo"
+   ]
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "En un paseo, una ensalada queda varias horas al sol. ¿Por qué comerla puede ser riesgoso?",
+   "options": [
+    "Los alimentos al aire libre pierden sus vitaminas",
+    "El calor puede favorecer la multiplicación de bacterias dañinas",
+    "La ensalada produce hongos dentro del estómago",
+    "El sol convierte todas las bacterias en virus"
+   ],
+   "correct": "El calor puede favorecer la multiplicación de bacterias dañinas",
+   "hint": "Algunas bacterias se multiplican más rápido en condiciones favorables, como el calor.",
+   "clue": "Relaciona el tiempo y la temperatura con el crecimiento microbiano.",
+   "option_notes": {
+    "El sol convierte todas las bacterias en virus": "Confunde el efecto del calor con una transformación entre microorganismos.",
+    "La ensalada produce hongos dentro del estómago": "Supone que el alimento crea hongos después de comerlo.",
+    "Los alimentos al aire libre pierden sus vitaminas": "Relaciona el riesgo con nutrientes, no con microorganismos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Te haces un corte pequeño en la rodilla. ¿Qué medida de cuidado e higiene es la más adecuada?",
+   "options": [
+    "Compartir una toalla usada",
+    "Lavarlo con agua limpia y cubrirlo",
+    "Dejarlo sucio para crear defensas",
+    "Frotarlo con tierra para secarlo"
+   ],
+   "correct": "Lavarlo con agua limpia y cubrirlo",
+   "hint": "Limpiar la herida reduce microorganismos y cubrirla evita nueva suciedad.",
+   "clue": "Elige la opción que combina limpieza y protección.",
+   "option_notes": {
+    "Frotarlo con tierra para secarlo": "La tierra puede aportar más microorganismos a la herida.",
+    "Dejarlo sucio para crear defensas": "La suciedad aumenta el riesgo de infección.",
+    "Compartir una toalla usada": "La toalla puede tener microorganismos de otra persona."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "En una actividad, dos trozos de pan se guardan en bolsas. Antes de ponerlos dentro, Ana toca uno con manos sin lavar y el otro después de lavárselas. Días después, el primero tiene más moho. ¿Qué conclusión es más razonable?",
+   "options": [
+    "El pan sin moho quedó libre de todo microorganismo",
+    "Los hongos aparecen solo cuando una persona los mira",
+    "Las manos sin lavar pudieron transferir hongos al pan",
+    "El lavado convirtió el moho en una bacteria"
+   ],
+   "correct": "Las manos sin lavar pudieron transferir hongos al pan",
+   "hint": "El moho es un hongo; las manos sucias pueden llevar microorganismos a los alimentos.",
+   "clue": "Compara qué cambió entre ambos trozos antes de guardarlos.",
+   "option_notes": {
+    "El lavado convirtió el moho en una bacteria": "Confunde un cambio de higiene con una transformación entre tipos.",
+    "El pan sin moho quedó libre de todo microorganismo": "No ver moho no demuestra que no haya otros microorganismos.",
+    "Los hongos aparecen solo cuando una persona los mira": "Confunde observar un fenómeno con causarlo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "En una sala, varias personas presentan influenza después de unos días. ¿Cuál plan combina mejor medidas para disminuir nuevos contagios?",
+   "options": [
+    "Ventilar la sala, cubrirse al toser y lavarse las manos",
+    "Usar perfume, hablar cerca y tocarse la cara",
+    "Cerrar ventanas, compartir vasos y tomar antibióticos",
+    "Limpiar mesas, compartir cubiertos y no cubrirse al toser"
+   ],
+   "correct": "Ventilar la sala, cubrirse al toser y lavarse las manos",
+   "hint": "La influenza se transmite principalmente por secreciones respiratorias y contacto con manos contaminadas.",
+   "clue": "Busca medidas que actúen sobre el aire, las secreciones y las manos.",
+   "option_notes": {
+    "Cerrar ventanas, compartir vasos y tomar antibióticos": "Combina acciones que favorecen el contagio o no actúan contra virus.",
+    "Usar perfume, hablar cerca y tocarse la cara": "El perfume no elimina virus y acercarse facilita su transmisión.",
+    "Limpiar mesas, compartir cubiertos y no cubrirse al toser": "No controla las gotitas y compartir objetos puede transmitir microorganismos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Mateo tiene un resfrío y piensa tomar un antibiótico que sobró en casa. ¿Cuál explicación justifica mejor que no lo haga sin indicación médica?",
+   "options": [
+    "Los antibióticos sirven solo para hongos y siempre curan resfríos",
+    "Tomar cualquier medicamento evita que el cuerpo forme defensas",
+    "Los antibióticos actúan contra bacterias, no contra virus del resfrío",
+    "Los virus desaparecen porque el antibiótico los transforma en bacterias"
+   ],
+   "correct": "Los antibióticos actúan contra bacterias, no contra virus del resfrío",
+   "hint": "El resfrío común suele ser viral, y los antibióticos no actúan contra los virus.",
+   "clue": "Relaciona el tipo de microorganismo con el efecto del medicamento.",
+   "option_notes": {
+    "Los antibióticos sirven solo para hongos y siempre curan resfríos": "Confunde los hongos con los virus y atribuye al antibiótico un efecto universal.",
+    "Los virus desaparecen porque el antibiótico los transforma en bacterias": "Supone que un medicamento cambia un tipo de microorganismo en otro.",
+    "Tomar cualquier medicamento evita que el cuerpo forme defensas": "Confunde el uso de medicamentos con el funcionamiento de las defensas."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "En la cocina, Camila corta pollo crudo y luego quiere picar tomates para una ensalada. ¿Qué secuencia reduce mejor el riesgo de que bacterias del pollo lleguen a la ensalada?",
+   "options": [
+    "Lavarse las manos, limpiar los utensilios y usar una tabla limpia",
+    "Secarse las manos en el paño y usar la misma tabla",
+    "Cortar el pollo, tocar tomates y lavar todo al final",
+    "Enjuagar el pollo, tocar tomates y guardar todo junto"
+   ],
+   "correct": "Lavarse las manos, limpiar los utensilios y usar una tabla limpia",
+   "hint": "Las bacterias pueden pasar desde el pollo crudo a las manos, tablas y alimentos listos para comer.",
+   "clue": "Sigue el recorrido posible de las bacterias entre el pollo, las manos y los tomates.",
+   "option_notes": {
+    "Secarse las manos en el paño y usar la misma tabla": "El paño y la tabla pueden transferir bacterias a los tomates.",
+    "Enjuagar el pollo, tocar tomates y guardar todo junto": "Lavar el pollo no evita contaminar las manos y los alimentos.",
+    "Cortar el pollo, tocar tomates y lavar todo al final": "Los tomates quedan expuestos antes de realizar la limpieza."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

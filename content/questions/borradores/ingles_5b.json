@@ -1,0 +1,2018 @@
+[
+ {
+  "oa_code": "OA5",
+  "difficulty": "easy",
+  "text": "Lee: “Good morning, Nico!” Nico: “Hi! See you tomorrow!” ¿Qué significa “See you tomorrow”?",
+  "options": [
+   "Gracias por venir",
+   "¿Cómo estás?",
+   "Buenos días",
+   "Nos vemos mañana"
+  ],
+  "correct": "Nos vemos mañana",
+  "hint": "“See you tomorrow” es una despedida que indica que se verán al día siguiente.",
+  "clue": "Fíjate si la expresión saluda, pregunta, agradece o se despide.",
+  "option_notes": {
+   "Buenos días": "Confunde la despedida con el saludo del inicio.",
+   "¿Cómo estás?": "Interpreta la expresión como una pregunta.",
+   "Gracias por venir": "Confunde la despedida con un agradecimiento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "easy",
+  "text": "Lee: “What’s your name? —My name is Emilia. How old are you? —I’m ten. Where do you live? —I live in Valdivia.” ¿Dónde vive Emilia?",
+  "options": [
+   "Vive en Valdivia",
+   "Visita Valdivia",
+   "Se llama Emilia",
+   "Tiene diez años"
+  ],
+  "correct": "Vive en Valdivia",
+  "hint": "La respuesta aparece después de “Where do you live?”: “I live in Valdivia”.",
+  "clue": "Relaciona cada pregunta con su respuesta: nombre, edad y lugar.",
+  "option_notes": {
+   "Se llama Emilia": "Confunde el nombre con el lugar donde vive.",
+   "Tiene diez años": "Confunde la edad con el lugar.",
+   "Visita Valdivia": "Confunde vivir en un lugar con visitarlo."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "easy",
+  "text": "Lee: “The small dog runs. The small dog jumps. The small dog is happy.” ¿Qué grupo de palabras se repite?",
+  "options": [
+   "Dog is happy",
+   "Small dog runs",
+   "The small dog",
+   "The dog jumps"
+  ],
+  "correct": "The small dog",
+  "hint": "“The small dog” aparece al comienzo de las tres oraciones.",
+  "clue": "Compara las palabras que aparecen en cada oración.",
+  "option_notes": {
+   "Small dog runs": "Aparece solo en la primera oración.",
+   "The dog jumps": "Aparece solo en la segunda oración.",
+   "Dog is happy": "Aparece solo en la tercera oración."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "easy",
+  "text": "Un cartel del clima muestra un dibujo de una nube con gotas y dice: “Rainy today”. ¿Qué tiempo hace?",
+  "options": [
+   "Está lloviendo",
+   "Está soleado",
+   "Hay mucho viento",
+   "Está nevando"
+  ],
+  "correct": "Está lloviendo",
+  "hint": "“Rainy” significa que está lloviendo; el dibujo de gotas confirma la información.",
+  "clue": "Relaciona el dibujo con la palabra del cartel.",
+  "option_notes": {
+   "Está soleado": "Confunde la lluvia con el sol.",
+   "Está nevando": "Confunde las gotas de lluvia con nieve.",
+   "Hay mucho viento": "Confunde el mal tiempo con viento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "medium",
+  "text": "Lee: “First, open your book. Then, circle the animals. Finally, write your name.” ¿Qué haces después de abrir el libro?",
+  "options": [
+   "Dibujas una casa",
+   "Escribes tu nombre",
+   "Rodeas los animales",
+   "Cierras el libro"
+  ],
+  "correct": "Rodeas los animales",
+  "hint": "Después de abrir el libro viene la acción indicada por “Then”: rodear los animales.",
+  "clue": "Ordena las acciones con first, then y finally.",
+  "option_notes": {
+   "Escribes tu nombre": "El nombre se escribe al final, no después de abrir.",
+   "Cierras el libro": "Agrega una acción que no aparece.",
+   "Dibujas una casa": "Cambia “circle the animals” por dibujar."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "medium",
+  "text": "Lee: “I’m sorry, Ben. I broke your ruler. May I use your pencil, please? —Yes. Here you are. —Thank you!” ¿Por qué dice “Thank you”?",
+  "options": [
+   "Porque rompió una regla",
+   "Porque ve a Ben",
+   "Porque Ben le entrega un lápiz",
+   "Porque pide permiso"
+  ],
+  "correct": "Porque Ben le entrega un lápiz",
+  "hint": "Dice “Thank you” después de que Ben acepta y le entrega el lápiz.",
+  "clue": "Mira qué ocurre justo antes de la expresión de agradecimiento.",
+  "option_notes": {
+   "Porque rompió una regla": "Eso explica “I’m sorry”, no “Thank you”.",
+   "Porque pide permiso": "Pedir permiso ocurre antes de recibir el lápiz.",
+   "Porque ve a Ben": "Ver a Ben no explica el agradecimiento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "medium",
+  "text": "Lee: “The red lunch box is under the chair. The green bottle is on the table. The blue cup is next to the bottle.” Para tomar el objeto junto al vaso azul, ¿cuál eliges?",
+  "options": [
+   "El vaso azul de la mesa",
+   "La botella verde",
+   "La caja roja de colación",
+   "La silla junto a la caja"
+  ],
+  "correct": "La botella verde",
+  "hint": "El vaso azul está junto a la botella; por eso debes elegir la botella verde.",
+  "clue": "Busca la oración que relaciona el vaso azul con otro objeto.",
+  "option_notes": {
+   "La caja roja de colación": "Confunde el objeto bajo la silla con el que está junto al vaso.",
+   "El vaso azul de la mesa": "Elige el objeto de referencia, no el que está junto a él.",
+   "La silla junto a la caja": "Confunde la silla con el objeto relacionado con el vaso."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "medium",
+  "text": "Lee: “Tom has 3 sopaipillas. He likes them, but he gives 1 to Ana.” ¿Cuántas sopaipillas tiene Tom ahora?",
+  "options": [
+   "2",
+   "1",
+   "3",
+   "4"
+  ],
+  "correct": "2",
+  "hint": "Tom empieza con 3 y entrega 1; calcula 3 − 1.",
+  "clue": "Cuenta lo que tenía y resta lo que entregó.",
+  "option_notes": {
+   "1": "Resta las 3 iniciales en vez de restar la que entrega.",
+   "3": "Olvida que Tom entrega una sopaipilla.",
+   "4": "Suma la que entrega en vez de restarla."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "hard",
+  "text": "Lee: “Lucas gets up at 7:00. He has breakfast at 7:30. He walks to school at 8:00. It is raining, so he takes an umbrella.” ¿Qué secuencia sigue Lucas antes de llegar a la escuela?",
+  "options": [
+   "Camina a la escuela, se levanta y desayuna",
+   "Desayuna, se levanta y camina a la escuela",
+   "Se levanta, camina a la escuela y desayuna",
+   "Se levanta, desayuna y camina a la escuela"
+  ],
+  "correct": "Se levanta, desayuna y camina a la escuela",
+  "hint": "Las horas muestran el orden: 7:00 levantarse, 7:30 desayunar y 8:00 caminar.",
+  "clue": "Ordena las acciones según las horas, no según cómo aparecen las palabras.",
+  "option_notes": {
+   "Desayuna, se levanta y camina a la escuela": "Intercambia las acciones de las 7:00 y 7:30.",
+   "Camina a la escuela, se levanta y desayuna": "Pone primero la acción de las 8:00.",
+   "Se levanta, camina a la escuela y desayuna": "Pone el desayuno después de caminar."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "hard",
+  "text": "Lee: “At the school garden, a gardener waters the plants. The plants need water. The gardener works every morning.” ¿Qué podemos concluir sobre su trabajo?",
+  "options": [
+   "Prepara el almuerzo escolar",
+   "Entrena al equipo de fútbol",
+   "Vende libros en la escuela",
+   "Cuida las plantas del jardín"
+  ],
+  "correct": "Cuida las plantas del jardín",
+  "hint": "“Gardener” se relaciona con “garden” y “waters the plants”, así que cuida las plantas.",
+  "clue": "Relaciona a gardener con garden y con la acción waters.",
+  "option_notes": {
+   "Vende libros en la escuela": "No hay libros ni una acción de vender.",
+   "Prepara el almuerzo escolar": "El texto habla de plantas, no de comida.",
+   "Entrena al equipo de fútbol": "No aparece deporte ni entrenamiento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "hard",
+  "text": "Lee: “From the gate, walk straight to the tree. Turn left and walk to the gym. The library is next to the gym, opposite the park.” ¿Qué recorrido te deja junto a la biblioteca?",
+  "options": [
+   "Ve al árbol, gira a la derecha y sigue al parque",
+   "Ve al árbol, gira a la izquierda y sigue al gimnasio",
+   "Gira a la derecha en la entrada y sigue al parque",
+   "Ve al parque, gira a la derecha y vuelve al árbol"
+  ],
+  "correct": "Ve al árbol, gira a la izquierda y sigue al gimnasio",
+  "hint": "El gimnasio está junto a la biblioteca, así que debes seguir la ruta que termina allí.",
+  "clue": "Sigue cada instrucción en orden y fíjate qué lugar está junto a la biblioteca.",
+  "option_notes": {
+   "Gira a la derecha en la entrada y sigue al parque": "Cambia el giro y llega a otro lugar.",
+   "Ve al parque, gira a la derecha y vuelve al árbol": "Invierte el recorrido y no sigue el aviso.",
+   "Ve al árbol, gira a la derecha y sigue al parque": "Gira en la dirección opuesta."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "hard",
+  "text": "Lee: “Hi, I’m Martín. I have a blue bike. I like apples, but I don’t like milk. On Saturday, I visit my grandmother in Chillán.” ¿Qué afirmación es correcta?",
+  "options": [
+   "Martín prefiere leche y visita a su abuela en Chillán",
+   "Martín tiene una bicicleta azul y visita a su abuela en Chillán",
+   "Martín tiene una bicicleta roja y visita a su abuela en Chillán",
+   "Martín tiene una bicicleta azul y visita a su abuelo en Chillán"
+  ],
+  "correct": "Martín tiene una bicicleta azul y visita a su abuela en Chillán",
+  "hint": "El mensaje une dos datos: su bicicleta es azul y visita a su abuela en Chillán.",
+  "clue": "Comprueba el color, el alimento que le gusta y el familiar que visita.",
+  "option_notes": {
+   "Martín tiene una bicicleta roja y visita a su abuela en Chillán": "Cambia el color de la bicicleta.",
+   "Martín prefiere leche y visita a su abuela en Chillán": "Invierte su preferencia: no le gusta la leche.",
+   "Martín tiene una bicicleta azul y visita a su abuelo en Chillán": "Confunde grandmother, que significa abuela."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "easy",
+  "text": "Lee la nota: «Bring your blue notebook and a pencil to English class.» ¿Qué debes llevar?",
+  "options": [
+   "Un cuaderno azul y un lápiz",
+   "Un libro azul y un lápiz",
+   "Un cuaderno azul y una goma",
+   "Un cuaderno rojo y un lápiz"
+  ],
+  "correct": "Un cuaderno azul y un lápiz",
+  "hint": "La nota pide un “blue notebook” y “a pencil”: un cuaderno azul y un lápiz.",
+  "clue": "Busca dos objetos y fíjate en el color del cuaderno.",
+  "option_notes": {
+   "Un cuaderno rojo y un lápiz": "Cambia el color que indica la nota.",
+   "Un cuaderno azul y una goma": "Confunde pencil, lápiz, con goma.",
+   "Un libro azul y un lápiz": "Confunde notebook, cuaderno, con libro."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "easy",
+  "text": "Lee el menú: «Empanada $1.500; apple $800; water $700.» ¿Cuál es el propósito principal de este texto?",
+  "options": [
+   "Invitar a una fiesta familiar",
+   "Contar un paseo por Santiago",
+   "Explicar cómo preparar una empanada",
+   "Mostrar alimentos y sus precios"
+  ],
+  "correct": "Mostrar alimentos y sus precios",
+  "hint": "Es un menú: presenta alimentos o bebidas junto con sus precios.",
+  "clue": "Observa qué información aparece junto a cada alimento.",
+  "option_notes": {
+   "Explicar cómo preparar una empanada": "Confunde un menú con una receta.",
+   "Invitar a una fiesta familiar": "Confunde una lista de alimentos con una invitación.",
+   "Contar un paseo por Santiago": "Confunde el menú con un relato."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "easy",
+  "text": "Lee: «The pudú is a small deer from Chile. It has brown fur.» ¿Qué significa la palabra clave «deer» en este texto?",
+  "options": [
+   "Pájaro",
+   "Ciervo",
+   "Zorro",
+   "Conejo"
+  ],
+  "correct": "Ciervo",
+  "hint": "En este texto, “deer” identifica al pudú y significa “ciervo”.",
+  "clue": "Relaciona la palabra con el animal chileno que se describe.",
+  "option_notes": {
+   "Zorro": "Confunde el pudú con otro animal chileno.",
+   "Pájaro": "Confunde deer con un ave.",
+   "Conejo": "Relaciona el tamaño pequeño con un conejo."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "easy",
+  "text": "Diálogo: «Ana: Excuse me, where is the library? Tom: It is next to the gym.» ¿Para qué usa Ana «Excuse me»?",
+  "options": [
+   "Para agradecer la ayuda recibida",
+   "Para disculparse por llegar tarde",
+   "Para llamar la atención antes de preguntar",
+   "Para despedirse de su compañero"
+  ],
+  "correct": "Para llamar la atención antes de preguntar",
+  "hint": "Ana dice “Excuse me” antes de hacer una pregunta a Tom.",
+  "clue": "Mira qué dice Ana inmediatamente después de la expresión.",
+  "option_notes": {
+   "Para disculparse por llegar tarde": "Interpreta la expresión como una disculpa.",
+   "Para agradecer la ayuda recibida": "Confunde la expresión con una forma de dar las gracias.",
+   "Para despedirse de su compañero": "Confunde la pregunta con una despedida."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "medium",
+  "text": "Lee la invitación: «Ben’s party is on Saturday at 16:00 at 25 Los Alerces Street. Bring a hat.» ¿Qué debes hacer para participar?",
+  "options": [
+   "Ir a 25 Los Alerces el sábado a las 18:00 y llevar una mochila",
+   "Ir a 25 Los Alerces el sábado a las 16:00 y llevar un sombrero",
+   "Ir a 25 Los Alerces el domingo a las 16:00 y llevar un sombrero",
+   "Ir a 25 Los Alerces el viernes a las 16:00 y llevar una pelota"
+  ],
+  "correct": "Ir a 25 Los Alerces el sábado a las 16:00 y llevar un sombrero",
+  "hint": "La invitación indica el lugar, el sábado a las 16:00 y llevar un sombrero.",
+  "clue": "Compara el lugar, el día, la hora y el objeto pedido.",
+  "option_notes": {
+   "Ir a 25 Los Alerces el domingo a las 16:00 y llevar un sombrero": "Cambia el día de la fiesta.",
+   "Ir a 25 Los Alerces el sábado a las 18:00 y llevar una mochila": "Cambia la hora y el objeto pedido.",
+   "Ir a 25 Los Alerces el viernes a las 16:00 y llevar una pelota": "Cambia el día y el objeto pedido."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "medium",
+  "text": "Receta: «Cut an apple. Add a banana. Mix the fruit. Put it in a bowl.» Ya cortaste la manzana y agregaste el plátano. ¿Qué haces después?",
+  "options": [
+   "Mezclas las frutas",
+   "Cortas otra manzana",
+   "Comes la fruta de inmediato",
+   "Pones la fruta en un bol"
+  ],
+  "correct": "Mezclas las frutas",
+  "hint": "Después de cortar la manzana y agregar el plátano, la receta indica mezclar la fruta.",
+  "clue": "Sigue el orden de las acciones, desde el primer paso.",
+  "option_notes": {
+   "Pones la fruta en un bol": "Salta el paso de mezclar las frutas.",
+   "Cortas otra manzana": "Agrega un paso que la receta no indica.",
+   "Comes la fruta de inmediato": "Confunde el último paso con el siguiente."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "medium",
+  "text": "Email: «Hi Tom, Our class is visiting the Natural History Museum in Santiago on Friday. We meet at school at 9:00. Bring water. Love, Sofía.» ¿Cuál es la idea principal?",
+  "options": [
+   "Sofía explica cómo preparar una visita al museo",
+   "Sofía informa a Tom sobre una visita del curso",
+   "Sofía cuenta que perdió su botella de agua",
+   "Sofía invita a Tom a una fiesta en su casa"
+  ],
+  "correct": "Sofía informa a Tom sobre una visita del curso",
+  "hint": "La mayoría de los datos del email se relaciona con una visita escolar al museo.",
+  "clue": "Piensa qué actividad reúne la mayoría de los datos del email.",
+  "option_notes": {
+   "Sofía invita a Tom a una fiesta en su casa": "Confunde una visita escolar con una celebración.",
+   "Sofía explica cómo preparar una visita al museo": "Toma llevar agua como si fuera el tema principal.",
+   "Sofía cuenta que perdió su botella de agua": "Confunde “Bring water” con haber perdido agua."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "medium",
+  "text": "Menú escolar: completo $2.000, jugo $1.000, sopa $1.500 y ensalada $1.200. ¿Qué combinación cuesta exactamente $3.000?",
+  "options": [
+   "Un completo y una sopa",
+   "Un jugo y una ensalada",
+   "Una sopa y una ensalada",
+   "Un completo y un jugo"
+  ],
+  "correct": "Un completo y un jugo",
+  "hint": "Suma los precios: 2.000 + 1.000 = 3.000.",
+  "clue": "Calcula cada combinación sin aproximar.",
+  "option_notes": {
+   "Una sopa y una ensalada": "Suma 1.500 y 1.200: da $2.700.",
+   "Un jugo y una ensalada": "Suma 1.000 y 1.200: da $2.200.",
+   "Un completo y una sopa": "Suma 2.000 y 1.500: da $3.500."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "verificador: fuera del nivel o del OA"
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "hard",
+  "text": "Diálogo: «Luz: Can I use your ruler? Diego: I’m sorry, I need it for my work. Luz: Okay.» ¿Qué podemos concluir?",
+  "options": [
+   "Diego terminó su trabajo y salió",
+   "Diego perdió la regla durante la clase",
+   "Diego no puede prestar la regla en ese momento",
+   "Luz le regaló una regla a Diego"
+  ],
+  "correct": "Diego no puede prestar la regla en ese momento",
+  "hint": "Diego necesita la regla para su trabajo, por eso no puede prestarla ahora.",
+  "clue": "Relaciona la petición de Luz con la razón que da Diego.",
+  "option_notes": {
+   "Diego perdió la regla durante la clase": "Confunde necesitar la regla con haberla perdido.",
+   "Luz le regaló una regla a Diego": "Invierte quién tiene la regla.",
+   "Diego terminó su trabajo y salió": "Contradice que Diego aún necesita la regla."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "hard",
+  "text": "Reglas de la biblioteca: «Be quiet. Return books on Friday. Put books on the desk. Do not eat.» Es jueves y terminaste de usar un libro. ¿Qué debes hacer para cumplir las reglas?",
+  "options": [
+   "Dejarlo en el suelo y devolverlo el jueves",
+   "Comer mientras lo lees y devolverlo el viernes",
+   "Dejarlo en el escritorio y devolverlo el viernes",
+   "Hablar fuerte y guardarlo en tu mochila"
+  ],
+  "correct": "Dejarlo en el escritorio y devolverlo el viernes",
+  "hint": "Las reglas indican dejar el libro en el escritorio y devolverlo el viernes.",
+  "clue": "Busca la regla sobre el lugar y la regla sobre el día.",
+  "option_notes": {
+   "Comer mientras lo lees y devolverlo el viernes": "Cumple el día, pero rompe la regla de no comer.",
+   "Dejarlo en el suelo y devolverlo el jueves": "Cambia el lugar y adelanta el día indicado.",
+   "Hablar fuerte y guardarlo en tu mochila": "Rompe dos reglas de la biblioteca."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "hard",
+  "text": "Email: «Hi Camila, I have a fever and cannot go to school today. Please send me the homework. Thanks, Diego.» ¿Por qué escribe Diego este email?",
+  "options": [
+   "Para invitar a Camila a su casa",
+   "Para contarle que ya hizo la tarea",
+   "Para pedirle que lo acompañe al colegio",
+   "Para explicar su ausencia y pedir la tarea"
+  ],
+  "correct": "Para explicar su ausencia y pedir la tarea",
+  "hint": "Diego cuenta que está enfermo y solicita que Camila le envíe el trabajo escolar.",
+  "clue": "Considera la razón de su ausencia y la petición final.",
+  "option_notes": {
+   "Para invitar a Camila a su casa": "Confunde pedir la tarea con hacer una invitación.",
+   "Para contarle que ya hizo la tarea": "Interpreta al revés la petición de Diego.",
+   "Para pedirle que lo acompañe al colegio": "Ignora que Diego no puede ir a clases."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "hard",
+  "text": "Postal: «Dear Nico, I am in Chiloé. I see rain, green forests and wooden houses. I eat curanto with my family. See you soon, Martín.» ¿Cuál afirmación resume mejor el texto?",
+  "options": [
+   "Martín visita Chiloé y cuenta parte de su experiencia",
+   "Martín invita a Nico a conocer su colegio",
+   "Martín describe un animal del sur de Chile",
+   "Martín vive en Santiago y prepara una receta"
+  ],
+  "correct": "Martín visita Chiloé y cuenta parte de su experiencia",
+  "hint": "La postal reúne el lugar, lo que Martín observa y lo que come durante su visita.",
+  "clue": "Une el lugar con las actividades y observaciones de Martín.",
+  "option_notes": {
+   "Martín vive en Santiago y prepara una receta": "Confunde Chiloé con Santiago y curanto con una receta.",
+   "Martín invita a Nico a conocer su colegio": "Confunde una postal descriptiva con una invitación.",
+   "Martín describe un animal del sur de Chile": "Confunde los paisajes con la descripción de un animal."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "easy",
+  "text": "Lee: “Pia is a little penguin. She swims in the cold sea and eats small fish. At night, she sleeps on the beach with her family.” ¿Cuál es el tema general del texto?",
+  "options": [
+   "La preparación de una comida para animales",
+   "Un paseo de niños por la ciudad",
+   "Un viaje de una familia a la montaña",
+   "La vida de una pingüina junto al mar"
+  ],
+  "correct": "La vida de una pingüina junto al mar",
+  "hint": "El texto reúne acciones de Pia, su hogar y su familia cerca del mar.",
+  "clue": "Busca la idea que une al personaje, el lugar y sus acciones.",
+  "option_notes": {
+   "Un viaje de una familia a la montaña": "Confunde el mar con la montaña e inventa un viaje.",
+   "La preparación de una comida para animales": "Se fija solo en que Pia come y olvida las demás acciones.",
+   "Un paseo de niños por la ciudad": "Agrega niños y una ciudad que no aparecen."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "easy",
+  "text": "Lee: “Tom and Ana visit a farm. They see a horse, three hens and a small dog. Ana gives the dog some water.” ¿Qué personaje le da agua al perro?",
+  "options": [
+   "Ana",
+   "Tom",
+   "El perro",
+   "El caballo"
+  ],
+  "correct": "Ana",
+  "hint": "El texto dice directamente que Ana le da agua al perro.",
+  "clue": "Fíjate en el sujeto de la oración que dice gives.",
+  "option_notes": {
+   "Tom": "Confunde al hermano con la persona que entrega el agua.",
+   "El perro": "Confunde a quien recibe el agua con quien la da.",
+   "El caballo": "Elige otro animal de la granja, pero no realiza la acción."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "easy",
+  "text": "Lee: “On Saturday, Ben reads under a tree in the park. His mother sits on a bench. Birds sing near them.” ¿Dónde está Ben?",
+  "options": [
+   "En el parque",
+   "En la escuela",
+   "En la playa",
+   "En una granja"
+  ],
+  "correct": "En el parque",
+  "hint": "Ben lee bajo un árbol en el parque; ese es el lugar de la escena.",
+  "clue": "Busca la palabra que nombra el lugar donde Ben lee.",
+  "option_notes": {
+   "En la playa": "Confunde el parque con otro lugar al aire libre.",
+   "En la escuela": "Agrega un lugar común, pero no mencionado.",
+   "En una granja": "Confunde el parque con otro lugar donde hay naturaleza."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "easy",
+  "text": "Lee: “Good morning, good morning! The sun is up. We clap and sing.” ¿Qué expresión usan los niños para saludar?",
+  "options": [
+   "See you soon",
+   "Good morning",
+   "Good night",
+   "Thank you"
+  ],
+  "correct": "Good morning",
+  "hint": "Good morning es la expresión que se usa para saludar durante la mañana.",
+  "clue": "Observa la hora del día que indica la canción.",
+  "option_notes": {
+   "Good night": "Confunde un saludo de mañana con uno nocturno.",
+   "See you soon": "Confunde un saludo con una frase de despedida.",
+   "Thank you": "Confunde un saludo con una expresión de agradecimiento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "medium",
+  "text": "Lee: “At first, Luna has one seed. Then she plants it and waters it every day. Finally, a red flower grows.” ¿Qué ocurre en el middle (parte central)?",
+  "options": [
+   "Pierde su flor roja",
+   "Planta y riega una semilla",
+   "Encuentra una flor roja",
+   "Come una semilla pequeña"
+  ],
+  "correct": "Planta y riega una semilla",
+  "hint": "La parte central comienza con Then: Luna planta la semilla y la riega cada día.",
+  "clue": "Ubica la oración después de At first y antes de Finally.",
+  "option_notes": {
+   "Encuentra una flor roja": "Confunde el resultado final con la acción del middle.",
+   "Come una semilla pequeña": "Confunde plantar y regar con comer la semilla.",
+   "Pierde su flor roja": "Invierte el crecimiento de la flor y dice que Luna la pierde."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "medium",
+  "text": "Lee: “At seven o'clock, Nico gets up. At eight o'clock, he goes to school. In the afternoon, he plays football.” ¿A qué hora va Nico a la escuela?",
+  "options": [
+   "A las 10:00",
+   "A las 7:00",
+   "A las 9:00",
+   "A las 8:00"
+  ],
+  "correct": "A las 8:00",
+  "hint": "La oración sobre ir a la escuela está junto a la hora eight o'clock.",
+  "clue": "Relaciona la acción de ir a la escuela con la hora que la acompaña.",
+  "option_notes": {
+   "A las 7:00": "Confunde la hora en que Nico se levanta con la ida a la escuela.",
+   "A las 9:00": "Elige una hora posterior que el texto no menciona.",
+   "A las 10:00": "Elige una hora posterior que el texto no menciona."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "medium",
+  "text": "Lee: “In the kitchen, Sara has a cup, a plate and a spoon. She eats warm soup.” ¿Qué objeto usa Sara para comer la sopa?",
+  "options": [
+   "Una cuchara",
+   "Un plato",
+   "Un tenedor",
+   "Un vaso"
+  ],
+  "correct": "Una cuchara",
+  "hint": "La palabra spoon nombra el utensilio que Sara usa para comer la sopa.",
+  "clue": "Relaciona la comida con el objeto que sirve para llevarla a la boca.",
+  "option_notes": {
+   "Un vaso": "Confunde el recipiente con el utensilio para comer.",
+   "Un plato": "Confunde otro objeto de cocina con el utensilio usado.",
+   "Un tenedor": "Supone que la sopa se come con tenedor."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "medium",
+  "text": "Lee: “I see a small cat. The cat wears a hat. The cat sits on a mat.” ¿Qué palabra pertenece a la familia de palabras que termina en -at, como “cat”?",
+  "options": [
+   "sits",
+   "hat",
+   "small",
+   "fish"
+  ],
+  "correct": "hat",
+  "hint": "Cat y hat comparten la terminación y el sonido -at.",
+  "clue": "Mira cómo termina cada palabra, no lo que significa.",
+  "option_notes": {
+   "small": "Se fija en el significado de tamaño, no en la terminación -at.",
+   "sits": "Se fija en una acción, no en la terminación -at.",
+   "fish": "Elige una palabra conocida que no pertenece a la familia -at."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "hard",
+  "text": "Lee: “Diego opens his lunch box. It has no sandwich. Valentina quietly cuts her sandwich in half and gives him a piece. Diego says, “Thank you!”” ¿Cómo es Valentina según sus acciones?",
+  "options": [
+   "Cansada y hambrienta",
+   "Triste y silenciosa",
+   "Amable y generosa",
+   "Enojada y apurada"
+  ],
+  "correct": "Amable y generosa",
+  "hint": "Valentina comparte su sándwich con Diego, una acción amable y generosa.",
+  "clue": "Observa qué hace Valentina por Diego, no solo lo que dice.",
+  "option_notes": {
+   "Triste y silenciosa": "Se fija en que Valentina habla poco y olvida su acción solidaria.",
+   "Enojada y apurada": "Confunde ayudar a Diego con estar enojada o apurada.",
+   "Cansada y hambrienta": "Supone que compartir comida significa que ella tiene hambre."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "hard",
+  "text": "Lee: “At the end, the baby bird is safe in its nest. A boy gently lifts it from the grass. Before that, it falls from the nest.” ¿Cuál es el orden correcto de los hechos?",
+  "options": [
+   "El niño la levanta, el ave cae y queda segura en el nido.",
+   "El ave queda segura, cae al pasto y el niño la levanta.",
+   "El ave cae, el niño la levanta y queda segura en el nido.",
+   "El niño la levanta, queda segura y después cae."
+  ],
+  "correct": "El ave cae, el niño la levanta y queda segura en el nido.",
+  "hint": "Before that indica la caída primero; luego el niño la levanta y al final queda segura.",
+  "clue": "Ordena las pistas temporales: Before that, la acción del niño y At the end.",
+  "option_notes": {
+   "El niño la levanta, el ave cae y queda segura en el nido.": "Pone primero una acción que ocurre después de la caída.",
+   "El ave queda segura, cae al pasto y el niño la levanta.": "Lee At the end como si fuera el comienzo.",
+   "El niño la levanta, queda segura y después cae.": "Invierte el final y ubica la caída después de estar segura."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "hard",
+  "text": "Lee: “Wash your hands, wash your hands, before you eat. Soap and water, nice and clean. Wash your hands, wash your hands, keep germs away.” ¿Por qué se repite “Wash your hands”?",
+  "options": [
+   "Para explicar cómo preparar comida",
+   "Para contar una aventura en el bosque",
+   "Para invitar a dormir temprano",
+   "Para destacar un hábito de higiene"
+  ],
+  "correct": "Para destacar un hábito de higiene",
+  "hint": "La repetición llama la atención sobre lavarse las manos para mantenerse limpio y alejar gérmenes.",
+  "clue": "Relaciona la frase repetida con soap, clean y germs.",
+  "option_notes": {
+   "Para contar una aventura en el bosque": "Confunde una canción de cuidado personal con una historia de aventura.",
+   "Para explicar cómo preparar comida": "Confunde lavarse las manos con cocinar.",
+   "Para invitar a dormir temprano": "Confunde una acción antes de comer con una rutina de sueño."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "hard",
+  "text": "Lee: “At sunrise, a pudú in southern Chile leaves the forest to look for leaves. At sunset, it hears a dog and runs back to the trees. The forest is quiet again.” ¿Qué se puede inferir sobre el pudú?",
+  "options": [
+   "Duerme de día y juega con perros.",
+   "Vive en la ciudad y busca personas.",
+   "Busca comida de día y evita el peligro.",
+   "Come flores de noche y sigue ruidos."
+  ],
+  "correct": "Busca comida de día y evita el peligro.",
+  "hint": "Sale a buscar hojas con luz y corre al oír al perro, señales de alimento y peligro.",
+  "clue": "Une lo que hace al amanecer con lo que hace cuando oye al perro.",
+  "option_notes": {
+   "Duerme de día y juega con perros.": "Invierte las acciones del pudú y confunde huir con jugar.",
+   "Vive en la ciudad y busca personas.": "Imagina un lugar y una actividad que no aparecen.",
+   "Come flores de noche y sigue ruidos.": "Cambia las hojas por flores y el día por la noche."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "easy",
+  "text": "Ves una portada: el título es “Animals of Chile” y aparece un pudú. Antes de leer, ¿qué estrategia usas?",
+  "options": [
+   "Hacer una predicción con el título y la imagen.",
+   "Leer primero el último párrafo.",
+   "Copiar el título en tu cuaderno.",
+   "Traducir cada palabra del título al español."
+  ],
+  "correct": "Hacer una predicción con el título y la imagen.",
+  "hint": "Es una estrategia de prelectura: anticipas el tema con la portada y lo que ya sabes.",
+  "clue": "Piensa en lo que puedes anticipar antes de comenzar a leer.",
+  "option_notes": {
+   "Traducir cada palabra del título al español.": "Confunde predecir el tema con traducir vocabulario.",
+   "Copiar el título en tu cuaderno.": "Confunde observar la portada con registrar información.",
+   "Leer primero el último párrafo.": "Empieza por una parte del texto y no usa la portada."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "easy",
+  "text": "El título y los subtítulos te ayudan a ordenar la lectura. Esto significa que debes…",
+  "options": [
+   "Leer solo las palabras que parecen conocidas.",
+   "Escribir una opinión antes de leer.",
+   "Memorizar todas las oraciones del texto.",
+   "Usarlos como organizadores para guiar tu lectura."
+  ],
+  "correct": "Usarlos como organizadores para guiar tu lectura.",
+  "hint": "Títulos y subtítulos son organizadores que muestran cómo se ordena la información.",
+  "clue": "Piensa en qué elementos te ayudan a ubicar cada tema.",
+  "option_notes": {
+   "Leer solo las palabras que parecen conocidas.": "Confunde orientarse con leer únicamente vocabulario conocido.",
+   "Memorizar todas las oraciones del texto.": "Confunde organizar la lectura con aprender el texto de memoria.",
+   "Escribir una opinión antes de leer.": "Usa una acción personal, pero no un organizador del texto."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "easy",
+  "text": "Lees: “The fox sleeps during the day.” No entiendes bien la oración. ¿Cuál acción corresponde a releer?",
+  "options": [
+   "Inventar un final diferente.",
+   "Mirar solo la primera imagen.",
+   "Releer la oración y el texto cercano.",
+   "Copiar la oración sin volver a leerla."
+  ],
+  "correct": "Releer la oración y el texto cercano.",
+  "hint": "Releer ayuda a aclarar una idea que no comprendiste al primer intento.",
+  "clue": "Cuando una idea no está clara, vuelve a buscarla en el texto.",
+  "option_notes": {
+   "Mirar solo la primera imagen.": "Se fija en un elemento visual, pero no vuelve a leer la idea.",
+   "Inventar un final diferente.": "Crea información nueva en vez de comprobar el texto.",
+   "Copiar la oración sin volver a leerla.": "Registra la oración, pero no intenta comprenderla mejor."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "easy",
+  "text": "Después de leer sobre el ciclo de una planta, dibujas flechas y escribes “seed”, “sprout” y “plant”. Lo que hiciste se llama…",
+  "options": [
+   "Leer el texto sin detenerte.",
+   "Buscar una palabra en el diccionario.",
+   "Organizar la información en un diagrama.",
+   "Predecir el tema mirando solo el título."
+  ],
+  "correct": "Organizar la información en un diagrama.",
+  "hint": "Las flechas y las palabras ordenan las ideas en un diagrama después de leer.",
+  "clue": "Fíjate en las flechas: muestran cómo estás ordenando la información.",
+  "option_notes": {
+   "Predecir el tema mirando solo el título.": "Es una acción de prelectura y no describe lo que hiciste después.",
+   "Buscar una palabra en el diccionario.": "Ayuda con vocabulario, pero no organiza las etapas.",
+   "Leer el texto sin detenerte.": "Describe una forma de leer, no de ordenar información."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "medium",
+  "text": "El título es “A trip to Chiloé” y la portada muestra una lancha bajo la lluvia. Antes de leer, ¿qué predicción usa ambas pistas?",
+  "options": [
+   "Contará las reglas de un partido de fútbol.",
+   "Hablará de un viaje en lancha durante un día lluvioso.",
+   "Enseñará a cocinar empanadas en una casa.",
+   "Explicará cómo cuidar un pudú en el bosque."
+  ],
+  "correct": "Hablará de un viaje en lancha durante un día lluvioso.",
+  "hint": "Relacionas el título, la imagen y lo que sabes de Chiloé para anticipar el tema.",
+  "clue": "Une el lugar y la acción del título con lo que muestra la portada.",
+  "option_notes": {
+   "Explicará cómo cuidar un pudú en el bosque.": "Se fija en un animal chileno, pero ignora el título y la lluvia.",
+   "Contará las reglas de un partido de fútbol.": "Elige un tema conocido sin usar las pistas de la portada.",
+   "Enseñará a cocinar empanadas en una casa.": "Usa una asociación con Chiloé, pero no las dos pistas."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "medium",
+  "text": "Lees una página con título “My Healthy Lunch”, subtítulo “Fruit and water” y dibujos de una manzana y una botella. ¿Qué haces?",
+  "options": [
+   "Fijarte solo en las palabras más largas.",
+   "Leer primero la última oración de la página.",
+   "Copiar los dibujos sin relacionarlos con el texto.",
+   "Usar el título, el subtítulo y los dibujos como guías."
+  ],
+  "correct": "Usar el título, el subtítulo y los dibujos como guías.",
+  "hint": "Estos elementos organizan y orientan la lectura hacia la idea principal.",
+  "clue": "Considera qué elementos te ayudan a ubicar el tema de la página.",
+  "option_notes": {
+   "Leer primero la última oración de la página.": "Elige una parte al azar y no usa los organizadores.",
+   "Fijarte solo en las palabras más largas.": "Confunde el tamaño de las palabras con las pistas del texto.",
+   "Copiar los dibujos sin relacionarlos con el texto.": "Observa las imágenes, pero no las usa para comprender."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "medium",
+  "text": "Lees: “First, Tom washes the apple. Then, he cuts it. Finally, he eats it.” ¿Cuál organizador sería más adecuado después de leer?",
+  "options": [
+   "Una copia del texto sin marcar el orden.",
+   "Un diagrama de secuencia con las tres acciones.",
+   "Un dibujo sin palabras sobre una manzana.",
+   "Una lista alfabética con todas las palabras."
+  ],
+  "correct": "Un diagrama de secuencia con las tres acciones.",
+  "hint": "El diagrama de secuencia muestra las acciones en el orden en que ocurren.",
+  "clue": "Mira las palabras First, Then y Finally: señalan un orden.",
+  "option_notes": {
+   "Una lista alfabética con todas las palabras.": "Ordena palabras, no las acciones que ocurren.",
+   "Un dibujo sin palabras sobre una manzana.": "Representa un objeto, pero no organiza las tres acciones.",
+   "Una copia del texto sin marcar el orden.": "Mantiene el texto, pero no muestra cómo se ordenan las acciones."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "medium",
+  "text": "Después de leer un texto sobre el huemul, una oración no te queda clara. Ya miraste su foto y el subtítulo. La siguiente acción más útil es…",
+  "options": [
+   "Saltar esa parte y responder al azar.",
+   "Volver a leer esa parte y buscar pistas cercanas.",
+   "Leer únicamente el título una segunda vez.",
+   "Reemplazar la oración por una inventada."
+  ],
+  "correct": "Volver a leer esa parte y buscar pistas cercanas.",
+  "hint": "Releer la oración y su contexto puede aclarar el significado.",
+  "clue": "Ya usaste imagen y subtítulo; ahora vuelve a la parte difícil.",
+  "option_notes": {
+   "Saltar esa parte y responder al azar.": "Evita la dificultad y no comprueba la información.",
+   "Reemplazar la oración por una inventada.": "Crea una respuesta que no aparece en el texto.",
+   "Leer únicamente el título una segunda vez.": "Revisa una pista general, pero no la oración confusa."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "hard",
+  "text": "Antes de leer, ves el título “A Rainy Day in Valdivia” y una niña con botas y paraguas. ¿Qué predicción es más razonable?",
+  "options": [
+   "Enseñará a fabricar botas para la lluvia.",
+   "Explicará cómo crecen los árboles de la zona.",
+   "Narrará un viaje en avión desde Valdivia.",
+   "Contará actividades de un día lluvioso en Valdivia."
+  ],
+  "correct": "Contará actividades de un día lluvioso en Valdivia.",
+  "hint": "La predicción conecta el lugar y la lluvia del título con la imagen.",
+  "clue": "Elige la idea que explica las dos pistas de la portada.",
+  "option_notes": {
+   "Explicará cómo crecen los árboles de la zona.": "Usa una idea sobre el lugar, pero ignora la lluvia y la imagen.",
+   "Enseñará a fabricar botas para la lluvia.": "Se fija en un objeto, pero lo confunde con el tema central.",
+   "Narrará un viaje en avión desde Valdivia.": "Inventa un tema que no aparece en el título ni en la imagen."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "hard",
+  "text": "Sofía lee un texto sobre la ranita de Darwin y crea un diagrama. Una idea de su diagrama no coincide con el texto. ¿Cómo repara su organizador?",
+  "options": [
+   "Releer la parte relacionada y corregir el diagrama.",
+   "Inventar una idea para completar el diagrama.",
+   "Copiar la imagen y borrar las ideas escritas.",
+   "Mirar solo el título y dejar el diagrama igual."
+  ],
+  "correct": "Releer la parte relacionada y corregir el diagrama.",
+  "hint": "Releer permite comprobar la información y ajustar el diagrama al texto.",
+  "clue": "Comprueba la idea en el texto antes de cambiar tu organizador.",
+  "option_notes": {
+   "Mirar solo el título y dejar el diagrama igual.": "No comprueba el dato que quedó mal organizado.",
+   "Inventar una idea para completar el diagrama.": "Agrega información que no fue leída en el texto.",
+   "Copiar la imagen y borrar las ideas escritas.": "Reemplaza la información en vez de corregirla."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "hard",
+  "text": "En una tablet ves el título “Our School Garden”, el subtítulo “Tools” y una foto de niños con una pala. Predices que hablará de flores. Al leer, ¿qué haces para revisar tu predicción?",
+  "options": [
+   "Relees la sección “Tools” y comparas sus datos con tu predicción.",
+   "Copias la palabra “Tools” sin relacionarla con el texto.",
+   "Saltas la sección y buscas flores en otra página.",
+   "Te quedas con la predicción porque la foto muestra un jardín."
+  ],
+  "correct": "Relees la sección “Tools” y comparas sus datos con tu predicción.",
+  "hint": "El subtítulo orienta la búsqueda y releer permite comparar la información con tu predicción.",
+  "clue": "Usa el subtítulo para volver a la parte que puede confirmar o cambiar tu idea.",
+  "option_notes": {
+   "Te quedas con la predicción porque la foto muestra un jardín.": "Confía solo en la imagen y no comprueba el texto.",
+   "Copias la palabra “Tools” sin relacionarla con el texto.": "Mira el subtítulo como palabra aislada, sin usar su información.",
+   "Saltas la sección y buscas flores en otra página.": "Abandona el texto en vez de revisar la sección relevante."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "hard",
+  "text": "Título: “The Quillay Tree”. Texto: “The quillay is a Chilean tree. It has green leaves. People use its bark to make soap.” Después, ¿qué plan muestra mejor las estrategias?",
+  "options": [
+   "Ordenas las palabras alfabéticamente y borras las oraciones.",
+   "Copias solo el título y miras otro árbol.",
+   "Haces un diagrama y relees la oración sobre la corteza.",
+   "Inventas un uso del quillay y no vuelves al texto."
+  ],
+  "correct": "Haces un diagrama y relees la oración sobre la corteza.",
+  "hint": "El diagrama organiza las ideas y la relectura permite comprobar un dato específico.",
+  "clue": "Busca un plan que ordene ideas y permita verificar un dato.",
+  "option_notes": {
+   "Copias solo el título y miras otro árbol.": "Registra una pista general, pero no organiza ni verifica los datos.",
+   "Ordenas las palabras alfabéticamente y borras las oraciones.": "Ordena vocabulario y elimina la información importante.",
+   "Inventas un uso del quillay y no vuelves al texto.": "Agrega información sin comprobarla en la lectura."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "easy",
+  "text": "Llegas a tu sala a las 8:00 y ves a tu profesora. Selecciona el saludo correcto.",
+  "options": [
+   "Thank you, teacher!",
+   "Goodbye, teacher!",
+   "Good morning, teacher!",
+   "Good afternoon, teacher!"
+  ],
+  "correct": "Good morning, teacher!",
+  "hint": "“Good morning” se usa para saludar durante la mañana.",
+  "clue": "Piensa en una expresión para comenzar el encuentro.",
+  "option_notes": {
+   "Good afternoon, teacher!": "Confunde la mañana con la tarde.",
+   "Goodbye, teacher!": "Confunde saludar con despedirse.",
+   "Thank you, teacher!": "Usa una expresión de agradecimiento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "easy",
+  "text": "Terminó la visita de tu primo en Valdivia. ¿Qué le dices al despedirte?",
+  "options": [
+   "Hello, Ben!",
+   "Goodbye, Ben!",
+   "May I come in, Ben?",
+   "Thank you, Ben!"
+  ],
+  "correct": "Goodbye, Ben!",
+  "hint": "“Goodbye” se usa cuando una visita o encuentro termina.",
+  "clue": "Busca la expresión que se usa al finalizar el encuentro.",
+  "option_notes": {
+   "Hello, Ben!": "Usa un saludo para comenzar el encuentro.",
+   "Thank you, Ben!": "Agradece, pero no se despide.",
+   "May I come in, Ben?": "Pide permiso para entrar."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "easy",
+  "text": "La profesora dice: «Please close the door». ¿Qué acción debes hacer?",
+  "options": [
+   "Close the door, please.",
+   "Open the door, please.",
+   "Look at the board, please.",
+   "Sit on the chair, please."
+  ],
+  "correct": "Close the door, please.",
+  "hint": "“Close” significa cerrar y “door” significa puerta.",
+  "clue": "Fíjate en el verbo close y en el objeto door.",
+  "option_notes": {
+   "Open the door, please.": "Confunde close con open.",
+   "Sit on the chair, please.": "Cambia la puerta por la silla.",
+   "Look at the board, please.": "Cambia la acción y el objeto."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "easy",
+  "text": "Después de levantarte y antes de ir a clases, ¿qué oración describe una acción cotidiana?",
+  "options": [
+   "I brush my teeth.",
+   "I play after school.",
+   "I eat lunch.",
+   "I sleep at night."
+  ],
+  "correct": "I brush my teeth.",
+  "hint": "Brush my teeth describe lavarse o cepillarse los dientes.",
+  "clue": "Busca una acción que normalmente haces al comenzar el día.",
+  "option_notes": {
+   "I sleep at night.": "Relaciona dormir con la noche.",
+   "I eat lunch.": "Ubica el almuerzo antes de tiempo.",
+   "I play after school.": "Confunde antes de clases con después."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "medium",
+  "text": "Tu compañero Diego te presta un lápiz. ¿Qué respondes para agradecerle?",
+  "options": [
+   "Goodbye with the pencil.",
+   "Sorry for the pencil.",
+   "May I use the pencil?",
+   "Thank you for the pencil."
+  ],
+  "correct": "Thank you for the pencil.",
+  "hint": "“Thank you” es la expresión adecuada para agradecer un favor.",
+  "clue": "Piensa qué dices cuando alguien te presta algo.",
+  "option_notes": {
+   "Sorry for the pencil.": "Usa una disculpa en vez de un agradecimiento.",
+   "Goodbye with the pencil.": "Mezcla una despedida con el objeto.",
+   "May I use the pencil?": "Pide permiso para usarlo, pero no agradece."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "medium",
+  "text": "Quieres usar el baño de la escuela. ¿Cómo pides permiso a tu profesora?",
+  "options": [
+   "Thank you for the bathroom, please.",
+   "Where is the bathroom, please?",
+   "I am in the bathroom, please.",
+   "May I use the bathroom, please?"
+  ],
+  "correct": "May I use the bathroom, please?",
+  "hint": "“May I...?” se usa para pedir permiso de manera adecuada.",
+  "clue": "Busca la pregunta que solicita autorización.",
+  "option_notes": {
+   "Where is the bathroom, please?": "Pregunta por un lugar, no pide permiso.",
+   "I am in the bathroom, please.": "Informa dónde está, pero no solicita autorización.",
+   "Thank you for the bathroom, please.": "Agradece de forma incorrecta y no pide permiso."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "medium",
+  "text": "Sin querer, botas al suelo el cuaderno de Camila. ¿Cómo te disculpas?",
+  "options": [
+   "Thank you, Camila.",
+   "I’m sorry, Camila.",
+   "Goodbye, Camila.",
+   "May I borrow it, Camila?"
+  ],
+  "correct": "I’m sorry, Camila.",
+  "hint": "“I’m sorry” se usa para disculparse por un accidente o error.",
+  "clue": "Piensa qué dices después de hacer algo accidentalmente.",
+  "option_notes": {
+   "Thank you, Camila.": "Agradece, pero no se disculpa.",
+   "May I borrow it, Camila?": "Pide prestado el cuaderno.",
+   "Goodbye, Camila.": "Usa una despedida fuera de contexto."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "medium",
+  "text": "Durante un paseo por el Parque Nacional Conguillío, hay sol y a Martín le gusta ese clima. Si Martín habla, ¿qué expresión comunica ambas ideas?",
+  "options": [
+   "Today are sunny and I like it.",
+   "Today is rainy and I don’t like it.",
+   "Today is sunny and I like it.",
+   "Today am sunny and I like it."
+  ],
+  "correct": "Today is sunny and I like it.",
+  "hint": "La oración usa is para el clima y agrega la preferencia con and.",
+  "clue": "Comprueba el clima, la opinión de Martín y la forma correcta de unirlos.",
+  "option_notes": {
+   "Today are sunny and I like it.": "Usa are con today, que es singular.",
+   "Today is rainy and I don’t like it.": "Cambia el clima y la preferencia de Martín.",
+   "Today am sunny and I like it.": "Usa am después de today de forma incorrecta."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "hard",
+  "text": "En una viñeta de tu sala se ve una mochila roja de Tomás debajo de la mesa. ¿Qué oración describe correctamente la escena?",
+  "options": [
+   "That are his blue bag, and it is in the table.",
+   "This is her red bag, and they are under the table.",
+   "These are his red bag, and it is on the table.",
+   "This is his red bag, and it is under the table."
+  ],
+  "correct": "This is his red bag, and it is under the table.",
+  "hint": "La oración concuerda en singular y expresa dueño, color, objeto y posición.",
+  "clue": "Revisa quién es dueño, el color de la mochila y dónde está.",
+  "option_notes": {
+   "These are his red bag, and it is on the table.": "Confunde singular y plural, y cambia under por on.",
+   "This is her red bag, and they are under the table.": "Confunde el dueño y usa they para un solo objeto.",
+   "That are his blue bag, and it is in the table.": "Cambia color y posición, además de usar una forma incorrecta."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "hard",
+  "text": "En una caja hay 12 lápices y 1 regla. La regla está dentro de la caja. ¿Cuál expresión informa correctamente sobre su contenido?",
+  "options": [
+   "There are twelve pencils and one ruler in the box.",
+   "There are twenty pencils and one ruler on the box.",
+   "There is twelve pencil and two rulers in the box.",
+   "There is twelve pencils and one ruler in the box."
+  ],
+  "correct": "There are twelve pencils and one ruler in the box.",
+  "hint": "There are acompaña a los objetos contables y las cantidades coinciden con el enunciado.",
+  "clue": "Compara cada número y observa si hay una o más cosas.",
+  "option_notes": {
+   "There is twelve pencils and one ruler in the box.": "Usa there is con un grupo plural.",
+   "There are twenty pencils and one ruler on the box.": "Cambia twelve por twenty y pone objetos sobre la caja.",
+   "There is twelve pencil and two rulers in the box.": "Cambia las cantidades y usa formas singulares incorrectas."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "hard",
+  "text": "Lee: «The pudú is a small Chilean deer. It eats plants and lives in forests.» ¿Qué pregunta y respuesta usan correctamente esa información?",
+  "options": [
+   "Where does it live? It lives in the city.",
+   "What is it? It is a big Chilean deer.",
+   "What is it? It is a small Chilean deer.",
+   "What does it eat? It eats pizza."
+  ],
+  "correct": "What is it? It is a small Chilean deer.",
+  "hint": "La pregunta y la respuesta coinciden con la especie y su tamaño descritos.",
+  "clue": "Busca la opción que respeta el tamaño, el alimento y el lugar del texto.",
+  "option_notes": {
+   "What is it? It is a big Chilean deer.": "Cambia small por big.",
+   "What does it eat? It eats pizza.": "Cambia plants por pizza.",
+   "Where does it live? It lives in the city.": "Cambia forests por the city."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "hard",
+  "text": "Imagina tres viñetas: una niña ve un perro, el perro corre al parque y luego juega con ella. ¿Cuál oración recontaría mejor la secuencia?",
+  "options": [
+   "The girl sees a cat. It sleeps in the park and plays with her.",
+   "The girl sees a dog. It runs to the park and plays with her.",
+   "The girl sees a dog. It run to the park and play with her.",
+   "The girl sees a dog. They runs to the park and plays with her."
+  ],
+  "correct": "The girl sees a dog. It runs to the park and plays with her.",
+  "hint": "La oración mantiene los personajes, el orden de las acciones y la concordancia verbal.",
+  "clue": "Sigue el orden: ver, correr al parque y jugar.",
+  "option_notes": {
+   "The girl sees a cat. It sleeps in the park and plays with her.": "Cambia el animal y las acciones de la secuencia.",
+   "The girl sees a dog. They runs to the park and plays with her.": "Usa they y runs sin concordancia.",
+   "The girl sees a dog. It run to the park and play with her.": "Omite la terminación -s en los verbos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "easy",
+  "text": "¿Qué palabra en inglés significa «hermana»?",
+  "options": [
+   "sister",
+   "father",
+   "mother",
+   "brother"
+  ],
+  "correct": "sister",
+  "hint": "Sister significa «hermana».",
+  "clue": "Piensa en los miembros de una familia y busca la palabra para una hija de tus padres.",
+  "option_notes": {
+   "brother": "Confunde hermana con hermano.",
+   "mother": "Confunde a la hermana con la mamá.",
+   "father": "Confunde a la hermana con el papá."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "easy",
+  "text": "Quieres llamar con respeto la atención de tu profesora. ¿Qué expresión usas?",
+  "options": [
+   "Good night",
+   "Thank you",
+   "I'm sorry",
+   "Excuse me"
+  ],
+  "correct": "Excuse me",
+  "hint": "Excuse me se usa para llamar la atención o pedir paso con respeto.",
+  "clue": "Busca una expresión para iniciar una petición respetuosa.",
+  "option_notes": {
+   "Thank you": "La usa para agradecer, no para llamar la atención.",
+   "Good night": "La usa como despedida nocturna.",
+   "I'm sorry": "La confunde con una disculpa."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "easy",
+  "text": "¿Qué palabra completa la serie en inglés: ten, eleven, ___?",
+  "options": [
+   "two",
+   "thirteen",
+   "twelve",
+   "twenty"
+  ],
+  "correct": "twelve",
+  "hint": "Después de eleven viene twelve en la cuenta del 1 al 20.",
+  "clue": "Sigue la cuenta en orden, avanzando solo un número.",
+  "option_notes": {
+   "twenty": "Confunde twelve con un número parecido: twenty.",
+   "two": "Vuelve a un número pequeño en vez de seguir la serie.",
+   "thirteen": "Avanza dos números después de eleven."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "easy",
+  "text": "Si en Chile está cayendo mucha lluvia, ¿qué palabra describe el tiempo?",
+  "options": [
+   "windy",
+   "rainy",
+   "cloudy",
+   "sunny"
+  ],
+  "correct": "rainy",
+  "hint": "Rainy describe un día con lluvia.",
+  "clue": "Relaciona la palabra inglesa con el fenómeno que está ocurriendo.",
+  "option_notes": {
+   "cloudy": "Confunde lluvia con un cielo solamente nublado.",
+   "windy": "Confunde lluvia con viento.",
+   "sunny": "Elige la palabra opuesta a un día lluvioso."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "medium",
+  "text": "Tienes 10 años. Completa el diálogo: —How old are you? —I am ___.",
+  "options": [
+   "from Chile",
+   "very hungry",
+   "in the classroom",
+   "ten years old"
+  ],
+  "correct": "ten years old",
+  "hint": "How old are you? pregunta la edad; la respuesta indica que tienes 10 años.",
+  "clue": "Busca una opción que diga tu edad, no tu origen, lugar o estado.",
+  "option_notes": {
+   "very hungry": "Responde cómo te sientes, no cuántos años tienes.",
+   "from Chile": "Responde tu origen, no tu edad.",
+   "in the classroom": "Responde un lugar, no tu edad."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "medium",
+  "text": "En un almacén, una bebida cuesta $1.500 y quieres saber su precio. ¿Qué pregunta haces?",
+  "options": [
+   "What color is the drink?",
+   "How much is the drink?",
+   "How old is the drink?",
+   "Where is the drink?"
+  ],
+  "correct": "How much is the drink?",
+  "hint": "How much se usa para preguntar cuánto cuesta algo.",
+  "clue": "Elige la pregunta que busca un valor de dinero.",
+  "option_notes": {
+   "Where is the drink?": "Pregunta por el lugar, no por el precio.",
+   "What color is the drink?": "Pregunta por el color, no por el precio.",
+   "How old is the drink?": "Confunde el precio con la edad."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "medium",
+  "text": "En una feria quieres comprar dos manzanas. ¿Qué dices de manera amable?",
+  "options": [
+   "Can I have two pencils, please?",
+   "Can I have two books, please?",
+   "Can I have two shoes, please?",
+   "Can I have two apples, please?"
+  ],
+  "correct": "Can I have two apples, please?",
+  "hint": "Can I have ... please? sirve para pedir algo de manera amable; apples significa manzanas.",
+  "clue": "Busca la petición amable que nombra la fruta que quieres comprar.",
+  "option_notes": {
+   "Can I have two books, please?": "Cambia la fruta por objetos para leer.",
+   "Can I have two pencils, please?": "Cambia la fruta por útiles escolares.",
+   "Can I have two shoes, please?": "Cambia la fruta por algo para los pies."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "medium",
+  "text": "Lee: «After breakfast, Diego brushes his teeth. Then he goes to school.» ¿Qué hace Diego antes de ir a la escuela?",
+  "options": [
+   "He brushes his teeth.",
+   "He plays football.",
+   "He cooks dinner.",
+   "He feeds the dog."
+  ],
+  "correct": "He brushes his teeth.",
+  "hint": "El texto dice que Diego se cepilla los dientes después del desayuno y antes de ir a la escuela.",
+  "clue": "Busca la acción ubicada entre el desayuno y el momento de ir a la escuela.",
+  "option_notes": {
+   "He cooks dinner.": "Confunde una rutina de la noche con la acción del texto.",
+   "He feeds the dog.": "Agrega una acción que el texto no menciona.",
+   "He plays football.": "Confunde una actividad posible con la acción indicada."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "hard",
+  "text": "Lee: «I have a sore throat and a fever. I need help at school.» ¿Con quién debería hablar?",
+  "options": [
+   "the soccer coach",
+   "the bus driver",
+   "the nurse",
+   "the librarian"
+  ],
+  "correct": "the nurse",
+  "hint": "Fever y sore throat indican un problema de salud; la nurse atiende a la persona enferma.",
+  "clue": "Relaciona los síntomas con el adulto que puede ayudar en un problema de salud.",
+  "option_notes": {
+   "the librarian": "Relaciona la ayuda con los libros, no con la salud.",
+   "the bus driver": "Relaciona la ayuda con el transporte escolar.",
+   "the soccer coach": "Relaciona la ayuda con el deporte."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "hard",
+  "text": "Lee: «At lunch, Sofía likes rice and chicken. She does not like fish.» El mesero prepara una sola opción. ¿Cuál debería evitar servirle?",
+  "options": [
+   "vegetable soup",
+   "fish soup",
+   "rice soup",
+   "chicken soup"
+  ],
+  "correct": "fish soup",
+  "hint": "Sofía no quiere fish; por eso el mesero debe evitar una sopa que contenga pescado.",
+  "clue": "Busca el plato que contiene el alimento que Sofía dice que no le gusta.",
+  "option_notes": {
+   "rice soup": "Confunde un alimento que le gusta con uno que rechaza.",
+   "chicken soup": "Confunde otro alimento que le gusta con el que rechaza.",
+   "vegetable soup": "Elige un ingrediente no mencionado como rechazado."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "hard",
+  "text": "Lee: «The library is in front of the gym. The cafeteria is behind the gym. You are in the cafeteria and walk to the library.» ¿Qué lugar ves primero?",
+  "options": [
+   "the gym",
+   "the playground",
+   "the library",
+   "the classroom"
+  ],
+  "correct": "the gym",
+  "hint": "Desde la cafetería, que está detrás del gimnasio, primero pasas por el gimnasio y luego llegas a la biblioteca.",
+  "clue": "Sigue la posición de cada lugar: uno está detrás y otro delante del gimnasio.",
+  "option_notes": {
+   "the library": "Elige el destino final en vez del primer lugar.",
+   "the classroom": "Inventa un lugar que no aparece en el texto.",
+   "the playground": "Inventa otro lugar que no aparece en el texto."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "hard",
+  "text": "Lee: «It is cold and windy in Torres del Paine. Martín is going for a walk. He puts on ___.» ¿Qué opción completa mejor la oración?",
+  "options": [
+   "a summer hat",
+   "shorts and sandals",
+   "a warm jacket",
+   "a light T-shirt"
+  ],
+  "correct": "a warm jacket",
+  "hint": "Cold y windy indican que Martín necesita una prenda abrigada: a warm jacket.",
+  "clue": "Relaciona el clima con la prenda que protege mejor del frío y el viento.",
+  "option_notes": {
+   "shorts and sandals": "Relaciona un clima frío con ropa de verano.",
+   "a light T-shirt": "Elige una prenda liviana que protege poco del frío.",
+   "a summer hat": "Confunde una prenda de verano con abrigo para el viento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "easy",
+  "text": "Completa la lista de compras. El dibujo junto al espacio muestra dos frutas amarillas, curvas y con cáscara: “Shopping list: 2 ______, 1 litre of milk, 4 apples.”",
+  "options": [
+   "carrots",
+   "oranges",
+   "banana",
+   "bananas"
+  ],
+  "correct": "bananas",
+  "hint": "El dibujo muestra dos plátanos; en inglés, “plátanos” es “bananas”.",
+  "clue": "Identifica la fruta y revisa que después del número 2 vaya en plural.",
+  "option_notes": {
+   "banana": "Olvida que el número 2 exige usar el plural.",
+   "oranges": "Confunde la fruta amarilla y curva con naranjas.",
+   "carrots": "Elige un alimento distinto de la fruta del dibujo."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "easy",
+  "text": "Sigue el modelo y completa la postal. Modelo: “It is sunny.” Postal: “Greetings from La Serena! It is ______.” El dibujo descrito muestra una nube con gotas de lluvia.",
+  "options": [
+   "windy",
+   "rainy",
+   "snowy",
+   "sunny"
+  ],
+  "correct": "rainy",
+  "hint": "El dibujo tiene gotas de lluvia; la palabra correcta es “rainy”.",
+  "clue": "Observa el estado del tiempo que muestra el dibujo.",
+  "option_notes": {
+   "sunny": "Repite la palabra del modelo sin mirar el dibujo.",
+   "windy": "Confunde las gotas con un día de viento.",
+   "snowy": "Confunde la lluvia con la nieve."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "easy",
+  "text": "Completa esta rima: “I see a cat. It wears a ______.” El dibujo descrito muestra al gato con una prenda en la cabeza.",
+  "options": [
+   "shirt",
+   "shoe",
+   "hat",
+   "coat"
+  ],
+  "correct": "hat",
+  "hint": "“Hat” es una prenda para la cabeza y rima con “cat”.",
+  "clue": "Busca una prenda que combine con el dibujo y rime con “cat”.",
+  "option_notes": {
+   "coat": "Elige una prenda posible, pero no para la cabeza ni para la rima.",
+   "shoe": "Elige una prenda que no corresponde al dibujo ni al sonido final.",
+   "shirt": "Elige otra prenda, pero no la que rima con “cat”."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "easy",
+  "text": "Completa la tira cómica. Cuadro 1: Tom ve lluvia y dice “It is raining!” Cuadro 2: toma su ______ para salir.",
+  "options": [
+   "umbrella",
+   "bicycle",
+   "sunglasses",
+   "backpack"
+  ],
+  "correct": "umbrella",
+  "hint": "Cuando llueve, Tom necesita un paraguas: en inglés, “umbrella”.",
+  "clue": "Relaciona la lluvia con el objeto que protege de ella.",
+  "option_notes": {
+   "backpack": "Elige algo para llevar, pero no para protegerse de la lluvia.",
+   "bicycle": "Confunde el transporte con el objeto que necesita.",
+   "sunglasses": "Relaciona un accesorio con el clima equivocado."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "medium",
+  "text": "Usa el modelo del mini libro: “This is a ______. It can ______.” Página: “This is a pudú. It can ______.” El dibujo descrito muestra al pudú saltando.",
+  "options": [
+   "swim",
+   "read",
+   "fly",
+   "jump"
+  ],
+  "correct": "jump",
+  "hint": "Después de “can” va “jump”, porque el dibujo muestra que el pudú está saltando.",
+  "clue": "Observa la acción del pudú y revisa la palabra que sigue a “can”.",
+  "option_notes": {
+   "fly": "Confunde saltar con volar.",
+   "swim": "Elige una acción que no muestra el dibujo.",
+   "read": "Agrega una acción humana que no aparece."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "medium",
+  "text": "Completa la postal siguiendo el modelo. Modelo: “I am in Valdivia. I can see a river.” Texto: “Hi, Sofía! I am in Chiloé. I can see a ______ and two boats. See you!” El dibujo muestra arena junto al mar.",
+  "options": [
+   "school",
+   "beach",
+   "mountain",
+   "forest"
+  ],
+  "correct": "beach",
+  "hint": "El dibujo muestra la costa con arena; esa palabra es “beach”.",
+  "clue": "Busca el lugar que puede verse junto al mar y la arena.",
+  "option_notes": {
+   "forest": "Confunde la arena de la costa con un lugar con árboles.",
+   "mountain": "Elige otro paisaje que no aparece en el dibujo.",
+   "school": "Confunde el lugar de la postal con el objeto nombrado."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "medium",
+  "text": "Completa la lista según la compra: cuatro papas y una zanahoria. Modelo: “Buy 3 tomatoes and 1 onion.” “Shopping list: Buy 4 ______ and 1 ______.”",
+  "options": [
+   "tomatoes and onion",
+   "potato and carrots",
+   "carrots and potato",
+   "potatoes and carrot"
+  ],
+  "correct": "potatoes and carrot",
+  "hint": "Con 4 va “potatoes” y con 1 va “carrot”, tal como pide la compra.",
+  "clue": "Identifica los alimentos y relaciónalos con sus cantidades.",
+  "option_notes": {
+   "potato and carrots": "Invierte las formas singular y plural de ambas cantidades.",
+   "tomatoes and onion": "Copia los alimentos del modelo en vez de usar la compra indicada.",
+   "carrots and potato": "Intercambia los alimentos y cambia sus cantidades."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "medium",
+  "text": "Completa el globo. Cuadro 1: Ana dice “I am hungry.” Cuadro 2: su amigo le da un sándwich y dice “Here you are.” Ana responde: “______!”",
+  "options": [
+   "Excuse me",
+   "Thank you",
+   "Good night",
+   "See you"
+  ],
+  "correct": "Thank you",
+  "hint": "Al recibir algo de otra persona, Ana agradece: “Thank you”.",
+  "clue": "Piensa qué dices cuando alguien te entrega comida.",
+  "option_notes": {
+   "Good night": "Usa una despedida nocturna en vez de agradecer la comida.",
+   "See you": "Usa una despedida, aunque Ana acaba de recibir algo.",
+   "Excuse me": "Usa una expresión para llamar la atención o disculparse."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "hard",
+  "text": "Completa la postal: “Hi, Diego! I am in Torres del Paine. I can see snow and mountains. It is ______, so I wear my jacket. Love, Sofía.”",
+  "options": [
+   "hot",
+   "dry",
+   "cold",
+   "warm"
+  ],
+  "correct": "cold",
+  "hint": "La nieve y la chaqueta muestran que la temperatura es baja: “cold”.",
+  "clue": "Relaciona el paisaje nevado con la ropa que lleva Sofía.",
+  "option_notes": {
+   "hot": "Elige la temperatura opuesta a la que sugieren la nieve y la chaqueta.",
+   "dry": "Se fija en una condición del aire, no en la temperatura.",
+   "warm": "Confunde una temperatura agradable con una escena nevada."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "hard",
+  "text": "Completa el mini libro según el modelo “I + verbo base”. Páginas: “I get up. I eat breakfast.” La siguiente muestra a Mateo cepillándose los dientes: “I ______ my teeth.”",
+  "options": [
+   "am brushing",
+   "wash",
+   "brush",
+   "brushes"
+  ],
+  "correct": "brush",
+  "hint": "El dibujo muestra cepillarse y, con “I”, queda “I brush my teeth”.",
+  "clue": "Identifica la acción y conserva el patrón “I + verbo sin cambio”.",
+  "option_notes": {
+   "brushes": "Usa una forma de tercera persona después de “I”.",
+   "am brushing": "Cambia el patrón de rutina a una forma continua.",
+   "wash": "Traduce literalmente “lavar” en vez del verbo habitual."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "hard",
+  "text": "Completa la rima: “The little fox is red. At night it goes to its ______.” El dibujo descrito muestra al zorro durmiendo en una cama.",
+  "options": [
+   "bed",
+   "tree",
+   "lake",
+   "park"
+  ],
+  "correct": "bed",
+  "hint": "“Bed” significa cama, coincide con el dibujo y rima con “red”.",
+  "clue": "Usa la escena del dibujo y busca una palabra que rime con “red”.",
+  "option_notes": {
+   "tree": "Elige un lugar posible, pero no la cama ni una palabra que rime.",
+   "lake": "Confunde un lugar del ambiente con el lugar para dormir.",
+   "park": "Elige un lugar para jugar, no para dormir de noche."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "hard",
+  "text": "Completa el último globo. Cuadro 1: Martín dice “I want to play football.” Cuadro 2: comienza a llover y dice “Oh no!” Cuadro 3: su amiga propone un juego de mesa bajo techo: “Let’s play inside.” Martín responde: “That sounds ______!”",
+  "options": [
+   "fun",
+   "boring",
+   "bad",
+   "cold"
+  ],
+  "correct": "fun",
+  "hint": "La nueva propuesta permite jugar y resulta entretenida: “That sounds fun!”.",
+  "clue": "Observa cómo la propuesta de la amiga convierte un problema en una actividad agradable.",
+  "option_notes": {
+   "bad": "No considera que la propuesta resuelve el problema de la lluvia.",
+   "cold": "Confunde el clima exterior con la opinión sobre el juego.",
+   "boring": "Supone que el juego no entretiene, aunque Martín acepta la idea."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "easy",
+  "text": "¿Cuál frase significa «Yo corro»?",
+  "options": [
+   "I read.",
+   "I run.",
+   "I sleep.",
+   "I eat."
+  ],
+  "correct": "I run.",
+  "hint": "“I” significa “yo” y “run” significa “corro”.",
+  "clue": "Busca el verbo que nombra la acción de moverse corriendo.",
+  "option_notes": {
+   "I sleep.": "Confunde run con la acción de dormir.",
+   "I read.": "Confunde run con la acción de leer.",
+   "I eat.": "Confunde run con la acción de comer."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "easy",
+  "text": "Camila: «I ___ soup». Completa para decir que no le gusta la sopa.",
+  "options": [
+   "do eat",
+   "don't eat",
+   "do like",
+   "don't like"
+  ],
+  "correct": "don't like",
+  "hint": "Después de “I”, “don't like” expresa que a Camila no le gusta la sopa.",
+  "clue": "Busca el verbo de gusto y agrega la negación de “no”.",
+  "option_notes": {
+   "do like": "Quita la negación y expresa que sí le gusta.",
+   "don't eat": "Confunde no gustar con no comer.",
+   "do eat": "Expresa comer, no una preferencia negativa."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "easy",
+  "text": "En una mesa hay un cuaderno. Para expresar que hay uno, ¿qué escribes en inglés?",
+  "options": [
+   "There are one notebook.",
+   "There is two notebooks.",
+   "There is one notebook.",
+   "There are two notebook."
+  ],
+  "correct": "There is one notebook.",
+  "hint": "Para un objeto, usa “There is”; “one” indica que hay uno.",
+  "clue": "Primero decide si hablas de uno o de varios cuadernos.",
+  "option_notes": {
+   "There are one notebook.": "Usa “are” aunque hay un solo cuaderno.",
+   "There is two notebooks.": "Usa “is” para dos cuadernos.",
+   "There are two notebook.": "Cambia uno por dos y olvida el plural."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "easy",
+  "text": "En un cuento, el cielo de Punta Arenas tiene muchas nubes. ¿Qué adjetivo describe el clima?",
+  "options": [
+   "sunny",
+   "windy",
+   "cloudy",
+   "snowy"
+  ],
+  "correct": "cloudy",
+  "hint": "“Cloudy” describe un día con muchas nubes.",
+  "clue": "Busca el adjetivo del clima relacionado con las nubes.",
+  "option_notes": {
+   "sunny": "Confunde muchas nubes con un día soleado.",
+   "windy": "Confunde las nubes con viento.",
+   "snowy": "Agrega nieve, que no aparece en la descripción."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "medium",
+  "text": "Diego muestra una bicicleta que le pertenece. ¿Qué diría para presentarla?",
+  "options": [
+   "These is my bike.",
+   "This is my bike.",
+   "This is your bike.",
+   "This are my bikes."
+  ],
+  "correct": "This is my bike.",
+  "hint": "“My” significa “mi” y una bicicleta se presenta con “This is”.",
+  "clue": "Busca la palabra inglesa para “mi” y fíjate que hay una sola bicicleta.",
+  "option_notes": {
+   "This is your bike.": "Confunde “my” (mi) con “your” (tu).",
+   "These is my bike.": "Mezcla “these” con “is”; no concuerdan.",
+   "This are my bikes.": "Usa “are” y plural para una sola bicicleta."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "medium",
+  "text": "El pudú es pequeño y café. ¿Cómo lo describirías en inglés agregando ambas características?",
+  "options": [
+   "The pudu is big and brown.",
+   "The pudu are small and brown.",
+   "The pudu is small and black.",
+   "The pudu is small and brown."
+  ],
+  "correct": "The pudu is small and brown.",
+  "hint": "“Small” es pequeño, “brown” es café y “and” une ambas características.",
+  "clue": "Busca las dos características dadas y la palabra que las une.",
+  "option_notes": {
+   "The pudu is big and brown.": "Cambia “small” por su opuesto, “big”.",
+   "The pudu is small and black.": "Cambia “brown” por “black”.",
+   "The pudu are small and brown.": "Usa “are” aunque “the pudu” es singular."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "medium",
+  "text": "En un dibujo hay un gato debajo de una silla. ¿Qué oración lo describe?",
+  "options": [
+   "The cat is under the chair.",
+   "The chair is under the cat.",
+   "The cat is in the chair.",
+   "The cat is on the chair."
+  ],
+  "correct": "The cat is under the chair.",
+  "hint": "“Under” significa “debajo de”, y el gato es el sujeto de la oración.",
+  "clue": "Relaciona “debajo de” con una palabra de posición.",
+  "option_notes": {
+   "The cat is on the chair.": "Confunde “on” (sobre) con “under” (debajo).",
+   "The cat is in the chair.": "Confunde “in” (dentro) con “under”.",
+   "The chair is under the cat.": "Invierte el gato y la silla."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "medium",
+  "text": "Lee: «Araucaria trees are tall. They have long branches and grow in the south of Chile». ¿Cuál afirmación coincide con el texto?",
+  "options": [
+   "They have long leaves.",
+   "They have blue branches.",
+   "They have short branches.",
+   "They have long branches."
+  ],
+  "correct": "They have long branches.",
+  "hint": "El texto dice “They have long branches”: las araucarias tienen ramas largas.",
+  "clue": "Busca en el texto una característica que sí se menciona.",
+  "option_notes": {
+   "They have blue branches.": "Cambia “long” por un color no mencionado.",
+   "They have short branches.": "Cambia “long” por su opuesto, “short”.",
+   "They have long leaves.": "Confunde ramas con hojas."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "hard",
+  "text": "En una caja hay 7 manzanas rojas y 5 verdes. Suma ambas cantidades: ¿cómo informas el total en inglés?",
+  "options": [
+   "There are five apples.",
+   "There are twelve apples.",
+   "There is twelve apples.",
+   "There are seven apples."
+  ],
+  "correct": "There are twelve apples.",
+  "hint": "7 + 5 = 12; como hay varias manzanas, corresponde “There are twelve apples.”",
+  "clue": "Cuenta las manzanas rojas y verdes juntas antes de elegir.",
+  "option_notes": {
+   "There are seven apples.": "Cuenta solo las manzanas rojas.",
+   "There are five apples.": "Cuenta solo las manzanas verdes.",
+   "There is twelve apples.": "Usa “is” aunque “apples” está en plural."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "hard",
+  "text": "En la biblioteca escolar, el diccionario está sobre la mesa. ¿Qué intercambio pregunta y responde por su ubicación?",
+  "options": [
+   "A: What is the dictionary? B: It is a book.",
+   "A: Is the dictionary under the table? B: Yes, it is.",
+   "A: Where is the dictionary? B: It is on the table.",
+   "A: Where are the dictionary? B: They are on the table."
+  ],
+  "correct": "A: Where is the dictionary? B: It is on the table.",
+  "hint": "“Where is...?” pregunta por el lugar de un objeto singular; “It is on...” da la ubicación.",
+  "clue": "La palabra “where” pregunta por un lugar.",
+  "option_notes": {
+   "A: What is the dictionary? B: It is a book.": "Pregunta qué es, no dónde está.",
+   "A: Where are the dictionary? B: They are on the table.": "Usa plural para un solo diccionario.",
+   "A: Is the dictionary under the table? B: Yes, it is.": "Confunde “under” con “on”."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "hard",
+  "text": "Valentina muestra una mochila y un sombrero. Dice: «This is my backpack. This is a hat». Su amiga señala el sombrero: «Is this your backpack?» ¿Qué responde?",
+  "options": [
+   "No, it isn't.",
+   "No, they aren't.",
+   "Yes, he is.",
+   "Yes, it is."
+  ],
+  "correct": "No, it isn't.",
+  "hint": "Señala el sombrero, no la mochila; la respuesta negativa usa “it” para ese objeto.",
+  "clue": "Compara el objeto señalado con el objeto nombrado en la pregunta.",
+  "option_notes": {
+   "Yes, it is.": "No relaciona el objeto señalado con la mochila.",
+   "Yes, he is.": "Usa “he” para una persona, no “it” para un objeto.",
+   "No, they aren't.": "Usa “they are” para un objeto singular."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA15",
+  "difficulty": "hard",
+  "text": "Lee: «The llamas are in the Andes. They have thick wool and eat grass». Según el texto, selecciona el diálogo correcto.",
+  "options": [
+   "A: What do they eat? B: They eat grass.",
+   "A: Are they in the Andes? B: No, they aren't.",
+   "A: What do they eat? B: They eat wool.",
+   "A: Where are they? B: They have thick wool."
+  ],
+  "correct": "A: What do they eat? B: They eat grass.",
+  "hint": "“What do they eat?” pregunta por el alimento y el texto responde “They eat grass.”",
+  "clue": "Une cada pregunta con el dato que responde: lugar, lana o alimento.",
+  "option_notes": {
+   "A: Where are they? B: They have thick wool.": "Responde sobre la lana, no sobre el lugar.",
+   "A: What do they eat? B: They eat wool.": "Cambia el alimento mencionado en el texto.",
+   "A: Are they in the Andes? B: No, they aren't.": "Niega un dato que el texto confirma."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ }
+]

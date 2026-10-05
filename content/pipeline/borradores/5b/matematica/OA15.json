@@ -1,0 +1,274 @@
+{
+ "oa": "OA15",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "Resuelve: x + 8 = 23. ¿Cuánto vale x?",
+   "options": [
+    "16",
+    "31",
+    "14",
+    "15"
+   ],
+   "correct": "15",
+   "hint": "Si x + 8 = 23, entonces x = 23 − 8 = 15.",
+   "clue": "Busca el número que al sumarle 8 da 23.",
+   "option_notes": {
+    "14": "Calcula 23 − 9 en vez de 23 − 8.",
+    "16": "Se equivoca al restar 8 a 23.",
+    "31": "Suma 23 y 8 en vez de despejar x."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: ejercicio descontextualizado de ecuación (corresponde a OA14), no un problema"
+   ]
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "Resuelve: 31 − x = 18. ¿Cuánto vale x?",
+   "options": [
+    "13",
+    "18",
+    "14",
+    "49"
+   ],
+   "correct": "13",
+   "hint": "Al restar 13 a 31 quedan 18, por eso x = 13.",
+   "clue": "Piensa qué número debes quitarle a 31 para que queden 18.",
+   "option_notes": {
+    "14": "Se equivoca al calcular 31 − 18.",
+    "18": "Copia el resultado sin hallar el número quitado.",
+    "49": "Suma 31 y 18 en vez de hallar la diferencia."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: ejercicio descontextualizado de ecuación (corresponde a OA14), no un problema"
+   ]
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "¿Cuál es el menor número natural que cumple n + 6 > 14?",
+   "options": [
+    "7",
+    "20",
+    "8",
+    "9"
+   ],
+   "correct": "9",
+   "hint": "n debe ser mayor que 8; por eso el menor número natural posible es 9.",
+   "clue": "Resta 6 a 14 y recuerda que el signo es «mayor que».",
+   "option_notes": {
+    "7": "Elige un número que deja 13, menor que 14.",
+    "8": "Acepta 14, aunque la condición exige superarlo.",
+    "20": "Encuentra un número que sirve, pero no el menor."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: ejercicio descontextualizado de inecuación, no un problema"
+   ]
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "Un dibujo muestra 12 estrellas: 5 están fuera de un recuadro y las demás están dentro. ¿Cuántas estrellas hay dentro?",
+   "options": [
+    "12",
+    "17",
+    "7",
+    "5"
+   ],
+   "correct": "7",
+   "hint": "Las estrellas dentro son las que quedan: 12 − 5 = 7.",
+   "clue": "Parte del total y quita las estrellas que están fuera.",
+   "option_notes": {
+    "5": "Confunde las estrellas de fuera con las de dentro.",
+    "12": "Usa el total sin quitar las 5 de fuera.",
+    "17": "Suma 12 y 5 en vez de encontrar la diferencia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "En una biblioteca había algunos libros. Se prestaron 1.200 y quedaron 3.800. ¿Cuántos libros había al inicio?",
+   "options": [
+    "3.800",
+    "4.000",
+    "2.600",
+    "5.000"
+   ],
+   "correct": "5.000",
+   "hint": "Al inicio había 3.800 + 1.200 = 5.000 libros.",
+   "clue": "Para recuperar el inicio, agrega los libros prestados a los que quedaron.",
+   "option_notes": {
+    "2.600": "Resta 1.200 a los libros que quedaron.",
+    "3.800": "Confunde la cantidad final con la inicial.",
+    "4.000": "Suma 1.200 como si fueran solo 200."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "En un sendero del Parque Conguillío, ya recorriste x km y faltan 3 km. Si el recorrido total debe ser menor que 10 km, ¿qué inecuación representa la situación?",
+   "options": [
+    "x − 3 < 10",
+    "x + 3 < 10",
+    "x + 3 > 10",
+    "x + 10 < 3"
+   ],
+   "correct": "x + 3 < 10",
+   "hint": "El total es x + 3 y «menor que 10» se escribe con <.",
+   "clue": "Junta lo recorrido y lo que falta; luego usa la palabra «menor».",
+   "option_notes": {
+    "x − 3 < 10": "Resta los 3 km que faltan en vez de sumarlos.",
+    "x + 3 > 10": "Invierte el signo de menor que.",
+    "x + 10 < 3": "Confunde el total con los datos de la ruta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Un montacargas soporta como máximo 500 kg. Ya lleva 380 kg. ¿Cuál es el mayor número entero de kilogramos que puede agregar sin superar el límite?",
+   "options": [
+    "119 kg",
+    "120 kg",
+    "880 kg",
+    "121 kg"
+   ],
+   "correct": "120 kg",
+   "hint": "500 − 380 = 120; agregar 120 kg deja exactamente 500 kg.",
+   "clue": "Compara el límite total con la carga que ya lleva.",
+   "option_notes": {
+    "119 kg": "No llega al límite aunque puede agregar 1 kg más.",
+    "121 kg": "Supera el límite por 1 kg.",
+    "880 kg": "Suma los datos sin restar lo que ya carga."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Martina tenía x pesos y recibió $2.500. Ahora tiene $7.000. ¿Cuál ecuación permite encontrar x?",
+   "options": [
+    "x − 2.500 = 7.000",
+    "2.500 − x = 7.000",
+    "x + 2.500 = 7.000",
+    "x + 7.000 = 2.500"
+   ],
+   "correct": "x + 2.500 = 7.000",
+   "hint": "El inicio más $2.500 da el total: x + 2.500 = 7.000.",
+   "clue": "El dinero inicial aumenta al recibir $2.500.",
+   "option_notes": {
+    "x − 2.500 = 7.000": "Usa una resta aunque Martina recibió dinero.",
+    "2.500 − x = 7.000": "Intercambia el dinero inicial y el recibido.",
+    "x + 7.000 = 2.500": "Toma el total como si fuera un sumando."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Una balanza equilibrada tiene, en un plato, una bolsa de x g y una pesa de 750 g; en el otro, una pesa de 2.000 g. Se quitan 250 g de cada plato. ¿Cuánto pesa la bolsa antes?",
+   "options": [
+    "1.500 g",
+    "1.250 g",
+    "2.250 g",
+    "1.000 g"
+   ],
+   "correct": "1.250 g",
+   "hint": "Quitar la misma masa no cambia la igualdad: x + 750 = 2.000, así que x = 1.250.",
+   "clue": "La igualdad se mantiene al retirar la misma cantidad de ambos platos.",
+   "option_notes": {
+    "1.000 g": "Resta 750 g y 250 g a 2.000 g.",
+    "1.500 g": "Resta 750 g y luego suma 250 g.",
+    "2.250 g": "Suma los 250 g retirados al peso de 2.000 g."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: enunciado ambiguo: «¿Cuánto pesa la bolsa antes?» no precisa antes de qué, y no se indica de qué se quitan 250 g en el plato de la bolsa"
+   ]
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Una caja tenía x lápices, donde x es un número par. Después de regalar 8, quedaron menos de 20. ¿Cuál es el mayor valor posible de x?",
+   "options": [
+    "36",
+    "28",
+    "26",
+    "24"
+   ],
+   "correct": "26",
+   "hint": "x − 8 < 20, así que x < 28; el mayor número par menor que 28 es 26.",
+   "clue": "Encuentra el límite para x y luego elige el mayor número par permitido.",
+   "option_notes": {
+    "24": "Es par y cumple, pero hay otro valor par mayor.",
+    "28": "Acepta exactamente 20, aunque deben quedar menos de 20.",
+    "36": "Suma 8 a 20 sin considerar la condición de menor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Javiera tiene x pesos. Después de gastar $3.000, le quedan más de $5.000. ¿Cuál es el menor monto entero que podía tener al comienzo?",
+   "options": [
+    "$8.001",
+    "$7.999",
+    "$8.000",
+    "$8.500"
+   ],
+   "correct": "$8.001",
+   "hint": "x − 3.000 > 5.000, por lo que x debe superar $8.000: $8.001 es el menor.",
+   "clue": "Como quedan más de $5.000, el total inicial debe superar $8.000.",
+   "option_notes": {
+    "$7.999": "Después de gastar, quedan menos de $5.000.",
+    "$8.000": "Después de gastar, quedan exactamente $5.000.",
+    "$8.500": "Cumple, pero no es el menor monto entero."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "En una caminata por el cerro San Cristóbal, la ruta debe medir entre 12 y 18 km, incluidos los extremos. Ya recorriste x km y faltan 4 km. ¿Qué valor no puede ser x?",
+   "options": [
+    "16 km",
+    "8 km",
+    "10 km",
+    "14 km"
+   ],
+   "correct": "16 km",
+   "hint": "Con x = 16, la ruta mediría 20 km, que supera el máximo de 18 km.",
+   "clue": "Para cada opción, suma los 4 km que faltan y compara con 12 y 18.",
+   "option_notes": {
+    "8 km": "Da un total de 12 km, que sí está permitido.",
+    "10 km": "Da un total de 14 km, que sí está permitido.",
+    "14 km": "Da un total de 18 km, incluido en el rango."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: inecuación compuesta (12 ≤ x + 4 ≤ 18), no de un paso"
+   ]
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,266 @@
+{
+ "oa": "OA1",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Qué tienen en común un cóndor, un cactus y tú?",
+   "options": [
+    "Solo los animales tienen células.",
+    "Están formados únicamente por órganos.",
+    "Están formados por una o más células.",
+    "Están formados por un solo tejido."
+   ],
+   "correct": "Están formados por una o más células.",
+   "hint": "La célula es la unidad básica de todos los seres vivos.",
+   "clue": "Piensa en la unidad más pequeña que forma a cualquier ser vivo.",
+   "option_notes": {
+    "Están formados por un solo tejido.": "Confunde la organización completa con un solo tejido.",
+    "Están formados únicamente por órganos.": "Omite que los órganos están formados por tejidos y células.",
+    "Solo los animales tienen células.": "Piensa que las plantas no poseen células."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Cuál secuencia muestra la organización del cuerpo desde la estructura más pequeña hasta la más grande?",
+   "options": [
+    "tejidos → sistemas → células → órganos",
+    "órganos → células → sistemas → tejidos",
+    "células → tejidos → órganos → sistemas",
+    "sistemas → órganos → tejidos → células"
+   ],
+   "correct": "células → tejidos → órganos → sistemas",
+   "hint": "Las células se agrupan en tejidos; los tejidos forman órganos y estos, sistemas.",
+   "clue": "Ordena desde lo más pequeño hasta el conjunto más grande.",
+   "option_notes": {
+    "órganos → células → sistemas → tejidos": "Mezcla los niveles y no los ordena de menor a mayor.",
+    "sistemas → órganos → tejidos → células": "Ordena los niveles desde el mayor al menor.",
+    "tejidos → sistemas → células → órganos": "Confunde el orden de tejidos, sistemas y células."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos seres vivos está formado por una sola célula?",
+   "options": [
+    "Un pino",
+    "Un perro",
+    "Una mariposa",
+    "Una bacteria"
+   ],
+   "correct": "Una bacteria",
+   "hint": "Una bacteria es un organismo unicelular: su cuerpo corresponde a una sola célula.",
+   "clue": "Busca el ser vivo más simple de la lista.",
+   "option_notes": {
+    "Un pino": "Confunde un organismo pluricelular con uno unicelular.",
+    "Una mariposa": "Confunde un animal pluricelular con uno unicelular.",
+    "Un perro": "Piensa que un animal grande puede tener una sola célula."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Qué es un tejido?",
+   "options": [
+    "Un grupo de células semejantes que cumple una función.",
+    "Un conjunto de órganos que trabaja coordinadamente.",
+    "Una estructura formada por varios sistemas.",
+    "Una célula que realiza todas las funciones del cuerpo."
+   ],
+   "correct": "Un grupo de células semejantes que cumple una función.",
+   "hint": "Un tejido es un conjunto de células semejantes que trabajan juntas en una función.",
+   "clue": "Fíjate en la estructura formada por células agrupadas.",
+   "option_notes": {
+    "Una estructura formada por varios sistemas.": "Confunde tejido con una estructura que reúne varios sistemas.",
+    "Un conjunto de órganos que trabaja coordinadamente.": "Confunde tejido con un conjunto de órganos.",
+    "Una célula que realiza todas las funciones del cuerpo.": "Confunde un tejido con una sola célula."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "Un corte de piel muestra muchas células semejantes, unidas y con función protectora. ¿Cómo se llama este nivel de organización?",
+   "options": [
+    "Órgano",
+    "Sistema",
+    "Organismo",
+    "Tejido"
+   ],
+   "correct": "Tejido",
+   "hint": "Un tejido es un grupo de células semejantes que trabaja en una función común.",
+   "clue": "Fíjate en si describe células agrupadas o una estructura mayor.",
+   "option_notes": {
+    "Órgano": "Confunde un grupo de células con un órgano.",
+    "Sistema": "Confunde el nivel tejido con un sistema de órganos.",
+    "Organismo": "Confunde una parte del cuerpo con el ser vivo completo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "El corazón posee varios tejidos y trabaja con vasos sanguíneos. ¿Cómo se clasifica el corazón?",
+   "options": [
+    "Como sistema formado por células.",
+    "Como tejido del sistema circulatorio.",
+    "Como célula que transporta la sangre.",
+    "Como órgano del sistema circulatorio."
+   ],
+   "correct": "Como órgano del sistema circulatorio.",
+   "hint": "Un órgano está formado por varios tejidos; el corazón trabaja en el sistema circulatorio.",
+   "clue": "Busca el nivel formado por varios tejidos y que trabaja con otros órganos.",
+   "option_notes": {
+    "Como tejido del sistema circulatorio.": "Confunde un órgano con uno de los tejidos que lo forman.",
+    "Como sistema formado por células.": "Confunde un órgano con un sistema completo.",
+    "Como célula que transporta la sangre.": "Confunde el corazón con una célula que transporta sangre."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "Cuando corres, tu sistema respiratorio y tu sistema circulatorio trabajan juntos. ¿Qué muestra esto sobre un sistema?",
+   "options": [
+    "Es un órgano que funciona sin otras estructuras.",
+    "Está formado por órganos que trabajan coordinadamente.",
+    "Es un tejido que protege todos los órganos.",
+    "Está formado por una sola célula especializada."
+   ],
+   "correct": "Está formado por órganos que trabajan coordinadamente.",
+   "hint": "Un sistema reúne órganos relacionados que colaboran para cumplir funciones del cuerpo.",
+   "clue": "Piensa qué estructuras se unen para formar un sistema.",
+   "option_notes": {
+    "Está formado por una sola célula especializada.": "Confunde un sistema con una sola célula.",
+    "Es un tejido que protege todos los órganos.": "Confunde sistema con tejido protector.",
+    "Es un órgano que funciona sin otras estructuras.": "Confunde un sistema con un único órgano."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: enunciado ambiguo: el ejemplo muestra dos sistemas coordinados, no que un sistema esté formado por órganos que trabajan coordinadamente"
+   ]
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "En una hoja de un boldo, muchas células forman tejidos; varios tejidos forman la hoja. ¿Qué nivel de organización representa la hoja?",
+   "options": [
+    "Un sistema de órganos.",
+    "Una célula vegetal.",
+    "Un órgano de la planta.",
+    "Un tejido vegetal."
+   ],
+   "correct": "Un órgano de la planta.",
+   "hint": "La hoja es un órgano porque está formada por varios tejidos y cumple funciones de la planta.",
+   "clue": "Si varias clases de tejidos se unen, piensa en el nivel que sigue.",
+   "option_notes": {
+    "Una célula vegetal.": "Confunde la hoja completa con una célula.",
+    "Un tejido vegetal.": "Confunde una hoja, formada por tejidos, con un solo tejido.",
+    "Un sistema de órganos.": "Confunde un órgano vegetal con un sistema de órganos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Si una enfermedad daña los tejidos que forman el corazón, ¿qué función podría alterarse primero?",
+   "options": [
+    "El bombeo de sangre por el cuerpo.",
+    "El movimiento de los huesos.",
+    "La entrada de aire a los pulmones.",
+    "La digestión de los alimentos."
+   ],
+   "correct": "El bombeo de sangre por el cuerpo.",
+   "hint": "El corazón es un órgano formado por tejidos y su función principal es bombear sangre.",
+   "clue": "Relaciona el órgano afectado con la tarea que normalmente realiza.",
+   "option_notes": {
+    "La entrada de aire a los pulmones.": "Confunde la función del corazón con la respiración.",
+    "La digestión de los alimentos.": "Confunde la función del corazón con la digestión.",
+    "El movimiento de los huesos.": "Relaciona el corazón con mover huesos, no con circular sangre."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Un ser vivo de una gota de agua tiene una sola célula. ¿Qué conclusión es correcta?",
+   "options": [
+    "No forma tejidos, órganos ni sistemas.",
+    "Es una parte de un animal.",
+    "Tiene muchos órganos microscópicos.",
+    "No es un ser vivo porque es pequeño."
+   ],
+   "correct": "No forma tejidos, órganos ni sistemas.",
+   "hint": "Si todo el organismo es una célula, no hay grupos de células para formar niveles mayores.",
+   "clue": "Recuerda que para formar un tejido se necesitan células agrupadas.",
+   "option_notes": {
+    "Tiene muchos órganos microscópicos.": "Imagina órganos muy pequeños dentro de una célula.",
+    "Es una parte de un animal.": "Confunde un organismo unicelular con una parte de un animal.",
+    "No es un ser vivo porque es pequeño.": "Piensa que lo microscópico no puede estar vivo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "En una ficha aparecen células, tejidos, corazón y sistema circulatorio. ¿Qué relación los ordena y conecta correctamente?",
+   "options": [
+    "El sistema forma órganos, tejidos y células.",
+    "Las células forman tejidos; estos forman órganos del sistema.",
+    "El corazón forma células que luego crean tejidos.",
+    "Los cuatro niveles existen, pero no se relacionan."
+   ],
+   "correct": "Las células forman tejidos; estos forman órganos del sistema.",
+   "hint": "La organización avanza desde células a tejidos, órganos y luego sistemas.",
+   "clue": "Busca la alternativa que siga la organización de menor a mayor.",
+   "option_notes": {
+    "El sistema forma órganos, tejidos y células.": "Invierte la organización y pone el sistema en el origen.",
+    "El corazón forma células que luego crean tejidos.": "Invierte la relación entre corazón, células y tejidos.",
+    "Los cuatro niveles existen, pero no se relacionan.": "Piensa que los niveles de organización no se conectan."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Un cactus tiene células organizadas en tejidos y órganos. Una bacteria tiene una sola célula. ¿Cuál comparación es correcta?",
+   "options": [
+    "El cactus es unicelular; la bacteria, pluricelular.",
+    "El cactus es pluricelular; la bacteria, unicelular.",
+    "Ambos son pluricelulares porque están vivos.",
+    "Ambos son unicelulares porque viven en la naturaleza."
+   ],
+   "correct": "El cactus es pluricelular; la bacteria, unicelular.",
+   "hint": "Pluricelular significa formado por muchas células; unicelular, por una sola.",
+   "clue": "Compara cuántas células forman a cada organismo.",
+   "option_notes": {
+    "Ambos son unicelulares porque viven en la naturaleza.": "Confunde vivir en la naturaleza con tener una sola célula.",
+    "Ambos son pluricelulares porque están vivos.": "Confunde estar vivo con ser pluricelular.",
+    "El cactus es unicelular; la bacteria, pluricelular.": "Invierte cuál organismo tiene una o muchas células."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

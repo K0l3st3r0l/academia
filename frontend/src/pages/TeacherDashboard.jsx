@@ -3,11 +3,13 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
   createRoom, getCourses, getRoomHistory, getSessionDetail,
-  getStudentsByCourse, resetStudentPin, resetStudentPinsBulk, getAuthConfig,
+  getStudentsByCourse, resetStudentPin, resetStudentPinsBulk, getAuthConfig, getQuestionSummary, getCurriculum,
 } from '../api/client';
 import { SUBJECTS, SUBJECT_LABELS } from '../utils/subjects';
 import { shortName } from '../utils/displayName';
 import CharacterNamesReview from '../components/CharacterNamesReview';
+import RoundSettings from '../components/RoundSettings';
+import { gradeLevelOf, saveRoundSetup } from '../utils/roundSetup';
 import { Tokens } from '../components/TokenCoin';
 
 function formatDateTime(iso) {
@@ -60,11 +62,34 @@ export default function TeacherDashboard() {
   const [pinStudents, setPinStudents] = useState([]);
   const [pinSync, setPinSync] = useState(null);
   const [emailAccounts, setEmailAccounts] = useState(false);
+  const [draftCount, setDraftCount] = useState(0);
+  const [curriculum, setCurriculum] = useState(null);
+  const [selectedOAs, setSelectedOAs] = useState([]);
+  const [level, setLevel] = useState('ajustado');
+  const [questionCount, setQuestionCount] = useState(10);
+
+  // The OA list follows the course's grade and the subject; OA of another subject would start an empty round.
+  useEffect(() => {
+    setSelectedOAs([]);
+    const gradeLevel = gradeLevelOf(selectedCourse);
+    if (!gradeLevel) {
+      setCurriculum(null);
+      return;
+    }
+    let cancelled = false;
+    getCurriculum(gradeLevel, selectedSubject)
+      .then(res => { if (!cancelled) setCurriculum(res.data); })
+      .catch(() => { if (!cancelled) setCurriculum(null); });
+    return () => { cancelled = true; };
+  }, [selectedCourse, selectedSubject]);
 
   useEffect(() => {
     getAuthConfig()
       .then(res => setEmailAccounts(res.data.studentEmailAccounts))
       .catch(() => setEmailAccounts(false));
+    getQuestionSummary()
+      .then(res => setDraftCount(res.data.filter(r => r.status === 'draft').reduce((sum, r) => sum + r.count, 0)))
+      .catch(() => {});
   }, []);
   const [loadingPinStudents, setLoadingPinStudents] = useState(false);
   const [pinError, setPinError] = useState('');
@@ -173,6 +198,7 @@ export default function TeacherDashboard() {
     try {
       const res = await createRoom(selectedCourse, selectedSubject);
       const { room } = res.data;
+      saveRoundSetup(room.code, { subject: selectedSubject, oaCodes: selectedOAs, level, questionCount });
       navigate(`/teacher/game/${room.code}`);
     } catch (err) {
       setError(err.response?.data?.error || 'Error al crear la sala');
@@ -205,6 +231,7 @@ export default function TeacherDashboard() {
         ))}
         <Link to="/teacher/questions" className={OPTION_CLASS}>
           Banco de preguntas
+          {draftCount > 0 && <span className="block text-xs font-normal text-gold">{draftCount} por revisar</span>}
         </Link>
       </nav>
 
@@ -231,25 +258,18 @@ export default function TeacherDashboard() {
                 </select>
               </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-gray-300 mb-2">Asignatura</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {SUBJECTS.map(s => (
-                    <button
-                      key={s.value}
-                      type="button"
-                      onClick={() => setSelectedSubject(s.value)}
-                      className={`py-2 px-3 rounded-xl text-sm font-semibold transition-colors ${
-                        selectedSubject === s.value
-                          ? 'bg-brand text-white'
-                          : 'bg-surface text-gray-400 hover:text-white border border-gray-700'
-                      }`}
-                    >
-                      {s.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
+              <RoundSettings
+                className="space-y-5"
+                subject={selectedSubject}
+                onSubjectChange={setSelectedSubject}
+                questionCount={questionCount}
+                onQuestionCountChange={setQuestionCount}
+                curriculum={curriculum}
+                selectedOAs={selectedOAs}
+                onSelectedOAsChange={setSelectedOAs}
+                level={level}
+                onLevelChange={setLevel}
+              />
 
               {error && (
                 <div className="bg-wrong/20 border border-wrong/40 text-wrong rounded-xl px-4 py-2 text-sm">

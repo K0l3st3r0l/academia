@@ -1,0 +1,264 @@
+{
+ "oa": "OA13",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "¿Qué palabra en inglés significa «hermana»?",
+   "options": [
+    "sister",
+    "father",
+    "mother",
+    "brother"
+   ],
+   "correct": "sister",
+   "hint": "Sister significa «hermana».",
+   "clue": "Piensa en los miembros de una familia y busca la palabra para una hija de tus padres.",
+   "option_notes": {
+    "brother": "Confunde hermana con hermano.",
+    "mother": "Confunde a la hermana con la mamá.",
+    "father": "Confunde a la hermana con el papá."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "Quieres llamar con respeto la atención de tu profesora. ¿Qué expresión usas?",
+   "options": [
+    "Good night",
+    "Thank you",
+    "I'm sorry",
+    "Excuse me"
+   ],
+   "correct": "Excuse me",
+   "hint": "Excuse me se usa para llamar la atención o pedir paso con respeto.",
+   "clue": "Busca una expresión para iniciar una petición respetuosa.",
+   "option_notes": {
+    "Thank you": "La usa para agradecer, no para llamar la atención.",
+    "Good night": "La usa como despedida nocturna.",
+    "I'm sorry": "La confunde con una disculpa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "¿Qué palabra completa la serie en inglés: ten, eleven, ___?",
+   "options": [
+    "two",
+    "thirteen",
+    "twelve",
+    "twenty"
+   ],
+   "correct": "twelve",
+   "hint": "Después de eleven viene twelve en la cuenta del 1 al 20.",
+   "clue": "Sigue la cuenta en orden, avanzando solo un número.",
+   "option_notes": {
+    "twenty": "Confunde twelve con un número parecido: twenty.",
+    "two": "Vuelve a un número pequeño en vez de seguir la serie.",
+    "thirteen": "Avanza dos números después de eleven."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "Si en Chile está cayendo mucha lluvia, ¿qué palabra describe el tiempo?",
+   "options": [
+    "windy",
+    "rainy",
+    "cloudy",
+    "sunny"
+   ],
+   "correct": "rainy",
+   "hint": "Rainy describe un día con lluvia.",
+   "clue": "Relaciona la palabra inglesa con el fenómeno que está ocurriendo.",
+   "option_notes": {
+    "cloudy": "Confunde lluvia con un cielo solamente nublado.",
+    "windy": "Confunde lluvia con viento.",
+    "sunny": "Elige la palabra opuesta a un día lluvioso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "Tienes 10 años. Completa el diálogo: —How old are you? —I am ___.",
+   "options": [
+    "from Chile",
+    "very hungry",
+    "in the classroom",
+    "ten years old"
+   ],
+   "correct": "ten years old",
+   "hint": "How old are you? pregunta la edad; la respuesta indica que tienes 10 años.",
+   "clue": "Busca una opción que diga tu edad, no tu origen, lugar o estado.",
+   "option_notes": {
+    "very hungry": "Responde cómo te sientes, no cuántos años tienes.",
+    "from Chile": "Responde tu origen, no tu edad.",
+    "in the classroom": "Responde un lugar, no tu edad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "En un almacén, una bebida cuesta $1.500 y quieres saber su precio. ¿Qué pregunta haces?",
+   "options": [
+    "What color is the drink?",
+    "How much is the drink?",
+    "How old is the drink?",
+    "Where is the drink?"
+   ],
+   "correct": "How much is the drink?",
+   "hint": "How much se usa para preguntar cuánto cuesta algo.",
+   "clue": "Elige la pregunta que busca un valor de dinero.",
+   "option_notes": {
+    "Where is the drink?": "Pregunta por el lugar, no por el precio.",
+    "What color is the drink?": "Pregunta por el color, no por el precio.",
+    "How old is the drink?": "Confunde el precio con la edad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "En una feria quieres comprar dos manzanas. ¿Qué dices de manera amable?",
+   "options": [
+    "Can I have two pencils, please?",
+    "Can I have two books, please?",
+    "Can I have two shoes, please?",
+    "Can I have two apples, please?"
+   ],
+   "correct": "Can I have two apples, please?",
+   "hint": "Can I have ... please? sirve para pedir algo de manera amable; apples significa manzanas.",
+   "clue": "Busca la petición amable que nombra la fruta que quieres comprar.",
+   "option_notes": {
+    "Can I have two books, please?": "Cambia la fruta por objetos para leer.",
+    "Can I have two pencils, please?": "Cambia la fruta por útiles escolares.",
+    "Can I have two shoes, please?": "Cambia la fruta por algo para los pies."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "Lee: «After breakfast, Diego brushes his teeth. Then he goes to school.» ¿Qué hace Diego antes de ir a la escuela?",
+   "options": [
+    "He brushes his teeth.",
+    "He plays football.",
+    "He cooks dinner.",
+    "He feeds the dog."
+   ],
+   "correct": "He brushes his teeth.",
+   "hint": "El texto dice que Diego se cepilla los dientes después del desayuno y antes de ir a la escuela.",
+   "clue": "Busca la acción ubicada entre el desayuno y el momento de ir a la escuela.",
+   "option_notes": {
+    "He cooks dinner.": "Confunde una rutina de la noche con la acción del texto.",
+    "He feeds the dog.": "Agrega una acción que el texto no menciona.",
+    "He plays football.": "Confunde una actividad posible con la acción indicada."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Lee: «I have a sore throat and a fever. I need help at school.» ¿Con quién debería hablar?",
+   "options": [
+    "the soccer coach",
+    "the bus driver",
+    "the nurse",
+    "the librarian"
+   ],
+   "correct": "the nurse",
+   "hint": "Fever y sore throat indican un problema de salud; la nurse atiende a la persona enferma.",
+   "clue": "Relaciona los síntomas con el adulto que puede ayudar en un problema de salud.",
+   "option_notes": {
+    "the librarian": "Relaciona la ayuda con los libros, no con la salud.",
+    "the bus driver": "Relaciona la ayuda con el transporte escolar.",
+    "the soccer coach": "Relaciona la ayuda con el deporte."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Lee: «At lunch, Sofía likes rice and chicken. She does not like fish.» El mesero prepara una sola opción. ¿Cuál debería evitar servirle?",
+   "options": [
+    "vegetable soup",
+    "fish soup",
+    "rice soup",
+    "chicken soup"
+   ],
+   "correct": "fish soup",
+   "hint": "Sofía no quiere fish; por eso el mesero debe evitar una sopa que contenga pescado.",
+   "clue": "Busca el plato que contiene el alimento que Sofía dice que no le gusta.",
+   "option_notes": {
+    "rice soup": "Confunde un alimento que le gusta con uno que rechaza.",
+    "chicken soup": "Confunde otro alimento que le gusta con el que rechaza.",
+    "vegetable soup": "Elige un ingrediente no mencionado como rechazado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Lee: «The library is in front of the gym. The cafeteria is behind the gym. You are in the cafeteria and walk to the library.» ¿Qué lugar ves primero?",
+   "options": [
+    "the gym",
+    "the playground",
+    "the library",
+    "the classroom"
+   ],
+   "correct": "the gym",
+   "hint": "Desde la cafetería, que está detrás del gimnasio, primero pasas por el gimnasio y luego llegas a la biblioteca.",
+   "clue": "Sigue la posición de cada lugar: uno está detrás y otro delante del gimnasio.",
+   "option_notes": {
+    "the library": "Elige el destino final en vez del primer lugar.",
+    "the classroom": "Inventa un lugar que no aparece en el texto.",
+    "the playground": "Inventa otro lugar que no aparece en el texto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Lee: «It is cold and windy in Torres del Paine. Martín is going for a walk. He puts on ___.» ¿Qué opción completa mejor la oración?",
+   "options": [
+    "a summer hat",
+    "shorts and sandals",
+    "a warm jacket",
+    "a light T-shirt"
+   ],
+   "correct": "a warm jacket",
+   "hint": "Cold y windy indican que Martín necesita una prenda abrigada: a warm jacket.",
+   "clue": "Relaciona el clima con la prenda que protege mejor del frío y el viento.",
+   "option_notes": {
+    "shorts and sandals": "Relaciona un clima frío con ropa de verano.",
+    "a light T-shirt": "Elige una prenda liviana que protege poco del frío.",
+    "a summer hat": "Confunde una prenda de verano con abrigo para el viento."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

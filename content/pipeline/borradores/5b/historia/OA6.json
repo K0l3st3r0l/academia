@@ -1,0 +1,264 @@
+{
+ "oa": "OA6",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Durante la Colonia, ¿qué relación tenía Chile con España, la metrópoli?",
+   "options": [
+    "Chile y España tenían gobiernos totalmente independientes.",
+    "España dependía de los pueblos originarios de Chile.",
+    "Chile dependía de España y debía seguir sus decisiones.",
+    "Chile gobernaba España desde sus autoridades locales."
+   ],
+   "correct": "Chile dependía de España y debía seguir sus decisiones.",
+   "hint": "España era la metrópoli y tomaba decisiones que las colonias debían acatar.",
+   "clue": "Piensa quién tenía la autoridad principal sobre las colonias americanas.",
+   "option_notes": {
+    "Chile gobernaba España desde sus autoridades locales.": "Invierte la relación de poder entre Chile y España.",
+    "España dependía de los pueblos originarios de Chile.": "Confunde a España con un territorio dependiente de América.",
+    "Chile y España tenían gobiernos totalmente independientes.": "Supone una independencia que no correspondía al sistema colonial."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "¿Cuál fue una función importante de la Iglesia católica durante la Colonia?",
+   "options": [
+    "Elegir al rey y gobernar en su lugar.",
+    "Organizar por sí sola los ejércitos de los pueblos originarios.",
+    "Administrar directamente todos los puertos de España.",
+    "Evangelizar y participar en la educación de la población."
+   ],
+   "correct": "Evangelizar y participar en la educación de la población.",
+   "hint": "La Iglesia difundió la fe católica y tuvo presencia en escuelas, misiones y tareas educativas.",
+   "clue": "Recuerda sus tareas religiosas y su presencia en la vida cotidiana.",
+   "option_notes": {
+    "Administrar directamente todos los puertos de España.": "Atribuye a la Iglesia una tarea propia de autoridades económicas.",
+    "Elegir al rey y gobernar en su lugar.": "Le asigna poder para elegir al rey, algo que no hacía.",
+    "Organizar por sí sola los ejércitos de los pueblos originarios.": "Confunde su labor religiosa con una función militar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "¿Qué significa que en la Colonia surgiera una sociedad mestiza?",
+   "options": [
+    "Que los pueblos originarios dejaron de participar en la sociedad.",
+    "Que solo vivían personas llegadas desde España.",
+    "Que todas las personas tenían el mismo origen y posición.",
+    "Que distintos grupos se relacionaron y mezclaron sus costumbres."
+   ],
+   "correct": "Que distintos grupos se relacionaron y mezclaron sus costumbres.",
+   "hint": "El mestizaje surgió del contacto entre grupos y de sus aportes en costumbres, familias y formas de vida.",
+   "clue": "Busca la alternativa que considera aportes de más de un grupo.",
+   "option_notes": {
+    "Que solo vivían personas llegadas desde España.": "Reduce la sociedad colonial a un solo origen europeo.",
+    "Que todas las personas tenían el mismo origen y posición.": "Confunde mestizaje con igualdad total de origen y posición.",
+    "Que los pueblos originarios dejaron de participar en la sociedad.": "Niega la participación de los pueblos originarios."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "¿Qué nombre se usó para las personas con orígenes indígena y europeo en la sociedad colonial?",
+   "options": [
+    "Mestizos, con origen indígena y europeo.",
+    "Peninsulares, nacidos en España.",
+    "Criollos, hijos de españoles nacidos en América.",
+    "Encomenderos, encargados de una encomienda."
+   ],
+   "correct": "Mestizos, con origen indígena y europeo.",
+   "hint": "Mestizo era el nombre usado para personas con origen indígena y europeo en la sociedad colonial.",
+   "clue": "Elige un término relacionado con la combinación de dos orígenes.",
+   "option_notes": {
+    "Peninsulares, nacidos en España.": "Confunde a los nacidos en España con un grupo mestizo.",
+    "Criollos, hijos de españoles nacidos en América.": "Confunde a los criollos con personas mestizas.",
+    "Encomenderos, encargados de una encomienda.": "Confunde una función colonial con un grupo de población."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "El gobernador de Chile recibe una orden del rey de España y debe cumplirla. ¿Qué aspecto de la Colonia se observa?",
+   "options": [
+    "Independencia política de Chile frente a la metrópoli.",
+    "Mezcla de costumbres entre grupos de la sociedad.",
+    "Control de la educación por parte de la Iglesia.",
+    "Dependencia política de la colonia respecto de la metrópoli."
+   ],
+   "correct": "Dependencia política de la colonia respecto de la metrópoli.",
+   "hint": "La autoridad local no decidía por completo: debía obedecer órdenes de la metrópoli española.",
+   "clue": "Fíjate en quién da la orden y quién debe cumplirla.",
+   "option_notes": {
+    "Independencia política de Chile frente a la metrópoli.": "Confunde dependencia con independencia política.",
+    "Control de la educación por parte de la Iglesia.": "Confunde una autoridad religiosa con una relación de gobierno.",
+    "Mezcla de costumbres entre grupos de la sociedad.": "Confunde la mezcla cultural con la obediencia al rey."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "En una misión del sur de Chile, religiosos enseñan la fe católica y ayudan a crear una escuela. ¿Qué rol de la Iglesia se ve?",
+   "options": [
+    "Militar y comercial.",
+    "Naval y agrícola.",
+    "Religioso y educativo.",
+    "Judicial y minero."
+   ],
+   "correct": "Religioso y educativo.",
+   "hint": "La Iglesia difundía la fe católica y también participaba en la enseñanza y las misiones.",
+   "clue": "Relaciona enseñar la fe y abrir una escuela con una misma institución.",
+   "option_notes": {
+    "Militar y comercial.": "Confunde las tareas de la Iglesia con actividades de poder y comercio.",
+    "Judicial y minero.": "Relaciona la escena con tribunales y minería, que no aparecen.",
+    "Naval y agrícola.": "Atribuye a la Iglesia funciones navales y agrícolas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "En una familia de la Colonia se unen costumbres indígenas y españolas, como alimentos, palabras y celebraciones. ¿Qué proceso explica mejor esa situación?",
+   "options": [
+    "La división natural de Chile.",
+    "El mestizaje cultural.",
+    "La dependencia de la metrópoli.",
+    "La expansión de la navegación."
+   ],
+   "correct": "El mestizaje cultural.",
+   "hint": "El mestizaje también incluyó intercambios de costumbres, palabras, alimentos y celebraciones.",
+   "clue": "Observa que aparecen costumbres de dos grupos en una misma familia.",
+   "option_notes": {
+    "La dependencia de la metrópoli.": "Confunde una relación política con una mezcla cultural.",
+    "La división natural de Chile.": "Usa una idea geográfica que no explica las costumbres.",
+    "La expansión de la navegación.": "Relaciona el caso con viajes, no con intercambios culturales."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Un comerciante de Santiago solo puede vender ciertos productos por rutas y puertos autorizados por España. ¿Qué muestra principalmente esta situación?",
+   "options": [
+    "Dependencia económica de Chile respecto de España.",
+    "Independencia económica de Chile respecto de España.",
+    "Participación de la Iglesia en la educación.",
+    "Formación de una sociedad mestiza."
+   ],
+   "correct": "Dependencia económica de Chile respecto de España.",
+   "hint": "Las reglas impuestas por España muestran que la colonia no controlaba libremente su economía.",
+   "clue": "Mira quién fija las rutas y condiciones para vender.",
+   "option_notes": {
+    "Independencia económica de Chile respecto de España.": "Confunde el control español con una economía independiente.",
+    "Participación de la Iglesia en la educación.": "Atribuye a la Iglesia reglas comerciales que no eran su función principal.",
+    "Formación de una sociedad mestiza.": "Supone que unas costumbres reemplazaron por completo a otras."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Lee: «Desde Santiago, una autoridad espera permiso del rey para cambiar una regla y envía recursos a España». ¿Qué relación colonial se infiere?",
+   "options": [
+    "La sociedad mestiza eliminaba toda diferencia entre grupos.",
+    "Chile dependía política y económicamente de España.",
+    "La Iglesia controlaba las decisiones y los recursos del rey.",
+    "Chile era independiente y ayudaba a España voluntariamente."
+   ],
+   "correct": "Chile dependía política y económicamente de España.",
+   "hint": "Esperar permiso y enviar recursos muestran dependencia política y económica de la metrópoli.",
+   "clue": "Considera quién autoriza y hacia dónde se envían los recursos.",
+   "option_notes": {
+    "Chile era independiente y ayudaba a España voluntariamente.": "Invierte la dependencia y pone a Chile sobre España.",
+    "La Iglesia controlaba las decisiones y los recursos del rey.": "Confunde la autoridad del rey con la de la Iglesia.",
+    "La sociedad mestiza eliminaba toda diferencia entre grupos.": "Confunde mezcla social con igualdad completa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "En una misión del sur de Chile, religiosos aprenden una lengua local, enseñan la doctrina católica y organizan una escuela. ¿Qué conclusión integra mejor esas acciones?",
+   "options": [
+    "Las lenguas y costumbres locales no tenían relación con la misión.",
+    "La Iglesia reemplazaba al rey y gobernaba todos los territorios.",
+    "La Iglesia evangelizaba, educaba y apoyaba a comunidades locales.",
+    "La misión buscaba solo vender productos a otros continentes."
+   ],
+   "correct": "La Iglesia evangelizaba, educaba y apoyaba a comunidades locales.",
+   "hint": "Las misiones muestran que la Iglesia evangelizaba y participaba en la educación y la vida local.",
+   "clue": "Relaciona la lengua, la enseñanza y la doctrina con las tareas de una institución.",
+   "option_notes": {
+    "La Iglesia reemplazaba al rey y gobernaba todos los territorios.": "Atribuye a la Iglesia el gobierno completo de la colonia.",
+    "La misión buscaba solo vender productos a otros continentes.": "Confunde una misión religiosa con una actividad comercial.",
+    "Las lenguas y costumbres locales no tenían relación con la misión.": "Niega el vínculo de la misión con la población local."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "En Santiago colonial, una familia combina una receta indígena, palabras españolas y una celebración de origen africano. ¿Qué inferencia es más adecuada?",
+   "options": [
+    "El mestizaje produjo intercambios culturales entre distintos grupos.",
+    "Cada grupo mantuvo una cultura completamente aislada.",
+    "La Iglesia fue la única fuente de todas las costumbres.",
+    "España dejó de influir en la vida de sus colonias."
+   ],
+   "correct": "El mestizaje produjo intercambios culturales entre distintos grupos.",
+   "hint": "La mezcla de aportes indígenas, europeos y africanos revela una sociedad culturalmente mestiza.",
+   "clue": "Busca una explicación que reúna los tres aportes culturales.",
+   "option_notes": {
+    "Cada grupo mantuvo una cultura completamente aislada.": "Confunde la mezcla cultural con el aislamiento de cada grupo.",
+    "España dejó de influir en la vida de sus colonias.": "Supone que España dejó de influir durante la Colonia.",
+    "La Iglesia fue la única fuente de todas las costumbres.": "Atribuye todos los aportes culturales solo a la Iglesia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Lee este caso colonial: una autoridad de Santiago aplica órdenes del rey, un sacerdote dirige una escuela y una familia mezcla costumbres indígenas y españolas. ¿Qué opción explica el caso completo?",
+   "options": [
+    "Control indígena de España, comercio libre y homogeneidad.",
+    "Dependencia de España, rol de la Iglesia y mestizaje.",
+    "Rechazo de la religión, igualdad total y ausencia de autoridades.",
+    "Independencia de Chile, poder militar y separación cultural."
+   ],
+   "correct": "Dependencia de España, rol de la Iglesia y mestizaje.",
+   "hint": "El caso reúne los tres componentes: autoridad española, acción de la Iglesia y mezcla social y cultural.",
+   "clue": "Identifica en el caso una idea política, una religiosa y una social.",
+   "option_notes": {
+    "Independencia de Chile, poder militar y separación cultural.": "Reemplaza la dependencia por independencia y niega el mestizaje.",
+    "Control indígena de España, comercio libre y homogeneidad.": "Mezcla ideas no apoyadas por el caso y elimina la diversidad.",
+    "Rechazo de la religión, igualdad total y ausencia de autoridades.": "Niega la religión, la autoridad y la mezcla cultural presentes."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

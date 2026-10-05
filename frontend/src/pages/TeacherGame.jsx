@@ -7,6 +7,7 @@ import RoundSettings from '../components/RoundSettings';
 import RoundReport from '../components/RoundReport';
 import StudentAvatar from '../components/character/StudentAvatar';
 import { subjectLabel } from '../utils/subjects';
+import { loadRoundSetup, saveRoundSetup } from '../utils/roundSetup';
 import { Tokens } from '../components/TokenCoin';
 
 const OPTION_COLORS = ['bg-blue-600', 'bg-orange-500', 'bg-green-600', 'bg-red-600'];
@@ -30,12 +31,15 @@ export default function TeacherGame() {
   const [confirmClose, setConfirmClose] = useState(false);
   const [closingRoom, setClosingRoom] = useState(false);
   const [projectorKey, setProjectorKey] = useState('');
-  const [roundSubject, setRoundSubject] = useState('');
-  const [questionCount, setQuestionCount] = useState(10);
+  // What was chosen when creating the room (or before a reload) starts the lobby pre-filled.
+  const setup = useRef(loadRoundSetup(code));
+  const pendingOAs = useRef(setup.current?.oaCodes ?? null);
+  const [roundSubject, setRoundSubject] = useState(setup.current?.subject ?? '');
+  const [questionCount, setQuestionCount] = useState(setup.current?.questionCount ?? 10);
   const [gradeLevel, setGradeLevel] = useState(null);
   const [curriculum, setCurriculum] = useState(null);
   const [selectedOAs, setSelectedOAs] = useState([]);
-  const [level, setLevel] = useState('ajustado');
+  const [level, setLevel] = useState(setup.current?.level ?? 'ajustado');
   const [report, setReport] = useState(null);
   const timerRef = useRef(null);
 
@@ -152,10 +156,24 @@ export default function TeacherGame() {
     }
     let cancelled = false;
     getCurriculum(gradeLevel, roundSubject)
-      .then(res => { if (!cancelled) setCurriculum(res.data); })
+      .then(res => {
+        if (cancelled) return;
+        setCurriculum(res.data);
+        // Set together with the curriculum, so the picker opens with the chosen ejes.
+        if (pendingOAs.current && setup.current?.subject === roundSubject) {
+          const playable = new Set(res.data.oas.filter(o => o.active_questions > 0).map(o => o.code));
+          setSelectedOAs(pendingOAs.current.filter(c => playable.has(c)));
+        }
+        pendingOAs.current = null;
+      })
       .catch(() => { if (!cancelled) setCurriculum(null); });
     return () => { cancelled = true; };
   }, [gradeLevel, roundSubject]);
+
+  useEffect(() => {
+    if (pendingOAs.current || !roundSubject) return;
+    saveRoundSetup(code, { subject: roundSubject, oaCodes: selectedOAs, level, questionCount });
+  }, [code, roundSubject, selectedOAs, level, questionCount]);
 
   const startGame = () => socketRef.current?.emit('game:start', {
     roomCode: code, subject: roundSubject, questionCount, oaCodes: selectedOAs, level,

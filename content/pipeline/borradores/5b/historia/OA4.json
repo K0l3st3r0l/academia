@@ -1,0 +1,266 @@
+{
+ "oa": "OA4",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "¿Cuál fue un efecto común de la conquista europea sobre muchos pueblos indígenas americanos?",
+   "options": [
+    "Sus comunidades quedaron aisladas de otros pueblos.",
+    "Su población disminuyó por guerras y enfermedades.",
+    "Sus autoridades ganaron control sobre más territorios.",
+    "Su población aumentó por la llegada de nuevos habitantes."
+   ],
+   "correct": "Su población disminuyó por guerras y enfermedades.",
+   "hint": "Las guerras y enfermedades nuevas provocaron muchas muertes y redujeron la población indígena.",
+   "clue": "Piensa en dos consecuencias que pueden producir una invasión y el contacto entre poblaciones.",
+   "option_notes": {
+    "Su población aumentó por la llegada de nuevos habitantes.": "Confunde la llegada de europeos con un aumento de la población indígena.",
+    "Sus autoridades ganaron control sobre más territorios.": "Confunde la conquista con una expansión del poder indígena.",
+    "Sus comunidades quedaron aisladas de otros pueblos.": "Supone aislamiento, aunque la conquista aumentó los contactos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "¿Qué efecto tuvo la conquista en la autonomía de muchos pueblos indígenas?",
+   "options": [
+    "Mantuvieron intactas sus fronteras y formas de gobierno.",
+    "Perdieron parte del control de sus territorios y decisiones.",
+    "Pudieron elegir siempre a las autoridades coloniales.",
+    "Ganaron más autonomía al relacionarse con Europa."
+   ],
+   "correct": "Perdieron parte del control de sus territorios y decisiones.",
+   "hint": "La conquista impuso autoridades coloniales y redujo el control indígena sobre tierras y decisiones.",
+   "clue": "Autonomía significa poder decidir sobre el propio territorio y gobierno.",
+   "option_notes": {
+    "Ganaron más autonomía al relacionarse con Europa.": "Confunde el contacto con Europa con un aumento del poder indígena.",
+    "Pudieron elegir siempre a las autoridades coloniales.": "Supone que los pueblos conservaron todo el poder político.",
+    "Mantuvieron intactas sus fronteras y formas de gobierno.": "Ignora los cambios impuestos por el dominio colonial."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "En varios lugares de América, ¿qué ocurrió con el trabajo de muchos indígenas?",
+   "options": [
+    "Recibieron tierras y dejaron de pagar obligaciones.",
+    "Solo trabajaron cuando quisieron y conservaron sus recursos.",
+    "Fueron obligados a trabajar o entregar tributos a los encomenderos.",
+    "Dejaron de cultivar y se dedicaron solamente al comercio."
+   ],
+   "correct": "Fueron obligados a trabajar o entregar tributos a los encomenderos.",
+   "hint": "Los conquistadores organizaron sistemas que exigían trabajo o tributos a comunidades indígenas.",
+   "clue": "Observa si las comunidades podían decidir libremente cuánto trabajar y qué entregar.",
+   "option_notes": {
+    "Recibieron tierras y dejaron de pagar obligaciones.": "Confunde las obligaciones coloniales con beneficios para las comunidades.",
+    "Solo trabajaron cuando quisieron y conservaron sus recursos.": "Supone que las comunidades conservaron libertad y recursos.",
+    "Dejaron de cultivar y se dedicaron solamente al comercio.": "Confunde los cambios impuestos con un abandono total de la agricultura."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "¿Cuál es un efecto cultural de la conquista sobre los pueblos indígenas?",
+   "options": [
+    "Las tradiciones indígenas no cambiaron ni se mezclaron.",
+    "Se difundieron el español y el cristianismo en muchos lugares.",
+    "Todas las lenguas indígenas desaparecieron de inmediato.",
+    "Las costumbres europeas no influyeron en la vida indígena."
+   ],
+   "correct": "Se difundieron el español y el cristianismo en muchos lugares.",
+   "hint": "La conquista favoreció la difusión del español y del cristianismo, aunque varias tradiciones indígenas continuaron.",
+   "clue": "Un cambio cultural puede afectar la lengua, las creencias y las costumbres.",
+   "option_notes": {
+    "Las tradiciones indígenas no cambiaron ni se mezclaron.": "Ignora los cambios y mezclas culturales provocados por la conquista.",
+    "Todas las lenguas indígenas desaparecieron de inmediato.": "Generaliza: muchas lenguas continuaron y algunas siguen hablándose.",
+    "Las costumbres europeas no influyeron en la vida indígena.": "Niega el cambio cultural mostrado por la conquista."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Lee la fuente: «Después de la llegada de los conquistadores, muchas familias enfermaron y murieron personas; quedaron campos sin cultivar». ¿Qué efecto se puede inferir?",
+   "options": [
+    "Bajó la población y se hizo más difícil producir alimentos.",
+    "Aumentó la población y sobraron alimentos.",
+    "Mejoró la salud y aumentaron las cosechas.",
+    "Las familias mantuvieron su producción sin cambios."
+   ],
+   "correct": "Bajó la población y se hizo más difícil producir alimentos.",
+   "hint": "Las enfermedades causaron muertes y la falta de personas para cultivar redujo la producción.",
+   "clue": "Relaciona las familias enfermas con los campos que no pudieron trabajarse.",
+   "option_notes": {
+    "Aumentó la población y sobraron alimentos.": "Invierte las consecuencias de las enfermedades y de los campos sin cultivar.",
+    "Mejoró la salud y aumentaron las cosechas.": "Interpreta la enfermedad y la falta de cultivo al revés.",
+    "Las familias mantuvieron su producción sin cambios.": "Ignora que la enfermedad dejó campos sin cultivar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Un registro colonial dice: «Cada comunidad debe entregar maíz y enviar personas a trabajar para el encomendero». ¿Qué efecto muestra?",
+   "options": [
+    "Las comunidades controlaron el comercio de los conquistadores.",
+    "Las comunidades recibieron alimentos y redujeron sus labores.",
+    "Las comunidades conservaron todos sus productos y eligieron sus labores.",
+    "Las comunidades perdieron parte de su producción y tiempo de trabajo."
+   ],
+   "correct": "Las comunidades perdieron parte de su producción y tiempo de trabajo.",
+   "hint": "La exigencia de productos y trabajo redujo recursos y tiempo disponibles para las comunidades.",
+   "clue": "Fíjate en lo que la comunidad entrega y en quién decide el trabajo.",
+   "option_notes": {
+    "Las comunidades controlaron el comercio de los conquistadores.": "Confunde entregar recursos con controlar el comercio.",
+    "Las comunidades recibieron alimentos y redujeron sus labores.": "Invierte la relación: la comunidad entrega productos y trabajo.",
+    "Las comunidades conservaron todos sus productos y eligieron sus labores.": "Confunde una obligación colonial con la conservación de recursos y libertad."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Antes de la conquista, un pueblo elegía a sus autoridades. Después, un funcionario español aprobaba sus decisiones. ¿Qué cambio se observa?",
+   "options": [
+    "El pueblo perdió toda autoridad comunitaria.",
+    "El pueblo ganó poder sobre otras comunidades.",
+    "El pueblo mantuvo igual su forma de gobierno.",
+    "El pueblo pasó a obedecer autoridades coloniales."
+   ],
+   "correct": "El pueblo pasó a obedecer autoridades coloniales.",
+   "hint": "La aprobación de un funcionario español muestra que las autoridades indígenas perdieron poder político.",
+   "clue": "Compara quién decidía antes con quién debía aprobar después.",
+   "option_notes": {
+    "El pueblo ganó poder sobre otras comunidades.": "Invierte quién tenía el poder después de la conquista.",
+    "El pueblo perdió toda autoridad comunitaria.": "Exagera: perder autonomía no significa perder toda autoridad local.",
+    "El pueblo mantuvo igual su forma de gobierno.": "Ignora que un funcionario colonial pasó a controlar decisiones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "En una fuente aparecen maíz y papa de América, y trigo, caballos y ovejas llegados de Europa. ¿Qué efecto representa?",
+   "options": [
+    "Se intercambiaron productos y animales entre América y Europa.",
+    "Solo América recibió productos y animales de Europa.",
+    "Solo Europa entregó productos y animales a América.",
+    "Los productos americanos no salieron de sus regiones."
+   ],
+   "correct": "Se intercambiaron productos y animales entre América y Europa.",
+   "hint": "La lista muestra aportes en ambas direcciones: cada continente incorporó productos o animales nuevos.",
+   "clue": "Busca si la fuente muestra movimientos en una sola dirección o en ambas.",
+   "option_notes": {
+    "Solo Europa entregó productos y animales a América.": "Olvida que maíz y papa salieron de América hacia otros lugares.",
+    "Los productos americanos no salieron de sus regiones.": "Contradice que maíz y papa llegaron a otros continentes.",
+    "Solo América recibió productos y animales de Europa.": "Considera solo la llegada desde Europa y omite el intercambio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Fuente A: «Las enfermedades y guerras hicieron morir a muchas personas». Fuente B: «Ahora debemos entregar trabajo y productos a un encomendero». ¿Qué conclusión reúne ambos efectos?",
+   "options": [
+    "La conquista redujo la población y autonomía indígenas.",
+    "La conquista solo cambió comidas y celebraciones.",
+    "La conquista benefició por igual a todas las comunidades.",
+    "La conquista aumentó la población y autonomía indígenas."
+   ],
+   "correct": "La conquista redujo la población y autonomía indígenas.",
+   "hint": "Una fuente muestra pérdida de personas; la otra, pérdida de autonomía mediante trabajo y productos.",
+   "clue": "Busca una conclusión que incluya la consecuencia de ambas fuentes.",
+   "option_notes": {
+    "La conquista aumentó la población y autonomía indígenas.": "Invierte las pérdidas de población y poder mostradas por las fuentes.",
+    "La conquista solo cambió comidas y celebraciones.": "Reduce dos efectos sociales y económicos a cambios de alimentos.",
+    "La conquista benefició por igual a todas las comunidades.": "Generaliza un beneficio que las fuentes no muestran."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Una fuente colonial registra ceremonias cristianas; otra cuenta que la comunidad mantiene una fiesta ancestral. ¿Qué inferencia es más adecuada?",
+   "options": [
+    "Las fiestas indígenas reemplazaron todas las ceremonias cristianas.",
+    "La conquista no produjo cambios religiosos en la comunidad.",
+    "La comunidad abandonó toda tradición indígena.",
+    "Hubo cambios religiosos, pero persistieron prácticas indígenas."
+   ],
+   "correct": "Hubo cambios religiosos, pero persistieron prácticas indígenas.",
+   "hint": "Las dos fuentes muestran cambios y continuidad: aparecieron nuevas creencias, pero no desapareció todo lo anterior.",
+   "clue": "Considera la información de ambas fuentes, no solo de una.",
+   "option_notes": {
+    "La comunidad abandonó toda tradición indígena.": "Ignora la fiesta ancestral que la comunidad mantiene.",
+    "La conquista no produjo cambios religiosos en la comunidad.": "Ignora las ceremonias cristianas registradas.",
+    "Las fiestas indígenas reemplazaron todas las ceremonias cristianas.": "Invierte la fuente y exagera la continuidad indígena."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Una fuente ubica ciudades y cultivos españoles en la zona central de Chile; otra menciona comunidades indígenas desplazadas. ¿Qué relación se puede inferir?",
+   "options": [
+    "La zona central quedó sin habitantes después de la conquista.",
+    "El desplazamiento ocurrió porque el trigo era un alimento indígena.",
+    "Cambió el uso de tierras y desplazó a algunos pueblos indígenas.",
+    "Las ciudades españolas hicieron cambiar la zona natural central."
+   ],
+   "correct": "Cambió el uso de tierras y desplazó a algunos pueblos indígenas.",
+   "hint": "La instalación colonial ocupó espacios y modificó su uso, por lo que algunos pueblos debieron desplazarse.",
+   "clue": "Relaciona la ocupación de tierras con el desplazamiento mencionado en la segunda fuente.",
+   "option_notes": {
+    "Las ciudades españolas hicieron cambiar la zona natural central.": "Confunde cambios humanos en el territorio con cambios de zona natural.",
+    "El desplazamiento ocurrió porque el trigo era un alimento indígena.": "Confunde el origen europeo del trigo con la causa del desplazamiento.",
+    "La zona central quedó sin habitantes después de la conquista.": "Exagera: hubo desplazamientos, pero la zona no quedó vacía."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Una fuente describe una comunidad que habla su lengua en casa, usa español en el mercado, cultiva papa y trigo, y celebra una fiesta cristiana con música indígena. ¿Qué conclusión es mejor?",
+   "options": [
+    "La conquista solo cambió la forma de vender productos.",
+    "Abandonó lo indígena y adoptó solo costumbres europeas.",
+    "Hubo cambios y mezclas, pero continuaron prácticas indígenas.",
+    "La comunidad mantuvo exactamente su vida anterior."
+   ],
+   "correct": "Hubo cambios y mezclas, pero continuaron prácticas indígenas.",
+   "hint": "La fuente combina lengua, alimentos y celebración: hay elementos nuevos y otros que continúan o se mezclan.",
+   "clue": "Señala qué elementos cambiaron y cuáles permanecieron.",
+   "option_notes": {
+    "La comunidad mantuvo exactamente su vida anterior.": "Ignora el español, el trigo y la fiesta cristiana mencionados.",
+    "Abandonó lo indígena y adoptó solo costumbres europeas.": "Ignora la lengua, la papa y la música indígena que permanecen.",
+    "La conquista solo cambió la forma de vender productos.": "Reduce varios cambios culturales y alimentarios a un solo aspecto."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

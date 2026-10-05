@@ -1,0 +1,264 @@
+{
+ "oa": "OA12",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "En la oración «Al abrir la ventana, entró una brisa suave», ¿qué significa «brisa»?",
+   "options": [
+    "una lluvia ligera",
+    "un sonido lejano",
+    "un viento suave",
+    "un viento muy fuerte"
+   ],
+   "correct": "un viento suave",
+   "hint": "La palabra «suave» indica que el aire se mueve con poca intensidad.",
+   "clue": "Fíjate en la palabra que describe la intensidad del fenómeno.",
+   "option_notes": {
+    "una lluvia ligera": "Confunde un movimiento de aire con una caída de agua.",
+    "un viento muy fuerte": "Ignora la pista «suave» y elige la intensidad opuesta.",
+    "un sonido lejano": "Interpreta «brisa» como un ruido y no como aire."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Si «ordenado» significa que tiene orden, ¿qué significa «desordenado»?",
+   "options": [
+    "que vuelve a ordenar algo",
+    "que no tiene orden",
+    "que tiene mucho orden",
+    "que ordena a otras personas"
+   ],
+   "correct": "que no tiene orden",
+   "hint": "El prefijo «des-» expresa ausencia o inversión del significado original.",
+   "clue": "Compara el significado de la palabra base con el que añade «des-».",
+   "option_notes": {
+    "que tiene mucho orden": "Mantiene el significado de la palabra base e ignora «des-».",
+    "que ordena a otras personas": "Confunde el prefijo con una acción realizada por alguien.",
+    "que vuelve a ordenar algo": "Interpreta «des-» como repetición, no como negación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "No entiendes «andén» al leer cómo tomarás el tren. ¿Qué podrías hacer para aclarar la palabra?",
+   "options": [
+    "preguntar a un adulto que conozca el tema",
+    "escoger el significado que parezca más divertido",
+    "leerla varias veces sin buscar ayuda",
+    "cambiarla por otra que suene parecida"
+   ],
+   "correct": "preguntar a un adulto que conozca el tema",
+   "hint": "Alguien que conozca los trenes puede explicar la palabra en ese contexto.",
+   "clue": "Elige una acción que consiga una explicación, no una suposición.",
+   "option_notes": {
+    "escoger el significado que parezca más divertido": "Elige por gusto y no por información relacionada con el contexto.",
+    "leerla varias veces sin buscar ayuda": "Repite la lectura, pero no busca una explicación nueva.",
+    "cambiarla por otra que suene parecida": "Se guía por el sonido y puede cambiar completamente el sentido."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Abres un diccionario en la entrada «sendero». ¿Qué parte leerás para conocer su significado?",
+   "options": [
+    "la fecha en que se imprimió",
+    "el número total de páginas",
+    "la definición junto a «sendero»",
+    "el nombre de la editorial"
+   ],
+   "correct": "la definición junto a «sendero»",
+   "hint": "La definición explica qué quiere decir la palabra.",
+   "clue": "Busca la parte que entrega el significado, no los datos del libro.",
+   "option_notes": {
+    "el número total de páginas": "Confunde la entrada con un dato general del libro.",
+    "el nombre de la editorial": "Mira quién publicó el diccionario, no qué significa la palabra.",
+    "la fecha en que se imprimió": "Se fija en cuándo se hizo el libro, no en la definición."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "En la feria de Talca, Martina compró una planta de albahaca para su huerto. ¿Qué significa «planta» aquí?",
+   "options": [
+    "la parte inferior de un pie",
+    "una fábrica donde se hacen productos",
+    "un nivel de un edificio",
+    "un vegetal que puede crecer"
+   ],
+   "correct": "un vegetal que puede crecer",
+   "hint": "«Albahaca» y «huerto» indican que se habla de un ser vivo.",
+   "clue": "Relaciona «planta» con «albahaca» y «huerto».",
+   "option_notes": {
+    "una fábrica donde se hacen productos": "Elige otra acepción de «planta» que se relaciona con industrias.",
+    "la parte inferior de un pie": "Confunde la planta vegetal con una parte del cuerpo.",
+    "un nivel de un edificio": "Confunde la palabra con un piso o nivel de una construcción."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "En un cuento aparece «desaparecieron». Para buscar esta palabra en el diccionario, ¿qué forma debes intentar primero?",
+   "options": [
+    "desaparecidos",
+    "desaparecieron",
+    "desaparecer",
+    "aparecimiento"
+   ],
+   "correct": "desaparecer",
+   "hint": "Los verbos suelen registrarse en infinitivo, como «correr» o «leer».",
+   "clue": "Busca la forma que nombra la acción sin indicar tiempo ni persona.",
+   "option_notes": {
+    "desaparecieron": "Repite la forma conjugada que aparece en el cuento.",
+    "aparecimiento": "Cambia el verbo por un sustantivo de significado distinto.",
+    "desaparecidos": "Busca un adjetivo o participio en vez del infinitivo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "En un cartel lees: «Usa botellas reutilizables». La base «útil» se relaciona con servir y «re-» indica repetición. ¿Qué significa «reutilizable»?",
+   "options": [
+    "que debe reciclarse de inmediato",
+    "que solo puede usarse una vez",
+    "que no sirve para ningún uso",
+    "que puede usarse otra vez"
+   ],
+   "correct": "que puede usarse otra vez",
+   "hint": "«Re-» aporta repetición y «-able» indica que algo es posible.",
+   "clue": "Separa la palabra en sus partes y piensa qué aporta cada una.",
+   "option_notes": {
+    "que no sirve para ningún uso": "Confunde el prefijo con una idea de negación total.",
+    "que solo puede usarse una vez": "Interpreta la palabra como si indicara desecho.",
+    "que debe reciclarse de inmediato": "Confunde reutilizar con reciclar y agrega una obligación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Buscas en internet qué significa «chagual». ¿Qué resultado conviene leer primero?",
+   "options": [
+    "una publicidad que usa el término como marca",
+    "una página de una biblioteca que explica el término",
+    "un comentario sin autor que repite la palabra",
+    "un juego donde aparece el término sin explicarlo"
+   ],
+   "correct": "una página de una biblioteca que explica el término",
+   "hint": "Una fuente identificable y dedicada a informar suele explicar mejor el término.",
+   "clue": "Revisa quién publica el contenido y si realmente explica la palabra.",
+   "option_notes": {
+    "un comentario sin autor que repite la palabra": "Confía en una opinión sin responsable ni explicación.",
+    "una publicidad que usa el término como marca": "Confunde usar una palabra con explicar su significado.",
+    "un juego donde aparece el término sin explicarlo": "Supone que ver la palabra basta para comprenderla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Lee: «Al escuchar un ruido, el zorro se escabulló entre los matorrales. Cuando Nico llegó, solo encontró huellas». ¿Qué acción realizó el zorro?",
+   "options": [
+    "se cayó y dejó de moverse",
+    "se acercó para pedir comida",
+    "se quedó quieto mirando a Nico",
+    "se escondió y se alejó rápidamente"
+   ],
+   "correct": "se escondió y se alejó rápidamente",
+   "hint": "«Entre los matorrales» y «solo encontró huellas» muestran una salida rápida y oculta.",
+   "clue": "Relaciona el lugar por donde pasó con lo que Nico encontró después.",
+   "option_notes": {
+    "se quedó quieto mirando a Nico": "Ignora que después solo quedaron huellas.",
+    "se acercó para pedir comida": "Inventa una intención que el texto no sugiere.",
+    "se cayó y dejó de moverse": "Confunde alejarse ocultamente con sufrir una caída."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "El suelo estaba deshidratado: tras meses sin lluvia, la tierra se veía seca y agrietada. ¿Qué significa «deshidratado»?",
+   "options": [
+    "que ha perdido agua",
+    "que está cubierto de agua",
+    "que produce mucha humedad",
+    "que se encuentra bajo tierra"
+   ],
+   "correct": "que ha perdido agua",
+   "hint": "La raíz «hidr-» alude al agua; «des-» y el contexto indican que el agua falta.",
+   "clue": "Relaciona «hidr-» con el agua y comprueba qué ocurre en la tierra.",
+   "option_notes": {
+    "que está cubierto de agua": "Ignora que la tierra aparece seca y sin lluvia.",
+    "que produce mucha humedad": "Confunde la relación con agua con producirla.",
+    "que se encuentra bajo tierra": "Interpreta «des-» como ubicación y no como separación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "En una lectura sobre el pudú aparece «hábitat». No solo quieres una definición: también saber qué condiciones del lugar permiten que viva allí. ¿Qué fuente te daría esa información?",
+   "options": [
+    "un catálogo de precios",
+    "una enciclopedia de ciencias",
+    "un horario de buses",
+    "un diccionario escolar de sinónimos"
+   ],
+   "correct": "una enciclopedia de ciencias",
+   "hint": "Una enciclopedia explica conceptos y aporta información sobre seres vivos y sus ambientes.",
+   "clue": "Necesitas una explicación amplia sobre un ser vivo y el lugar donde vive.",
+   "option_notes": {
+    "un diccionario escolar de sinónimos": "Busca palabras parecidas, pero no información detallada sobre ambientes.",
+    "un catálogo de precios": "Entrega valores de productos, no explicaciones de ciencias.",
+    "un horario de buses": "Informa recorridos y horas, no condiciones de vida."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "En «La corriente del río arrastró ramas», no conoces «corriente». ¿Qué búsqueda en internet te ayudará más a hallar la acepción correcta?",
+   "options": [
+    "corriente significado río",
+    "corriente significado electricidad",
+    "corriente palabras parecidas",
+    "corriente noticias actuales"
+   ],
+   "correct": "corriente significado río",
+   "hint": "Agrega a la búsqueda la palabra «río», que orienta hacia la acepción del contexto.",
+   "clue": "Usa una palabra de la oración para limitar los posibles significados.",
+   "option_notes": {
+    "corriente significado electricidad": "Elige otra acepción común, relacionada con la energía.",
+    "corriente palabras parecidas": "Busca sinónimos sin indicar qué significado necesitas.",
+    "corriente noticias actuales": "Se fija en noticias y no en explicar el significado contextual."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

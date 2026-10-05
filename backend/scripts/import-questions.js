@@ -5,6 +5,9 @@ const pool = require('../src/db');
 const VALID_SUBJECTS = ['matematica', 'lenguaje', 'ciencias', 'historia', 'ingles', 'general'];
 const VALID_DIFFICULTIES = ['easy', 'medium', 'hard'];
 const CONTENT_DIR = path.join(__dirname, '..', 'content', 'questions');
+// Drafts written with AI (content/pipeline/preguntas.py): imported as 'draft', they enter the
+// game only after a teacher or UTP approves them in the question bank.
+const DRAFTS_DIR = path.join(CONTENT_DIR, 'borradores');
 
 function validateQuestion(q) {
   const errors = [];
@@ -23,7 +26,7 @@ function parseFilename(filename) {
   return { subject: base.slice(0, idx), gradeLevel: base.slice(idx + 1) };
 }
 
-async function importFile(filePath, subject, gradeLevel) {
+async function importFile(filePath, subject, gradeLevel, { draft = false } = {}) {
   const raw = fs.readFileSync(filePath, 'utf8');
   const questions = JSON.parse(raw);
   if (!Array.isArray(questions)) throw new Error('el archivo debe contener un array de preguntas');
@@ -41,11 +44,14 @@ async function importFile(filePath, subject, gradeLevel) {
     }
 
     const { rows } = await pool.query(
-      `INSERT INTO questions (subject, grade_level, difficulty, text, options, correct, hint, oa_code, active)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, true)
+      `INSERT INTO questions (subject, grade_level, difficulty, text, options, correct, hint, oa_code, active,
+                              status, clue, option_notes, source, check_note)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, true, $9, $10, $11, $12, $13)
        ON CONFLICT (subject, grade_level, text) DO NOTHING
        RETURNING id`,
-      [subject, gradeLevel, q.difficulty, q.text, JSON.stringify(q.options), q.correct, q.hint || null, q.oa_code || null]
+      [subject, gradeLevel, q.difficulty, q.text, JSON.stringify(q.options), q.correct, q.hint || null, q.oa_code || null,
+        draft ? 'draft' : 'approved', q.clue || null, q.option_notes ? JSON.stringify(q.option_notes) : null,
+        q.source || 'import', q.check_note || null]
     );
 
     if (rows.length) inserted++;
@@ -62,7 +68,11 @@ async function main() {
     return;
   }
 
-  const files = fs.readdirSync(CONTENT_DIR).filter(f => f.endsWith('.json')).sort();
+  const jsonIn = dir => (fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort() : []);
+  const files = [
+    ...jsonIn(CONTENT_DIR).map(f => ({ file: f, dir: CONTENT_DIR, draft: false })),
+    ...jsonIn(DRAFTS_DIR).map(f => ({ file: f, dir: DRAFTS_DIR, draft: true })),
+  ];
   if (!files.length) {
     console.log('No hay archivos .json en content/questions/.');
     return;
@@ -72,21 +82,22 @@ async function main() {
 
   const totals = { inserted: 0, skipped: 0, invalid: 0 };
 
-  for (const file of files) {
+  for (const { file, dir, draft } of files) {
     const parsed = parseFilename(file);
     if (!parsed || !VALID_SUBJECTS.includes(parsed.subject)) {
       console.warn(`✗ ${file}: nombre de archivo inválido o subject desconocido, se omite`);
       continue;
     }
 
+    const label = draft ? `borradores/${file}` : file;
     try {
-      const result = await importFile(path.join(CONTENT_DIR, file), parsed.subject, parsed.gradeLevel);
-      console.log(`${file}: ${result.inserted} insertadas, ${result.skipped} omitidas (duplicadas), ${result.invalid} inválidas`);
+      const result = await importFile(path.join(dir, file), parsed.subject, parsed.gradeLevel, { draft });
+      console.log(`${label}: ${result.inserted} insertadas, ${result.skipped} omitidas (duplicadas), ${result.invalid} inválidas`);
       totals.inserted += result.inserted;
       totals.skipped += result.skipped;
       totals.invalid += result.invalid;
     } catch (err) {
-      console.error(`✗ ${file}: error al procesar — ${err.message}`);
+      console.error(`✗ ${label}: error al procesar — ${err.message}`);
     }
   }
 

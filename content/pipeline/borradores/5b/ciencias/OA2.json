@@ -1,0 +1,264 @@
+{
+ "oa": "OA2",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "Cuando comes una manzana, ¿qué ocurre primero en la boca como parte de la digestión?",
+   "options": [
+    "Se absorbe la mayor parte de sus nutrientes.",
+    "Se transforma en heces y pierde agua.",
+    "Se tritura y se mezcla con saliva.",
+    "Se almacena hasta salir del cuerpo."
+   ],
+   "correct": "Se tritura y se mezcla con saliva.",
+   "hint": "En la boca, los dientes trituran el alimento y la saliva empieza a transformarlo.",
+   "clue": "Piensa en la primera acción que recibe el alimento al entrar al sistema digestivo.",
+   "option_notes": {
+    "Se absorbe la mayor parte de sus nutrientes.": "Confunde la boca con el intestino delgado, donde se absorben nutrientes.",
+    "Se almacena hasta salir del cuerpo.": "Confunde la boca con el recto, que almacena desechos.",
+    "Se transforma en heces y pierde agua.": "Confunde la boca con el intestino grueso, que absorbe agua."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "¿Cuál es la función principal del esófago?",
+   "options": [
+    "Guardar las heces antes de eliminarlas.",
+    "Absorber nutrientes y pasarlos a la sangre.",
+    "Producir bilis para ayudar a digerir grasas.",
+    "Llevar el alimento desde la boca hasta el estómago."
+   ],
+   "correct": "Llevar el alimento desde la boca hasta el estómago.",
+   "hint": "El esófago es un conducto que mueve el alimento desde la boca hasta el estómago.",
+   "clue": "Busca la estructura que funciona como un conducto entre dos órganos.",
+   "option_notes": {
+    "Producir bilis para ayudar a digerir grasas.": "Confunde el esófago con el hígado.",
+    "Absorber nutrientes y pasarlos a la sangre.": "Confunde el esófago con el intestino delgado.",
+    "Guardar las heces antes de eliminarlas.": "Confunde el esófago con el recto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "¿Qué ocurre principalmente en el estómago durante la digestión?",
+   "options": [
+    "Mezcla el alimento con jugos digestivos y lo descompone.",
+    "Expulsa los desechos fuera del cuerpo.",
+    "Absorbe la mayor parte de los nutrientes.",
+    "Forma y almacena las heces."
+   ],
+   "correct": "Mezcla el alimento con jugos digestivos y lo descompone.",
+   "hint": "El estómago mezcla el alimento con jugos digestivos y lo descompone en partes más pequeñas.",
+   "clue": "Fíjate en el órgano que mezcla el alimento con sustancias digestivas.",
+   "option_notes": {
+    "Absorbe la mayor parte de los nutrientes.": "Confunde el estómago con el intestino delgado.",
+    "Forma y almacena las heces.": "Confunde el estómago con el intestino grueso y el recto.",
+    "Expulsa los desechos fuera del cuerpo.": "Confunde el estómago con el ano."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "easy",
+   "text": "Después de pasar por el recto, ¿qué estructura permite que los desechos salgan del cuerpo?",
+   "options": [
+    "El ano.",
+    "El esófago.",
+    "El hígado.",
+    "El intestino grueso."
+   ],
+   "correct": "El ano.",
+   "hint": "El ano es la abertura final por donde los desechos salen del sistema digestivo.",
+   "clue": "Ubica la salida final del tubo digestivo, después del recto.",
+   "option_notes": {
+    "El hígado.": "Confunde la salida del cuerpo con el órgano que produce bilis.",
+    "El esófago.": "Confunde la salida del cuerpo con el conducto hacia el estómago.",
+    "El intestino grueso.": "Confunde la salida del cuerpo con una zona que absorbe agua."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "En una colación con queso, el modelo debe mostrar el órgano que produce bilis para ayudar a digerir grasas. ¿Cuál es?",
+   "options": [
+    "El intestino delgado.",
+    "El hígado.",
+    "El estómago.",
+    "El intestino grueso."
+   ],
+   "correct": "El hígado.",
+   "hint": "El hígado produce bilis, que ayuda a descomponer las grasas durante la digestión.",
+   "clue": "Relaciona la bilis con el órgano que la fabrica.",
+   "option_notes": {
+    "El estómago.": "Confunde los jugos del estómago con la bilis.",
+    "El intestino delgado.": "Confunde la absorción de nutrientes con la producción de bilis.",
+    "El intestino grueso.": "Confunde la absorción de agua con la producción de bilis."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Completa este recorrido: boca → esófago → estómago → ___ → intestino grueso. ¿Qué estructura falta?",
+   "options": [
+    "Ano",
+    "Intestino delgado",
+    "Recto",
+    "Hígado"
+   ],
+   "correct": "Intestino delgado",
+   "hint": "Después del estómago, el alimento llega al intestino delgado, donde se absorben muchos nutrientes.",
+   "clue": "Fíjate en qué parte ocurre la mayor absorción antes del intestino grueso.",
+   "option_notes": {
+    "Recto": "Confunde una estructura final con la que sigue al estómago.",
+    "Ano": "Confunde la salida del cuerpo con una etapa intermedia.",
+    "Hígado": "Confunde el órgano auxiliar con el tubo por donde avanza el alimento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "Si el intestino grueso absorbe menos agua de lo normal, ¿qué resultado sería más probable?",
+   "options": [
+    "El estómago dejaría de mezclar comida.",
+    "El hígado dejaría de producir bilis.",
+    "El alimento volvería hacia el esófago.",
+    "Las heces serían más líquidas."
+   ],
+   "correct": "Las heces serían más líquidas.",
+   "hint": "El intestino grueso retira agua; si retira menos, las heces conservan más agua y quedan líquidas.",
+   "clue": "Relaciona la cantidad de agua absorbida con la consistencia de las heces.",
+   "option_notes": {
+    "El alimento volvería hacia el esófago.": "Supone que un problema del intestino grueso invierte el recorrido.",
+    "El estómago dejaría de mezclar comida.": "Atribuye al estómago una función que no depende del agua del intestino grueso.",
+    "El hígado dejaría de producir bilis.": "Confunde la función del intestino grueso con la del hígado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "medium",
+   "text": "En un modelo, las heces ya llegaron al recto. ¿Qué función está representada en ese momento?",
+   "options": [
+    "Se almacenan temporalmente antes de salir.",
+    "Se trituran con los dientes.",
+    "Se mezclan con bilis para digerirse.",
+    "Se absorben nutrientes hacia la sangre."
+   ],
+   "correct": "Se almacenan temporalmente antes de salir.",
+   "hint": "El recto guarda las heces por un tiempo antes de que salgan por el ano.",
+   "clue": "Piensa qué pasa con los desechos justo antes de salir del cuerpo.",
+   "option_notes": {
+    "Se mezclan con bilis para digerirse.": "Confunde el recto con una parte que participa en la digestión de grasas.",
+    "Se absorben nutrientes hacia la sangre.": "Confunde el recto con el intestino delgado.",
+    "Se trituran con los dientes.": "Confunde el recto con la boca."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Tu grupo construye un modelo del recorrido completo de una manzana. ¿Cuál secuencia muestra el paso del alimento y luego la eliminación de desechos?",
+   "options": [
+    "boca→hígado→estómago→intestino grueso→recto→ano",
+    "boca→estómago→esófago→intestino delgado→ano→recto",
+    "boca→esófago→intestino grueso→estómago→recto→ano",
+    "boca→esófago→estómago→intestino delgado→intestino grueso→recto→ano"
+   ],
+   "correct": "boca→esófago→estómago→intestino delgado→intestino grueso→recto→ano",
+   "hint": "El alimento avanza por el tubo digestivo; después del intestino grueso pasa al recto y sale por el ano.",
+   "clue": "Sigue el alimento desde la entrada; luego identifica dónde se forman y salen los desechos.",
+   "option_notes": {
+    "boca→hígado→estómago→intestino grueso→recto→ano": "Confunde el hígado, que ayuda en la digestión, con un tramo del tubo digestivo.",
+    "boca→esófago→intestino grueso→estómago→recto→ano": "Invierte el orden entre estómago e intestino grueso.",
+    "boca→estómago→esófago→intestino delgado→ano→recto": "Cambia el orden de esófago y estómago, y de recto y ano."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "Después de digerir una sopaipilla, ¿qué opción relaciona correctamente absorción y eliminación?",
+   "options": [
+    "Nutrientes→sangre en intestino grueso; desechos→intestino delgado.",
+    "Nutrientes→sangre en intestino delgado; desechos→intestino grueso.",
+    "Nutrientes→estómago; desechos→hígado para eliminarse.",
+    "Nutrientes→heces en intestino delgado; desechos→sangre."
+   ],
+   "correct": "Nutrientes→sangre en intestino delgado; desechos→intestino grueso.",
+   "hint": "El intestino delgado absorbe nutrientes; lo que no se aprovecha continúa hacia el intestino grueso.",
+   "clue": "Distingue lo que el cuerpo aprovecha de lo que debe continuar como desecho.",
+   "option_notes": {
+    "Nutrientes→sangre en intestino grueso; desechos→intestino delgado.": "Confunde el intestino grueso, que absorbe agua, con el lugar principal de nutrientes.",
+    "Nutrientes→heces en intestino delgado; desechos→sangre.": "Confunde lo que se absorbe con los desechos que quedan.",
+    "Nutrientes→estómago; desechos→hígado para eliminarse.": "Confunde órganos de digestión con los lugares de absorción y eliminación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "En un modelo falta el hígado, pero el resto de las estructuras está bien ubicado. ¿Qué función quedaría peor representada?",
+   "options": [
+    "La absorción de nutrientes en el intestino delgado.",
+    "La salida de las heces por el ano.",
+    "El apoyo a la digestión de las grasas mediante bilis.",
+    "El avance del alimento desde la boca al estómago."
+   ],
+   "correct": "El apoyo a la digestión de las grasas mediante bilis.",
+   "hint": "El hígado produce bilis, una sustancia que ayuda a digerir las grasas.",
+   "clue": "Piensa qué sustancia relacionada con las grasas produce el hígado.",
+   "option_notes": {
+    "El avance del alimento desde la boca al estómago.": "Olvida que el esófago es el conducto que mueve el alimento.",
+    "La absorción de nutrientes en el intestino delgado.": "Confunde el hígado con el intestino delgado, que absorbe nutrientes.",
+    "La salida de las heces por el ano.": "Confunde el hígado con el ano, por donde salen los desechos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA2",
+   "difficulty": "hard",
+   "text": "En una simulación, los desechos salen normalmente, pero se absorben muy pocos nutrientes. ¿Qué parte del modelo revisarías primero y por qué?",
+   "options": [
+    "Intestino grueso: allí se absorbe la mayoría de los nutrientes.",
+    "Esófago: allí se trituran los alimentos con saliva.",
+    "Intestino delgado: allí se absorbe la mayoría de los nutrientes.",
+    "Recto: allí se almacenan los nutrientes para usarlos después."
+   ],
+   "correct": "Intestino delgado: allí se absorbe la mayoría de los nutrientes.",
+   "hint": "Si faltan nutrientes absorbidos, revisa el intestino delgado, que realiza la mayor parte de esa tarea.",
+   "clue": "Busca la estructura relacionada directamente con el paso de nutrientes a la sangre.",
+   "option_notes": {
+    "Intestino grueso: allí se absorbe la mayoría de los nutrientes.": "Confunde el intestino grueso, que absorbe sobre todo agua, con el delgado.",
+    "Recto: allí se almacenan los nutrientes para usarlos después.": "Confunde el recto, que almacena desechos, con una zona de absorción.",
+    "Esófago: allí se trituran los alimentos con saliva.": "Confunde el esófago con la boca, donde se tritura y mezcla el alimento."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

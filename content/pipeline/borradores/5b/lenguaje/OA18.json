@@ -1,0 +1,250 @@
+{
+ "oa": "OA18",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA18",
+   "difficulty": "easy",
+   "text": "Elige la versión corregida de esta oración: «El sabado, Matias llevo su cuaderno al colegio.»",
+   "options": [
+    "El sabado, Matías llevo su cuaderno al colegio.",
+    "El sábado, Matias llevó su cuaderno al colegio.",
+    "El sábado, Matías llevo su cuaderno al colegio.",
+    "El sábado, Matías llevó su cuaderno al colegio."
+   ],
+   "correct": "El sábado, Matías llevó su cuaderno al colegio.",
+   "hint": "La versión correcta conserva las tildes de «sábado», «Matías» y «llevó».",
+   "clue": "Observa las tildes del día, del nombre y del verbo.",
+   "option_notes": {
+    "El sábado, Matias llevó su cuaderno al colegio.": "Falta la tilde en el nombre propio «Matías».",
+    "El sabado, Matías llevo su cuaderno al colegio.": "Faltan las tildes de «sábado» y «llevó».",
+    "El sábado, Matías llevo su cuaderno al colegio.": "Falta la tilde en el verbo «llevó»."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "easy",
+   "text": "¿Qué versión une mejor estas ideas de contraste? «Aunque llovía, la familia salió a observar aves.»",
+   "options": [
+    "Llovía; aun así, la familia salió a observar aves.",
+    "Llovía; porque la familia salió a observar aves.",
+    "Llovía; por eso, la familia salió a observar aves.",
+    "Llovía; además, la familia salió a observar aves."
+   ],
+   "correct": "Llovía; aun así, la familia salió a observar aves.",
+   "hint": "El conector correcto expresa que la familia salió pese a la lluvia.",
+   "clue": "Busca la palabra que indique oposición entre la lluvia y la decisión.",
+   "option_notes": {
+    "Llovía; por eso, la familia salió a observar aves.": "Usa una causa, pero el texto presenta una oposición.",
+    "Llovía; además, la familia salió a observar aves.": "Agrega información, pero no expresa contraste.",
+    "Llovía; porque la familia salió a observar aves.": "Une las ideas con una construcción incompleta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "easy",
+   "text": "¿Qué versión reemplaza la palabra vaga «animal» por una más precisa? «El pudú es un animal nativo del sur de Chile.»",
+   "options": [
+    "El pudú es un objeto nativo del sur de Chile.",
+    "El pudú es una cosa nativa del sur de Chile.",
+    "El pudú es un elemento nativo del sur de Chile.",
+    "El pudú es un mamífero nativo del sur de Chile."
+   ],
+   "correct": "El pudú es un mamífero nativo del sur de Chile.",
+   "hint": "«Mamífero» indica con mayor precisión qué tipo de ser vivo es el pudú.",
+   "clue": "Busca la palabra que nombre una clase específica de ser vivo.",
+   "option_notes": {
+    "El pudú es una cosa nativa del sur de Chile.": "Usa una palabra demasiado vaga para nombrar al pudú.",
+    "El pudú es un elemento nativo del sur de Chile.": "Emplea una palabra general que no precisa el tipo de ser vivo.",
+    "El pudú es un objeto nativo del sur de Chile.": "Llama objeto a un ser vivo, lo que cambia su significado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "medium",
+   "text": "Tu borrador dice: «El sábado fuimos al humedal de Batuco. Vimos aves.» ¿Qué versión agrega información específica y desarrolla mejor las ideas?",
+   "options": [
+    "El sábado fuimos al humedal de Batuco. Observamos aves.",
+    "El sábado fuimos al humedal de Batuco. Fue una salida agradable.",
+    "El sábado fuimos al humedal de Batuco. Vimos taguas y garzas.",
+    "El sábado fuimos al humedal de Batuco. Vimos cosas entretenidas."
+   ],
+   "correct": "El sábado fuimos al humedal de Batuco. Vimos taguas y garzas.",
+   "hint": "La versión correcta añade ejemplos concretos de las aves observadas.",
+   "clue": "Busca detalles observables, no solo opiniones o palabras generales.",
+   "option_notes": {
+    "El sábado fuimos al humedal de Batuco. Fue una salida agradable.": "Agrega una opinión, pero no un dato específico.",
+    "El sábado fuimos al humedal de Batuco. Observamos aves.": "Repite la información sin desarrollarla.",
+    "El sábado fuimos al humedal de Batuco. Vimos cosas entretenidas.": "Usa una expresión vaga en lugar de nombrar lo observado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "medium",
+   "text": "Escribirás a la directora para pedir un espacio para una muestra. ¿Qué versión usa un registro adecuado?",
+   "options": [
+    "Seño, apúrese y denos un espacio para la muestra.",
+    "Estimada directora: ¿podría reservarnos un espacio para la muestra?",
+    "Directora, mándenos un espacio para la muestra, porfa.",
+    "Hola, directora, guárdenos un espacio para la muestra, ¿ya?"
+   ],
+   "correct": "Estimada directora: ¿podría reservarnos un espacio para la muestra?",
+   "hint": "Una solicitud a la directora requiere un tono respetuoso y palabras cuidadas.",
+   "clue": "Considera quién recibirá el mensaje y qué quieres lograr.",
+   "option_notes": {
+    "Hola, directora, guárdenos un espacio para la muestra, ¿ya?": "Usa un tono demasiado coloquial para la destinataria.",
+    "Seño, apúrese y denos un espacio para la muestra.": "Emplea una orden poco respetuosa.",
+    "Directora, mándenos un espacio para la muestra, porfa.": "Combina una expresión poco precisa con un tono informal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "medium",
+   "text": "Al releer un párrafo sobre una caminata a un mirador, notas que las acciones quedaron desordenadas. ¿Qué versión forma una secuencia coherente?",
+   "options": [
+    "Después armamos las mochilas. Primero caminamos. Finalmente llegamos.",
+    "Primero armamos las mochilas. Después caminamos. Finalmente llegamos.",
+    "Finalmente armamos las mochilas. Después caminamos. Primero llegamos.",
+    "Primero armamos las mochilas. Después llegamos. Finalmente caminamos."
+   ],
+   "correct": "Primero armamos las mochilas. Después caminamos. Finalmente llegamos.",
+   "hint": "Los conectores siguen el orden real: preparar, caminar y llegar.",
+   "clue": "Piensa qué acción ocurre antes de alcanzar el mirador.",
+   "option_notes": {
+    "Primero armamos las mochilas. Después llegamos. Finalmente caminamos.": "Cambia el orden: caminar debe ocurrir antes de llegar.",
+    "Después armamos las mochilas. Primero caminamos. Finalmente llegamos.": "Usa «después» para una acción que debe ocurrir primero.",
+    "Finalmente armamos las mochilas. Después caminamos. Primero llegamos.": "Invierte los tres momentos de la salida."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "medium",
+   "text": "En un procesador de textos, Camila busca un sinónimo para evitar repeticiones: «La feria fue entretenida. La feria tuvo juegos y la feria reunió a familias.» ¿Cuál versión mejora el texto?",
+   "options": [
+    "La feria fue entretenida. El evento tuvo juegos y reunió a familias.",
+    "La feria fue entretenida. Ella tuvo juegos y reunió a familias.",
+    "La feria fue entretenida. El asunto tuvo juegos y reunió a familias.",
+    "La feria fue entretenida. La feria tuvo juegos y reunió a familias."
+   ],
+   "correct": "La feria fue entretenida. El evento tuvo juegos y reunió a familias.",
+   "hint": "«Evento» funciona como sinónimo de «feria» y evita repetir el mismo sustantivo.",
+   "clue": "Busca un reemplazo que conserve el significado y elimine la repetición.",
+   "option_notes": {
+    "La feria fue entretenida. La feria tuvo juegos y reunió a familias.": "Mantiene una repetición innecesaria del sustantivo.",
+    "La feria fue entretenida. El asunto tuvo juegos y reunió a familias.": "Usa una palabra imprecisa para referirse a la feria.",
+    "La feria fue entretenida. Ella tuvo juegos y reunió a familias.": "Usa un pronombre ambiguo: no queda claro qué significa «ella»."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "hard",
+   "text": "Lee el borrador: «El sabado caminamos. Hacía calor, sin embargo llevamos agua.» ¿Qué versión corrige la escritura y la relación entre las ideas?",
+   "options": [
+    "El sábado caminamos. Hacía calor; por eso, llevamos agua.",
+    "El sábado caminamos. Hacía calor; porque llevamos agua.",
+    "El sábado caminamos. Hacía calor; sin embargo, llevamos agua.",
+    "El sabado caminamos. Hacía calor; por eso llevamos agua."
+   ],
+   "correct": "El sábado caminamos. Hacía calor; por eso, llevamos agua.",
+   "hint": "«Sábado» lleva tilde y «por eso» expresa la causa de llevar agua; además, requiere puntuación adecuada.",
+   "clue": "Relaciona el calor con la decisión de llevar agua y revisa las tildes.",
+   "option_notes": {
+    "El sábado caminamos. Hacía calor; sin embargo, llevamos agua.": "Mantiene un conector de contraste cuando la relación es de causa.",
+    "El sabado caminamos. Hacía calor; por eso llevamos agua.": "Omite la tilde de «sábado» y la coma tras «por eso».",
+    "El sábado caminamos. Hacía calor; porque llevamos agua.": "Usa «porque» de manera incompleta y no expresa bien la relación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "hard",
+   "text": "Escribes una recomendación informativa y formal para el diario mural, dirigida a las familias. Tu borrador dice: «Vayan al museo. Es bacán y hay cosas entretenidas.» ¿Cuál versión cumple mejor el propósito?",
+   "options": [
+    "Vayan al museo: es bacán y tiene cosas súper entretenidas.",
+    "Visiten el museo: ofrece experimentos de ciencias muy entretenidos.",
+    "Vayan al museo porque sí; allí hay cosas y cosas entretenidas.",
+    "Visiten el museo: es una cosa con muchas cosas interesantes."
+   ],
+   "correct": "Visiten el museo: ofrece experimentos de ciencias muy entretenidos.",
+   "hint": "La versión correcta informa con precisión, agrega un motivo y usa un registro adecuado.",
+   "clue": "Piensa en lo que las familias necesitan saber y en el tono del diario mural.",
+   "option_notes": {
+    "Vayan al museo: es bacán y tiene cosas súper entretenidas.": "Usa un modismo y palabras vagas; no ofrece datos concretos.",
+    "Visiten el museo: es una cosa con muchas cosas interesantes.": "Repite «cosa» y no explica qué ofrece el museo.",
+    "Vayan al museo porque sí; allí hay cosas y cosas entretenidas.": "No entrega un motivo claro y mantiene un vocabulario vago."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "hard",
+   "text": "En un procesador de textos debes editar un aviso: título centrado y en negrita, corregir «cuidemosla» y poner punto final. La etiqueta inicial describe el formato. ¿Cuál versión cumple todo?",
+   "options": [
+    "Título centrado: Cuidado del agua\nCuidemosla.",
+    "Título centrado y en negrita: cuidado del agua. Cuidémosla",
+    "Título centrado y en negrita: Cuidado del agua\nCuidémosla.",
+    "Título en negrita: Cuidado del agua\nCuidémosla"
+   ],
+   "correct": "Título centrado y en negrita: Cuidado del agua\nCuidémosla.",
+   "hint": "La versión correcta aplica el formato pedido, escribe «Cuidémosla» con tilde y cierra el aviso con punto.",
+   "clue": "Comprueba por separado el formato, la tilde y el punto final.",
+   "option_notes": {
+    "Título centrado: Cuidado del agua\nCuidemosla.": "No aplica negrita y deja sin tilde «cuidemosla».",
+    "Título centrado y en negrita: cuidado del agua. Cuidémosla": "Deja el título en minúscula, une las líneas y omite el punto final.",
+    "Título en negrita: Cuidado del agua\nCuidémosla": "Aplica negrita, pero no centra el título."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA18",
+   "difficulty": "hard",
+   "text": "Un informe dice: «El zorro vive en Chile. No vimos ninguno, por eso está extinto.» ¿Qué versión corrige la conclusión sin agregar información no comprobada?",
+   "options": [
+    "El zorro vive en Chile. No vimos ninguno; además está extinto.",
+    "El zorro vive en Chile. No vimos ninguno; porque está extinto.",
+    "El zorro vive en Chile. No vimos ninguno; eso no prueba la extinción.",
+    "El zorro vive en Chile. No vimos ninguno; por eso está extinto."
+   ],
+   "correct": "El zorro vive en Chile. No vimos ninguno; eso no prueba la extinción.",
+   "hint": "No observar un animal en una salida no demuestra que la especie esté extinta.",
+   "clue": "Distingue entre lo que el texto observa y lo que concluye.",
+   "option_notes": {
+    "El zorro vive en Chile. No vimos ninguno; por eso está extinto.": "Saca una conclusión causal que la observación no permite afirmar.",
+    "El zorro vive en Chile. No vimos ninguno; además está extinto.": "Agrega una afirmación sin evidencia y usa «además» sin justificarla.",
+    "El zorro vive en Chile. No vimos ninguno; porque está extinto.": "Usa «porque» sin una explicación comprobada y deja la relación incompleta."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [
+  {
+   "text": "Para un aviso de la escuela, ¿cuál versión está mejor presentada y puntuada?",
+   "errors": [
+    "alternativas repetidas"
+   ]
+  }
+ ],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

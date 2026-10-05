@@ -1,0 +1,264 @@
+{
+ "oa": "OA7",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "En la Colonia, ¿qué caracterizaba a la encomienda?",
+   "options": [
+    "Un lonko recibía tierras para repartirlas entre soldados españoles.",
+    "Los pueblos acordaban intercambiar productos en reuniones periódicas.",
+    "La Corona prohibía todo trabajo indígena en las ciudades.",
+    "Un español recibía trabajo o tributo indígena, sin ser su dueño."
+   ],
+   "correct": "Un español recibía trabajo o tributo indígena, sin ser su dueño.",
+   "hint": "La encomienda permitía recibir trabajo o tributo, junto con deberes de protección y evangelización.",
+   "clue": "Fíjate en el sistema que organizaba trabajo o tributo, pero no convertía a las personas en propiedad.",
+   "option_notes": {
+    "Un lonko recibía tierras para repartirlas entre soldados españoles.": "Confunde la encomienda con la autoridad de un lonko y el reparto de tierras.",
+    "Los pueblos acordaban intercambiar productos en reuniones periódicas.": "Confunde la encomienda con un intercambio propio de la frontera.",
+    "La Corona prohibía todo trabajo indígena en las ciudades.": "Invierte el sentido: la encomienda organizaba trabajo indígena."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "¿Qué ejemplo representa la resistencia mapuche durante la Guerra de Arauco?",
+   "options": [
+    "Aceptar sin oposición el dominio español en todo el territorio.",
+    "Fundar ciudades españolas junto al océano Pacífico.",
+    "Defender el territorio frente al avance de las fuerzas españolas.",
+    "Aprender nuevas oraciones en una misión religiosa."
+   ],
+   "correct": "Defender el territorio frente al avance de las fuerzas españolas.",
+   "hint": "Resistir significaba oponerse al avance español y defender el territorio mapuche.",
+   "clue": "Busca una acción de oposición al avance y control de los españoles.",
+   "option_notes": {
+    "Aceptar sin oposición el dominio español en todo el territorio.": "Confunde resistencia con aceptar la conquista.",
+    "Fundar ciudades españolas junto al océano Pacífico.": "Confunde resistencia con fundación española.",
+    "Aprender nuevas oraciones en una misión religiosa.": "Confunde resistencia con evangelización."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "¿Cuál era un objetivo principal de la evangelización en la Colonia?",
+   "options": [
+    "Entrenar a los lonkos para dirigir el ejército español.",
+    "Elegir representantes mapuches para el cabildo.",
+    "Cobrar impuestos por cada producto intercambiado.",
+    "Enseñar el cristianismo a los pueblos indígenas."
+   ],
+   "correct": "Enseñar el cristianismo a los pueblos indígenas.",
+   "hint": "La evangelización buscaba difundir la fe y las enseñanzas cristianas.",
+   "clue": "Piensa en una tarea relacionada con la religión y sus creencias.",
+   "option_notes": {
+    "Entrenar a los lonkos para dirigir el ejército español.": "La confunde con instrucción militar.",
+    "Cobrar impuestos por cada producto intercambiado.": "La confunde con una actividad económica.",
+    "Elegir representantes mapuches para el cabildo.": "La confunde con una elección política colonial."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "¿Qué significa mestizaje en la sociedad colonial?",
+   "options": [
+    "La mezcla de aportes indígenas y españoles en la población y cultura.",
+    "La separación total de indígenas y españoles en comunidades distintas.",
+    "La expulsión de todos los pueblos indígenas fuera de Chile.",
+    "La llegada de productos europeos sin cambios en la sociedad."
+   ],
+   "correct": "La mezcla de aportes indígenas y españoles en la población y cultura.",
+   "hint": "El mestizaje reunió aportes indígenas y españoles en la sociedad colonial.",
+   "clue": "Busca una idea de mezcla entre pueblos y sus culturas.",
+   "option_notes": {
+    "La separación total de indígenas y españoles en comunidades distintas.": "Confunde mestizaje con separación social.",
+    "La expulsión de todos los pueblos indígenas fuera de Chile.": "Confunde mestizaje con expulsión.",
+    "La llegada de productos europeos sin cambios en la sociedad.": "Confunde cambios económicos con mezcla de pueblos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Cerca del río Biobío, personas españolas y mapuches intercambiaban productos y noticias. ¿Qué concepto describe mejor esta situación?",
+   "options": [
+    "Esclavitud, porque cualquier contacto implicaba ser propiedad.",
+    "Aislamiento completo, sin relaciones entre ambos pueblos.",
+    "Vida fronteriza, con contactos e intercambios entre ambos pueblos.",
+    "Evangelización, porque todo intercambio era religioso."
+   ],
+   "correct": "Vida fronteriza, con contactos e intercambios entre ambos pueblos.",
+   "hint": "La vida fronteriza incluía comercio, encuentros y relaciones entre españoles y mapuches.",
+   "clue": "Piensa en una zona de contacto donde también ocurrían intercambios cotidianos.",
+   "option_notes": {
+    "Aislamiento completo, sin relaciones entre ambos pueblos.": "Confunde una frontera de contacto con un límite sin relaciones.",
+    "Evangelización, porque todo intercambio era religioso.": "Confunde todo intercambio con enseñanza religiosa.",
+    "Esclavitud, porque cualquier contacto implicaba ser propiedad.": "Confunde contacto fronterizo con esclavitud."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Un registro colonial cuenta que una persona mapuche capturada fue vendida y trasladada contra su voluntad. ¿Qué forma de trabajo describe?",
+   "options": [
+    "Esclavitud, porque la persona fue tratada como propiedad.",
+    "Parlamento, porque acordaba el traslado entre autoridades.",
+    "Encomienda, porque incluía la venta de personas indígenas.",
+    "Mestizaje, porque reunía personas de distintos pueblos."
+   ],
+   "correct": "Esclavitud, porque la persona fue tratada como propiedad.",
+   "hint": "La esclavitud convertía a la persona en propiedad que podía ser vendida.",
+   "clue": "Busca el caso en que una persona puede ser vendida y obligada a trabajar.",
+   "option_notes": {
+    "Encomienda, porque incluía la venta de personas indígenas.": "Confunde encomienda con esclavitud.",
+    "Parlamento, porque acordaba el traslado entre autoridades.": "Confunde una reunión política con una forma de trabajo.",
+    "Mestizaje, porque reunía personas de distintos pueblos.": "Confunde mezcla de pueblos con explotación laboral."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Un gobernador español y un lonko se reúnen para conversar y acordar una pausa en los ataques. ¿Qué práctica representa?",
+   "options": [
+    "Un parlamento, usado para negociar entre españoles y mapuches.",
+    "Una encomienda, usada para repartir trabajo indígena.",
+    "Un cabildo, usado para elegir lonkos mapuches.",
+    "Una misión, usada para enseñar técnicas agrícolas."
+   ],
+   "correct": "Un parlamento, usado para negociar entre españoles y mapuches.",
+   "hint": "Los parlamentos eran reuniones para negociar acuerdos entre autoridades españolas y mapuches.",
+   "clue": "Piensa en una reunión colonial destinada a negociar y buscar acuerdos.",
+   "option_notes": {
+    "Una encomienda, usada para repartir trabajo indígena.": "Confunde negociación política con organización del trabajo.",
+    "Una misión, usada para enseñar técnicas agrícolas.": "Confunde negociación con evangelización o enseñanza.",
+    "Un cabildo, usado para elegir lonkos mapuches.": "Confunde parlamento con gobierno municipal español."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Si los mapuches defendían su territorio y los españoles intentaban controlarlo, ¿por qué la Guerra de Arauco duró tanto?",
+   "options": [
+    "Porque los parlamentos eliminaron rápidamente todos los conflictos.",
+    "Porque hubo resistencia mapuche y fue difícil controlar el territorio.",
+    "Porque ambos pueblos evitaron cualquier enfrentamiento armado.",
+    "Porque la guerra ocurrió solo durante la fundación de Santiago."
+   ],
+   "correct": "Porque hubo resistencia mapuche y fue difícil controlar el territorio.",
+   "hint": "La defensa mapuche y las dificultades del territorio hicieron prolongado el conflicto.",
+   "clue": "Busca una respuesta que considere la oposición mapuche y el espacio en disputa.",
+   "option_notes": {
+    "Porque ambos pueblos evitaron cualquier enfrentamiento armado.": "Niega los enfrentamientos que dieron origen al conflicto.",
+    "Porque la guerra ocurrió solo durante la fundación de Santiago.": "Reduce una guerra prolongada a un solo momento.",
+    "Porque los parlamentos eliminaron rápidamente todos los conflictos.": "Supone que negociar siempre terminó las luchas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Lee: «En una misión, un sacerdote enseñaba oraciones; cerca, comerciantes españoles y familias mapuches intercambiaban alimentos». ¿Qué conclusión se apoya en el texto?",
+   "options": [
+    "Solo existió guerra, sin contactos cotidianos entre los pueblos.",
+    "Hubo evangelización y contactos propios de la vida fronteriza.",
+    "Los parlamentos reemplazaron las misiones y el comercio.",
+    "La encomienda igualó todas las costumbres de ambos pueblos."
+   ],
+   "correct": "Hubo evangelización y contactos propios de la vida fronteriza.",
+   "hint": "El texto muestra una tarea religiosa y, a la vez, intercambios de la frontera.",
+   "clue": "Relaciona la enseñanza religiosa con el intercambio cercano entre comunidades.",
+   "option_notes": {
+    "Solo existió guerra, sin contactos cotidianos entre los pueblos.": "Ignora las pruebas de enseñanza y comercio del texto.",
+    "La encomienda igualó todas las costumbres de ambos pueblos.": "Confunde encomienda con mezcla total de costumbres.",
+    "Los parlamentos reemplazaron las misiones y el comercio.": "Confunde parlamentos con misiones e intercambios cotidianos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Un capitán instala un fuerte al sur del Biobío. Después de un ataque, se reúne con un lonko y acuerda intercambiar prisioneros. ¿Qué interpretación es más adecuada?",
+   "options": [
+    "El intercambio demuestra que nunca hubo enfrentamientos.",
+    "La frontera combinó resistencia, conflictos y negociación.",
+    "El territorio quedó totalmente controlado por España.",
+    "Los mapuches abandonaron su territorio después del ataque."
+   ],
+   "correct": "La frontera combinó resistencia, conflictos y negociación.",
+   "hint": "El ataque muestra resistencia; la reunión muestra negociación fronteriza.",
+   "clue": "Considera tanto el ataque como el acuerdo posterior.",
+   "option_notes": {
+    "El territorio quedó totalmente controlado por España.": "Confunde la presencia de un fuerte con control total del territorio.",
+    "Los mapuches abandonaron su territorio después del ataque.": "Supone que un ataque causó el abandono mapuche.",
+    "El intercambio demuestra que nunca hubo enfrentamientos.": "Confunde un intercambio puntual con ausencia de guerra."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "¿Por qué un parlamento no demuestra que la Guerra de Arauco había terminado para siempre?",
+   "options": [
+    "Porque solo reunían a sacerdotes para enseñar religión.",
+    "Porque los parlamentos eran batallas dirigidas por los lonkos.",
+    "Porque era un acuerdo y los conflictos podían continuar después.",
+    "Porque prohibían todo intercambio entre españoles y mapuches."
+   ],
+   "correct": "Porque era un acuerdo y los conflictos podían continuar después.",
+   "hint": "Los parlamentos buscaban acuerdos, pero no impedían que surgieran nuevos conflictos.",
+   "clue": "Distingue entre alcanzar un acuerdo y terminar definitivamente una guerra.",
+   "option_notes": {
+    "Porque los parlamentos eran batallas dirigidas por los lonkos.": "Confunde reuniones de negociación con combates.",
+    "Porque solo reunían a sacerdotes para enseñar religión.": "Confunde acuerdos políticos con evangelización.",
+    "Porque prohibían todo intercambio entre españoles y mapuches.": "Invierte su función: podían facilitar contactos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "En una comunidad colonial, una familia indígena trabajaba para un encomendero, asistía a una misión y usaba palabras españolas y mapuches. ¿Qué idea explica mejor el caso?",
+   "options": [
+    "Usar dos lenguas demuestra que nunca hubo contacto.",
+    "La encomienda convirtió a toda la familia en esclava.",
+    "Solo existieron conflictos, sin cambios en la vida cotidiana.",
+    "La vida colonial incluyó trabajo, religión y cambios culturales."
+   ],
+   "correct": "La vida colonial incluyó trabajo, religión y cambios culturales.",
+   "hint": "El caso reúne encomienda, evangelización y aportes culturales de distintos pueblos.",
+   "clue": "Busca una conclusión que considere las tres pistas del caso.",
+   "option_notes": {
+    "Solo existieron conflictos, sin cambios en la vida cotidiana.": "Ignora el trabajo, la misión y las costumbres compartidas.",
+    "La encomienda convirtió a toda la familia en esclava.": "Confunde encomienda con esclavitud.",
+    "Usar dos lenguas demuestra que nunca hubo contacto.": "Interpreta el uso de dos lenguas como separación."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,268 @@
+{
+ "oa": "OA23",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA23",
+   "difficulty": "easy",
+   "text": "Escucha este cuento folclórico: \"Cada invierno, el zorro pedía prestada una manta a sus vecinos. En la noche más fría, compartió la suya con un pudú perdido y todos quisieron ayudarlo.\" ¿Qué hizo el zorro en la noche más fría?",
+   "options": [
+    "Siguió al pudú hasta el río",
+    "Pidió otra manta a sus vecinos",
+    "Escondió la manta dentro de su cueva",
+    "Compartió su manta con un pudú perdido"
+   ],
+   "correct": "Compartió su manta con un pudú perdido",
+   "hint": "El relato cuenta que entregó su propia manta al pudú perdido.",
+   "clue": "Ubica la acción que ocurre durante la noche más fría.",
+   "option_notes": {
+    "Escondió la manta dentro de su cueva": "Confunde compartir la manta con esconderla.",
+    "Pidió otra manta a sus vecinos": "Repite la acción inicial y no la de la noche más fría.",
+    "Siguió al pudú hasta el río": "Agrega un lugar y una acción que el cuento no menciona."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "easy",
+   "text": "Lee este cuento de autor: \"Tomás construyó un comedero para los chincoles, pero lo dejó junto a la ventana. Al amanecer, el ruido de los granos golpeando el vidrio despertó a toda la familia.\" ¿Por qué se despertó la familia?",
+   "options": [
+    "Por el ruido de los granos contra el vidrio",
+    "Porque el viento abrió todas las ventanas",
+    "Porque el comedero cayó sobre la ventana",
+    "Porque los chincoles cantaron junto a las camas"
+   ],
+   "correct": "Por el ruido de los granos contra el vidrio",
+   "hint": "El comedero quedó junto al vidrio y los granos producían ruido al golpearlo.",
+   "clue": "Busca qué sonido se menciona justo antes de que la familia despertara.",
+   "option_notes": {
+    "Porque los chincoles cantaron junto a las camas": "Confunde el ruido de los granos con el canto de las aves.",
+    "Porque el comedero cayó sobre la ventana": "Supone que el comedero se cayó, algo que el relato no dice.",
+    "Porque el viento abrió todas las ventanas": "Agrega una causa del viento que no aparece en el cuento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "easy",
+   "text": "Escucha estos versos: \"La lluvia peina el patio, con dedos de cristal; las hojas guardan brillo y el suelo huele a mar.\" ¿Qué ocurre con las hojas cuando llueve?",
+   "options": [
+    "Quedan brillantes después de la lluvia",
+    "Se cierran y hacen ruido en el patio",
+    "Se vuelven hojas secas antes del amanecer",
+    "Se cubren de arena junto al mar"
+   ],
+   "correct": "Quedan brillantes después de la lluvia",
+   "hint": "El verso indica directamente que las hojas guardan brillo.",
+   "clue": "Busca la imagen que describe a las hojas.",
+   "option_notes": {
+    "Se cubren de arena junto al mar": "Confunde el brillo de las hojas con arena del mar.",
+    "Se cierran y hacen ruido en el patio": "Inventa que las hojas hacen ruido y se cierran.",
+    "Se vuelven hojas secas antes del amanecer": "Invierte la imagen del poema: habla de hojas secas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "easy",
+   "text": "Oye este mito: \"Antü guardaba el fuego en una cueva para él solo. Una niña llevó una brasa a su comunidad; desde entonces, las familias pudieron cocinar y abrigarse.\" ¿Qué permitió la brasa?",
+   "options": [
+    "Sembrar árboles frutales cerca de la cueva",
+    "Viajar de noche sin detenerse en el camino",
+    "Cocinar y abrigarse junto a la comunidad",
+    "Construir canoas resistentes para cruzar ríos"
+   ],
+   "correct": "Cocinar y abrigarse junto a la comunidad",
+   "hint": "La brasa permitió usar el fuego para preparar alimentos y protegerse del frío.",
+   "clue": "Relaciona la brasa con los dos beneficios que aparecen al final.",
+   "option_notes": {
+    "Viajar de noche sin detenerse en el camino": "Confunde el uso del fuego con viajar de noche.",
+    "Sembrar árboles frutales cerca de la cueva": "Agrega árboles que el mito no relaciona con la brasa.",
+    "Construir canoas resistentes para cruzar ríos": "Confunde cocinar y abrigarse con construir canoas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "medium",
+   "text": "En este cuento folclórico: \"La gallina encontró tres granos de trigo. El pato quiso venderlos, la liebre quiso guardarlos y el burro propuso sembrarlos. Meses después, solo el burro tenía pan para compartir.\" ¿Qué decisión explica el final?",
+   "options": [
+    "Eligió venderlos y compró pan ese mismo día",
+    "Eligió regalarlos y recibió harina del pato",
+    "Eligió sembrarlos y esperó a que crecieran",
+    "Eligió guardarlos y encontró pan en su corral"
+   ],
+   "correct": "Eligió sembrarlos y esperó a que crecieran",
+   "hint": "El burro sembró los granos y el tiempo permitió obtener trigo para hacer pan.",
+   "clue": "Relaciona lo que decidió el burro con el resultado ocurrido meses después.",
+   "option_notes": {
+    "Eligió venderlos y compró pan ese mismo día": "Confunde la decisión del pato con la del burro.",
+    "Eligió guardarlos y encontró pan en su corral": "Confunde guardar los granos con obtener pan.",
+    "Eligió regalarlos y recibió harina del pato": "Inventa un intercambio que el cuento no menciona."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "medium",
+   "text": "En este cuento de autor: \"Al volver del colegio, Elisa vio que el viento había desordenado las macetas de su abuela. Aunque quería jugar, las acomodó y puso piedras en los bordes para que no cayeran.\" ¿Qué se puede concluir sobre Elisa?",
+   "options": [
+    "Es temerosa y culpa al viento",
+    "Es responsable y busca una solución",
+    "Es impaciente y evita ayudar",
+    "Es distraída y rompe las macetas"
+   ],
+   "correct": "Es responsable y busca una solución",
+   "hint": "Ayuda a su abuela y además previene que las macetas vuelvan a caer.",
+   "clue": "Considera sus acciones, no solo lo que quería hacer.",
+   "option_notes": {
+    "Es impaciente y evita ayudar": "Ignora que dejó de jugar para ordenar las macetas.",
+    "Es temerosa y culpa al viento": "Confunde reconocer la causa con tener miedo o culpar al viento.",
+    "Es distraída y rompe las macetas": "Supone que rompió objetos, cuando hizo lo contrario."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "medium",
+   "text": "Escucha esta leyenda: \"Dicen que, al anochecer, una luz azul aparece junto al lago Llanquihue. Guía a quienes se pierden, pero desaparece si alguien intenta atraparla.\" ¿Qué elemento es fantástico?",
+   "options": [
+    "Que el anochecer llega después de la tarde en ese lugar",
+    "Que la luz guía a los perdidos y desaparece al atraparla",
+    "Que la gente puede caminar junto al lago al anochecer",
+    "Que el lago Llanquihue está en el sur de Chile"
+   ],
+   "correct": "Que la luz guía a los perdidos y desaparece al atraparla",
+   "hint": "Lo fantástico es que una luz actúe como guía y desaparezca cuando intentan atraparla.",
+   "clue": "Separa los hechos posibles de la acción que no ocurre en la vida cotidiana.",
+   "option_notes": {
+    "Que el lago Llanquihue está en el sur de Chile": "Confunde el lugar real con el suceso fantástico.",
+    "Que la gente puede caminar junto al lago al anochecer": "Elige una acción cotidiana del relato.",
+    "Que el anochecer llega después de la tarde en ese lugar": "Elige una relación normal entre dos momentos del día."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "medium",
+   "text": "Lee este capítulo de novela: \"Amaro debe entregar el cuaderno de ciencias, pero lo dejó en el bus. Antes de entrar a clases, ve el bus detenido y nota que el conductor baja a revisar una rueda.\" ¿Cuál es la forma más directa de recuperar el cuaderno?",
+   "options": [
+    "Correr detrás del bus y golpear la puerta varias veces",
+    "Culpar a un compañero para conseguir que detengan el bus",
+    "Pedir permiso, acercarse al conductor y explicar lo ocurrido",
+    "Entrar a clases y esperar que alguien encuentre el cuaderno"
+   ],
+   "correct": "Pedir permiso, acercarse al conductor y explicar lo ocurrido",
+   "hint": "Puede actuar de inmediato y conversar respetuosamente con quien podría ayudarlo.",
+   "clue": "El bus está detenido y el conductor está cerca; piensa en una acción segura y directa.",
+   "option_notes": {
+    "Entrar a clases y esperar que alguien encuentre el cuaderno": "No actúa de inmediato ni aprovecha que el bus está detenido.",
+    "Correr detrás del bus y golpear la puerta varias veces": "Propone una acción peligrosa y poco respetuosa.",
+    "Culpar a un compañero para conseguir que detengan el bus": "Culpa a otra persona sin buscar primero el cuaderno."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Enunciado ambiguo: pide la forma «más directa», pero la clave es la conducta más adecuada. Además, evalúa una decisión práctica del estudiante más que la comprensión de la obra."
+   ]
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "hard",
+   "text": "Lee el poema: \"En la plaza vacía, mi sombra juega conmigo; cuando regreso a casa, se queda cuidando el camino.\" ¿Qué interpretación explica mejor los dos últimos versos?",
+   "options": [
+    "Una persona se queda vigilando el camino desde la plaza",
+    "El hablante abandona su casa para buscar otra sombra",
+    "La sombra se separa de él y vuelve sola a la plaza",
+    "El hablante imagina que su sombra cuida el camino al irse"
+   ],
+   "correct": "El hablante imagina que su sombra cuida el camino al irse",
+   "hint": "La sombra no actúa literalmente; el hablante imagina que lo acompaña y protege su regreso.",
+   "clue": "Piensa si una sombra puede cuidar de verdad y qué expresa esa imagen.",
+   "option_notes": {
+    "La sombra se separa de él y vuelve sola a la plaza": "Toma literalmente que la sombra se mueve sola.",
+    "Una persona se queda vigilando el camino desde la plaza": "Cambia la sombra imaginada por una persona real.",
+    "El hablante abandona su casa para buscar otra sombra": "Confunde regresar a casa con abandonar el hogar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "hard",
+   "text": "Oye este mito: \"Küyen, la luna, prometió iluminar cada noche. Una noche cubrió el cielo para descansar; los viajeros se perdieron. Desde entonces, las comunidades encienden fogatas para orientarse.\" ¿Qué relación explica el origen de las fogatas?",
+   "options": [
+    "La luna descansó; los viajeros apagaron las fogatas",
+    "La luna se ocultó; los viajeros se perdieron y encendieron fogatas",
+    "La luna brilló; las comunidades encendieron fogatas de fiesta",
+    "Las fogatas taparon la luna y causaron su descanso"
+   ],
+   "correct": "La luna se ocultó; los viajeros se perdieron y encendieron fogatas",
+   "hint": "La falta de luz causó que se perdieran; las fogatas surgieron para orientarlos.",
+   "clue": "Sigue la cadena: falta de luz, problema de los viajeros y solución.",
+   "option_notes": {
+    "La luna descansó; los viajeros apagaron las fogatas": "Invierte el efecto: el relato dice que se perdieron.",
+    "La luna brilló; las comunidades encendieron fogatas de fiesta": "Cambia una necesidad de orientación por una celebración.",
+    "Las fogatas taparon la luna y causaron su descanso": "Supone que las fogatas causaron el descanso de la luna."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Error de hecho en la clave: el texto dice que las comunidades encienden fogatas desde entonces, no que los viajeros las encendieran."
+   ]
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "hard",
+   "text": "Escucha esta leyenda: \"En Chiloé, una campana suena bajo el mar cuando alguien pierde el rumbo. Una pescadora siguió el sonido, halló la costa y nunca volvió a oírlo cuando aprendió a leer las mareas.\" ¿Qué idea se puede inferir sobre la campana?",
+   "options": [
+    "Anuncia que pronto habrá una tormenta sobre el mar",
+    "Castiga a quienes navegan de noche cerca de la costa",
+    "Llama a los pescadores para que abandonen la costa",
+    "Ayuda a orientarse hasta que cada persona aprende sola"
+   ],
+   "correct": "Ayuda a orientarse hasta que cada persona aprende sola",
+   "hint": "Suena ante la pérdida y deja de hacerlo cuando la pescadora ya sabe orientarse.",
+   "clue": "Compara cuándo aparece el sonido con lo que cambia al final del relato.",
+   "option_notes": {
+    "Castiga a quienes navegan de noche cerca de la costa": "Inventa un castigo que el relato no menciona.",
+    "Anuncia que pronto habrá una tormenta sobre el mar": "Confunde una ayuda posible con una predicción del tiempo.",
+    "Llama a los pescadores para que abandonen la costa": "Invierte el propósito: la campana ayuda a llegar a la costa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA23",
+   "difficulty": "hard",
+   "text": "Lee este capítulo de novela: \"Sofía prometió llevar la maqueta al museo, pero la lluvia inundó el patio. En la entrada, descubrió que la caja estaba seca, aunque el cartel con el nombre del equipo se había despegado y desaparecido.\" ¿Qué plan permite que Sofía entregue el trabajo completo?",
+   "options": [
+    "Mantener seca la maqueta y rehacer el cartel antes de entregarla",
+    "Dejar la maqueta afuera y seguir buscando el cartel perdido",
+    "Entregar la caja sin cartel y ocultar que falta esa información",
+    "Volver a casa sin avisar y esperar que pase otro día"
+   ],
+   "correct": "Mantener seca la maqueta y rehacer el cartel antes de entregarla",
+   "hint": "La maqueta ya está protegida; falta recuperar la información que identifica al equipo.",
+   "clue": "Ordena las acciones: cuidar lo que está a salvo y solucionar lo que falta.",
+   "option_notes": {
+    "Dejar la maqueta afuera y seguir buscando el cartel perdido": "Expone la maqueta al agua y busca un cartel ya perdido.",
+    "Entregar la caja sin cartel y ocultar que falta esa información": "Ignora una parte del trabajo y oculta el problema.",
+    "Volver a casa sin avisar y esperar que pase otro día": "Renuncia aunque todavía puede resolver la dificultad."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

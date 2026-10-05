@@ -1,0 +1,264 @@
+{
+ "oa": "OA15",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "¿Cuál acción ayuda más a obtener buenas calificaciones por esfuerzo y mérito?",
+   "options": [
+    "Estudiar con constancia y cumplir las tareas.",
+    "Ser amigo del profesor y pedirle una nota.",
+    "Esperar que la prueba sea muy fácil.",
+    "Comprar los útiles escolares más caros."
+   ],
+   "correct": "Estudiar con constancia y cumplir las tareas.",
+   "hint": "Las buenas calificaciones muestran lo aprendido mediante estudio y cumplimiento.",
+   "clue": "Piensa en la acción que mejora lo que sabes y haces en clases.",
+   "option_notes": {
+    "Ser amigo del profesor y pedirle una nota.": "Confunde la cercanía con el mérito académico.",
+    "Comprar los útiles escolares más caros.": "Cree que los objetos caros producen aprendizaje.",
+    "Esperar que la prueba sea muy fácil.": "Confunde la suerte con la preparación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "En un campeonato escolar, recibiría un reconocimiento deportivo quien...",
+   "options": [
+    "reclamó hasta lograr que cambiaran el resultado.",
+    "usó los implementos más caros del curso.",
+    "esperó que el equipo rival cometiera errores.",
+    "entrenó con constancia y respetó las reglas."
+   ],
+   "correct": "entrenó con constancia y respetó las reglas.",
+   "hint": "El mérito deportivo se muestra con práctica, buen desempeño y respeto por las reglas.",
+   "clue": "Busca una conducta que combine preparación y juego limpio.",
+   "option_notes": {
+    "usó los implementos más caros del curso.": "Confunde tener objetos costosos con tener mérito deportivo.",
+    "reclamó hasta lograr que cambiaran el resultado.": "Cree que insistir puede reemplazar el desempeño y el juego limpio.",
+    "esperó que el equipo rival cometiera errores.": "Confunde la suerte o el error ajeno con el mérito propio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "Si quieres ganar el aprecio de tus compañeros, ¿qué harías?",
+   "options": [
+    "Guardar todos los materiales para ti.",
+    "Elegir siempre los juegos del recreo.",
+    "Hablar más fuerte para llamar la atención.",
+    "Escuchar, ayudar y tratar a todos con respeto."
+   ],
+   "correct": "Escuchar, ayudar y tratar a todos con respeto.",
+   "hint": "El aprecio de los pares crece cuando actúas con respeto y colaboras.",
+   "clue": "Piensa en una acción que haga sentir bien e incluya a los demás.",
+   "option_notes": {
+    "Hablar más fuerte para llamar la atención.": "Confunde ser ruidoso con ser apreciado por los demás.",
+    "Guardar todos los materiales para ti.": "Cree que quedarse con recursos beneficia la convivencia.",
+    "Elegir siempre los juegos del recreo.": "Confunde mandar en los juegos con ser buen compañero."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "easy",
+   "text": "Completa: hay liderazgo positivo cuando una persona...",
+   "options": [
+    "elige lo más fácil y deja lo demás a otros.",
+    "manda sin escuchar para terminar más rápido.",
+    "habla primero para que nadie la corrija.",
+    "organiza, cumple su parte y escucha al grupo."
+   ],
+   "correct": "organiza, cumple su parte y escucha al grupo.",
+   "hint": "Liderar es orientar al grupo con responsabilidad, escucha y colaboración.",
+   "clue": "El liderazgo ayuda al grupo y también exige cumplir responsabilidades.",
+   "option_notes": {
+    "manda sin escuchar para terminar más rápido.": "Confunde liderazgo con imponer decisiones.",
+    "elige lo más fácil y deja lo demás a otros.": "Cree que liderar permite evitar las responsabilidades.",
+    "habla primero para que nadie la corrija.": "Confunde tener la palabra con guiar bien al grupo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Martín obtuvo una nota baja porque no preparó el control. ¿Qué decisión puede ayudarlo a mejorarla de manera justa?",
+   "options": [
+    "Pedir que le suban la nota porque se esforzó en otro ramo.",
+    "Revisar sus errores, estudiar y practicar antes del próximo control.",
+    "Copiar las respuestas de un compañero durante el próximo control.",
+    "Esperar que el profesor cambie la prueba por una más fácil."
+   ],
+   "correct": "Revisar sus errores, estudiar y practicar antes del próximo control.",
+   "hint": "Mejorar la calificación requiere aprender de los errores y prepararse.",
+   "clue": "Busca una acción que una revisar lo ocurrido con prepararse después.",
+   "option_notes": {
+    "Pedir que le suban la nota porque se esforzó en otro ramo.": "Confunde el esfuerzo en otra asignatura con el resultado de este control.",
+    "Copiar las respuestas de un compañero durante el próximo control.": "Cree que una nota obtenida copiando demuestra aprendizaje.",
+    "Esperar que el profesor cambie la prueba por una más fácil.": "Deja la mejora en la suerte o en una ventaja externa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "En una final, el equipo Cóndor ganó, pero insultó y rompió reglas. El equipo Alerce quedó segundo y respetó a todos. ¿Quién merece el premio al juego limpio?",
+   "options": [
+    "Ningún equipo, porque solo vale ganar.",
+    "El equipo Cóndor, porque obtuvo el primer lugar.",
+    "El equipo Alerce, por respetar las reglas y a sus compañeros.",
+    "Ambos equipos, porque llegaron a la final."
+   ],
+   "correct": "El equipo Alerce, por respetar las reglas y a sus compañeros.",
+   "hint": "El juego limpio premia el respeto y el cumplimiento de reglas, no solo el resultado.",
+   "clue": "El nombre del premio indica qué conducta debes buscar.",
+   "option_notes": {
+    "El equipo Cóndor, porque obtuvo el primer lugar.": "Confunde ganar la final con merecer el premio al juego limpio.",
+    "Ambos equipos, porque llegaron a la final.": "Cree que llegar lejos basta, aunque hubo faltas graves.",
+    "Ningún equipo, porque solo vale ganar.": "Piensa que el resultado es lo único importante."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Durante un mes, Valentina incluye a una compañera nueva, comparte materiales y la escucha. ¿Qué beneficio es más probable que reciba?",
+   "options": [
+    "Un premio deportivo por correr más rápido.",
+    "Una buena calificación en la próxima prueba.",
+    "El aprecio y el reconocimiento de sus compañeros.",
+    "Ser líder del grupo sin asumir responsabilidades."
+   ],
+   "correct": "El aprecio y el reconocimiento de sus compañeros.",
+   "hint": "Ayudar e incluir a otra persona puede generar aprecio y reconocimiento entre los pares.",
+   "clue": "Relaciona las acciones de Valentina con el beneficio que nace de convivir bien.",
+   "option_notes": {
+    "Una buena calificación en la próxima prueba.": "Confunde ayudar a una compañera con mejorar una prueba.",
+    "Un premio deportivo por correr más rápido.": "Confunde compañerismo con obtener un resultado deportivo.",
+    "Ser líder del grupo sin asumir responsabilidades.": "Cree que la simpatía basta para liderar sin cumplir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "medium",
+   "text": "Para escoger al encargado de un proyecto, ¿qué compañero muestra mejor liderazgo?",
+   "options": [
+    "Lucas es el mayor y decide todo sin consultar.",
+    "Diego reparte tareas, escucha ideas y cumple su responsabilidad.",
+    "Antonia tiene la nota más alta, aunque no participa con el grupo.",
+    "Emilia habla mucho, pero no termina las tareas."
+   ],
+   "correct": "Diego reparte tareas, escucha ideas y cumple su responsabilidad.",
+   "hint": "El liderazgo se demuestra al guiar, escuchar al grupo y responder por el trabajo.",
+   "clue": "Observa quién guía, escucha y responde por su trabajo.",
+   "option_notes": {
+    "Antonia tiene la nota más alta, aunque no participa con el grupo.": "Confunde buenas calificaciones con capacidad para liderar.",
+    "Lucas es el mayor y decide todo sin consultar.": "Cree que la edad permite mandar sin escuchar.",
+    "Emilia habla mucho, pero no termina las tareas.": "Confunde hablar bastante con cumplir una responsabilidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Camila entrenó seis semanas y mejoró su tiempo, pero llegó segunda. ¿Qué conclusión explica mejor su resultado?",
+   "options": [
+    "Su esfuerzo produjo progreso, aunque no aseguró el primer lugar.",
+    "Quien llega primero siempre se esforzó más que todos.",
+    "Si no ganó, entonces su entrenamiento no sirvió.",
+    "El resultado depende solo de tener buenos implementos."
+   ],
+   "correct": "Su esfuerzo produjo progreso, aunque no aseguró el primer lugar.",
+   "hint": "Practicar puede mejorar el desempeño, pero el esfuerzo no garantiza ganar cada competencia.",
+   "clue": "Distingue entre progresar gracias al entrenamiento y obtener el primer lugar.",
+   "option_notes": {
+    "Si no ganó, entonces su entrenamiento no sirvió.": "Confunde no ganar con no haber progresado.",
+    "Quien llega primero siempre se esforzó más que todos.": "Supone que el resultado revela exactamente el esfuerzo de cada persona.",
+    "El resultado depende solo de tener buenos implementos.": "Atribuye el desempeño únicamente a los objetos utilizados."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "El curso prepara premios: Sofía tiene mejores notas; Bruno ganó una carrera; Elisa ayuda y respeta; Mateo organiza el taller. ¿Qué dato permite elegir el premio por compañerismo?",
+   "options": [
+    "Las acciones de Elisa con sus compañeros.",
+    "El liderazgo de Mateo en el taller.",
+    "Las mejores calificaciones de Sofía.",
+    "La victoria de Bruno en la carrera."
+   ],
+   "correct": "Las acciones de Elisa con sus compañeros.",
+   "hint": "El premio por compañerismo se basa en cómo una persona ayuda, respeta e incluye a sus pares.",
+   "clue": "Busca el dato que describe la convivencia, no el rendimiento de otra área.",
+   "option_notes": {
+    "Las mejores calificaciones de Sofía.": "Confunde el premio por compañerismo con el logro académico.",
+    "La victoria de Bruno en la carrera.": "Confunde el compañerismo con el logro deportivo.",
+    "El liderazgo de Mateo en el taller.": "Confunde el liderazgo con la conducta de buen compañero."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "Un compañero fue elegido líder por tener la nota más alta, pero no cumplió tareas ni escuchó al grupo. ¿Qué debería hacer el curso?",
+   "options": [
+    "Mantenerlo, porque la nota más alta demuestra liderazgo.",
+    "Cambiarlo por quien tenga más amigos, aunque no cumpla.",
+    "Revisar la elección y considerar cómo organiza, escucha y cumple.",
+    "Elegir al mayor del curso sin conversar la decisión."
+   ],
+   "correct": "Revisar la elección y considerar cómo organiza, escucha y cumple.",
+   "hint": "Las calificaciones muestran un logro académico, pero liderar exige organizar, escuchar y cumplir.",
+   "clue": "Separa el criterio de notas del criterio necesario para dirigir al grupo.",
+   "option_notes": {
+    "Mantenerlo, porque la nota más alta demuestra liderazgo.": "Confunde un logro académico con las habilidades de liderazgo.",
+    "Cambiarlo por quien tenga más amigos, aunque no cumpla.": "Confunde popularidad con responsabilidad para liderar.",
+    "Elegir al mayor del curso sin conversar la decisión.": "Cree que la edad basta y evita considerar las acciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA15",
+   "difficulty": "hard",
+   "text": "En un trabajo grupal, Benjamín hizo muchas tareas, pero no cumplió acuerdos ni escuchó. Catalina hizo menos tareas, investigó bien y respetó el plan. Si se evalúa trabajo en equipo, ¿qué debe considerarse?",
+   "options": [
+    "Solo quién terminó primero la parte que le tocó.",
+    "El aporte de cada uno, el cumplimiento y la colaboración.",
+    "Solo la cantidad de tareas hechas por cada estudiante.",
+    "Solo quién obtuvo mejores notas antes del trabajo."
+   ],
+   "correct": "El aporte de cada uno, el cumplimiento y la colaboración.",
+   "hint": "El mérito grupal incluye aportar bien, cumplir acuerdos y colaborar respetuosamente.",
+   "clue": "No cuentes solo tareas: mira también la calidad del aporte y la conducta.",
+   "option_notes": {
+    "Solo la cantidad de tareas hechas por cada estudiante.": "Confunde hacer muchas tareas con colaborar mejor.",
+    "Solo quién terminó primero la parte que le tocó.": "Confunde rapidez con calidad y responsabilidad.",
+    "Solo quién obtuvo mejores notas antes del trabajo.": "Traslada notas anteriores a un desempeño distinto."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

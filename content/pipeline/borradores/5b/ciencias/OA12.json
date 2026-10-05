@@ -1,0 +1,268 @@
+{
+ "oa": "OA12",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "Al comparar toda el agua de la Tierra, ¿dónde se encuentra la mayor parte?",
+   "options": [
+    "En los océanos del planeta",
+    "En los glaciares y hielos",
+    "En las nubes y el vapor",
+    "En los ríos y lagos"
+   ],
+   "correct": "En los océanos del planeta",
+   "hint": "Los océanos contienen casi toda el agua terrestre y esa agua es principalmente salada.",
+   "clue": "Piensa en el lugar que cubre la mayor superficie del planeta.",
+   "option_notes": {
+    "En los glaciares y hielos": "Confunde una gran reserva de agua dulce con la mayor reserva total.",
+    "En los ríos y lagos": "Confunde el agua visible y cercana con la mayor reserva del planeta.",
+    "En las nubes y el vapor": "Sobreestima la pequeña cantidad de agua presente en la atmósfera."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "En la cordillera de los Andes hay hielo que guarda agua durante muchos años. ¿Qué reserva representa?",
+   "options": [
+    "Una nube de tormenta",
+    "Un glaciar de montaña",
+    "Un río de deshielo",
+    "Un lago cordillerano"
+   ],
+   "correct": "Un glaciar de montaña",
+   "hint": "Un glaciar es una gran masa de hielo que almacena agua dulce por largo tiempo.",
+   "clue": "Busca la opción que nombra hielo acumulado y permanente.",
+   "option_notes": {
+    "Un río de deshielo": "Confunde el agua que corre al derretirse con el hielo que la almacena.",
+    "Un lago cordillerano": "Confunde una masa de agua líquida con una masa de hielo.",
+    "Una nube de tormenta": "Confunde gotas o cristales suspendidos en el aire con hielo terrestre."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "El agua que ocupa espacios entre el suelo y las rocas, bajo la superficie, se llama:",
+   "options": [
+    "Agua subterránea",
+    "Agua oceánica",
+    "Agua de los glaciares",
+    "Agua de las nubes"
+   ],
+   "correct": "Agua subterránea",
+   "hint": "Se llama agua subterránea porque se encuentra bajo el suelo, entre materiales y rocas.",
+   "clue": "Observa dónde está el agua: no está sobre el suelo ni en la atmósfera.",
+   "option_notes": {
+    "Agua oceánica": "Confunde el lugar salado más grande del planeta con el subsuelo.",
+    "Agua de las nubes": "Confunde agua suspendida en la atmósfera con agua bajo tierra.",
+    "Agua de los glaciares": "Confunde agua congelada en la superficie con agua entre rocas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "easy",
+   "text": "¿Qué nombre recibe el agua que está en la atmósfera en forma de gas?",
+   "options": [
+    "Agua líquida de un lago",
+    "Vapor de agua en el aire",
+    "Hielo acumulado en un glaciar",
+    "Agua salada del océano"
+   ],
+   "correct": "Vapor de agua en el aire",
+   "hint": "Cuando el agua está en estado gaseoso y mezclada con el aire, se llama vapor de agua.",
+   "clue": "Fíjate en el estado del agua y en el lugar donde se encuentra.",
+   "option_notes": {
+    "Agua líquida de un lago": "Confunde agua líquida almacenada en la superficie con un gas.",
+    "Hielo acumulado en un glaciar": "Confunde agua congelada con agua en estado gaseoso.",
+    "Agua salada del océano": "Confunde una característica del océano con el estado gaseoso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "En Puerto Varas, Martina compara agua del mar con agua del lago Llanquihue. ¿Qué comparación es correcta?",
+   "options": [
+    "Ambos tienen agua dulce porque el agua no cambia",
+    "El mar tiene agua dulce y el lago, agua salada",
+    "Ambos tienen agua salada porque están al aire libre",
+    "El mar tiene agua salada y el lago, agua dulce"
+   ],
+   "correct": "El mar tiene agua salada y el lago, agua dulce",
+   "hint": "El agua marina es salada; el lago Llanquihue contiene agua dulce.",
+   "clue": "Compara el origen de cada muestra: una proviene del mar y otra de un lago.",
+   "option_notes": {
+    "El mar tiene agua dulce y el lago, agua salada": "Invierte las características habituales del mar y del lago.",
+    "Ambos tienen agua salada porque están al aire libre": "Cree que estar al aire libre determina si el agua es salada.",
+    "Ambos tienen agua dulce porque el agua no cambia": "Piensa que el agua mantiene siempre la misma cantidad de sales."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "Una nube sobre el valle se calienta y parte de sus gotitas pasa al aire. ¿Qué ocurre con esa agua?",
+   "options": [
+    "Desaparece y deja de ser agua",
+    "Se convierte en agua subterránea",
+    "Se transforma de inmediato en hielo",
+    "Se transforma en vapor de agua"
+   ],
+   "correct": "Se transforma en vapor de agua",
+   "hint": "Al recibir calor, el agua líquida puede evaporarse y pasar al estado gaseoso.",
+   "clue": "Relaciona el calor con el cambio desde gotitas líquidas hacia el aire.",
+   "option_notes": {
+    "Se convierte en agua subterránea": "Confunde evaporación con infiltración del agua hacia el subsuelo.",
+    "Se transforma de inmediato en hielo": "Asocia el calentamiento con congelación, que ocurre al enfriarse.",
+    "Desaparece y deja de ser agua": "Cree que un cambio de estado destruye el agua."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: evalúa cambio de estado (gotas a vapor), no distribución ni comparación de volúmenes"
+   ]
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "En un modelo hay 100 L de agua: 97 L representan océanos y 3 L representan agua dulce. ¿Qué muestra mejor el modelo?",
+   "options": [
+    "Los océanos contienen solo una parte pequeña",
+    "El agua dulce corresponde a una parte pequeña",
+    "Los ríos y lagos guardan casi toda el agua",
+    "El agua dulce supera a toda el agua salada"
+   ],
+   "correct": "El agua dulce corresponde a una parte pequeña",
+   "hint": "De cada 100 L, solo 3 L serían agua dulce; por eso su volumen es mucho menor.",
+   "clue": "Compara directamente las cantidades 97 y 3 antes de elegir.",
+   "option_notes": {
+    "El agua dulce supera a toda el agua salada": "Lee al revés las cantidades del modelo.",
+    "Los océanos contienen solo una parte pequeña": "Confunde los 3 L de agua dulce con el volumen de los océanos.",
+    "Los ríos y lagos guardan casi toda el agua": "Confunde una reserva pequeña y visible con casi toda el agua."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "medium",
+   "text": "En el norte de Chile, un pozo entrega agua que estaba entre rocas del subsuelo. ¿Qué relación describe mejor el caso?",
+   "options": [
+    "El pozo aprovecha aguas subterráneas",
+    "El pozo crea agua dentro de las rocas",
+    "El pozo extrae hielo desde una nube",
+    "El pozo convierte agua salada en vapor"
+   ],
+   "correct": "El pozo aprovecha aguas subterráneas",
+   "hint": "El agua almacenada bajo la superficie, entre suelo y rocas, es agua subterránea.",
+   "clue": "La pista está en la ubicación original del agua: bajo la superficie.",
+   "option_notes": {
+    "El pozo convierte agua salada en vapor": "Confunde sacar agua del suelo con cambiar agua salada a gas.",
+    "El pozo crea agua dentro de las rocas": "Piensa que el agua aparece por acción del pozo.",
+    "El pozo extrae hielo desde una nube": "Confunde una nube con el agua almacenada bajo tierra."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Ordena de mayor a menor cantidad de agua almacenada: océanos, glaciares, aguas subterráneas y ríos. ¿Cuál orden es correcto?",
+   "options": [
+    "Glaciares, océanos, ríos, aguas subterráneas",
+    "Ríos, aguas subterráneas, glaciares, océanos",
+    "Océanos, glaciares, aguas subterráneas, ríos",
+    "Aguas subterráneas, ríos, océanos, glaciares"
+   ],
+   "correct": "Océanos, glaciares, aguas subterráneas, ríos",
+   "hint": "Los océanos reúnen casi toda el agua; luego vienen glaciares, aguas subterráneas y, muy abajo, ríos.",
+   "clue": "Compara primero el agua total y después las reservas de agua dulce.",
+   "option_notes": {
+    "Glaciares, océanos, ríos, aguas subterráneas": "Pone los glaciares antes que los océanos y baja demasiado a los ríos.",
+    "Ríos, aguas subterráneas, glaciares, océanos": "Coloca la reserva más pequeña al inicio y la mayor al final.",
+    "Aguas subterráneas, ríos, océanos, glaciares": "Intercambia el orden de varias reservas y deja los ríos demasiado arriba."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "En una localidad, un glaciar contiene mucha agua, pero está lejos y congelado; un río cercano tiene poca. ¿Por qué no basta el glaciar para resolver la falta de agua?",
+   "options": [
+    "Porque toda el agua de un glaciar es salada y no se puede usar",
+    "Porque los ríos contienen más agua que los glaciares",
+    "Porque el agua dulce solo existe dentro de las nubes",
+    "Porque mucha agua dulce está congelada o es difícil de extraer"
+   ],
+   "correct": "Porque mucha agua dulce está congelada o es difícil de extraer",
+   "hint": "El agua dulce puede existir en gran volumen, pero no estar disponible de inmediato.",
+   "clue": "Distingue entre la cantidad de agua y la facilidad para acceder a ella.",
+   "option_notes": {
+    "Porque toda el agua de un glaciar es salada y no se puede usar": "Confunde agua congelada de un glaciar con agua salada del océano.",
+    "Porque los ríos contienen más agua que los glaciares": "Confunde la cercanía del río con una mayor cantidad total.",
+    "Porque el agua dulce solo existe dentro de las nubes": "Reduce el agua dulce de la Tierra a la que está en la atmósfera."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "En una maqueta de 1.000 L, 970 L son agua salada y 30 L, agua dulce. De esos 30 L, 29 L están en glaciares y aguas subterráneas; 1 L está en ríos, lagos, nubes y vapor. ¿Qué se infiere?",
+   "options": [
+    "La parte de agua dulce supera a toda el agua salada",
+    "Los océanos tienen menos agua que los glaciares y lagos",
+    "La mayor parte del agua dulce está en glaciares y aguas subterráneas",
+    "Las nubes y el vapor guardan casi toda el agua dulce"
+   ],
+   "correct": "La mayor parte del agua dulce está en glaciares y aguas subterráneas",
+   "hint": "El modelo concentra 29 de los 30 L de agua dulce en glaciares y aguas subterráneas.",
+   "clue": "Mira qué grupo reúne 29 L y compáralo con el 1 L restante.",
+   "option_notes": {
+    "La parte de agua dulce supera a toda el agua salada": "Confunde 30 L de agua dulce con una cantidad mayor que 970 L.",
+    "Los océanos tienen menos agua que los glaciares y lagos": "Invierte la comparación entre océanos y reservas de agua dulce.",
+    "Las nubes y el vapor guardan casi toda el agua dulce": "Confunde una pequeña parte atmosférica con la mayoría del agua dulce."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA12",
+   "difficulty": "hard",
+   "text": "Durante una sequía en la zona central, baja el caudal de un río, aunque existen glaciares y agua bajo el suelo. ¿Qué inferencia explica mejor el problema?",
+   "options": [
+    "Los ríos contienen más agua que todas las demás reservas",
+    "Los glaciares convierten toda el agua cercana en agua salada",
+    "El agua dulce está repartida en reservas distintas y no toda es accesible",
+    "El agua subterránea siempre se encuentra sobre la superficie"
+   ],
+   "correct": "El agua dulce está repartida en reservas distintas y no toda es accesible",
+   "hint": "Que existan reservas no significa que toda el agua esté cerca, líquida o disponible para ese río.",
+   "clue": "Relaciona la sequía con la distribución y el acceso, no solo con la existencia del agua.",
+   "option_notes": {
+    "Los glaciares convierten toda el agua cercana en agua salada": "Confunde hielo con sal y supone un cambio que no ocurre.",
+    "El agua subterránea siempre se encuentra sobre la superficie": "Invierte el significado de subterránea: bajo tierra.",
+    "Los ríos contienen más agua que todas las demás reservas": "Confunde un cauce visible y pequeño con la mayor reserva total."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

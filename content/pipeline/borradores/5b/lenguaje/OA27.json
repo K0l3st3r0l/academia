@@ -1,0 +1,264 @@
+{
+ "oa": "OA27",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA27",
+   "difficulty": "easy",
+   "text": "Es tu primer día en un taller. ¿Cuál frase te sirve para presentarte a ti mismo?",
+   "options": [
+    "Hola, soy Benjamín. Mucho gusto.",
+    "Hola, él es Benjamín. Mucho gusto.",
+    "Gracias por invitarme al taller.",
+    "¿Me prestas tu cuaderno, por favor?"
+   ],
+   "correct": "Hola, soy Benjamín. Mucho gusto.",
+   "hint": "Al presentarte a ti mismo dices tu nombre y saludas a quienes conoces.",
+   "clue": "Busca la frase en que hablas de ti y dices quién eres.",
+   "option_notes": {
+    "Hola, él es Benjamín. Mucho gusto.": "Presenta a otra persona en vez de decir quién eres tú.",
+    "¿Me prestas tu cuaderno, por favor?": "Formula una petición, pero no se presenta.",
+    "Gracias por invitarme al taller.": "Agradece una invitación, pero no se presenta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "easy",
+   "text": "Al llegar a la escuela a las 8:00, ves a tu profesora en la entrada. ¿Qué dices para saludarla?",
+   "options": [
+    "Permiso, profesora.",
+    "Hasta mañana, profesora.",
+    "Buenos días, profesora.",
+    "Buenas noches, profesora."
+   ],
+   "correct": "Buenos días, profesora.",
+   "hint": "A las 8:00 corresponde un saludo para comenzar el día.",
+   "clue": "Piensa en una frase que inicia el encuentro, no que lo termina.",
+   "option_notes": {
+    "Buenas noches, profesora.": "Usa un saludo de la noche aunque recién comienza la jornada.",
+    "Permiso, profesora.": "Pide autorización, pero no saluda.",
+    "Hasta mañana, profesora.": "Se despide en vez de iniciar el saludo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "easy",
+   "text": "Necesitas pedirle un lápiz a tu compañero. ¿Cuál petición usa una fórmula de cortesía?",
+   "options": [
+    "Gracias por tu lápiz.",
+    "¿Me prestas tu lápiz, por favor?",
+    "Perdón por usar tu lápiz.",
+    "Préstame tu lápiz ahora."
+   ],
+   "correct": "¿Me prestas tu lápiz, por favor?",
+   "hint": "Por favor acompaña una petición y la hace respetuosa.",
+   "clue": "Primero debes pedir el lápiz y hacerlo de manera amable.",
+   "option_notes": {
+    "Préstame tu lápiz ahora.": "Da una orden y omite una fórmula de cortesía.",
+    "Gracias por tu lápiz.": "Agradece, pero no pide el lápiz.",
+    "Perdón por usar tu lápiz.": "Se disculpa después de usarlo, sin pedirlo antes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "easy",
+   "text": "Tu equipo ganó un partido y te sientes muy alegre. ¿Qué dices para expresar tu sentimiento?",
+   "options": [
+    "En mi opinión, debemos practicar más.",
+    "Gracias por prestarme la pelota.",
+    "¿Podemos jugar otro partido?",
+    "Me siento muy feliz por este triunfo."
+   ],
+   "correct": "Me siento muy feliz por este triunfo.",
+   "hint": "Para expresar un sentimiento, dices cómo te sientes.",
+   "clue": "Busca la frase que cuenta una emoción, no una opinión ni una petición.",
+   "option_notes": {
+    "En mi opinión, debemos practicar más.": "Expresa una opinión, pero no cómo te sientes.",
+    "¿Podemos jugar otro partido?": "Formula una pregunta sobre una actividad.",
+    "Gracias por prestarme la pelota.": "Agradece un préstamo, pero no expresa una emoción."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "medium",
+   "text": "Llega una compañera llamada Valentina y estás junto a tu amigo Diego. ¿Qué dices para presentar a Diego?",
+   "options": [
+    "Hola, soy Valentina. Mucho gusto.",
+    "Diego, te presento a Valentina.",
+    "Valentina, me presento: soy Diego.",
+    "Valentina, te presento a Diego."
+   ],
+   "correct": "Valentina, te presento a Diego.",
+   "hint": "Presentar a otra persona es nombrarla y decirle a quién se la estás mostrando.",
+   "clue": "La frase debe presentar a Diego ante Valentina.",
+   "option_notes": {
+    "Valentina, me presento: soy Diego.": "Habla como si fueras Diego y se presenta a sí mismo.",
+    "Diego, te presento a Valentina.": "Presenta a Valentina, no a Diego.",
+    "Hola, soy Valentina. Mucho gusto.": "Habla como si fueras la compañera que llega."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "medium",
+   "text": "En una conversación sobre cuidar la plaza, tu compañero propone plantar árboles. ¿Cuál respuesta expresa una opinión con respeto?",
+   "options": [
+    "No sé; ¿me prestas tu regla?",
+    "Eso es absurdo; mi idea es la única buena.",
+    "Estoy de acuerdo; creo que dará más sombra.",
+    "Planten árboles y no discutan."
+   ],
+   "correct": "Estoy de acuerdo; creo que dará más sombra.",
+   "hint": "Una opinión respetuosa puede mostrar acuerdo y explicar brevemente tu idea.",
+   "clue": "Elige una respuesta que valore la idea y diga lo que piensas sin imponer.",
+   "option_notes": {
+    "Eso es absurdo; mi idea es la única buena.": "Rechaza la propuesta y descalifica a la otra persona.",
+    "No sé; ¿me prestas tu regla?": "Cambia de tema y formula una petición distinta.",
+    "Planten árboles y no discutan.": "Da una orden en vez de expresar una opinión respetuosa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "medium",
+   "text": "En la biblioteca buscas un diccionario. ¿Cuál pregunta es clara y cortés para pedir ayuda?",
+   "options": [
+    "Gracias, ya encontré los diccionarios.",
+    "Diccionarios, allá, ¿cierto?",
+    "¿Me puedes indicar, por favor, dónde están los diccionarios?",
+    "Tráeme un diccionario de inmediato."
+   ],
+   "correct": "¿Me puedes indicar, por favor, dónde están los diccionarios?",
+   "hint": "Es una pregunta clara y usa por favor para pedir ayuda amablemente.",
+   "clue": "Debe ser una pregunta y usar una expresión amable para pedir ayuda.",
+   "option_notes": {
+    "Diccionarios, allá, ¿cierto?": "Es poco clara y no pide ayuda de manera completa.",
+    "Tráeme un diccionario de inmediato.": "Da una orden y no usa una forma cortés.",
+    "Gracias, ya encontré los diccionarios.": "Agradece, pero no solicita información."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "medium",
+   "text": "Vas a pasar entre dos personas que conversan. ¿Qué dices para pedir espacio sin interrumpir de mala manera?",
+   "options": [
+    "¿Me dan permiso, por favor?",
+    "Gracias, no necesito espacio.",
+    "Perdón, ya pasé por aquí.",
+    "Muévanse, que tengo que pasar."
+   ],
+   "correct": "¿Me dan permiso, por favor?",
+   "hint": "Pedir permiso avisa que necesitas pasar y por favor muestra cortesía.",
+   "clue": "Necesitas solicitar espacio antes de pasar.",
+   "option_notes": {
+    "Muévanse, que tengo que pasar.": "Da una orden y no pide espacio cortésmente.",
+    "Perdón, ya pasé por aquí.": "Se disculpa después de pasar, sin pedir permiso.",
+    "Gracias, no necesito espacio.": "Agradece algo que no ha ocurrido y contradice la situación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "hard",
+   "text": "Lee: «En la feria científica, Sofía se acerca al puesto de Martín. Quiere saber cómo funciona el filtro de agua y hablar con respeto». ¿Qué podría decir Sofía?",
+   "options": [
+    "Perdón por venir. Mejor no te hago ninguna pregunta.",
+    "Hola, soy Sofía. ¿Me explicas, por favor, cómo funciona?",
+    "Gracias, Martín. ¿Me dejas el filtro sin preguntar?",
+    "Martín, explícame el filtro. Yo ya sé más que tú."
+   ],
+   "correct": "Hola, soy Sofía. ¿Me explicas, por favor, cómo funciona?",
+   "hint": "La mejor respuesta saluda, se presenta y formula una pregunta con cortesía.",
+   "clue": "Revisa si la frase cumple el saludo, la presentación y la pregunta amable.",
+   "option_notes": {
+    "Martín, explícame el filtro. Yo ya sé más que tú.": "Ordena, presume y no saluda ni se presenta cortésmente.",
+    "Gracias, Martín. ¿Me dejas el filtro sin preguntar?": "Pide el objeto, pero no pregunta cómo funciona.",
+    "Perdón por venir. Mejor no te hago ninguna pregunta.": "Se disculpa, pero evita hacer la pregunta que necesita."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "hard",
+   "text": "En tu grupo, Martina propone usar cartón para una maqueta, pero tú prefieres usar madera. ¿Qué respuesta permite expresar tu idea respetando la suya?",
+   "options": [
+    "Tu propuesta es mala; no la vuelvas a mencionar.",
+    "Entiendo tu propuesta; yo prefiero usar madera porque dura más.",
+    "No, se hará como yo digo y punto.",
+    "¿Me prestas pegamento? No quiero hablar de eso."
+   ],
+   "correct": "Entiendo tu propuesta; yo prefiero usar madera porque dura más.",
+   "hint": "Puedes discrepar, explicar tu razón y reconocer la propuesta de otra persona.",
+   "clue": "Busca una respuesta que discrepe sin atacar y explique tu preferencia.",
+   "option_notes": {
+    "No, se hará como yo digo y punto.": "Impone una decisión y no respeta la opinión de Martina.",
+    "Tu propuesta es mala; no la vuelvas a mencionar.": "Insulta la idea y cierra la conversación.",
+    "¿Me prestas pegamento? No quiero hablar de eso.": "Cambia de tema y no expresa tu idea sobre la maqueta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "hard",
+   "text": "Sin querer manchas el cuaderno que Camila te prestó. ¿Cuál respuesta usa las convenciones adecuadas?",
+   "options": [
+    "Hola, Camila; tu cuaderno quedó sucio, arréglalo.",
+    "No pasa nada; gracias por prestármelo.",
+    "Permiso, Camila; lo limpiaré, pero no fue mi culpa.",
+    "Perdón por mancharlo; lo limpiaré y gracias por prestármelo."
+   ],
+   "correct": "Perdón por mancharlo; lo limpiaré y gracias por prestármelo.",
+   "hint": "Ante un daño, corresponde disculparse, proponer repararlo y agradecer el préstamo.",
+   "clue": "Piensa qué debes decir por el accidente, cómo responderás y qué agradecerás.",
+   "option_notes": {
+    "No pasa nada; gracias por prestármelo.": "Agradece, pero no se disculpa ni propone reparar el daño.",
+    "Permiso, Camila; lo limpiaré, pero no fue mi culpa.": "Usa permiso sin necesidad y evita asumir responsabilidad.",
+    "Hola, Camila; tu cuaderno quedó sucio, arréglalo.": "Saluda y culpa a Camila en vez de disculparse."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA27",
+   "difficulty": "hard",
+   "text": "En una videollamada, una estudiante de Arica comparte una idea. No la escuchaste bien y quieres opinar después. ¿Qué intervención es más adecuada?",
+   "options": [
+    "Perdón, no escuché. ¿Podrías repetirlo, por favor? Luego opino.",
+    "Permiso, saldré de la llamada; no volveré a preguntar.",
+    "Habla más fuerte; me toca y tu idea no importa.",
+    "Gracias por hablar. Opino que no entendiste nada."
+   ],
+   "correct": "Perdón, no escuché. ¿Podrías repetirlo, por favor? Luego opino.",
+   "hint": "La respuesta reconoce que no escuchaste, pide repetir con cortesía y espera tu turno para opinar.",
+   "clue": "Elige la intervención que repara el problema, solicita aclaración y respeta el diálogo.",
+   "option_notes": {
+    "Habla más fuerte; me toca y tu idea no importa.": "Exige e interrumpe, además de despreciar la idea de otra persona.",
+    "Gracias por hablar. Opino que no entendiste nada.": "Usa gracias, pero ofende y no pide aclarar la idea.",
+    "Permiso, saldré de la llamada; no volveré a preguntar.": "Pide permiso para retirarse, pero abandona la conversación."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

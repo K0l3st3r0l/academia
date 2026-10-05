@@ -690,7 +690,8 @@ describe('ronda por OA con informe para el profesor', () => {
   async function seedOaQuestions() {
     const { teacher, student1, student2, room } = await seedSingleQuestionGame({ subject: 'matematica' });
     await pool.query("UPDATE questions SET oa_code = 'OA1' WHERE subject = 'matematica'");
-    await createQuestion(pool, { subject: 'matematica', gradeLevel: '5b', options: ['10', '100', '1', '1000'], correct: '10', oaCode: 'OA20', text: 'mm en 1 cm' });
+    const q = await createQuestion(pool, { subject: 'matematica', gradeLevel: '5b', options: ['10', '100', '1', '1000'], correct: '10', oaCode: 'OA20', text: 'mm en 1 cm' });
+    await pool.query('UPDATE questions SET option_notes = $1 WHERE id = $2', [JSON.stringify({ 100: 'Usa la equivalencia de metro a centímetro' }), q.id]);
     return { teacher, student1, student2, room };
   }
 
@@ -726,7 +727,7 @@ describe('ronda por OA con informe para el profesor', () => {
     teacherSocket.emit('game:stop', { roomCode: room.code });
     const report = await teacherReportP;
     await projectorReportP;
-    expect(report.questions[0]).toMatchObject({ oaCode: 'OA20', answered: 2, correct: 1, correctAnswer: '10', topWrong: { answer: '100', count: 1 } });
+    expect(report.questions[0]).toMatchObject({ oaCode: 'OA20', answered: 2, correct: 1, correctAnswer: '10', topWrong: { answer: '100', count: 1, note: 'Usa la equivalencia de metro a centímetro' } });
     expect(report.oas).toEqual([expect.objectContaining({ oaCode: 'OA20', answered: 2, correct: 1 })]);
     expect(studentGotReport).toBe(false);
 

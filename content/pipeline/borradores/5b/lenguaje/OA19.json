@@ -1,0 +1,264 @@
+{
+ "oa": "OA19",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "Leíste que «nativa» describe una especie propia de un lugar. Completa tu oración sobre el copihue: «El copihue es una flor ___ de Chile».",
+   "options": [
+    "cuadrada",
+    "salada",
+    "nativa",
+    "ruidosa"
+   ],
+   "correct": "nativa",
+   "hint": "«Nativa» indica que la especie pertenece originalmente al lugar mencionado.",
+   "clue": "Piensa en la relación entre la flor y el territorio, no en su aspecto.",
+   "option_notes": {
+    "ruidosa": "Confunde el origen de la flor con una característica de sonido.",
+    "cuadrada": "Se fija en una posible forma, no en el lugar de origen.",
+    "salada": "Relaciona la flor con un sabor, no con su procedencia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "En un texto sobre humedales, aprendiste que «resguardar» significa proteger. En tu recomendación, ¿qué oración incorpora esa palabra de manera pertinente?",
+   "options": [
+    "Para resguardar el humedal, espantaremos sus aves.",
+    "Para resguardar el humedal, arrancaremos plantas.",
+    "Para resguardar el humedal, botaremos basura.",
+    "Para resguardar el humedal, evitaremos botar basura."
+   ],
+   "correct": "Para resguardar el humedal, evitaremos botar basura.",
+   "hint": "Resguardar es proteger; observa qué acción cuida el lugar.",
+   "clue": "Busca la recomendación que reduzca el daño al humedal.",
+   "option_notes": {
+    "Para resguardar el humedal, botaremos basura.": "Confunde una acción de cuidado con una acción que ensucia.",
+    "Para resguardar el humedal, arrancaremos plantas.": "Confunde proteger las plantas con arrancarlas.",
+    "Para resguardar el humedal, espantaremos sus aves.": "Confunde cuidar el hábitat con ahuyentar a sus animales."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "Leíste que «escaso» significa que hay poco. Para respaldar en tu informe «El agua disponible era escasa», ¿qué dato elegirías?",
+   "options": [
+    "Un canal llevaba agua con mucha fuerza.",
+    "Solo quedaban dos estanques pequeños.",
+    "La lluvia cubrió todo el valle.",
+    "El agua llenaba todos los estanques."
+   ],
+   "correct": "Solo quedaban dos estanques pequeños.",
+   "hint": "El dato correcto muestra que quedaba poca agua disponible.",
+   "clue": "Busca el dato que indique una cantidad reducida, no una gran cantidad.",
+   "option_notes": {
+    "El agua llenaba todos los estanques.": "Confunde una gran cantidad de agua con una cantidad reducida.",
+    "Un canal llevaba agua con mucha fuerza.": "Se fija en la velocidad del agua, no en cuánto queda.",
+    "La lluvia cubrió todo el valle.": "Interpreta una lluvia extensa como falta de agua."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "easy",
+   "text": "En un relato leído, aprendiste que «sigiloso» describe a quien se mueve sin hacer ruido. Al escribir sobre un gato, ¿qué acción corresponde?",
+   "options": [
+    "Corrió golpeando las macetas del patio.",
+    "Saltó y maulló para llamar la atención.",
+    "Se acercó al plato sin que nadie lo oyera.",
+    "Durmió junto a la estufa toda la tarde."
+   ],
+   "correct": "Se acercó al plato sin que nadie lo oyera.",
+   "hint": "La acción correcta muestra un desplazamiento silencioso y difícil de notar.",
+   "clue": "Busca la acción en que el gato se mueve sin ser escuchado.",
+   "option_notes": {
+    "Saltó y maulló para llamar la atención.": "Confunde sigilo con una acción ruidosa para llamar la atención.",
+    "Durmió junto a la estufa toda la tarde.": "Confunde moverse sin ruido con simplemente estar quieto.",
+    "Corrió golpeando las macetas del patio.": "Elige un movimiento ruidoso, opuesto al significado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "Lee: «La feria estaba abarrotada; apenas se podía caminar entre los puestos». En tu descripción, ¿qué detalle demuestra mejor que comprendiste «abarrotada»?",
+   "options": [
+    "Muchas personas ocupaban casi todo el espacio.",
+    "La feria quedaba cerca de una plaza.",
+    "Los puestos ofrecían frutas de distintos colores.",
+    "Algunos vendedores llegaron temprano."
+   ],
+   "correct": "Muchas personas ocupaban casi todo el espacio.",
+   "hint": "«Abarrotada» se refiere a un lugar lleno de personas o cosas.",
+   "clue": "Elige el detalle que explica por qué costaba caminar.",
+   "option_notes": {
+    "Los puestos ofrecían frutas de distintos colores.": "Confunde variedad de productos con cantidad de personas o cosas.",
+    "La feria quedaba cerca de una plaza.": "Se fija en la ubicación, no en el espacio lleno.",
+    "Algunos vendedores llegaron temprano.": "Confunde la hora de llegada con la falta de espacio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "En un texto sobre aves, aprendiste que «endémico» significa propio de una zona. Un compañero escribió: «El picaflor de Juan Fernández es endémico porque vive en muchos lugares». ¿Qué reescritura usa bien «endémico»?",
+   "options": [
+    "El picaflor de Juan Fernández es endémico porque visita muchos países.",
+    "El picaflor de Juan Fernández es endémico porque migra cada temporada.",
+    "El picaflor de Juan Fernández es endémico de ese archipiélago.",
+    "El picaflor de Juan Fernández es endémico de todos los continentes."
+   ],
+   "correct": "El picaflor de Juan Fernández es endémico de ese archipiélago.",
+   "hint": "«Endémico» señala que una especie es propia de una zona específica.",
+   "clue": "Compara la palabra con el lugar donde vive la especie.",
+   "option_notes": {
+    "El picaflor de Juan Fernández es endémico de todos los continentes.": "Confunde una especie propia de una zona con una especie mundial.",
+    "El picaflor de Juan Fernández es endémico porque migra cada temporada.": "Confunde el lugar exclusivo con el movimiento de migración.",
+    "El picaflor de Juan Fernández es endémico porque visita muchos países.": "Confunde distribución limitada con viajar por muchos países."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "Escuchaste que «sin embargo» introduce un contraste. ¿En cuál opción une ideas opuestas?",
+   "options": [
+    "Se anunció sol; sin embargo, cayó una lluvia intensa.",
+    "Se anunció sol; sin embargo, el cielo estaba despejado.",
+    "Se anunció sol; sin embargo, llevé bloqueador.",
+    "Se anunció sol; sin embargo, salimos al mediodía."
+   ],
+   "correct": "Se anunció sol; sin embargo, cayó una lluvia intensa.",
+   "hint": "El conector es adecuado cuando la segunda idea sorprende o contradice la primera.",
+   "clue": "Busca una segunda idea que no coincida con lo anunciado.",
+   "option_notes": {
+    "Se anunció sol; sin embargo, el cielo estaba despejado.": "Une dos ideas que coinciden: sol anunciado y cielo despejado.",
+    "Se anunció sol; sin embargo, salimos al mediodía.": "Agrega un momento, pero no presenta oposición.",
+    "Se anunció sol; sin embargo, llevé bloqueador.": "Agrega una precaución, pero no contradice el pronóstico."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "medium",
+   "text": "En un relato escuchaste que un perro guía era «obediente»: seguía las indicaciones. Al escribir su actuación, ¿qué opción muestra también una consecuencia lógica?",
+   "options": [
+    "Era obediente, por eso nadie le dio instrucciones.",
+    "Era obediente, aunque siempre hacía lo contrario.",
+    "Era obediente, así que ignoró la señal y cruzó solo.",
+    "Era obediente, así que siguió la señal y evitó el peligro."
+   ],
+   "correct": "Era obediente, así que siguió la señal y evitó el peligro.",
+   "hint": "Ser obediente implica seguir la indicación; la consecuencia debe concordar con esa acción.",
+   "clue": "Relaciona el significado de la palabra con lo que ocurre después de la señal.",
+   "option_notes": {
+    "Era obediente, así que ignoró la señal y cruzó solo.": "El perro ignora la señal, lo contrario de ser obediente.",
+    "Era obediente, por eso nadie le dio instrucciones.": "Si necesita obedecer, sí debe recibir alguna indicación.",
+    "Era obediente, aunque siempre hacía lo contrario.": "Hacer siempre lo contrario contradice la palabra."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "Lee: «El zorro olfateó el patio y se alejó al oír voces». En tu relato, quieres resumir esa conducta sin inventar hechos. ¿Qué opción incorpora «cauteloso»?",
+   "options": [
+    "El zorro cauteloso ignoró las voces y avanzó sin detenerse.",
+    "El zorro cauteloso revisó el patio y se alejó al oír voces.",
+    "El zorro cauteloso tomó comida y se quedó junto a la casa.",
+    "El zorro cauteloso evitó acercarse y nunca revisó el patio."
+   ],
+   "correct": "El zorro cauteloso revisó el patio y se alejó al oír voces.",
+   "hint": "La conducta cautelosa se reconoce porque observa con cuidado y se retira ante un posible riesgo.",
+   "clue": "Elige la opción que conserve las dos acciones del texto y muestre precaución.",
+   "option_notes": {
+    "El zorro cauteloso tomó comida y se quedó junto a la casa.": "Agrega acciones que el texto no menciona y no muestran cautela.",
+    "El zorro cauteloso ignoró las voces y avanzó sin detenerse.": "Cambia la reacción del zorro por una conducta arriesgada.",
+    "El zorro cauteloso evitó acercarse y nunca revisó el patio.": "Niega que revisara el patio, un hecho central del texto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "Lee: «El parque alberga aves, zorros, insectos y plantas, pero la basura aumenta». Aprendiste que «biodiversidad» es variedad de seres vivos y «amenaza», un peligro. ¿Qué conclusión integra ambas?",
+   "options": [
+    "La basura es una amenaza para la biodiversidad del parque.",
+    "La amenaza protege la biodiversidad al ensuciar el parque.",
+    "La biodiversidad es una amenaza porque reúne muchas especies.",
+    "La biodiversidad aumenta cuando la basura cubre los senderos."
+   ],
+   "correct": "La basura es una amenaza para la biodiversidad del parque.",
+   "hint": "La oración correcta relaciona la variedad de seres vivos con el peligro que la afecta.",
+   "clue": "Une el elemento dañino con aquello que puede resultar afectado.",
+   "option_notes": {
+    "La biodiversidad es una amenaza porque reúne muchas especies.": "Invierte los significados: la variedad no es el peligro.",
+    "La amenaza protege la biodiversidad al ensuciar el parque.": "Afirma que una acción dañina protege la variedad de seres vivos.",
+    "La biodiversidad aumenta cuando la basura cubre los senderos.": "Confunde un daño al parque con un aumento de su biodiversidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "En un texto aprendiste que «hábitat» es el lugar donde vive una especie. Tu borrador dice: «La contaminación daña el lugar donde viven las ranas. Por eso, su hábitat mejora». ¿Qué reescritura usa «hábitat» y mantiene la lógica?",
+   "options": [
+    "Las ranas dañan la contaminación; por eso, el hábitat desaparece.",
+    "La contaminación daña el hábitat; por eso, las ranas sufren.",
+    "El hábitat contamina a las ranas; por eso, el lugar se limpia.",
+    "La contaminación mejora el hábitat; por eso, las ranas sufren."
+   ],
+   "correct": "La contaminación daña el hábitat; por eso, las ranas sufren.",
+   "hint": "Hábitat nombra el lugar donde viven las ranas; la contaminación lo perjudica, no lo mejora.",
+   "clue": "Revisa qué elemento recibe el daño y qué consecuencia produce.",
+   "option_notes": {
+    "La contaminación mejora el hábitat; por eso, las ranas sufren.": "Invierte el efecto de la contaminación y contradice la consecuencia.",
+    "El hábitat contamina a las ranas; por eso, el lugar se limpia.": "Confunde el lugar que recibe el daño con quien contamina.",
+    "Las ranas dañan la contaminación; por eso, el hábitat desaparece.": "Invierte los papeles y usa una relación sin sentido."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA19",
+   "difficulty": "hard",
+   "text": "Lee: «Durante la sequía, la comunidad reparó llaves, redujo el riego y juntó agua de lluvia. Así disminuyó sus efectos». Aprendiste «mitigar». ¿Qué conclusión se apoya en todos los datos?",
+   "options": [
+    "La comunidad agravó la sequía al ahorrar agua y reparar llaves.",
+    "La comunidad predijo la sequía al reducir el riego.",
+    "La comunidad ignoró la sequía al juntar agua de lluvia.",
+    "La comunidad mitigó los efectos de la sequía con esas medidas."
+   ],
+   "correct": "La comunidad mitigó los efectos de la sequía con esas medidas.",
+   "hint": "Mitigar significa disminuir un daño; las medidas redujeron los efectos de la sequía.",
+   "clue": "Busca la conclusión que transforme las acciones en una disminución del problema.",
+   "option_notes": {
+    "La comunidad agravó la sequía al ahorrar agua y reparar llaves.": "Confunde reducir el daño con aumentarlo.",
+    "La comunidad ignoró la sequía al juntar agua de lluvia.": "Confunde actuar para enfrentar un problema con ignorarlo.",
+    "La comunidad predijo la sequía al reducir el riego.": "Confunde disminuir efectos con anticipar el fenómeno."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,264 @@
+{
+ "oa": "OA20",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA20",
+   "difficulty": "easy",
+   "text": "¿Cuál de estas igualdades representa correctamente una conversión de kilómetros a metros?",
+   "options": [
+    "1 km = 10 m",
+    "1 km = 100 m",
+    "1 km = 10.000 m",
+    "1 km = 1.000 m"
+   ],
+   "correct": "1 km = 1.000 m",
+   "hint": "Un kilómetro siempre equivale a mil metros.",
+   "clue": "Piensa en la equivalencia básica entre kilómetros y metros.",
+   "option_notes": {
+    "1 km = 100 m": "Confunde el kilómetro con 100 metros.",
+    "1 km = 10.000 m": "Agrega un cero de más al convertir.",
+    "1 km = 10 m": "Quita un cero y usa una equivalencia diez veces menor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "easy",
+   "text": "El largo de una mesa es 2 m. ¿Cuántos centímetros mide?",
+   "options": [
+    "20 cm",
+    "2 cm",
+    "200 cm",
+    "2.000 cm"
+   ],
+   "correct": "200 cm",
+   "hint": "Como 1 m = 100 cm, multiplica 2 por 100.",
+   "clue": "Recuerda cuántos centímetros forman un metro.",
+   "option_notes": {
+    "20 cm": "Multiplica por 10 en vez de por 100.",
+    "2.000 cm": "Multiplica por 1.000 en vez de por 100.",
+    "2 cm": "No cambia la unidad y conserva el número 2."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "easy",
+   "text": "En una app educativa, una barra mide 18 cm. Si debes ingresarla en milímetros, ¿qué valor escribes?",
+   "options": [
+    "180 mm",
+    "1.800 mm",
+    "1,8 mm",
+    "18 mm"
+   ],
+   "correct": "180 mm",
+   "hint": "Cada centímetro contiene 10 milímetros: 18 × 10.",
+   "clue": "De centímetros a milímetros, la unidad se hace más pequeña.",
+   "option_notes": {
+    "18 mm": "No multiplica por 10.",
+    "1.800 mm": "Agrega un cero extra.",
+    "1,8 mm": "Divide por 10 en vez de multiplicar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "easy",
+   "text": "Una hormiga avanza 70 mm. ¿A cuántos centímetros equivale esa distancia?",
+   "options": [
+    "70 cm",
+    "0,7 cm",
+    "700 cm",
+    "7 cm"
+   ],
+   "correct": "7 cm",
+   "hint": "Para pasar de mm a cm, divide entre 10: 70 ÷ 10.",
+   "clue": "Al pasar a una unidad diez veces mayor, el número disminuye.",
+   "option_notes": {
+    "0,7 cm": "Divide 70 entre 100, como si fueran metros.",
+    "70 cm": "No cambia de milímetros a centímetros.",
+    "700 cm": "Multiplica por 10 en vez de dividir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "medium",
+   "text": "En un sendero del Parque Nacional Conguillío recorres 800 m y luego 200 m. ¿Qué distancia total recorriste en kilómetros?",
+   "options": [
+    "0,1 km",
+    "1.000 km",
+    "1 km",
+    "10 km"
+   ],
+   "correct": "1 km",
+   "hint": "Suma los tramos: 1.000 m; luego expresa 1.000 m en km.",
+   "clue": "Primero reúne los metros de ambos tramos y luego cambia de unidad.",
+   "option_notes": {
+    "0,1 km": "Divide 1.000 m entre 10 en vez de entre 1.000.",
+    "10 km": "Multiplica 1.000 m por 10.",
+    "1.000 km": "Conserva 1.000 como si fueran kilómetros."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "medium",
+   "text": "Un listón mide 75 cm y otro 25 cm. Al unirlos, ¿qué longitud total tienen en metros?",
+   "options": [
+    "0,1 m",
+    "1 m",
+    "100 m",
+    "10 m"
+   ],
+   "correct": "1 m",
+   "hint": "75 cm + 25 cm = 100 cm, y 100 cm equivalen a 1 m.",
+   "clue": "Calcula la longitud total antes de pasarla a metros.",
+   "option_notes": {
+    "0,1 m": "Divide 100 cm entre 1.000.",
+    "10 m": "Divide entre 10 en vez de entre 100.",
+    "100 m": "Interpreta 100 cm como 100 m."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "medium",
+   "text": "Una ciclista recorre 1 km y después 500 m. ¿Cuántos metros recorre en total?",
+   "options": [
+    "501 m",
+    "1.500 m",
+    "2.000 m",
+    "1.050 m"
+   ],
+   "correct": "1.500 m",
+   "hint": "Cambia 1 km por 1.000 m y suma los 500 m.",
+   "clue": "Convierte solo el tramo expresado en kilómetros para poder sumarlo.",
+   "option_notes": {
+    "501 m": "Suma 1 km como si fuera 1 m.",
+    "1.050 m": "Convierte 500 m como si fueran 50 m.",
+    "2.000 m": "Trata los 500 m como si fueran 1.000 m."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "medium",
+   "text": "Para decorar un volantín, Sofía usa 35 mm de hilo azul y 25 mm de hilo rojo. ¿Cuántos centímetros de hilo usa en total?",
+   "options": [
+    "60 cm",
+    "600 cm",
+    "0,6 cm",
+    "6 cm"
+   ],
+   "correct": "6 cm",
+   "hint": "35 mm + 25 mm = 60 mm; 60 mm equivalen a 6 cm.",
+   "clue": "Suma los milímetros y después conviértelos a centímetros.",
+   "option_notes": {
+    "0,6 cm": "Convierte 60 mm dividiendo por 100.",
+    "60 cm": "Confunde mm con cm y conserva 60.",
+    "600 cm": "Multiplica por 10 en vez de dividir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "hard",
+   "text": "En una feria, un puesto está a 1 m 30 cm de la entrada y otro a 125 cm. ¿Cuál está más cerca y por cuántos centímetros?",
+   "options": [
+    "El segundo, por 5 cm.",
+    "El segundo, por 30 cm.",
+    "El primero, por 25 cm.",
+    "El primero, por 5 cm."
+   ],
+   "correct": "El segundo, por 5 cm.",
+   "hint": "1 m 30 cm son 130 cm; compara 130 cm con 125 cm.",
+   "clue": "Expresa ambas distancias en centímetros antes de compararlas.",
+   "option_notes": {
+    "El primero, por 5 cm.": "Compara al revés: considera 130 cm menor que 125 cm.",
+    "El primero, por 25 cm.": "Resta 125 cm de 100 cm y elige el puesto equivocado.",
+    "El segundo, por 30 cm.": "Usa los 30 cm como diferencia y elige el puesto equivocado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "hard",
+   "text": "En un mapa, un sendero tiene 2,5 km marcados y le faltan 750 m. ¿Cuántos metros medirá el sendero completo?",
+   "options": [
+    "3.250 m",
+    "32.500 m",
+    "2.575 m",
+    "2.500 m"
+   ],
+   "correct": "3.250 m",
+   "hint": "2,5 km son 2.500 m; suma los 750 m que faltan.",
+   "clue": "Usa una sola unidad: convierte los kilómetros a metros antes de sumar.",
+   "option_notes": {
+    "2.575 m": "Convierte 750 m como 75 m al sumar.",
+    "2.500 m": "Olvida agregar los 750 m que faltan.",
+    "32.500 m": "Agrega un cero de más al total."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "hard",
+   "text": "Un pudú camina 2 m y luego 80 cm. ¿Cuántos milímetros recorrió en total?",
+   "options": [
+    "28.000 mm",
+    "2.800 mm",
+    "2.080 mm",
+    "280 mm"
+   ],
+   "correct": "2.800 mm",
+   "hint": "2 m son 2.000 mm y 80 cm son 800 mm; luego suma.",
+   "clue": "Lleva ambos tramos a milímetros y recién después súmalos.",
+   "option_notes": {
+    "280 mm": "Confunde 280 cm con 280 mm.",
+    "2.080 mm": "Deja 80 cm como si fueran 80 mm.",
+    "28.000 mm": "Agrega un cero de más al convertir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "hard",
+   "text": "Tres cintas iguales, puestas una junto a otra, miden 90 cm en total. ¿Cuánto mide cada cinta en milímetros?",
+   "options": [
+    "90 mm",
+    "30 mm",
+    "300 mm",
+    "270 mm"
+   ],
+   "correct": "300 mm",
+   "hint": "90 cm ÷ 3 = 30 cm; después convierte 30 cm a 300 mm.",
+   "clue": "Reparte primero la longitud total entre las tres cintas.",
+   "option_notes": {
+    "30 mm": "Divide, pero olvida cambiar centímetros a milímetros.",
+    "90 mm": "Convierte el total, pero no lo reparte entre tres.",
+    "270 mm": "Multiplica 90 por 3 en vez de dividir."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

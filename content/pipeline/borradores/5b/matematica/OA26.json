@@ -1,0 +1,264 @@
+{
+ "oa": "OA26",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA26",
+   "difficulty": "easy",
+   "text": "La tabla de una feria registra: manzanas, 18 kg; naranjas, 12 kg; peras, 15 kg; plátanos, 9 kg. ¿Qué fruta se vendió en 15 kg?",
+   "options": [
+    "Manzanas",
+    "Peras",
+    "Naranjas",
+    "Plátanos"
+   ],
+   "correct": "Peras",
+   "hint": "En la tabla, busca el dato de 15 kg: corresponde a las peras.",
+   "clue": "Relaciona la cantidad de 15 kg con la fruta indicada en la tabla.",
+   "option_notes": {
+    "Manzanas": "Confunde los 15 kg con los 18 kg de manzanas.",
+    "Naranjas": "Confunde los 15 kg con los 12 kg de naranjas.",
+    "Plátanos": "Confunde los 15 kg con los 9 kg de plátanos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "easy",
+   "text": "El gráfico de barras simple de una encuesta muestra: perro, 9 estudiantes; gato, 6; conejo, 3; pez, 8. ¿Cuántos estudiantes eligieron pez?",
+   "options": [
+    "8 estudiantes",
+    "3 estudiantes",
+    "6 estudiantes",
+    "9 estudiantes"
+   ],
+   "correct": "8 estudiantes",
+   "hint": "La barra de pez llega a 8 estudiantes, según los datos del gráfico.",
+   "clue": "Ubica la barra de pez y lee su altura.",
+   "option_notes": {
+    "3 estudiantes": "Lee la cantidad correspondiente al conejo.",
+    "6 estudiantes": "Lee la cantidad correspondiente al gato.",
+    "9 estudiantes": "Lee la cantidad correspondiente al perro."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "easy",
+   "text": "El gráfico de línea muestra la temperatura de una plaza: lunes, 18 °C; martes, 20 °C; miércoles, 17 °C; jueves, 22 °C. ¿Qué día tuvo la mayor temperatura?",
+   "options": [
+    "miércoles",
+    "martes",
+    "Jueves",
+    "lunes"
+   ],
+   "correct": "Jueves",
+   "hint": "El punto más alto corresponde a 22 °C, registrado el jueves.",
+   "clue": "Compara las alturas de los cuatro puntos.",
+   "option_notes": {
+    "lunes": "Confunde el punto del lunes con el más alto.",
+    "martes": "Confunde el punto del martes con el más alto.",
+    "miércoles": "Confunde el punto más bajo con el más alto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "easy",
+   "text": "En una tabla faltan los vasos reciclados del miércoles. El gráfico de barras simple marca: lunes 7, martes 10, miércoles 12 y jueves 8 vasos. ¿Qué dato debe escribirse?",
+   "options": [
+    "12",
+    "7",
+    "8",
+    "10"
+   ],
+   "correct": "12",
+   "hint": "La barra del miércoles alcanza 12 vasos; ese es el dato que falta.",
+   "clue": "Busca la altura de la barra correspondiente al miércoles.",
+   "option_notes": {
+    "8": "Lee la barra correspondiente al jueves.",
+    "10": "Lee la barra correspondiente al martes.",
+    "7": "Lee la barra correspondiente al lunes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "medium",
+   "text": "La tabla muestra libros leídos por 5°A: lunes, 8; martes, 6; miércoles, 7. ¿Cuántos libros leyó el curso en esos tres días?",
+   "options": [
+    "19 libros",
+    "22 libros",
+    "21 libros",
+    "20 libros"
+   ],
+   "correct": "21 libros",
+   "hint": "Suma los tres datos: 8 + 6 + 7 = 21 libros.",
+   "clue": "Combina los datos de los tres días.",
+   "option_notes": {
+    "19 libros": "Confunde el dato del miércoles y usa 5 en vez de 7.",
+    "20 libros": "Confunde el dato del miércoles y usa 6 en vez de 7.",
+    "22 libros": "Repite 7 y suma 8 + 7 + 7."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "medium",
+   "text": "El gráfico de barras simple muestra botellas recolectadas: 5° A, 24; 5° B, 18; 5° C, 15. La meta es 60. ¿Cuántas faltan para alcanzarla?",
+   "options": [
+    "2 botellas",
+    "5 botellas",
+    "4 botellas",
+    "3 botellas"
+   ],
+   "correct": "3 botellas",
+   "hint": "Los cursos reunieron 57 botellas; faltan 60 − 57 = 3.",
+   "clue": "Suma primero las tres barras y compara el total con la meta.",
+   "option_notes": {
+    "2 botellas": "Suma las barras con un error y obtiene 58.",
+    "4 botellas": "Calcula mal cuánto falta después de sumar 57.",
+    "5 botellas": "Usa un total equivocado al restar de la meta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "medium",
+   "text": "La tabla de una caminata registra: tramo 1, 350 m; tramo 2, 275 m; tramo 3, 225 m. ¿Cuántos metros faltan para completar 1.000 m?",
+   "options": [
+    "200 m",
+    "150 m",
+    "125 m",
+    "175 m"
+   ],
+   "correct": "150 m",
+   "hint": "Los tres tramos suman 850 m; para llegar a 1.000 m faltan 150 m.",
+   "clue": "Calcula primero la distancia recorrida y compárala con 1.000 m.",
+   "option_notes": {
+    "125 m": "Suma o resta uno de los tramos con un error.",
+    "175 m": "Calcula mal la diferencia después de sumar los tramos.",
+    "200 m": "No incluye correctamente uno de los tres tramos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "medium",
+   "text": "El gráfico de línea muestra litros de agua usados: lunes, 6; martes, 8; miércoles, 5; jueves, 7. ¿Cuál conclusión es correcta?",
+   "options": [
+    "El consumo aumentó todos los días",
+    "El mayor consumo fue el miércoles",
+    "El martes se usaron 3 L más que el miércoles",
+    "El jueves se usaron menos que el lunes"
+   ],
+   "correct": "El martes se usaron 3 L más que el miércoles",
+   "hint": "El martes hubo 8 L y el miércoles 5 L; la diferencia es de 3 L.",
+   "clue": "Revisa las variaciones entre días antes de elegir una conclusión.",
+   "option_notes": {
+    "El mayor consumo fue el miércoles": "Confunde el menor consumo con el mayor.",
+    "El consumo aumentó todos los días": "Ignora la disminución entre martes y miércoles.",
+    "El jueves se usaron menos que el lunes": "Invierte la comparación: 7 L es más que 6 L."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "hard",
+   "text": "La tabla registra pasajeros por bus: bus 1, 18; bus 2, 24; bus 3, 15. Cinco pasajeros pasan del bus 2 al bus 3. ¿Cuántos quedan en total en los buses 1 y 3?",
+   "options": [
+    "42 pasajeros",
+    "38 pasajeros",
+    "57 pasajeros",
+    "33 pasajeros"
+   ],
+   "correct": "38 pasajeros",
+   "hint": "Bus 3 pasa de 15 a 20; luego suma 18 + 20 = 38 pasajeros.",
+   "clue": "Actualiza el bus 3 y suma solo los buses 1 y 3.",
+   "option_notes": {
+    "33 pasajeros": "Suma los buses 1 y 3 sin trasladar los 5 pasajeros.",
+    "42 pasajeros": "Suma los buses 1 y 2, no los buses pedidos.",
+    "57 pasajeros": "Suma los tres buses, aunque se piden solo dos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "hard",
+   "text": "El gráfico de barras simple muestra frutas elegidas: manzana, 14; plátano, 11; naranja, 8; pera, 7. ¿Cuántas elecciones más tuvieron manzana y plátano juntos que naranja y pera?",
+   "options": [
+    "8 elecciones",
+    "15 elecciones",
+    "7 elecciones",
+    "10 elecciones"
+   ],
+   "correct": "10 elecciones",
+   "hint": "Manzana y plátano suman 25; naranja y pera, 15. La diferencia es 10.",
+   "clue": "Forma los dos grupos, compáralos y busca cuánto supera uno al otro.",
+   "option_notes": {
+    "7 elecciones": "Toma solo el dato de peras.",
+    "8 elecciones": "Toma solo el dato de naranjas.",
+    "15 elecciones": "Suma naranja y pera, pero olvida comparar los grupos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "hard",
+   "text": "El gráfico de línea muestra libros prestados: lunes 12, martes 18, miércoles 14 y jueves 20. El viernes se prestaron 3 menos que el jueves. ¿Cuántos préstamos hubo de miércoles a viernes?",
+   "options": [
+    "64 préstamos",
+    "48 préstamos",
+    "54 préstamos",
+    "51 préstamos"
+   ],
+   "correct": "51 préstamos",
+   "hint": "Viernes tuvo 17 préstamos; suma 14 + 20 + 17 = 51.",
+   "clue": "Calcula primero el dato del viernes y luego suma los tres días pedidos.",
+   "option_notes": {
+    "48 préstamos": "Repite los 14 préstamos del miércoles para el viernes.",
+    "54 préstamos": "Usa 20 también para el viernes y no resta 3.",
+    "64 préstamos": "Suma los cuatro días del gráfico, no solo de miércoles a viernes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA26",
+   "difficulty": "hard",
+   "text": "La tabla registra lluvia en una semana: lunes, 3 mm; martes, 0 mm; miércoles, ___ mm; jueves, 5 mm. El total fue 12 mm. ¿Qué día tuvo la segunda mayor cantidad?",
+   "options": [
+    "miércoles",
+    "jueves",
+    "martes",
+    "lunes"
+   ],
+   "correct": "miércoles",
+   "hint": "Miércoles tuvo 4 mm; al ordenar, queda segundo después de jueves.",
+   "clue": "Completa primero el dato faltante y luego ordena las cantidades.",
+   "option_notes": {
+    "lunes": "Confunde la segunda mayor cantidad con 3 mm.",
+    "martes": "Elige el día con menor cantidad de lluvia.",
+    "jueves": "Elige la mayor cantidad, no la segunda mayor."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

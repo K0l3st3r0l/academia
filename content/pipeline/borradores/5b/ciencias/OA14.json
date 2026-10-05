@@ -1,0 +1,266 @@
+{
+ "oa": "OA14",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "¿Qué efecto puede causar que una embarcación derrame petróleo en el océano?",
+   "options": [
+    "Enfría el océano y forma nuevos glaciares en la costa",
+    "Se transforma en alimento y aumenta la cantidad de peces",
+    "Agrega oxígeno al agua y mejora la vida de los animales marinos",
+    "Contamina el agua y puede dañar a los animales marinos"
+   ],
+   "correct": "Contamina el agua y puede dañar a los animales marinos",
+   "hint": "El petróleo forma una capa contaminante que afecta el agua y a los seres vivos marinos.",
+   "clue": "Piensa qué ocurre cuando una sustancia contaminante cubre o ensucia el agua.",
+   "option_notes": {
+    "Agrega oxígeno al agua y mejora la vida de los animales marinos": "Confunde el petróleo con una sustancia que ayuda a los seres vivos.",
+    "Enfría el océano y forma nuevos glaciares en la costa": "Relaciona un derrame con la formación natural de glaciares.",
+    "Se transforma en alimento y aumenta la cantidad de peces": "Piensa que los peces pueden usar el petróleo como alimento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Una planta trata las aguas servidas antes de devolverlas a un río. ¿Qué efecto positivo se espera?",
+   "options": [
+    "El río recibe más oxígeno y ya no necesita agua limpia",
+    "El agua se vuelve salada y el río pierde sus seres vivos",
+    "Llegan menos contaminantes al río y se protegen sus seres vivos",
+    "Llegan más contaminantes al río, pero el agua corre más rápido"
+   ],
+   "correct": "Llegan menos contaminantes al río y se protegen sus seres vivos",
+   "hint": "El tratamiento elimina o reduce contaminantes antes de que el agua vuelva al río.",
+   "clue": "Compara el agua que entra a la planta con la que sale hacia el río.",
+   "option_notes": {
+    "Llegan más contaminantes al río, pero el agua corre más rápido": "Confunde tratar el agua con agregar contaminantes al río.",
+    "El agua se vuelve salada y el río pierde sus seres vivos": "Confunde agua dulce tratada con agua salada.",
+    "El río recibe más oxígeno y ya no necesita agua limpia": "Supone que el río deja de necesitar agua limpia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "¿Qué acción ayuda directamente a proteger un glaciar chileno visitado por turistas?",
+   "options": [
+    "Dejar alimentos cerca del hielo para atraer animales nativos",
+    "Sacar trozos de hielo como recuerdo y guardarlos en casa",
+    "Lavar vehículos junto al glaciar para aprovechar el agua",
+    "Caminar por senderos señalizados y llevarse todos los residuos"
+   ],
+   "correct": "Caminar por senderos señalizados y llevarse todos los residuos",
+   "hint": "Los senderos reducen el daño y retirar los residuos evita contaminar el glaciar y sus alrededores.",
+   "clue": "Elige una conducta que reduzca las huellas humanas en el hielo y sus alrededores.",
+   "option_notes": {
+    "Dejar alimentos cerca del hielo para atraer animales nativos": "Piensa que alimentar animales no altera el lugar ni su conducta.",
+    "Sacar trozos de hielo como recuerdo y guardarlos en casa": "Considera el hielo un recuerdo sin impacto ambiental.",
+    "Lavar vehículos junto al glaciar para aprovechar el agua": "Confunde ahorrar agua con lavar vehículos en una reserva."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "En un lago llegan muchos fertilizantes desde los cultivos. ¿Qué efecto negativo puede ocurrir?",
+   "options": [
+    "Crecen demasiadas algas y disminuye el oxígeno para algunos seres vivos",
+    "Se forman más glaciares porque el agua recibe nuevos nutrientes",
+    "El lago se vuelve potable sin necesitar ningún tratamiento",
+    "Aumenta el oxígeno porque las algas siempre lo producen"
+   ],
+   "correct": "Crecen demasiadas algas y disminuye el oxígeno para algunos seres vivos",
+   "hint": "El exceso de nutrientes puede provocar muchas algas y reducir el oxígeno disponible en el agua.",
+   "clue": "Relaciona el exceso de nutrientes con los cambios en el oxígeno del agua.",
+   "option_notes": {
+    "Se forman más glaciares porque el agua recibe nuevos nutrientes": "Confunde el exceso de nutrientes con la formación de glaciares.",
+    "El lago se vuelve potable sin necesitar ningún tratamiento": "Piensa que cualquier lago es potable sin eliminar contaminantes.",
+    "Aumenta el oxígeno porque las algas siempre lo producen": "Olvida que muchas algas pueden consumir oxígeno al descomponerse."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Después de talar árboles junto a un río, el agua queda café y hay menos peces. ¿Cuál explicación es más adecuada?",
+   "options": [
+    "La tala enfría tanto el río que los peces dejan de respirar",
+    "Sin raíces, entra suelo al río y se daña el hábitat de los peces",
+    "Los árboles caídos vuelven el agua salada y dañan a los peces",
+    "La tala quita oxígeno al agua, aunque no cambie el suelo"
+   ],
+   "correct": "Sin raíces, entra suelo al río y se daña el hábitat de los peces",
+   "hint": "Las raíces sujetan el suelo; al quitarlas, aumenta el sedimento que llega al río y afecta a los peces.",
+   "clue": "Busca una relación entre las raíces, el suelo que llega al agua y los peces.",
+   "option_notes": {
+    "Los árboles caídos vuelven el agua salada y dañan a los peces": "Confunde la tala con cambios de salinidad del agua.",
+    "La tala enfría tanto el río que los peces dejan de respirar": "Piensa que los peces desaparecen por el frío causado por la tala.",
+    "La tala quita oxígeno al agua, aunque no cambie el suelo": "Atribuye el problema al oxígeno sin considerar el sedimento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "En una zona costera disminuyen los peces porque se capturan muchos durante todo el año. ¿Qué medida ayudaría más?",
+   "options": [
+    "Capturar solo peces pequeños y devolver los más grandes al mar",
+    "Eliminar las áreas protegidas para ampliar la zona de pesca",
+    "Respetar las vedas y los tamaños mínimos de captura",
+    "Pescar más peces para que la población se recupere pronto"
+   ],
+   "correct": "Respetar las vedas y los tamaños mínimos de captura",
+   "hint": "Las vedas y los tamaños mínimos permiten que los peces se reproduzcan y que la población se recupere.",
+   "clue": "La población de peces necesita tiempo para reproducirse y recuperarse.",
+   "option_notes": {
+    "Pescar más peces para que la población se recupere pronto": "Supone que capturar más peces acelera la recuperación de la población.",
+    "Eliminar las áreas protegidas para ampliar la zona de pesca": "Confunde proteger con permitir pescar en más lugares.",
+    "Capturar solo peces pequeños y devolver los más grandes al mar": "Piensa que los peces pequeños no son importantes para la población."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Un curso descubre basura plástica en la orilla de un lago y aves atrapadas en ella. ¿Qué propuesta enfrenta mejor el problema?",
+   "options": [
+    "Limpiar solo a las aves y dejar la basura junto al lago",
+    "Agregar agua al lago para esconder los residuos bajo la superficie",
+    "Retirar residuos, reducir su uso y evitar que lleguen al lago",
+    "Quemar los plásticos en la orilla para hacer espacio"
+   ],
+   "correct": "Retirar residuos, reducir su uso y evitar que lleguen al lago",
+   "hint": "La propuesta actúa sobre la basura que ya existe y previene que nuevos residuos dañen el lago y sus animales.",
+   "clue": "La mejor propuesta reduce la basura y también evita que vuelva a llegar.",
+   "option_notes": {
+    "Limpiar solo a las aves y dejar la basura junto al lago": "Atiende a las aves, pero no elimina ni previene la fuente del problema.",
+    "Quemar los plásticos en la orilla para hacer espacio": "Confunde limpiar con quemar residuos, que puede contaminar el aire y el suelo.",
+    "Agregar agua al lago para esconder los residuos bajo la superficie": "Piensa que esconder la basura equivale a eliminarla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Un grupo midió el agua de un río antes y después de una campaña de limpieza. ¿Cuál forma comunica mejor su resultado?",
+   "options": [
+    "Mostrar mediciones, explicar el cambio y proponer seguir limpiando",
+    "Decir que funcionó porque todos los ríos necesitan la misma acción",
+    "Contar que el río se veía bonito, sin mostrar ninguna medición",
+    "Mostrar una foto y afirmar que el río ya no tiene problemas"
+   ],
+   "correct": "Mostrar mediciones, explicar el cambio y proponer seguir limpiando",
+   "hint": "Comunicar resultados requiere evidencias, una explicación y una acción relacionada con lo observado.",
+   "clue": "Un resultado científico se comunica con evidencias y una explicación.",
+   "option_notes": {
+    "Contar que el río se veía bonito, sin mostrar ninguna medición": "Confunde una impresión visual con datos de una investigación.",
+    "Mostrar una foto y afirmar que el río ya no tiene problemas": "Supone que una foto prueba que el río quedó sin problemas.",
+    "Decir que funcionó porque todos los ríos necesitan la misma acción": "Generaliza una acción sin considerar las condiciones de cada río."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "En un glaciar, aumentan las visitas y aparecen residuos y senderos erosionados. ¿Qué plan protege mejor la reserva y permite conocerla?",
+   "options": [
+    "Limitar visitas, señalizar senderos, retirar residuos y evaluar daños",
+    "Construir más caminos y basureros, sin controlar las visitas",
+    "Cerrar solo el sendero principal y dejar caminar sobre el hielo",
+    "Permitir visitas sin límite si llevan botellas reutilizables"
+   ],
+   "correct": "Limitar visitas, señalizar senderos, retirar residuos y evaluar daños",
+   "hint": "El plan ordena las visitas, reduce los residuos y permite revisar si las medidas están protegiendo el glaciar.",
+   "clue": "Considera tanto el cuidado del glaciar como el acceso ordenado de visitantes.",
+   "option_notes": {
+    "Permitir visitas sin límite si llevan botellas reutilizables": "Confunde una medida personal con un control completo de la presión turística.",
+    "Cerrar solo el sendero principal y dejar caminar sobre el hielo": "Piensa que cerrar un sendero permite caminar sin daño sobre el hielo.",
+    "Construir más caminos y basureros, sin controlar las visitas": "Supone que más infraestructura basta, aunque lleguen demasiados visitantes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Tras usar fertilizante cerca de un lago, aparecen muchas algas y mueren peces. ¿Qué acción enfrenta mejor la causa y el efecto?",
+   "options": [
+    "Agregar fertilizante al lago para que crezcan más plantas",
+    "Reducir el fertilizante que llega al lago y recuperar la vegetación",
+    "Vaciar parte del lago y trasladar los residuos a otro lugar",
+    "Retirar solo los peces muertos y seguir usando la misma cantidad"
+   ],
+   "correct": "Reducir el fertilizante que llega al lago y recuperar la vegetación",
+   "hint": "Reducir el fertilizante enfrenta la causa y la vegetación ayuda a detener su llegada al lago.",
+   "clue": "Piensa en qué causó las algas y qué puede impedir que el problema continúe.",
+   "option_notes": {
+    "Retirar solo los peces muertos y seguir usando la misma cantidad": "Atiende el resultado visible, pero mantiene la causa del problema.",
+    "Agregar fertilizante al lago para que crezcan más plantas": "Confunde el exceso de fertilizante con una forma de mejorar el lago.",
+    "Vaciar parte del lago y trasladar los residuos a otro lugar": "Traslada el problema o lo oculta sin disminuir la contaminación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Una investigación compara dos playas: en la A hay más plásticos y menos aves que en la B. ¿Qué conclusión y acción son más razonables?",
+   "options": [
+    "Las dos playas están igual porque tienen arena y agua",
+    "El plástico podría dañarlas; reducirlo y medir otra vez sería útil",
+    "La playa A no tiene aves por culpa segura del plástico; basta cerrarla",
+    "Las aves prefieren la playa B; conviene llevar más plástico a la A"
+   ],
+   "correct": "El plástico podría dañarlas; reducirlo y medir otra vez sería útil",
+   "hint": "Los datos sugieren una relación, pero repetir las mediciones ayuda a comprobarla y orientar la acción.",
+   "clue": "Distingue lo que los datos sugieren de lo que todavía falta comprobar.",
+   "option_notes": {
+    "La playa A no tiene aves por culpa segura del plástico; basta cerrarla": "Confunde una relación posible con una certeza y propone una medida única.",
+    "Las aves prefieren la playa B; conviene llevar más plástico a la A": "Invierte la relación: cree que más plástico atraería aves.",
+    "Las dos playas están igual porque tienen arena y agua": "Considera iguales las playas sin atender a los datos observados."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Una municipalidad quiere proteger un río que abastece a un pueblo. Plantará vegetación en la ribera y tratará aguas servidas. ¿Qué resultado y forma de comunicar muestran mejor el aporte?",
+   "options": [
+    "Menos agua disponible; publicar una foto sin comparar resultados",
+    "Más basura en el río; decir que toda acción siempre funciona",
+    "Más sedimentos y contaminantes; mostrar solo opiniones de los vecinos",
+    "Menos sedimentos y contaminantes; mostrar mediciones antes y después"
+   ],
+   "correct": "Menos sedimentos y contaminantes; mostrar mediciones antes y después",
+   "hint": "La vegetación retiene suelo y el tratamiento reduce contaminantes; comparar mediciones permite comunicar el cambio.",
+   "clue": "Relaciona cada acción con su efecto y busca una forma de mostrar cambios reales.",
+   "option_notes": {
+    "Más sedimentos y contaminantes; mostrar solo opiniones de los vecinos": "Invierte los efectos esperados de plantar vegetación y tratar aguas servidas.",
+    "Menos agua disponible; publicar una foto sin comparar resultados": "Confunde proteger el río con perder agua y comunicar sin evidencias.",
+    "Más basura en el río; decir que toda acción siempre funciona": "Supone que toda acción funciona sin revisar sus resultados."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

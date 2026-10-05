@@ -1,0 +1,264 @@
+{
+ "oa": "OA4",
+ "source": "ia:gpt-5.6-luna",
+ "job": "job-20261005-8ec9dca1",
+ "questions": [
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "¿Cuál es el resultado de 648 ÷ 8?",
+   "options": [
+    "88",
+    "80",
+    "78",
+    "81"
+   ],
+   "correct": "81",
+   "hint": "Porque 8 × 81 = 648.",
+   "clue": "Busca el número que, multiplicado por 8, forma 648.",
+   "option_notes": {
+    "78": "Usa un múltiplo menor de 8 y no verifica que llegue a 648.",
+    "80": "Se queda con 640 e ignora los 8 restantes.",
+    "88": "Calcula un cociente demasiado alto y no lo comprueba."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "Divide 527 entre 5. ¿Qué resultado obtienes?",
+   "options": [
+    "105, resto 2",
+    "106, resto 2",
+    "105, resto 5",
+    "102, resto 5"
+   ],
+   "correct": "105, resto 2",
+   "hint": "5 × 105 = 525 y quedan 2, porque 527 − 525 = 2.",
+   "clue": "Multiplica el cociente por 5 y revisa qué cantidad queda sin repartir.",
+   "option_notes": {
+    "105, resto 5": "Confunde el resto con el divisor; el resto debe ser menor que 5.",
+    "106, resto 2": "Aumenta el cociente aunque 106 × 5 supera 527.",
+    "102, resto 5": "Calcula mal el cociente y deja un resto igual al divisor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "En una bandeja hay 343 semillas para repartir por igual en 7 filas. ¿Cuántas semillas van en cada fila?",
+   "options": [
+    "56 semillas",
+    "47 semillas",
+    "51 semillas",
+    "49 semillas"
+   ],
+   "correct": "49 semillas",
+   "hint": "Porque 7 × 49 = 343; cada fila recibe la misma cantidad.",
+   "clue": "Busca el número que, repetido 7 veces, suma 343.",
+   "option_notes": {
+    "47 semillas": "Calcula mal; 7 × 47 no llega a 343.",
+    "51 semillas": "Se pasa del cociente correcto al estimar 343 ÷ 7.",
+    "56 semillas": "Obtiene un valor mayor al dividir de forma incorrecta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "Para comprobar que 726 ÷ 6 = 121, ¿qué operación debes realizar?",
+   "options": [
+    "726 × 6 = 4.356",
+    "726 − 6 = 720",
+    "121 × 6 = 726",
+    "121 + 6 = 127"
+   ],
+   "correct": "121 × 6 = 726",
+   "hint": "La multiplicación del cociente por el divisor debe dar el dividendo: 121 × 6 = 726.",
+   "clue": "Usa la operación inversa de dividir: multiplica el cociente por el divisor.",
+   "option_notes": {
+    "726 × 6 = 4.356": "Multiplica el dividendo por el divisor, en vez del cociente.",
+    "121 + 6 = 127": "Suma los números, pero la operación inversa es multiplicar.",
+    "726 − 6 = 720": "Resta el divisor, que no comprueba una división."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Un colegio reparte 936 lápices por igual entre 8 cursos. Cada curso guarda 3 lápices. ¿Cuántos lápices entrega cada curso a sus estudiantes?",
+   "options": [
+    "114 lápices",
+    "111 lápices",
+    "120 lápices",
+    "117 lápices"
+   ],
+   "correct": "114 lápices",
+   "hint": "Cada curso recibe 117 lápices y, al guardar 3, entrega 117 − 3 = 114.",
+   "clue": "Primero reparte entre los cursos; después descuenta los 3 que guarda cada uno.",
+   "option_notes": {
+    "111 lápices": "Resta 6 en vez de los 3 lápices que guarda cada curso.",
+    "117 lápices": "Hace la división, pero olvida descontar los lápices guardados.",
+    "120 lápices": "Suma 3 al cociente en lugar de restarlos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "En un paseo, 458 estudiantes se sientan de 6 en cada bus. Quienes quedan sin completar un bus se unen a 4 profesores. ¿Cuántas personas forman ese grupo?",
+   "options": [
+    "8 personas",
+    "4 personas",
+    "6 personas",
+    "2 personas"
+   ],
+   "correct": "6 personas",
+   "hint": "458 ÷ 6 deja 2 estudiantes sin bus completo; al sumar 4 profesores hay 6 personas.",
+   "clue": "Halla primero el resto de dividir 458 por 6 y luego agrégale los profesores.",
+   "option_notes": {
+    "2 personas": "Cuenta solo a los estudiantes que sobran y no suma a los profesores.",
+    "4 personas": "Cuenta solo a los profesores e ignora el resto.",
+    "8 personas": "Suma 4 a un resto calculado como 4, no como 2."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Una biblioteca recibe 735 libros y los distribuye por igual en 5 estantes. ¿Cuántos debe agregar a cada estante para que cada uno tenga 150 libros?",
+   "options": [
+    "2 libros",
+    "3 libros",
+    "10 libros",
+    "5 libros"
+   ],
+   "correct": "3 libros",
+   "hint": "Cada estante recibe 147 libros; para llegar a 150 faltan 3.",
+   "clue": "Primero divide los libros y después compara con la cantidad que debe tener cada estante.",
+   "option_notes": {
+    "2 libros": "Resta mal 150 − 147.",
+    "5 libros": "Confunde la cantidad de estantes con los libros que faltan.",
+    "10 libros": "Redondea 147 a 140 antes de comparar con 150."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "En un vivero hay 648 árboles nativos, repartidos en 8 filas iguales. Si plantas 5 más en cada fila, ¿cuántos árboles quedan en cada fila?",
+   "options": [
+    "89 árboles",
+    "76 árboles",
+    "86 árboles",
+    "81 árboles"
+   ],
+   "correct": "86 árboles",
+   "hint": "Cada fila tenía 81 árboles; al agregar 5, queda con 86.",
+   "clue": "Primero calcula los árboles de una fila; después agrega los 5 nuevos.",
+   "option_notes": {
+    "76 árboles": "Resta 5 en vez de agregarlos.",
+    "81 árboles": "Hace la división, pero olvida los 5 árboles nuevos.",
+    "89 árboles": "Suma 8, confundiendo las filas con los árboles agregados."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Una cooperativa tiene 683 naranjas y quiere formar bolsas de 7 sin que sobren. ¿Cuántas naranjas debe agregar como mínimo?",
+   "options": [
+    "7 naranjas",
+    "3 naranjas",
+    "2 naranjas",
+    "4 naranjas"
+   ],
+   "correct": "3 naranjas",
+   "hint": "683 ÷ 7 deja resto 4; faltan 3 para llegar al siguiente múltiplo de 7.",
+   "clue": "Halla el resto y completa hasta el siguiente grupo de 7.",
+   "option_notes": {
+    "2 naranjas": "Calcula el resto como 5 y cree que faltan 2.",
+    "4 naranjas": "Agrega el resto, en vez de completar el grupo siguiente.",
+    "7 naranjas": "Agrega un divisor completo, aunque faltan menos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Un refugio tiene 914 kg de alimento, que guarda en sacos de 8 kg. Después usa 6 sacos completos. ¿Cuántos kilogramos quedan?",
+   "options": [
+    "866 kg",
+    "864 kg",
+    "908 kg",
+    "914 kg"
+   ],
+   "correct": "866 kg",
+   "hint": "Hay 114 sacos completos y 2 kg sueltos; al usar 6 sacos quedan 108 × 8 + 2 = 866 kg.",
+   "clue": "Busca primero los sacos completos y lo que queda fuera; luego descuenta los 6 sacos.",
+   "option_notes": {
+    "864 kg": "Resta 6 sacos de 8 kg, pero olvida los 2 kg sobrantes.",
+    "908 kg": "Resta 6 kg en vez de 6 sacos de 8 kg.",
+    "914 kg": "No descuenta los 6 sacos usados."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Una escuela guarda 756 colaciones en cajas de 9. Entrega 4 cajas y reparte las colaciones restantes por igual entre 8 cursos. ¿Cuántas recibe cada curso?",
+   "options": [
+    "80 colaciones",
+    "90 colaciones",
+    "84 colaciones",
+    "94 colaciones"
+   ],
+   "correct": "90 colaciones",
+   "hint": "756 ÷ 9 = 84 cajas; quedan 80, con 720 colaciones. Al repartirlas entre 8 cursos, tocan 90.",
+   "clue": "Calcula las cajas, descuenta las entregadas, convierte a colaciones y divide entre cursos.",
+   "option_notes": {
+    "80 colaciones": "Confunde las 80 cajas restantes con las colaciones por curso.",
+    "84 colaciones": "Usa todas las cajas y no descuenta las 4 entregadas.",
+    "94 colaciones": "Divide 756 entre 8 y olvida convertir y descontar las cajas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Al dividir un número de tres dígitos por 6 se obtiene cociente 83 y resto 4. ¿Cuál era el dividendo?",
+   "options": [
+    "494",
+    "498",
+    "510",
+    "502"
+   ],
+   "correct": "502",
+   "hint": "El dividendo se obtiene con 83 × 6 + 4: 498 + 4 = 502.",
+   "clue": "Reconstruye el dividendo: multiplica cociente por divisor y suma el resto.",
+   "option_notes": {
+    "494": "Resta el resto al producto, en vez de sumarlo.",
+    "498": "Calcula el producto, pero olvida agregar el resto.",
+    "510": "Usa un cociente mayor y un resto incorrecto."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

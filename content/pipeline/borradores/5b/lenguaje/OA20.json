@@ -1,0 +1,268 @@
+{
+ "oa": "OA20",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA20",
+   "difficulty": "easy",
+   "text": "Lee: «La bibliotecaria susurró para no interrumpir la lectura». ¿Qué matiz aporta “susurró” frente a “habló”?",
+   "options": [
+    "Que habló en voz muy baja.",
+    "Que habló durante más tiempo.",
+    "Que habló usando palabras difíciles.",
+    "Que habló con mucha rapidez."
+   ],
+   "correct": "Que habló en voz muy baja.",
+   "hint": "Susurrar indica hablar suavemente y con poco volumen para no ser oído por todos.",
+   "clue": "Fíjate en la razón: no quería interrumpir la lectura.",
+   "option_notes": {
+    "Que habló con mucha rapidez.": "Confunde el volumen de la voz con la rapidez.",
+    "Que habló usando palabras difíciles.": "Confunde el volumen con la dificultad del vocabulario.",
+    "Que habló durante más tiempo.": "Confunde el volumen con la duración de la acción."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "easy",
+   "text": "Entre estas palabras, ¿cuál expresa el temor más intenso?",
+   "options": [
+    "Pánico",
+    "Nerviosismo",
+    "Miedo",
+    "Inquietud"
+   ],
+   "correct": "Pánico",
+   "hint": "“Pánico” nombra un miedo muy intenso; las otras palabras expresan menor fuerza o estados cercanos.",
+   "clue": "Ordénalas desde una preocupación leve hasta una reacción muy fuerte.",
+   "option_notes": {
+    "Inquietud": "La toma como el nivel más alto, aunque es una preocupación leve.",
+    "Nerviosismo": "Confunde estar nervioso con sentir el temor máximo.",
+    "Miedo": "Reconoce el tema, pero no el matiz de mayor intensidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "easy",
+   "text": "Compara “mirar”, “observar” y “contemplar”. ¿Cuál indica fijarse con atención, sin expresar necesariamente admiración?",
+   "options": [
+    "Observar",
+    "Contemplar",
+    "Ignorar",
+    "Mirar"
+   ],
+   "correct": "Observar",
+   "hint": "“Observar” agrega atención; “contemplar” suele sugerir admiración y “mirar” es más general.",
+   "clue": "Busca la palabra que precisa la atención, pero no una emoción positiva.",
+   "option_notes": {
+    "Mirar": "Elige el verbo general y pierde el matiz de atención.",
+    "Contemplar": "Agrega un matiz de admiración que no se pide.",
+    "Ignorar": "Confunde fijarse con no prestar atención."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "easy",
+   "text": "¿Qué verbo elegirías para indicar que Martina habló muy fuerte y con enojo?",
+   "options": [
+    "Comentó",
+    "Gritó",
+    "Murmuró",
+    "Conversó"
+   ],
+   "correct": "Gritó",
+   "hint": "“Gritar” expresa un volumen alto y, en este contexto, transmite enojo.",
+   "clue": "Piensa en el volumen de la voz y en la emoción de Martina.",
+   "option_notes": {
+    "Murmuró": "Elige una forma de hablar muy baja, casi opuesta a gritar.",
+    "Comentó": "Considera solo que habló, sin expresar volumen ni enojo.",
+    "Conversó": "Confunde hablar con otras personas con hacerlo a gritos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "medium",
+   "text": "Se le quemó el pan, pero Valentina no gritó ni golpeó la mesa. ¿Qué palabra describe mejor su enojo?",
+   "options": [
+    "Desesperada",
+    "Encantada",
+    "Furiosa",
+    "Molesta"
+   ],
+   "correct": "Molesta",
+   "hint": "“Molesta” expresa un enojo leve; “furiosa” y “desesperada” serían reacciones más intensas.",
+   "clue": "La reacción tranquila indica que debes elegir una emoción de menor fuerza.",
+   "option_notes": {
+    "Furiosa": "Escoge una intensidad mayor que la indicada.",
+    "Desesperada": "Confunde enojo leve con una reacción extrema.",
+    "Encantada": "Confunde una emoción negativa con una positiva."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "medium",
+   "text": "Quieres pedir a tu profesor que revise tu respuesta con respeto. ¿Cuál frase tiene el matiz más adecuado?",
+   "options": [
+    "Le ordeno revisar mi respuesta.",
+    "Exijo que revise mi respuesta.",
+    "¡Revise mi respuesta de inmediato!",
+    "¿Podría revisar mi respuesta, por favor?"
+   ],
+   "correct": "¿Podría revisar mi respuesta, por favor?",
+   "hint": "La pregunta y “por favor” expresan una solicitud respetuosa, no una orden ni una exigencia.",
+   "clue": "Piensa cómo cambia el tono cuando pides algo a una autoridad.",
+   "option_notes": {
+    "¡Revise mi respuesta de inmediato!": "Confunde una petición respetuosa con una exigencia urgente.",
+    "Le ordeno revisar mi respuesta.": "Usa un tono de autoridad que no corresponde al estudiante.",
+    "Exijo que revise mi respuesta.": "Transforma una solicitud en una demanda."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "medium",
+   "text": "Lee: «El pudú avanzó sigilosamente entre las hojas; el zorro no lo oyó». ¿Por qué “sigilosamente” es más preciso que “rápidamente”?",
+   "options": [
+    "Porque se movió sin rumbo.",
+    "Porque se movió a gran velocidad.",
+    "Porque se movió sin hacer ruido.",
+    "Porque se movió dando saltos."
+   ],
+   "correct": "Porque se movió sin hacer ruido.",
+   "hint": "El resultado —que el zorro no lo oyó— señala un movimiento silencioso, no necesariamente veloz.",
+   "clue": "Relaciona la palabra con lo que ocurrió después.",
+   "option_notes": {
+    "Porque se movió a gran velocidad.": "Confunde silencio con rapidez.",
+    "Porque se movió dando saltos.": "Agrega una forma de moverse que el texto no señala.",
+    "Porque se movió sin rumbo.": "Confunde moverse en silencio con no tener dirección."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "medium",
+   "text": "En un informe sobre una tormenta, completa: «El viento ___ las ramas, pero no las quebró».",
+   "options": [
+    "Arrancó",
+    "Acarició",
+    "Agitó",
+    "Decoró"
+   ],
+   "correct": "Agitó",
+   "hint": "“Agitó” significa que movió las ramas con fuerza, sin decir que las rompió.",
+   "clue": "Busca un verbo que indique movimiento fuerte, pero no destrucción.",
+   "option_notes": {
+    "Acarició": "Confunde un movimiento suave con el efecto de una tormenta.",
+    "Arrancó": "Ignora que las ramas no fueron desprendidas.",
+    "Decoró": "Confunde mover las ramas con cambiar su aspecto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "hard",
+   "text": "Lee: «—No toquen esa planta —dijo la guardaparques, señalando el cartel de peligro». ¿Qué matiz agrega “advirtió” en lugar de “dijo”?",
+   "options": [
+    "Que hizo una pregunta para saber algo.",
+    "Que contó algo gracioso para entretener.",
+    "Que celebró una noticia positiva.",
+    "Que avisó para evitar un peligro."
+   ],
+   "correct": "Que avisó para evitar un peligro.",
+   "hint": "“Advirtió” indica que informó de un riesgo para que las personas actuaran con cuidado.",
+   "clue": "Observa el cartel de peligro y la acción que la guardaparques quiere provocar.",
+   "option_notes": {
+    "Que contó algo gracioso para entretener.": "Confunde una advertencia con una broma.",
+    "Que hizo una pregunta para saber algo.": "Confunde avisar sobre un riesgo con pedir información.",
+    "Que celebró una noticia positiva.": "Confunde una señal de peligro con una celebración."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "hard",
+   "text": "Escribirás a la municipalidad para pedir un taller de reciclaje. ¿Qué oración usa un verbo formal, sin sonar exigente?",
+   "options": [
+    "Ordeno un taller de reciclaje para nuestro barrio.",
+    "Suplico un taller de reciclaje para nuestro barrio.",
+    "Solicito un taller de reciclaje para nuestro barrio.",
+    "Exijo un taller de reciclaje para nuestro barrio."
+   ],
+   "correct": "Solicito un taller de reciclaje para nuestro barrio.",
+   "hint": "“Solicitar” expresa pedir algo formalmente; no impone ni muestra desesperación.",
+   "clue": "Considera a quién escribes y el tono respetuoso que buscas.",
+   "option_notes": {
+    "Exijo un taller de reciclaje para nuestro barrio.": "Confunde una petición formal con una demanda obligatoria.",
+    "Suplico un taller de reciclaje para nuestro barrio.": "Añade desesperación, un matiz no buscado.",
+    "Ordeno un taller de reciclaje para nuestro barrio.": "Trata una solicitud como si fuera una autoridad."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: más de una alternativa correcta: «Suplico…» también es un verbo formal y no suena exigente; el enunciado no descarta esa opción."
+   ]
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "hard",
+   "text": "En una conversación, tu compañero propone botar basura al río. ¿Cuál respuesta expresa desacuerdo firme, pero respetuoso?",
+   "options": [
+    "Tu idea es estúpida y no sirve.",
+    "No comparto esa idea; debemos cuidar el río.",
+    "Me da lo mismo lo que pienses.",
+    "¡Hazlo ahora, porque yo mando!"
+   ],
+   "correct": "No comparto esa idea; debemos cuidar el río.",
+   "hint": "La frase marca el desacuerdo y entrega una razón sin insultar ni imponer.",
+   "clue": "Busca un tono claro para disentir, pero cuidadoso con la otra persona.",
+   "option_notes": {
+    "Tu idea es estúpida y no sirve.": "Confunde firmeza con insulto.",
+    "¡Hazlo ahora, porque yo mando!": "Confunde desacuerdo con una orden.",
+    "Me da lo mismo lo que pienses.": "Expresa indiferencia, no un desacuerdo respetuoso."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: las alternativas no son sinónimos; evalúa desacuerdo respetuoso, no matices entre sinónimos."
+   ]
+  },
+  {
+   "oa_code": "OA20",
+   "difficulty": "hard",
+   "text": "Lee: «Benjamín buscó su cuaderno por toda la sala: miró bajo las mesas y abrió los cajones». Si quieres destacar que revisó con mucho cuidado, ¿qué palabra elegirías?",
+   "options": [
+    "Abandonó",
+    "Registró",
+    "Miró",
+    "Recorrió"
+   ],
+   "correct": "Registró",
+   "hint": "“Registrar” puede significar revisar un lugar minuciosamente para encontrar algo.",
+   "clue": "Usa las acciones del personaje para precisar cómo realizó la búsqueda.",
+   "option_notes": {
+    "Miró": "Elige un verbo general y pierde la idea de revisión minuciosa.",
+    "Recorrió": "Confunde desplazarse por un lugar con revisarlo a fondo.",
+    "Abandonó": "Interpreta dejar la búsqueda en vez de hacerla cuidadosamente."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

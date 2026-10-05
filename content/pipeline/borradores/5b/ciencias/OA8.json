@@ -1,0 +1,264 @@
+{
+ "oa": "OA8",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "Al encender una estufa eléctrica, ¿en qué forma se transforma principalmente la energía eléctrica?",
+   "options": [
+    "En energía sonora",
+    "En energía lumínica",
+    "En energía química",
+    "En energía calórica"
+   ],
+   "correct": "En energía calórica",
+   "hint": "La resistencia de la estufa se calienta y entrega calor al ambiente.",
+   "clue": "Fíjate en el efecto que buscas al usar una estufa.",
+   "option_notes": {
+    "En energía sonora": "Confunde el ruido del aparato con su transformación principal.",
+    "En energía lumínica": "Piensa que encender un artefacto siempre produce luz.",
+    "En energía química": "Confunde la electricidad con la energía almacenada en una pila."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "Una ampolleta encendida ilumina una pieza. ¿Qué transformación explica principalmente ese efecto?",
+   "options": [
+    "De lumínica a eléctrica",
+    "De eléctrica a lumínica",
+    "De calórica a química",
+    "De sonora a calórica"
+   ],
+   "correct": "De eléctrica a lumínica",
+   "hint": "La ampolleta recibe electricidad y emite luz.",
+   "clue": "Relaciona la energía que entra con el efecto visible.",
+   "option_notes": {
+    "De lumínica a eléctrica": "Invierte la dirección del cambio de energía.",
+    "De sonora a calórica": "Confunde el sonido con la luz que observas.",
+    "De calórica a química": "Asocia el calor con energía almacenada, no con iluminación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "¿Qué artefacto transforma principalmente energía eléctrica en energía sonora?",
+   "options": [
+    "Una linterna",
+    "Un hervidor",
+    "Un ventilador",
+    "Un parlante"
+   ],
+   "correct": "Un parlante",
+   "hint": "Busca el aparato cuyo propósito principal es producir sonidos.",
+   "clue": "Piensa qué aparato usarías para escuchar música.",
+   "option_notes": {
+    "Un hervidor": "Confunde el calor del hervidor con un sonido.",
+    "Una linterna": "Lo relaciona con la luz que entrega la linterna.",
+    "Un ventilador": "Se fija en el ruido del motor, no en su función principal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "¿Qué científico construyó la primera pila eléctrica, antecedente de las baterías?",
+   "options": [
+    "Thomas Edison",
+    "Alessandro Volta",
+    "Michael Faraday",
+    "Benjamin Franklin"
+   ],
+   "correct": "Alessandro Volta",
+   "hint": "Volta construyó la pila voltaica, capaz de entregar corriente eléctrica.",
+   "clue": "Recuerda quién creó un dispositivo formado por metales y separadores húmedos.",
+   "option_notes": {
+    "Michael Faraday": "Se le relaciona con la inducción y los generadores, no con la primera pila.",
+    "Benjamin Franklin": "Estudió la electricidad de los rayos y la atmósfera.",
+    "Thomas Edison": "Mejoró lámparas eléctricas para hacerlas prácticas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Pones pan en un tostador eléctrico. El pan se calienta y cambia de color. ¿Cuál explicación es la más adecuada?",
+   "options": [
+    "La energía eléctrica se transforma principalmente en sonido.",
+    "La luz tuesta el pan sin producir calor.",
+    "La energía eléctrica se transforma principalmente en calor.",
+    "El calor se transforma principalmente en electricidad."
+   ],
+   "correct": "La energía eléctrica se transforma principalmente en calor.",
+   "hint": "La resistencia entrega calor al pan; por eso se calienta y se tuesta.",
+   "clue": "Relaciona la energía que entra con los cambios observados en el pan.",
+   "option_notes": {
+    "La energía eléctrica se transforma principalmente en sonido.": "Se fija en ruidos secundarios y olvida el calentamiento.",
+    "El calor se transforma principalmente en electricidad.": "Invierte el cambio y supone que el pan genera corriente.",
+    "La luz tuesta el pan sin producir calor.": "Atribuye el cambio de color a la luz y niega el calor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Conectas un ventilador y sus aspas empiezan a girar. ¿Qué transformación y evidencia corresponden?",
+   "options": [
+    "Eléctrica a sonora; el motor se escucha.",
+    "Cinética a eléctrica; el enchufe recibe energía.",
+    "Térmica a lumínica; el motor produce luz.",
+    "Eléctrica a cinética; las aspas giran."
+   ],
+   "correct": "Eléctrica a cinética; las aspas giran.",
+   "hint": "La electricidad activa el motor y su efecto visible es el giro.",
+   "clue": "Observa qué parte se mueve gracias a la conexión.",
+   "option_notes": {
+    "Eléctrica a sonora; el motor se escucha.": "Confunde el ruido del motor con el efecto principal.",
+    "Cinética a eléctrica; el enchufe recibe energía.": "Invierte el sentido: el ventilador no entrega energía al enchufe.",
+    "Térmica a lumínica; el motor produce luz.": "Supone que el motor produce luz al calentarse."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Faraday observó que mover un imán cerca de un alambre podía producir corriente. ¿Qué aparato aprovecha directamente ese principio?",
+   "options": [
+    "Un generador eléctrico",
+    "Un interruptor",
+    "Una pila eléctrica",
+    "Un motor eléctrico"
+   ],
+   "correct": "Un generador eléctrico",
+   "hint": "En un generador, el movimiento y el magnetismo permiten obtener energía eléctrica.",
+   "clue": "Busca el aparato que produce electricidad a partir de movimiento.",
+   "option_notes": {
+    "Un motor eléctrico": "Confunde el generador con un motor, que usa electricidad para moverse.",
+    "Una pila eléctrica": "Piensa que toda corriente proviene de una pila.",
+    "Un interruptor": "Confunde controlar el circuito con producir corriente."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "En un museo lees que Edison mejoró una lámpara incandescente. ¿Qué problema ayudó a resolver?",
+   "options": [
+    "Que un motor funcionara sin electricidad.",
+    "Que la pila produjera sonidos.",
+    "Que la lámpara permaneciera encendida más tiempo.",
+    "Que un imán guardara calor."
+   ],
+   "correct": "Que la lámpara permaneciera encendida más tiempo.",
+   "hint": "Una lámpara práctica debía iluminar durante más tiempo antes de cambiarla.",
+   "clue": "Piensa en lo que necesita una familia para usar una lámpara todos los días.",
+   "option_notes": {
+    "Que la pila produjera sonidos.": "Confunde iluminar por más tiempo con producir sonidos.",
+    "Que un imán guardara calor.": "Relaciona un imán con guardar calor, algo que no hace.",
+    "Que un motor funcionara sin electricidad.": "Confunde la necesidad de electricidad con funcionar sin ella."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Una linterna tiene una pila y una ampolleta. Al encenderla, la pila se agota y la pieza se ilumina. ¿Qué cadena representa mejor lo ocurrido?",
+   "options": [
+    "Lumínica→eléctrica→química",
+    "Química→eléctrica→lumínica",
+    "Eléctrica→química→sonora",
+    "Calórica→eléctrica→lumínica"
+   ],
+   "correct": "Química→eléctrica→lumínica",
+   "hint": "La pila entrega electricidad y la ampolleta la transforma principalmente en luz.",
+   "clue": "Sigue el recorrido desde la energía almacenada en la pila hasta la luz.",
+   "option_notes": {
+    "Lumínica→eléctrica→química": "Invierte el recorrido de la pila y la ampolleta.",
+    "Eléctrica→química→sonora": "Confunde almacenar energía con producir sonido.",
+    "Calórica→eléctrica→lumínica": "Supone que el calor es la fuente de la linterna."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Un televisor conectado transforma electricidad en luz y sonido; además, se entibia. ¿Qué conclusión se puede sacar?",
+   "options": [
+    "La luz siempre se transforma en sonido dentro del televisor.",
+    "El sonido se transforma en electricidad dentro del televisor.",
+    "La energía eléctrica puede transformarse en luz, sonido y calor.",
+    "El calor desaparece porque no es una forma de energía."
+   ],
+   "correct": "La energía eléctrica puede transformarse en luz, sonido y calor.",
+   "hint": "El aparato recibe electricidad y entrega luz, sonido y algo de calor.",
+   "clue": "Considera los tres efectos observados, no solo el principal.",
+   "option_notes": {
+    "La luz siempre se transforma en sonido dentro del televisor.": "Describe solo un efecto y olvida la luz, el sonido y el calor.",
+    "El sonido se transforma en electricidad dentro del televisor.": "Confunde el sonido emitido con la electricidad que recibe.",
+    "El calor desaparece porque no es una forma de energía.": "Niega que el calor sea una forma de energía."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Ordena del más antiguo al más reciente: Volta construye una pila; Faraday estudia la inducción; Edison mejora una lámpara.",
+   "options": [
+    "Volta → Faraday → Edison",
+    "Volta → Edison → Faraday",
+    "Faraday → Volta → Edison",
+    "Edison → Volta → Faraday"
+   ],
+   "correct": "Volta → Faraday → Edison",
+   "hint": "La pila de Volta precedió al estudio de la inducción de Faraday y a la lámpara de Edison.",
+   "clue": "Piensa en el orden histórico de los tres nombres.",
+   "option_notes": {
+    "Faraday → Volta → Edison": "Intercambia los dos primeros aportes históricos.",
+    "Edison → Volta → Faraday": "Pone primero una mejora de lámparas posterior.",
+    "Volta → Edison → Faraday": "Coloca la lámpara antes del generador."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "En este orden, ¿qué transformaciones corresponden a la pila de Volta, el generador de Faraday y la lámpara de Edison?",
+   "options": [
+    "Química→eléctrica; cinética→eléctrica; eléctrica→lumínica.",
+    "Lumínica→térmica; química→sonora; cinética→eléctrica.",
+    "Sonora→eléctrica; térmica→sonora; eléctrica→química.",
+    "Eléctrica→química; eléctrica→cinética; lumínica→eléctrica."
+   ],
+   "correct": "Química→eléctrica; cinética→eléctrica; eléctrica→lumínica.",
+   "hint": "La pila usa reacciones químicas, el generador usa movimiento y la lámpara entrega luz.",
+   "clue": "Relaciona la fuente o entrada de cada aparato con su efecto principal.",
+   "option_notes": {
+    "Eléctrica→química; eléctrica→cinética; lumínica→eléctrica.": "Invierte las transformaciones y confunde motor con generador.",
+    "Sonora→eléctrica; térmica→sonora; eléctrica→química.": "Atribuye sonidos y calor a aparatos sin esas funciones principales.",
+    "Lumínica→térmica; química→sonora; cinética→eléctrica.": "Intercambia las fuentes y resultados de los tres aparatos."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

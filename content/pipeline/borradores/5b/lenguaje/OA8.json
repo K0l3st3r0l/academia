@@ -1,0 +1,266 @@
+{
+ "oa": "OA8",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "Lee: «El pudú es un ciervo nativo de Chile. Vive en bosques húmedos, come hojas y brotes, y necesita que protejamos su hábitat.» ¿Cuál es la idea principal?",
+   "options": [
+    "Todos los ciervos viven en bosques de Chile.",
+    "El pudú se alimenta de hojas y brotes.",
+    "Los bosques húmedos tienen muchas hojas para comer.",
+    "El pudú es un ciervo nativo cuyo hábitat debemos proteger."
+   ],
+   "correct": "El pudú es un ciervo nativo cuyo hábitat debemos proteger.",
+   "hint": "La idea principal resume el tema y el mensaje central, no solo un detalle sobre su alimento.",
+   "clue": "Busca la alternativa que reúna el animal y la información más importante del párrafo.",
+   "option_notes": {
+    "El pudú se alimenta de hojas y brotes.": "Confunde un detalle de su alimentación con la idea principal.",
+    "Los bosques húmedos tienen muchas hojas para comer.": "Cambia el foco: el texto trata del pudú, no de las hojas.",
+    "Todos los ciervos viven en bosques de Chile.": "Generaliza a todos los ciervos y agrega una afirmación no dicha."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "Lee: «En los humedales viven aves, peces, insectos y plantas. Además, almacenan agua y ayudan a disminuir las inundaciones.» ¿Qué enunciado resume mejor el texto?",
+   "options": [
+    "Los humedales albergan vida y ayudan a regular el agua.",
+    "En los humedales viven aves y peces.",
+    "Las plantas de los humedales necesitan mucha agua.",
+    "Los humedales almacenan agua durante las inundaciones."
+   ],
+   "correct": "Los humedales albergan vida y ayudan a regular el agua.",
+   "hint": "Une las dos funciones destacadas: dar espacio a seres vivos y colaborar con el agua.",
+   "clue": "No elijas un ejemplo; busca una frase que reúna las dos ideas del texto.",
+   "option_notes": {
+    "En los humedales viven aves y peces.": "Menciona solo algunos seres vivos y omite la función del agua.",
+    "Los humedales almacenan agua durante las inundaciones.": "Menciona una función y omite que allí viven muchos seres vivos.",
+    "Las plantas de los humedales necesitan mucha agua.": "Agrega una necesidad de las plantas que el texto no afirma."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "Lee: «El canelo es un árbol sagrado para el pueblo mapuche. Sus hojas son aromáticas y puede alcanzar gran altura en los bosques del sur.» Si quieres recordarlo, ¿qué apunte breve conviene escribir?",
+   "options": [
+    "El pueblo mapuche tiene árboles sagrados en el sur.",
+    "El canelo es un árbol sagrado mapuche, aromático y sureño.",
+    "Todos los árboles del sur son sagrados.",
+    "El canelo tiene hojas aromáticas y crece alto."
+   ],
+   "correct": "El canelo es un árbol sagrado mapuche, aromático y sureño.",
+   "hint": "Un buen apunte conserva la idea central y solo los datos que ayudan a recordarla.",
+   "clue": "Incluye qué es el canelo, su relación cultural y un rasgo del árbol.",
+   "option_notes": {
+    "El canelo tiene hojas aromáticas y crece alto.": "Anota detalles, pero deja fuera la idea cultural más importante.",
+    "El pueblo mapuche tiene árboles sagrados en el sur.": "Confunde al árbol con el pueblo mapuche y cambia el sentido.",
+    "Todos los árboles del sur son sagrados.": "Generaliza una característica del canelo a todos los árboles."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "easy",
+   "text": "Lee: «Cada otoño, muchas aves migratorias llegan a la desembocadura del río Maipo. Allí encuentran alimento y descanso antes de continuar su viaje.» ¿Qué título resume mejor el texto?",
+   "options": [
+    "Aves migratorias en la desembocadura del Maipo.",
+    "Alimento y descanso en el río Maipo.",
+    "La desembocadura del río Maipo en otoño.",
+    "El viaje de las aves migratorias en otoño."
+   ],
+   "correct": "Aves migratorias en la desembocadura del Maipo.",
+   "hint": "El mejor título reúne el tema principal y el lugar donde ocurre lo importante.",
+   "clue": "Piensa: ¿de quién se habla y en qué lugar encuentra lo que necesita?",
+   "option_notes": {
+    "El viaje de las aves migratorias en otoño.": "Se centra en el viaje y omite el lugar clave del texto.",
+    "Alimento y descanso en el río Maipo.": "Menciona dos detalles, pero no indica quién los realiza.",
+    "La desembocadura del río Maipo en otoño.": "Nombra el lugar y la época, pero omite el tema central."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Lee: «La energía solar se obtiene de la luz del Sol. En Chile, los paneles solares transforman esa luz en electricidad, sobre todo en zonas despejadas. Es una fuente renovable.» ¿Cuál resumen sirve mejor para estudiar?",
+   "options": [
+    "La luz solar se transforma en electricidad y es una fuente renovable.",
+    "Los días despejados convierten la electricidad en luz solar.",
+    "Los paneles solares funcionan solo en Chile.",
+    "La energía solar reemplaza todas las fuentes de energía."
+   ],
+   "correct": "La luz solar se transforma en electricidad y es una fuente renovable.",
+   "hint": "El resumen une cómo se obtiene la electricidad y qué tipo de fuente es.",
+   "clue": "Elige una frase que conserve la transformación y la característica de la energía.",
+   "option_notes": {
+    "Los paneles solares funcionan solo en Chile.": "Convierte un ejemplo de uso en una regla exclusiva.",
+    "Los días despejados convierten la electricidad en luz solar.": "Invierte el proceso: la electricidad no se convierte en luz solar.",
+    "La energía solar reemplaza todas las fuentes de energía.": "Exagera: el texto no dice que reemplace todas las fuentes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Lee: «En el Parque Nacional Lauca, la vicuña come pastos duros y resiste cambios de temperatura. Sus bofedales le dan agua y alimento, por eso debemos protegerlos.» Para una investigación sobre su protección, ¿qué registro es más útil?",
+   "options": [
+    "Los bofedales del Lauca tienen pastos y temperaturas cambiantes.",
+    "La vicuña come pastos duros en el Parque Nacional Lauca.",
+    "Las vicuñas viven cómodas en cualquier ambiente.",
+    "La vicuña necesita bofedales protegidos: allí halla agua y alimento."
+   ],
+   "correct": "La vicuña necesita bofedales protegidos: allí halla agua y alimento.",
+   "hint": "Para investigar la protección, conserva la relación entre bofedales, agua y alimento.",
+   "clue": "Prioriza el dato que explica por qué el lugar debe cuidarse.",
+   "option_notes": {
+    "La vicuña come pastos duros en el Parque Nacional Lauca.": "Registra alimentación y lugar, pero omite la razón para proteger.",
+    "Los bofedales del Lauca tienen pastos y temperaturas cambiantes.": "Mezcla datos del ambiente y deja fuera la necesidad de cuidarlo.",
+    "Las vicuñas viven cómodas en cualquier ambiente.": "Generaliza y contradice la idea de proteger un lugar específico."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Lee: «En 1960, un terremoto afectó el sur de Chile y provocó maremotos. Muchas personas se trasladaron y después se fortalecieron normas de construcción.» ¿Qué registro te ayuda a estudiar sus consecuencias?",
+   "options": [
+    "Terremoto de 1960: destruyó todas las costas y cambió las normas.",
+    "Terremoto de 1960: causó maremotos; hubo traslados y mejoraron normas.",
+    "Los maremotos de 1960 causaron el terremoto y cambiaron normas.",
+    "Terremoto de 1960: afectó el sur, pero no causó maremotos."
+   ],
+   "correct": "Terremoto de 1960: causó maremotos; hubo traslados y mejoraron normas.",
+   "hint": "El registro une el hecho inicial con varios efectos posteriores, sin inventar otros.",
+   "clue": "Distingue el terremoto de sus consecuencias y de los cambios posteriores.",
+   "option_notes": {
+    "Terremoto de 1960: afectó el sur, pero no causó maremotos.": "Niega un efecto del texto: sí hubo maremotos en varias costas.",
+    "Los maremotos de 1960 causaron el terremoto y cambiaron normas.": "Invierte la causa: el terremoto provocó los maremotos.",
+    "Terremoto de 1960: destruyó todas las costas y cambió las normas.": "Exagera el alcance del daño y transforma varias costas en todas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "medium",
+   "text": "Lee: «El agua de mares, ríos y lagos se evapora con el calor del Sol. Luego forma nubes y cae como lluvia o nieve; así vuelve a la superficie y el ciclo comienza otra vez.» ¿Qué síntesis te permite recordar el ciclo?",
+   "options": [
+    "El calor del Sol convierte las nubes en ríos y lagos.",
+    "El agua cae como lluvia o nieve y se queda en la superficie.",
+    "El Sol evapora agua, que forma nubes, cae y vuelve a la superficie.",
+    "El agua de los mares es la única que participa."
+   ],
+   "correct": "El Sol evapora agua, que forma nubes, cae y vuelve a la superficie.",
+   "hint": "La síntesis conserva las etapas principales en el orden en que ocurren.",
+   "clue": "Busca el recorrido completo: sale de la superficie, cambia y regresa.",
+   "option_notes": {
+    "El agua cae como lluvia o nieve y se queda en la superficie.": "Omite la evaporación y afirma que el ciclo se detiene.",
+    "El calor del Sol convierte las nubes en ríos y lagos.": "Cambia el orden y agrega una transformación no mencionada.",
+    "El agua de los mares es la única que participa.": "Excluye los ríos y lagos, que también aparecen en el texto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Lee: «En una escuela de Temuco instalaron diez cajas nido para chercanes. De diez cajas, siete alejadas del ruido tuvieron ocupantes; de diez cercanas, cuatro tuvieron ocupantes.» Para informar el resultado, ¿qué síntesis es más completa?",
+   "options": [
+    "Los estudiantes instalaron cajas nido para observar aves.",
+    "Las cajas cercanas al ruido fueron más usadas por chercanes.",
+    "Las cajas nido alejadas del ruido fueron más usadas por chercanes.",
+    "Los chercanes prefieren siempre los lugares silenciosos."
+   ],
+   "correct": "Las cajas nido alejadas del ruido fueron más usadas por chercanes.",
+   "hint": "La conclusión compara los dos grupos de cajas y evita convertir el resultado en una regla universal.",
+   "clue": "Fíjate en cuál grupo tuvo más cajas ocupadas.",
+   "option_notes": {
+    "Los estudiantes instalaron cajas nido para observar aves.": "Describe la acción inicial, pero no comunica el resultado.",
+    "Los chercanes prefieren siempre los lugares silenciosos.": "Generaliza el hallazgo como una preferencia permanente.",
+    "Las cajas cercanas al ruido fueron más usadas por chercanes.": "Invierte la comparación entre los dos grupos de cajas."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: enunciado ambiguo: dice que instalaron diez cajas nido y luego compara diez alejadas y diez cercanas"
+   ]
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Lee: Texto 1: «Los bosques nativos protegen el suelo y almacenan carbono.» Texto 2: «Al reemplazarlos por plantaciones, cambia el hábitat de muchas especies.» ¿Qué síntesis integra ambos textos?",
+   "options": [
+    "Reemplazar bosques nativos solo cambia el paisaje.",
+    "Las plantaciones protegen mejor el suelo y a todas las especies.",
+    "Bosques nativos: protegen suelo; reemplazarlos altera hábitats.",
+    "Los bosques nativos almacenan carbono y no necesitan cuidados."
+   ],
+   "correct": "Bosques nativos: protegen suelo; reemplazarlos altera hábitats.",
+   "hint": "Integra una función de los bosques con el efecto de reemplazarlos, en vez de repetir un solo dato.",
+   "clue": "Relaciona lo que aportan los bosques con lo que ocurre cuando se cambian.",
+   "option_notes": {
+    "Los bosques nativos almacenan carbono y no necesitan cuidados.": "Repite un dato y agrega una conclusión que el texto no sostiene.",
+    "Las plantaciones protegen mejor el suelo y a todas las especies.": "Invierte la información y generaliza sobre todas las especies.",
+    "Reemplazar bosques nativos solo cambia el paisaje.": "Reduce un cambio ambiental importante a una modificación visual."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Lee: «Un curso regó tres plantas iguales de distinta forma: mucho, poco o intermedio. Tras dos semanas, creció más la que recibió riego intermedio.» ¿Qué síntesis registra el hallazgo sin volverlo una regla absoluta?",
+   "options": [
+    "Las plantas siempre crecen mejor con riego intermedio.",
+    "En el experimento, el riego intermedio favoreció más el crecimiento.",
+    "Regar mucho hace que todas las plantas crezcan menos.",
+    "La luz de la ventana hizo crecer más a la planta."
+   ],
+   "correct": "En el experimento, el riego intermedio favoreció más el crecimiento.",
+   "hint": "La frase correcta limita la conclusión a este experimento y compara el efecto observado.",
+   "clue": "Diferencia el resultado observado de una regla válida para todas las plantas.",
+   "option_notes": {
+    "Las plantas siempre crecen mejor con riego intermedio.": "Convierte un resultado puntual en una regla para todas las plantas.",
+    "Regar mucho hace que todas las plantas crezcan menos.": "Generaliza un efecto que el texto no comprobó en todas las plantas.",
+    "La luz de la ventana hizo crecer más a la planta.": "Atribuye la causa a la luz, aunque el experimento comparó el riego."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA8",
+   "difficulty": "hard",
+   "text": "Lee: «El zorro de Darwin vive en pocos bosques del sur de Chile. Es pequeño y nocturno. La pérdida de bosque y los perros domésticos amenazan su supervivencia.» Para una exposición, ¿qué apunte jerarquiza la idea principal y conserva dos datos clave?",
+   "options": [
+    "El zorro de Darwin vive en bosques del sur y come pequeños animales.",
+    "Todos los zorros del sur están amenazados por los perros.",
+    "Zorro de Darwin: tiene pelaje oscuro y vive de noche.",
+    "Zorro de Darwin: pequeño, nocturno; la pérdida de bosque lo amenaza."
+   ],
+   "correct": "Zorro de Darwin: pequeño, nocturno; la pérdida de bosque lo amenaza.",
+   "hint": "El apunte pone primero la especie amenazada y conserva dos rasgos que ayudan a recordarla.",
+   "clue": "Revisa qué datos describen al animal y cuáles explican por qué necesita protección.",
+   "option_notes": {
+    "Zorro de Darwin: tiene pelaje oscuro y vive de noche.": "Conserva rasgos, pero omite la amenaza, que es la idea principal.",
+    "El zorro de Darwin vive en bosques del sur y come pequeños animales.": "Agrega una alimentación no mencionada y deja fuera la amenaza.",
+    "Todos los zorros del sur están amenazados por los perros.": "Confunde la amenaza con una descripción y generaliza a todos los zorros."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

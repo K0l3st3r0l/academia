@@ -1,0 +1,274 @@
+{
+ "oa": "OA21",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "Un cartel rectangular mide 6 cm de largo y 3 cm de ancho. ¿Cuál es su perímetro?",
+   "options": [
+    "9 cm",
+    "18 cm",
+    "36 cm",
+    "12 cm"
+   ],
+   "correct": "18 cm",
+   "hint": "El perímetro suma los cuatro lados: 6 + 3 + 6 + 3 = 18 cm.",
+   "clue": "Piensa en recorrer todo el borde del cartel.",
+   "option_notes": {
+    "9 cm": "Suma largo y ancho una sola vez, sin considerar los cuatro lados.",
+    "12 cm": "Duplica solo una medida en vez de sumar dos largos y dos anchos.",
+    "36 cm": "Multiplica largo por ancho y luego confunde ese resultado con perímetro."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: calcula el perímetro con ambos lados dados (contenido de 4° básico)"
+   ]
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "Una parcela rectangular mide 5 m de largo y 4 m de ancho. ¿Qué área ocupa?",
+   "options": [
+    "40 m²",
+    "18 m²",
+    "9 m²",
+    "20 m²"
+   ],
+   "correct": "20 m²",
+   "hint": "El área de un rectángulo se obtiene multiplicando largo por ancho: 5 × 4 = 20 m².",
+   "clue": "Busca cuántos cuadrados de 1 m² caben dentro.",
+   "option_notes": {
+    "9 m²": "Suma las medidas en vez de multiplicarlas.",
+    "18 m²": "Calcula el perímetro y lo confunde con el área.",
+    "40 m²": "Multiplica 5 × 4, pero duplica el resultado sin motivo."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: calcula el área con ambos lados dados (contenido de 4° básico)"
+   ]
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "El perímetro de un rectángulo es 20 cm. ¿Qué pareja de medidas puede tener?",
+   "options": [
+    "6 cm de largo y 4 cm de ancho",
+    "9 cm de largo y 3 cm de ancho",
+    "7 cm de largo y 2 cm de ancho",
+    "8 cm de largo y 3 cm de ancho"
+   ],
+   "correct": "6 cm de largo y 4 cm de ancho",
+   "hint": "Un perímetro de 20 cm exige que largo + ancho sea 10 cm; 6 + 4 = 10.",
+   "clue": "Recuerda que el perímetro es el doble de la suma de largo y ancho.",
+   "option_notes": {
+    "8 cm de largo y 3 cm de ancho": "Duplica 8 + 3 y obtiene 22 cm, no 20 cm.",
+    "7 cm de largo y 2 cm de ancho": "Duplica 7 + 2 y obtiene 18 cm, no 20 cm.",
+    "9 cm de largo y 3 cm de ancho": "Duplica 9 + 3 y obtiene 24 cm, no 20 cm."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "El rectángulo A mide 7 cm por 2 cm y el B, 5 cm por 3 cm. ¿Cuál tiene mayor área?",
+   "options": [
+    "B tiene mayor área",
+    "A tiene mayor área",
+    "Tienen igual área",
+    "No se puede comparar"
+   ],
+   "correct": "B tiene mayor área",
+   "hint": "A ocupa 7 × 2 = 14 cm² y B ocupa 5 × 3 = 15 cm²; por eso B es mayor.",
+   "clue": "Para el área, multiplica las dos medidas de cada rectángulo.",
+   "option_notes": {
+    "A tiene mayor área": "Compara el largo 7 con 5 o calcula 7 + 2, no las áreas.",
+    "Tienen igual área": "Suma las medidas: ambos dan 9, en vez de multiplicarlas.",
+    "No se puede comparar": "No usa las medidas disponibles para calcular cada área."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: compara áreas de rectángulos con ambos lados dados (contenido de 4° básico)"
+   ]
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "El huerto rectangular de la escuela tiene perímetro 26 m y largo 8 m. ¿Cuánto mide su ancho?",
+   "options": [
+    "5 m",
+    "8 m",
+    "18 m",
+    "13 m"
+   ],
+   "correct": "5 m",
+   "hint": "La mitad del perímetro es 13 m; quita el largo 8 m para hallar el ancho: 5 m.",
+   "clue": "Primero usa un largo y un ancho: juntos forman la mitad del perímetro.",
+   "option_notes": {
+    "8 m": "Copia el largo como ancho, sin usar el perímetro.",
+    "13 m": "Toma la mitad del perímetro, pero olvida quitar el largo.",
+    "18 m": "Resta el largo una sola vez al perímetro completo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "Una bandeja rectangular tiene área 30 cm² y ancho 5 cm. ¿Cuál es su perímetro?",
+   "options": [
+    "35 cm",
+    "22 cm",
+    "60 cm",
+    "11 cm"
+   ],
+   "correct": "22 cm",
+   "hint": "Primero calcula el largo: 30 ÷ 5 = 6 cm. Luego: 2 × (6 + 5) = 22 cm.",
+   "clue": "No uses el área como borde: primero encuentra la medida que falta.",
+   "option_notes": {
+    "11 cm": "Encuentra el largo 6 cm, pero suma 6 + 5 sin duplicar.",
+    "35 cm": "Suma el ancho al número del área, sin hallar el largo.",
+    "60 cm": "Duplica el área y la confunde con una medida de borde."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "Quieres construir un rectángulo con área 24 cm² y perímetro 20 cm. ¿Qué medidas debes usar?",
+   "options": [
+    "3 cm de largo y 8 cm de ancho",
+    "5 cm de largo y 5 cm de ancho",
+    "4 cm de largo y 6 cm de ancho",
+    "2 cm de largo y 12 cm de ancho"
+   ],
+   "correct": "4 cm de largo y 6 cm de ancho",
+   "hint": "4 × 6 = 24 cm² y 2 × (4 + 6) = 20 cm; cumple las dos condiciones.",
+   "clue": "Revisa por separado el producto de las medidas y el doble de su suma.",
+   "option_notes": {
+    "3 cm de largo y 8 cm de ancho": "Tiene área 24 cm², pero su perímetro es 22 cm.",
+    "2 cm de largo y 12 cm de ancho": "Tiene área 24 cm², pero su perímetro es 28 cm.",
+    "5 cm de largo y 5 cm de ancho": "Tiene perímetro 20 cm, pero su área es 25 cm²."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "Un rectángulo mide 4 m de ancho y 7 m de largo. Si aumentas su largo en 2 m, ¿en cuánto aumenta su perímetro?",
+   "options": [
+    "6 m",
+    "4 m",
+    "2 m",
+    "8 m"
+   ],
+   "correct": "4 m",
+   "hint": "Al aumentar 2 m el largo, aumentan 2 m los dos lados largos: 2 + 2 = 4 m.",
+   "clue": "El largo aparece en dos lados opuestos.",
+   "option_notes": {
+    "2 m": "Cuenta el aumento en un solo lado largo.",
+    "6 m": "Suma el ancho al aumento, aunque el ancho no cambia.",
+    "8 m": "Duplica el aumento dos veces, en lugar de contar los dos lados."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: variación del perímetro al cambiar un lado; no pide diseñar ni construir dados el perímetro, el área o ambos"
+   ]
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "Un rectángulo tiene perímetro 28 cm y área 48 cm². ¿Cuánto miden sus lados?",
+   "options": [
+    "5 cm de largo y 9 cm de ancho",
+    "7 cm de largo y 7 cm de ancho",
+    "4 cm de largo y 12 cm de ancho",
+    "6 cm de largo y 8 cm de ancho"
+   ],
+   "correct": "6 cm de largo y 8 cm de ancho",
+   "hint": "Los lados suman 14 cm y deben multiplicar 48: 6 y 8 cumplen ambas condiciones.",
+   "clue": "Convierte el perímetro en la suma de un largo y un ancho, y prueba factores de 48.",
+   "option_notes": {
+    "4 cm de largo y 12 cm de ancho": "Cumple el área, pero su perímetro es 32 cm.",
+    "7 cm de largo y 7 cm de ancho": "Cumple el perímetro, pero su área es 49 cm².",
+    "5 cm de largo y 9 cm de ancho": "Cumple el perímetro, pero su área es 45 cm²."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "Un rectángulo mide 6 cm por 4 cm. Aumentas el largo 2 cm y reduces el ancho 1 cm. ¿Qué pasa con su área?",
+   "options": [
+    "Disminuye 2 cm²",
+    "Aumenta 2 cm²",
+    "No cambia",
+    "Aumenta 6 cm²"
+   ],
+   "correct": "No cambia",
+   "hint": "Antes: 6 × 4 = 24 cm². Después: 8 × 3 = 24 cm²; ambas áreas son iguales.",
+   "clue": "Calcula el área antes y después; no compares solo un lado.",
+   "option_notes": {
+    "Aumenta 2 cm²": "Considera solo un cambio y no calcula las dos áreas completas.",
+    "Disminuye 2 cm²": "Resta el cambio del ancho sin compensarlo con el nuevo largo.",
+    "Aumenta 6 cm²": "Suma los cambios de las medidas en vez de multiplicar."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: efecto en el área al modificar los lados; no pide diseñar ni construir dados el perímetro, el área o ambos"
+   ]
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "Para un cantero rectangular de 24 m², ¿qué medidas producen el menor perímetro?",
+   "options": [
+    "1 m de largo y 24 m de ancho",
+    "3 m de largo y 8 m de ancho",
+    "4 m de largo y 6 m de ancho",
+    "2 m de largo y 12 m de ancho"
+   ],
+   "correct": "4 m de largo y 6 m de ancho",
+   "hint": "Todas tienen área 24 m²; 4 × 6 da el perímetro menor: 2 × (4 + 6) = 20 m.",
+   "clue": "Busca parejas de factores de 24 y calcula el borde de cada una.",
+   "option_notes": {
+    "1 m de largo y 24 m de ancho": "Su área es 24 m², pero su perímetro es 50 m.",
+    "2 m de largo y 12 m de ancho": "Su área es 24 m², pero su perímetro es 28 m.",
+    "3 m de largo y 8 m de ancho": "Su área es 24 m², pero su perímetro es 22 m."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "El perímetro de un rectángulo es 30 cm. Su largo mide 3 cm más que su ancho. ¿Cuáles son sus medidas?",
+   "options": [
+    "11 cm de largo y 4 cm de ancho",
+    "8 cm de largo y 7 cm de ancho",
+    "10 cm de largo y 5 cm de ancho",
+    "9 cm de largo y 6 cm de ancho"
+   ],
+   "correct": "9 cm de largo y 6 cm de ancho",
+   "hint": "La suma largo + ancho es 15 cm; la pareja que se diferencia en 3 cm es 9 y 6.",
+   "clue": "Usa la mitad del perímetro y compara la diferencia entre los lados.",
+   "option_notes": {
+    "8 cm de largo y 7 cm de ancho": "Sus lados suman 15 cm, pero se diferencian en 1 cm.",
+    "10 cm de largo y 5 cm de ancho": "Sus lados suman 15 cm, pero se diferencian en 5 cm.",
+    "11 cm de largo y 4 cm de ancho": "Sus lados suman 15 cm, pero se diferencian en 7 cm."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

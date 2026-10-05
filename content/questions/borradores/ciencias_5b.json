@@ -1,0 +1,3530 @@
+[
+ {
+  "oa_code": "OA1",
+  "difficulty": "easy",
+  "text": "¿Qué tienen en común un cóndor, un cactus y tú?",
+  "options": [
+   "Solo los animales tienen células.",
+   "Están formados únicamente por órganos.",
+   "Están formados por una o más células.",
+   "Están formados por un solo tejido."
+  ],
+  "correct": "Están formados por una o más células.",
+  "hint": "La célula es la unidad básica de todos los seres vivos.",
+  "clue": "Piensa en la unidad más pequeña que forma a cualquier ser vivo.",
+  "option_notes": {
+   "Están formados por un solo tejido.": "Confunde la organización completa con un solo tejido.",
+   "Están formados únicamente por órganos.": "Omite que los órganos están formados por tejidos y células.",
+   "Solo los animales tienen células.": "Piensa que las plantas no poseen células."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "easy",
+  "text": "¿Cuál secuencia muestra la organización del cuerpo desde la estructura más pequeña hasta la más grande?",
+  "options": [
+   "tejidos → sistemas → células → órganos",
+   "órganos → células → sistemas → tejidos",
+   "células → tejidos → órganos → sistemas",
+   "sistemas → órganos → tejidos → células"
+  ],
+  "correct": "células → tejidos → órganos → sistemas",
+  "hint": "Las células se agrupan en tejidos; los tejidos forman órganos y estos, sistemas.",
+  "clue": "Ordena desde lo más pequeño hasta el conjunto más grande.",
+  "option_notes": {
+   "órganos → células → sistemas → tejidos": "Mezcla los niveles y no los ordena de menor a mayor.",
+   "sistemas → órganos → tejidos → células": "Ordena los niveles desde el mayor al menor.",
+   "tejidos → sistemas → células → órganos": "Confunde el orden de tejidos, sistemas y células."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "easy",
+  "text": "¿Cuál de estos seres vivos está formado por una sola célula?",
+  "options": [
+   "Un pino",
+   "Un perro",
+   "Una mariposa",
+   "Una bacteria"
+  ],
+  "correct": "Una bacteria",
+  "hint": "Una bacteria es un organismo unicelular: su cuerpo corresponde a una sola célula.",
+  "clue": "Busca el ser vivo más simple de la lista.",
+  "option_notes": {
+   "Un pino": "Confunde un organismo pluricelular con uno unicelular.",
+   "Una mariposa": "Confunde un animal pluricelular con uno unicelular.",
+   "Un perro": "Piensa que un animal grande puede tener una sola célula."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "easy",
+  "text": "¿Qué es un tejido?",
+  "options": [
+   "Un grupo de células semejantes que cumple una función.",
+   "Un conjunto de órganos que trabaja coordinadamente.",
+   "Una estructura formada por varios sistemas.",
+   "Una célula que realiza todas las funciones del cuerpo."
+  ],
+  "correct": "Un grupo de células semejantes que cumple una función.",
+  "hint": "Un tejido es un conjunto de células semejantes que trabajan juntas en una función.",
+  "clue": "Fíjate en la estructura formada por células agrupadas.",
+  "option_notes": {
+   "Una estructura formada por varios sistemas.": "Confunde tejido con una estructura que reúne varios sistemas.",
+   "Un conjunto de órganos que trabaja coordinadamente.": "Confunde tejido con un conjunto de órganos.",
+   "Una célula que realiza todas las funciones del cuerpo.": "Confunde un tejido con una sola célula."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "medium",
+  "text": "Un corte de piel muestra muchas células semejantes, unidas y con función protectora. ¿Cómo se llama este nivel de organización?",
+  "options": [
+   "Órgano",
+   "Sistema",
+   "Organismo",
+   "Tejido"
+  ],
+  "correct": "Tejido",
+  "hint": "Un tejido es un grupo de células semejantes que trabaja en una función común.",
+  "clue": "Fíjate en si describe células agrupadas o una estructura mayor.",
+  "option_notes": {
+   "Órgano": "Confunde un grupo de células con un órgano.",
+   "Sistema": "Confunde el nivel tejido con un sistema de órganos.",
+   "Organismo": "Confunde una parte del cuerpo con el ser vivo completo."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "medium",
+  "text": "El corazón posee varios tejidos y trabaja con vasos sanguíneos. ¿Cómo se clasifica el corazón?",
+  "options": [
+   "Como sistema formado por células.",
+   "Como tejido del sistema circulatorio.",
+   "Como célula que transporta la sangre.",
+   "Como órgano del sistema circulatorio."
+  ],
+  "correct": "Como órgano del sistema circulatorio.",
+  "hint": "Un órgano está formado por varios tejidos; el corazón trabaja en el sistema circulatorio.",
+  "clue": "Busca el nivel formado por varios tejidos y que trabaja con otros órganos.",
+  "option_notes": {
+   "Como tejido del sistema circulatorio.": "Confunde un órgano con uno de los tejidos que lo forman.",
+   "Como sistema formado por células.": "Confunde un órgano con un sistema completo.",
+   "Como célula que transporta la sangre.": "Confunde el corazón con una célula que transporta sangre."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "medium",
+  "text": "Cuando corres, tu sistema respiratorio y tu sistema circulatorio trabajan juntos. ¿Qué muestra esto sobre un sistema?",
+  "options": [
+   "Es un órgano que funciona sin otras estructuras.",
+   "Está formado por órganos que trabajan coordinadamente.",
+   "Es un tejido que protege todos los órganos.",
+   "Está formado por una sola célula especializada."
+  ],
+  "correct": "Está formado por órganos que trabajan coordinadamente.",
+  "hint": "Un sistema reúne órganos relacionados que colaboran para cumplir funciones del cuerpo.",
+  "clue": "Piensa qué estructuras se unen para formar un sistema.",
+  "option_notes": {
+   "Está formado por una sola célula especializada.": "Confunde un sistema con una sola célula.",
+   "Es un tejido que protege todos los órganos.": "Confunde sistema con tejido protector.",
+   "Es un órgano que funciona sin otras estructuras.": "Confunde un sistema con un único órgano."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "verificador: enunciado ambiguo: el ejemplo muestra dos sistemas coordinados, no que un sistema esté formado por órganos que trabajan coordinadamente"
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "medium",
+  "text": "En una hoja de un boldo, muchas células forman tejidos; varios tejidos forman la hoja. ¿Qué nivel de organización representa la hoja?",
+  "options": [
+   "Un sistema de órganos.",
+   "Una célula vegetal.",
+   "Un órgano de la planta.",
+   "Un tejido vegetal."
+  ],
+  "correct": "Un órgano de la planta.",
+  "hint": "La hoja es un órgano porque está formada por varios tejidos y cumple funciones de la planta.",
+  "clue": "Si varias clases de tejidos se unen, piensa en el nivel que sigue.",
+  "option_notes": {
+   "Una célula vegetal.": "Confunde la hoja completa con una célula.",
+   "Un tejido vegetal.": "Confunde una hoja, formada por tejidos, con un solo tejido.",
+   "Un sistema de órganos.": "Confunde un órgano vegetal con un sistema de órganos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "hard",
+  "text": "Si una enfermedad daña los tejidos que forman el corazón, ¿qué función podría alterarse primero?",
+  "options": [
+   "El bombeo de sangre por el cuerpo.",
+   "El movimiento de los huesos.",
+   "La entrada de aire a los pulmones.",
+   "La digestión de los alimentos."
+  ],
+  "correct": "El bombeo de sangre por el cuerpo.",
+  "hint": "El corazón es un órgano formado por tejidos y su función principal es bombear sangre.",
+  "clue": "Relaciona el órgano afectado con la tarea que normalmente realiza.",
+  "option_notes": {
+   "La entrada de aire a los pulmones.": "Confunde la función del corazón con la respiración.",
+   "La digestión de los alimentos.": "Confunde la función del corazón con la digestión.",
+   "El movimiento de los huesos.": "Relaciona el corazón con mover huesos, no con circular sangre."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "hard",
+  "text": "Un ser vivo de una gota de agua tiene una sola célula. ¿Qué conclusión es correcta?",
+  "options": [
+   "No forma tejidos, órganos ni sistemas.",
+   "Es una parte de un animal.",
+   "Tiene muchos órganos microscópicos.",
+   "No es un ser vivo porque es pequeño."
+  ],
+  "correct": "No forma tejidos, órganos ni sistemas.",
+  "hint": "Si todo el organismo es una célula, no hay grupos de células para formar niveles mayores.",
+  "clue": "Recuerda que para formar un tejido se necesitan células agrupadas.",
+  "option_notes": {
+   "Tiene muchos órganos microscópicos.": "Imagina órganos muy pequeños dentro de una célula.",
+   "Es una parte de un animal.": "Confunde un organismo unicelular con una parte de un animal.",
+   "No es un ser vivo porque es pequeño.": "Piensa que lo microscópico no puede estar vivo."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "hard",
+  "text": "En una ficha aparecen células, tejidos, corazón y sistema circulatorio. ¿Qué relación los ordena y conecta correctamente?",
+  "options": [
+   "El sistema forma órganos, tejidos y células.",
+   "Las células forman tejidos; estos forman órganos del sistema.",
+   "El corazón forma células que luego crean tejidos.",
+   "Los cuatro niveles existen, pero no se relacionan."
+  ],
+  "correct": "Las células forman tejidos; estos forman órganos del sistema.",
+  "hint": "La organización avanza desde células a tejidos, órganos y luego sistemas.",
+  "clue": "Busca la alternativa que siga la organización de menor a mayor.",
+  "option_notes": {
+   "El sistema forma órganos, tejidos y células.": "Invierte la organización y pone el sistema en el origen.",
+   "El corazón forma células que luego crean tejidos.": "Invierte la relación entre corazón, células y tejidos.",
+   "Los cuatro niveles existen, pero no se relacionan.": "Piensa que los niveles de organización no se conectan."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA1",
+  "difficulty": "hard",
+  "text": "Un cactus tiene células organizadas en tejidos y órganos. Una bacteria tiene una sola célula. ¿Cuál comparación es correcta?",
+  "options": [
+   "El cactus es unicelular; la bacteria, pluricelular.",
+   "El cactus es pluricelular; la bacteria, unicelular.",
+   "Ambos son pluricelulares porque están vivos.",
+   "Ambos son unicelulares porque viven en la naturaleza."
+  ],
+  "correct": "El cactus es pluricelular; la bacteria, unicelular.",
+  "hint": "Pluricelular significa formado por muchas células; unicelular, por una sola.",
+  "clue": "Compara cuántas células forman a cada organismo.",
+  "option_notes": {
+   "Ambos son unicelulares porque viven en la naturaleza.": "Confunde vivir en la naturaleza con tener una sola célula.",
+   "Ambos son pluricelulares porque están vivos.": "Confunde estar vivo con ser pluricelular.",
+   "El cactus es unicelular; la bacteria, pluricelular.": "Invierte cuál organismo tiene una o muchas células."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "easy",
+  "text": "Cuando comes una manzana, ¿qué ocurre primero en la boca como parte de la digestión?",
+  "options": [
+   "Se absorbe la mayor parte de sus nutrientes.",
+   "Se transforma en heces y pierde agua.",
+   "Se tritura y se mezcla con saliva.",
+   "Se almacena hasta salir del cuerpo."
+  ],
+  "correct": "Se tritura y se mezcla con saliva.",
+  "hint": "En la boca, los dientes trituran el alimento y la saliva empieza a transformarlo.",
+  "clue": "Piensa en la primera acción que recibe el alimento al entrar al sistema digestivo.",
+  "option_notes": {
+   "Se absorbe la mayor parte de sus nutrientes.": "Confunde la boca con el intestino delgado, donde se absorben nutrientes.",
+   "Se almacena hasta salir del cuerpo.": "Confunde la boca con el recto, que almacena desechos.",
+   "Se transforma en heces y pierde agua.": "Confunde la boca con el intestino grueso, que absorbe agua."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "easy",
+  "text": "¿Cuál es la función principal del esófago?",
+  "options": [
+   "Guardar las heces antes de eliminarlas.",
+   "Absorber nutrientes y pasarlos a la sangre.",
+   "Producir bilis para ayudar a digerir grasas.",
+   "Llevar el alimento desde la boca hasta el estómago."
+  ],
+  "correct": "Llevar el alimento desde la boca hasta el estómago.",
+  "hint": "El esófago es un conducto que mueve el alimento desde la boca hasta el estómago.",
+  "clue": "Busca la estructura que funciona como un conducto entre dos órganos.",
+  "option_notes": {
+   "Producir bilis para ayudar a digerir grasas.": "Confunde el esófago con el hígado.",
+   "Absorber nutrientes y pasarlos a la sangre.": "Confunde el esófago con el intestino delgado.",
+   "Guardar las heces antes de eliminarlas.": "Confunde el esófago con el recto."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "easy",
+  "text": "¿Qué ocurre principalmente en el estómago durante la digestión?",
+  "options": [
+   "Mezcla el alimento con jugos digestivos y lo descompone.",
+   "Expulsa los desechos fuera del cuerpo.",
+   "Absorbe la mayor parte de los nutrientes.",
+   "Forma y almacena las heces."
+  ],
+  "correct": "Mezcla el alimento con jugos digestivos y lo descompone.",
+  "hint": "El estómago mezcla el alimento con jugos digestivos y lo descompone en partes más pequeñas.",
+  "clue": "Fíjate en el órgano que mezcla el alimento con sustancias digestivas.",
+  "option_notes": {
+   "Absorbe la mayor parte de los nutrientes.": "Confunde el estómago con el intestino delgado.",
+   "Forma y almacena las heces.": "Confunde el estómago con el intestino grueso y el recto.",
+   "Expulsa los desechos fuera del cuerpo.": "Confunde el estómago con el ano."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "easy",
+  "text": "Después de pasar por el recto, ¿qué estructura permite que los desechos salgan del cuerpo?",
+  "options": [
+   "El ano.",
+   "El esófago.",
+   "El hígado.",
+   "El intestino grueso."
+  ],
+  "correct": "El ano.",
+  "hint": "El ano es la abertura final por donde los desechos salen del sistema digestivo.",
+  "clue": "Ubica la salida final del tubo digestivo, después del recto.",
+  "option_notes": {
+   "El hígado.": "Confunde la salida del cuerpo con el órgano que produce bilis.",
+   "El esófago.": "Confunde la salida del cuerpo con el conducto hacia el estómago.",
+   "El intestino grueso.": "Confunde la salida del cuerpo con una zona que absorbe agua."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "medium",
+  "text": "En una colación con queso, el modelo debe mostrar el órgano que produce bilis para ayudar a digerir grasas. ¿Cuál es?",
+  "options": [
+   "El intestino delgado.",
+   "El hígado.",
+   "El estómago.",
+   "El intestino grueso."
+  ],
+  "correct": "El hígado.",
+  "hint": "El hígado produce bilis, que ayuda a descomponer las grasas durante la digestión.",
+  "clue": "Relaciona la bilis con el órgano que la fabrica.",
+  "option_notes": {
+   "El estómago.": "Confunde los jugos del estómago con la bilis.",
+   "El intestino delgado.": "Confunde la absorción de nutrientes con la producción de bilis.",
+   "El intestino grueso.": "Confunde la absorción de agua con la producción de bilis."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "medium",
+  "text": "Completa este recorrido: boca → esófago → estómago → ___ → intestino grueso. ¿Qué estructura falta?",
+  "options": [
+   "Ano",
+   "Intestino delgado",
+   "Recto",
+   "Hígado"
+  ],
+  "correct": "Intestino delgado",
+  "hint": "Después del estómago, el alimento llega al intestino delgado, donde se absorben muchos nutrientes.",
+  "clue": "Fíjate en qué parte ocurre la mayor absorción antes del intestino grueso.",
+  "option_notes": {
+   "Recto": "Confunde una estructura final con la que sigue al estómago.",
+   "Ano": "Confunde la salida del cuerpo con una etapa intermedia.",
+   "Hígado": "Confunde el órgano auxiliar con el tubo por donde avanza el alimento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "medium",
+  "text": "Si el intestino grueso absorbe menos agua de lo normal, ¿qué resultado sería más probable?",
+  "options": [
+   "El estómago dejaría de mezclar comida.",
+   "El hígado dejaría de producir bilis.",
+   "El alimento volvería hacia el esófago.",
+   "Las heces serían más líquidas."
+  ],
+  "correct": "Las heces serían más líquidas.",
+  "hint": "El intestino grueso retira agua; si retira menos, las heces conservan más agua y quedan líquidas.",
+  "clue": "Relaciona la cantidad de agua absorbida con la consistencia de las heces.",
+  "option_notes": {
+   "El alimento volvería hacia el esófago.": "Supone que un problema del intestino grueso invierte el recorrido.",
+   "El estómago dejaría de mezclar comida.": "Atribuye al estómago una función que no depende del agua del intestino grueso.",
+   "El hígado dejaría de producir bilis.": "Confunde la función del intestino grueso con la del hígado."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "medium",
+  "text": "En un modelo, las heces ya llegaron al recto. ¿Qué función está representada en ese momento?",
+  "options": [
+   "Se almacenan temporalmente antes de salir.",
+   "Se trituran con los dientes.",
+   "Se mezclan con bilis para digerirse.",
+   "Se absorben nutrientes hacia la sangre."
+  ],
+  "correct": "Se almacenan temporalmente antes de salir.",
+  "hint": "El recto guarda las heces por un tiempo antes de que salgan por el ano.",
+  "clue": "Piensa qué pasa con los desechos justo antes de salir del cuerpo.",
+  "option_notes": {
+   "Se mezclan con bilis para digerirse.": "Confunde el recto con una parte que participa en la digestión de grasas.",
+   "Se absorben nutrientes hacia la sangre.": "Confunde el recto con el intestino delgado.",
+   "Se trituran con los dientes.": "Confunde el recto con la boca."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "hard",
+  "text": "Tu grupo construye un modelo del recorrido completo de una manzana. ¿Cuál secuencia muestra el paso del alimento y luego la eliminación de desechos?",
+  "options": [
+   "boca→hígado→estómago→intestino grueso→recto→ano",
+   "boca→estómago→esófago→intestino delgado→ano→recto",
+   "boca→esófago→intestino grueso→estómago→recto→ano",
+   "boca→esófago→estómago→intestino delgado→intestino grueso→recto→ano"
+  ],
+  "correct": "boca→esófago→estómago→intestino delgado→intestino grueso→recto→ano",
+  "hint": "El alimento avanza por el tubo digestivo; después del intestino grueso pasa al recto y sale por el ano.",
+  "clue": "Sigue el alimento desde la entrada; luego identifica dónde se forman y salen los desechos.",
+  "option_notes": {
+   "boca→hígado→estómago→intestino grueso→recto→ano": "Confunde el hígado, que ayuda en la digestión, con un tramo del tubo digestivo.",
+   "boca→esófago→intestino grueso→estómago→recto→ano": "Invierte el orden entre estómago e intestino grueso.",
+   "boca→estómago→esófago→intestino delgado→ano→recto": "Cambia el orden de esófago y estómago, y de recto y ano."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "hard",
+  "text": "Después de digerir una sopaipilla, ¿qué opción relaciona correctamente absorción y eliminación?",
+  "options": [
+   "Nutrientes→sangre en intestino grueso; desechos→intestino delgado.",
+   "Nutrientes→sangre en intestino delgado; desechos→intestino grueso.",
+   "Nutrientes→estómago; desechos→hígado para eliminarse.",
+   "Nutrientes→heces en intestino delgado; desechos→sangre."
+  ],
+  "correct": "Nutrientes→sangre en intestino delgado; desechos→intestino grueso.",
+  "hint": "El intestino delgado absorbe nutrientes; lo que no se aprovecha continúa hacia el intestino grueso.",
+  "clue": "Distingue lo que el cuerpo aprovecha de lo que debe continuar como desecho.",
+  "option_notes": {
+   "Nutrientes→sangre en intestino grueso; desechos→intestino delgado.": "Confunde el intestino grueso, que absorbe agua, con el lugar principal de nutrientes.",
+   "Nutrientes→heces en intestino delgado; desechos→sangre.": "Confunde lo que se absorbe con los desechos que quedan.",
+   "Nutrientes→estómago; desechos→hígado para eliminarse.": "Confunde órganos de digestión con los lugares de absorción y eliminación."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "hard",
+  "text": "En un modelo falta el hígado, pero el resto de las estructuras está bien ubicado. ¿Qué función quedaría peor representada?",
+  "options": [
+   "La absorción de nutrientes en el intestino delgado.",
+   "La salida de las heces por el ano.",
+   "El apoyo a la digestión de las grasas mediante bilis.",
+   "El avance del alimento desde la boca al estómago."
+  ],
+  "correct": "El apoyo a la digestión de las grasas mediante bilis.",
+  "hint": "El hígado produce bilis, una sustancia que ayuda a digerir las grasas.",
+  "clue": "Piensa qué sustancia relacionada con las grasas produce el hígado.",
+  "option_notes": {
+   "El avance del alimento desde la boca al estómago.": "Olvida que el esófago es el conducto que mueve el alimento.",
+   "La absorción de nutrientes en el intestino delgado.": "Confunde el hígado con el intestino delgado, que absorbe nutrientes.",
+   "La salida de las heces por el ano.": "Confunde el hígado con el ano, por donde salen los desechos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA2",
+  "difficulty": "hard",
+  "text": "En una simulación, los desechos salen normalmente, pero se absorben muy pocos nutrientes. ¿Qué parte del modelo revisarías primero y por qué?",
+  "options": [
+   "Intestino grueso: allí se absorbe la mayoría de los nutrientes.",
+   "Esófago: allí se trituran los alimentos con saliva.",
+   "Intestino delgado: allí se absorbe la mayoría de los nutrientes.",
+   "Recto: allí se almacenan los nutrientes para usarlos después."
+  ],
+  "correct": "Intestino delgado: allí se absorbe la mayoría de los nutrientes.",
+  "hint": "Si faltan nutrientes absorbidos, revisa el intestino delgado, que realiza la mayor parte de esa tarea.",
+  "clue": "Busca la estructura relacionada directamente con el paso de nutrientes a la sangre.",
+  "option_notes": {
+   "Intestino grueso: allí se absorbe la mayoría de los nutrientes.": "Confunde el intestino grueso, que absorbe sobre todo agua, con el delgado.",
+   "Recto: allí se almacenan los nutrientes para usarlos después.": "Confunde el recto, que almacena desechos, con una zona de absorción.",
+   "Esófago: allí se trituran los alimentos con saliva.": "Confunde el esófago con la boca, donde se tritura y mezcla el alimento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "easy",
+  "text": "¿Por qué parte del sistema respiratorio entra primero el aire del ambiente?",
+  "options": [
+   "Los bronquios",
+   "La tráquea",
+   "La nariz",
+   "Los alvéolos"
+  ],
+  "correct": "La nariz",
+  "hint": "La nariz es la entrada habitual del aire al sistema respiratorio.",
+  "clue": "Piensa en la primera parte que toca el aire al entrar al cuerpo.",
+  "option_notes": {
+   "La tráquea": "Es un tubo interno por donde el aire sigue después de entrar.",
+   "Los bronquios": "Son ramas que reciben el aire más adelante.",
+   "Los alvéolos": "Son sacos donde ocurre el intercambio de gases."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "easy",
+  "text": "¿En qué órganos se encuentran los alvéolos, pequeños sacos donde se intercambian oxígeno y dióxido de carbono?",
+  "options": [
+   "La nariz",
+   "Los pulmones",
+   "Los bronquios",
+   "La tráquea"
+  ],
+  "correct": "Los pulmones",
+  "hint": "Los pulmones contienen muchos alvéolos donde ocurre el intercambio de gases.",
+  "clue": "Busca la opción que nombre los dos órganos principales de la respiración.",
+  "option_notes": {
+   "La nariz": "Es la entrada del aire, no el órgano que contiene los alvéolos.",
+   "La tráquea": "Es un conducto de paso, no el órgano donde están los alvéolos.",
+   "Los bronquios": "Son ramas que llevan aire, pero no son los órganos principales."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "easy",
+  "text": "¿Qué estructura es el tubo que lleva el aire desde la garganta hasta los bronquios?",
+  "options": [
+   "La tráquea",
+   "El esófago",
+   "Los alvéolos",
+   "Los pulmones"
+  ],
+  "correct": "La tráquea",
+  "hint": "La tráquea es el conducto que conecta la garganta con los bronquios.",
+  "clue": "Piensa en un tubo por donde pasa aire, no alimentos.",
+  "option_notes": {
+   "El esófago": "Lleva alimentos hacia el estómago, no aire hacia los pulmones.",
+   "Los alvéolos": "Son sacos pequeños y están después de los bronquios.",
+   "Los pulmones": "Son órganos que contienen los conductos y alvéolos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "easy",
+  "text": "¿Qué gas necesita recibir la sangre en los alvéolos para que las células lo usen?",
+  "options": [
+   "Nitrógeno",
+   "Oxígeno",
+   "Ozono",
+   "Dióxido de carbono"
+  ],
+  "correct": "Oxígeno",
+  "hint": "El oxígeno pasa desde los alvéolos a la sangre y luego llega a las células.",
+  "clue": "Recuerda qué gas necesita el cuerpo para obtener energía.",
+  "option_notes": {
+   "Dióxido de carbono": "Es un desecho que pasa desde la sangre hacia los alvéolos.",
+   "Nitrógeno": "Es abundante en el aire, pero no es el gas que usan las células.",
+   "Ozono": "No es el gas que el sistema respiratorio entrega a las células."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "medium",
+  "text": "Si sigues una porción de aire desde que entra al cuerpo, ¿qué recorrido representa mejor su camino?",
+  "options": [
+   "Nariz → alvéolos → tráquea → bronquios",
+   "Tráquea → nariz → alvéolos → bronquios",
+   "Alvéolos → bronquios → tráquea → nariz",
+   "Nariz → tráquea → bronquios → alvéolos"
+  ],
+  "correct": "Nariz → tráquea → bronquios → alvéolos",
+  "hint": "El aire avanza desde la entrada, por conductos, hasta los sacos de intercambio.",
+  "clue": "Ordena las estructuras desde la entrada del aire hasta el lugar del intercambio.",
+  "option_notes": {
+   "Nariz → alvéolos → tráquea → bronquios": "Pone los alvéolos antes de los conductos que llevan el aire.",
+   "Alvéolos → bronquios → tráquea → nariz": "Invierte el recorrido, comenzando en el lugar de intercambio.",
+   "Tráquea → nariz → alvéolos → bronquios": "Confunde la entrada con un paso posterior y desordena las estructuras."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "medium",
+  "text": "En un modelo, al tirar hacia abajo una membrana, dos globos se agrandan y entra aire. ¿Qué proceso representa?",
+  "options": [
+   "Espiración",
+   "Inspiración",
+   "Circulación sanguínea",
+   "Intercambio de gases"
+  ],
+  "correct": "Inspiración",
+  "hint": "La inspiración ocurre cuando el aire entra a los pulmones.",
+  "clue": "Observa si el aire entra o sale cuando los globos cambian de tamaño.",
+  "option_notes": {
+   "Espiración": "Es cuando el aire sale y los globos disminuyen su tamaño.",
+   "Intercambio de gases": "Ocurre en los alvéolos, no describe la entrada de aire completa.",
+   "Circulación sanguínea": "Es el movimiento de la sangre, no el proceso mostrado."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "medium",
+  "text": "En los alvéolos, el oxígeno pasa a la sangre. ¿Qué ocurre con el dióxido de carbono?",
+  "options": [
+   "Sale de la sangre hacia los alvéolos",
+   "Entra de los alvéolos a la sangre",
+   "Se convierte en oxígeno dentro del pulmón",
+   "Se queda almacenado en la tráquea"
+  ],
+  "correct": "Sale de la sangre hacia los alvéolos",
+  "hint": "El dióxido de carbono viaja desde la sangre hasta los alvéolos para salir al exhalar.",
+  "clue": "Para salir del cuerpo, sigue el camino inverso al oxígeno.",
+  "option_notes": {
+   "Entra de los alvéolos a la sangre": "Confunde el sentido del dióxido de carbono con el del oxígeno.",
+   "Se convierte en oxígeno dentro del pulmón": "Supone que un gas se transforma en otro dentro del pulmón.",
+   "Se queda almacenado en la tráquea": "Imagina que la tráquea almacena gases, pero solo los conduce."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "medium",
+  "text": "Cuando los pulmones disminuyen su volumen, ¿qué sucede normalmente con el aire que contienen?",
+  "options": [
+   "Se transforma en sangre",
+   "Se queda en los alvéolos",
+   "Entra desde la nariz",
+   "Sale hacia el exterior"
+  ],
+  "correct": "Sale hacia el exterior",
+  "hint": "Al disminuir el volumen pulmonar, el aire es expulsado: eso es la espiración.",
+  "clue": "Relaciona una disminución del volumen con la salida de aire.",
+  "option_notes": {
+   "Entra desde la nariz": "Es lo contrario: el aire entra cuando los pulmones aumentan su volumen.",
+   "Se transforma en sangre": "El aire no se transforma en sangre durante la respiración.",
+   "Se queda en los alvéolos": "El aire no permanece allí; debe salir al disminuir el volumen pulmonar."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "hard",
+  "text": "Después de correr en el Parque O'Higgins, Tomás respira más rápido. ¿Cuál es la mejor explicación?",
+  "options": [
+   "Sus pulmones fabrican oxígeno y guardan dióxido de carbono",
+   "Sus alvéolos dejan de intercambiar gases por unos minutos",
+   "Su nariz convierte el dióxido de carbono en oxígeno",
+   "Sus células necesitan más oxígeno y producen más dióxido de carbono"
+  ],
+  "correct": "Sus células necesitan más oxígeno y producen más dióxido de carbono",
+  "hint": "Al hacer ejercicio, las células usan más oxígeno y producen más dióxido de carbono.",
+  "clue": "Relaciona el esfuerzo de las células con los dos gases que el cuerpo intercambia.",
+  "option_notes": {
+   "Sus pulmones fabrican oxígeno y guardan dióxido de carbono": "Confunde el trabajo de los pulmones con la producción y el almacenamiento de gases.",
+   "Su nariz convierte el dióxido de carbono en oxígeno": "Atribuye a la nariz un cambio de gases que no realiza.",
+   "Sus alvéolos dejan de intercambiar gases por unos minutos": "Supone que el ejercicio detiene el intercambio, cuando lo aumenta."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "hard",
+  "text": "Una estudiante modela el camino del aire así: nariz → bronquios → tráquea → alvéolos. ¿Qué debe corregir?",
+  "options": [
+   "Ubicar la tráquea antes de los bronquios",
+   "Ubicar los bronquios después de los alvéolos",
+   "Ubicar la nariz después de los alvéolos",
+   "Ubicar los alvéolos antes de la nariz"
+  ],
+  "correct": "Ubicar la tráquea antes de los bronquios",
+  "hint": "El aire pasa por la nariz, luego por la tráquea y los bronquios, y llega a los alvéolos.",
+  "clue": "Busca qué dos estructuras están invertidas en la flecha.",
+  "option_notes": {
+   "Ubicar los alvéolos antes de la nariz": "Los alvéolos son el destino final del aire, no la entrada.",
+   "Ubicar la nariz después de los alvéolos": "La nariz debe aparecer al comienzo del recorrido.",
+   "Ubicar los bronquios después de los alvéolos": "Los bronquios llevan el aire hacia los alvéolos, no al revés."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "hard",
+  "text": "El aire que exhalas contiene más dióxido de carbono que el aire que inhalas. ¿Qué recorrido explica ese aumento?",
+  "options": [
+   "Los pulmones lo convierten en oxígeno y la sangre lo devuelve",
+   "La nariz lo absorbe, los bronquios lo cambian y llega a las células",
+   "Las células lo producen, la sangre lo lleva a los alvéolos y sale",
+   "Los alvéolos lo fabrican, la tráquea lo guarda y luego sale"
+  ],
+  "correct": "Las células lo producen, la sangre lo lleva a los alvéolos y sale",
+  "hint": "Las células producen dióxido de carbono; la sangre lo lleva a los alvéolos para eliminarlo.",
+  "clue": "Sigue el dióxido de carbono desde las células hasta el exterior.",
+  "option_notes": {
+   "Los alvéolos lo fabrican, la tráquea lo guarda y luego sale": "Los alvéolos realizan intercambio, pero no fabrican el dióxido de carbono.",
+   "La nariz lo absorbe, los bronquios lo cambian y llega a las células": "La tráquea y los bronquios conducen aire, pero no cambian ese gas.",
+   "Los pulmones lo convierten en oxígeno y la sangre lo devuelve": "El dióxido de carbono no se convierte en oxígeno en los pulmones."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA3",
+  "difficulty": "hard",
+  "text": "En una maqueta, una bolsa representa un alvéolo y otra, un vaso sanguíneo. ¿Qué debería mostrar el modelo para representar bien el intercambio?",
+  "options": [
+   "Ambos gases desde la sangre hacia el alvéolo",
+   "Dióxido de carbono hacia la sangre y oxígeno hacia el alvéolo",
+   "Oxígeno hacia la sangre y dióxido de carbono hacia el alvéolo",
+   "Ambos gases desde el alvéolo hacia la sangre"
+  ],
+  "correct": "Oxígeno hacia la sangre y dióxido de carbono hacia el alvéolo",
+  "hint": "En los alvéolos, el oxígeno entra a la sangre y el dióxido de carbono sale de ella.",
+  "clue": "Cada gas cruza en una dirección distinta entre el alvéolo y la sangre.",
+  "option_notes": {
+   "Ambos gases desde la sangre hacia el alvéolo": "Confunde el sentido del oxígeno y omite su entrada a la sangre.",
+   "Ambos gases desde el alvéolo hacia la sangre": "Supone que ambos gases se mueven siempre en la misma dirección.",
+   "Dióxido de carbono hacia la sangre y oxígeno hacia el alvéolo": "Invierte las direcciones normales de ambos gases."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "easy",
+  "text": "¿Qué órgano impulsa la sangre para que circule por todo tu cuerpo?",
+  "options": [
+   "Los riñones",
+   "El corazón",
+   "El estómago",
+   "Los pulmones"
+  ],
+  "correct": "El corazón",
+  "hint": "El corazón se contrae y empuja la sangre hacia los vasos sanguíneos.",
+  "clue": "Piensa en la parte que funciona como una bomba.",
+  "option_notes": {
+   "Los pulmones": "Confunde el intercambio de gases con el bombeo de sangre.",
+   "El estómago": "Cree que digestión y circulación ocurren en el mismo órgano.",
+   "Los riñones": "Confunde la filtración de la sangre con su impulso."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "easy",
+  "text": "Después de digerir una marraqueta, ¿qué puede transportar la sangre desde el intestino hasta las células?",
+  "options": [
+   "El sudor de la piel",
+   "El aire inspirado",
+   "Los nutrientes digeridos",
+   "El dióxido de carbono"
+  ],
+  "correct": "Los nutrientes digeridos",
+  "hint": "La digestión transforma los alimentos en nutrientes que la sangre lleva a las células.",
+  "clue": "Busca lo que proviene de los alimentos y puede ser usado por las células.",
+  "option_notes": {
+   "El aire inspirado": "Confunde el oxígeno del aire con sustancias obtenidas de alimentos.",
+   "El sudor de la piel": "Cree que una secreción de la piel proviene de la digestión.",
+   "El dióxido de carbono": "Confunde un desecho celular con nutrientes absorbidos en el intestino."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "easy",
+  "text": "Completa la oración: las estructuras que forman una red de tubos por donde circula la sangre son...",
+  "options": [
+   "Los huesos",
+   "Los músculos",
+   "Los vasos sanguíneos",
+   "Los pulmones"
+  ],
+  "correct": "Los vasos sanguíneos",
+  "hint": "Los vasos sanguíneos son conductos que llevan sangre entre el corazón y los tejidos.",
+  "clue": "Piensa en los conductos por donde se mueve la sangre.",
+  "option_notes": {
+   "Los pulmones": "Confunde el órgano del intercambio de gases con los conductos.",
+   "Los músculos": "Confunde tejidos que usan sangre con las estructuras que la conducen.",
+   "Los huesos": "Cree que la sangre circula por dentro de los huesos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "easy",
+  "text": "Al salir de los pulmones hacia las células, ¿qué gas lleva la sangre?",
+  "options": [
+   "Oxígeno",
+   "Vapor de agua",
+   "Dióxido de carbono",
+   "Nitrógeno"
+  ],
+  "correct": "Oxígeno",
+  "hint": "La sangre recoge oxígeno en los pulmones y lo lleva por los vasos hasta las células.",
+  "clue": "Es el gas que las células necesitan para funcionar.",
+  "option_notes": {
+   "Dióxido de carbono": "Invierte el recorrido de un gas que sale de las células.",
+   "Vapor de agua": "Confunde un producto de la respiración con el gas principal transportado.",
+   "Nitrógeno": "Cree que el gas más abundante del aire es el que usan las células."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "medium",
+  "text": "Camila come una sopaipilla. Para que sus nutrientes lleguen a una célula de su brazo, ¿por dónde deben pasar en orden?",
+  "options": [
+   "Intestino → sangre → corazón → vasos → célula",
+   "Intestino → pulmones → corazón → célula",
+   "Estómago → pulmones → sangre → célula",
+   "Boca → corazón → intestino → célula"
+  ],
+  "correct": "Intestino → sangre → corazón → vasos → célula",
+  "hint": "Los nutrientes pasan del intestino a la sangre; el corazón la impulsa por vasos hasta la célula.",
+  "clue": "Ordena el camino desde donde se absorben los nutrientes hasta la célula.",
+  "option_notes": {
+   "Boca → corazón → intestino → célula": "Supone que la comida pasa directamente de la boca al corazón.",
+   "Estómago → pulmones → sangre → célula": "Confunde el recorrido de nutrientes con el intercambio de gases.",
+   "Intestino → pulmones → corazón → célula": "Cree que los pulmones reciben nutrientes antes de los tejidos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "medium",
+  "text": "En una corrida en el Parque O'Higgins, tus músculos necesitan más oxígeno. ¿Qué debe ocurrir para entregárselo?",
+  "options": [
+   "La sangre fabrica oxígeno en el corazón y lo lleva a los músculos.",
+   "Los vasos producen oxígeno en los músculos y lo llevan al pulmón.",
+   "La sangre toma oxígeno en los pulmones y lo lleva por vasos a los músculos.",
+   "Los músculos absorben oxígeno del estómago mediante la sangre."
+  ],
+  "correct": "La sangre toma oxígeno en los pulmones y lo lleva por vasos a los músculos.",
+  "hint": "Los pulmones incorporan oxígeno a la sangre, que el corazón impulsa por vasos hacia los músculos.",
+  "clue": "Sigue el camino del oxígeno: entra al cuerpo antes de llegar a los músculos.",
+  "option_notes": {
+   "La sangre fabrica oxígeno en el corazón y lo lleva a los músculos.": "Cree que el corazón produce el oxígeno que transporta la sangre.",
+   "Los vasos producen oxígeno en los músculos y lo llevan al pulmón.": "Confunde los vasos con órganos que fabrican gases e invierte el recorrido.",
+   "Los músculos absorben oxígeno del estómago mediante la sangre.": "Confunde el sistema digestivo con el lugar donde se obtiene oxígeno."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "alternativa larga"
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "medium",
+  "text": "Una célula de tu pierna produce dióxido de carbono. Elige la secuencia que termina correctamente en la exhalación.",
+  "options": [
+   "Célula → pulmones → sangre → corazón → vasos → aire",
+   "Célula → sangre → vasos → corazón → pulmones → aire",
+   "Célula → sangre → corazón → estómago → pulmones → aire",
+   "Pulmones → sangre → corazón → vasos → célula → aire"
+  ],
+  "correct": "Célula → sangre → vasos → corazón → pulmones → aire",
+  "hint": "El dióxido de carbono pasa a la sangre, vuelve al corazón y llega a los pulmones para exhalarse.",
+  "clue": "Busca el órgano donde termina el recorrido de este gas antes de salir.",
+  "option_notes": {
+   "Célula → sangre → corazón → estómago → pulmones → aire": "Reemplaza los pulmones por el estómago en el recorrido del gas.",
+   "Pulmones → sangre → corazón → vasos → célula → aire": "Invierte el sentido del recorrido del dióxido de carbono.",
+   "Célula → pulmones → sangre → corazón → vasos → aire": "Supone que el gas viaja directamente desde la célula a los pulmones."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "medium",
+  "text": "En una caída, Sofía se raspa la rodilla y sangra. ¿Qué explica mejor que la sangre salga por la piel?",
+  "options": [
+   "Un vaso sanguíneo cercano se dañó y dejó salir sangre.",
+   "El corazón envió sangre directamente a la piel raspada.",
+   "La piel fabricó sangre al recibir aire del ambiente.",
+   "Los pulmones enviaron sangre directamente hacia la herida."
+  ],
+  "correct": "Un vaso sanguíneo cercano se dañó y dejó salir sangre.",
+  "hint": "La sangre normalmente circula dentro de vasos; si uno se daña, puede salir por la herida.",
+  "clue": "Relaciona la sangre que sale con los tubos que la contienen.",
+  "option_notes": {
+   "El corazón envió sangre directamente a la piel raspada.": "Cree que el corazón conecta directamente con cada parte del cuerpo.",
+   "La piel fabricó sangre al recibir aire del ambiente.": "Confunde la piel con un órgano que produce sangre.",
+   "Los pulmones enviaron sangre directamente hacia la herida.": "Confunde el transporte de gases con el envío de sangre."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "hard",
+  "text": "Martina dice: «El corazón lleva el oxígeno dentro de sus paredes hasta los músculos». ¿Qué corrección es la más adecuada?",
+  "options": [
+   "La sangre bombea al corazón y los huesos llevan oxígeno al músculo.",
+   "Los músculos impulsan sangre y los pulmones fabrican nutrientes.",
+   "Los vasos producen oxígeno y el corazón lo guarda hasta usarlo.",
+   "El corazón impulsa sangre; los vasos la llevan con oxígeno a músculos."
+  ],
+  "correct": "El corazón impulsa sangre; los vasos la llevan con oxígeno a músculos.",
+  "hint": "El corazón es la bomba; la sangre transporta oxígeno y los vasos forman el camino.",
+  "clue": "Distingue quién impulsa la sangre, quién la transporta y por dónde circula.",
+  "option_notes": {
+   "Los vasos producen oxígeno y el corazón lo guarda hasta usarlo.": "Atribuye a vasos y corazón funciones de fabricar y almacenar oxígeno.",
+   "Los músculos impulsan sangre y los pulmones fabrican nutrientes.": "Confunde el papel de los músculos y de los pulmones.",
+   "La sangre bombea al corazón y los huesos llevan oxígeno al músculo.": "Invierte el papel del corazón y atribuye transporte a los huesos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "hard",
+  "text": "La sangre hace este recorrido: pulmones → corazón → músculos → corazón. ¿Qué proceso completa mejor el recorrido?",
+  "options": [
+   "El dióxido de carbono va del corazón al estómago para ser digerido.",
+   "Los nutrientes van de pulmones a músculos para alimentar las células.",
+   "El oxígeno vuelve de músculos a pulmones para entrar al cuerpo.",
+   "El dióxido de carbono va de músculos a pulmones para salir al exhalar."
+  ],
+  "correct": "El dióxido de carbono va de músculos a pulmones para salir al exhalar.",
+  "hint": "Las células musculares entregan dióxido de carbono a la sangre, que lo lleva a los pulmones.",
+  "clue": "Completa el recorrido pensando qué gas debe regresar a los pulmones.",
+  "option_notes": {
+   "El oxígeno vuelve de músculos a pulmones para entrar al cuerpo.": "Invierte el sentido habitual del transporte de oxígeno.",
+   "Los nutrientes van de pulmones a músculos para alimentar las células.": "Confunde los pulmones con el lugar donde se absorben nutrientes.",
+   "El dióxido de carbono va del corazón al estómago para ser digerido.": "Cree que el estómago procesa un gas de desecho."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "hard",
+  "text": "Al comparar la sangre antes y después de pasar por un músculo, se observa menos oxígeno y más dióxido de carbono después. ¿Qué se infiere?",
+  "options": [
+   "El corazón transformó nutrientes en dióxido de carbono.",
+   "Los pulmones quitaron oxígeno y dieron dióxido de carbono.",
+   "El músculo fabricó oxígeno y recibió dióxido de carbono.",
+   "El músculo recibió oxígeno y entregó dióxido de carbono a la sangre."
+  ],
+  "correct": "El músculo recibió oxígeno y entregó dióxido de carbono a la sangre.",
+  "hint": "Al pasar por el músculo, la sangre entrega oxígeno y recoge dióxido de carbono celular.",
+  "clue": "Compara qué sustancia disminuyó y cuál aumentó en la sangre.",
+  "option_notes": {
+   "El músculo fabricó oxígeno y recibió dióxido de carbono.": "Invierte el intercambio de gases entre músculo y sangre.",
+   "Los pulmones quitaron oxígeno y dieron dióxido de carbono.": "Atribuye a los pulmones el intercambio que ocurre en los músculos.",
+   "El corazón transformó nutrientes en dióxido de carbono.": "Atribuye al corazón una transformación propia de las células."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA4",
+  "difficulty": "hard",
+  "text": "Un grupo analiza sangre antes y después de distintos órganos. ¿Qué resultado apoyaría mejor que la sangre transporta sustancias?",
+  "options": [
+   "Tras ambos, la sangre deja de circular por los vasos.",
+   "Tras pulmones, aumenta el oxígeno; tras intestino, los nutrientes.",
+   "Tras pulmones, aumentan nutrientes; tras intestino, el oxígeno.",
+   "Tras ambos, aumenta dióxido de carbono producido por el corazón."
+  ],
+  "correct": "Tras pulmones, aumenta el oxígeno; tras intestino, los nutrientes.",
+  "hint": "Los pulmones incorporan oxígeno y el intestino aporta nutrientes; la sangre los transporta.",
+  "clue": "Relaciona cada órgano con lo que la sangre recoge allí.",
+  "option_notes": {
+   "Tras pulmones, aumentan nutrientes; tras intestino, el oxígeno.": "Intercambia las sustancias que se obtienen en pulmones e intestino.",
+   "Tras ambos, aumenta dióxido de carbono producido por el corazón.": "Cree que el corazón produce dióxido de carbono.",
+   "Tras ambos, la sangre deja de circular por los vasos.": "Confunde el paso por órganos con la detención de la circulación."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "easy",
+  "text": "En un día, ¿qué elección muestra mayor variedad de alimentos?",
+  "options": [
+   "Pan con queso en las tres comidas principales.",
+   "Galletas y bebida azucarada en varias ocasiones.",
+   "Arroz con pollo en las tres comidas principales.",
+   "Lentejas, ensalada, yogur, fruta y pan."
+  ],
+  "correct": "Lentejas, ensalada, yogur, fruta y pan.",
+  "hint": "La variedad se logra incluyendo distintos alimentos y grupos durante el día.",
+  "clue": "Cuenta los alimentos distintos y considera si pertenecen a grupos diferentes.",
+  "option_notes": {
+   "Pan con queso en las tres comidas principales.": "Confunde repetir dos alimentos con lograr variedad durante el día.",
+   "Arroz con pollo en las tres comidas principales.": "Confunde repetir una comida abundante con una alimentación variada.",
+   "Galletas y bebida azucarada en varias ocasiones.": "Confunde repetir productos con incorporar distintos grupos de alimentos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "easy",
+  "text": "¿Qué significa cuidar el tamaño de las porciones que comes?",
+  "options": [
+   "Servirte siempre el plato más grande.",
+   "Elegir una cantidad adecuada para cada comida.",
+   "Comer hasta sentirte demasiado lleno.",
+   "Evitar todos los alimentos con más energía."
+  ],
+  "correct": "Elegir una cantidad adecuada para cada comida.",
+  "hint": "El tamaño de la porción es la cantidad que comes en una ocasión; debe ser adecuada, no excesiva.",
+  "clue": "Piensa en cuánto comes cada vez, no en cuántas veces comes.",
+  "option_notes": {
+   "Servirte siempre el plato más grande.": "Confunde una porción adecuada con elegir siempre la mayor cantidad.",
+   "Comer hasta sentirte demasiado lleno.": "Confunde quedar demasiado lleno con comer una cantidad adecuada.",
+   "Evitar todos los alimentos con más energía.": "Confunde cuidar porciones con eliminar alimentos que aportan energía."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "easy",
+  "text": "¿Qué describe mejor la frecuencia de consumo de un alimento?",
+  "options": [
+   "Cuántas veces lo comes en un período.",
+   "La cantidad que cabe en un plato.",
+   "Los colores que tiene el alimento.",
+   "Los grupos de nutrientes que aporta."
+  ],
+  "correct": "Cuántas veces lo comes en un período.",
+  "hint": "La frecuencia indica cuántas veces consumes una porción durante un período, como un día.",
+  "clue": "No pienses en el tamaño ni en el color: piensa en las veces que ocurre.",
+  "option_notes": {
+   "La cantidad que cabe en un plato.": "Confunde frecuencia con la cantidad servida en cada ocasión.",
+   "Los colores que tiene el alimento.": "Confunde frecuencia con las características visibles del alimento.",
+   "Los grupos de nutrientes que aporta.": "Confunde frecuencia con la función o los nutrientes del alimento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "easy",
+  "text": "¿Cuál alimento aporta proteínas que ayudan al crecimiento y a reparar tejidos?",
+  "options": [
+   "Aceite de oliva.",
+   "Agua potable.",
+   "Manzana picada.",
+   "Huevo cocido."
+  ],
+  "correct": "Huevo cocido.",
+  "hint": "Las proteínas de alimentos como el huevo ayudan a formar y reparar tejidos del cuerpo.",
+  "clue": "Busca un alimento que aporte proteínas, no uno que principalmente hidrate o dé sabor.",
+  "option_notes": {
+   "Manzana picada.": "Confunde fruta y fibra con una fuente principal de proteínas.",
+   "Aceite de oliva.": "Confunde una grasa usada para cocinar con un alimento proteico.",
+   "Agua potable.": "Confunde hidratarse con obtener proteínas para formar tejidos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "medium",
+  "text": "Para una colación en el colegio, ¿qué opción combina variedad y cantidades moderadas?",
+  "options": [
+   "Cinco galletas grandes y 500 mL de bebida.",
+   "Un paquete grande de papas fritas y bebida.",
+   "Un yogur natural, una fruta y 30 g de avena.",
+   "Tres plátanos grandes y nada más."
+  ],
+  "correct": "Un yogur natural, una fruta y 30 g de avena.",
+  "hint": "Incluye alimentos distintos y porciones razonables para una colación, sin basarla en productos ultraprocesados.",
+  "clue": "Revisa cuántos alimentos distintos hay y si la cantidad parece moderada.",
+  "option_notes": {
+   "Tres plátanos grandes y nada más.": "Confunde comer mucho de un solo alimento con tener variedad.",
+   "Cinco galletas grandes y 500 mL de bebida.": "Confunde una colación abundante y azucarada con una porción moderada.",
+   "Un paquete grande de papas fritas y bebida.": "Elige productos en gran cantidad y no considera variedad ni calidad."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "medium",
+  "text": "Valentina se salta el desayuno y luego come una porción enorme en el almuerzo. ¿Qué cambio sería más adecuado?",
+  "options": [
+   "Repartir alimentos en horarios y usar porciones adecuadas.",
+   "Comer la misma porción enorme en cada horario.",
+   "Tomar bebida azucarada entre comidas para no tener hambre.",
+   "Eliminar la cena y aumentar el tamaño del almuerzo."
+  ],
+  "correct": "Repartir alimentos en horarios y usar porciones adecuadas.",
+  "hint": "Distribuir las comidas ayuda a cuidar la frecuencia y evita compensar con una porción excesiva.",
+  "clue": "Busca una opción que corrija tanto el momento de comer como la cantidad.",
+  "option_notes": {
+   "Eliminar la cena y aumentar el tamaño del almuerzo.": "Mantiene pocas ocasiones y aumenta una porción ya excesiva.",
+   "Comer la misma porción enorme en cada horario.": "Aumenta la frecuencia, pero conserva cantidades excesivas.",
+   "Tomar bebida azucarada entre comidas para no tener hambre.": "Confunde una bebida azucarada con una comida distribuida y equilibrada."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "medium",
+  "text": "Después de andar en bicicleta, ¿qué colación combina una fuente de energía con una fruta?",
+  "options": [
+   "Un caramelo y una bebida azucarada.",
+   "Aceite y una cucharadita de sal.",
+   "Agua y una hoja de lechuga.",
+   "Un pan integral y un plátano."
+  ],
+  "correct": "Un pan integral y un plátano.",
+  "hint": "El pan aporta carbohidratos y el plátano suma energía y nutrientes a la colación.",
+  "clue": "Busca una opción que tenga un alimento energético y además una fruta.",
+  "option_notes": {
+   "Agua y una hoja de lechuga.": "Confunde hidratarse y comer verduras con una fuente principal de energía.",
+   "Aceite y una cucharadita de sal.": "Confunde condimentos y grasas aisladas con una colación equilibrada.",
+   "Un caramelo y una bebida azucarada.": "Confunde productos azucarados con una colación que incluye fruta."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "medium",
+  "text": "Para apoyar el desarrollo de huesos y dientes, ¿qué elección es más adecuada?",
+  "options": [
+   "Aceite, porque entrega vitaminas a los dientes.",
+   "Caramelos, porque forman huesos.",
+   "Yogur natural, porque aporta calcio.",
+   "Bebida azucarada, porque reemplaza el agua."
+  ],
+  "correct": "Yogur natural, porque aporta calcio.",
+  "hint": "El calcio del yogur ayuda a formar y mantener huesos y dientes durante el desarrollo.",
+  "clue": "Relaciona el desarrollo de huesos y dientes con el nutriente calcio.",
+  "option_notes": {
+   "Bebida azucarada, porque reemplaza el agua.": "Confunde una bebida azucarada con una fuente de calcio.",
+   "Caramelos, porque forman huesos.": "Confunde el sabor dulce con nutrientes necesarios para los huesos.",
+   "Aceite, porque entrega vitaminas a los dientes.": "Confunde una grasa con el principal aporte de calcio."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "hard",
+  "text": "Durante un día, Nico come solo dos veces: en cada ocasión, un plato muy grande de arroz y pollo. ¿Qué cambio mejora a la vez variedad, frecuencia y tamaño de porción?",
+  "options": [
+   "Cambiar el pollo por galletas y mantener las dos comidas.",
+   "Agregar frutas y verduras, repartir comidas y reducir porciones.",
+   "Comer arroz y pollo cuatro veces, con porciones igual de grandes.",
+   "Mantener dos comidas y duplicar el arroz para tener energía."
+  ],
+  "correct": "Agregar frutas y verduras, repartir comidas y reducir porciones.",
+  "hint": "La mejora combina más alimentos distintos, comidas distribuidas y cantidades no excesivas.",
+  "clue": "La respuesta correcta debe resolver las tres dificultades, no solo una.",
+  "option_notes": {
+   "Mantener dos comidas y duplicar el arroz para tener energía.": "Aumenta un alimento y conserva pocas comidas y porciones excesivas.",
+   "Comer arroz y pollo cuatro veces, con porciones igual de grandes.": "Aumenta la frecuencia, pero conserva poca variedad y cantidades muy grandes.",
+   "Cambiar el pollo por galletas y mantener las dos comidas.": "Mantiene baja frecuencia y reemplaza un alimento por otro poco variado."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "hard",
+  "text": "Compara: Día 1: 2 comidas, misma comida y porciones grandes. Día 2: 4 momentos, alimentos variados y porciones moderadas. ¿Qué conclusión es mejor?",
+  "options": [
+   "El Día 2 organiza mejor variedad, tamaño y frecuencia.",
+   "El Día 1 es mejor porque comer mucho da más crecimiento.",
+   "Ambos son iguales porque importa solo el sabor.",
+   "El Día 1 es mejor porque repetir evita combinar alimentos."
+  ],
+  "correct": "El Día 2 organiza mejor variedad, tamaño y frecuencia.",
+  "hint": "El Día 2 considera los tres aspectos: alimentos diferentes, cantidades adecuadas y varias ocasiones.",
+  "clue": "Evalúa las tres palabras: variedad, tamaño y frecuencia.",
+  "option_notes": {
+   "El Día 1 es mejor porque comer mucho da más crecimiento.": "Cree que comer mucho garantiza el crecimiento, sin analizar los tres aspectos.",
+   "Ambos son iguales porque importa solo el sabor.": "Ignora variedad, tamaño y frecuencia, y se fija solo en una preferencia.",
+   "El Día 1 es mejor porque repetir evita combinar alimentos.": "Confunde repetir alimentos con mejorar la variedad de la alimentación."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "hard",
+  "text": "Para una excursión, ¿qué selección cubre mejor el crecimiento, la reparación, el desarrollo y el movimiento del cuerpo?",
+  "options": [
+   "Arroz, galletas, bebida y agua.",
+   "Lentejas, pan, fruta y yogur.",
+   "Caramelos, bebida, papas fritas y sal.",
+   "Lechuga, agua, aceite y jugo."
+  ],
+  "correct": "Lentejas, pan, fruta y yogur.",
+  "hint": "Las lentejas aportan proteínas; pan y fruta, energía; el yogur aporta calcio para huesos y dientes.",
+  "clue": "Relaciona proteínas con tejidos, calcio con huesos y carbohidratos con movimiento.",
+  "option_notes": {
+   "Caramelos, bebida, papas fritas y sal.": "Confunde energía de productos ultraprocesados con cubrir proteínas y calcio.",
+   "Lechuga, agua, aceite y jugo.": "Elige agua y acompañamientos, pero deja fuera proteínas y calcio.",
+   "Arroz, galletas, bebida y agua.": "Incluye energía, pero no una fuente clara de proteínas ni de calcio."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA5",
+  "difficulty": "hard",
+  "text": "En un registro diario, Elena anota: desayuno, yogur y fruta; almuerzo, lentejas y ensalada; once, tres panes grandes con queso. ¿Qué recomendación es más adecuada?",
+  "options": [
+   "Aumentar todas las porciones para apoyar el crecimiento.",
+   "Cambiar frutas y verduras por dulces de igual tamaño.",
+   "Mantener la variedad y distribuir una porción moderada de pan.",
+   "Eliminar las lentejas porque aportan demasiada proteína."
+  ],
+  "correct": "Mantener la variedad y distribuir una porción moderada de pan.",
+  "hint": "El registro tiene variedad, pero concentra mucho pan en la once; conviene moderar y distribuir la cantidad.",
+  "clue": "Observa qué alimentos variados aparecen y en qué momento se concentra la mayor cantidad.",
+  "option_notes": {
+   "Eliminar las lentejas porque aportan demasiada proteína.": "Confunde una fuente de proteínas con un alimento dañino para crecer.",
+   "Cambiar frutas y verduras por dulces de igual tamaño.": "Confunde moderar porciones con reemplazar alimentos variados por dulces.",
+   "Aumentar todas las porciones para apoyar el crecimiento.": "Confunde apoyar el crecimiento con aumentar indiscriminadamente las cantidades."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "easy",
+  "text": "¿Cuál es un efecto nocivo frecuente del humo del tabaco en el sistema respiratorio?",
+  "options": [
+   "Irrita las vías respiratorias y puede causar tos.",
+   "Aumenta la limpieza natural de los bronquios.",
+   "Aumenta el oxígeno disponible para el cuerpo.",
+   "Fortalece los pulmones y facilita respirar."
+  ],
+  "correct": "Irrita las vías respiratorias y puede causar tos.",
+  "hint": "El humo irrita las vías respiratorias; por eso puede provocar tos y dificultar la respiración.",
+  "clue": "Piensa en qué sucede cuando el humo entra en contacto con los bronquios.",
+  "option_notes": {
+   "Fortalece los pulmones y facilita respirar.": "Confunde un efecto dañino con un supuesto fortalecimiento pulmonar.",
+   "Aumenta la limpieza natural de los bronquios.": "Invierte el efecto: el humo perjudica la limpieza de los bronquios.",
+   "Aumenta el oxígeno disponible para el cuerpo.": "Supone que fumar aumenta el oxígeno disponible."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "easy",
+  "text": "¿Qué efecto puede producir la nicotina del cigarrillo en el sistema circulatorio?",
+  "options": [
+   "Hace latir más lento el corazón y baja la presión.",
+   "Relaja los vasos sanguíneos y mejora la circulación.",
+   "Acelera los latidos y puede elevar la presión arterial.",
+   "Hace que la sangre transporte más oxígeno a los tejidos."
+  ],
+  "correct": "Acelera los latidos y puede elevar la presión arterial.",
+  "hint": "La nicotina puede estimular el corazón y aumentar sus latidos y la presión arterial.",
+  "clue": "Relaciona la nicotina con el trabajo del corazón y el estado de los vasos.",
+  "option_notes": {
+   "Hace latir más lento el corazón y baja la presión.": "Invierte el efecto estimulante de la nicotina sobre el corazón.",
+   "Relaja los vasos sanguíneos y mejora la circulación.": "Confunde el estrechamiento de vasos con una relajación.",
+   "Hace que la sangre transporte más oxígeno a los tejidos.": "Atribuye al cigarrillo un aumento del oxígeno transportado."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "easy",
+  "text": "¿Qué efecto tiene el monóxido de carbono del humo sobre la sangre?",
+  "options": [
+   "Hace que la sangre transporte aire en vez de oxígeno.",
+   "Limpia la sangre de sustancias dañinas.",
+   "Aumenta el oxígeno que llega a los músculos.",
+   "Reduce el oxígeno que la sangre puede transportar."
+  ],
+  "correct": "Reduce el oxígeno que la sangre puede transportar.",
+  "hint": "El monóxido de carbono dificulta que la sangre lleve suficiente oxígeno al cuerpo.",
+  "clue": "Piensa en la función de la sangre: llevar oxígeno desde los pulmones al cuerpo.",
+  "option_notes": {
+   "Aumenta el oxígeno que llega a los músculos.": "Invierte el efecto del monóxido de carbono sobre el oxígeno.",
+   "Limpia la sangre de sustancias dañinas.": "Supone que el humo limpia la sangre, en vez de contaminarla.",
+   "Hace que la sangre transporte aire en vez de oxígeno.": "Confunde el aire con el oxígeno que debe transportar la sangre."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "easy",
+  "text": "¿Qué parte del sistema respiratorio puede dañarse directamente por el humo del tabaco?",
+  "options": [
+   "El estómago, donde comienza la digestión.",
+   "Los riñones, que filtran la sangre.",
+   "Los huesos, que sostienen el cuerpo.",
+   "Los alvéolos, donde se intercambian gases."
+  ],
+  "correct": "Los alvéolos, donde se intercambian gases.",
+  "hint": "Los alvéolos son estructuras pulmonares delicadas y el humo puede dañarlas.",
+  "clue": "Ubica la estructura de los pulmones donde el oxígeno pasa a la sangre.",
+  "option_notes": {
+   "El estómago, donde comienza la digestión.": "Confunde una estructura digestiva con una parte respiratoria.",
+   "Los riñones, que filtran la sangre.": "Confunde un órgano excretor con una estructura pulmonar.",
+   "Los huesos, que sostienen el cuerpo.": "Confunde tejido de sostén con una estructura de intercambio gaseoso."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "medium",
+  "text": "Después de estar cerca de alguien que fuma, Diego corre y tose. ¿Qué explicación relaciona ambos efectos con el humo?",
+  "options": [
+   "El humo aumenta sus músculos y reduce su necesidad de respirar.",
+   "El humo enfría sus pulmones y mejora el intercambio de gases.",
+   "El humo fortalece sus bronquios y acelera la digestión.",
+   "El humo irrita sus bronquios y dificulta el paso del aire."
+  ],
+  "correct": "El humo irrita sus bronquios y dificulta el paso del aire.",
+  "hint": "La irritación de los bronquios puede provocar tos y hacer más difícil mover aire.",
+  "clue": "Relaciona la tos con el lugar por donde entra y circula el humo.",
+  "option_notes": {
+   "El humo enfría sus pulmones y mejora el intercambio de gases.": "Invierte los efectos del humo sobre los bronquios y el intercambio gaseoso.",
+   "El humo aumenta sus músculos y reduce su necesidad de respirar.": "Confunde el efecto respiratorio con ganar músculos y respirar menos.",
+   "El humo fortalece sus bronquios y acelera la digestión.": "Cree que el humo fortalece bronquios y favorece la digestión."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "medium",
+  "text": "En un control, una persona fumadora tiene el pulso acelerado. ¿Qué relación explica mejor ese resultado?",
+  "options": [
+   "La nicotina estimula el corazón y aumenta sus latidos.",
+   "El humo calma el corazón y reduce el número de latidos.",
+   "La nicotina fortalece el corazón y reduce su esfuerzo.",
+   "El pulmón transforma el humo en energía para el corazón."
+  ],
+  "correct": "La nicotina estimula el corazón y aumenta sus latidos.",
+  "hint": "La nicotina puede estimular el sistema circulatorio y hacer que el corazón lata más rápido.",
+  "clue": "Observa qué órgano produce el pulso y qué sustancia activa contiene el tabaco.",
+  "option_notes": {
+   "El humo calma el corazón y reduce el número de latidos.": "Invierte el efecto estimulante y supone que el corazón late menos.",
+   "La nicotina fortalece el corazón y reduce su esfuerzo.": "Interpreta el aumento del pulso como si el corazón trabajara menos.",
+   "El pulmón transforma el humo en energía para el corazón.": "Confunde la función pulmonar con la producción de energía."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "medium",
+  "text": "El monóxido de carbono pasa de los pulmones a la sangre. ¿Qué efecto se espera en el cuerpo?",
+  "options": [
+   "Los músculos reciben más oxígeno y se cansan menos.",
+   "Los músculos reciben menos oxígeno para funcionar.",
+   "La sangre deja de circular por los vasos.",
+   "El corazón ya no necesita bombear sangre."
+  ],
+  "correct": "Los músculos reciben menos oxígeno para funcionar.",
+  "hint": "Al transportar menos oxígeno, la sangre entrega menos a los músculos y estos funcionan con mayor dificultad.",
+  "clue": "Sigue el recorrido: del humo a la sangre y luego desde la sangre hacia los músculos.",
+  "option_notes": {
+   "La sangre deja de circular por los vasos.": "Confunde menor transporte de oxígeno con detener la circulación.",
+   "El corazón ya no necesita bombear sangre.": "Olvida que el corazón debe seguir bombeando sangre.",
+   "Los músculos reciben más oxígeno y se cansan menos.": "Invierte el efecto del monóxido de carbono en el oxígeno."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "medium",
+  "text": "Martina respira humo de tabaco en una pieza cerrada. ¿Qué combinación de efectos es posible?",
+  "options": [
+   "Irritación respiratoria y mayor esfuerzo del corazón.",
+   "Pulmones más fuertes y presión arterial más baja.",
+   "Mejor limpieza bronquial y vasos más relajados.",
+   "Más oxígeno en la sangre y menos tos al respirar."
+  ],
+  "correct": "Irritación respiratoria y mayor esfuerzo del corazón.",
+  "hint": "El humo puede irritar las vías respiratorias y activar efectos circulatorios, incluso sin fumar directamente.",
+  "clue": "Considera al mismo tiempo los sistemas respiratorio y circulatorio.",
+  "option_notes": {
+   "Pulmones más fuertes y presión arterial más baja.": "Supone que el humo fortalece pulmones y reduce la presión.",
+   "Más oxígeno en la sangre y menos tos al respirar.": "Invierte los efectos sobre el oxígeno y la tos.",
+   "Mejor limpieza bronquial y vasos más relajados.": "Confunde el daño a la limpieza bronquial y a los vasos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "hard",
+  "text": "Un resumen dice: “El humo irrita las vías respiratorias, daña alvéolos y puede alterar la circulación”. ¿Qué conclusión conecta mejor esos efectos?",
+  "options": [
+   "Puede mejorar el aire de los pulmones y la sangre.",
+   "Hace que los alvéolos produzcan oxígeno extra para la sangre.",
+   "Puede dificultar la respiración y el transporte de oxígeno.",
+   "Solo afecta la digestión, no los sistemas mencionados."
+  ],
+  "correct": "Puede dificultar la respiración y el transporte de oxígeno.",
+  "hint": "El daño respiratorio y circulatorio puede reducir tanto la entrada de aire como la entrega de oxígeno a los tejidos.",
+  "clue": "Une los efectos en pulmones con los efectos sobre la sangre y el transporte de oxígeno.",
+  "option_notes": {
+   "Puede mejorar el aire de los pulmones y la sangre.": "Invierte los efectos nocivos y los presenta como beneficios.",
+   "Solo afecta la digestión, no los sistemas mencionados.": "Cambia los sistemas afectados por el humo.",
+   "Hace que los alvéolos produzcan oxígeno extra para la sangre.": "Confunde el intercambio de gases con la producción de oxígeno."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "hard",
+  "text": "El humo daña los cilios de los bronquios, que normalmente mueven la mucosidad. ¿Qué consecuencia es más probable?",
+  "options": [
+   "Los bronquios quedan más limpios y permiten respirar mejor.",
+   "Se eliminan mejor las partículas y disminuye la tos.",
+   "Se acumulan la mucosidad y las partículas, y aumenta la tos.",
+   "La mucosidad se transforma en oxígeno dentro de los pulmones."
+  ],
+  "correct": "Se acumulan la mucosidad y las partículas, y aumenta la tos.",
+  "hint": "Si los cilios funcionan peor, limpian menos los bronquios y se acumulan mucosidad y partículas.",
+  "clue": "Piensa qué pasa cuando un sistema de limpieza deja de mover lo que debe retirar.",
+  "option_notes": {
+   "Se eliminan mejor las partículas y disminuye la tos.": "Invierte el efecto: los cilios dañados limpian peor.",
+   "La mucosidad se transforma en oxígeno dentro de los pulmones.": "Confunde la mucosidad con una sustancia que produce oxígeno.",
+   "Los bronquios quedan más limpios y permiten respirar mejor.": "Supone que dañar los cilios mejora la limpieza bronquial."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "hard",
+  "text": "Tras fumar, una persona presenta pulso acelerado y se fatiga al caminar. El humo contiene nicotina y monóxido de carbono. ¿Qué explicación integra ambos signos?",
+  "options": [
+   "El pulmón produce energía extra y el corazón trabaja menos.",
+   "La nicotina acelera el corazón; el CO reduce el oxígeno en la sangre.",
+   "La sangre circula más lento y por eso produce energía.",
+   "El humo calma el corazón y entrega más oxígeno a los músculos."
+  ],
+  "correct": "La nicotina acelera el corazón; el CO reduce el oxígeno en la sangre.",
+  "hint": "La nicotina puede aumentar los latidos y el monóxido de carbono limita el oxígeno para los tejidos.",
+  "clue": "Relaciona cada signo con una sustancia del humo y con la función de la sangre.",
+  "option_notes": {
+   "El humo calma el corazón y entrega más oxígeno a los músculos.": "Invierte ambos efectos del humo.",
+   "El pulmón produce energía extra y el corazón trabaja menos.": "Confunde el intercambio de gases con la producción de energía.",
+   "La sangre circula más lento y por eso produce energía.": "Supone que la sangre produce energía y que circular más lento ayuda."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA6",
+  "difficulty": "hard",
+  "text": "Una persona afirma: “Si no toso al fumar, el humo no daña mi cuerpo”. ¿Qué respuesta está mejor respaldada?",
+  "options": [
+   "Es correcto: la tos es la única señal de daño.",
+   "Es incorrecto: puede dañar pulmones y vasos sin causar tos inmediata.",
+   "Es correcto: el humo solo afecta a quienes sienten molestias.",
+   "Es incorrecto: la tos evita que el humo llegue a la sangre."
+  ],
+  "correct": "Es incorrecto: puede dañar pulmones y vasos sin causar tos inmediata.",
+  "hint": "La ausencia de tos no elimina los efectos del humo en pulmones, sangre, corazón o vasos.",
+  "clue": "Distingue entre una señal visible y los daños que pueden ocurrir dentro del cuerpo.",
+  "option_notes": {
+   "Es correcto: la tos es la única señal de daño.": "Confunde un síntoma con la única forma de daño.",
+   "Es correcto: el humo solo afecta a quienes sienten molestias.": "Supone que el daño siempre produce molestias inmediatas.",
+   "Es incorrecto: la tos evita que el humo llegue a la sangre.": "Cree que toser bloquea el paso del humo al organismo."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "easy",
+  "text": "¿Cuál de estos microorganismos se usa para que el pan aumente de tamaño al hornearse?",
+  "options": [
+   "El virus que causa influenza",
+   "La bacteria que causa salmonela",
+   "El hongo que causa pie de atleta",
+   "La levadura, que es un hongo"
+  ],
+  "correct": "La levadura, que es un hongo",
+  "hint": "La levadura libera gas en la masa, lo que ayuda a formar el volumen del pan.",
+  "clue": "Relaciona el alimento con el microorganismo usado en su preparación.",
+  "option_notes": {
+   "El virus que causa influenza": "Se asocia con una enfermedad respiratoria, no con hacer subir pan.",
+   "La bacteria que causa salmonela": "Es dañina y no es la levadura usada para el pan.",
+   "El hongo que causa pie de atleta": "Es dañino para la piel, no el hongo usado en pan."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "easy",
+  "text": "Algunas bacterias viven en el intestino. ¿Qué beneficio pueden entregar?",
+  "options": [
+   "Eliminar la necesidad de lavarse",
+   "Convertirse en células del cuerpo",
+   "Provocar siempre una gripe",
+   "Apoyar la digestión de algunos alimentos"
+  ],
+  "correct": "Apoyar la digestión de algunos alimentos",
+  "hint": "Algunas bacterias intestinales ayudan a descomponer alimentos durante la digestión.",
+  "clue": "Piensa en una función que ocurre dentro del sistema digestivo.",
+  "option_notes": {
+   "Provocar siempre una gripe": "Confunde las bacterias beneficiosas con los microorganismos que causan enfermedades.",
+   "Convertirse en células del cuerpo": "Supone que una bacteria puede transformarse en una célula humana.",
+   "Eliminar la necesidad de lavarse": "Olvida que la higiene ayuda a prevenir microorganismos dañinos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "easy",
+  "text": "¿Cuál afirmación describe a un virus dañino para la salud?",
+  "options": [
+   "Es una bacteria que ayuda a digerir alimentos",
+   "Puede causar una enfermedad como la influenza",
+   "Es un animal pequeño que vive en la piel",
+   "Es un hongo usado para hacer pan"
+  ],
+  "correct": "Puede causar una enfermedad como la influenza",
+  "hint": "Algunos virus entran a las células y pueden producir enfermedades.",
+  "clue": "Relaciona cada opción con el tipo de microorganismo que nombra.",
+  "option_notes": {
+   "Es una bacteria que ayuda a digerir alimentos": "Confunde un virus con una bacteria beneficiosa.",
+   "Es un hongo usado para hacer pan": "Confunde un virus con un hongo usado en alimentos.",
+   "Es un animal pequeño que vive en la piel": "Confunde un microorganismo con un animal visible."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "easy",
+  "text": "¿Cuál de estos problemas puede ser causado por un hongo?",
+  "options": [
+   "Una torcedura de tobillo",
+   "Una fractura en un dedo",
+   "Una micosis en la piel, como el pie de atleta",
+   "Una quemadura por agua caliente"
+  ],
+  "correct": "Una micosis en la piel, como el pie de atleta",
+  "hint": "Los hongos pueden crecer en la piel y causar infecciones llamadas micosis.",
+  "clue": "Busca una enfermedad producida por un ser vivo muy pequeño.",
+  "option_notes": {
+   "Una fractura en un dedo": "Es una lesión de un hueso, no una infección por hongos.",
+   "Una torcedura de tobillo": "Es una lesión causada por un movimiento brusco.",
+   "Una quemadura por agua caliente": "Es una lesión producida por el calor."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "medium",
+  "text": "Después de jugar en la plaza, vas a comer una colación. ¿Qué debes hacer primero para reducir el ingreso de microorganismos dañinos a tu cuerpo?",
+  "options": [
+   "Lavarte las manos con agua y jabón",
+   "Esperar sin tocarlas",
+   "Pasarte las manos por el pelo",
+   "Limpiarlas en la ropa"
+  ],
+  "correct": "Lavarte las manos con agua y jabón",
+  "hint": "El lavado de manos retira suciedad y muchos microorganismos antes de tocar los alimentos.",
+  "clue": "Piensa en la parte del cuerpo que tuvo contacto con muchas superficies.",
+  "option_notes": {
+   "Pasarte las manos por el pelo": "Puede transferir más microorganismos desde el pelo o la piel.",
+   "Limpiarlas en la ropa": "La ropa no limpia bien ni elimina los microorganismos.",
+   "Esperar sin tocarlas": "Los microorganismos pueden permanecer en las manos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "medium",
+  "text": "Tu compañero estornuda cerca de ti. ¿Qué acción ayuda más a disminuir el contagio de microorganismos que viajan en gotitas?",
+  "options": [
+   "Compartir la botella de agua",
+   "Taparse los oídos con las manos",
+   "Acercarse para hablarle",
+   "Cubrirse nariz y boca con el antebrazo"
+  ],
+  "correct": "Cubrirse nariz y boca con el antebrazo",
+  "hint": "Las secreciones de la tos y los estornudos pueden transportar microorganismos.",
+  "clue": "Considera qué conducta detiene las gotitas sin usar las manos.",
+  "option_notes": {
+   "Taparse los oídos con las manos": "Protege los oídos, pero no evita que salgan gotitas.",
+   "Compartir la botella de agua": "Puede facilitar el intercambio de microorganismos.",
+   "Acercarse para hablarle": "Aumenta la posibilidad de recibir gotitas respiratorias."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "verificador: enunciado ambiguo"
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "medium",
+  "text": "En un paseo, una ensalada queda varias horas al sol. ¿Por qué comerla puede ser riesgoso?",
+  "options": [
+   "Los alimentos al aire libre pierden sus vitaminas",
+   "El calor puede favorecer la multiplicación de bacterias dañinas",
+   "La ensalada produce hongos dentro del estómago",
+   "El sol convierte todas las bacterias en virus"
+  ],
+  "correct": "El calor puede favorecer la multiplicación de bacterias dañinas",
+  "hint": "Algunas bacterias se multiplican más rápido en condiciones favorables, como el calor.",
+  "clue": "Relaciona el tiempo y la temperatura con el crecimiento microbiano.",
+  "option_notes": {
+   "El sol convierte todas las bacterias en virus": "Confunde el efecto del calor con una transformación entre microorganismos.",
+   "La ensalada produce hongos dentro del estómago": "Supone que el alimento crea hongos después de comerlo.",
+   "Los alimentos al aire libre pierden sus vitaminas": "Relaciona el riesgo con nutrientes, no con microorganismos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "medium",
+  "text": "Te haces un corte pequeño en la rodilla. ¿Qué medida de cuidado e higiene es la más adecuada?",
+  "options": [
+   "Compartir una toalla usada",
+   "Lavarlo con agua limpia y cubrirlo",
+   "Dejarlo sucio para crear defensas",
+   "Frotarlo con tierra para secarlo"
+  ],
+  "correct": "Lavarlo con agua limpia y cubrirlo",
+  "hint": "Limpiar la herida reduce microorganismos y cubrirla evita nueva suciedad.",
+  "clue": "Elige la opción que combina limpieza y protección.",
+  "option_notes": {
+   "Frotarlo con tierra para secarlo": "La tierra puede aportar más microorganismos a la herida.",
+   "Dejarlo sucio para crear defensas": "La suciedad aumenta el riesgo de infección.",
+   "Compartir una toalla usada": "La toalla puede tener microorganismos de otra persona."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "hard",
+  "text": "En una actividad, dos trozos de pan se guardan en bolsas. Antes de ponerlos dentro, Ana toca uno con manos sin lavar y el otro después de lavárselas. Días después, el primero tiene más moho. ¿Qué conclusión es más razonable?",
+  "options": [
+   "El pan sin moho quedó libre de todo microorganismo",
+   "Los hongos aparecen solo cuando una persona los mira",
+   "Las manos sin lavar pudieron transferir hongos al pan",
+   "El lavado convirtió el moho en una bacteria"
+  ],
+  "correct": "Las manos sin lavar pudieron transferir hongos al pan",
+  "hint": "El moho es un hongo; las manos sucias pueden llevar microorganismos a los alimentos.",
+  "clue": "Compara qué cambió entre ambos trozos antes de guardarlos.",
+  "option_notes": {
+   "El lavado convirtió el moho en una bacteria": "Confunde un cambio de higiene con una transformación entre tipos.",
+   "El pan sin moho quedó libre de todo microorganismo": "No ver moho no demuestra que no haya otros microorganismos.",
+   "Los hongos aparecen solo cuando una persona los mira": "Confunde observar un fenómeno con causarlo."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "hard",
+  "text": "En una sala, varias personas presentan influenza después de unos días. ¿Cuál plan combina mejor medidas para disminuir nuevos contagios?",
+  "options": [
+   "Ventilar la sala, cubrirse al toser y lavarse las manos",
+   "Usar perfume, hablar cerca y tocarse la cara",
+   "Cerrar ventanas, compartir vasos y tomar antibióticos",
+   "Limpiar mesas, compartir cubiertos y no cubrirse al toser"
+  ],
+  "correct": "Ventilar la sala, cubrirse al toser y lavarse las manos",
+  "hint": "La influenza se transmite principalmente por secreciones respiratorias y contacto con manos contaminadas.",
+  "clue": "Busca medidas que actúen sobre el aire, las secreciones y las manos.",
+  "option_notes": {
+   "Cerrar ventanas, compartir vasos y tomar antibióticos": "Combina acciones que favorecen el contagio o no actúan contra virus.",
+   "Usar perfume, hablar cerca y tocarse la cara": "El perfume no elimina virus y acercarse facilita su transmisión.",
+   "Limpiar mesas, compartir cubiertos y no cubrirse al toser": "No controla las gotitas y compartir objetos puede transmitir microorganismos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "hard",
+  "text": "Mateo tiene un resfrío y piensa tomar un antibiótico que sobró en casa. ¿Cuál explicación justifica mejor que no lo haga sin indicación médica?",
+  "options": [
+   "Los antibióticos sirven solo para hongos y siempre curan resfríos",
+   "Tomar cualquier medicamento evita que el cuerpo forme defensas",
+   "Los antibióticos actúan contra bacterias, no contra virus del resfrío",
+   "Los virus desaparecen porque el antibiótico los transforma en bacterias"
+  ],
+  "correct": "Los antibióticos actúan contra bacterias, no contra virus del resfrío",
+  "hint": "El resfrío común suele ser viral, y los antibióticos no actúan contra los virus.",
+  "clue": "Relaciona el tipo de microorganismo con el efecto del medicamento.",
+  "option_notes": {
+   "Los antibióticos sirven solo para hongos y siempre curan resfríos": "Confunde los hongos con los virus y atribuye al antibiótico un efecto universal.",
+   "Los virus desaparecen porque el antibiótico los transforma en bacterias": "Supone que un medicamento cambia un tipo de microorganismo en otro.",
+   "Tomar cualquier medicamento evita que el cuerpo forme defensas": "Confunde el uso de medicamentos con el funcionamiento de las defensas."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "alternativa larga"
+ },
+ {
+  "oa_code": "OA7",
+  "difficulty": "hard",
+  "text": "En la cocina, Camila corta pollo crudo y luego quiere picar tomates para una ensalada. ¿Qué secuencia reduce mejor el riesgo de que bacterias del pollo lleguen a la ensalada?",
+  "options": [
+   "Lavarse las manos, limpiar los utensilios y usar una tabla limpia",
+   "Secarse las manos en el paño y usar la misma tabla",
+   "Cortar el pollo, tocar tomates y lavar todo al final",
+   "Enjuagar el pollo, tocar tomates y guardar todo junto"
+  ],
+  "correct": "Lavarse las manos, limpiar los utensilios y usar una tabla limpia",
+  "hint": "Las bacterias pueden pasar desde el pollo crudo a las manos, tablas y alimentos listos para comer.",
+  "clue": "Sigue el recorrido posible de las bacterias entre el pollo, las manos y los tomates.",
+  "option_notes": {
+   "Secarse las manos en el paño y usar la misma tabla": "El paño y la tabla pueden transferir bacterias a los tomates.",
+   "Enjuagar el pollo, tocar tomates y guardar todo junto": "Lavar el pollo no evita contaminar las manos y los alimentos.",
+   "Cortar el pollo, tocar tomates y lavar todo al final": "Los tomates quedan expuestos antes de realizar la limpieza."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "easy",
+  "text": "Al encender una estufa eléctrica, ¿en qué forma se transforma principalmente la energía eléctrica?",
+  "options": [
+   "En energía sonora",
+   "En energía lumínica",
+   "En energía química",
+   "En energía calórica"
+  ],
+  "correct": "En energía calórica",
+  "hint": "La resistencia de la estufa se calienta y entrega calor al ambiente.",
+  "clue": "Fíjate en el efecto que buscas al usar una estufa.",
+  "option_notes": {
+   "En energía sonora": "Confunde el ruido del aparato con su transformación principal.",
+   "En energía lumínica": "Piensa que encender un artefacto siempre produce luz.",
+   "En energía química": "Confunde la electricidad con la energía almacenada en una pila."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "easy",
+  "text": "Una ampolleta encendida ilumina una pieza. ¿Qué transformación explica principalmente ese efecto?",
+  "options": [
+   "De lumínica a eléctrica",
+   "De eléctrica a lumínica",
+   "De calórica a química",
+   "De sonora a calórica"
+  ],
+  "correct": "De eléctrica a lumínica",
+  "hint": "La ampolleta recibe electricidad y emite luz.",
+  "clue": "Relaciona la energía que entra con el efecto visible.",
+  "option_notes": {
+   "De lumínica a eléctrica": "Invierte la dirección del cambio de energía.",
+   "De sonora a calórica": "Confunde el sonido con la luz que observas.",
+   "De calórica a química": "Asocia el calor con energía almacenada, no con iluminación."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "easy",
+  "text": "¿Qué artefacto transforma principalmente energía eléctrica en energía sonora?",
+  "options": [
+   "Una linterna",
+   "Un hervidor",
+   "Un ventilador",
+   "Un parlante"
+  ],
+  "correct": "Un parlante",
+  "hint": "Busca el aparato cuyo propósito principal es producir sonidos.",
+  "clue": "Piensa qué aparato usarías para escuchar música.",
+  "option_notes": {
+   "Un hervidor": "Confunde el calor del hervidor con un sonido.",
+   "Una linterna": "Lo relaciona con la luz que entrega la linterna.",
+   "Un ventilador": "Se fija en el ruido del motor, no en su función principal."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "easy",
+  "text": "¿Qué científico construyó la primera pila eléctrica, antecedente de las baterías?",
+  "options": [
+   "Thomas Edison",
+   "Alessandro Volta",
+   "Michael Faraday",
+   "Benjamin Franklin"
+  ],
+  "correct": "Alessandro Volta",
+  "hint": "Volta construyó la pila voltaica, capaz de entregar corriente eléctrica.",
+  "clue": "Recuerda quién creó un dispositivo formado por metales y separadores húmedos.",
+  "option_notes": {
+   "Michael Faraday": "Se le relaciona con la inducción y los generadores, no con la primera pila.",
+   "Benjamin Franklin": "Estudió la electricidad de los rayos y la atmósfera.",
+   "Thomas Edison": "Mejoró lámparas eléctricas para hacerlas prácticas."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "medium",
+  "text": "Pones pan en un tostador eléctrico. El pan se calienta y cambia de color. ¿Cuál explicación es la más adecuada?",
+  "options": [
+   "La energía eléctrica se transforma principalmente en sonido.",
+   "La luz tuesta el pan sin producir calor.",
+   "La energía eléctrica se transforma principalmente en calor.",
+   "El calor se transforma principalmente en electricidad."
+  ],
+  "correct": "La energía eléctrica se transforma principalmente en calor.",
+  "hint": "La resistencia entrega calor al pan; por eso se calienta y se tuesta.",
+  "clue": "Relaciona la energía que entra con los cambios observados en el pan.",
+  "option_notes": {
+   "La energía eléctrica se transforma principalmente en sonido.": "Se fija en ruidos secundarios y olvida el calentamiento.",
+   "El calor se transforma principalmente en electricidad.": "Invierte el cambio y supone que el pan genera corriente.",
+   "La luz tuesta el pan sin producir calor.": "Atribuye el cambio de color a la luz y niega el calor."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "medium",
+  "text": "Conectas un ventilador y sus aspas empiezan a girar. ¿Qué transformación y evidencia corresponden?",
+  "options": [
+   "Eléctrica a sonora; el motor se escucha.",
+   "Cinética a eléctrica; el enchufe recibe energía.",
+   "Térmica a lumínica; el motor produce luz.",
+   "Eléctrica a cinética; las aspas giran."
+  ],
+  "correct": "Eléctrica a cinética; las aspas giran.",
+  "hint": "La electricidad activa el motor y su efecto visible es el giro.",
+  "clue": "Observa qué parte se mueve gracias a la conexión.",
+  "option_notes": {
+   "Eléctrica a sonora; el motor se escucha.": "Confunde el ruido del motor con el efecto principal.",
+   "Cinética a eléctrica; el enchufe recibe energía.": "Invierte el sentido: el ventilador no entrega energía al enchufe.",
+   "Térmica a lumínica; el motor produce luz.": "Supone que el motor produce luz al calentarse."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "medium",
+  "text": "Faraday observó que mover un imán cerca de un alambre podía producir corriente. ¿Qué aparato aprovecha directamente ese principio?",
+  "options": [
+   "Un generador eléctrico",
+   "Un interruptor",
+   "Una pila eléctrica",
+   "Un motor eléctrico"
+  ],
+  "correct": "Un generador eléctrico",
+  "hint": "En un generador, el movimiento y el magnetismo permiten obtener energía eléctrica.",
+  "clue": "Busca el aparato que produce electricidad a partir de movimiento.",
+  "option_notes": {
+   "Un motor eléctrico": "Confunde el generador con un motor, que usa electricidad para moverse.",
+   "Una pila eléctrica": "Piensa que toda corriente proviene de una pila.",
+   "Un interruptor": "Confunde controlar el circuito con producir corriente."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "medium",
+  "text": "En un museo lees que Edison mejoró una lámpara incandescente. ¿Qué problema ayudó a resolver?",
+  "options": [
+   "Que un motor funcionara sin electricidad.",
+   "Que la pila produjera sonidos.",
+   "Que la lámpara permaneciera encendida más tiempo.",
+   "Que un imán guardara calor."
+  ],
+  "correct": "Que la lámpara permaneciera encendida más tiempo.",
+  "hint": "Una lámpara práctica debía iluminar durante más tiempo antes de cambiarla.",
+  "clue": "Piensa en lo que necesita una familia para usar una lámpara todos los días.",
+  "option_notes": {
+   "Que la pila produjera sonidos.": "Confunde iluminar por más tiempo con producir sonidos.",
+   "Que un imán guardara calor.": "Relaciona un imán con guardar calor, algo que no hace.",
+   "Que un motor funcionara sin electricidad.": "Confunde la necesidad de electricidad con funcionar sin ella."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "hard",
+  "text": "Una linterna tiene una pila y una ampolleta. Al encenderla, la pila se agota y la pieza se ilumina. ¿Qué cadena representa mejor lo ocurrido?",
+  "options": [
+   "Lumínica→eléctrica→química",
+   "Química→eléctrica→lumínica",
+   "Eléctrica→química→sonora",
+   "Calórica→eléctrica→lumínica"
+  ],
+  "correct": "Química→eléctrica→lumínica",
+  "hint": "La pila entrega electricidad y la ampolleta la transforma principalmente en luz.",
+  "clue": "Sigue el recorrido desde la energía almacenada en la pila hasta la luz.",
+  "option_notes": {
+   "Lumínica→eléctrica→química": "Invierte el recorrido de la pila y la ampolleta.",
+   "Eléctrica→química→sonora": "Confunde almacenar energía con producir sonido.",
+   "Calórica→eléctrica→lumínica": "Supone que el calor es la fuente de la linterna."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "hard",
+  "text": "Un televisor conectado transforma electricidad en luz y sonido; además, se entibia. ¿Qué conclusión se puede sacar?",
+  "options": [
+   "La luz siempre se transforma en sonido dentro del televisor.",
+   "El sonido se transforma en electricidad dentro del televisor.",
+   "La energía eléctrica puede transformarse en luz, sonido y calor.",
+   "El calor desaparece porque no es una forma de energía."
+  ],
+  "correct": "La energía eléctrica puede transformarse en luz, sonido y calor.",
+  "hint": "El aparato recibe electricidad y entrega luz, sonido y algo de calor.",
+  "clue": "Considera los tres efectos observados, no solo el principal.",
+  "option_notes": {
+   "La luz siempre se transforma en sonido dentro del televisor.": "Describe solo un efecto y olvida la luz, el sonido y el calor.",
+   "El sonido se transforma en electricidad dentro del televisor.": "Confunde el sonido emitido con la electricidad que recibe.",
+   "El calor desaparece porque no es una forma de energía.": "Niega que el calor sea una forma de energía."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "hard",
+  "text": "Ordena del más antiguo al más reciente: Volta construye una pila; Faraday estudia la inducción; Edison mejora una lámpara.",
+  "options": [
+   "Volta → Faraday → Edison",
+   "Volta → Edison → Faraday",
+   "Faraday → Volta → Edison",
+   "Edison → Volta → Faraday"
+  ],
+  "correct": "Volta → Faraday → Edison",
+  "hint": "La pila de Volta precedió al estudio de la inducción de Faraday y a la lámpara de Edison.",
+  "clue": "Piensa en el orden histórico de los tres nombres.",
+  "option_notes": {
+   "Faraday → Volta → Edison": "Intercambia los dos primeros aportes históricos.",
+   "Edison → Volta → Faraday": "Pone primero una mejora de lámparas posterior.",
+   "Volta → Edison → Faraday": "Coloca la lámpara antes del generador."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA8",
+  "difficulty": "hard",
+  "text": "En este orden, ¿qué transformaciones corresponden a la pila de Volta, el generador de Faraday y la lámpara de Edison?",
+  "options": [
+   "Química→eléctrica; cinética→eléctrica; eléctrica→lumínica.",
+   "Lumínica→térmica; química→sonora; cinética→eléctrica.",
+   "Sonora→eléctrica; térmica→sonora; eléctrica→química.",
+   "Eléctrica→química; eléctrica→cinética; lumínica→eléctrica."
+  ],
+  "correct": "Química→eléctrica; cinética→eléctrica; eléctrica→lumínica.",
+  "hint": "La pila usa reacciones químicas, el generador usa movimiento y la lámpara entrega luz.",
+  "clue": "Relaciona la fuente o entrada de cada aparato con su efecto principal.",
+  "option_notes": {
+   "Eléctrica→química; eléctrica→cinética; lumínica→eléctrica.": "Invierte las transformaciones y confunde motor con generador.",
+   "Sonora→eléctrica; térmica→sonora; eléctrica→química.": "Atribuye sonidos y calor a aparatos sin esas funciones principales.",
+   "Lumínica→térmica; química→sonora; cinética→eléctrica.": "Intercambia las fuentes y resultados de los tres aparatos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "easy",
+  "text": "En una linterna escolar, quieres encender y apagar la luz sin sacar la pila. ¿Qué componente debes accionar?",
+  "options": [
+   "El cable, que une componentes.",
+   "La pila, que entrega energía.",
+   "El interruptor, que abre y cierra.",
+   "La ampolleta, que produce luz."
+  ],
+  "correct": "El interruptor, que abre y cierra.",
+  "hint": "La pieza que abre o cierra el camino eléctrico permite controlar la luz.",
+  "clue": "Piensa en la pieza móvil que controla el paso de la electricidad.",
+  "option_notes": {
+   "La pila, que entrega energía.": "Confunde la fuente de energía con el control del circuito.",
+   "El cable, que une componentes.": "Confunde unir las partes con abrir y cerrar el circuito.",
+   "La ampolleta, que produce luz.": "Confunde producir luz con controlar el circuito."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "easy",
+  "text": "¿Qué componente entrega la energía para que funcione una ampolleta en un circuito simple?",
+  "options": [
+   "La ampolleta que produce luz.",
+   "La pila que entrega energía.",
+   "El cable que une las partes.",
+   "El interruptor que abre el circuito."
+  ],
+  "correct": "La pila que entrega energía.",
+  "hint": "La fuente del circuito entrega energía, que la ampolleta puede transformar en luz.",
+  "clue": "Busca el componente que funciona como fuente de energía.",
+  "option_notes": {
+   "El interruptor que abre el circuito.": "Confunde controlar el circuito con entregarle energía.",
+   "El cable que une las partes.": "Confunde el conductor que conecta con la fuente de energía.",
+   "La ampolleta que produce luz.": "Confunde transformar energía en luz con entregar la energía."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "easy",
+  "text": "Si el interruptor de un circuito está abierto, ¿qué observas normalmente en la ampolleta?",
+  "options": [
+   "Permanece encendida.",
+   "Permanece apagada.",
+   "Brilla con más fuerza.",
+   "La pila se descarga al instante."
+  ],
+  "correct": "Permanece apagada.",
+  "hint": "Un interruptor abierto interrumpe el recorrido que necesita la electricidad.",
+  "clue": "Relaciona abierto con un camino que no está completo.",
+  "option_notes": {
+   "Permanece encendida.": "Confunde un circuito abierto con uno cerrado.",
+   "Brilla con más fuerza.": "Piensa que abrir el circuito aumenta la energía.",
+   "La pila se descarga al instante.": "Supone que la pila se descarga aunque el camino esté abierto."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "easy",
+  "text": "En un circuito simple armado con una pila y una ampolleta, ¿para qué sirven principalmente los cables?",
+  "options": [
+   "Para unir los componentes y formar un camino.",
+   "Para abrir y cerrar el circuito.",
+   "Para guardar la energía de la pila.",
+   "Para producir la luz de la ampolleta."
+  ],
+  "correct": "Para unir los componentes y formar un camino.",
+  "hint": "Los cables conductores unen las partes y permiten formar un recorrido para la electricidad.",
+  "clue": "Fíjate en la función de la parte que conecta los objetos.",
+  "option_notes": {
+   "Para producir la luz de la ampolleta.": "Confunde la conexión eléctrica con la producción de luz.",
+   "Para guardar la energía de la pila.": "Confunde guardar energía con conducirla.",
+   "Para abrir y cerrar el circuito.": "Confunde el cable con la pieza que controla el circuito."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "medium",
+  "text": "Observa el esquema descrito: pila–cable–interruptor–cable–ampolleta–cable–pila. El interruptor está abierto. ¿Qué debes hacer para encenderla?",
+  "options": [
+   "Retirar la ampolleta del circuito.",
+   "Cambiar la pila por un cable.",
+   "Desconectar uno de los cables.",
+   "Cerrar el interruptor."
+  ],
+  "correct": "Cerrar el interruptor.",
+  "hint": "Al cerrar el interruptor, el recorrido entre los polos de la pila queda completo.",
+  "clue": "Busca la acción que cierre el camino sin quitar componentes.",
+  "option_notes": {
+   "Cambiar la pila por un cable.": "Confunde cerrar el circuito con reemplazar la fuente.",
+   "Desconectar uno de los cables.": "Rompería el camino que debe quedar completo.",
+   "Retirar la ampolleta del circuito.": "Quitar la ampolleta impide que funcione."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "medium",
+  "text": "Sofía usa una pila que funciona. Un extremo de cada cable toca un polo distinto de ella, pero la ampolleta no enciende. ¿Qué debería revisar?",
+  "options": [
+   "Que ambos cables toquen el vidrio de la ampolleta.",
+   "Que los cables rodeen la pila varias veces.",
+   "Que la ampolleta quede apoyada sobre la mesa.",
+   "Que cada cable toque un contacto metálico distinto de la ampolleta."
+  ],
+  "correct": "Que cada cable toque un contacto metálico distinto de la ampolleta.",
+  "hint": "La corriente necesita entrar y salir por los contactos metálicos para completar el recorrido.",
+  "clue": "El vidrio no es el contacto que conecta la ampolleta al circuito.",
+  "option_notes": {
+   "Que ambos cables toquen el vidrio de la ampolleta.": "Confunde el vidrio exterior con los contactos conductores.",
+   "Que la ampolleta quede apoyada sobre la mesa.": "Cree que apoyar la ampolleta completa el circuito.",
+   "Que los cables rodeen la pila varias veces.": "Confunde dar vueltas con lograr conexiones eléctricas."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "medium",
+  "text": "En una maqueta de un palafito de Chiloé quieres apagar una luz sin quitar la pila. ¿Dónde debes ubicar el interruptor?",
+  "options": [
+   "En el camino entre la pila y la ampolleta.",
+   "Dentro de la ampolleta, junto al filamento.",
+   "Pegado a la pila, pero sin conectarlo.",
+   "Fuera del circuito, sin tocar ningún cable."
+  ],
+  "correct": "En el camino entre la pila y la ampolleta.",
+  "hint": "Para controlar la luz, el interruptor debe poder abrir o cerrar el recorrido de la corriente.",
+  "clue": "Ubícalo donde pueda interrumpir el camino eléctrico.",
+  "option_notes": {
+   "Fuera del circuito, sin tocar ningún cable.": "El interruptor debe estar conectado para controlar el camino.",
+   "Dentro de la ampolleta, junto al filamento.": "Confunde la parte que produce luz con la que controla.",
+   "Pegado a la pila, pero sin conectarlo.": "Un interruptor sin conexión no puede abrir ni cerrar el circuito."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "medium",
+  "text": "En un circuito, la pila, los cables y la ampolleta están conectados. El interruptor está cerrado, pero un cable se suelta. ¿Qué pasa y por qué?",
+  "options": [
+   "La pila cambia de lugar dentro del circuito.",
+   "Continúa encendida porque la pila basta.",
+   "La ampolleta se apaga porque el camino queda abierto.",
+   "Se enciende más porque recibe más energía."
+  ],
+  "correct": "La ampolleta se apaga porque el camino queda abierto.",
+  "hint": "Un cable suelto interrumpe el recorrido, aunque la pila y la ampolleta sigan presentes.",
+  "clue": "Comprueba si existe un camino completo entre los dos polos de la pila.",
+  "option_notes": {
+   "Se enciende más porque recibe más energía.": "Confunde una interrupción con una mayor entrega de energía.",
+   "Continúa encendida porque la pila basta.": "Supone que la pila funciona sin un camino cerrado.",
+   "La pila cambia de lugar dentro del circuito.": "Imagina que los componentes se mueven dentro del circuito."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "hard",
+  "text": "En una maqueta de una casa, la ampolleta queda encendida mientras la pila está conectada. Quieres apagarla sin desconectar cables. ¿Qué debes agregar y dónde?",
+  "options": [
+   "Un cable más largo cerca de la pila.",
+   "Un trozo de cartón sobre la ampolleta.",
+   "Un interruptor en el camino del circuito.",
+   "Una segunda ampolleta junto a la primera."
+  ],
+  "correct": "Un interruptor en el camino del circuito.",
+  "hint": "Un interruptor permite abrir el camino y cortar el funcionamiento cuando tú lo decidas.",
+  "clue": "Busca una solución que controle el recorrido, no la luz por fuera.",
+  "option_notes": {
+   "Una segunda ampolleta junto a la primera.": "Agregar otra ampolleta no permite controlar la primera.",
+   "Un cable más largo cerca de la pila.": "Alargar un cable no abre ni cierra el circuito.",
+   "Un trozo de cartón sobre la ampolleta.": "Tapar la luz no controla el paso de electricidad."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "hard",
+  "text": "Se comparan dos circuitos: A tiene una pila, cables, ampolleta e interruptor en un camino cerrado; B tiene un cable suelto. ¿Cuál explicación es correcta?",
+  "options": [
+   "En A, el camino cerrado y el interruptor permiten controlar la luz.",
+   "En A, los cables extra hacen que la pila produzca luz.",
+   "En B, el cable suelto aumenta la energía de la ampolleta.",
+   "En B, la pila funciona aunque el camino esté incompleto."
+  ],
+  "correct": "En A, el camino cerrado y el interruptor permiten controlar la luz.",
+  "hint": "La luz necesita un recorrido completo y un interruptor conectado que pueda abrirlo.",
+  "clue": "Compara la continuidad del camino con la función del interruptor.",
+  "option_notes": {
+   "En A, los cables extra hacen que la pila produzca luz.": "Confunde cantidad de cables con fuente de energía.",
+   "En B, el cable suelto aumenta la energía de la ampolleta.": "Confunde una falla de conexión con mayor energía.",
+   "En B, la pila funciona aunque el camino esté incompleto.": "Supone que la pila basta sin un recorrido cerrado."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "hard",
+  "text": "En una caja, la tapa mantiene abierto el interruptor mientras está cerrada. Quieres que una luz de aviso se encienda al levantarla. ¿Qué debe ocurrir?",
+  "options": [
+   "Al levantarla, la pila debe separarse.",
+   "Al levantarla, el interruptor debe cerrarse.",
+   "Al levantarla, la ampolleta debe cubrirse.",
+   "Al levantarla, el cable debe cortarse."
+  ],
+  "correct": "Al levantarla, el interruptor debe cerrarse.",
+  "hint": "La luz se enciende cuando el circuito pasa de abierto a cerrado.",
+  "clue": "Relaciona la acción de la tapa con el estado del interruptor.",
+  "option_notes": {
+   "Al levantarla, la pila debe separarse.": "Separar la pila rompería el circuito y apagaría la luz.",
+   "Al levantarla, el cable debe cortarse.": "Un cable cortado impediría completar el circuito.",
+   "Al levantarla, la ampolleta debe cubrirse.": "Tapar la ampolleta no cambia el recorrido eléctrico."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA9",
+  "difficulty": "hard",
+  "text": "En un esquema, un cable sale del polo positivo de la pila y toca el vidrio de la ampolleta; el otro une el polo negativo con el contacto metálico. El interruptor está cerrado. ¿Qué cambio puede encenderla?",
+  "options": [
+   "Cambiar el interruptor cerrado por uno abierto.",
+   "Agregar cinta sobre el vidrio sin mover los cables.",
+   "Separar el segundo cable para que quede más largo.",
+   "Pasar el primer cable del vidrio al otro contacto metálico."
+  ],
+  "correct": "Pasar el primer cable del vidrio al otro contacto metálico.",
+  "hint": "El vidrio no forma una conexión; ambos cables deben llegar a contactos metálicos distintos.",
+  "clue": "Busca el punto de la ampolleta que sí puede cerrar el recorrido eléctrico.",
+  "option_notes": {
+   "Agregar cinta sobre el vidrio sin mover los cables.": "Tapar el vidrio no crea un contacto conductor.",
+   "Separar el segundo cable para que quede más largo.": "Confunde la longitud del cable con una conexión completa.",
+   "Cambiar el interruptor cerrado por uno abierto.": "Un interruptor abierto rompe el camino eléctrico."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "easy",
+  "text": "En un circuito escolar con una pila y una ampolleta, ¿qué material puede unir dos cables y permitir que la ampolleta se encienda?",
+  "options": [
+   "Cobre",
+   "Goma",
+   "Plástico",
+   "Vidrio"
+  ],
+  "correct": "Cobre",
+  "hint": "El cobre deja pasar la corriente eléctrica, por eso puede cerrar el circuito y encender la ampolleta.",
+  "clue": "Piensa en qué material permite que la corriente recorra el circuito.",
+  "option_notes": {
+   "Plástico": "Confundir una cubierta protectora con un material que deja pasar corriente.",
+   "Goma": "Pensar que todo material flexible conduce electricidad.",
+   "Vidrio": "Suponer que un material duro también conduce electricidad."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "easy",
+  "text": "¿Cuál de estos materiales es un aislador eléctrico y puede ayudar a protegerte al cubrir un cable?",
+  "options": [
+   "Acero",
+   "Goma",
+   "Aluminio",
+   "Cobre"
+  ],
+  "correct": "Goma",
+  "hint": "La goma dificulta el paso de la corriente y por eso se usa como recubrimiento protector.",
+  "clue": "Busca el material que dificulta el paso de la corriente.",
+  "option_notes": {
+   "Cobre": "Confundir un metal conductor con un material que protege del paso de corriente.",
+   "Aluminio": "Pensar que todo metal debe aislar cuando se cubre un cable.",
+   "Acero": "Asociar la resistencia del acero con que sea aislador."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "easy",
+  "text": "En una prueba, una pieza de aluminio reemplaza un tramo de cable y la ampolleta se enciende. ¿Qué se puede concluir?",
+  "options": [
+   "La ampolleta funciona sin circuito.",
+   "El aluminio es conductor eléctrico.",
+   "La pila dejó de entregar corriente.",
+   "El aluminio crea la corriente."
+  ],
+  "correct": "El aluminio es conductor eléctrico.",
+  "hint": "Si la ampolleta se enciende, el aluminio permitió que la corriente recorriera el circuito.",
+  "clue": "Usa el resultado observado, no el color o la forma del material.",
+  "option_notes": {
+   "El aluminio crea la corriente.": "Confundir el material conductor con la fuente que entrega energía.",
+   "La ampolleta funciona sin circuito.": "Olvidar que la corriente necesita un circuito cerrado.",
+   "La pila dejó de entregar corriente.": "Interpretar lo contrario de lo que muestra la ampolleta encendida."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "easy",
+  "text": "¿Cómo debes sacar un enchufe de la pared para manipular un artefacto con mayor seguridad?",
+  "options": [
+   "Tocando sus clavijas metálicas.",
+   "Tirando fuerte del cable.",
+   "Mojando el enchufe para aflojarlo.",
+   "Tomando el enchufe con manos secas, no el cable."
+  ],
+  "correct": "Tomando el enchufe con manos secas, no el cable.",
+  "hint": "Sujetar el enchufe evita tirar del cable y reduce el riesgo de dañar sus conductores.",
+  "clue": "Recuerda que el cable y el enchufe se sujetan de manera diferente.",
+  "option_notes": {
+   "Tirando fuerte del cable.": "Tirar del cable puede dañarlo y dejar conductores expuestos.",
+   "Tocando sus clavijas metálicas.": "Las clavijas metálicas pueden conducir corriente y causar una descarga.",
+   "Mojando el enchufe para aflojarlo.": "El agua aumenta el peligro de una descarga eléctrica."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "medium",
+  "text": "Quieres saber si una tapa es conductora. ¿Qué procedimiento es adecuado?",
+  "options": [
+   "Calentarla y observar si cambia de color.",
+   "Mirarla y decidir según su color y forma.",
+   "Ponerla en un circuito con pila y ampolleta; observar si enciende.",
+   "Acercarla a una ampolleta encendida sin conectarla."
+  ],
+  "correct": "Ponerla en un circuito con pila y ampolleta; observar si enciende.",
+  "hint": "La conexión con pila y ampolleta permite observar si el material deja pasar corriente.",
+  "clue": "Elige una prueba con una observación directa del circuito.",
+  "option_notes": {
+   "Mirarla y decidir según su color y forma.": "Suponer que la apariencia permite saber si un material conduce.",
+   "Acercarla a una ampolleta encendida sin conectarla.": "Confundir acercar un objeto con incorporarlo al circuito.",
+   "Calentarla y observar si cambia de color.": "Relacionar el calor con la conducción eléctrica sin hacer la prueba adecuada."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "medium",
+  "text": "Un cable de una radio tiene un hilo de cobre cubierto por plástico. ¿Qué función cumple cada material?",
+  "options": [
+   "Ambos materiales producen la corriente.",
+   "El plástico conduce y el cobre evita contactos.",
+   "El cobre aísla y el plástico enciende la radio.",
+   "El cobre conduce y el plástico aísla y protege."
+  ],
+  "correct": "El cobre conduce y el plástico aísla y protege.",
+  "hint": "El cobre lleva la corriente por el cable; el plástico impide que salga y protege al usuario.",
+  "clue": "Relaciona el material del interior con el que queda en contacto con tu mano.",
+  "option_notes": {
+   "El plástico conduce y el cobre evita contactos.": "Invertir la función del metal interior y de la cubierta.",
+   "Ambos materiales producen la corriente.": "Confundir los materiales del cable con la fuente de energía.",
+   "El cobre aísla y el plástico enciende la radio.": "Intercambiar las funciones de conductor y aislador."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "medium",
+  "text": "En el mismo circuito, la ampolleta no enciende con goma, pero sí con aluminio. ¿Qué conclusión corresponde?",
+  "options": [
+   "La goma es aisladora y el aluminio conductor.",
+   "Ambos materiales son aisladores.",
+   "Ambos materiales son conductores.",
+   "La goma es conductora y el aluminio aislador."
+  ],
+  "correct": "La goma es aisladora y el aluminio conductor.",
+  "hint": "La luz indica que el material permitió el paso de corriente; la falta de luz indica que lo bloqueó.",
+  "clue": "Compara lo que ocurrió con cada material en el mismo circuito.",
+  "option_notes": {
+   "La goma es conductora y el aluminio aislador.": "Invertir la interpretación de los dos resultados observados.",
+   "Ambos materiales son conductores.": "Ignorar que la ampolleta no encendió con goma.",
+   "Ambos materiales son aisladores.": "Ignorar que la ampolleta sí encendió con aluminio."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "medium",
+  "text": "Ves una cubierta plástica rota y el cobre expuesto en el cable de un cargador. ¿Qué debes hacer?",
+  "options": [
+   "No usarlo y pedir a un adulto que lo reemplace.",
+   "Tocar el cobre para comprobar si funciona.",
+   "Envolverlo con papel y seguir usándolo.",
+   "Mojarlo para que deje pasar corriente."
+  ],
+  "correct": "No usarlo y pedir a un adulto que lo reemplace.",
+  "hint": "El cobre expuesto puede conducir corriente y causar una descarga; un adulto debe cambiar el cable.",
+  "clue": "Primero evita el contacto con la parte metálica expuesta.",
+  "option_notes": {
+   "Envolverlo con papel y seguir usándolo.": "Creer que cualquier cubierta reemplaza una aislación adecuada.",
+   "Tocar el cobre para comprobar si funciona.": "Usar el cuerpo como detector de electricidad, lo que es peligroso.",
+   "Mojarlo para que deje pasar corriente.": "Pensar que el agua vuelve segura o necesaria la conexión."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "hard",
+  "text": "En un circuito con pila, una ampolleta no enciende. La pila funciona y los cables son de cobre, pero entre un cable y la ampolleta hay plástico. ¿Qué explica mejor el problema?",
+  "options": [
+   "El cobre bloquea la corriente; hay que cubrirlo con plástico.",
+   "El plástico aumenta la corriente; hay que añadir goma.",
+   "La ampolleta necesita aluminio para funcionar siempre.",
+   "El plástico corta el circuito; reemplázalo por cobre o aluminio."
+  ],
+  "correct": "El plástico corta el circuito; reemplázalo por cobre o aluminio.",
+  "hint": "La corriente necesita un camino continuo; el plástico no deja pasar corriente y corta el circuito.",
+  "clue": "Sigue el recorrido de la corriente y busca dónde se interrumpe.",
+  "option_notes": {
+   "El plástico aumenta la corriente; hay que añadir goma.": "Creer que un aislador aumenta la corriente y que la goma la completa.",
+   "El cobre bloquea la corriente; hay que cubrirlo con plástico.": "Invertir las funciones del cobre y del plástico.",
+   "La ampolleta necesita aluminio para funcionar siempre.": "Pensar que solo un material conductor específico puede cerrar el circuito."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "hard",
+  "text": "Camila probó cuatro materiales en el mismo circuito. Con cobre y aluminio la ampolleta encendió; con plástico y goma no. ¿Qué conclusión está mejor respaldada?",
+  "options": [
+   "La ampolleta se enciende solo con materiales duros.",
+   "Los cuatro materiales producen corriente en cantidades distintas.",
+   "Cobre y aluminio son conductores; plástico y goma son aisladores.",
+   "Cobre y aluminio son aisladores; plástico y goma son conductores."
+  ],
+  "correct": "Cobre y aluminio son conductores; plástico y goma son aisladores.",
+  "hint": "La misma prueba mostró paso de corriente con dos materiales y bloqueo con los otros dos.",
+  "clue": "Compara los cuatro resultados antes de generalizar.",
+  "option_notes": {
+   "Cobre y aluminio son aisladores; plástico y goma son conductores.": "Invertir las categorías de conductor y aislador.",
+   "Los cuatro materiales producen corriente en cantidades distintas.": "Confundir la corriente con una sustancia producida por los materiales.",
+   "La ampolleta se enciende solo con materiales duros.": "Usar la dureza como criterio en vez del resultado experimental."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "hard",
+  "text": "Un compañero propone probar si una moneda conduce introduciéndola en un enchufe de la casa. ¿Cuál respuesta es correcta?",
+  "options": [
+   "Hacerlo rápido, porque la moneda es pequeña y metálica.",
+   "Usar un destornillador metálico para empujarla.",
+   "No hacerlo: usa una pila, cables y ampolleta, con supervisión.",
+   "Probarlo con manos mojadas para mejorar el contacto."
+  ],
+  "correct": "No hacerlo: usa una pila, cables y ampolleta, con supervisión.",
+  "hint": "Un enchufe domiciliario puede causar una descarga; la pila permite investigar con mucha menor tensión.",
+  "clue": "Investigar no requiere tocar una instalación de la casa.",
+  "option_notes": {
+   "Hacerlo rápido, porque la moneda es pequeña y metálica.": "Pensar que la rapidez elimina el peligro del voltaje domiciliario.",
+   "Probarlo con manos mojadas para mejorar el contacto.": "Creer que el agua mejora el contacto sin considerar la descarga.",
+   "Usar un destornillador metálico para empujarla.": "Suponer que otra pieza metálica vuelve segura la prueba."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA10",
+  "difficulty": "hard",
+  "text": "Para comparar cobre, aluminio, plástico y goma, una estudiante cambia el material en cada prueba, pero también cambia la pila. Los resultados varían. ¿Qué debe hacer para comparar bien?",
+  "options": [
+   "Usar una pila distinta con cada material para equilibrar.",
+   "Mantener pila, ampolleta y cables; cambiar solo el material.",
+   "Elegir como conductor el material de color más brillante.",
+   "Probar los materiales directamente en un enchufe domiciliario."
+  ],
+  "correct": "Mantener pila, ampolleta y cables; cambiar solo el material.",
+  "hint": "Una comparación justa mantiene iguales las demás condiciones y cambia únicamente el material.",
+  "clue": "Para comparar, observa qué condiciones deben permanecer iguales.",
+  "option_notes": {
+   "Usar una pila distinta con cada material para equilibrar.": "Cambiar otra variable impide saber qué causó cada resultado.",
+   "Probar los materiales directamente en un enchufe domiciliario.": "Reemplazar una prueba escolar segura por una instalación peligrosa.",
+   "Elegir como conductor el material de color más brillante.": "Usar la apariencia como evidencia en lugar del experimento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "easy",
+  "text": "En la casa de Javiera, ¿qué situación muestra una importancia de la electricidad en la vida cotidiana?",
+  "options": [
+   "La escoba manual junta el polvo del piso.",
+   "El refrigerador mantiene fríos los alimentos.",
+   "La mesa sostiene los platos durante la comida.",
+   "La ventana deja entrar la luz natural del Sol."
+  ],
+  "correct": "El refrigerador mantiene fríos los alimentos.",
+  "hint": "El refrigerador usa electricidad para funcionar y conservar alimentos por más tiempo.",
+  "clue": "Piensa en cuál objeto necesita electricidad para cumplir su función.",
+  "option_notes": {
+   "La mesa sostiene los platos durante la comida.": "Confunde un objeto útil con un aparato que usa electricidad.",
+   "La ventana deja entrar la luz natural del Sol.": "Confunde la luz natural del Sol con energía eléctrica.",
+   "La escoba manual junta el polvo del piso.": "Confunde una herramienta manual con un aparato eléctrico."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "easy",
+  "text": "Antes de salir de una sala que quedará vacía, ¿qué acción demuestra un uso responsable de la electricidad?",
+  "options": [
+   "Encender otro ventilador para gastar la electricidad restante.",
+   "Dejar las luces encendidas para que la sala no quede oscura.",
+   "Abrir el refrigerador para enfriar la sala vacía.",
+   "Apagar las luces y el proyector que no se usarán."
+  ],
+  "correct": "Apagar las luces y el proyector que no se usarán.",
+  "hint": "Si nadie está en la sala, apagar equipos evita gastar electricidad sin necesidad.",
+  "clue": "Pregunta qué aparatos seguirían funcionando sin que alguien los necesite.",
+  "option_notes": {
+   "Dejar las luces encendidas para que la sala no quede oscura.": "Cree que iluminar una sala vacía es necesario.",
+   "Encender otro ventilador para gastar la electricidad restante.": "Piensa que la electricidad debe gastarse aunque no sea necesaria.",
+   "Abrir el refrigerador para enfriar la sala vacía.": "Cree que el refrigerador puede enfriar una sala."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "easy",
+  "text": "¿Cuál de estos objetos transforma energía eléctrica en movimiento cuando está funcionando?",
+  "options": [
+   "Una licuadora encendida mueve sus cuchillas.",
+   "Una pelota permanece quieta en el suelo.",
+   "Un molino se mueve gracias al viento.",
+   "Una vela apagada permanece sobre la mesa."
+  ],
+  "correct": "Una licuadora encendida mueve sus cuchillas.",
+  "hint": "El motor de la licuadora usa electricidad para hacer girar sus cuchillas.",
+  "clue": "Busca el objeto que tiene un motor y se mueve al conectarse.",
+  "option_notes": {
+   "Un molino se mueve gracias al viento.": "Atribuye a la electricidad un movimiento producido por el viento.",
+   "Una pelota permanece quieta en el suelo.": "Elige un objeto sin movimiento ni motor eléctrico.",
+   "Una vela apagada permanece sobre la mesa.": "Confunde una fuente de luz apagada con un aparato eléctrico."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "verificador: Fuera del OA11: evalúa la transformación de energía eléctrica en movimiento, no la importancia cotidiana ni el ahorro o uso responsable."
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "easy",
+  "text": "¿Cuál es una razón importante para ahorrar electricidad cuando un aparato no se está usando?",
+  "options": [
+   "Ahorrar electricidad hace que el Sol brille más fuerte.",
+   "La electricidad guardada se vence dentro de los enchufes.",
+   "Se evita un consumo innecesario y se cuidan los recursos.",
+   "Los aparatos funcionan mejor si nunca se apagan durante el día."
+  ],
+  "correct": "Se evita un consumo innecesario y se cuidan los recursos.",
+  "hint": "Ahorrar evita usar energía sin propósito y ayuda a cuidar los recursos necesarios para producirla.",
+  "clue": "Piensa qué ocurre cuando un aparato funciona sin cumplir una tarea.",
+  "option_notes": {
+   "La electricidad guardada se vence dentro de los enchufes.": "Cree que la electricidad puede vencerse como un alimento.",
+   "Los aparatos funcionan mejor si nunca se apagan durante el día.": "Cree que mantenerlos encendidos siempre mejora su funcionamiento.",
+   "Ahorrar electricidad hace que el Sol brille más fuerte.": "Confunde el ahorro de energía con el brillo del Sol."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "medium",
+  "text": "Martina estudia de día junto a una ventana. ¿Qué decisión ahorra electricidad sin impedirle leer?",
+  "options": [
+   "Encender el televisor para iluminar el cuaderno.",
+   "Cerrar la cortina y encender dos lámparas.",
+   "Dejar la lámpara encendida aunque salgas de la habitación.",
+   "Aprovechar la luz natural y apagar la lámpara."
+  ],
+  "correct": "Aprovechar la luz natural y apagar la lámpara.",
+  "hint": "La luz del Sol permite leer y, si basta, no hace falta encender una lámpara.",
+  "clue": "Compara qué opción entrega luz sin hacer funcionar un aparato.",
+  "option_notes": {
+   "Cerrar la cortina y encender dos lámparas.": "Cree que bloquear la luz natural y encender más lámparas ahorra.",
+   "Dejar la lámpara encendida aunque salgas de la habitación.": "No considera que una lámpara encendida sin uso consume electricidad.",
+   "Encender el televisor para iluminar el cuaderno.": "Propone usar un aparato innecesario para obtener luz."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "medium",
+  "text": "Dos ampolletas iluminan igual: una LED de 10 W y otra incandescente de 60 W. Si se usan durante igual tiempo, ¿cuál decisión ahorra más?",
+  "options": [
+   "Usar la ampolleta incandescente de 60 W durante ese tiempo.",
+   "Usar la ampolleta LED de 10 W durante ese tiempo.",
+   "Dejar una encendida todo el día para ahorrar.",
+   "Encender las dos para repartir el consumo."
+  ],
+  "correct": "Usar la ampolleta LED de 10 W durante ese tiempo.",
+  "hint": "Con igual tiempo de uso, la ampolleta de menor potencia consume menos energía.",
+  "clue": "Compara los watts cuando ambas entregan la misma luz y duran igual encendidas.",
+  "option_notes": {
+   "Usar la ampolleta incandescente de 60 W durante ese tiempo.": "Cree que una mayor potencia ahorra más.",
+   "Encender las dos para repartir el consumo.": "Piensa que repartir el consumo entre dos ampolletas reduce el gasto.",
+   "Dejar una encendida todo el día para ahorrar.": "Confunde ahorrar con mantener la ampolleta encendida más tiempo."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "medium",
+  "text": "La tableta de Benjamín terminó de cargarse, pero su cargador sigue conectado. ¿Qué debería hacer para ahorrar y usarlo responsablemente?",
+  "options": [
+   "Poner el cargador bajo una almohada para que no se vea.",
+   "Dejar la tableta conectada toda la noche, aunque esté llena.",
+   "Desconectar el cargador y guardarlo con cuidado.",
+   "Dejarlo conectado, porque ya no consume electricidad."
+  ],
+  "correct": "Desconectar el cargador y guardarlo con cuidado.",
+  "hint": "Desconectarlo evita un consumo innecesario y reduce riesgos al guardarlo.",
+  "clue": "Piensa qué aparato queda conectado aunque ya terminó su tarea.",
+  "option_notes": {
+   "Dejarlo conectado, porque ya no consume electricidad.": "Cree que un cargador conectado no consume nada.",
+   "Dejar la tableta conectada toda la noche, aunque esté llena.": "Cree que seguir cargando una batería llena es necesario.",
+   "Poner el cargador bajo una almohada para que no se vea.": "Ignora que cubrir un cargador puede calentarlo y ser peligroso."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "medium",
+  "text": "En una tarde, la familia de Tomás hará una videollamada y cocinará. ¿Qué plan usa la electricidad de manera responsable?",
+  "options": [
+   "Usar solo la luz necesaria y apagar equipos al terminar.",
+   "Encender todas las luces y dejar el televisor prendido.",
+   "Abrir muchas veces el refrigerador mientras cocinan.",
+   "Dejar los cargadores conectados para tenerlos listos."
+  ],
+  "correct": "Usar solo la luz necesaria y apagar equipos al terminar.",
+  "hint": "El plan mantiene las actividades necesarias y evita luces o equipos funcionando sin uso.",
+  "clue": "Busca el plan que distingue lo necesario de lo que queda encendido sin razón.",
+  "option_notes": {
+   "Encender todas las luces y dejar el televisor prendido.": "Mantiene luces y un aparato encendidos aunque no sean necesarios.",
+   "Abrir muchas veces el refrigerador mientras cocinan.": "Pierde frío cada vez que abre el refrigerador y aumenta su trabajo.",
+   "Dejar los cargadores conectados para tenerlos listos.": "Deja cargadores conectados aunque no estén cumpliendo una tarea."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "hard",
+  "text": "En una caleta de Chiloé, un corte detiene el refrigerador y las luces. Cuando vuelve la luz, la familia apaga lo que no necesita. ¿Qué idea explica mejor ambas decisiones?",
+  "options": [
+   "La electricidad es útil a diario, pero no debe gastarse sin necesidad.",
+   "La electricidad solo importa cuando se cocina en la casa.",
+   "Todo aparato debe quedar encendido para aprovechar la electricidad.",
+   "Apagar las luces impide que el refrigerador conserve alimentos."
+  ],
+  "correct": "La electricidad es útil a diario, pero no debe gastarse sin necesidad.",
+  "hint": "La electricidad cumple funciones diarias, pero ahorrar evita usarla cuando no hace falta.",
+  "clue": "Relaciona lo que dejó de funcionar con su utilidad y con la decisión de apagar.",
+  "option_notes": {
+   "La electricidad solo importa cuando se cocina en la casa.": "Reduce la importancia de la electricidad a una sola actividad.",
+   "Todo aparato debe quedar encendido para aprovechar la electricidad.": "Cree que todos los aparatos deben funcionar continuamente.",
+   "Apagar las luces impide que el refrigerador conserve alimentos.": "Confunde la función de las luces con la del refrigerador."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "verificador: Enunciado ambiguo: habla de «ambas decisiones», pero el corte de luz no es una decisión de la familia; solo apagar lo innecesario sí lo es."
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "hard",
+  "text": "La escuela quiere bajar su consumo sin dejar de usar computadores para una clase. ¿Qué propuesta cumple mejor ese objetivo?",
+  "options": [
+   "Mantener todos los equipos encendidos durante el recreo.",
+   "Usar los computadores en la clase y apagar luces y equipos sin uso.",
+   "Usar computadores y encender más luces aunque haya sol.",
+   "Apagar los computadores, pero dejar encendidos los monitores."
+  ],
+  "correct": "Usar los computadores en la clase y apagar luces y equipos sin uso.",
+  "hint": "Se mantienen los equipos necesarios y se apagan los que no cumplen una función.",
+  "clue": "Busca una propuesta que conserve la actividad y quite solo el consumo innecesario.",
+  "option_notes": {
+   "Apagar los computadores, pero dejar encendidos los monitores.": "Apaga una parte, pero deja otro equipo consumiendo sin necesidad.",
+   "Mantener todos los equipos encendidos durante el recreo.": "Mantiene equipos funcionando cuando nadie los usa.",
+   "Usar computadores y encender más luces aunque haya sol.": "Agrega consumo de iluminación aunque ya hay luz natural."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "hard",
+  "text": "El refrigerador debe seguir encendido para conservar alimentos; el televisor y las luces están sin personas. Completa: para ahorrar sin perder esa función, la familia debe...",
+  "options": [
+   "Apagar el refrigerador y mantener todo lo demás encendido.",
+   "Encender más luces para que el refrigerador trabaje menos.",
+   "Mantener el refrigerador y apagar el televisor y las luces.",
+   "Desconectar el refrigerador cada hora y no cambiar nada más."
+  ],
+  "correct": "Mantener el refrigerador y apagar el televisor y las luces.",
+  "hint": "Se conserva el aparato que cumple una función necesaria y se apagan los que nadie está usando.",
+  "clue": "Identifica qué aparato cumple una función necesaria y cuáles están sin uso.",
+  "option_notes": {
+   "Apagar el refrigerador y mantener todo lo demás encendido.": "Apaga el aparato necesario y conserva consumos que no ayudan.",
+   "Desconectar el refrigerador cada hora y no cambiar nada más.": "Arriesga la conservación de alimentos y no elimina otros consumos.",
+   "Encender más luces para que el refrigerador trabaje menos.": "Cree que más iluminación puede reducir el trabajo del refrigerador."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA11",
+  "difficulty": "hard",
+  "text": "Camila tiene dos cargas normales de ropa. La lavadora puede lavarlas juntas sin superar su capacidad. ¿Qué opción ahorra electricidad?",
+  "options": [
+   "Lavar cada carga varias veces para que quede más limpia.",
+   "Dejar la lavadora encendida entre ambos ciclos.",
+   "Hacer dos ciclos pequeños, aunque caben en uno.",
+   "Lavar las dos cargas juntas en un solo ciclo."
+  ],
+  "correct": "Lavar las dos cargas juntas en un solo ciclo.",
+  "hint": "Un solo ciclo evita hacer funcionar la lavadora dos veces, si la carga cabe de forma segura.",
+  "clue": "Compara cuántas veces funciona la lavadora en cada opción.",
+  "option_notes": {
+   "Lavar cada carga varias veces para que quede más limpia.": "Aumenta los ciclos sin una necesidad indicada.",
+   "Hacer dos ciclos pequeños, aunque caben en uno.": "Usa dos ciclos cuando la ropa podría lavarse en uno.",
+   "Dejar la lavadora encendida entre ambos ciclos.": "Mantiene un aparato funcionando durante un tiempo innecesario."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "easy",
+  "text": "Al comparar toda el agua de la Tierra, ¿dónde se encuentra la mayor parte?",
+  "options": [
+   "En los océanos del planeta",
+   "En los glaciares y hielos",
+   "En las nubes y el vapor",
+   "En los ríos y lagos"
+  ],
+  "correct": "En los océanos del planeta",
+  "hint": "Los océanos contienen casi toda el agua terrestre y esa agua es principalmente salada.",
+  "clue": "Piensa en el lugar que cubre la mayor superficie del planeta.",
+  "option_notes": {
+   "En los glaciares y hielos": "Confunde una gran reserva de agua dulce con la mayor reserva total.",
+   "En los ríos y lagos": "Confunde el agua visible y cercana con la mayor reserva del planeta.",
+   "En las nubes y el vapor": "Sobreestima la pequeña cantidad de agua presente en la atmósfera."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "easy",
+  "text": "En la cordillera de los Andes hay hielo que guarda agua durante muchos años. ¿Qué reserva representa?",
+  "options": [
+   "Una nube de tormenta",
+   "Un glaciar de montaña",
+   "Un río de deshielo",
+   "Un lago cordillerano"
+  ],
+  "correct": "Un glaciar de montaña",
+  "hint": "Un glaciar es una gran masa de hielo que almacena agua dulce por largo tiempo.",
+  "clue": "Busca la opción que nombra hielo acumulado y permanente.",
+  "option_notes": {
+   "Un río de deshielo": "Confunde el agua que corre al derretirse con el hielo que la almacena.",
+   "Un lago cordillerano": "Confunde una masa de agua líquida con una masa de hielo.",
+   "Una nube de tormenta": "Confunde gotas o cristales suspendidos en el aire con hielo terrestre."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "easy",
+  "text": "El agua que ocupa espacios entre el suelo y las rocas, bajo la superficie, se llama:",
+  "options": [
+   "Agua subterránea",
+   "Agua oceánica",
+   "Agua de los glaciares",
+   "Agua de las nubes"
+  ],
+  "correct": "Agua subterránea",
+  "hint": "Se llama agua subterránea porque se encuentra bajo el suelo, entre materiales y rocas.",
+  "clue": "Observa dónde está el agua: no está sobre el suelo ni en la atmósfera.",
+  "option_notes": {
+   "Agua oceánica": "Confunde el lugar salado más grande del planeta con el subsuelo.",
+   "Agua de las nubes": "Confunde agua suspendida en la atmósfera con agua bajo tierra.",
+   "Agua de los glaciares": "Confunde agua congelada en la superficie con agua entre rocas."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "easy",
+  "text": "¿Qué nombre recibe el agua que está en la atmósfera en forma de gas?",
+  "options": [
+   "Agua líquida de un lago",
+   "Vapor de agua en el aire",
+   "Hielo acumulado en un glaciar",
+   "Agua salada del océano"
+  ],
+  "correct": "Vapor de agua en el aire",
+  "hint": "Cuando el agua está en estado gaseoso y mezclada con el aire, se llama vapor de agua.",
+  "clue": "Fíjate en el estado del agua y en el lugar donde se encuentra.",
+  "option_notes": {
+   "Agua líquida de un lago": "Confunde agua líquida almacenada en la superficie con un gas.",
+   "Hielo acumulado en un glaciar": "Confunde agua congelada con agua en estado gaseoso.",
+   "Agua salada del océano": "Confunde una característica del océano con el estado gaseoso."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "medium",
+  "text": "En Puerto Varas, Martina compara agua del mar con agua del lago Llanquihue. ¿Qué comparación es correcta?",
+  "options": [
+   "Ambos tienen agua dulce porque el agua no cambia",
+   "El mar tiene agua dulce y el lago, agua salada",
+   "Ambos tienen agua salada porque están al aire libre",
+   "El mar tiene agua salada y el lago, agua dulce"
+  ],
+  "correct": "El mar tiene agua salada y el lago, agua dulce",
+  "hint": "El agua marina es salada; el lago Llanquihue contiene agua dulce.",
+  "clue": "Compara el origen de cada muestra: una proviene del mar y otra de un lago.",
+  "option_notes": {
+   "El mar tiene agua dulce y el lago, agua salada": "Invierte las características habituales del mar y del lago.",
+   "Ambos tienen agua salada porque están al aire libre": "Cree que estar al aire libre determina si el agua es salada.",
+   "Ambos tienen agua dulce porque el agua no cambia": "Piensa que el agua mantiene siempre la misma cantidad de sales."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "medium",
+  "text": "Una nube sobre el valle se calienta y parte de sus gotitas pasa al aire. ¿Qué ocurre con esa agua?",
+  "options": [
+   "Desaparece y deja de ser agua",
+   "Se convierte en agua subterránea",
+   "Se transforma de inmediato en hielo",
+   "Se transforma en vapor de agua"
+  ],
+  "correct": "Se transforma en vapor de agua",
+  "hint": "Al recibir calor, el agua líquida puede evaporarse y pasar al estado gaseoso.",
+  "clue": "Relaciona el calor con el cambio desde gotitas líquidas hacia el aire.",
+  "option_notes": {
+   "Se convierte en agua subterránea": "Confunde evaporación con infiltración del agua hacia el subsuelo.",
+   "Se transforma de inmediato en hielo": "Asocia el calentamiento con congelación, que ocurre al enfriarse.",
+   "Desaparece y deja de ser agua": "Cree que un cambio de estado destruye el agua."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "verificador: fuera del OA: evalúa cambio de estado (gotas a vapor), no distribución ni comparación de volúmenes"
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "medium",
+  "text": "En un modelo hay 100 L de agua: 97 L representan océanos y 3 L representan agua dulce. ¿Qué muestra mejor el modelo?",
+  "options": [
+   "Los océanos contienen solo una parte pequeña",
+   "El agua dulce corresponde a una parte pequeña",
+   "Los ríos y lagos guardan casi toda el agua",
+   "El agua dulce supera a toda el agua salada"
+  ],
+  "correct": "El agua dulce corresponde a una parte pequeña",
+  "hint": "De cada 100 L, solo 3 L serían agua dulce; por eso su volumen es mucho menor.",
+  "clue": "Compara directamente las cantidades 97 y 3 antes de elegir.",
+  "option_notes": {
+   "El agua dulce supera a toda el agua salada": "Lee al revés las cantidades del modelo.",
+   "Los océanos contienen solo una parte pequeña": "Confunde los 3 L de agua dulce con el volumen de los océanos.",
+   "Los ríos y lagos guardan casi toda el agua": "Confunde una reserva pequeña y visible con casi toda el agua."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "medium",
+  "text": "En el norte de Chile, un pozo entrega agua que estaba entre rocas del subsuelo. ¿Qué relación describe mejor el caso?",
+  "options": [
+   "El pozo aprovecha aguas subterráneas",
+   "El pozo crea agua dentro de las rocas",
+   "El pozo extrae hielo desde una nube",
+   "El pozo convierte agua salada en vapor"
+  ],
+  "correct": "El pozo aprovecha aguas subterráneas",
+  "hint": "El agua almacenada bajo la superficie, entre suelo y rocas, es agua subterránea.",
+  "clue": "La pista está en la ubicación original del agua: bajo la superficie.",
+  "option_notes": {
+   "El pozo convierte agua salada en vapor": "Confunde sacar agua del suelo con cambiar agua salada a gas.",
+   "El pozo crea agua dentro de las rocas": "Piensa que el agua aparece por acción del pozo.",
+   "El pozo extrae hielo desde una nube": "Confunde una nube con el agua almacenada bajo tierra."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "hard",
+  "text": "Ordena de mayor a menor cantidad de agua almacenada: océanos, glaciares, aguas subterráneas y ríos. ¿Cuál orden es correcto?",
+  "options": [
+   "Glaciares, océanos, ríos, aguas subterráneas",
+   "Ríos, aguas subterráneas, glaciares, océanos",
+   "Océanos, glaciares, aguas subterráneas, ríos",
+   "Aguas subterráneas, ríos, océanos, glaciares"
+  ],
+  "correct": "Océanos, glaciares, aguas subterráneas, ríos",
+  "hint": "Los océanos reúnen casi toda el agua; luego vienen glaciares, aguas subterráneas y, muy abajo, ríos.",
+  "clue": "Compara primero el agua total y después las reservas de agua dulce.",
+  "option_notes": {
+   "Glaciares, océanos, ríos, aguas subterráneas": "Pone los glaciares antes que los océanos y baja demasiado a los ríos.",
+   "Ríos, aguas subterráneas, glaciares, océanos": "Coloca la reserva más pequeña al inicio y la mayor al final.",
+   "Aguas subterráneas, ríos, océanos, glaciares": "Intercambia el orden de varias reservas y deja los ríos demasiado arriba."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "hard",
+  "text": "En una localidad, un glaciar contiene mucha agua, pero está lejos y congelado; un río cercano tiene poca. ¿Por qué no basta el glaciar para resolver la falta de agua?",
+  "options": [
+   "Porque toda el agua de un glaciar es salada y no se puede usar",
+   "Porque los ríos contienen más agua que los glaciares",
+   "Porque el agua dulce solo existe dentro de las nubes",
+   "Porque mucha agua dulce está congelada o es difícil de extraer"
+  ],
+  "correct": "Porque mucha agua dulce está congelada o es difícil de extraer",
+  "hint": "El agua dulce puede existir en gran volumen, pero no estar disponible de inmediato.",
+  "clue": "Distingue entre la cantidad de agua y la facilidad para acceder a ella.",
+  "option_notes": {
+   "Porque toda el agua de un glaciar es salada y no se puede usar": "Confunde agua congelada de un glaciar con agua salada del océano.",
+   "Porque los ríos contienen más agua que los glaciares": "Confunde la cercanía del río con una mayor cantidad total.",
+   "Porque el agua dulce solo existe dentro de las nubes": "Reduce el agua dulce de la Tierra a la que está en la atmósfera."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "hard",
+  "text": "En una maqueta de 1.000 L, 970 L son agua salada y 30 L, agua dulce. De esos 30 L, 29 L están en glaciares y aguas subterráneas; 1 L está en ríos, lagos, nubes y vapor. ¿Qué se infiere?",
+  "options": [
+   "La parte de agua dulce supera a toda el agua salada",
+   "Los océanos tienen menos agua que los glaciares y lagos",
+   "La mayor parte del agua dulce está en glaciares y aguas subterráneas",
+   "Las nubes y el vapor guardan casi toda el agua dulce"
+  ],
+  "correct": "La mayor parte del agua dulce está en glaciares y aguas subterráneas",
+  "hint": "El modelo concentra 29 de los 30 L de agua dulce en glaciares y aguas subterráneas.",
+  "clue": "Mira qué grupo reúne 29 L y compáralo con el 1 L restante.",
+  "option_notes": {
+   "La parte de agua dulce supera a toda el agua salada": "Confunde 30 L de agua dulce con una cantidad mayor que 970 L.",
+   "Los océanos tienen menos agua que los glaciares y lagos": "Invierte la comparación entre océanos y reservas de agua dulce.",
+   "Las nubes y el vapor guardan casi toda el agua dulce": "Confunde una pequeña parte atmosférica con la mayoría del agua dulce."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA12",
+  "difficulty": "hard",
+  "text": "Durante una sequía en la zona central, baja el caudal de un río, aunque existen glaciares y agua bajo el suelo. ¿Qué inferencia explica mejor el problema?",
+  "options": [
+   "Los ríos contienen más agua que todas las demás reservas",
+   "Los glaciares convierten toda el agua cercana en agua salada",
+   "El agua dulce está repartida en reservas distintas y no toda es accesible",
+   "El agua subterránea siempre se encuentra sobre la superficie"
+  ],
+  "correct": "El agua dulce está repartida en reservas distintas y no toda es accesible",
+  "hint": "Que existan reservas no significa que toda el agua esté cerca, líquida o disponible para ese río.",
+  "clue": "Relaciona la sequía con la distribución y el acceso, no solo con la existencia del agua.",
+  "option_notes": {
+   "Los glaciares convierten toda el agua cercana en agua salada": "Confunde hielo con sal y supone un cambio que no ocurre.",
+   "El agua subterránea siempre se encuentra sobre la superficie": "Invierte el significado de subterránea: bajo tierra.",
+   "Los ríos contienen más agua que todas las demás reservas": "Confunde un cauce visible y pequeño con la mayor reserva total."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "alternativa larga"
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "easy",
+  "text": "Si bajas desde la superficie del océano hasta una zona más profunda, ¿qué cambio de temperatura es más probable?",
+  "options": [
+   "La temperatura cambia solo por el viento.",
+   "El agua se vuelve más fría.",
+   "El agua se vuelve más caliente.",
+   "La temperatura queda exactamente igual."
+  ],
+  "correct": "El agua se vuelve más fría.",
+  "hint": "Al bajar, llega menos energía del Sol y, en general, el agua está más fría.",
+  "clue": "Piensa en cómo llega el calor del Sol a las distintas profundidades.",
+  "option_notes": {
+   "El agua se vuelve más caliente.": "Confunde el descenso con acercarse a una fuente de calor.",
+   "La temperatura cambia solo por el viento.": "Atribuye toda la temperatura profunda al viento.",
+   "La temperatura queda exactamente igual.": "Supone que el agua tiene igual temperatura en toda su profundidad."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "easy",
+  "text": "Una planta acuática necesita luz. ¿Dónde es más probable encontrarla en un lago?",
+  "options": [
+   "En el fondo más profundo.",
+   "Solo en una zona sin luz.",
+   "A cualquier profundidad por igual.",
+   "Cerca de la superficie."
+  ],
+  "correct": "Cerca de la superficie.",
+  "hint": "La luz disminuye mientras atraviesa más agua.",
+  "clue": "Compara cuánta agua debe atravesar la luz para llegar a cada zona.",
+  "option_notes": {
+   "En el fondo más profundo.": "Confunde la zona más profunda con la que recibe más luz.",
+   "A cualquier profundidad por igual.": "Cree que la luz llega igual a todas las profundidades.",
+   "Solo en una zona sin luz.": "Supone que las plantas necesitan oscuridad para vivir."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "easy",
+  "text": "Un buzo baja desde 2 m hasta 20 m en el mar. ¿Qué ocurre con la presión del agua?",
+  "options": [
+   "Se mantiene igual.",
+   "Se hace menor.",
+   "Se hace mayor.",
+   "Depende solo del viento."
+  ],
+  "correct": "Se hace mayor.",
+  "hint": "A mayor profundidad, hay una columna de agua más grande sobre el buzo.",
+  "clue": "Considera cuánto peso de agua queda sobre el buzo.",
+  "option_notes": {
+   "Se hace menor.": "Invierte la relación entre profundidad y presión.",
+   "Depende solo del viento.": "Cree que el viento controla la presión a cualquier profundidad.",
+   "Se mantiene igual.": "Supone que el peso del agua no cambia al bajar."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "easy",
+  "text": "¿Cuál situación describe una ola en el mar de Valparaíso?",
+  "options": [
+   "El mar se calienta y cambia la pesca.",
+   "El nivel del mar sube y baja por la Luna.",
+   "La superficie forma ondulaciones por el viento.",
+   "Una corriente fría lleva nutrientes hacia el norte."
+  ],
+  "correct": "La superficie forma ondulaciones por el viento.",
+  "hint": "Las olas son ondulaciones de la superficie producidas principalmente por el viento.",
+  "clue": "Busca el caso en que se forman ondulaciones en la superficie.",
+  "option_notes": {
+   "El nivel del mar sube y baja por la Luna.": "Confunde las mareas con las ondulaciones producidas por el viento.",
+   "Una corriente fría lleva nutrientes hacia el norte.": "Confunde una corriente marina con un movimiento superficial por viento.",
+   "El mar se calienta y cambia la pesca.": "Confunde El Niño con una ola local."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "medium",
+  "text": "En un lago, la superficie está calentada por el Sol. Martina compara agua a 1 m y 15 m. ¿Qué espera al bajar?",
+  "options": [
+   "Más luz, mayor temperatura y menor presión.",
+   "Más luz, menor temperatura y mayor presión.",
+   "Menos luz, menor temperatura y mayor presión.",
+   "Menos luz, mayor temperatura y menor presión."
+  ],
+  "correct": "Menos luz, menor temperatura y mayor presión.",
+  "hint": "Al bajar, la luz y el calor suelen disminuir; la presión aumenta por el peso del agua.",
+  "clue": "Relaciona la profundidad con la luz, el calor y el peso del agua.",
+  "option_notes": {
+   "Más luz, mayor temperatura y menor presión.": "Invierte las tres relaciones entre profundidad y propiedades del agua.",
+   "Menos luz, mayor temperatura y menor presión.": "Reconoce menos luz, pero invierte temperatura y presión.",
+   "Más luz, menor temperatura y mayor presión.": "Reconoce presión mayor, pero invierte luz y temperatura."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "medium",
+  "text": "En una zona iluminada de un lago crecen plantas y viven insectos; en el fondo oscuro casi no hay plantas. ¿Qué explica mejor la diferencia?",
+  "options": [
+   "La presión profunda hace crecer más plantas.",
+   "La oscuridad aumenta la energía solar del agua.",
+   "Las olas llevan todas las plantas hacia el fondo.",
+   "La luz permite la fotosíntesis y aporta alimento a otros seres."
+  ],
+  "correct": "La luz permite la fotosíntesis y aporta alimento a otros seres.",
+  "hint": "Las plantas necesitan luz para fabricar alimento; ellas sostienen muchas cadenas alimentarias.",
+  "clue": "Piensa qué necesitan las plantas para fabricar su alimento.",
+  "option_notes": {
+   "La presión profunda hace crecer más plantas.": "Confunde la presión con una causa directa del crecimiento de plantas.",
+   "La oscuridad aumenta la energía solar del agua.": "Cree que la oscuridad aumenta la energía disponible para las plantas.",
+   "Las olas llevan todas las plantas hacia el fondo.": "Cree que las olas determinan por completo dónde viven las plantas."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "medium",
+  "text": "En una caleta, el nivel del mar sube y baja periódicamente, aunque casi no haya viento. ¿Qué movimiento observas?",
+  "options": [
+   "Una marea.",
+   "Una ola.",
+   "La corriente de Humboldt.",
+   "El fenómeno El Niño."
+  ],
+  "correct": "Una marea.",
+  "hint": "Las mareas son cambios periódicos del nivel del mar, causados sobre todo por la gravedad de la Luna y el Sol.",
+  "clue": "Fíjate en el cambio del nivel del mar y en que se repite con regularidad.",
+  "option_notes": {
+   "Una ola.": "Confunde un cambio del nivel del mar con ondulaciones causadas por el viento.",
+   "La corriente de Humboldt.": "Confunde agua fría en movimiento con una variación periódica del nivel.",
+   "El fenómeno El Niño.": "Confunde un fenómeno oceánico amplio con el ciclo del nivel del mar."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "medium",
+  "text": "Frente a la costa chilena, una corriente fría trae nutrientes desde aguas profundas. ¿Qué efecto es más probable?",
+  "options": [
+   "Aumenta el plancton y puede haber más anchovetas.",
+   "Disminuye el plancton porque el agua fría no tiene vida.",
+   "Desaparecen las mareas por completo.",
+   "El agua deja de moverse y forma un lago."
+  ],
+  "correct": "Aumenta el plancton y puede haber más anchovetas.",
+  "hint": "Los nutrientes favorecen el plancton, que sirve de alimento a muchos peces.",
+  "clue": "Relaciona los nutrientes con el alimento de los peces.",
+  "option_notes": {
+   "El agua deja de moverse y forma un lago.": "Confunde una corriente con agua quieta y encerrada.",
+   "Desaparecen las mareas por completo.": "Cree que una corriente controla la atracción que produce las mareas.",
+   "Disminuye el plancton porque el agua fría no tiene vida.": "Supone que el agua fría no puede sostener organismos."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "hard",
+  "text": "Durante un año, frente a Chile, el mar está más cálido, llegan menos nutrientes a la superficie y cambian algunas capturas. ¿Qué fenómeno explica mejor el conjunto?",
+  "options": [
+   "Una ola aislada.",
+   "El fenómeno El Niño.",
+   "Una marea diaria.",
+   "Una corriente de Humboldt fortalecida."
+  ],
+  "correct": "El fenómeno El Niño.",
+  "hint": "El Niño puede calentar el mar y reducir el aporte de aguas frías y nutrientes, alterando la pesca.",
+  "clue": "Relaciona calentamiento, nutrientes y cambios en la pesca.",
+  "option_notes": {
+   "Una ola aislada.": "Explica un movimiento local, no cambios amplios de temperatura y nutrientes.",
+   "Una marea diaria.": "Confunde un cambio periódico del nivel con cambios en el ecosistema.",
+   "Una corriente de Humboldt fortalecida.": "Espera lo contrario: agua más fría y más nutrientes."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "hard",
+  "text": "Un robot registra en B menos luz, agua más fría y mayor presión que en A, dentro del mismo lago. ¿Qué inferencia es más razonable?",
+  "options": [
+   "B es necesariamente parte de un océano.",
+   "B está más cerca de la superficie que A.",
+   "Ambos puntos tienen igual profundidad.",
+   "B está a mayor profundidad que A."
+  ],
+  "correct": "B está a mayor profundidad que A.",
+  "hint": "Al aumentar la profundidad, disminuye la luz y suele bajar la temperatura, mientras aumenta la presión.",
+  "clue": "Compara los tres registros con lo que ocurre al bajar en el agua.",
+  "option_notes": {
+   "B está más cerca de la superficie que A.": "Invierte los cambios esperables al aumentar la profundidad.",
+   "Ambos puntos tienen igual profundidad.": "Ignora que los tres registros cambian de forma relacionada.",
+   "B es necesariamente parte de un océano.": "Confunde condiciones de profundidad con una prueba del tipo de cuerpo de agua."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "hard",
+  "text": "Para saber si la profundidad influye en la diversidad de fauna de un lago, ¿qué estudio permite comparar mejor?",
+  "options": [
+   "Contar peces de un lago y aves del mar, en temporadas distintas.",
+   "Comparar fauna en zonas poco y muy profundas, durante el mismo mes.",
+   "Observar una sola orilla y concluir sobre todo el lago.",
+   "Comparar días con y sin viento sin medir la profundidad."
+  ],
+  "correct": "Comparar fauna en zonas poco y muy profundas, durante el mismo mes.",
+  "hint": "Comparar zonas poco y muy profundas del mismo lago y en la misma temporada ayuda a aislar la profundidad.",
+  "clue": "Cambia principalmente la profundidad y mantén comparables las demás condiciones.",
+  "option_notes": {
+   "Contar peces de un lago y aves del mar, en temporadas distintas.": "Compara ambientes, animales y temporadas diferentes.",
+   "Observar una sola orilla y concluir sobre todo el lago.": "Usa una sola zona, que no representa todo el lago.",
+   "Comparar días con y sin viento sin medir la profundidad.": "Cambia el viento, pero no estudia directamente la profundidad."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA13",
+  "difficulty": "hard",
+  "text": "Si la corriente de Humboldt llevara menos agua fría y nutrientes hacia la costa, ¿qué cadena de cambios sería más probable?",
+  "options": [
+   "Menos plancton, menos alimento para peces y cambios en sus poblaciones.",
+   "Más nutrientes, más plancton y más peces en todas partes.",
+   "Menos presión, más luz y plantas en zonas profundas.",
+   "Más mareas, menos olas y agua dulce en la costa."
+  ],
+  "correct": "Menos plancton, menos alimento para peces y cambios en sus poblaciones.",
+  "hint": "Menos nutrientes reduce el plancton, que alimenta a muchos peces; por eso cambia la fauna.",
+  "clue": "Sigue esta cadena: nutrientes, plancton y peces.",
+  "option_notes": {
+   "Más nutrientes, más plancton y más peces en todas partes.": "Invierte el efecto de llevar menos nutrientes.",
+   "Más mareas, menos olas y agua dulce en la costa.": "Confunde una corriente con las mareas, las olas y la salinidad.",
+   "Menos presión, más luz y plantas en zonas profundas.": "Atribuye a la corriente cambios propios de la profundidad."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "alternativa larga"
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "easy",
+  "text": "¿Qué efecto puede causar que una embarcación derrame petróleo en el océano?",
+  "options": [
+   "Enfría el océano y forma nuevos glaciares en la costa",
+   "Se transforma en alimento y aumenta la cantidad de peces",
+   "Agrega oxígeno al agua y mejora la vida de los animales marinos",
+   "Contamina el agua y puede dañar a los animales marinos"
+  ],
+  "correct": "Contamina el agua y puede dañar a los animales marinos",
+  "hint": "El petróleo forma una capa contaminante que afecta el agua y a los seres vivos marinos.",
+  "clue": "Piensa qué ocurre cuando una sustancia contaminante cubre o ensucia el agua.",
+  "option_notes": {
+   "Agrega oxígeno al agua y mejora la vida de los animales marinos": "Confunde el petróleo con una sustancia que ayuda a los seres vivos.",
+   "Enfría el océano y forma nuevos glaciares en la costa": "Relaciona un derrame con la formación natural de glaciares.",
+   "Se transforma en alimento y aumenta la cantidad de peces": "Piensa que los peces pueden usar el petróleo como alimento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "easy",
+  "text": "Una planta trata las aguas servidas antes de devolverlas a un río. ¿Qué efecto positivo se espera?",
+  "options": [
+   "El río recibe más oxígeno y ya no necesita agua limpia",
+   "El agua se vuelve salada y el río pierde sus seres vivos",
+   "Llegan menos contaminantes al río y se protegen sus seres vivos",
+   "Llegan más contaminantes al río, pero el agua corre más rápido"
+  ],
+  "correct": "Llegan menos contaminantes al río y se protegen sus seres vivos",
+  "hint": "El tratamiento elimina o reduce contaminantes antes de que el agua vuelva al río.",
+  "clue": "Compara el agua que entra a la planta con la que sale hacia el río.",
+  "option_notes": {
+   "Llegan más contaminantes al río, pero el agua corre más rápido": "Confunde tratar el agua con agregar contaminantes al río.",
+   "El agua se vuelve salada y el río pierde sus seres vivos": "Confunde agua dulce tratada con agua salada.",
+   "El río recibe más oxígeno y ya no necesita agua limpia": "Supone que el río deja de necesitar agua limpia."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "easy",
+  "text": "¿Qué acción ayuda directamente a proteger un glaciar chileno visitado por turistas?",
+  "options": [
+   "Dejar alimentos cerca del hielo para atraer animales nativos",
+   "Sacar trozos de hielo como recuerdo y guardarlos en casa",
+   "Lavar vehículos junto al glaciar para aprovechar el agua",
+   "Caminar por senderos señalizados y llevarse todos los residuos"
+  ],
+  "correct": "Caminar por senderos señalizados y llevarse todos los residuos",
+  "hint": "Los senderos reducen el daño y retirar los residuos evita contaminar el glaciar y sus alrededores.",
+  "clue": "Elige una conducta que reduzca las huellas humanas en el hielo y sus alrededores.",
+  "option_notes": {
+   "Dejar alimentos cerca del hielo para atraer animales nativos": "Piensa que alimentar animales no altera el lugar ni su conducta.",
+   "Sacar trozos de hielo como recuerdo y guardarlos en casa": "Considera el hielo un recuerdo sin impacto ambiental.",
+   "Lavar vehículos junto al glaciar para aprovechar el agua": "Confunde ahorrar agua con lavar vehículos en una reserva."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "easy",
+  "text": "En un lago llegan muchos fertilizantes desde los cultivos. ¿Qué efecto negativo puede ocurrir?",
+  "options": [
+   "Crecen demasiadas algas y disminuye el oxígeno para algunos seres vivos",
+   "Se forman más glaciares porque el agua recibe nuevos nutrientes",
+   "El lago se vuelve potable sin necesitar ningún tratamiento",
+   "Aumenta el oxígeno porque las algas siempre lo producen"
+  ],
+  "correct": "Crecen demasiadas algas y disminuye el oxígeno para algunos seres vivos",
+  "hint": "El exceso de nutrientes puede provocar muchas algas y reducir el oxígeno disponible en el agua.",
+  "clue": "Relaciona el exceso de nutrientes con los cambios en el oxígeno del agua.",
+  "option_notes": {
+   "Se forman más glaciares porque el agua recibe nuevos nutrientes": "Confunde el exceso de nutrientes con la formación de glaciares.",
+   "El lago se vuelve potable sin necesitar ningún tratamiento": "Piensa que cualquier lago es potable sin eliminar contaminantes.",
+   "Aumenta el oxígeno porque las algas siempre lo producen": "Olvida que muchas algas pueden consumir oxígeno al descomponerse."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": "alternativa larga"
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "medium",
+  "text": "Después de talar árboles junto a un río, el agua queda café y hay menos peces. ¿Cuál explicación es más adecuada?",
+  "options": [
+   "La tala enfría tanto el río que los peces dejan de respirar",
+   "Sin raíces, entra suelo al río y se daña el hábitat de los peces",
+   "Los árboles caídos vuelven el agua salada y dañan a los peces",
+   "La tala quita oxígeno al agua, aunque no cambie el suelo"
+  ],
+  "correct": "Sin raíces, entra suelo al río y se daña el hábitat de los peces",
+  "hint": "Las raíces sujetan el suelo; al quitarlas, aumenta el sedimento que llega al río y afecta a los peces.",
+  "clue": "Busca una relación entre las raíces, el suelo que llega al agua y los peces.",
+  "option_notes": {
+   "Los árboles caídos vuelven el agua salada y dañan a los peces": "Confunde la tala con cambios de salinidad del agua.",
+   "La tala enfría tanto el río que los peces dejan de respirar": "Piensa que los peces desaparecen por el frío causado por la tala.",
+   "La tala quita oxígeno al agua, aunque no cambie el suelo": "Atribuye el problema al oxígeno sin considerar el sedimento."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "medium",
+  "text": "En una zona costera disminuyen los peces porque se capturan muchos durante todo el año. ¿Qué medida ayudaría más?",
+  "options": [
+   "Capturar solo peces pequeños y devolver los más grandes al mar",
+   "Eliminar las áreas protegidas para ampliar la zona de pesca",
+   "Respetar las vedas y los tamaños mínimos de captura",
+   "Pescar más peces para que la población se recupere pronto"
+  ],
+  "correct": "Respetar las vedas y los tamaños mínimos de captura",
+  "hint": "Las vedas y los tamaños mínimos permiten que los peces se reproduzcan y que la población se recupere.",
+  "clue": "La población de peces necesita tiempo para reproducirse y recuperarse.",
+  "option_notes": {
+   "Pescar más peces para que la población se recupere pronto": "Supone que capturar más peces acelera la recuperación de la población.",
+   "Eliminar las áreas protegidas para ampliar la zona de pesca": "Confunde proteger con permitir pescar en más lugares.",
+   "Capturar solo peces pequeños y devolver los más grandes al mar": "Piensa que los peces pequeños no son importantes para la población."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "medium",
+  "text": "Un curso descubre basura plástica en la orilla de un lago y aves atrapadas en ella. ¿Qué propuesta enfrenta mejor el problema?",
+  "options": [
+   "Limpiar solo a las aves y dejar la basura junto al lago",
+   "Agregar agua al lago para esconder los residuos bajo la superficie",
+   "Retirar residuos, reducir su uso y evitar que lleguen al lago",
+   "Quemar los plásticos en la orilla para hacer espacio"
+  ],
+  "correct": "Retirar residuos, reducir su uso y evitar que lleguen al lago",
+  "hint": "La propuesta actúa sobre la basura que ya existe y previene que nuevos residuos dañen el lago y sus animales.",
+  "clue": "La mejor propuesta reduce la basura y también evita que vuelva a llegar.",
+  "option_notes": {
+   "Limpiar solo a las aves y dejar la basura junto al lago": "Atiende a las aves, pero no elimina ni previene la fuente del problema.",
+   "Quemar los plásticos en la orilla para hacer espacio": "Confunde limpiar con quemar residuos, que puede contaminar el aire y el suelo.",
+   "Agregar agua al lago para esconder los residuos bajo la superficie": "Piensa que esconder la basura equivale a eliminarla."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "medium",
+  "text": "Un grupo midió el agua de un río antes y después de una campaña de limpieza. ¿Cuál forma comunica mejor su resultado?",
+  "options": [
+   "Mostrar mediciones, explicar el cambio y proponer seguir limpiando",
+   "Decir que funcionó porque todos los ríos necesitan la misma acción",
+   "Contar que el río se veía bonito, sin mostrar ninguna medición",
+   "Mostrar una foto y afirmar que el río ya no tiene problemas"
+  ],
+  "correct": "Mostrar mediciones, explicar el cambio y proponer seguir limpiando",
+  "hint": "Comunicar resultados requiere evidencias, una explicación y una acción relacionada con lo observado.",
+  "clue": "Un resultado científico se comunica con evidencias y una explicación.",
+  "option_notes": {
+   "Contar que el río se veía bonito, sin mostrar ninguna medición": "Confunde una impresión visual con datos de una investigación.",
+   "Mostrar una foto y afirmar que el río ya no tiene problemas": "Supone que una foto prueba que el río quedó sin problemas.",
+   "Decir que funcionó porque todos los ríos necesitan la misma acción": "Generaliza una acción sin considerar las condiciones de cada río."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "hard",
+  "text": "En un glaciar, aumentan las visitas y aparecen residuos y senderos erosionados. ¿Qué plan protege mejor la reserva y permite conocerla?",
+  "options": [
+   "Limitar visitas, señalizar senderos, retirar residuos y evaluar daños",
+   "Construir más caminos y basureros, sin controlar las visitas",
+   "Cerrar solo el sendero principal y dejar caminar sobre el hielo",
+   "Permitir visitas sin límite si llevan botellas reutilizables"
+  ],
+  "correct": "Limitar visitas, señalizar senderos, retirar residuos y evaluar daños",
+  "hint": "El plan ordena las visitas, reduce los residuos y permite revisar si las medidas están protegiendo el glaciar.",
+  "clue": "Considera tanto el cuidado del glaciar como el acceso ordenado de visitantes.",
+  "option_notes": {
+   "Permitir visitas sin límite si llevan botellas reutilizables": "Confunde una medida personal con un control completo de la presión turística.",
+   "Cerrar solo el sendero principal y dejar caminar sobre el hielo": "Piensa que cerrar un sendero permite caminar sin daño sobre el hielo.",
+   "Construir más caminos y basureros, sin controlar las visitas": "Supone que más infraestructura basta, aunque lleguen demasiados visitantes."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "hard",
+  "text": "Tras usar fertilizante cerca de un lago, aparecen muchas algas y mueren peces. ¿Qué acción enfrenta mejor la causa y el efecto?",
+  "options": [
+   "Agregar fertilizante al lago para que crezcan más plantas",
+   "Reducir el fertilizante que llega al lago y recuperar la vegetación",
+   "Vaciar parte del lago y trasladar los residuos a otro lugar",
+   "Retirar solo los peces muertos y seguir usando la misma cantidad"
+  ],
+  "correct": "Reducir el fertilizante que llega al lago y recuperar la vegetación",
+  "hint": "Reducir el fertilizante enfrenta la causa y la vegetación ayuda a detener su llegada al lago.",
+  "clue": "Piensa en qué causó las algas y qué puede impedir que el problema continúe.",
+  "option_notes": {
+   "Retirar solo los peces muertos y seguir usando la misma cantidad": "Atiende el resultado visible, pero mantiene la causa del problema.",
+   "Agregar fertilizante al lago para que crezcan más plantas": "Confunde el exceso de fertilizante con una forma de mejorar el lago.",
+   "Vaciar parte del lago y trasladar los residuos a otro lugar": "Traslada el problema o lo oculta sin disminuir la contaminación."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "hard",
+  "text": "Una investigación compara dos playas: en la A hay más plásticos y menos aves que en la B. ¿Qué conclusión y acción son más razonables?",
+  "options": [
+   "Las dos playas están igual porque tienen arena y agua",
+   "El plástico podría dañarlas; reducirlo y medir otra vez sería útil",
+   "La playa A no tiene aves por culpa segura del plástico; basta cerrarla",
+   "Las aves prefieren la playa B; conviene llevar más plástico a la A"
+  ],
+  "correct": "El plástico podría dañarlas; reducirlo y medir otra vez sería útil",
+  "hint": "Los datos sugieren una relación, pero repetir las mediciones ayuda a comprobarla y orientar la acción.",
+  "clue": "Distingue lo que los datos sugieren de lo que todavía falta comprobar.",
+  "option_notes": {
+   "La playa A no tiene aves por culpa segura del plástico; basta cerrarla": "Confunde una relación posible con una certeza y propone una medida única.",
+   "Las aves prefieren la playa B; conviene llevar más plástico a la A": "Invierte la relación: cree que más plástico atraería aves.",
+   "Las dos playas están igual porque tienen arena y agua": "Considera iguales las playas sin atender a los datos observados."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ },
+ {
+  "oa_code": "OA14",
+  "difficulty": "hard",
+  "text": "Una municipalidad quiere proteger un río que abastece a un pueblo. Plantará vegetación en la ribera y tratará aguas servidas. ¿Qué resultado y forma de comunicar muestran mejor el aporte?",
+  "options": [
+   "Menos agua disponible; publicar una foto sin comparar resultados",
+   "Más basura en el río; decir que toda acción siempre funciona",
+   "Más sedimentos y contaminantes; mostrar solo opiniones de los vecinos",
+   "Menos sedimentos y contaminantes; mostrar mediciones antes y después"
+  ],
+  "correct": "Menos sedimentos y contaminantes; mostrar mediciones antes y después",
+  "hint": "La vegetación retiene suelo y el tratamiento reduce contaminantes; comparar mediciones permite comunicar el cambio.",
+  "clue": "Relaciona cada acción con su efecto y busca una forma de mostrar cambios reales.",
+  "option_notes": {
+   "Más sedimentos y contaminantes; mostrar solo opiniones de los vecinos": "Invierte los efectos esperados de plantar vegetación y tratar aguas servidas.",
+   "Menos agua disponible; publicar una foto sin comparar resultados": "Confunde proteger el río con perder agua y comunicar sin evidencias.",
+   "Más basura en el río; decir que toda acción siempre funciona": "Supone que toda acción funciona sin revisar sus resultados."
+  },
+  "source": "ia:gpt-5.6-luna",
+  "check_note": null
+ }
+]

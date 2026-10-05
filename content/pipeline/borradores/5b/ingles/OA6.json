@@ -1,0 +1,266 @@
+{
+ "oa": "OA6",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Lee la nota: «Bring your blue notebook and a pencil to English class.» ¿Qué debes llevar?",
+   "options": [
+    "Un cuaderno azul y un lápiz",
+    "Un libro azul y un lápiz",
+    "Un cuaderno azul y una goma",
+    "Un cuaderno rojo y un lápiz"
+   ],
+   "correct": "Un cuaderno azul y un lápiz",
+   "hint": "La nota pide un “blue notebook” y “a pencil”: un cuaderno azul y un lápiz.",
+   "clue": "Busca dos objetos y fíjate en el color del cuaderno.",
+   "option_notes": {
+    "Un cuaderno rojo y un lápiz": "Cambia el color que indica la nota.",
+    "Un cuaderno azul y una goma": "Confunde pencil, lápiz, con goma.",
+    "Un libro azul y un lápiz": "Confunde notebook, cuaderno, con libro."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Lee el menú: «Empanada $1.500; apple $800; water $700.» ¿Cuál es el propósito principal de este texto?",
+   "options": [
+    "Invitar a una fiesta familiar",
+    "Contar un paseo por Santiago",
+    "Explicar cómo preparar una empanada",
+    "Mostrar alimentos y sus precios"
+   ],
+   "correct": "Mostrar alimentos y sus precios",
+   "hint": "Es un menú: presenta alimentos o bebidas junto con sus precios.",
+   "clue": "Observa qué información aparece junto a cada alimento.",
+   "option_notes": {
+    "Explicar cómo preparar una empanada": "Confunde un menú con una receta.",
+    "Invitar a una fiesta familiar": "Confunde una lista de alimentos con una invitación.",
+    "Contar un paseo por Santiago": "Confunde el menú con un relato."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Lee: «The pudú is a small deer from Chile. It has brown fur.» ¿Qué significa la palabra clave «deer» en este texto?",
+   "options": [
+    "Pájaro",
+    "Ciervo",
+    "Zorro",
+    "Conejo"
+   ],
+   "correct": "Ciervo",
+   "hint": "En este texto, “deer” identifica al pudú y significa “ciervo”.",
+   "clue": "Relaciona la palabra con el animal chileno que se describe.",
+   "option_notes": {
+    "Zorro": "Confunde el pudú con otro animal chileno.",
+    "Pájaro": "Confunde deer con un ave.",
+    "Conejo": "Relaciona el tamaño pequeño con un conejo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Diálogo: «Ana: Excuse me, where is the library? Tom: It is next to the gym.» ¿Para qué usa Ana «Excuse me»?",
+   "options": [
+    "Para agradecer la ayuda recibida",
+    "Para disculparse por llegar tarde",
+    "Para llamar la atención antes de preguntar",
+    "Para despedirse de su compañero"
+   ],
+   "correct": "Para llamar la atención antes de preguntar",
+   "hint": "Ana dice “Excuse me” antes de hacer una pregunta a Tom.",
+   "clue": "Mira qué dice Ana inmediatamente después de la expresión.",
+   "option_notes": {
+    "Para disculparse por llegar tarde": "Interpreta la expresión como una disculpa.",
+    "Para agradecer la ayuda recibida": "Confunde la expresión con una forma de dar las gracias.",
+    "Para despedirse de su compañero": "Confunde la pregunta con una despedida."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Lee la invitación: «Ben’s party is on Saturday at 16:00 at 25 Los Alerces Street. Bring a hat.» ¿Qué debes hacer para participar?",
+   "options": [
+    "Ir a 25 Los Alerces el sábado a las 18:00 y llevar una mochila",
+    "Ir a 25 Los Alerces el sábado a las 16:00 y llevar un sombrero",
+    "Ir a 25 Los Alerces el domingo a las 16:00 y llevar un sombrero",
+    "Ir a 25 Los Alerces el viernes a las 16:00 y llevar una pelota"
+   ],
+   "correct": "Ir a 25 Los Alerces el sábado a las 16:00 y llevar un sombrero",
+   "hint": "La invitación indica el lugar, el sábado a las 16:00 y llevar un sombrero.",
+   "clue": "Compara el lugar, el día, la hora y el objeto pedido.",
+   "option_notes": {
+    "Ir a 25 Los Alerces el domingo a las 16:00 y llevar un sombrero": "Cambia el día de la fiesta.",
+    "Ir a 25 Los Alerces el sábado a las 18:00 y llevar una mochila": "Cambia la hora y el objeto pedido.",
+    "Ir a 25 Los Alerces el viernes a las 16:00 y llevar una pelota": "Cambia el día y el objeto pedido."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Receta: «Cut an apple. Add a banana. Mix the fruit. Put it in a bowl.» Ya cortaste la manzana y agregaste el plátano. ¿Qué haces después?",
+   "options": [
+    "Mezclas las frutas",
+    "Cortas otra manzana",
+    "Comes la fruta de inmediato",
+    "Pones la fruta en un bol"
+   ],
+   "correct": "Mezclas las frutas",
+   "hint": "Después de cortar la manzana y agregar el plátano, la receta indica mezclar la fruta.",
+   "clue": "Sigue el orden de las acciones, desde el primer paso.",
+   "option_notes": {
+    "Pones la fruta en un bol": "Salta el paso de mezclar las frutas.",
+    "Cortas otra manzana": "Agrega un paso que la receta no indica.",
+    "Comes la fruta de inmediato": "Confunde el último paso con el siguiente."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Email: «Hi Tom, Our class is visiting the Natural History Museum in Santiago on Friday. We meet at school at 9:00. Bring water. Love, Sofía.» ¿Cuál es la idea principal?",
+   "options": [
+    "Sofía explica cómo preparar una visita al museo",
+    "Sofía informa a Tom sobre una visita del curso",
+    "Sofía cuenta que perdió su botella de agua",
+    "Sofía invita a Tom a una fiesta en su casa"
+   ],
+   "correct": "Sofía informa a Tom sobre una visita del curso",
+   "hint": "La mayoría de los datos del email se relaciona con una visita escolar al museo.",
+   "clue": "Piensa qué actividad reúne la mayoría de los datos del email.",
+   "option_notes": {
+    "Sofía invita a Tom a una fiesta en su casa": "Confunde una visita escolar con una celebración.",
+    "Sofía explica cómo preparar una visita al museo": "Toma llevar agua como si fuera el tema principal.",
+    "Sofía cuenta que perdió su botella de agua": "Confunde “Bring water” con haber perdido agua."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Menú escolar: completo $2.000, jugo $1.000, sopa $1.500 y ensalada $1.200. ¿Qué combinación cuesta exactamente $3.000?",
+   "options": [
+    "Un completo y una sopa",
+    "Un jugo y una ensalada",
+    "Una sopa y una ensalada",
+    "Un completo y un jugo"
+   ],
+   "correct": "Un completo y un jugo",
+   "hint": "Suma los precios: 2.000 + 1.000 = 3.000.",
+   "clue": "Calcula cada combinación sin aproximar.",
+   "option_notes": {
+    "Una sopa y una ensalada": "Suma 1.500 y 1.200: da $2.700.",
+    "Un jugo y una ensalada": "Suma 1.000 y 1.200: da $2.200.",
+    "Un completo y una sopa": "Suma 2.000 y 1.500: da $3.500."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Diálogo: «Luz: Can I use your ruler? Diego: I’m sorry, I need it for my work. Luz: Okay.» ¿Qué podemos concluir?",
+   "options": [
+    "Diego terminó su trabajo y salió",
+    "Diego perdió la regla durante la clase",
+    "Diego no puede prestar la regla en ese momento",
+    "Luz le regaló una regla a Diego"
+   ],
+   "correct": "Diego no puede prestar la regla en ese momento",
+   "hint": "Diego necesita la regla para su trabajo, por eso no puede prestarla ahora.",
+   "clue": "Relaciona la petición de Luz con la razón que da Diego.",
+   "option_notes": {
+    "Diego perdió la regla durante la clase": "Confunde necesitar la regla con haberla perdido.",
+    "Luz le regaló una regla a Diego": "Invierte quién tiene la regla.",
+    "Diego terminó su trabajo y salió": "Contradice que Diego aún necesita la regla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Reglas de la biblioteca: «Be quiet. Return books on Friday. Put books on the desk. Do not eat.» Es jueves y terminaste de usar un libro. ¿Qué debes hacer para cumplir las reglas?",
+   "options": [
+    "Dejarlo en el suelo y devolverlo el jueves",
+    "Comer mientras lo lees y devolverlo el viernes",
+    "Dejarlo en el escritorio y devolverlo el viernes",
+    "Hablar fuerte y guardarlo en tu mochila"
+   ],
+   "correct": "Dejarlo en el escritorio y devolverlo el viernes",
+   "hint": "Las reglas indican dejar el libro en el escritorio y devolverlo el viernes.",
+   "clue": "Busca la regla sobre el lugar y la regla sobre el día.",
+   "option_notes": {
+    "Comer mientras lo lees y devolverlo el viernes": "Cumple el día, pero rompe la regla de no comer.",
+    "Dejarlo en el suelo y devolverlo el jueves": "Cambia el lugar y adelanta el día indicado.",
+    "Hablar fuerte y guardarlo en tu mochila": "Rompe dos reglas de la biblioteca."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Email: «Hi Camila, I have a fever and cannot go to school today. Please send me the homework. Thanks, Diego.» ¿Por qué escribe Diego este email?",
+   "options": [
+    "Para invitar a Camila a su casa",
+    "Para contarle que ya hizo la tarea",
+    "Para pedirle que lo acompañe al colegio",
+    "Para explicar su ausencia y pedir la tarea"
+   ],
+   "correct": "Para explicar su ausencia y pedir la tarea",
+   "hint": "Diego cuenta que está enfermo y solicita que Camila le envíe el trabajo escolar.",
+   "clue": "Considera la razón de su ausencia y la petición final.",
+   "option_notes": {
+    "Para invitar a Camila a su casa": "Confunde pedir la tarea con hacer una invitación.",
+    "Para contarle que ya hizo la tarea": "Interpreta al revés la petición de Diego.",
+    "Para pedirle que lo acompañe al colegio": "Ignora que Diego no puede ir a clases."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Postal: «Dear Nico, I am in Chiloé. I see rain, green forests and wooden houses. I eat curanto with my family. See you soon, Martín.» ¿Cuál afirmación resume mejor el texto?",
+   "options": [
+    "Martín visita Chiloé y cuenta parte de su experiencia",
+    "Martín invita a Nico a conocer su colegio",
+    "Martín describe un animal del sur de Chile",
+    "Martín vive en Santiago y prepara una receta"
+   ],
+   "correct": "Martín visita Chiloé y cuenta parte de su experiencia",
+   "hint": "La postal reúne el lugar, lo que Martín observa y lo que come durante su visita.",
+   "clue": "Une el lugar con las actividades y observaciones de Martín.",
+   "option_notes": {
+    "Martín vive en Santiago y prepara una receta": "Confunde Chiloé con Santiago y curanto con una receta.",
+    "Martín invita a Nico a conocer su colegio": "Confunde una postal descriptiva con una invitación.",
+    "Martín describe un animal del sur de Chile": "Confunde los paisajes con la descripción de un animal."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

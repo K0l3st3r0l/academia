@@ -1,0 +1,264 @@
+{
+ "oa": "OA1",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Qué descomposición expandida representa el número 7.040.305?",
+   "options": [
+    "7.000.000 + 40.000 + 30 + 5",
+    "700.000 + 40.000 + 300 + 5",
+    "7.000.000 + 400.000 + 300 + 5",
+    "7.000.000 + 40.000 + 300 + 5"
+   ],
+   "correct": "7.000.000 + 40.000 + 300 + 5",
+   "hint": "Cada dígito aporta según su posición: 7 millones, 4 decenas de mil, 3 centenas y 5 unidades.",
+   "clue": "Separa el número en millones, miles y unidades.",
+   "option_notes": {
+    "7.000.000 + 400.000 + 300 + 5": "Lee el 4 como centenas de mil, no como decenas de mil.",
+    "7.000.000 + 40.000 + 30 + 5": "Lee el 3 como decenas, no como centenas.",
+    "700.000 + 40.000 + 300 + 5": "Lee el 7 como centenas de mil, no como millones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Qué número en forma estándar se forma con 60.000.000 + 500.000 + 8.000 + 20?",
+   "options": [
+    "60.058.020",
+    "60.508.200",
+    "60.580.020",
+    "60.508.020"
+   ],
+   "correct": "60.508.020",
+   "hint": "Suma cada aporte: 60 millones, 500 mil, 8 mil y 20 unidades.",
+   "clue": "Alinea cada sumando según millones, miles y unidades.",
+   "option_notes": {
+    "60.580.020": "Confunde la posición de 500.000 y 8.000.",
+    "60.058.020": "Confunde 500.000 con 50.000.",
+    "60.508.200": "Escribe 20 como 200."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "Una campaña registró 684.321 visitas. Al aproximar a la unidad de mil más cercana, ¿qué número queda?",
+   "options": [
+    "680.000",
+    "684.000",
+    "684.300",
+    "685.000"
+   ],
+   "correct": "684.000",
+   "hint": "La cifra de las centenas es 3, menor que 5; se mantienen los 684 miles.",
+   "clue": "Mira la cifra de las centenas antes de eliminar las tres últimas cifras.",
+   "option_notes": {
+    "685.000": "Redondea hacia arriba sin mirar la cifra de las centenas.",
+    "680.000": "Redondea a la decena de mil en vez de a la unidad de mil.",
+    "684.300": "Conserva centenas, aunque deben quedar tres ceros."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Cómo se lee el número 305.020.004?",
+   "options": [
+    "treinta y cinco millones veinte mil cuatro",
+    "trescientos cinco millones veinte mil cuatro",
+    "trescientos cinco millones dos mil cuatro",
+    "trescientos cincuenta millones veinte mil cuatro"
+   ],
+   "correct": "trescientos cinco millones veinte mil cuatro",
+   "hint": "Los grupos son 305 millones, 020 mil y 004 unidades.",
+   "clue": "Separa el número en grupos de tres cifras desde la derecha.",
+   "option_notes": {
+    "trescientos cinco millones dos mil cuatro": "Lee 020 como 2.000 en vez de 20.000.",
+    "treinta y cinco millones veinte mil cuatro": "Omite el 0 del grupo de los millones.",
+    "trescientos cincuenta millones veinte mil cuatro": "Intercambia las cifras 0 y 5 del grupo de millones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "Ordena de menor a mayor estos números: 2.305.100, 2.350.010, 2.305.010 y 2.035.100.",
+   "options": [
+    "2.035.100, 2.305.010, 2.305.100, 2.350.010",
+    "2.305.010, 2.035.100, 2.305.100, 2.350.010",
+    "2.350.010, 2.305.100, 2.305.010, 2.035.100",
+    "2.035.100, 2.305.100, 2.305.010, 2.350.010"
+   ],
+   "correct": "2.035.100, 2.305.010, 2.305.100, 2.350.010",
+   "hint": "Compara de izquierda a derecha y, si empatan, sigue con la cifra siguiente.",
+   "clue": "Primero mira los millones; luego compara las cifras restantes.",
+   "option_notes": {
+    "2.035.100, 2.305.100, 2.305.010, 2.350.010": "Intercambia los dos números que empiezan con 2.305.",
+    "2.305.010, 2.035.100, 2.305.100, 2.350.010": "Pone 2.305.010 antes de 2.035.100.",
+    "2.350.010, 2.305.100, 2.305.010, 2.035.100": "Ordena los números de mayor a menor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "Completa la descomposición expandida de 8.403.120: 8.000.000 + 400.000 + ___ + 100 + 20.",
+   "options": [
+    "3",
+    "300",
+    "3.000",
+    "30.000"
+   ],
+   "correct": "3.000",
+   "hint": "El dígito 3 está en las unidades de mil, así que aporta 3.000.",
+   "clue": "Cuenta las posiciones del dígito 3 desde la derecha.",
+   "option_notes": {
+    "30.000": "Ubica el 3 en las decenas de mil.",
+    "300": "Ubica el 3 en las centenas.",
+    "3": "Ubica el 3 en las unidades."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "Dos rutas entre ciudades chilenas miden 3.499.000 m y 3.501.000 m. Si aproximas ambas al millón más cercano, ¿cuál es la diferencia entre los resultados?",
+   "options": [
+    "2.000 m",
+    "7.000.000 m",
+    "3.000.000 m",
+    "1.000.000 m"
+   ],
+   "correct": "1.000.000 m",
+   "hint": "3.499.000 se aproxima a 3.000.000 y 3.501.000 a 4.000.000; la diferencia es 1.000.000 m.",
+   "clue": "Redondea cada distancia por separado y luego resta.",
+   "option_notes": {
+    "2.000 m": "Resta las distancias originales, no sus aproximaciones.",
+    "3.000.000 m": "Confunde una aproximación con la diferencia final.",
+    "7.000.000 m": "Suma las dos cantidades aproximadas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "Una campaña escolar recibió $6.305.000 y usó $205.000. Al aproximar lo que quedó al millón más cercano, ¿qué cantidad se obtiene?",
+   "options": [
+    "$5.000.000",
+    "$6.100.000",
+    "$6.000.000",
+    "$7.000.000"
+   ],
+   "correct": "$6.000.000",
+   "hint": "Quedan $6.100.000; como 100.000 es menor que 500.000, se aproxima a $6.000.000.",
+   "clue": "Calcula primero el resto y después compara sus cientos de miles con 500.000.",
+   "option_notes": {
+    "$6.100.000": "Calcula lo que queda, pero no lo aproxima al millón.",
+    "$7.000.000": "Redondea o suma de forma incorrecta y supera el resto.",
+    "$5.000.000": "Resta un millón de más al calcular la cantidad restante."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Un número es menor que 1.000 millones. Tiene 8 centenas de millón, 3 unidades de millón, 5 centenas de mil y 2 unidades. ¿Cuál es?",
+   "options": [
+    "803.050.002",
+    "803.500.002",
+    "830.500.002",
+    "803.500.020"
+   ],
+   "correct": "803.500.002",
+   "hint": "8 centenas de millón son 800.000.000; agrega 3.000.000, 500.000 y 2.",
+   "clue": "Escribe cada valor en su posición y completa con ceros.",
+   "option_notes": {
+    "830.500.002": "Ubica los 3 millones como decenas de millón.",
+    "803.050.002": "Ubica las 5 centenas de mil como decenas de mil.",
+    "803.500.020": "Ubica las 2 unidades como decenas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Visitas a tres parques: 48.499.000, 48.501.000 y 48.050.000. Al aproximar cada cantidad al millón más cercano, ¿qué resultado aparece dos veces?",
+   "options": [
+    "49.000.000",
+    "48.050.000",
+    "48.000.000",
+    "48.500.000"
+   ],
+   "correct": "48.000.000",
+   "hint": "48.499.000 y 48.050.000 se aproximan a 48.000.000; 48.501.000 sube a 49.000.000.",
+   "clue": "Observa cuántos miles sobran después de los 48 millones.",
+   "option_notes": {
+    "49.000.000": "No reconoce que solo una cantidad supera 48.500.000.",
+    "48.500.000": "Se detiene sin redondear a millones.",
+    "48.050.000": "Escoge una cantidad original, no el resultado aproximado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Usa una vez cada tarjeta 4, 0, 7, 2, 9 y 1. Forma el mayor número de seis cifras menor que 800.000. ¿Cuál es?",
+   "options": [
+    "794.210",
+    "704.921",
+    "790.421",
+    "792.410"
+   ],
+   "correct": "794.210",
+   "hint": "Para no superar 800.000, empieza con 7; después ordena las cifras restantes de mayor a menor.",
+   "clue": "Fija primero la cifra de las centenas de mil; luego maximiza las siguientes.",
+   "option_notes": {
+    "792.410": "Intercambia 4 y 2; por eso no es el mayor posible.",
+    "790.421": "Deja el 0 antes de otras cifras grandes.",
+    "704.921": "Coloca el 0 demasiado pronto y reduce el número."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Una empresa compra materiales por $7.499.999 y paga $500.001 de traslado. Si aproxima el total al millón más cercano, ¿qué valor informa?",
+   "options": [
+    "$8.000.000",
+    "$9.000.000",
+    "$7.500.000",
+    "$7.000.000"
+   ],
+   "correct": "$8.000.000",
+   "hint": "La suma es $8.000.000; como ya es un millón exacto, la aproximación no cambia.",
+   "clue": "Suma los dos costos antes de aplicar el redondeo.",
+   "option_notes": {
+    "$7.000.000": "Considera solo el primer costo al redondear.",
+    "$7.500.000": "Redondea el primer costo y luego suma el traslado.",
+    "$9.000.000": "Suma $500.001 de más y supera el total real."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,272 @@
+{
+ "oa": "OA11",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "Completa con el signo correcto: 4,08 ___ 4,080.",
+   "options": [
+    "<",
+    "=",
+    ">",
+    "≠"
+   ],
+   "correct": "=",
+   "hint": "Agregar un cero al final de la parte decimal no cambia el valor del número.",
+   "clue": "Escribe ambos números con tres cifras decimales antes de compararlos.",
+   "option_notes": {
+    "<": "Cree que el número con menos cifras decimales es menor.",
+    ">": "Cree que agregar un cero hace crecer el número.",
+    "≠": "No reconoce que los ceros finales no cambian el valor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "En una prueba de velocidad, estos son los tiempos: 12,305 s; 12,35 s; 12,053 s; 12,503 s. ¿Cuál es el menor?",
+   "options": [
+    "12,503 s",
+    "12,053 s",
+    "12,35 s",
+    "12,305 s"
+   ],
+   "correct": "12,053 s",
+   "hint": "Escribe 12,35 como 12,350 y compara las cifras desde las décimas.",
+   "clue": "Alinea las comas y agrega ceros a los números con menos cifras decimales.",
+   "option_notes": {
+    "12,305 s": "Compara mal 0,305 y 0,053 al no completar las cifras.",
+    "12,35 s": "Piensa que tener dos cifras decimales la hace menor.",
+    "12,503 s": "Compara las cifras decimales en orden inverso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "¿Cuál pareja está ordenada de menor a mayor?",
+   "options": [
+    "3,054; 3,045",
+    "3,45; 3,054",
+    "3,045; 3,054",
+    "3,45; 3,405"
+   ],
+   "correct": "3,045; 3,054",
+   "hint": "Al escribir 3,45 como 3,450, compara las cifras desde la décima.",
+   "clue": "Completa con ceros las partes decimales que tengan menos de tres cifras.",
+   "option_notes": {
+    "3,45; 3,405": "No agrega el cero a 3,45 para comparar.",
+    "3,054; 3,045": "Invierte el orden al comparar 054 y 045.",
+    "3,45; 3,054": "Compara las partes decimales como números completos, sin alinear posiciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "Ordena de menor a mayor estos decimales: 2,08; 2,8; 2,18; 2,008. ¿Cuál ocupa el segundo lugar?",
+   "options": [
+    "2,08",
+    "2,18",
+    "2,8",
+    "2,008"
+   ],
+   "correct": "2,08",
+   "hint": "Con tres cifras decimales quedan 2,008; 2,080; 2,180 y 2,800.",
+   "clue": "Convierte todos a milésimas antes de ubicar el segundo.",
+   "option_notes": {
+    "2,008": "Lo confunde con 2,08 y no distingue 008 de 080.",
+    "2,18": "Lo pone segundo porque compara 18 con 8 sin completar 2,8.",
+    "2,8": "Cree que 2,8 debe ir antes por tener menos cifras."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Ordena de mayor a menor las capacidades de cuatro botellas: 1,25 L; 1,205 L; 1,52 L; 1,025 L.",
+   "options": [
+    "1,25 L; 1,52 L; 1,205 L; 1,025 L",
+    "1,025 L; 1,205 L; 1,25 L; 1,52 L",
+    "1,52 L; 1,205 L; 1,25 L; 1,025 L",
+    "1,52 L; 1,25 L; 1,205 L; 1,025 L"
+   ],
+   "correct": "1,52 L; 1,25 L; 1,205 L; 1,025 L",
+   "hint": "Escribe 1,25 como 1,250 y compara las milésimas.",
+   "clue": "Compara primero la parte entera y luego alinea las tres cifras decimales.",
+   "option_notes": {
+    "1,52 L; 1,205 L; 1,25 L; 1,025 L": "No convierte 1,25 en 1,250 antes de comparar.",
+    "1,25 L; 1,52 L; 1,205 L; 1,025 L": "Compara solo las centésimas y olvida la décima.",
+    "1,025 L; 1,205 L; 1,25 L; 1,52 L": "Ordena de menor a mayor, aunque se pidió de mayor a menor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Completa la desigualdad: 3,09 < ___ < 3,1. ¿Qué decimal puede ir en el espacio?",
+   "options": [
+    "3,095",
+    "3,9",
+    "3,15",
+    "3,009"
+   ],
+   "correct": "3,095",
+   "hint": "Convierte los límites en 3,090 y 3,100; busca un número entre ellos.",
+   "clue": "Los tres dígitos decimales deben quedar entre 090 y 100.",
+   "option_notes": {
+    "3,009": "Confunde 009 con 090 al comparar milésimas.",
+    "3,15": "Compara solo 15 con 09 y olvida el límite 3,1.",
+    "3,9": "Compara las partes decimales sin considerar el límite superior 3,1."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Una jarra tiene 0,75 L y otra 0,705 L. Agregas 0,08 L a la primera y 0,125 L a la segunda. ¿Qué cantidad queda en ambas?",
+   "options": [
+    "0,855 L",
+    "0,955 L",
+    "0,803 L",
+    "0,830 L"
+   ],
+   "correct": "0,830 L",
+   "hint": "0,75 + 0,08 = 0,830 y 0,705 + 0,125 = 0,830.",
+   "clue": "Calcula cada cantidad final y escribe ambos resultados con tres cifras decimales.",
+   "option_notes": {
+    "0,803 L": "Alinea mal las cifras al sumar los decimales.",
+    "0,855 L": "Suma incorrectamente las centésimas y milésimas.",
+    "0,955 L": "Suma los cuatro datos como si fueran de una sola jarra."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: el cálculo principal es adición de decimales; no pide comparar ni ordenar"
+   ]
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Necesitas 2 kg de harina. ¿Qué bolsa tiene una masa más cercana a 2 kg?",
+   "options": [
+    "2,05 kg",
+    "1,905 kg",
+    "1,95 kg",
+    "2,005 kg"
+   ],
+   "correct": "2,005 kg",
+   "hint": "Compara cuánto le falta o sobra a cada bolsa respecto de 2 kg.",
+   "clue": "Calcula la distancia a 2 kg; no elijas solo el número con más cifras.",
+   "option_notes": {
+    "1,95 kg": "Mira que tiene dos cifras decimales y calcula mal su diferencia.",
+    "2,05 kg": "Confunde 0,05 kg con 0,005 kg.",
+    "1,905 kg": "Compara 905 con 05 sin considerar que el entero es menor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "En una caminata escolar, Ana recorrió 1,25 km. Benjamín recorrió 0,08 km menos que Ana y Carla, 0,015 km más que Benjamín. ¿Cuál es el orden de menor a mayor?",
+   "options": [
+    "Carla, Benjamín, Ana",
+    "Benjamín, Carla, Ana",
+    "Benjamín, Ana, Carla",
+    "Ana, Carla, Benjamín"
+   ],
+   "correct": "Benjamín, Carla, Ana",
+   "hint": "Calcula primero 1,25 − 0,08 y luego suma 0,015; finalmente compara.",
+   "clue": "Encuentra las distancias de Benjamín y Carla antes de ordenarlas.",
+   "option_notes": {
+    "Carla, Benjamín, Ana": "Confunde “más que Benjamín” con “menos que Benjamín”.",
+    "Benjamín, Ana, Carla": "No compara 1,25 con el resultado de Carla.",
+    "Ana, Carla, Benjamín": "Interpreta “0,08 menos” como una distancia mayor."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: enunciado ambiguo («Ana y Carla, 0,015 km…»); fuera del OA (requiere sustracción y adición)"
+   ]
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "Tres grupos llenan recipientes: A: 0,4 + 0,075 L; B: 0,35 + 0,14 L; C: 0,5 − 0,02 L. ¿Qué volumen corresponde al grupo que queda entre A y B?",
+   "options": [
+    "0,480 L",
+    "0,490 L",
+    "0,475 L",
+    "0,520 L"
+   ],
+   "correct": "0,480 L",
+   "hint": "A da 0,475 L, B da 0,490 L y C da 0,480 L; ubica el valor intermedio.",
+   "clue": "Calcula los tres volúmenes y compáralos con las comas alineadas.",
+   "option_notes": {
+    "0,475 L": "Elige el resultado de A, que queda por debajo del valor intermedio.",
+    "0,490 L": "Elige el resultado de B, que queda por encima del valor intermedio.",
+    "0,520 L": "Suma o resta mal y obtiene un valor fuera del intervalo."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: requiere adición y sustracción de decimales antes de ordenar"
+   ]
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "Usa una vez cada tarjeta 2, 4 y 8 para formar un número con tres cifras decimales, menor que 0,5. ¿Cuál es el mayor posible?",
+   "options": [
+    "0,824",
+    "0,248",
+    "0,482",
+    "0,428"
+   ],
+   "correct": "0,482",
+   "hint": "Para quedar bajo 0,5, la décima debe ser 4; después pon 8 en centésimas y 2 en milésimas.",
+   "clue": "Primero decide qué tarjeta puede ocupar las décimas sin superar 0,5.",
+   "option_notes": {
+    "0,428": "Elige 4 en décimas, pero no hace la mayor centésima.",
+    "0,824": "Pone 8 en décimas y supera 0,5.",
+    "0,248": "Ordena las cifras de forma creciente, no buscando el mayor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "En un vivero chileno, cuatro quillayes miden 0,805 m; 0,85 m; 0,795 m y 0,8 m. Si eliges los dos más altos, ¿qué diferencia hay entre sus alturas?",
+   "options": [
+    "0,005 m",
+    "0,050 m",
+    "0,045 m",
+    "0,055 m"
+   ],
+   "correct": "0,045 m",
+   "hint": "Las dos mayores son 0,850 m y 0,805 m; al restarlas obtienes 0,045 m.",
+   "clue": "Ordena primero las cuatro medidas y luego resta la segunda mayor a la mayor.",
+   "option_notes": {
+    "0,005 m": "Resta 0,850 − 0,805 sin alinear las milésimas.",
+    "0,050 m": "Toma 0,800 m como la segunda medida más alta.",
+    "0,055 m": "Elige 0,795 m como la segunda medida más alta."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del OA: pide la diferencia (sustracción), no solo comparar"
+   ]
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,266 @@
+{
+ "oa": "OA13",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "Si bajas desde la superficie del océano hasta una zona más profunda, ¿qué cambio de temperatura es más probable?",
+   "options": [
+    "La temperatura cambia solo por el viento.",
+    "El agua se vuelve más fría.",
+    "El agua se vuelve más caliente.",
+    "La temperatura queda exactamente igual."
+   ],
+   "correct": "El agua se vuelve más fría.",
+   "hint": "Al bajar, llega menos energía del Sol y, en general, el agua está más fría.",
+   "clue": "Piensa en cómo llega el calor del Sol a las distintas profundidades.",
+   "option_notes": {
+    "El agua se vuelve más caliente.": "Confunde el descenso con acercarse a una fuente de calor.",
+    "La temperatura cambia solo por el viento.": "Atribuye toda la temperatura profunda al viento.",
+    "La temperatura queda exactamente igual.": "Supone que el agua tiene igual temperatura en toda su profundidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "Una planta acuática necesita luz. ¿Dónde es más probable encontrarla en un lago?",
+   "options": [
+    "En el fondo más profundo.",
+    "Solo en una zona sin luz.",
+    "A cualquier profundidad por igual.",
+    "Cerca de la superficie."
+   ],
+   "correct": "Cerca de la superficie.",
+   "hint": "La luz disminuye mientras atraviesa más agua.",
+   "clue": "Compara cuánta agua debe atravesar la luz para llegar a cada zona.",
+   "option_notes": {
+    "En el fondo más profundo.": "Confunde la zona más profunda con la que recibe más luz.",
+    "A cualquier profundidad por igual.": "Cree que la luz llega igual a todas las profundidades.",
+    "Solo en una zona sin luz.": "Supone que las plantas necesitan oscuridad para vivir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "Un buzo baja desde 2 m hasta 20 m en el mar. ¿Qué ocurre con la presión del agua?",
+   "options": [
+    "Se mantiene igual.",
+    "Se hace menor.",
+    "Se hace mayor.",
+    "Depende solo del viento."
+   ],
+   "correct": "Se hace mayor.",
+   "hint": "A mayor profundidad, hay una columna de agua más grande sobre el buzo.",
+   "clue": "Considera cuánto peso de agua queda sobre el buzo.",
+   "option_notes": {
+    "Se hace menor.": "Invierte la relación entre profundidad y presión.",
+    "Depende solo del viento.": "Cree que el viento controla la presión a cualquier profundidad.",
+    "Se mantiene igual.": "Supone que el peso del agua no cambia al bajar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "easy",
+   "text": "¿Cuál situación describe una ola en el mar de Valparaíso?",
+   "options": [
+    "El mar se calienta y cambia la pesca.",
+    "El nivel del mar sube y baja por la Luna.",
+    "La superficie forma ondulaciones por el viento.",
+    "Una corriente fría lleva nutrientes hacia el norte."
+   ],
+   "correct": "La superficie forma ondulaciones por el viento.",
+   "hint": "Las olas son ondulaciones de la superficie producidas principalmente por el viento.",
+   "clue": "Busca el caso en que se forman ondulaciones en la superficie.",
+   "option_notes": {
+    "El nivel del mar sube y baja por la Luna.": "Confunde las mareas con las ondulaciones producidas por el viento.",
+    "Una corriente fría lleva nutrientes hacia el norte.": "Confunde una corriente marina con un movimiento superficial por viento.",
+    "El mar se calienta y cambia la pesca.": "Confunde El Niño con una ola local."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "En un lago, la superficie está calentada por el Sol. Martina compara agua a 1 m y 15 m. ¿Qué espera al bajar?",
+   "options": [
+    "Más luz, mayor temperatura y menor presión.",
+    "Más luz, menor temperatura y mayor presión.",
+    "Menos luz, menor temperatura y mayor presión.",
+    "Menos luz, mayor temperatura y menor presión."
+   ],
+   "correct": "Menos luz, menor temperatura y mayor presión.",
+   "hint": "Al bajar, la luz y el calor suelen disminuir; la presión aumenta por el peso del agua.",
+   "clue": "Relaciona la profundidad con la luz, el calor y el peso del agua.",
+   "option_notes": {
+    "Más luz, mayor temperatura y menor presión.": "Invierte las tres relaciones entre profundidad y propiedades del agua.",
+    "Menos luz, mayor temperatura y menor presión.": "Reconoce menos luz, pero invierte temperatura y presión.",
+    "Más luz, menor temperatura y mayor presión.": "Reconoce presión mayor, pero invierte luz y temperatura."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "En una zona iluminada de un lago crecen plantas y viven insectos; en el fondo oscuro casi no hay plantas. ¿Qué explica mejor la diferencia?",
+   "options": [
+    "La presión profunda hace crecer más plantas.",
+    "La oscuridad aumenta la energía solar del agua.",
+    "Las olas llevan todas las plantas hacia el fondo.",
+    "La luz permite la fotosíntesis y aporta alimento a otros seres."
+   ],
+   "correct": "La luz permite la fotosíntesis y aporta alimento a otros seres.",
+   "hint": "Las plantas necesitan luz para fabricar alimento; ellas sostienen muchas cadenas alimentarias.",
+   "clue": "Piensa qué necesitan las plantas para fabricar su alimento.",
+   "option_notes": {
+    "La presión profunda hace crecer más plantas.": "Confunde la presión con una causa directa del crecimiento de plantas.",
+    "La oscuridad aumenta la energía solar del agua.": "Cree que la oscuridad aumenta la energía disponible para las plantas.",
+    "Las olas llevan todas las plantas hacia el fondo.": "Cree que las olas determinan por completo dónde viven las plantas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "En una caleta, el nivel del mar sube y baja periódicamente, aunque casi no haya viento. ¿Qué movimiento observas?",
+   "options": [
+    "Una marea.",
+    "Una ola.",
+    "La corriente de Humboldt.",
+    "El fenómeno El Niño."
+   ],
+   "correct": "Una marea.",
+   "hint": "Las mareas son cambios periódicos del nivel del mar, causados sobre todo por la gravedad de la Luna y el Sol.",
+   "clue": "Fíjate en el cambio del nivel del mar y en que se repite con regularidad.",
+   "option_notes": {
+    "Una ola.": "Confunde un cambio del nivel del mar con ondulaciones causadas por el viento.",
+    "La corriente de Humboldt.": "Confunde agua fría en movimiento con una variación periódica del nivel.",
+    "El fenómeno El Niño.": "Confunde un fenómeno oceánico amplio con el ciclo del nivel del mar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "medium",
+   "text": "Frente a la costa chilena, una corriente fría trae nutrientes desde aguas profundas. ¿Qué efecto es más probable?",
+   "options": [
+    "Aumenta el plancton y puede haber más anchovetas.",
+    "Disminuye el plancton porque el agua fría no tiene vida.",
+    "Desaparecen las mareas por completo.",
+    "El agua deja de moverse y forma un lago."
+   ],
+   "correct": "Aumenta el plancton y puede haber más anchovetas.",
+   "hint": "Los nutrientes favorecen el plancton, que sirve de alimento a muchos peces.",
+   "clue": "Relaciona los nutrientes con el alimento de los peces.",
+   "option_notes": {
+    "El agua deja de moverse y forma un lago.": "Confunde una corriente con agua quieta y encerrada.",
+    "Desaparecen las mareas por completo.": "Cree que una corriente controla la atracción que produce las mareas.",
+    "Disminuye el plancton porque el agua fría no tiene vida.": "Supone que el agua fría no puede sostener organismos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Durante un año, frente a Chile, el mar está más cálido, llegan menos nutrientes a la superficie y cambian algunas capturas. ¿Qué fenómeno explica mejor el conjunto?",
+   "options": [
+    "Una ola aislada.",
+    "El fenómeno El Niño.",
+    "Una marea diaria.",
+    "Una corriente de Humboldt fortalecida."
+   ],
+   "correct": "El fenómeno El Niño.",
+   "hint": "El Niño puede calentar el mar y reducir el aporte de aguas frías y nutrientes, alterando la pesca.",
+   "clue": "Relaciona calentamiento, nutrientes y cambios en la pesca.",
+   "option_notes": {
+    "Una ola aislada.": "Explica un movimiento local, no cambios amplios de temperatura y nutrientes.",
+    "Una marea diaria.": "Confunde un cambio periódico del nivel con cambios en el ecosistema.",
+    "Una corriente de Humboldt fortalecida.": "Espera lo contrario: agua más fría y más nutrientes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Un robot registra en B menos luz, agua más fría y mayor presión que en A, dentro del mismo lago. ¿Qué inferencia es más razonable?",
+   "options": [
+    "B es necesariamente parte de un océano.",
+    "B está más cerca de la superficie que A.",
+    "Ambos puntos tienen igual profundidad.",
+    "B está a mayor profundidad que A."
+   ],
+   "correct": "B está a mayor profundidad que A.",
+   "hint": "Al aumentar la profundidad, disminuye la luz y suele bajar la temperatura, mientras aumenta la presión.",
+   "clue": "Compara los tres registros con lo que ocurre al bajar en el agua.",
+   "option_notes": {
+    "B está más cerca de la superficie que A.": "Invierte los cambios esperables al aumentar la profundidad.",
+    "Ambos puntos tienen igual profundidad.": "Ignora que los tres registros cambian de forma relacionada.",
+    "B es necesariamente parte de un océano.": "Confunde condiciones de profundidad con una prueba del tipo de cuerpo de agua."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Para saber si la profundidad influye en la diversidad de fauna de un lago, ¿qué estudio permite comparar mejor?",
+   "options": [
+    "Contar peces de un lago y aves del mar, en temporadas distintas.",
+    "Comparar fauna en zonas poco y muy profundas, durante el mismo mes.",
+    "Observar una sola orilla y concluir sobre todo el lago.",
+    "Comparar días con y sin viento sin medir la profundidad."
+   ],
+   "correct": "Comparar fauna en zonas poco y muy profundas, durante el mismo mes.",
+   "hint": "Comparar zonas poco y muy profundas del mismo lago y en la misma temporada ayuda a aislar la profundidad.",
+   "clue": "Cambia principalmente la profundidad y mantén comparables las demás condiciones.",
+   "option_notes": {
+    "Contar peces de un lago y aves del mar, en temporadas distintas.": "Compara ambientes, animales y temporadas diferentes.",
+    "Observar una sola orilla y concluir sobre todo el lago.": "Usa una sola zona, que no representa todo el lago.",
+    "Comparar días con y sin viento sin medir la profundidad.": "Cambia el viento, pero no estudia directamente la profundidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA13",
+   "difficulty": "hard",
+   "text": "Si la corriente de Humboldt llevara menos agua fría y nutrientes hacia la costa, ¿qué cadena de cambios sería más probable?",
+   "options": [
+    "Menos plancton, menos alimento para peces y cambios en sus poblaciones.",
+    "Más nutrientes, más plancton y más peces en todas partes.",
+    "Menos presión, más luz y plantas en zonas profundas.",
+    "Más mareas, menos olas y agua dulce en la costa."
+   ],
+   "correct": "Menos plancton, menos alimento para peces y cambios en sus poblaciones.",
+   "hint": "Menos nutrientes reduce el plancton, que alimenta a muchos peces; por eso cambia la fauna.",
+   "clue": "Sigue esta cadena: nutrientes, plancton y peces.",
+   "option_notes": {
+    "Más nutrientes, más plancton y más peces en todas partes.": "Invierte el efecto de llevar menos nutrientes.",
+    "Más mareas, menos olas y agua dulce en la costa.": "Confunde una corriente con las mareas, las olas y la salinidad.",
+    "Menos presión, más luz y plantas en zonas profundas.": "Atribuye a la corriente cambios propios de la profundidad."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

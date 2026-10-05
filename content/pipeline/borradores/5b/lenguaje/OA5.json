@@ -1,0 +1,264 @@
+{
+ "oa": "OA5",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "Lee: «La lluvia canta.\nGolpea el tejado.\nDuerme la ciudad.» ¿Cuántos versos tiene el poema?",
+   "options": [
+    "3 versos",
+    "6 versos",
+    "2 versos",
+    "4 versos"
+   ],
+   "correct": "3 versos",
+   "hint": "Cada línea del poema cuenta como un verso; aquí hay tres líneas.",
+   "clue": "Separa visualmente el poema en sus líneas.",
+   "option_notes": {
+    "2 versos": "Contar solo las dos primeras líneas.",
+    "4 versos": "Confundir las oraciones o palabras con versos.",
+    "6 versos": "Contar sílabas o palabras en vez de líneas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "Lee: «El viento sopla fuerte y pregunta mi nombre.» ¿Qué expresión es una personificación?",
+   "options": [
+    "El viento mueve las hojas.",
+    "El viento sopla con fuerza.",
+    "El viento refresca la tarde.",
+    "El viento pregunta mi nombre."
+   ],
+   "correct": "El viento pregunta mi nombre.",
+   "hint": "Preguntar el nombre es una acción humana que el viento recibe como si pudiera hablar.",
+   "clue": "Busca una acción que normalmente realiza una persona al conversar.",
+   "option_notes": {
+    "El viento sopla con fuerza.": "Confundir una acción natural del viento con una acción humana.",
+    "El viento mueve las hojas.": "Elegir un efecto real que produce el viento.",
+    "El viento refresca la tarde.": "Tomar una consecuencia del viento como personificación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "Lee: «El pan recién horneado llena la cocina con un aroma dulce.» ¿Qué sentido se activa principalmente?",
+   "options": [
+    "El oído",
+    "La vista",
+    "El olfato",
+    "El tacto"
+   ],
+   "correct": "El olfato",
+   "hint": "La palabra «aroma» indica algo que percibes al oler.",
+   "clue": "Busca la palabra que indica cómo se percibe lo descrito.",
+   "option_notes": {
+    "La vista": "Relacionar el pan con su aspecto, no con el aroma.",
+    "El oído": "Confundir una sensación con un sonido.",
+    "El tacto": "Fijarse en la temperatura imaginada del pan."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "Lee: «En la plaza canta un canario.\nEl sol se esconde tras el cerro.\n\nLa tarde enciende sus colores.\nLa noche guarda el pueblo.» ¿Cuántas estrofas tiene?",
+   "options": [
+    "3 estrofas",
+    "2 estrofas",
+    "1 estrofa",
+    "4 estrofas"
+   ],
+   "correct": "2 estrofas",
+   "hint": "Una estrofa es un grupo de versos separado de otro por un espacio; aquí hay dos grupos.",
+   "clue": "Observa los grupos de versos separados por un espacio.",
+   "option_notes": {
+    "1 estrofa": "Ignorar el espacio que separa los dos grupos.",
+    "3 estrofas": "Tomar una línea suelta como una estrofa.",
+    "4 estrofas": "Confundir cada verso con una estrofa."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Lee: «Al tomar mi mano, tus dedos son como lana de alpaca bajo el sol del altiplano.» ¿Qué sugiere la comparación?",
+   "options": [
+    "Que la mano pesa como un animal.",
+    "Que los dedos huelen a pasto.",
+    "Que los dedos tienen color blanco y áspero.",
+    "Que el contacto se siente suave y cálido."
+   ],
+   "correct": "Que el contacto se siente suave y cálido.",
+   "hint": "La lana de alpaca se asocia con suavidad y abrigo; esas cualidades pasan a los dedos.",
+   "clue": "Piensa en cómo se siente y qué abriga la lana.",
+   "option_notes": {
+    "Que los dedos tienen color blanco y áspero.": "Fijarse en una característica visual y atribuirle una textura incorrecta.",
+    "Que la mano pesa como un animal.": "Interpretar la comparación como una semejanza de peso.",
+    "Que los dedos huelen a pasto.": "Inventar un sentido que el poema no sugiere."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Lee: «En la caleta canta el mar,\ny un bote vuelve a descansar.» ¿Qué tipo de rima tienen «mar» y «descansar»?",
+   "options": [
+    "Rima consonante.",
+    "Riman solo las consonantes.",
+    "No tienen rima.",
+    "Rima asonante."
+   ],
+   "correct": "Rima consonante.",
+   "hint": "Desde la vocal tónica final, «mar» y «descansar» comparten los sonidos «ar».",
+   "clue": "Compara las terminaciones desde la última vocal acentuada.",
+   "option_notes": {
+    "Rima asonante.": "Pensar que basta con compartir solo las vocales.",
+    "No tienen rima.": "Mirar solo el inicio distinto de las palabras.",
+    "Riman solo las consonantes.": "Confundir la coincidencia de sonidos con el tipo de rima."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Lee: «La estrella mira,\nla noche tranquila,\ny el río camina.» ¿Qué tipo de rima aparece entre «mira», «tranquila» y «camina»?",
+   "options": [
+    "Rima asonante.",
+    "Rima consonante.",
+    "Riman solo las consonantes.",
+    "No hay rima."
+   ],
+   "correct": "Rima asonante.",
+   "hint": "Comparten las vocales «i-a» desde la última vocal tónica, pero no todos los sonidos.",
+   "clue": "Escucha qué parte de las terminaciones se repite y cuál cambia.",
+   "option_notes": {
+    "No hay rima.": "No reconocer la repetición de las vocales finales.",
+    "Rima consonante.": "Creer que coinciden también todas las consonantes.",
+    "Riman solo las consonantes.": "Confundir la rima asonante con consonantes repetidas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Lee: «La tarde cae despacio,\nla plaza queda vacía;\nuna hoja gira sola\njunto a la fuente fría.» ¿Qué estado de ánimo predomina?",
+   "options": [
+    "Miedo y peligro.",
+    "Tristeza y soledad.",
+    "Orgullo y celebración.",
+    "Entusiasmo y alegría."
+   ],
+   "correct": "Tristeza y soledad.",
+   "hint": "Palabras como «vacía», «sola» y «fría» crean una sensación triste y solitaria.",
+   "clue": "Busca palabras que muestran cómo están el lugar y la hoja.",
+   "option_notes": {
+    "Entusiasmo y alegría.": "Fijarse en el movimiento de la hoja e ignorar el ambiente vacío.",
+    "Miedo y peligro.": "Confundir la soledad con una amenaza.",
+    "Orgullo y celebración.": "Elegir un ánimo festivo que el poema no presenta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Lee: «Sobre la cordillera nevada, el amanecer derrama oro sobre el valle silencioso.» ¿Qué imagen crea «derrama oro»?",
+   "options": [
+    "El valle queda oscuro bajo la montaña.",
+    "Las monedas caen sobre la cordillera.",
+    "La luz dorada se extiende por el valle.",
+    "La nieve se vuelve metal amarillo."
+   ],
+   "correct": "La luz dorada se extiende por el valle.",
+   "hint": "«Derrama oro» imagina la luz amarilla del amanecer extendiéndose por el valle.",
+   "clue": "Relaciona la palabra «oro» con lo que ocurre al amanecer.",
+   "option_notes": {
+    "La nieve se vuelve metal amarillo.": "Interpretar «oro» literalmente y no como una imagen de luz.",
+    "El valle queda oscuro bajo la montaña.": "Ignorar la claridad que aporta el amanecer.",
+    "Las monedas caen sobre la cordillera.": "Entender «oro» como monedas reales."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Lee: «El copihue rojo saluda a los visitantes desde la enredadera junto al sendero.» ¿Qué efecto produce «saluda»?",
+   "options": [
+    "Indica que la flor camina hacia el sendero.",
+    "Demuestra que la enredadera habla de verdad.",
+    "Presenta al copihue como un anfitrión acogedor.",
+    "Explica que los visitantes cortan la flor."
+   ],
+   "correct": "Presenta al copihue como un anfitrión acogedor.",
+   "hint": "Al dar al copihue una acción humana, el poema lo presenta como cercano y acogedor.",
+   "clue": "Piensa qué actitud tendría una persona que saluda a quienes llegan.",
+   "option_notes": {
+    "Indica que la flor camina hacia el sendero.": "Tomar literalmente una acción humana atribuida a la flor.",
+    "Explica que los visitantes cortan la flor.": "Confundir saludar con dañar o arrancar.",
+    "Demuestra que la enredadera habla de verdad.": "Olvidar que se trata de un recurso poético."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Lee: «En la plaza suena un tambor,\nbailan los niños llenos de color.» ¿Qué verso puede seguir con rima consonante y mantener la escena festiva?",
+   "options": [
+    "La lluvia cae despacio sobre una flor.",
+    "El zorro duerme junto al motor.",
+    "El invierno cubre de nieve el sector.",
+    "Las cuecas giran bajo el resplandor."
+   ],
+   "correct": "Las cuecas giran bajo el resplandor.",
+   "hint": "El verso correcto debe terminar con los mismos sonidos y continuar la imagen de música y baile.",
+   "clue": "Revisa la terminación de los versos y luego si la escena continúa.",
+   "option_notes": {
+    "El zorro duerme junto al motor.": "Conserva la rima, pero reemplaza el baile por una escena de descanso.",
+    "La lluvia cae despacio sobre una flor.": "Conserva la rima, pero no continúa la celebración.",
+    "El invierno cubre de nieve el sector.": "Conserva la rima, pero cambia la fiesta por una escena invernal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Lee: «El río corre como un niño que vuelve feliz a su casa; sus aguas despiertan la mañana.» ¿Qué efecto produce la comparación?",
+   "options": [
+    "Hace que el río parezca lento y silencioso.",
+    "Da al río una imagen juguetona y llena de alegría.",
+    "Explica que un niño vive dentro del río.",
+    "Presenta al río como una amenaza oscura."
+   ],
+   "correct": "Da al río una imagen juguetona y llena de alegría.",
+   "hint": "Comparar el río con un niño feliz hace imaginar un movimiento vivo y comunica alegría.",
+   "clue": "Observa qué características del niño se trasladan al río.",
+   "option_notes": {
+    "Hace que el río parezca lento y silencioso.": "Atribuir al río características opuestas a las del niño feliz.",
+    "Presenta al río como una amenaza oscura.": "Interpretar la fuerza del río como peligro, sin apoyo textual.",
+    "Explica que un niño vive dentro del río.": "Leer la comparación como un hecho literal."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

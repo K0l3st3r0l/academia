@@ -1,0 +1,264 @@
+{
+ "oa": "OA5",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "En un día, ¿qué elección muestra mayor variedad de alimentos?",
+   "options": [
+    "Pan con queso en las tres comidas principales.",
+    "Galletas y bebida azucarada en varias ocasiones.",
+    "Arroz con pollo en las tres comidas principales.",
+    "Lentejas, ensalada, yogur, fruta y pan."
+   ],
+   "correct": "Lentejas, ensalada, yogur, fruta y pan.",
+   "hint": "La variedad se logra incluyendo distintos alimentos y grupos durante el día.",
+   "clue": "Cuenta los alimentos distintos y considera si pertenecen a grupos diferentes.",
+   "option_notes": {
+    "Pan con queso en las tres comidas principales.": "Confunde repetir dos alimentos con lograr variedad durante el día.",
+    "Arroz con pollo en las tres comidas principales.": "Confunde repetir una comida abundante con una alimentación variada.",
+    "Galletas y bebida azucarada en varias ocasiones.": "Confunde repetir productos con incorporar distintos grupos de alimentos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "¿Qué significa cuidar el tamaño de las porciones que comes?",
+   "options": [
+    "Servirte siempre el plato más grande.",
+    "Elegir una cantidad adecuada para cada comida.",
+    "Comer hasta sentirte demasiado lleno.",
+    "Evitar todos los alimentos con más energía."
+   ],
+   "correct": "Elegir una cantidad adecuada para cada comida.",
+   "hint": "El tamaño de la porción es la cantidad que comes en una ocasión; debe ser adecuada, no excesiva.",
+   "clue": "Piensa en cuánto comes cada vez, no en cuántas veces comes.",
+   "option_notes": {
+    "Servirte siempre el plato más grande.": "Confunde una porción adecuada con elegir siempre la mayor cantidad.",
+    "Comer hasta sentirte demasiado lleno.": "Confunde quedar demasiado lleno con comer una cantidad adecuada.",
+    "Evitar todos los alimentos con más energía.": "Confunde cuidar porciones con eliminar alimentos que aportan energía."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "¿Qué describe mejor la frecuencia de consumo de un alimento?",
+   "options": [
+    "Cuántas veces lo comes en un período.",
+    "La cantidad que cabe en un plato.",
+    "Los colores que tiene el alimento.",
+    "Los grupos de nutrientes que aporta."
+   ],
+   "correct": "Cuántas veces lo comes en un período.",
+   "hint": "La frecuencia indica cuántas veces consumes una porción durante un período, como un día.",
+   "clue": "No pienses en el tamaño ni en el color: piensa en las veces que ocurre.",
+   "option_notes": {
+    "La cantidad que cabe en un plato.": "Confunde frecuencia con la cantidad servida en cada ocasión.",
+    "Los colores que tiene el alimento.": "Confunde frecuencia con las características visibles del alimento.",
+    "Los grupos de nutrientes que aporta.": "Confunde frecuencia con la función o los nutrientes del alimento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "¿Cuál alimento aporta proteínas que ayudan al crecimiento y a reparar tejidos?",
+   "options": [
+    "Aceite de oliva.",
+    "Agua potable.",
+    "Manzana picada.",
+    "Huevo cocido."
+   ],
+   "correct": "Huevo cocido.",
+   "hint": "Las proteínas de alimentos como el huevo ayudan a formar y reparar tejidos del cuerpo.",
+   "clue": "Busca un alimento que aporte proteínas, no uno que principalmente hidrate o dé sabor.",
+   "option_notes": {
+    "Manzana picada.": "Confunde fruta y fibra con una fuente principal de proteínas.",
+    "Aceite de oliva.": "Confunde una grasa usada para cocinar con un alimento proteico.",
+    "Agua potable.": "Confunde hidratarse con obtener proteínas para formar tejidos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Para una colación en el colegio, ¿qué opción combina variedad y cantidades moderadas?",
+   "options": [
+    "Cinco galletas grandes y 500 mL de bebida.",
+    "Un paquete grande de papas fritas y bebida.",
+    "Un yogur natural, una fruta y 30 g de avena.",
+    "Tres plátanos grandes y nada más."
+   ],
+   "correct": "Un yogur natural, una fruta y 30 g de avena.",
+   "hint": "Incluye alimentos distintos y porciones razonables para una colación, sin basarla en productos ultraprocesados.",
+   "clue": "Revisa cuántos alimentos distintos hay y si la cantidad parece moderada.",
+   "option_notes": {
+    "Tres plátanos grandes y nada más.": "Confunde comer mucho de un solo alimento con tener variedad.",
+    "Cinco galletas grandes y 500 mL de bebida.": "Confunde una colación abundante y azucarada con una porción moderada.",
+    "Un paquete grande de papas fritas y bebida.": "Elige productos en gran cantidad y no considera variedad ni calidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Valentina se salta el desayuno y luego come una porción enorme en el almuerzo. ¿Qué cambio sería más adecuado?",
+   "options": [
+    "Repartir alimentos en horarios y usar porciones adecuadas.",
+    "Comer la misma porción enorme en cada horario.",
+    "Tomar bebida azucarada entre comidas para no tener hambre.",
+    "Eliminar la cena y aumentar el tamaño del almuerzo."
+   ],
+   "correct": "Repartir alimentos en horarios y usar porciones adecuadas.",
+   "hint": "Distribuir las comidas ayuda a cuidar la frecuencia y evita compensar con una porción excesiva.",
+   "clue": "Busca una opción que corrija tanto el momento de comer como la cantidad.",
+   "option_notes": {
+    "Eliminar la cena y aumentar el tamaño del almuerzo.": "Mantiene pocas ocasiones y aumenta una porción ya excesiva.",
+    "Comer la misma porción enorme en cada horario.": "Aumenta la frecuencia, pero conserva cantidades excesivas.",
+    "Tomar bebida azucarada entre comidas para no tener hambre.": "Confunde una bebida azucarada con una comida distribuida y equilibrada."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Después de andar en bicicleta, ¿qué colación combina una fuente de energía con una fruta?",
+   "options": [
+    "Un caramelo y una bebida azucarada.",
+    "Aceite y una cucharadita de sal.",
+    "Agua y una hoja de lechuga.",
+    "Un pan integral y un plátano."
+   ],
+   "correct": "Un pan integral y un plátano.",
+   "hint": "El pan aporta carbohidratos y el plátano suma energía y nutrientes a la colación.",
+   "clue": "Busca una opción que tenga un alimento energético y además una fruta.",
+   "option_notes": {
+    "Agua y una hoja de lechuga.": "Confunde hidratarse y comer verduras con una fuente principal de energía.",
+    "Aceite y una cucharadita de sal.": "Confunde condimentos y grasas aisladas con una colación equilibrada.",
+    "Un caramelo y una bebida azucarada.": "Confunde productos azucarados con una colación que incluye fruta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Para apoyar el desarrollo de huesos y dientes, ¿qué elección es más adecuada?",
+   "options": [
+    "Aceite, porque entrega vitaminas a los dientes.",
+    "Caramelos, porque forman huesos.",
+    "Yogur natural, porque aporta calcio.",
+    "Bebida azucarada, porque reemplaza el agua."
+   ],
+   "correct": "Yogur natural, porque aporta calcio.",
+   "hint": "El calcio del yogur ayuda a formar y mantener huesos y dientes durante el desarrollo.",
+   "clue": "Relaciona el desarrollo de huesos y dientes con el nutriente calcio.",
+   "option_notes": {
+    "Bebida azucarada, porque reemplaza el agua.": "Confunde una bebida azucarada con una fuente de calcio.",
+    "Caramelos, porque forman huesos.": "Confunde el sabor dulce con nutrientes necesarios para los huesos.",
+    "Aceite, porque entrega vitaminas a los dientes.": "Confunde una grasa con el principal aporte de calcio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Durante un día, Nico come solo dos veces: en cada ocasión, un plato muy grande de arroz y pollo. ¿Qué cambio mejora a la vez variedad, frecuencia y tamaño de porción?",
+   "options": [
+    "Cambiar el pollo por galletas y mantener las dos comidas.",
+    "Agregar frutas y verduras, repartir comidas y reducir porciones.",
+    "Comer arroz y pollo cuatro veces, con porciones igual de grandes.",
+    "Mantener dos comidas y duplicar el arroz para tener energía."
+   ],
+   "correct": "Agregar frutas y verduras, repartir comidas y reducir porciones.",
+   "hint": "La mejora combina más alimentos distintos, comidas distribuidas y cantidades no excesivas.",
+   "clue": "La respuesta correcta debe resolver las tres dificultades, no solo una.",
+   "option_notes": {
+    "Mantener dos comidas y duplicar el arroz para tener energía.": "Aumenta un alimento y conserva pocas comidas y porciones excesivas.",
+    "Comer arroz y pollo cuatro veces, con porciones igual de grandes.": "Aumenta la frecuencia, pero conserva poca variedad y cantidades muy grandes.",
+    "Cambiar el pollo por galletas y mantener las dos comidas.": "Mantiene baja frecuencia y reemplaza un alimento por otro poco variado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Compara: Día 1: 2 comidas, misma comida y porciones grandes. Día 2: 4 momentos, alimentos variados y porciones moderadas. ¿Qué conclusión es mejor?",
+   "options": [
+    "El Día 2 organiza mejor variedad, tamaño y frecuencia.",
+    "El Día 1 es mejor porque comer mucho da más crecimiento.",
+    "Ambos son iguales porque importa solo el sabor.",
+    "El Día 1 es mejor porque repetir evita combinar alimentos."
+   ],
+   "correct": "El Día 2 organiza mejor variedad, tamaño y frecuencia.",
+   "hint": "El Día 2 considera los tres aspectos: alimentos diferentes, cantidades adecuadas y varias ocasiones.",
+   "clue": "Evalúa las tres palabras: variedad, tamaño y frecuencia.",
+   "option_notes": {
+    "El Día 1 es mejor porque comer mucho da más crecimiento.": "Cree que comer mucho garantiza el crecimiento, sin analizar los tres aspectos.",
+    "Ambos son iguales porque importa solo el sabor.": "Ignora variedad, tamaño y frecuencia, y se fija solo en una preferencia.",
+    "El Día 1 es mejor porque repetir evita combinar alimentos.": "Confunde repetir alimentos con mejorar la variedad de la alimentación."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Para una excursión, ¿qué selección cubre mejor el crecimiento, la reparación, el desarrollo y el movimiento del cuerpo?",
+   "options": [
+    "Arroz, galletas, bebida y agua.",
+    "Lentejas, pan, fruta y yogur.",
+    "Caramelos, bebida, papas fritas y sal.",
+    "Lechuga, agua, aceite y jugo."
+   ],
+   "correct": "Lentejas, pan, fruta y yogur.",
+   "hint": "Las lentejas aportan proteínas; pan y fruta, energía; el yogur aporta calcio para huesos y dientes.",
+   "clue": "Relaciona proteínas con tejidos, calcio con huesos y carbohidratos con movimiento.",
+   "option_notes": {
+    "Caramelos, bebida, papas fritas y sal.": "Confunde energía de productos ultraprocesados con cubrir proteínas y calcio.",
+    "Lechuga, agua, aceite y jugo.": "Elige agua y acompañamientos, pero deja fuera proteínas y calcio.",
+    "Arroz, galletas, bebida y agua.": "Incluye energía, pero no una fuente clara de proteínas ni de calcio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "En un registro diario, Elena anota: desayuno, yogur y fruta; almuerzo, lentejas y ensalada; once, tres panes grandes con queso. ¿Qué recomendación es más adecuada?",
+   "options": [
+    "Aumentar todas las porciones para apoyar el crecimiento.",
+    "Cambiar frutas y verduras por dulces de igual tamaño.",
+    "Mantener la variedad y distribuir una porción moderada de pan.",
+    "Eliminar las lentejas porque aportan demasiada proteína."
+   ],
+   "correct": "Mantener la variedad y distribuir una porción moderada de pan.",
+   "hint": "El registro tiene variedad, pero concentra mucho pan en la once; conviene moderar y distribuir la cantidad.",
+   "clue": "Observa qué alimentos variados aparecen y en qué momento se concentra la mayor cantidad.",
+   "option_notes": {
+    "Eliminar las lentejas porque aportan demasiada proteína.": "Confunde una fuente de proteínas con un alimento dañino para crecer.",
+    "Cambiar frutas y verduras por dulces de igual tamaño.": "Confunde moderar porciones con reemplazar alimentos variados por dulces.",
+    "Aumentar todas las porciones para apoyar el crecimiento.": "Confunde apoyar el crecimiento con aumentar indiscriminadamente las cantidades."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

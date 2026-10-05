@@ -1,0 +1,264 @@
+{
+ "oa": "OA5",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "Lee: “Good morning, Nico!” Nico: “Hi! See you tomorrow!” ¿Qué significa “See you tomorrow”?",
+   "options": [
+    "Gracias por venir",
+    "¿Cómo estás?",
+    "Buenos días",
+    "Nos vemos mañana"
+   ],
+   "correct": "Nos vemos mañana",
+   "hint": "“See you tomorrow” es una despedida que indica que se verán al día siguiente.",
+   "clue": "Fíjate si la expresión saluda, pregunta, agradece o se despide.",
+   "option_notes": {
+    "Buenos días": "Confunde la despedida con el saludo del inicio.",
+    "¿Cómo estás?": "Interpreta la expresión como una pregunta.",
+    "Gracias por venir": "Confunde la despedida con un agradecimiento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "Lee: “What’s your name? —My name is Emilia. How old are you? —I’m ten. Where do you live? —I live in Valdivia.” ¿Dónde vive Emilia?",
+   "options": [
+    "Vive en Valdivia",
+    "Visita Valdivia",
+    "Se llama Emilia",
+    "Tiene diez años"
+   ],
+   "correct": "Vive en Valdivia",
+   "hint": "La respuesta aparece después de “Where do you live?”: “I live in Valdivia”.",
+   "clue": "Relaciona cada pregunta con su respuesta: nombre, edad y lugar.",
+   "option_notes": {
+    "Se llama Emilia": "Confunde el nombre con el lugar donde vive.",
+    "Tiene diez años": "Confunde la edad con el lugar.",
+    "Visita Valdivia": "Confunde vivir en un lugar con visitarlo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "Lee: “The small dog runs. The small dog jumps. The small dog is happy.” ¿Qué grupo de palabras se repite?",
+   "options": [
+    "Dog is happy",
+    "Small dog runs",
+    "The small dog",
+    "The dog jumps"
+   ],
+   "correct": "The small dog",
+   "hint": "“The small dog” aparece al comienzo de las tres oraciones.",
+   "clue": "Compara las palabras que aparecen en cada oración.",
+   "option_notes": {
+    "Small dog runs": "Aparece solo en la primera oración.",
+    "The dog jumps": "Aparece solo en la segunda oración.",
+    "Dog is happy": "Aparece solo en la tercera oración."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "easy",
+   "text": "Un cartel del clima muestra un dibujo de una nube con gotas y dice: “Rainy today”. ¿Qué tiempo hace?",
+   "options": [
+    "Está lloviendo",
+    "Está soleado",
+    "Hay mucho viento",
+    "Está nevando"
+   ],
+   "correct": "Está lloviendo",
+   "hint": "“Rainy” significa que está lloviendo; el dibujo de gotas confirma la información.",
+   "clue": "Relaciona el dibujo con la palabra del cartel.",
+   "option_notes": {
+    "Está soleado": "Confunde la lluvia con el sol.",
+    "Está nevando": "Confunde las gotas de lluvia con nieve.",
+    "Hay mucho viento": "Confunde el mal tiempo con viento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Lee: “First, open your book. Then, circle the animals. Finally, write your name.” ¿Qué haces después de abrir el libro?",
+   "options": [
+    "Dibujas una casa",
+    "Escribes tu nombre",
+    "Rodeas los animales",
+    "Cierras el libro"
+   ],
+   "correct": "Rodeas los animales",
+   "hint": "Después de abrir el libro viene la acción indicada por “Then”: rodear los animales.",
+   "clue": "Ordena las acciones con first, then y finally.",
+   "option_notes": {
+    "Escribes tu nombre": "El nombre se escribe al final, no después de abrir.",
+    "Cierras el libro": "Agrega una acción que no aparece.",
+    "Dibujas una casa": "Cambia “circle the animals” por dibujar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Lee: “I’m sorry, Ben. I broke your ruler. May I use your pencil, please? —Yes. Here you are. —Thank you!” ¿Por qué dice “Thank you”?",
+   "options": [
+    "Porque rompió una regla",
+    "Porque ve a Ben",
+    "Porque Ben le entrega un lápiz",
+    "Porque pide permiso"
+   ],
+   "correct": "Porque Ben le entrega un lápiz",
+   "hint": "Dice “Thank you” después de que Ben acepta y le entrega el lápiz.",
+   "clue": "Mira qué ocurre justo antes de la expresión de agradecimiento.",
+   "option_notes": {
+    "Porque rompió una regla": "Eso explica “I’m sorry”, no “Thank you”.",
+    "Porque pide permiso": "Pedir permiso ocurre antes de recibir el lápiz.",
+    "Porque ve a Ben": "Ver a Ben no explica el agradecimiento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Lee: “The red lunch box is under the chair. The green bottle is on the table. The blue cup is next to the bottle.” Para tomar el objeto junto al vaso azul, ¿cuál eliges?",
+   "options": [
+    "El vaso azul de la mesa",
+    "La botella verde",
+    "La caja roja de colación",
+    "La silla junto a la caja"
+   ],
+   "correct": "La botella verde",
+   "hint": "El vaso azul está junto a la botella; por eso debes elegir la botella verde.",
+   "clue": "Busca la oración que relaciona el vaso azul con otro objeto.",
+   "option_notes": {
+    "La caja roja de colación": "Confunde el objeto bajo la silla con el que está junto al vaso.",
+    "El vaso azul de la mesa": "Elige el objeto de referencia, no el que está junto a él.",
+    "La silla junto a la caja": "Confunde la silla con el objeto relacionado con el vaso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "medium",
+   "text": "Lee: “Tom has 3 sopaipillas. He likes them, but he gives 1 to Ana.” ¿Cuántas sopaipillas tiene Tom ahora?",
+   "options": [
+    "2",
+    "1",
+    "3",
+    "4"
+   ],
+   "correct": "2",
+   "hint": "Tom empieza con 3 y entrega 1; calcula 3 − 1.",
+   "clue": "Cuenta lo que tenía y resta lo que entregó.",
+   "option_notes": {
+    "1": "Resta las 3 iniciales en vez de restar la que entrega.",
+    "3": "Olvida que Tom entrega una sopaipilla.",
+    "4": "Suma la que entrega en vez de restarla."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Lee: “Lucas gets up at 7:00. He has breakfast at 7:30. He walks to school at 8:00. It is raining, so he takes an umbrella.” ¿Qué secuencia sigue Lucas antes de llegar a la escuela?",
+   "options": [
+    "Camina a la escuela, se levanta y desayuna",
+    "Desayuna, se levanta y camina a la escuela",
+    "Se levanta, camina a la escuela y desayuna",
+    "Se levanta, desayuna y camina a la escuela"
+   ],
+   "correct": "Se levanta, desayuna y camina a la escuela",
+   "hint": "Las horas muestran el orden: 7:00 levantarse, 7:30 desayunar y 8:00 caminar.",
+   "clue": "Ordena las acciones según las horas, no según cómo aparecen las palabras.",
+   "option_notes": {
+    "Desayuna, se levanta y camina a la escuela": "Intercambia las acciones de las 7:00 y 7:30.",
+    "Camina a la escuela, se levanta y desayuna": "Pone primero la acción de las 8:00.",
+    "Se levanta, camina a la escuela y desayuna": "Pone el desayuno después de caminar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Lee: “At the school garden, a gardener waters the plants. The plants need water. The gardener works every morning.” ¿Qué podemos concluir sobre su trabajo?",
+   "options": [
+    "Prepara el almuerzo escolar",
+    "Entrena al equipo de fútbol",
+    "Vende libros en la escuela",
+    "Cuida las plantas del jardín"
+   ],
+   "correct": "Cuida las plantas del jardín",
+   "hint": "“Gardener” se relaciona con “garden” y “waters the plants”, así que cuida las plantas.",
+   "clue": "Relaciona a gardener con garden y con la acción waters.",
+   "option_notes": {
+    "Vende libros en la escuela": "No hay libros ni una acción de vender.",
+    "Prepara el almuerzo escolar": "El texto habla de plantas, no de comida.",
+    "Entrena al equipo de fútbol": "No aparece deporte ni entrenamiento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Lee: “From the gate, walk straight to the tree. Turn left and walk to the gym. The library is next to the gym, opposite the park.” ¿Qué recorrido te deja junto a la biblioteca?",
+   "options": [
+    "Ve al árbol, gira a la derecha y sigue al parque",
+    "Ve al árbol, gira a la izquierda y sigue al gimnasio",
+    "Gira a la derecha en la entrada y sigue al parque",
+    "Ve al parque, gira a la derecha y vuelve al árbol"
+   ],
+   "correct": "Ve al árbol, gira a la izquierda y sigue al gimnasio",
+   "hint": "El gimnasio está junto a la biblioteca, así que debes seguir la ruta que termina allí.",
+   "clue": "Sigue cada instrucción en orden y fíjate qué lugar está junto a la biblioteca.",
+   "option_notes": {
+    "Gira a la derecha en la entrada y sigue al parque": "Cambia el giro y llega a otro lugar.",
+    "Ve al parque, gira a la derecha y vuelve al árbol": "Invierte el recorrido y no sigue el aviso.",
+    "Ve al árbol, gira a la derecha y sigue al parque": "Gira en la dirección opuesta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA5",
+   "difficulty": "hard",
+   "text": "Lee: “Hi, I’m Martín. I have a blue bike. I like apples, but I don’t like milk. On Saturday, I visit my grandmother in Chillán.” ¿Qué afirmación es correcta?",
+   "options": [
+    "Martín prefiere leche y visita a su abuela en Chillán",
+    "Martín tiene una bicicleta azul y visita a su abuela en Chillán",
+    "Martín tiene una bicicleta roja y visita a su abuela en Chillán",
+    "Martín tiene una bicicleta azul y visita a su abuelo en Chillán"
+   ],
+   "correct": "Martín tiene una bicicleta azul y visita a su abuela en Chillán",
+   "hint": "El mensaje une dos datos: su bicicleta es azul y visita a su abuela en Chillán.",
+   "clue": "Comprueba el color, el alimento que le gusta y el familiar que visita.",
+   "option_notes": {
+    "Martín tiene una bicicleta roja y visita a su abuela en Chillán": "Cambia el color de la bicicleta.",
+    "Martín prefiere leche y visita a su abuela en Chillán": "Invierte su preferencia: no le gusta la leche.",
+    "Martín tiene una bicicleta azul y visita a su abuelo en Chillán": "Confunde grandmother, que significa abuela."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,270 @@
+{
+ "oa": "OA25",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA25",
+   "difficulty": "easy",
+   "text": "Lanzas un dado común de seis caras. ¿Qué evento es seguro?",
+   "options": [
+    "Obtener un número mayor que 6",
+    "Obtener un número del 1 al 6",
+    "Obtener un número par",
+    "Obtener exactamente un 1"
+   ],
+   "correct": "Obtener un número del 1 al 6",
+   "hint": "Todas las caras del dado muestran un número entre 1 y 6, por eso ese evento siempre ocurre.",
+   "clue": "Busca el evento que no puede fallar al lanzar el dado.",
+   "option_notes": {
+    "Obtener un número mayor que 6": "Confunde un evento imposible con uno seguro.",
+    "Obtener un número par": "Confunde un evento posible con uno seguro.",
+    "Obtener exactamente un 1": "Olvida que solo una cara muestra el 1."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del OA: pide identificar un evento seguro, no comparar probabilidades."
+   ]
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "easy",
+   "text": "De una caja sacas al azar una de diez tarjetas numeradas del 1 al 10. ¿Qué evento es imposible?",
+   "options": [
+    "Sacar una tarjeta con número menor que 10",
+    "Sacar una tarjeta con número par",
+    "Sacar la tarjeta con 12",
+    "Sacar la tarjeta con 1"
+   ],
+   "correct": "Sacar la tarjeta con 12",
+   "hint": "La caja solo contiene tarjetas del 1 al 10; la tarjeta 12 no está.",
+   "clue": "Revisa qué números existen realmente dentro de la caja.",
+   "option_notes": {
+    "Sacar una tarjeta con número par": "Confunde un evento posible con uno imposible.",
+    "Sacar la tarjeta con 1": "Olvida que la tarjeta 1 sí está en la caja.",
+    "Sacar una tarjeta con número menor que 10": "Olvida que hay tarjetas del 1 al 9 en la caja."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del OA: pide identificar un evento imposible, no comparar probabilidades."
+   ]
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "easy",
+   "text": "Lanzas una moneda equilibrada una vez. ¿Cómo se comparan las probabilidades de obtener cara y sello?",
+   "options": [
+    "Son igual de probables",
+    "Es más probable la cara",
+    "Una de las dos es imposible",
+    "Es más probable el sello"
+   ],
+   "correct": "Son igual de probables",
+   "hint": "La moneda equilibrada no favorece ningún lado, así que cara y sello tienen la misma probabilidad.",
+   "clue": "Compara los dos lados de una moneda equilibrada.",
+   "option_notes": {
+    "Es más probable la cara": "Supone que un lado de la moneda tiene ventaja.",
+    "Es más probable el sello": "Supone que el otro lado tiene ventaja.",
+    "Una de las dos es imposible": "Confunde igual posibilidad con no poder ocurrir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "easy",
+   "text": "Una ruleta tiene 4 sectores iguales: rojo, azul, verde y amarillo. ¿Cuál evento es menos probable?",
+   "options": [
+    "Caer en un color distinto de rojo",
+    "Caer en un color distinto de verde",
+    "Caer en uno de los cuatro colores",
+    "Caer solamente en el sector rojo"
+   ],
+   "correct": "Caer solamente en el sector rojo",
+   "hint": "Cada color ocupa un sector; caer solamente en rojo reúne un sector, menos que las otras opciones.",
+   "clue": "Cuenta cuántos sectores favorecen cada evento.",
+   "option_notes": {
+    "Caer en uno de los cuatro colores": "Confunde un evento seguro con el menos probable.",
+    "Caer en un color distinto de verde": "Cuenta tres sectores favorables, en vez de uno.",
+    "Caer en un color distinto de rojo": "Confunde excluir un color con elegir un solo sector."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "medium",
+   "text": "En un lanzamiento de dado, Camila obtiene punto si sale par y Diego si sale mayor que 4. ¿Quién tiene más probabilidad de obtener punto?",
+   "options": [
+    "Diego tiene mayor probabilidad",
+    "Cualquier número da punto a ambos",
+    "Ambos tienen igual probabilidad",
+    "Camila tiene mayor probabilidad"
+   ],
+   "correct": "Camila tiene mayor probabilidad",
+   "hint": "Los pares son 2, 4 y 6; los mayores que 4 son 5 y 6: hay más casos para Camila.",
+   "clue": "Escribe las caras que cumplen cada condición.",
+   "option_notes": {
+    "Diego tiene mayor probabilidad": "Cuenta solo el 6 como número mayor que 4.",
+    "Ambos tienen igual probabilidad": "Confunde compartir el 6 con tener la misma cantidad de casos.",
+    "Cualquier número da punto a ambos": "Cree que todas las caras cumplen ambas condiciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "medium",
+   "text": "En una caja hay 2 tarjetas de cóndor y 3 de pudú; en otra, 4 de cóndor y 6 de pudú. Sacas una tarjeta al azar. ¿Dónde es más probable sacar cóndor?",
+   "options": [
+    "Es igual en ambas cajas",
+    "Es mayor en la segunda caja",
+    "Es segura en ambas cajas",
+    "Es mayor en la primera caja"
+   ],
+   "correct": "Es igual en ambas cajas",
+   "hint": "La segunda caja duplica las tarjetas de cada animal, así que conserva la misma proporción.",
+   "clue": "Observa si una caja mantiene la relación entre cóndores y pudúes.",
+   "option_notes": {
+    "Es mayor en la primera caja": "Se fija en la caja con menos tarjetas y no en la proporción.",
+    "Es segura en ambas cajas": "Confunde un evento posible con uno seguro.",
+    "Es mayor en la segunda caja": "Confunde más tarjetas de cóndor con mayor probabilidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "medium",
+   "text": "Lanzas un dado común. ¿Qué evento tiene la misma probabilidad que obtener un número mayor que 3?",
+   "options": [
+    "Obtener un número menor que 3",
+    "Obtener un número primo entre 1 y 6",
+    "Obtener un múltiplo de 3",
+    "Obtener un número menor que 6"
+   ],
+   "correct": "Obtener un número primo entre 1 y 6",
+   "hint": "Mayor que 3 da 4, 5 y 6; primo da 2, 3 y 5: ambos tienen tres resultados.",
+   "clue": "Escribe las caras que cumplen cada condición y compáralas.",
+   "option_notes": {
+    "Obtener un número menor que 3": "Confunde menor que 3 con menor o igual que 3.",
+    "Obtener un múltiplo de 3": "Cuenta solo dos resultados: 3 y 6.",
+    "Obtener un número menor que 6": "Cuenta cinco resultados, no tres."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del nivel: números primos se enseñan en 6° básico."
+   ]
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "medium",
+   "text": "En una tómbola hay 2 pelotas, 2 libros y 2 rompecabezas, todos los premios iguales. ¿Qué evento es más probable al sacar uno?",
+   "options": [
+    "Sacar una pelota",
+    "Sacar un libro",
+    "No sacar un rompecabezas",
+    "Sacar un rompecabezas"
+   ],
+   "correct": "No sacar un rompecabezas",
+   "hint": "No sacar un rompecabezas reúne los cuatro premios restantes; cada tipo por separado tiene solo dos.",
+   "clue": "Cuenta cuántos premios favorecen cada alternativa.",
+   "option_notes": {
+    "Sacar un rompecabezas": "Elige uno de los dos premios de ese tipo, no los cuatro favorables.",
+    "Sacar un libro": "Compara un solo tipo con el evento que reúne dos tipos.",
+    "Sacar una pelota": "Mira un solo tipo y olvida los otros cuatro premios."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "hard",
+   "text": "En una kermés hay dos juegos. En A, 3 de 4 tarjetas dan premio; en B, 4 de 7. Al elegir una tarjeta al azar, ¿en cuál juego es más probable ganar?",
+   "options": [
+    "En el juego A es más probable",
+    "Es igual en ambos juegos",
+    "En el juego B es más probable",
+    "No se pueden comparar"
+   ],
+   "correct": "En el juego A es más probable",
+   "hint": "En A solo 1 de 4 no da premio; en B, 3 de 7 no dan. A deja una parte menor sin premio.",
+   "clue": "No mires solo cuántos premios hay: compara también las tarjetas sin premio.",
+   "option_notes": {
+    "En el juego B es más probable": "Se fija en que B tiene más tarjetas premiadas, sin mirar el total.",
+    "Es igual en ambos juegos": "Cree que cambiar el total no afecta la proporción.",
+    "No se pueden comparar": "Piensa que los totales distintos impiden comparar proporciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "hard",
+   "text": "Una ruleta tiene 4 sectores rojos y 2 azules, todos iguales. Se tapa un rojo y se agrega un azul del mismo tamaño. ¿Cómo se comparan ahora las probabilidades de rojo y azul?",
+   "options": [
+    "Rojo es más probable que azul",
+    "Rojo es imposible",
+    "Azul es más probable que rojo",
+    "Rojo y azul son igual de probables"
+   ],
+   "correct": "Rojo y azul son igual de probables",
+   "hint": "Después de los cambios quedan 3 sectores rojos y 3 azules; con igual cantidad, sus probabilidades son iguales.",
+   "clue": "Actualiza ambas cantidades después de los dos cambios.",
+   "option_notes": {
+    "Rojo es más probable que azul": "Usa los cuatro rojos iniciales y olvida que uno se tapó.",
+    "Azul es más probable que rojo": "Suma el azul nuevo, pero no quita el rojo tapado.",
+    "Rojo es imposible": "Confunde tapar un sector con eliminar todos los rojos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "hard",
+   "text": "Lanzas dos monedas equilibradas una vez. Martín gana si salen dos caras; Sofía, si sale al menos una cara. ¿Quién tiene mayor probabilidad de ganar?",
+   "options": [
+    "Ambos tienen igual probabilidad",
+    "Cada uno gana en un solo caso",
+    "Sofía tiene mayor probabilidad",
+    "Martín tiene mayor probabilidad"
+   ],
+   "correct": "Sofía tiene mayor probabilidad",
+   "hint": "Sofía gana en cara-cara, cara-sello y sello-cara; Martín solo en cara-cara.",
+   "clue": "Enumera los cuatro pares posibles de resultados.",
+   "option_notes": {
+    "Martín tiene mayor probabilidad": "Cuenta solo el caso de dos caras y olvida los casos con una cara.",
+    "Ambos tienen igual probabilidad": "Confunde compartir un caso con tener igual cantidad de casos.",
+    "Cada uno gana en un solo caso": "Cuenta solo una combinación favorable para cada jugador."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA25",
+   "difficulty": "hard",
+   "text": "Lanzas un dado común dos veces. ¿Qué evento es más probable?",
+   "options": [
+    "Obtener un 1 en ambos lanzamientos",
+    "Obtener al menos un 6",
+    "Obtener un 6 solo en el primero",
+    "Obtener un 6 en ambos lanzamientos"
+   ],
+   "correct": "Obtener al menos un 6",
+   "hint": "Al menos un 6 incluye el caso de dos 6 y también los casos con un solo 6.",
+   "clue": "Busca la alternativa que incluye varios casos posibles, no solo uno.",
+   "option_notes": {
+    "Obtener un 6 en ambos lanzamientos": "Confunde al menos uno con exactamente dos.",
+    "Obtener un 6 solo en el primero": "Olvida los casos con un 6 solo en el segundo o en ambos.",
+    "Obtener un 1 en ambos lanzamientos": "Considera un único par de resultados."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

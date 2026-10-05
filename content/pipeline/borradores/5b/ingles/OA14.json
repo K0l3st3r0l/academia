@@ -1,0 +1,264 @@
+{
+ "oa": "OA14",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Completa la lista de compras. El dibujo junto al espacio muestra dos frutas amarillas, curvas y con cáscara: “Shopping list: 2 ______, 1 litre of milk, 4 apples.”",
+   "options": [
+    "carrots",
+    "oranges",
+    "banana",
+    "bananas"
+   ],
+   "correct": "bananas",
+   "hint": "El dibujo muestra dos plátanos; en inglés, “plátanos” es “bananas”.",
+   "clue": "Identifica la fruta y revisa que después del número 2 vaya en plural.",
+   "option_notes": {
+    "banana": "Olvida que el número 2 exige usar el plural.",
+    "oranges": "Confunde la fruta amarilla y curva con naranjas.",
+    "carrots": "Elige un alimento distinto de la fruta del dibujo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Sigue el modelo y completa la postal. Modelo: “It is sunny.” Postal: “Greetings from La Serena! It is ______.” El dibujo descrito muestra una nube con gotas de lluvia.",
+   "options": [
+    "windy",
+    "rainy",
+    "snowy",
+    "sunny"
+   ],
+   "correct": "rainy",
+   "hint": "El dibujo tiene gotas de lluvia; la palabra correcta es “rainy”.",
+   "clue": "Observa el estado del tiempo que muestra el dibujo.",
+   "option_notes": {
+    "sunny": "Repite la palabra del modelo sin mirar el dibujo.",
+    "windy": "Confunde las gotas con un día de viento.",
+    "snowy": "Confunde la lluvia con la nieve."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Completa esta rima: “I see a cat. It wears a ______.” El dibujo descrito muestra al gato con una prenda en la cabeza.",
+   "options": [
+    "shirt",
+    "shoe",
+    "hat",
+    "coat"
+   ],
+   "correct": "hat",
+   "hint": "“Hat” es una prenda para la cabeza y rima con “cat”.",
+   "clue": "Busca una prenda que combine con el dibujo y rime con “cat”.",
+   "option_notes": {
+    "coat": "Elige una prenda posible, pero no para la cabeza ni para la rima.",
+    "shoe": "Elige una prenda que no corresponde al dibujo ni al sonido final.",
+    "shirt": "Elige otra prenda, pero no la que rima con “cat”."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "easy",
+   "text": "Completa la tira cómica. Cuadro 1: Tom ve lluvia y dice “It is raining!” Cuadro 2: toma su ______ para salir.",
+   "options": [
+    "umbrella",
+    "bicycle",
+    "sunglasses",
+    "backpack"
+   ],
+   "correct": "umbrella",
+   "hint": "Cuando llueve, Tom necesita un paraguas: en inglés, “umbrella”.",
+   "clue": "Relaciona la lluvia con el objeto que protege de ella.",
+   "option_notes": {
+    "backpack": "Elige algo para llevar, pero no para protegerse de la lluvia.",
+    "bicycle": "Confunde el transporte con el objeto que necesita.",
+    "sunglasses": "Relaciona un accesorio con el clima equivocado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Usa el modelo del mini libro: “This is a ______. It can ______.” Página: “This is a pudú. It can ______.” El dibujo descrito muestra al pudú saltando.",
+   "options": [
+    "swim",
+    "read",
+    "fly",
+    "jump"
+   ],
+   "correct": "jump",
+   "hint": "Después de “can” va “jump”, porque el dibujo muestra que el pudú está saltando.",
+   "clue": "Observa la acción del pudú y revisa la palabra que sigue a “can”.",
+   "option_notes": {
+    "fly": "Confunde saltar con volar.",
+    "swim": "Elige una acción que no muestra el dibujo.",
+    "read": "Agrega una acción humana que no aparece."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Completa la postal siguiendo el modelo. Modelo: “I am in Valdivia. I can see a river.” Texto: “Hi, Sofía! I am in Chiloé. I can see a ______ and two boats. See you!” El dibujo muestra arena junto al mar.",
+   "options": [
+    "school",
+    "beach",
+    "mountain",
+    "forest"
+   ],
+   "correct": "beach",
+   "hint": "El dibujo muestra la costa con arena; esa palabra es “beach”.",
+   "clue": "Busca el lugar que puede verse junto al mar y la arena.",
+   "option_notes": {
+    "forest": "Confunde la arena de la costa con un lugar con árboles.",
+    "mountain": "Elige otro paisaje que no aparece en el dibujo.",
+    "school": "Confunde el lugar de la postal con el objeto nombrado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Completa la lista según la compra: cuatro papas y una zanahoria. Modelo: “Buy 3 tomatoes and 1 onion.” “Shopping list: Buy 4 ______ and 1 ______.”",
+   "options": [
+    "tomatoes and onion",
+    "potato and carrots",
+    "carrots and potato",
+    "potatoes and carrot"
+   ],
+   "correct": "potatoes and carrot",
+   "hint": "Con 4 va “potatoes” y con 1 va “carrot”, tal como pide la compra.",
+   "clue": "Identifica los alimentos y relaciónalos con sus cantidades.",
+   "option_notes": {
+    "potato and carrots": "Invierte las formas singular y plural de ambas cantidades.",
+    "tomatoes and onion": "Copia los alimentos del modelo en vez de usar la compra indicada.",
+    "carrots and potato": "Intercambia los alimentos y cambia sus cantidades."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "medium",
+   "text": "Completa el globo. Cuadro 1: Ana dice “I am hungry.” Cuadro 2: su amigo le da un sándwich y dice “Here you are.” Ana responde: “______!”",
+   "options": [
+    "Excuse me",
+    "Thank you",
+    "Good night",
+    "See you"
+   ],
+   "correct": "Thank you",
+   "hint": "Al recibir algo de otra persona, Ana agradece: “Thank you”.",
+   "clue": "Piensa qué dices cuando alguien te entrega comida.",
+   "option_notes": {
+    "Good night": "Usa una despedida nocturna en vez de agradecer la comida.",
+    "See you": "Usa una despedida, aunque Ana acaba de recibir algo.",
+    "Excuse me": "Usa una expresión para llamar la atención o disculparse."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Completa la postal: “Hi, Diego! I am in Torres del Paine. I can see snow and mountains. It is ______, so I wear my jacket. Love, Sofía.”",
+   "options": [
+    "hot",
+    "dry",
+    "cold",
+    "warm"
+   ],
+   "correct": "cold",
+   "hint": "La nieve y la chaqueta muestran que la temperatura es baja: “cold”.",
+   "clue": "Relaciona el paisaje nevado con la ropa que lleva Sofía.",
+   "option_notes": {
+    "hot": "Elige la temperatura opuesta a la que sugieren la nieve y la chaqueta.",
+    "dry": "Se fija en una condición del aire, no en la temperatura.",
+    "warm": "Confunde una temperatura agradable con una escena nevada."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Completa el mini libro según el modelo “I + verbo base”. Páginas: “I get up. I eat breakfast.” La siguiente muestra a Mateo cepillándose los dientes: “I ______ my teeth.”",
+   "options": [
+    "am brushing",
+    "wash",
+    "brush",
+    "brushes"
+   ],
+   "correct": "brush",
+   "hint": "El dibujo muestra cepillarse y, con “I”, queda “I brush my teeth”.",
+   "clue": "Identifica la acción y conserva el patrón “I + verbo sin cambio”.",
+   "option_notes": {
+    "brushes": "Usa una forma de tercera persona después de “I”.",
+    "am brushing": "Cambia el patrón de rutina a una forma continua.",
+    "wash": "Traduce literalmente “lavar” en vez del verbo habitual."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Completa la rima: “The little fox is red. At night it goes to its ______.” El dibujo descrito muestra al zorro durmiendo en una cama.",
+   "options": [
+    "bed",
+    "tree",
+    "lake",
+    "park"
+   ],
+   "correct": "bed",
+   "hint": "“Bed” significa cama, coincide con el dibujo y rima con “red”.",
+   "clue": "Usa la escena del dibujo y busca una palabra que rime con “red”.",
+   "option_notes": {
+    "tree": "Elige un lugar posible, pero no la cama ni una palabra que rime.",
+    "lake": "Confunde un lugar del ambiente con el lugar para dormir.",
+    "park": "Elige un lugar para jugar, no para dormir de noche."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA14",
+   "difficulty": "hard",
+   "text": "Completa el último globo. Cuadro 1: Martín dice “I want to play football.” Cuadro 2: comienza a llover y dice “Oh no!” Cuadro 3: su amiga propone un juego de mesa bajo techo: “Let’s play inside.” Martín responde: “That sounds ______!”",
+   "options": [
+    "fun",
+    "boring",
+    "bad",
+    "cold"
+   ],
+   "correct": "fun",
+   "hint": "La nueva propuesta permite jugar y resulta entretenida: “That sounds fun!”.",
+   "clue": "Observa cómo la propuesta de la amiga convierte un problema en una actividad agradable.",
+   "option_notes": {
+    "bad": "No considera que la propuesta resuelve el problema de la lluvia.",
+    "cold": "Confunde el clima exterior con la opinión sobre el juego.",
+    "boring": "Supone que el juego no entretiene, aunque Martín acepta la idea."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

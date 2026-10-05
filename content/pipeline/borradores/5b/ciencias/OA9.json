@@ -1,0 +1,264 @@
+{
+ "oa": "OA9",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "En una linterna escolar, quieres encender y apagar la luz sin sacar la pila. ¿Qué componente debes accionar?",
+   "options": [
+    "El cable, que une componentes.",
+    "La pila, que entrega energía.",
+    "El interruptor, que abre y cierra.",
+    "La ampolleta, que produce luz."
+   ],
+   "correct": "El interruptor, que abre y cierra.",
+   "hint": "La pieza que abre o cierra el camino eléctrico permite controlar la luz.",
+   "clue": "Piensa en la pieza móvil que controla el paso de la electricidad.",
+   "option_notes": {
+    "La pila, que entrega energía.": "Confunde la fuente de energía con el control del circuito.",
+    "El cable, que une componentes.": "Confunde unir las partes con abrir y cerrar el circuito.",
+    "La ampolleta, que produce luz.": "Confunde producir luz con controlar el circuito."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "¿Qué componente entrega la energía para que funcione una ampolleta en un circuito simple?",
+   "options": [
+    "La ampolleta que produce luz.",
+    "La pila que entrega energía.",
+    "El cable que une las partes.",
+    "El interruptor que abre el circuito."
+   ],
+   "correct": "La pila que entrega energía.",
+   "hint": "La fuente del circuito entrega energía, que la ampolleta puede transformar en luz.",
+   "clue": "Busca el componente que funciona como fuente de energía.",
+   "option_notes": {
+    "El interruptor que abre el circuito.": "Confunde controlar el circuito con entregarle energía.",
+    "El cable que une las partes.": "Confunde el conductor que conecta con la fuente de energía.",
+    "La ampolleta que produce luz.": "Confunde transformar energía en luz con entregar la energía."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "Si el interruptor de un circuito está abierto, ¿qué observas normalmente en la ampolleta?",
+   "options": [
+    "Permanece encendida.",
+    "Permanece apagada.",
+    "Brilla con más fuerza.",
+    "La pila se descarga al instante."
+   ],
+   "correct": "Permanece apagada.",
+   "hint": "Un interruptor abierto interrumpe el recorrido que necesita la electricidad.",
+   "clue": "Relaciona abierto con un camino que no está completo.",
+   "option_notes": {
+    "Permanece encendida.": "Confunde un circuito abierto con uno cerrado.",
+    "Brilla con más fuerza.": "Piensa que abrir el circuito aumenta la energía.",
+    "La pila se descarga al instante.": "Supone que la pila se descarga aunque el camino esté abierto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "easy",
+   "text": "En un circuito simple armado con una pila y una ampolleta, ¿para qué sirven principalmente los cables?",
+   "options": [
+    "Para unir los componentes y formar un camino.",
+    "Para abrir y cerrar el circuito.",
+    "Para guardar la energía de la pila.",
+    "Para producir la luz de la ampolleta."
+   ],
+   "correct": "Para unir los componentes y formar un camino.",
+   "hint": "Los cables conductores unen las partes y permiten formar un recorrido para la electricidad.",
+   "clue": "Fíjate en la función de la parte que conecta los objetos.",
+   "option_notes": {
+    "Para producir la luz de la ampolleta.": "Confunde la conexión eléctrica con la producción de luz.",
+    "Para guardar la energía de la pila.": "Confunde guardar energía con conducirla.",
+    "Para abrir y cerrar el circuito.": "Confunde el cable con la pieza que controla el circuito."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "Observa el esquema descrito: pila–cable–interruptor–cable–ampolleta–cable–pila. El interruptor está abierto. ¿Qué debes hacer para encenderla?",
+   "options": [
+    "Retirar la ampolleta del circuito.",
+    "Cambiar la pila por un cable.",
+    "Desconectar uno de los cables.",
+    "Cerrar el interruptor."
+   ],
+   "correct": "Cerrar el interruptor.",
+   "hint": "Al cerrar el interruptor, el recorrido entre los polos de la pila queda completo.",
+   "clue": "Busca la acción que cierre el camino sin quitar componentes.",
+   "option_notes": {
+    "Cambiar la pila por un cable.": "Confunde cerrar el circuito con reemplazar la fuente.",
+    "Desconectar uno de los cables.": "Rompería el camino que debe quedar completo.",
+    "Retirar la ampolleta del circuito.": "Quitar la ampolleta impide que funcione."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "Sofía usa una pila que funciona. Un extremo de cada cable toca un polo distinto de ella, pero la ampolleta no enciende. ¿Qué debería revisar?",
+   "options": [
+    "Que ambos cables toquen el vidrio de la ampolleta.",
+    "Que los cables rodeen la pila varias veces.",
+    "Que la ampolleta quede apoyada sobre la mesa.",
+    "Que cada cable toque un contacto metálico distinto de la ampolleta."
+   ],
+   "correct": "Que cada cable toque un contacto metálico distinto de la ampolleta.",
+   "hint": "La corriente necesita entrar y salir por los contactos metálicos para completar el recorrido.",
+   "clue": "El vidrio no es el contacto que conecta la ampolleta al circuito.",
+   "option_notes": {
+    "Que ambos cables toquen el vidrio de la ampolleta.": "Confunde el vidrio exterior con los contactos conductores.",
+    "Que la ampolleta quede apoyada sobre la mesa.": "Cree que apoyar la ampolleta completa el circuito.",
+    "Que los cables rodeen la pila varias veces.": "Confunde dar vueltas con lograr conexiones eléctricas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "En una maqueta de un palafito de Chiloé quieres apagar una luz sin quitar la pila. ¿Dónde debes ubicar el interruptor?",
+   "options": [
+    "En el camino entre la pila y la ampolleta.",
+    "Dentro de la ampolleta, junto al filamento.",
+    "Pegado a la pila, pero sin conectarlo.",
+    "Fuera del circuito, sin tocar ningún cable."
+   ],
+   "correct": "En el camino entre la pila y la ampolleta.",
+   "hint": "Para controlar la luz, el interruptor debe poder abrir o cerrar el recorrido de la corriente.",
+   "clue": "Ubícalo donde pueda interrumpir el camino eléctrico.",
+   "option_notes": {
+    "Fuera del circuito, sin tocar ningún cable.": "El interruptor debe estar conectado para controlar el camino.",
+    "Dentro de la ampolleta, junto al filamento.": "Confunde la parte que produce luz con la que controla.",
+    "Pegado a la pila, pero sin conectarlo.": "Un interruptor sin conexión no puede abrir ni cerrar el circuito."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "medium",
+   "text": "En un circuito, la pila, los cables y la ampolleta están conectados. El interruptor está cerrado, pero un cable se suelta. ¿Qué pasa y por qué?",
+   "options": [
+    "La pila cambia de lugar dentro del circuito.",
+    "Continúa encendida porque la pila basta.",
+    "La ampolleta se apaga porque el camino queda abierto.",
+    "Se enciende más porque recibe más energía."
+   ],
+   "correct": "La ampolleta se apaga porque el camino queda abierto.",
+   "hint": "Un cable suelto interrumpe el recorrido, aunque la pila y la ampolleta sigan presentes.",
+   "clue": "Comprueba si existe un camino completo entre los dos polos de la pila.",
+   "option_notes": {
+    "Se enciende más porque recibe más energía.": "Confunde una interrupción con una mayor entrega de energía.",
+    "Continúa encendida porque la pila basta.": "Supone que la pila funciona sin un camino cerrado.",
+    "La pila cambia de lugar dentro del circuito.": "Imagina que los componentes se mueven dentro del circuito."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "En una maqueta de una casa, la ampolleta queda encendida mientras la pila está conectada. Quieres apagarla sin desconectar cables. ¿Qué debes agregar y dónde?",
+   "options": [
+    "Un cable más largo cerca de la pila.",
+    "Un trozo de cartón sobre la ampolleta.",
+    "Un interruptor en el camino del circuito.",
+    "Una segunda ampolleta junto a la primera."
+   ],
+   "correct": "Un interruptor en el camino del circuito.",
+   "hint": "Un interruptor permite abrir el camino y cortar el funcionamiento cuando tú lo decidas.",
+   "clue": "Busca una solución que controle el recorrido, no la luz por fuera.",
+   "option_notes": {
+    "Una segunda ampolleta junto a la primera.": "Agregar otra ampolleta no permite controlar la primera.",
+    "Un cable más largo cerca de la pila.": "Alargar un cable no abre ni cierra el circuito.",
+    "Un trozo de cartón sobre la ampolleta.": "Tapar la luz no controla el paso de electricidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "Se comparan dos circuitos: A tiene una pila, cables, ampolleta e interruptor en un camino cerrado; B tiene un cable suelto. ¿Cuál explicación es correcta?",
+   "options": [
+    "En A, el camino cerrado y el interruptor permiten controlar la luz.",
+    "En A, los cables extra hacen que la pila produzca luz.",
+    "En B, el cable suelto aumenta la energía de la ampolleta.",
+    "En B, la pila funciona aunque el camino esté incompleto."
+   ],
+   "correct": "En A, el camino cerrado y el interruptor permiten controlar la luz.",
+   "hint": "La luz necesita un recorrido completo y un interruptor conectado que pueda abrirlo.",
+   "clue": "Compara la continuidad del camino con la función del interruptor.",
+   "option_notes": {
+    "En A, los cables extra hacen que la pila produzca luz.": "Confunde cantidad de cables con fuente de energía.",
+    "En B, el cable suelto aumenta la energía de la ampolleta.": "Confunde una falla de conexión con mayor energía.",
+    "En B, la pila funciona aunque el camino esté incompleto.": "Supone que la pila basta sin un recorrido cerrado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "En una caja, la tapa mantiene abierto el interruptor mientras está cerrada. Quieres que una luz de aviso se encienda al levantarla. ¿Qué debe ocurrir?",
+   "options": [
+    "Al levantarla, la pila debe separarse.",
+    "Al levantarla, el interruptor debe cerrarse.",
+    "Al levantarla, la ampolleta debe cubrirse.",
+    "Al levantarla, el cable debe cortarse."
+   ],
+   "correct": "Al levantarla, el interruptor debe cerrarse.",
+   "hint": "La luz se enciende cuando el circuito pasa de abierto a cerrado.",
+   "clue": "Relaciona la acción de la tapa con el estado del interruptor.",
+   "option_notes": {
+    "Al levantarla, la pila debe separarse.": "Separar la pila rompería el circuito y apagaría la luz.",
+    "Al levantarla, el cable debe cortarse.": "Un cable cortado impediría completar el circuito.",
+    "Al levantarla, la ampolleta debe cubrirse.": "Tapar la ampolleta no cambia el recorrido eléctrico."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA9",
+   "difficulty": "hard",
+   "text": "En un esquema, un cable sale del polo positivo de la pila y toca el vidrio de la ampolleta; el otro une el polo negativo con el contacto metálico. El interruptor está cerrado. ¿Qué cambio puede encenderla?",
+   "options": [
+    "Cambiar el interruptor cerrado por uno abierto.",
+    "Agregar cinta sobre el vidrio sin mover los cables.",
+    "Separar el segundo cable para que quede más largo.",
+    "Pasar el primer cable del vidrio al otro contacto metálico."
+   ],
+   "correct": "Pasar el primer cable del vidrio al otro contacto metálico.",
+   "hint": "El vidrio no forma una conexión; ambos cables deben llegar a contactos metálicos distintos.",
+   "clue": "Busca el punto de la ampolleta que sí puede cerrar el recorrido eléctrico.",
+   "option_notes": {
+    "Agregar cinta sobre el vidrio sin mover los cables.": "Tapar el vidrio no crea un contacto conductor.",
+    "Separar el segundo cable para que quede más largo.": "Confunde la longitud del cable con una conexión completa.",
+    "Cambiar el interruptor cerrado por uno abierto.": "Un interruptor abierto rompe el camino eléctrico."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

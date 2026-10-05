@@ -1,0 +1,264 @@
+{
+ "oa": "OA10",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "En un circuito escolar con una pila y una ampolleta, ¿qué material puede unir dos cables y permitir que la ampolleta se encienda?",
+   "options": [
+    "Cobre",
+    "Goma",
+    "Plástico",
+    "Vidrio"
+   ],
+   "correct": "Cobre",
+   "hint": "El cobre deja pasar la corriente eléctrica, por eso puede cerrar el circuito y encender la ampolleta.",
+   "clue": "Piensa en qué material permite que la corriente recorra el circuito.",
+   "option_notes": {
+    "Plástico": "Confundir una cubierta protectora con un material que deja pasar corriente.",
+    "Goma": "Pensar que todo material flexible conduce electricidad.",
+    "Vidrio": "Suponer que un material duro también conduce electricidad."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos materiales es un aislador eléctrico y puede ayudar a protegerte al cubrir un cable?",
+   "options": [
+    "Acero",
+    "Goma",
+    "Aluminio",
+    "Cobre"
+   ],
+   "correct": "Goma",
+   "hint": "La goma dificulta el paso de la corriente y por eso se usa como recubrimiento protector.",
+   "clue": "Busca el material que dificulta el paso de la corriente.",
+   "option_notes": {
+    "Cobre": "Confundir un metal conductor con un material que protege del paso de corriente.",
+    "Aluminio": "Pensar que todo metal debe aislar cuando se cubre un cable.",
+    "Acero": "Asociar la resistencia del acero con que sea aislador."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "En una prueba, una pieza de aluminio reemplaza un tramo de cable y la ampolleta se enciende. ¿Qué se puede concluir?",
+   "options": [
+    "La ampolleta funciona sin circuito.",
+    "El aluminio es conductor eléctrico.",
+    "La pila dejó de entregar corriente.",
+    "El aluminio crea la corriente."
+   ],
+   "correct": "El aluminio es conductor eléctrico.",
+   "hint": "Si la ampolleta se enciende, el aluminio permitió que la corriente recorriera el circuito.",
+   "clue": "Usa el resultado observado, no el color o la forma del material.",
+   "option_notes": {
+    "El aluminio crea la corriente.": "Confundir el material conductor con la fuente que entrega energía.",
+    "La ampolleta funciona sin circuito.": "Olvidar que la corriente necesita un circuito cerrado.",
+    "La pila dejó de entregar corriente.": "Interpretar lo contrario de lo que muestra la ampolleta encendida."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "¿Cómo debes sacar un enchufe de la pared para manipular un artefacto con mayor seguridad?",
+   "options": [
+    "Tocando sus clavijas metálicas.",
+    "Tirando fuerte del cable.",
+    "Mojando el enchufe para aflojarlo.",
+    "Tomando el enchufe con manos secas, no el cable."
+   ],
+   "correct": "Tomando el enchufe con manos secas, no el cable.",
+   "hint": "Sujetar el enchufe evita tirar del cable y reduce el riesgo de dañar sus conductores.",
+   "clue": "Recuerda que el cable y el enchufe se sujetan de manera diferente.",
+   "option_notes": {
+    "Tirando fuerte del cable.": "Tirar del cable puede dañarlo y dejar conductores expuestos.",
+    "Tocando sus clavijas metálicas.": "Las clavijas metálicas pueden conducir corriente y causar una descarga.",
+    "Mojando el enchufe para aflojarlo.": "El agua aumenta el peligro de una descarga eléctrica."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "Quieres saber si una tapa es conductora. ¿Qué procedimiento es adecuado?",
+   "options": [
+    "Calentarla y observar si cambia de color.",
+    "Mirarla y decidir según su color y forma.",
+    "Ponerla en un circuito con pila y ampolleta; observar si enciende.",
+    "Acercarla a una ampolleta encendida sin conectarla."
+   ],
+   "correct": "Ponerla en un circuito con pila y ampolleta; observar si enciende.",
+   "hint": "La conexión con pila y ampolleta permite observar si el material deja pasar corriente.",
+   "clue": "Elige una prueba con una observación directa del circuito.",
+   "option_notes": {
+    "Mirarla y decidir según su color y forma.": "Suponer que la apariencia permite saber si un material conduce.",
+    "Acercarla a una ampolleta encendida sin conectarla.": "Confundir acercar un objeto con incorporarlo al circuito.",
+    "Calentarla y observar si cambia de color.": "Relacionar el calor con la conducción eléctrica sin hacer la prueba adecuada."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "Un cable de una radio tiene un hilo de cobre cubierto por plástico. ¿Qué función cumple cada material?",
+   "options": [
+    "Ambos materiales producen la corriente.",
+    "El plástico conduce y el cobre evita contactos.",
+    "El cobre aísla y el plástico enciende la radio.",
+    "El cobre conduce y el plástico aísla y protege."
+   ],
+   "correct": "El cobre conduce y el plástico aísla y protege.",
+   "hint": "El cobre lleva la corriente por el cable; el plástico impide que salga y protege al usuario.",
+   "clue": "Relaciona el material del interior con el que queda en contacto con tu mano.",
+   "option_notes": {
+    "El plástico conduce y el cobre evita contactos.": "Invertir la función del metal interior y de la cubierta.",
+    "Ambos materiales producen la corriente.": "Confundir los materiales del cable con la fuente de energía.",
+    "El cobre aísla y el plástico enciende la radio.": "Intercambiar las funciones de conductor y aislador."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "En el mismo circuito, la ampolleta no enciende con goma, pero sí con aluminio. ¿Qué conclusión corresponde?",
+   "options": [
+    "La goma es aisladora y el aluminio conductor.",
+    "Ambos materiales son aisladores.",
+    "Ambos materiales son conductores.",
+    "La goma es conductora y el aluminio aislador."
+   ],
+   "correct": "La goma es aisladora y el aluminio conductor.",
+   "hint": "La luz indica que el material permitió el paso de corriente; la falta de luz indica que lo bloqueó.",
+   "clue": "Compara lo que ocurrió con cada material en el mismo circuito.",
+   "option_notes": {
+    "La goma es conductora y el aluminio aislador.": "Invertir la interpretación de los dos resultados observados.",
+    "Ambos materiales son conductores.": "Ignorar que la ampolleta no encendió con goma.",
+    "Ambos materiales son aisladores.": "Ignorar que la ampolleta sí encendió con aluminio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "Ves una cubierta plástica rota y el cobre expuesto en el cable de un cargador. ¿Qué debes hacer?",
+   "options": [
+    "No usarlo y pedir a un adulto que lo reemplace.",
+    "Tocar el cobre para comprobar si funciona.",
+    "Envolverlo con papel y seguir usándolo.",
+    "Mojarlo para que deje pasar corriente."
+   ],
+   "correct": "No usarlo y pedir a un adulto que lo reemplace.",
+   "hint": "El cobre expuesto puede conducir corriente y causar una descarga; un adulto debe cambiar el cable.",
+   "clue": "Primero evita el contacto con la parte metálica expuesta.",
+   "option_notes": {
+    "Envolverlo con papel y seguir usándolo.": "Creer que cualquier cubierta reemplaza una aislación adecuada.",
+    "Tocar el cobre para comprobar si funciona.": "Usar el cuerpo como detector de electricidad, lo que es peligroso.",
+    "Mojarlo para que deje pasar corriente.": "Pensar que el agua vuelve segura o necesaria la conexión."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "En un circuito con pila, una ampolleta no enciende. La pila funciona y los cables son de cobre, pero entre un cable y la ampolleta hay plástico. ¿Qué explica mejor el problema?",
+   "options": [
+    "El cobre bloquea la corriente; hay que cubrirlo con plástico.",
+    "El plástico aumenta la corriente; hay que añadir goma.",
+    "La ampolleta necesita aluminio para funcionar siempre.",
+    "El plástico corta el circuito; reemplázalo por cobre o aluminio."
+   ],
+   "correct": "El plástico corta el circuito; reemplázalo por cobre o aluminio.",
+   "hint": "La corriente necesita un camino continuo; el plástico no deja pasar corriente y corta el circuito.",
+   "clue": "Sigue el recorrido de la corriente y busca dónde se interrumpe.",
+   "option_notes": {
+    "El plástico aumenta la corriente; hay que añadir goma.": "Creer que un aislador aumenta la corriente y que la goma la completa.",
+    "El cobre bloquea la corriente; hay que cubrirlo con plástico.": "Invertir las funciones del cobre y del plástico.",
+    "La ampolleta necesita aluminio para funcionar siempre.": "Pensar que solo un material conductor específico puede cerrar el circuito."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "Camila probó cuatro materiales en el mismo circuito. Con cobre y aluminio la ampolleta encendió; con plástico y goma no. ¿Qué conclusión está mejor respaldada?",
+   "options": [
+    "La ampolleta se enciende solo con materiales duros.",
+    "Los cuatro materiales producen corriente en cantidades distintas.",
+    "Cobre y aluminio son conductores; plástico y goma son aisladores.",
+    "Cobre y aluminio son aisladores; plástico y goma son conductores."
+   ],
+   "correct": "Cobre y aluminio son conductores; plástico y goma son aisladores.",
+   "hint": "La misma prueba mostró paso de corriente con dos materiales y bloqueo con los otros dos.",
+   "clue": "Compara los cuatro resultados antes de generalizar.",
+   "option_notes": {
+    "Cobre y aluminio son aisladores; plástico y goma son conductores.": "Invertir las categorías de conductor y aislador.",
+    "Los cuatro materiales producen corriente en cantidades distintas.": "Confundir la corriente con una sustancia producida por los materiales.",
+    "La ampolleta se enciende solo con materiales duros.": "Usar la dureza como criterio en vez del resultado experimental."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "Un compañero propone probar si una moneda conduce introduciéndola en un enchufe de la casa. ¿Cuál respuesta es correcta?",
+   "options": [
+    "Hacerlo rápido, porque la moneda es pequeña y metálica.",
+    "Usar un destornillador metálico para empujarla.",
+    "No hacerlo: usa una pila, cables y ampolleta, con supervisión.",
+    "Probarlo con manos mojadas para mejorar el contacto."
+   ],
+   "correct": "No hacerlo: usa una pila, cables y ampolleta, con supervisión.",
+   "hint": "Un enchufe domiciliario puede causar una descarga; la pila permite investigar con mucha menor tensión.",
+   "clue": "Investigar no requiere tocar una instalación de la casa.",
+   "option_notes": {
+    "Hacerlo rápido, porque la moneda es pequeña y metálica.": "Pensar que la rapidez elimina el peligro del voltaje domiciliario.",
+    "Probarlo con manos mojadas para mejorar el contacto.": "Creer que el agua mejora el contacto sin considerar la descarga.",
+    "Usar un destornillador metálico para empujarla.": "Suponer que otra pieza metálica vuelve segura la prueba."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "Para comparar cobre, aluminio, plástico y goma, una estudiante cambia el material en cada prueba, pero también cambia la pila. Los resultados varían. ¿Qué debe hacer para comparar bien?",
+   "options": [
+    "Usar una pila distinta con cada material para equilibrar.",
+    "Mantener pila, ampolleta y cables; cambiar solo el material.",
+    "Elegir como conductor el material de color más brillante.",
+    "Probar los materiales directamente en un enchufe domiciliario."
+   ],
+   "correct": "Mantener pila, ampolleta y cables; cambiar solo el material.",
+   "hint": "Una comparación justa mantiene iguales las demás condiciones y cambia únicamente el material.",
+   "clue": "Para comparar, observa qué condiciones deben permanecer iguales.",
+   "option_notes": {
+    "Usar una pila distinta con cada material para equilibrar.": "Cambiar otra variable impide saber qué causó cada resultado.",
+    "Probar los materiales directamente en un enchufe domiciliario.": "Reemplazar una prueba escolar segura por una instalación peligrosa.",
+    "Elegir como conductor el material de color más brillante.": "Usar la apariencia como evidencia en lugar del experimento."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

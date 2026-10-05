@@ -1,0 +1,268 @@
+{
+ "oa": "OA17",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA17",
+   "difficulty": "easy",
+   "text": "Dos lados de una figura mantienen siempre la misma distancia y nunca se encuentran. ¿Cómo son esos lados?",
+   "options": [
+    "Se intersectan",
+    "Son paralelos",
+    "Son perpendiculares",
+    "Son iguales"
+   ],
+   "correct": "Son paralelos",
+   "hint": "Los lados paralelos mantienen la misma distancia y no se encuentran.",
+   "clue": "Observa si los lados se acercan, se cruzan o conservan su distancia.",
+   "option_notes": {
+    "Son perpendiculares": "Confunde una esquina de 90° con lados que nunca se encuentran.",
+    "Se intersectan": "Confunde la idea de cruzarse con la de mantener la distancia.",
+    "Son iguales": "Confunde el largo de los lados con la relación entre sus direcciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "easy",
+   "text": "En una hoja, el borde superior y el borde derecho se juntan formando una esquina de 90°. ¿Cómo son esos lados?",
+   "options": [
+    "Son paralelos",
+    "Son perpendiculares",
+    "Son curvos",
+    "Tienen el mismo largo"
+   ],
+   "correct": "Son perpendiculares",
+   "hint": "Dos lados que se encuentran formando 90° son perpendiculares.",
+   "clue": "Busca la medida del ángulo donde se juntan.",
+   "option_notes": {
+    "Son paralelos": "Los lados paralelos no se encuentran en una esquina.",
+    "Son curvos": "La descripción habla de bordes rectos que forman una esquina.",
+    "Tienen el mismo largo": "El largo no indica qué ángulo forman los lados."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "easy",
+   "text": "Una caja tiene forma de prisma rectangular. ¿Qué relación hay entre su cara delantera y su cara trasera?",
+   "options": [
+    "Son paralelas",
+    "Se cruzan en una arista",
+    "Son perpendiculares",
+    "Forman una sola cara"
+   ],
+   "correct": "Son paralelas",
+   "hint": "Las caras delantera y trasera son opuestas, por eso mantienen la misma dirección y distancia.",
+   "clue": "Piensa en las dos caras que quedan enfrentadas.",
+   "option_notes": {
+    "Son perpendiculares": "Confunde caras enfrentadas con caras que forman una esquina.",
+    "Se cruzan en una arista": "Confunde caras opuestas con caras vecinas.",
+    "Forman una sola cara": "Cada lado de la caja es una cara distinta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "easy",
+   "text": "¿Cuál ejemplo muestra dos aristas de una figura 3D que se intersectan?",
+   "options": [
+    "Están separadas",
+    "Conservan la misma dirección",
+    "Comparten una esquina",
+    "Quedan en caras opuestas"
+   ],
+   "correct": "Comparten una esquina",
+   "hint": "Dos aristas que comparten una esquina tienen un punto en común y se intersectan.",
+   "clue": "Fíjate si las aristas tienen al menos un punto en común.",
+   "option_notes": {
+    "Quedan en caras opuestas": "Confunde estar enfrentadas con tener un punto común.",
+    "Conservan la misma dirección": "Describe aristas paralelas, no aristas que se juntan.",
+    "Están separadas": "Si están separadas, no tienen un punto de intersección."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: enunciado ambiguo: pide un ejemplo de aristas, pero las alternativas son descripciones generales y no ejemplos"
+   ]
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "medium",
+   "text": "Una cartulina rectangular mide 8 cm de ancho y 3 cm de alto. Si recorres su lado superior y luego el lado derecho, ¿cuántos centímetros avanzas?",
+   "options": [
+    "24 cm",
+    "5 cm",
+    "22 cm",
+    "11 cm"
+   ],
+   "correct": "11 cm",
+   "hint": "El lado superior mide 8 cm y el derecho 3 cm; suma ambos recorridos.",
+   "clue": "Identifica las dos medidas que recorres y súmalas.",
+   "option_notes": {
+    "5 cm": "Resta las medidas en vez de sumar los dos lados recorridos.",
+    "22 cm": "Calcula el perímetro completo, aunque recorres solo dos lados.",
+    "24 cm": "Multiplica las medidas como si buscaras el área."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA: pregunta por una suma de longitudes, no por lados o aristas paralelos, perpendiculares o que se intersectan"
+   ]
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "medium",
+   "text": "En una caja rectangular, la cara frontal y la superior tienen una arista en común de 40 cm. Si pintas solo la intersección de esas caras, ¿cuántos centímetros pintas?",
+   "options": [
+    "80 cm",
+    "0 cm",
+    "40 cm",
+    "20 cm"
+   ],
+   "correct": "40 cm",
+   "hint": "La intersección de dos caras vecinas es la arista común; ya mide 40 cm.",
+   "clue": "No sumes las caras: identifica la línea que comparten.",
+   "option_notes": {
+    "20 cm": "Divide la medida sin una razón geométrica.",
+    "0 cm": "Confunde caras que comparten una arista con caras paralelas.",
+    "80 cm": "Suma dos veces la longitud de la arista común."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "medium",
+   "text": "En un plano de Santiago, la calle A es perpendicular a la calle B. La calle C es paralela a A y también cruza B. ¿Cómo se relacionan C y B?",
+   "options": [
+    "Son paralelas",
+    "Forman un ángulo de 45°",
+    "No se intersectan",
+    "Son perpendiculares"
+   ],
+   "correct": "Son perpendiculares",
+   "hint": "Una calle paralela a A conserva su dirección y mantiene el ángulo de 90° con B.",
+   "clue": "Sigue la dirección de C desde A y conserva el ángulo con B.",
+   "option_notes": {
+    "Son paralelas": "Confunde la relación de C con A con la relación de C con B.",
+    "Forman un ángulo de 45°": "Copia un ángulo distinto del ángulo recto dado.",
+    "No se intersectan": "El enunciado indica que C cruza B."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "medium",
+   "text": "Una caja rectangular mide 30 cm de largo, 20 cm de ancho y 10 cm de alto. La arista A está arriba, al frente, y sigue el largo. ¿Qué arista tiene la misma dirección y medida que A?",
+   "options": [
+    "La arista inferior lateral",
+    "La arista superior trasera",
+    "La arista vertical delantera",
+    "La arista superior lateral"
+   ],
+   "correct": "La arista superior trasera",
+   "hint": "La arista superior trasera también sigue el largo, así que va en la misma dirección y mide 30 cm.",
+   "clue": "Busca otra arista en la dirección del largo, no del ancho ni de la altura.",
+   "option_notes": {
+    "La arista superior lateral": "Sigue el ancho, que mide 20 cm.",
+    "La arista vertical delantera": "Sigue la altura, que mide 10 cm.",
+    "La arista inferior lateral": "Sigue el ancho, no el largo de la caja."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "hard",
+   "text": "Un cuadrilátero tiene lados opuestos paralelos y cada par de lados vecinos forma 90°. Además, dos lados vecinos miden 8 cm y 3 cm. ¿Qué figura es?",
+   "options": [
+    "Un rectángulo",
+    "Un cuadrado",
+    "Un rombo",
+    "Un triángulo"
+   ],
+   "correct": "Un rectángulo",
+   "hint": "Los ángulos rectos y los lados opuestos paralelos forman un rectángulo; 8 cm y 3 cm descartan un cuadrado.",
+   "clue": "Primero usa las relaciones geométricas; después revisa las dos medidas.",
+   "option_notes": {
+    "Un cuadrado": "Ignora que los lados vecinos miden distinto.",
+    "Un rombo": "Confunde lados opuestos paralelos con cuatro lados iguales.",
+    "Un triángulo": "Olvida que un cuadrilátero tiene cuatro lados."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "hard",
+   "text": "En una caja, A es la arista vertical de la esquina delantera izquierda. B es la arista superior que une las esquinas delanteras izquierda y derecha. ¿Cuál es paralela a A y se intersecta con B?",
+   "options": [
+    "La arista vertical delantera derecha",
+    "La arista horizontal inferior delantera",
+    "La arista horizontal superior trasera",
+    "La arista vertical trasera izquierda"
+   ],
+   "correct": "La arista vertical delantera derecha",
+   "hint": "Debe tener dirección vertical como A y tocar B en su extremo derecho.",
+   "clue": "Busca una arista con la misma dirección y un punto común con B.",
+   "option_notes": {
+    "La arista vertical trasera izquierda": "Es vertical y paralela a A, pero queda atrás y no toca B.",
+    "La arista horizontal superior trasera": "Está arriba, pero es horizontal y no toca la arista B.",
+    "La arista horizontal inferior delantera": "Está adelante, pero es horizontal y no toca la arista B."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "hard",
+   "text": "En una caja rectangular, la cara azul es la frontal y la roja es la derecha. ¿Cuál cara es paralela a la azul y perpendicular a la roja?",
+   "options": [
+    "La superior",
+    "La izquierda",
+    "La inferior",
+    "La posterior"
+   ],
+   "correct": "La posterior",
+   "hint": "La posterior es opuesta a la frontal y forma un ángulo recto con la cara derecha.",
+   "clue": "Exige las dos condiciones: estar frente a la frontal y formar 90° con la derecha.",
+   "option_notes": {
+    "La superior": "Es perpendicular a la frontal, no paralela a ella.",
+    "La inferior": "Es perpendicular a la frontal, no paralela a ella.",
+    "La izquierda": "Es perpendicular a la frontal y paralela a la derecha."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA17",
+   "difficulty": "hard",
+   "text": "En un recorrido rectangular por una plaza, un sendero avanza 15 m al norte, gira 90° y avanza 10 m al este; luego gira 90° y avanza 15 m al sur. ¿Cómo son los dos tramos de 15 m?",
+   "options": [
+    "Son el mismo tramo",
+    "Son perpendiculares",
+    "Son paralelos",
+    "Se intersectan"
+   ],
+   "correct": "Son paralelos",
+   "hint": "Aunque van en sentidos opuestos, ambos tramos siguen la dirección norte-sur y no se encuentran.",
+   "clue": "Fíjate en la dirección de cada tramo, no solo en el sentido del movimiento.",
+   "option_notes": {
+    "Son perpendiculares": "Confunde los giros del recorrido con la relación entre los dos tramos.",
+    "Se intersectan": "Piensa que pertenecer al mismo sendero obliga a cruzarse.",
+    "Son el mismo tramo": "Confunde tener igual longitud con ser el mismo segmento."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

@@ -1,0 +1,268 @@
+{
+ "oa": "OA6",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "En una feria, compras una canasta por $12.500 y frutas por $7.500. ¿Cuánto pagas en total?",
+   "options": [
+    "$20.000",
+    "$20.500",
+    "$19.000",
+    "$5.000"
+   ],
+   "correct": "$20.000",
+   "hint": "Suma los dos precios alineando correctamente las cifras.",
+   "clue": "Junta ambos precios; no necesitas multiplicar ni repartir.",
+   "option_notes": {
+    "$5.000": "Resta los precios en vez de sumarlos.",
+    "$19.000": "Suma solo los miles y omite los cientos.",
+    "$20.500": "Suma $500 de más al ordenar las cifras."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Un museo tiene 18.000 entradas y vende 6.500. ¿Cuántas entradas quedan?",
+   "options": [
+    "$12.000",
+    "$11.500",
+    "$10.500",
+    "$24.500"
+   ],
+   "correct": "$11.500",
+   "hint": "A las 18.000 entradas iniciales réstales las 6.500 vendidas.",
+   "clue": "Busca lo que queda después de quitar una cantidad.",
+   "option_notes": {
+    "$10.500": "Resta 7.500 en vez de 6.500.",
+    "$12.000": "Resta solo 6.000 y olvida los 500.",
+    "$24.500": "Suma las cantidades en vez de calcular lo que queda."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Las alternativas usan signo peso ($) para una cantidad de entradas, no de dinero."
+   ]
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Cada cuaderno cuesta $2.000. Si compras 6, ¿cuánto pagas?",
+   "options": [
+    "$8.000",
+    "$10.000",
+    "$12.000",
+    "$14.000"
+   ],
+   "correct": "$12.000",
+   "hint": "Multiplica el precio de un cuaderno por la cantidad comprada.",
+   "clue": "El mismo precio se repite seis veces.",
+   "option_notes": {
+    "$8.000": "Multiplica $2.000 por 4, no por 6.",
+    "$10.000": "Calcula el precio de cinco cuadernos.",
+    "$14.000": "Agrega un cuaderno de más al cálculo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Una municipalidad reparte $24.000 en partes iguales entre 4 clubes. ¿Cuánto recibe cada club?",
+   "options": [
+    "$6.000",
+    "$4.000",
+    "$20.000",
+    "$8.000"
+   ],
+   "correct": "$6.000",
+   "hint": "Divide el total de dinero entre los 4 clubes.",
+   "clue": "Cada club recibe la misma cuarta parte.",
+   "option_notes": {
+    "$4.000": "Divide $24.000 entre 6 en vez de entre 4.",
+    "$8.000": "Divide entre 3, no entre 4.",
+    "$20.000": "Resta $4.000 al total."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "En una kermés reúnen $18.500 en la mañana y $12.500 en la tarde. Gastan $9.000. ¿Cuánto queda?",
+   "options": [
+    "$31.000",
+    "$40.000",
+    "$20.000",
+    "$22.000"
+   ],
+   "correct": "$22.000",
+   "hint": "Suma lo recaudado: $31.000; después resta los $9.000 gastados.",
+   "clue": "Primero junta los ingresos y luego descuenta el gasto.",
+   "option_notes": {
+    "$20.000": "Descuenta $11.000 en vez de $9.000.",
+    "$31.000": "Olvida restar el gasto.",
+    "$40.000": "Suma el gasto como si fuera dinero recaudado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "En una campaña, 4 escuelas reúnen 4.500 botellas cada una y una organización aporta 1.200 botellas. ¿Cuántas reúnen?",
+   "options": [
+    "22.800 botellas",
+    "5.700 botellas",
+    "18.000 botellas",
+    "19.200 botellas"
+   ],
+   "correct": "19.200 botellas",
+   "hint": "Multiplica 4.500 por 4 y agrega las 1.200 botellas de la organización.",
+   "clue": "Hay una cantidad repetida cuatro veces y otro aporte único.",
+   "option_notes": {
+    "18.000 botellas": "Cuenta solo las botellas reunidas por las escuelas.",
+    "22.800 botellas": "Multiplica también las 1.200 botellas por 4.",
+    "5.700 botellas": "Suma 4.500 y 1.200 sin repetir las escuelas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Una tienda recibe 24.000 botellas, las reparte por igual en 4 estantes y agrega 500 a cada uno. ¿Cuántas hay en cada estante?",
+   "options": [
+    "6.500 botellas",
+    "7.000 botellas",
+    "6.000 botellas",
+    "24.500 botellas"
+   ],
+   "correct": "6.500 botellas",
+   "hint": "Divide 24.000 entre 4 y luego suma 500 al resultado.",
+   "clue": "Primero calcula lo que recibe un estante; después incorpora lo nuevo.",
+   "option_notes": {
+    "6.000 botellas": "Divide bien, pero olvida agregar las 500 botellas.",
+    "7.000 botellas": "Suma 1.000 en vez de 500 al estante.",
+    "24.500 botellas": "Agrega 500 al total sin repartirlo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "En una excursión desde Santiago, un bus recorre 125 km hasta Valparaíso, 85 km durante el paseo y 100 km al regresar. ¿Cuántos kilómetros viaja?",
+   "options": [
+    "300 km",
+    "210 km",
+    "410 km",
+    "310 km"
+   ],
+   "correct": "310 km",
+   "hint": "Suma los tres tramos: 125 + 85 + 100 = 310 km.",
+   "clue": "Considera cada tramo recorrido, incluidos los kilómetros del regreso.",
+   "option_notes": {
+    "210 km": "Suma solo los dos tramos de ida.",
+    "300 km": "Comete un error y pierde 10 km al sumar.",
+    "410 km": "Agrega 100 km de más, como si repitiera un tramo."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: Fuera del OA: los números (125, 85 y 100) no están en un ámbito superior a 10.000. Además, error de hecho: la ida a Valparaíso es 125 km y el regreso 100 km."
+   ]
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "En una planilla del computador, registras una cuenta de $26.000: 4 entradas adultas de $4.000, estacionamiento de $2.000 y entradas infantiles de $2.000. ¿Cuántos niños entraron?",
+   "options": [
+    "5 niños",
+    "2 niños",
+    "4 niños",
+    "3 niños"
+   ],
+   "correct": "4 niños",
+   "hint": "Resta las entradas adultas y el estacionamiento; divide el saldo entre $2.000.",
+   "clue": "Separa primero los gastos fijos; lo restante corresponde a los niños.",
+   "option_notes": {
+    "2 niños": "Divide el saldo entre $4.000, el precio adulto.",
+    "3 niños": "Resta el estacionamiento dos veces antes de dividir.",
+    "5 niños": "Olvida restar el estacionamiento antes de dividir."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Con una calculadora revisas una compra: 3 pizzas de $8.500 y 2 jugos de $2.000. Pagas con $35.000. ¿Qué vuelto recibes?",
+   "options": [
+    "$4.500",
+    "$6.500",
+    "$5.500",
+    "$29.500"
+   ],
+   "correct": "$5.500",
+   "hint": "El gasto total es $29.500; réstalo de los $35.000 pagados.",
+   "clue": "Primero halla el gasto total y después compáralo con el dinero entregado.",
+   "option_notes": {
+    "$4.500": "Calcula los dos jugos como $2.500 cada uno.",
+    "$6.500": "Suma los dos jugos como si costaran $3.000.",
+    "$29.500": "Halla el gasto total, pero olvida calcular el vuelto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "En un desafío, eliges un número, lo multiplicas por 4 y luego sumas 4.000. Obtienes 20.000. ¿Qué número elegiste?",
+   "options": [
+    "5.000",
+    "4.000",
+    "16.000",
+    "6.000"
+   ],
+   "correct": "4.000",
+   "hint": "Deshazlo al revés: a 20.000 réstale 4.000 y divide entre 4.",
+   "clue": "Para hallar el número inicial, invierte primero la última operación.",
+   "option_notes": {
+    "5.000": "Divide 20.000 entre 4, pero olvida restar 4.000.",
+    "6.000": "Suma 4.000 a 20.000 antes de dividir.",
+    "16.000": "Resta 4.000, pero olvida dividir entre 4."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Un curso tiene $50.000. Compra 7 colaciones a $2.500 y paga $6.500 de transporte. Con lo que queda compra jugos de $1.500. ¿Cuántos compra y cuánto sobra?",
+   "options": [
+    "17 jugos y sobran $1.000",
+    "17 jugos y sobran $500",
+    "16 jugos y sobran $2.000",
+    "18 jugos y sobran $1.000"
+   ],
+   "correct": "17 jugos y sobran $500",
+   "hint": "Después de los gastos quedan $26.000; 17 jugos cuestan $25.500 y sobran $500.",
+   "clue": "Calcula primero cuánto queda para jugos y busca cuántos caben sin pasarte.",
+   "option_notes": {
+    "16 jugos y sobran $2.000": "Se detiene en 16 sin buscar la mayor cantidad posible.",
+    "17 jugos y sobran $1.000": "Calcula 17 × $1.500 como $25.000.",
+    "18 jugos y sobran $1.000": "Compra 18 sin comprobar que el dinero alcanza."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

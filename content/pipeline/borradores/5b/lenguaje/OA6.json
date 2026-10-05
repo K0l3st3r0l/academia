@@ -1,0 +1,268 @@
+{
+ "oa": "OA6",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Lee el aviso: «La biblioteca abrirá el lunes a las 8:30 y cerrará a las 16:30. El martes funcionará hasta las 17:00». ¿A qué hora cerrará el lunes?",
+   "options": [
+    "16:30",
+    "8:30",
+    "16:00",
+    "17:00"
+   ],
+   "correct": "16:30",
+   "hint": "El aviso menciona directamente el cierre del lunes en la primera oración.",
+   "clue": "Fíjate en el día y busca la palabra “cerrará”.",
+   "option_notes": {
+    "8:30": "Confunde la hora de apertura con la de cierre.",
+    "16:00": "Lee mal los minutos del cierre del lunes.",
+    "17:00": "Toma el cierre del martes como si fuera el del lunes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Lee la biografía: «Gabriela Mistral nació en Vicuña. Fue maestra y recibió el Premio Nobel de Literatura en 1945». ¿Qué profesión ejerció?",
+   "options": [
+    "Astrónoma",
+    "Médica",
+    "Alcaldesa",
+    "Maestra"
+   ],
+   "correct": "Maestra",
+   "hint": "La biografía dice de manera explícita que Gabriela Mistral fue maestra.",
+   "clue": "Busca la palabra que nombra un trabajo en la biografía.",
+   "option_notes": {
+    "Astrónoma": "Confunde una profesión conocida de otra científica.",
+    "Médica": "Relaciona el Premio Nobel con una profesión distinta.",
+    "Alcaldesa": "Confunde una ocupación pública con su profesión."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Lee: «Al amanecer, el desierto florido se vistió de colores y atrajo a muchos visitantes». ¿Qué significa “se vistió de colores”?",
+   "options": [
+    "Aparecieron muchas flores de distintos colores.",
+    "La arena cambió de color por el viento.",
+    "El desierto fue cubierto con telas.",
+    "Los visitantes llevaron ropa muy colorida."
+   ],
+   "correct": "Aparecieron muchas flores de distintos colores.",
+   "hint": "La expresión describe el cambio visual que producen las flores del desierto.",
+   "clue": "Piensa qué aparece en el desierto florido cuando llega la primavera.",
+   "option_notes": {
+    "La arena cambió de color por el viento.": "Interpreta “se vistió” de forma literal y no considera las flores.",
+    "Los visitantes llevaron ropa muy colorida.": "Relaciona “colores” con los visitantes, no con el desierto.",
+    "El desierto fue cubierto con telas.": "Toma la expresión como una acción literal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "easy",
+   "text": "Lee: «Para cuidar al chungungo, no dejes basura en la playa y obsérvalo a distancia». ¿Cuál es el propósito del mensaje?",
+   "options": [
+    "Informar dónde vive el chungungo.",
+    "Dar consejos para proteger al chungungo.",
+    "Contar una aventura junto al mar.",
+    "Describir el tamaño del chungungo."
+   ],
+   "correct": "Dar consejos para proteger al chungungo.",
+   "hint": "El mensaje propone dos acciones para evitar dañar al animal.",
+   "clue": "Pregunta qué quiere lograr el mensaje con esas dos acciones.",
+   "option_notes": {
+    "Informar dónde vive el chungungo.": "Confunde los consejos con información sobre su hábitat.",
+    "Contar una aventura junto al mar.": "Cree que el mensaje narra una experiencia.",
+    "Describir el tamaño del chungungo.": "Busca una característica que el mensaje no entrega."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Lee: «En la escuela instalaron recipientes con agua para las abejas. Una semana después, más abejas visitaron las flores del patio». ¿Qué se puede inferir?",
+   "options": [
+    "Las abejas aprendieron a limpiar el patio.",
+    "El agua ayudó a atraer a las abejas.",
+    "El patio recibió menos luz solar.",
+    "Las flores dejaron de producir néctar."
+   ],
+   "correct": "El agua ayudó a atraer a las abejas.",
+   "hint": "El aumento de abejas ocurre después de instalar recipientes con agua.",
+   "clue": "Compara lo que había antes con lo que ocurrió una semana después.",
+   "option_notes": {
+    "Las flores dejaron de producir néctar.": "Confunde el aumento de visitas con un problema en las flores.",
+    "Las abejas aprendieron a limpiar el patio.": "Atribuye a las abejas una acción que el texto no menciona.",
+    "El patio recibió menos luz solar.": "Inventa un cambio del patio que no aparece."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Lee: «Los humedales reciben agua de la lluvia y pueden retenerla por un tiempo». Un esquema indica: lluvia → humedal → agua retenida → menor riesgo de inundación. ¿Qué relación explica?",
+   "options": [
+    "El humedal aumenta el agua que entra a las casas.",
+    "La inundación evita que llueva sobre el humedal.",
+    "El humedal retiene agua y reduce el riesgo de inundación.",
+    "La lluvia desaparece al llegar al humedal."
+   ],
+   "correct": "El humedal retiene agua y reduce el riesgo de inundación.",
+   "hint": "Sigue las flechas: primero llega la lluvia y al final disminuye el riesgo.",
+   "clue": "Relaciona “agua retenida” con lo que ocurre durante una inundación.",
+   "option_notes": {
+    "La lluvia desaparece al llegar al humedal.": "Lee la flecha como si el agua desapareciera sin quedar retenida.",
+    "El humedal aumenta el agua que entra a las casas.": "Invierte el efecto final del esquema.",
+    "La inundación evita que llueva sobre el humedal.": "Confunde la inundación con una causa de la lluvia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Lee: «La bicicleta no usa combustible y ocupa poco espacio. El bus transporta a muchas personas y usa combustible». ¿Qué diferencia presentan?",
+   "options": [
+    "La bicicleta lleva más pasajeros que el bus.",
+    "La bicicleta no usa combustible; el bus sí.",
+    "Ambos transportes funcionan sin combustible.",
+    "El bus ocupa menos espacio que la bicicleta."
+   ],
+   "correct": "La bicicleta no usa combustible; el bus sí.",
+   "hint": "La descripción señala un uso diferente del combustible en cada transporte.",
+   "clue": "Busca el dato que cambia entre la bicicleta y el bus.",
+   "option_notes": {
+    "La bicicleta lleva más pasajeros que el bus.": "Intercambia cuál transporte lleva más pasajeros.",
+    "El bus ocupa menos espacio que la bicicleta.": "Confunde los datos sobre el espacio que ocupa cada transporte.",
+    "Ambos transportes funcionan sin combustible.": "Ignora la diferencia sobre el uso de combustible."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "medium",
+   "text": "Lee la carta: «Señora directora: propongo plantar quillayes en el patio. Dan sombra y ayudan a los insectos nativos. Así tendremos un espacio más fresco y vivo». ¿Qué opinión está mejor fundamentada?",
+   "options": [
+    "No conviene plantar árboles porque necesitan agua a diario.",
+    "Conviene plantar palmeras porque sus hojas dan más sombra.",
+    "Conviene plantar quillayes: dan sombra y ayudan a los insectos nativos.",
+    "No conviene plantar árboles porque ocupan espacio del patio."
+   ],
+   "correct": "Conviene plantar quillayes: dan sombra y ayudan a los insectos nativos.",
+   "hint": "La carta apoya plantar quillayes con dos razones: entregan sombra y ayudan a insectos nativos.",
+   "clue": "Elige la opinión que se apoya en razones expresadas en la carta.",
+   "option_notes": {
+    "No conviene plantar árboles porque ocupan espacio del patio.": "Agrega una desventaja que la carta no menciona.",
+    "Conviene plantar palmeras porque sus hojas dan más sombra.": "Cambia los quillayes por palmeras sin respaldo en la carta.",
+    "No conviene plantar árboles porque necesitan agua a diario.": "Usa una posible dificultad, pero no una razón de la carta."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Lee la noticia: «En una reserva, guardaparques plantaron 500 árboles nativos. Sus frutos alimentan a pequeños animales y sus ramas ofrecen refugio». ¿Por qué esta acción podría favorecer también a las aves rapaces?",
+   "options": [
+    "Porque las rapaces comerían directamente las hojas.",
+    "Porque los árboles impedirían que las rapaces volaran.",
+    "Porque habría más presas pequeñas disponibles.",
+    "Porque las rapaces ya no necesitarían buscar agua."
+   ],
+   "correct": "Porque habría más presas pequeñas disponibles.",
+   "hint": "Los árboles favorecen a animales pequeños, que pueden ser alimento para las aves rapaces.",
+   "clue": "Sigue la cadena: árboles, animales pequeños y alimentación de rapaces.",
+   "option_notes": {
+    "Porque las rapaces comerían directamente las hojas.": "Supone que las rapaces se alimentan de hojas, no de otros animales.",
+    "Porque los árboles impedirían que las rapaces volaran.": "Confunde ofrecer refugio con bloquear el vuelo.",
+    "Porque las rapaces ya no necesitarían buscar agua.": "Atribuye a los árboles un efecto sobre una necesidad distinta."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Lee: «La feria queda al sur de la plaza». En el mapa, la escuela está al norte de la plaza. Si pasas por la plaza antes de ir a la feria, ¿qué recorrido haces?",
+   "options": [
+    "Caminar al este hasta la plaza y luego al sur hasta la feria.",
+    "Caminar al sur hasta la plaza y luego al norte hasta la feria.",
+    "Caminar al norte hasta la plaza y luego al sur hasta la feria.",
+    "Caminar al sur hasta la plaza y luego al sur hasta la feria."
+   ],
+   "correct": "Caminar al sur hasta la plaza y luego al sur hasta la feria.",
+   "hint": "Desde la escuela debes llegar a la plaza y después seguir la ubicación de la feria.",
+   "clue": "Primero ubica la escuela respecto de la plaza; luego ubica la feria respecto de ella.",
+   "option_notes": {
+    "Caminar al norte hasta la plaza y luego al sur hasta la feria.": "Invierte la posición de la escuela respecto de la plaza.",
+    "Caminar al sur hasta la plaza y luego al norte hasta la feria.": "Invierte la posición de la feria respecto de la plaza.",
+    "Caminar al este hasta la plaza y luego al sur hasta la feria.": "Confunde el norte o sur con el este."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: enunciado ambiguo"
+   ]
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Lee: «Texto 1: El compost se hace con restos orgánicos y produce abono. Texto 2: En la escuela, el compost redujo la basura del recreo». ¿Qué conclusión está mejor apoyada?",
+   "options": [
+    "La escuela ya no necesita comprar ningún producto.",
+    "Todo tipo de basura sirve para hacer compost.",
+    "El compost elimina la necesidad de cuidar los jardines.",
+    "Hacer compost puede disminuir la basura y producir abono."
+   ],
+   "correct": "Hacer compost puede disminuir la basura y producir abono.",
+   "hint": "Un texto explica cómo funciona el compost y el otro muestra un resultado en la escuela.",
+   "clue": "Busca una idea que conecte la función del compost con el resultado observado.",
+   "option_notes": {
+    "Todo tipo de basura sirve para hacer compost.": "Amplía el dato: solo los restos orgánicos sirven.",
+    "El compost elimina la necesidad de cuidar los jardines.": "Confunde producir abono con eliminar el cuidado de jardines.",
+    "La escuela ya no necesita comprar ningún producto.": "Saca una conclusión total que los textos no permiten."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA6",
+   "difficulty": "hard",
+   "text": "Lee: «El río es la columna vertebral del valle: lleva agua a los huertos y sostiene a muchas familias. Por eso debemos mantenerlo limpio». ¿Qué razón apoya mejor la postura del texto?",
+   "options": [
+    "Cuidar el río beneficia a huertos y familias que dependen de él.",
+    "Solo quienes viven junto al río deben limpiarlo.",
+    "Limpiar el río hará que deje de tener agua.",
+    "El río debe reemplazarse por tuberías nuevas."
+   ],
+   "correct": "Cuidar el río beneficia a huertos y familias que dependen de él.",
+   "hint": "“Columna vertebral” indica que el río es esencial para los huertos y las familias del valle.",
+   "clue": "Relaciona la expresión figurada con las dos funciones concretas del río.",
+   "option_notes": {
+    "Limpiar el río hará que deje de tener agua.": "Toma la expresión de manera absurda y contradice la necesidad de agua.",
+    "El río debe reemplazarse por tuberías nuevas.": "Propone una solución que el texto no plantea.",
+    "Solo quienes viven junto al río deben limpiarlo.": "Limita la responsabilidad a un grupo, aunque el texto habla del valle."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

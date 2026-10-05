@@ -1,0 +1,264 @@
+{
+ "oa": "OA4",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "Lee: “Al abrir la puerta, el patio era un horno”. ¿Qué significa “era un horno” en este texto?",
+   "options": [
+    "Hacía mucho calor en el patio.",
+    "El patio estaba lleno de humo.",
+    "El patio estaba oscuro y cerrado.",
+    "Había un horno encendido en el patio."
+   ],
+   "correct": "Hacía mucho calor en el patio.",
+   "hint": "La expresión compara el patio con un horno para indicar que allí hacía mucho calor.",
+   "clue": "Piensa en la sensación que produce un horno.",
+   "option_notes": {
+    "El patio estaba lleno de humo.": "Confunde el calor con la presencia de humo.",
+    "Había un horno encendido en el patio.": "Interpreta la comparación como un hecho literal.",
+    "El patio estaba oscuro y cerrado.": "Relaciona la puerta con oscuridad, no con la expresión."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "Benjamín era pequeño y liviano. Por eso pudo pasar entre los barrotes y rescatar al cachorrito. ¿Qué característica física fue clave?",
+   "options": [
+    "Su tamaño reducido le permitió pasar.",
+    "Su enorme estatura le permitió alcanzar.",
+    "Su voz fuerte le permitió llamar.",
+    "Su gran paciencia le permitió esperar."
+   ],
+   "correct": "Su tamaño reducido le permitió pasar.",
+   "hint": "El texto relaciona directamente su tamaño pequeño con poder pasar entre los barrotes.",
+   "clue": "Busca el rasgo del cuerpo que permite pasar por un espacio angosto.",
+   "option_notes": {
+    "Su gran paciencia le permitió esperar.": "Confunde una cualidad mental con una característica física.",
+    "Su voz fuerte le permitió llamar.": "El rescate no depende de hablar o gritar.",
+    "Su enorme estatura le permitió alcanzar.": "Ser muy alto dificultaría pasar entre los barrotes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "En la caleta de Tongoy, las familias se levantaban antes del amanecer para recibir a los pescadores y compartir sopaipillas. ¿Qué ambiente se representa?",
+   "options": [
+    "Una ciudad con tráfico y edificios altos.",
+    "Un desierto sin viviendas ni actividades.",
+    "Un bosque cordillerano aislado y silencioso.",
+    "Una caleta costera con vida familiar y de pesca."
+   ],
+   "correct": "Una caleta costera con vida familiar y de pesca.",
+   "hint": "La caleta, los pescadores y la reunión familiar muestran un lugar costero ligado a la pesca.",
+   "clue": "Fíjate en el lugar, las personas y la actividad que aparecen.",
+   "option_notes": {
+    "Un bosque cordillerano aislado y silencioso.": "Cambia la costa y la pesca por un paisaje de montaña.",
+    "Una ciudad con tráfico y edificios altos.": "Reemplaza la caleta por una ciudad que no aparece.",
+    "Un desierto sin viviendas ni actividades.": "Ignora a las familias, los pescadores y la comida."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "Antes de salir, Diego dejó la ventana abierta. Durante la lluvia, el agua entró y mojó sus cuadernos. ¿Qué consecuencia tuvo su decisión?",
+   "options": [
+    "El patio quedó lleno de hojas.",
+    "La lluvia terminó de inmediato.",
+    "Sus cuadernos quedaron mojados.",
+    "Encontró un paraguas nuevo."
+   ],
+   "correct": "Sus cuadernos quedaron mojados.",
+   "hint": "La ventana abierta permitió que entrara agua, por eso los cuadernos se mojaron.",
+   "clue": "Sigue la cadena: ventana abierta, lluvia y resultado.",
+   "option_notes": {
+    "Encontró un paraguas nuevo.": "Supone un resultado que el texto no menciona.",
+    "El patio quedó lleno de hojas.": "Agrega hojas, un elemento ausente en el relato.",
+    "La lluvia terminó de inmediato.": "Confunde la causa con un efecto no relacionado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Camila encontró $5.000 en el patio. Preguntó de quién eran y los entregó en inspectoría, aunque nadie la estaba mirando. ¿Qué opinión está mejor fundamentada?",
+   "options": [
+    "Es egoísta, porque quiso quedarse con el dinero.",
+    "Es impaciente, porque preguntó por su dueño.",
+    "Es honesta, porque entregó el dinero.",
+    "Es distraída, porque caminó por el patio."
+   ],
+   "correct": "Es honesta, porque entregó el dinero.",
+   "hint": "La opinión se apoya en una acción concreta: entregó el dinero aunque podía quedárselo.",
+   "clue": "Relaciona la opinión con la acción que realizó cuando nadie la observaba.",
+   "option_notes": {
+    "Es distraída, porque caminó por el patio.": "Confunde caminar por un lugar con estar distraída.",
+    "Es egoísta, porque quiso quedarse con el dinero.": "Inventa una intención que el texto no muestra.",
+    "Es impaciente, porque preguntó por su dueño.": "Interpreta una pregunta responsable como impaciencia."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Al ver el puente colgante, Elisa sintió miedo. Respiró hondo, avanzó paso a paso y ayudó a su hermano a cruzar. ¿Qué rasgo psicológico es más relevante?",
+   "options": [
+    "Es valiente, porque enfrenta su miedo.",
+    "Es desordenada, porque cruzó lentamente.",
+    "Es olvidadiza, porque respiró hondo.",
+    "Es orgullosa, porque miró el puente."
+   ],
+   "correct": "Es valiente, porque enfrenta su miedo.",
+   "hint": "Elisa siente miedo, pero avanza y ayuda a otra persona; por eso demuestra valentía.",
+   "clue": "Observa cómo actúa Elisa a pesar de sentir miedo.",
+   "option_notes": {
+    "Es desordenada, porque cruzó lentamente.": "Confunde avanzar con lentitud con ser desordenada.",
+    "Es orgullosa, porque miró el puente.": "No hay una acción que demuestre orgullo.",
+    "Es olvidadiza, porque respiró hondo.": "Respirar hondo no indica ser olvidadiza."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "En Rapa Nui, durante la fiesta, las familias prepararon comida, cantaron y enseñaron a los niños una danza tradicional. ¿Qué costumbre se muestra?",
+   "options": [
+    "Competir por comer la mayor cantidad.",
+    "Viajar solos para evitar las fiestas.",
+    "Compartir una celebración y enseñar una danza.",
+    "Guardar las tradiciones solo para adultos."
+   ],
+   "correct": "Compartir una celebración y enseñar una danza.",
+   "hint": "La escena muestra a la familia participando junta y enseñando una práctica tradicional.",
+   "clue": "Busca una acción que los adultos transmiten a los niños.",
+   "option_notes": {
+    "Viajar solos para evitar las fiestas.": "Propone lo contrario de participar en una celebración.",
+    "Competir por comer la mayor cantidad.": "Confunde compartir comida con competir.",
+    "Guardar las tradiciones solo para adultos.": "Contradice que enseñan la danza a los niños."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Texto A, de Ana: “El zorro observó la luna y siguió su camino”. Texto B, de Luis: “El zorro llamó a sus amigos y organizó una búsqueda”. ¿Qué diferencia principal hay entre ambos zorros?",
+   "options": [
+    "En A es pequeño; en B, es enorme.",
+    "En A actúa solo; en B busca apoyo.",
+    "En A teme a la luna; en B, quiere atraparla.",
+    "En A vive en la ciudad; en B, en el campo."
+   ],
+   "correct": "En A actúa solo; en B busca apoyo.",
+   "hint": "En A el zorro continúa solo; en B reúne a otros para resolver una situación.",
+   "clue": "Compara las acciones del zorro en cada texto.",
+   "option_notes": {
+    "En A vive en la ciudad; en B, en el campo.": "Agrega lugares que ninguno de los textos menciona.",
+    "En A teme a la luna; en B, quiere atraparla.": "Confunde observar u organizar una búsqueda con perseguir la luna.",
+    "En A es pequeño; en B, es enorme.": "Inventa tamaños que no aparecen en los textos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Cuando llegó la noticia, el pueblo quedó con el corazón apretado: nadie encendió la radio y las calles se vaciaron. ¿Qué expresa “corazón apretado”?",
+   "options": [
+    "Un ruido fuerte que sale de las radios.",
+    "Una alegría que llena de gente las calles.",
+    "Una enfermedad que aprieta físicamente el corazón.",
+    "Una pena o preocupación causada por la noticia."
+   ],
+   "correct": "Una pena o preocupación causada por la noticia.",
+   "hint": "No habla de un corazón físico: la noticia provoca una emoción difícil y apaga la actividad del pueblo.",
+   "clue": "Observa qué sucede con las personas y las calles después de la noticia.",
+   "option_notes": {
+    "Una enfermedad que aprieta físicamente el corazón.": "Toma la imagen figurada como un problema del cuerpo.",
+    "Una alegría que llena de gente las calles.": "Invierte la emoción y contradice las calles vacías.",
+    "Un ruido fuerte que sale de las radios.": "Confunde el silencio posterior con un sonido."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Martín prometió cuidar el huerto del curso, pero dejó la llave abierta. El agua inundó los almácigos; al verlo, pidió ayuda y se quedó a repararlos. ¿Qué conclusión sobre Martín está mejor apoyada?",
+   "options": [
+    "Es irresponsable, porque abandona siempre sus tareas.",
+    "Comete un error, pero asume su responsabilidad.",
+    "Es perfecto, porque nunca se equivoca.",
+    "Es egoísta, porque no quiere ayudar a nadie."
+   ],
+   "correct": "Comete un error, pero asume su responsabilidad.",
+   "hint": "La inundación muestra su error; pedir ayuda y reparar el huerto muestra que se hace cargo.",
+   "clue": "Considera lo que hizo mal y la manera en que reaccionó después.",
+   "option_notes": {
+    "Es perfecto, porque nunca se equivoca.": "Ignora que dejó la llave abierta y causó la inundación.",
+    "Es irresponsable, porque abandona siempre sus tareas.": "Generaliza desde un error que luego intenta reparar.",
+    "Es egoísta, porque no quiere ayudar a nadie.": "Contradice que pidió ayuda y se quedó a reparar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Texto A, de Paula: “La niña caminó por el cerro y describió los colores del atardecer”. Texto B, de Sergio: “La niña subió al cerro para encontrar una hierba para su abuela”. Si prefieres relatos con un propósito claro, ¿qué justificación apoya mejor elegir el Texto B?",
+   "options": [
+    "Porque en ambos textos la niña viaja en avión.",
+    "Porque el atardecer siempre tiene más colores.",
+    "Porque el cerro del texto A parece peligroso.",
+    "Porque la protagonista busca una hierba para ayudar a su abuela."
+   ],
+   "correct": "Porque la protagonista busca una hierba para ayudar a su abuela.",
+   "hint": "El Texto B muestra una meta concreta: encontrar una hierba para ayudar a su abuela.",
+   "clue": "Elige la razón que usa un hecho escrito en el Texto B.",
+   "option_notes": {
+    "Porque el atardecer siempre tiene más colores.": "Relaciona la preferencia con colores, no con el propósito del relato.",
+    "Porque el cerro del texto A parece peligroso.": "Supone peligro sin una señal del texto.",
+    "Porque en ambos textos la niña viaja en avión.": "Agrega un viaje que no aparece en ningún texto."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "En invierno, en una casa de adobe del altiplano, Tomás tejía junto a su abuela. Extrañaba la ciudad, pero cada tarde observaba sus manos y repetía los pasos del antiguo oficio. ¿Qué interpretación explica mejor por qué Tomás sigue aprendiendo?",
+   "options": [
+    "Quiere convertirse en pescador de la costa.",
+    "Quiere conservar una costumbre familiar aunque extraña la ciudad.",
+    "Busca escapar del frío construyendo la casa.",
+    "Desea evitar conversar con su abuela."
+   ],
+   "correct": "Quiere conservar una costumbre familiar aunque extraña la ciudad.",
+   "hint": "Aunque echa de menos la ciudad, su práctica junto a la abuela muestra respeto por una tradición familiar.",
+   "clue": "Relaciona lo que Tomás siente con la actividad que repite cada tarde.",
+   "option_notes": {
+    "Busca escapar del frío construyendo la casa.": "Confunde tejer con construir y agrega una acción inexistente.",
+    "Quiere convertirse en pescador de la costa.": "Cambia el oficio del altiplano por uno costero.",
+    "Desea evitar conversar con su abuela.": "Contradice que aprende observándola cada tarde."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

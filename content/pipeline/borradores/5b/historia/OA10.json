@@ -1,0 +1,264 @@
+{
+ "oa": "OA10",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos recursos naturales de Chile es no renovable?",
+   "options": [
+    "Cobre",
+    "Bosques",
+    "Viento",
+    "Pesca"
+   ],
+   "correct": "Cobre",
+   "hint": "El cobre se forma durante tiempos geológicos y no se repone a la velocidad con que lo usamos.",
+   "clue": "Piensa cuál recurso no puede volver a formarse durante la vida de una persona.",
+   "option_notes": {
+    "Bosques": "Confunde un recurso renovable con uno que se agota.",
+    "Viento": "Confunde una fuente que se renueva con un mineral.",
+    "Pesca": "Olvida que los peces pueden reproducirse si se manejan bien."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "En un mapa de recursos, unas marcas de hierro aparecen en Atacama y Coquimbo. ¿En qué zona natural están?",
+   "options": [
+    "Norte Grande",
+    "Zona Central",
+    "Zona Sur",
+    "Norte Chico"
+   ],
+   "correct": "Norte Chico",
+   "hint": "Atacama y Coquimbo se ubican en el Norte Chico de Chile.",
+   "clue": "Ubica ambas regiones de norte a sur antes de elegir.",
+   "option_notes": {
+    "Norte Grande": "Confunde el Norte Chico con la zona ubicada más al norte.",
+    "Zona Central": "Ubica demasiado al sur Atacama y Coquimbo.",
+    "Zona Sur": "Confunde una zona del sur con regiones del norte."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos pares corresponde a recursos marítimos de Chile?",
+   "options": [
+    "Cobre y hierro",
+    "Trigo y uvas",
+    "Madera y celulosa",
+    "Merluza y choritos"
+   ],
+   "correct": "Merluza y choritos",
+   "hint": "La merluza y los choritos son seres vivos que se obtienen del mar y la costa.",
+   "clue": "Busca productos que se extraen o recolectan del mar.",
+   "option_notes": {
+    "Cobre y hierro": "Confunde recursos mineros con recursos del mar.",
+    "Madera y celulosa": "Confunde recursos forestales con recursos marítimos.",
+    "Trigo y uvas": "Confunde productos agrícolas con recursos del mar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "En la Zona Sur, una comunidad trabaja con un recurso forestal que se transforma en muebles y papel. ¿Cuál es?",
+   "options": [
+    "Cobre de una mina",
+    "Madera de los bosques",
+    "Sal del borde costero",
+    "Hierro de un yacimiento"
+   ],
+   "correct": "Madera de los bosques",
+   "hint": "La madera proviene de los bosques y puede usarse en muebles y productos de papel.",
+   "clue": "Relaciona muebles y papel con los árboles.",
+   "option_notes": {
+    "Sal del borde costero": "Confunde un recurso costero con uno proveniente de bosques.",
+    "Cobre de una mina": "Confunde un mineral con un recurso forestal.",
+    "Hierro de un yacimiento": "Confunde un mineral con un recurso forestal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "Un mapa marca cobre en Antofagasta y bosques en La Araucanía. Según esos lugares, ¿qué relación es correcta?",
+   "options": [
+    "Cobre: Zona Central; bosques: Norte Grande.",
+    "Cobre: Zona Austral; bosques: Norte Chico.",
+    "Cobre: Norte Grande; bosques: Zona Sur.",
+    "Cobre: Norte Chico; bosques: Zona Austral."
+   ],
+   "correct": "Cobre: Norte Grande; bosques: Zona Sur.",
+   "hint": "Antofagasta está en el Norte Grande y La Araucanía en la Zona Sur.",
+   "clue": "Relaciona cada región con su zona natural.",
+   "option_notes": {
+    "Cobre: Norte Chico; bosques: Zona Austral.": "Confunde las zonas naturales de ambas regiones.",
+    "Cobre: Zona Central; bosques: Norte Grande.": "Desplaza ambas ubicaciones hacia zonas equivocadas.",
+    "Cobre: Zona Austral; bosques: Norte Chico.": "Confunde el extremo sur con el norte del país."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "Camila clasifica cobre, merluza, madera y hierro. ¿Qué orden los separa correctamente en no renovables y renovables?",
+   "options": [
+    "No renovables: madera, hierro; renovables: cobre, merluza.",
+    "No renovables: merluza, madera; renovables: cobre, hierro.",
+    "No renovables: cobre, hierro; renovables: merluza, madera.",
+    "No renovables: cobre, merluza; renovables: hierro, madera."
+   ],
+   "correct": "No renovables: cobre, hierro; renovables: merluza, madera.",
+   "hint": "Cobre y hierro no se reponen a escala humana; peces y árboles pueden renovarse si se manejan bien.",
+   "clue": "Primero separa minerales de seres vivos.",
+   "option_notes": {
+    "No renovables: merluza, madera; renovables: cobre, hierro.": "Invierte la clasificación de minerales y seres vivos.",
+    "No renovables: cobre, merluza; renovables: hierro, madera.": "Mezcla un pez y un mineral en cada grupo.",
+    "No renovables: madera, hierro; renovables: cobre, merluza.": "Confunde la madera con un recurso agotable y el cobre con uno renovable."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "En Chiloé, una caleta captura muchos peces pequeños de merluza. ¿Qué medida ayuda más a mantener el recurso marítimo?",
+   "options": [
+    "Extraer peces sin respetar su época de reproducción.",
+    "Capturar los peces pequeños antes de que escapen.",
+    "Pescar durante todo el año sin ningún límite.",
+    "Respetar vedas y dejar crecer a los peces."
+   ],
+   "correct": "Respetar vedas y dejar crecer a los peces.",
+   "hint": "Las vedas y el tiempo de crecimiento permiten que los peces se reproduzcan antes de capturarlos.",
+   "clue": "Busca una medida que permita que los peces se reproduzcan.",
+   "option_notes": {
+    "Capturar los peces pequeños antes de que escapen.": "Confunde aprovechar una captura con cuidar la reproducción.",
+    "Pescar durante todo el año sin ningún límite.": "Cree que un recurso renovable nunca necesita regulación.",
+    "Extraer peces sin respetar su época de reproducción.": "Ignora que la reproducción mantiene el recurso marítimo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "Una escuela plantará árboles nativos cerca de Temuco y usará parte de la madera. ¿Qué acción hace sostenible ese uso?",
+   "options": [
+    "Prohibir siempre el uso de madera en la comunidad.",
+    "Usar toda la madera sin reponer los árboles cortados.",
+    "Plantar nuevos árboles y respetar normas de corte.",
+    "Esperar que los árboles crezcan de inmediato."
+   ],
+   "correct": "Plantar nuevos árboles y respetar normas de corte.",
+   "hint": "Los árboles pueden renovarse, pero necesitan tiempo y un corte regulado para que el bosque continúe.",
+   "clue": "Un recurso renovable necesita tiempo y manejo para mantenerse.",
+   "option_notes": {
+    "Esperar que los árboles crezcan de inmediato.": "Cree que lo renovable se repone de inmediato.",
+    "Usar toda la madera sin reponer los árboles cortados.": "Confunde un recurso renovable con un recurso ilimitado.",
+    "Prohibir siempre el uso de madera en la comunidad.": "Confunde cuidar un recurso con no poder usarlo nunca."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "Un mapa señala cobre en Antofagasta y bosques en Los Ríos. Una empresa quiere extraer ambos al máximo, sin límites. ¿Qué problema común podría ocurrir?",
+   "options": [
+    "Se agotan o dañan y las futuras generaciones tienen menos.",
+    "La extracción siempre aumenta los recursos disponibles.",
+    "Solo el bosque causa daño; el cobre no cambia el ambiente.",
+    "Se renuevan de inmediato, aunque se extraiga todo."
+   ],
+   "correct": "Se agotan o dañan y las futuras generaciones tienen menos.",
+   "hint": "El cobre no es renovable; los bosques requieren tiempo y manejo, y ambos pueden dañarse con exceso de extracción.",
+   "clue": "Piensa qué ocurre cuando el uso supera la capacidad de recuperación del recurso.",
+   "option_notes": {
+    "Se renuevan de inmediato, aunque se extraiga todo.": "Cree que todo recurso natural se repone de inmediato.",
+    "Solo el bosque causa daño; el cobre no cambia el ambiente.": "Niega los impactos ambientales de la extracción minera.",
+    "La extracción siempre aumenta los recursos disponibles.": "Confunde extraer recursos con aumentar su cantidad natural."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "En el Norte Chico, una comunidad tiene hierro y pesca. Compara dos planes: el 1 extrae sin límites; el 2 regula la extracción y protege áreas de reproducción. ¿Cuál favorece más el desarrollo sostenible?",
+   "options": [
+    "El plan 2, porque nunca permite usar los recursos.",
+    "El plan 2, porque usa con cuidado el hierro y protege la pesca.",
+    "El plan 1, porque el hierro se renueva cada temporada.",
+    "El plan 1, porque extraer más asegura el futuro."
+   ],
+   "correct": "El plan 2, porque usa con cuidado el hierro y protege la pesca.",
+   "hint": "El hierro es no renovable y la pesca necesita protección para mantenerse; regular permite usarlos responsablemente.",
+   "clue": "Busca el plan que considera la disponibilidad futura de los dos recursos.",
+   "option_notes": {
+    "El plan 1, porque extraer más asegura el futuro.": "Confunde una extracción mayor con asegurar recursos futuros.",
+    "El plan 2, porque nunca permite usar los recursos.": "Confunde sostenibilidad con prohibir totalmente el uso.",
+    "El plan 1, porque el hierro se renueva cada temporada.": "Confunde un mineral no renovable con un recurso que se reproduce."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "Un mapa escolar ubica cobre en el Norte Grande, hierro en el Norte Chico, bosques en la Zona Sur y pesca en toda la costa. ¿Qué conclusión se puede inferir?",
+   "options": [
+    "Los recursos mineros pueden renovarse si se cuidan.",
+    "Los recursos cambian según la zona y requieren cuidados distintos.",
+    "Solo la Zona Sur posee recursos naturales importantes.",
+    "Todas las zonas tienen exactamente los mismos recursos."
+   ],
+   "correct": "Los recursos cambian según la zona y requieren cuidados distintos.",
+   "hint": "El mapa muestra una distribución diferente; cada recurso necesita un cuidado acorde con sus características.",
+   "clue": "Compara qué recurso aparece en cada zona y piensa en sus diferencias.",
+   "option_notes": {
+    "Todas las zonas tienen exactamente los mismos recursos.": "Confunde una distribución diversa con una distribución igual.",
+    "Solo la Zona Sur posee recursos naturales importantes.": "Ignora los recursos mineros y marítimos del resto de Chile.",
+    "Los recursos mineros pueden renovarse si se cuidan.": "Confunde recursos no renovables con recursos que pueden recuperarse."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "Una comuna usa cobre y madera para construir una escuela. ¿Qué plan cuida mejor los recursos y permite satisfacer necesidades actuales?",
+   "options": [
+    "Ahorra cobre y repone los árboles autorizados para cortar.",
+    "Deja de usar madera y gasta todo el cobre extraído.",
+    "Planta árboles, pero aumenta sin límite la extracción de cobre.",
+    "Extrae cobre y corta todos los árboles disponibles."
+   ],
+   "correct": "Ahorra cobre y repone los árboles autorizados para cortar.",
+   "hint": "El cobre es no renovable; la madera puede renovarse si se corta con autorización y se reponen árboles.",
+   "clue": "Considera que los dos recursos no se recuperan de la misma manera.",
+   "option_notes": {
+    "Extrae cobre y corta todos los árboles disponibles.": "Ignora que el cobre es limitado y que el bosque necesita manejo.",
+    "Deja de usar madera y gasta todo el cobre extraído.": "Cree que cuidar un recurso permite agotar el otro.",
+    "Planta árboles, pero aumenta sin límite la extracción de cobre.": "Cuida la madera, pero usa sin límite un recurso no renovable."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

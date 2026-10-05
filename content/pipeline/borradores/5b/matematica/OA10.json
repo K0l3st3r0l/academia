@@ -1,0 +1,264 @@
+{
+ "oa": "OA10",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "Completa la igualdad: 2/5 = ___.",
+   "options": [
+    "0,5",
+    "0,4",
+    "0,2",
+    "2,5"
+   ],
+   "correct": "0,4",
+   "hint": "Un quinto es 0,2; dos quintos son el doble: 0,4.",
+   "clue": "Piensa cuánto vale 1/5 y luego toma dos de esas partes.",
+   "option_notes": {
+    "0,2": "Confunde 2/5 con 1/5.",
+    "0,5": "Confunde quintos con medios.",
+    "2,5": "Divide el denominador por el numerador."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "En una recta numérica, la marca está en 3/10. ¿Qué número decimal debe escribirse?",
+   "options": [
+    "3,0",
+    "0,3",
+    "0,03",
+    "0,13"
+   ],
+   "correct": "0,3",
+   "hint": "Diez décimos forman 1; tres décimos se escriben 0,3.",
+   "clue": "Con denominador 10, el numerador indica las décimas.",
+   "option_notes": {
+    "0,03": "Lee 3/10 como tres centésimos.",
+    "3,0": "Interpreta el numerador como 3 unidades.",
+    "0,13": "Combina 3 y 10 como 13 centésimos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "Una botella de 1 L está llena hasta 1/4 de su capacidad. ¿Qué cantidad decimal de litro contiene?",
+   "options": [
+    "0,14 L",
+    "0,2 L",
+    "0,25 L",
+    "0,4 L"
+   ],
+   "correct": "0,25 L",
+   "hint": "Un cuarto de 1 L equivale a 25 centésimos: 0,25 L.",
+   "clue": "Divide 1 litro en cuatro partes iguales.",
+   "option_notes": {
+    "0,14 L": "Une 1 y 4 como 14 centésimos.",
+    "0,2 L": "Confunde cuartos con quintos.",
+    "0,4 L": "Confunde el denominador con la cantidad decimal."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "easy",
+   "text": "¿En qué alternativa la fracción y su decimal representan la misma cantidad?",
+   "options": [
+    "3/10 y 0,03",
+    "4/10 y 0,04",
+    "1/5 y 0,5",
+    "2/5 y 0,4"
+   ],
+   "correct": "2/5 y 0,4",
+   "hint": "Dos quintos equivalen a cuatro décimos, es decir, 0,4.",
+   "clue": "Convierte cada fracción a décimos o centésimos.",
+   "option_notes": {
+    "1/5 y 0,5": "Confunde quintos con medios.",
+    "3/10 y 0,03": "Desplaza la coma un lugar de más.",
+    "4/10 y 0,04": "Lee cuatro décimos como cuatro centésimos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "En una observación de fauna, una lagartija recorre 3/4 m y un sapito de cuatro ojos 2/5 m. ¿Cuántos metros más recorre la lagartija?",
+   "options": [
+    "0,4 m",
+    "0,25 m",
+    "0,35 m",
+    "1,15 m"
+   ],
+   "correct": "0,35 m",
+   "hint": "3/4 = 0,75 y 2/5 = 0,4; la diferencia es 0,75 − 0,4 = 0,35 m.",
+   "clue": "Convierte ambas fracciones y resta la menor de la mayor.",
+   "option_notes": {
+    "0,25 m": "Confunde 2/5 con 1/2 al restar.",
+    "0,4 m": "Responde solo la medida del sapito.",
+    "1,15 m": "Suma las dos distancias."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "Para una receta se necesita 1 L de leche. Ya se usaron 3/5 L. ¿Cuántos litros quedan, en decimal?",
+   "options": [
+    "0,4 L",
+    "0,6 L",
+    "1,6 L",
+    "0,2 L"
+   ],
+   "correct": "0,4 L",
+   "hint": "3/5 = 0,6; entonces 1 − 0,6 = 0,4 L.",
+   "clue": "Primero transforma la cantidad usada a decimal y luego réstala de 1.",
+   "option_notes": {
+    "0,2 L": "Resta el numerador al denominador: 5 − 3 = 2.",
+    "0,6 L": "Responde la cantidad usada, no la que queda.",
+    "1,6 L": "Suma en vez de restar."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "Ordena de menor a mayor estas fracciones: 1/2, 1/10, 2/5 y 3/4. ¿Qué orden decimal es correcto?",
+   "options": [
+    "0,1; 0,5; 0,4; 0,75",
+    "0,1; 0,4; 0,5; 0,75",
+    "0,4; 0,1; 0,5; 0,75",
+    "0,75; 0,5; 0,4; 0,1"
+   ],
+   "correct": "0,1; 0,4; 0,5; 0,75",
+   "hint": "Sus decimales son 0,5; 0,1; 0,4 y 0,75; luego ordénalos.",
+   "clue": "Convierte cada fracción antes de comparar.",
+   "option_notes": {
+    "0,1; 0,5; 0,4; 0,75": "Intercambia 0,4 y 0,5 al comparar.",
+    "0,4; 0,1; 0,5; 0,75": "Pone 0,4 antes de 0,1.",
+    "0,75; 0,5; 0,4; 0,1": "Ordena de mayor a menor."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "medium",
+   "text": "Un sendero del Parque Nacional Conguillío mide 2 km. Si recorres 3/4 del sendero, ¿cuántos kilómetros recorres?",
+   "options": [
+    "1,25 km",
+    "2,75 km",
+    "1,5 km",
+    "0,75 km"
+   ],
+   "correct": "1,5 km",
+   "hint": "3/4 = 0,75; 2 × 0,75 = 1,5 km.",
+   "clue": "Convierte 3/4 a decimal y multiplica por los 2 km.",
+   "option_notes": {
+    "0,75 km": "Da solo el decimal de la fracción.",
+    "1,25 km": "Resta 0,75 a 2 en vez de multiplicar.",
+    "2,75 km": "Suma 2 y 0,75."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "En una carrera de 1 km, Camila recorrió 3/5 de la distancia, Diego 1/2 y Elisa 4/10. ¿Quién está más cerca de la meta?",
+   "options": [
+    "Camila, porque 3/5 = 0,6.",
+    "Elisa, porque 4/10 = 0,4.",
+    "Los tres, porque todas son menores que 1.",
+    "Diego, porque 1/2 = 0,5."
+   ],
+   "correct": "Camila, porque 3/5 = 0,6.",
+   "hint": "3/5 = 0,6; 1/2 = 0,5; 4/10 = 0,4. La mayor distancia está más cerca de 1 km.",
+   "clue": "Compara los decimales: quien recorrió más está más cerca de completar 1 km.",
+   "option_notes": {
+    "Diego, porque 1/2 = 0,5.": "Confunde 0,5 con la mayor de las tres distancias.",
+    "Elisa, porque 4/10 = 0,4.": "Elige la menor distancia, aunque queda más lejos.",
+    "Los tres, porque todas son menores que 1.": "Cree que todas las fracciones menores que 1 son iguales."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "En un paseo, llevan 2 L de jugo. En la mañana beben 3/4 del total y después 1/10 del total. ¿Cuántos litros beben en total?",
+   "options": [
+    "1,7 L",
+    "0,3 L",
+    "1,5 L",
+    "2,0 L"
+   ],
+   "correct": "1,7 L",
+   "hint": "3/4 de 2 L = 1,5 L; 1/10 de 2 L = 0,2 L; beben 1,7 L.",
+   "clue": "Calcula cada fracción de los 2 L y suma ambas cantidades.",
+   "option_notes": {
+    "0,3 L": "Calcula lo que queda en vez de lo que beben.",
+    "1,5 L": "Considera solo la parte bebida en la mañana.",
+    "2,0 L": "Confunde las partes bebidas con el total completo."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  },
+  {
+   "oa_code": "OA10",
+   "difficulty": "hard",
+   "text": "Cuatro estudiantes calculan 4/5 − 1/2 + 1/10. ¿Quién respondió correctamente?",
+   "options": [
+    "Diego: 1,4",
+    "Carla: 0,3",
+    "Antonia: 0,2",
+    "Bruno: 0,4"
+   ],
+   "correct": "Bruno: 0,4",
+   "hint": "4/5 = 0,8; 1/2 = 0,5; 1/10 = 0,1. Entonces 0,8 − 0,5 + 0,1 = 0,4.",
+   "clue": "Transforma primero cada fracción a decimal y respeta los signos.",
+   "option_notes": {
+    "Antonia: 0,2": "Resta 1/10 en vez de sumarlo.",
+    "Carla: 0,3": "Omite el último sumando 1/10.",
+    "Diego: 1,4": "Suma las tres cantidades sin respetar el signo −."
+   },
+   "warnings": [],
+   "check": [
+    "verificador: fuera del nivel o del OA"
+   ]
+  }
+ ],
+ "dropped": [
+  {
+   "text": "Dos cintas: A mide 2/5 m + 1/10 m + 1/4 m. B mide 3/4 m. ¿Qué afirmación es correcta?",
+   "errors": [
+    "alternativa del tipo «todas/ninguna de las anteriores»"
+   ]
+  }
+ ],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

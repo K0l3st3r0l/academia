@@ -1,0 +1,262 @@
+{
+ "oa": "OA1",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Qué buscaba principalmente Cristóbal Colón al navegar hacia el oeste desde Europa?",
+   "options": [
+    "Llegar a África navegando hacia el sur",
+    "Encontrar una ruta terrestre hacia Asia",
+    "Llegar a Asia navegando hacia el este",
+    "Encontrar una ruta marítima hacia Asia"
+   ],
+   "correct": "Encontrar una ruta marítima hacia Asia",
+   "hint": "Colón pensaba que podía llegar a las tierras de Asia navegando hacia el oeste.",
+   "clue": "Fíjate en el destino buscado y en la dirección del viaje.",
+   "option_notes": {
+    "Encontrar una ruta terrestre hacia Asia": "Confunde una ruta marítima con un camino por tierra.",
+    "Llegar a África navegando hacia el sur": "Confunde el objetivo de Colón con otra ruta.",
+    "Llegar a Asia navegando hacia el este": "Cambia la dirección que siguió Colón."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Qué situación de Europa ayudó a impulsar los viajes de descubrimiento?",
+   "options": [
+    "Abandonar el comercio con Asia y África",
+    "Evitar el uso de barcos en mares abiertos",
+    "Preferir viajar solo por tierra dentro de Europa",
+    "Buscar rutas marítimas directas hacia Asia"
+   ],
+   "correct": "Buscar rutas marítimas directas hacia Asia",
+   "hint": "Los reinos buscaban comerciar con Asia sin depender de tantas rutas y intermediarios.",
+   "clue": "Piensa en el comercio, las especias y la competencia entre reinos.",
+   "option_notes": {
+    "Abandonar el comercio con Asia y África": "Confunde la búsqueda de comercio con su abandono.",
+    "Preferir viajar solo por tierra dentro de Europa": "Ignora el interés por encontrar rutas marítimas lejanas.",
+    "Evitar el uso de barcos en mares abiertos": "Contradice el propósito de las expediciones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "¿Qué instrumento ayudaba a orientarse porque señalaba el norte?",
+   "options": [
+    "La carabela",
+    "El astrolabio",
+    "La brújula",
+    "La carta náutica"
+   ],
+   "correct": "La brújula",
+   "hint": "La brújula usa una aguja imantada para indicar el norte y ayudar a mantener el rumbo.",
+   "clue": "Busca el instrumento que indica una dirección fija.",
+   "option_notes": {
+    "El astrolabio": "Confunde un instrumento astronómico con uno que señala el norte.",
+    "La carabela": "Confunde una embarcación con un instrumento de navegación.",
+    "La carta náutica": "Confunde un mapa del mar con un instrumento magnético."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "easy",
+   "text": "La expedición iniciada por Hernando de Magallanes y terminada por Juan Sebastián Elcano logró:",
+   "options": [
+    "Rodear África para llegar a India",
+    "Completar la primera vuelta al mundo",
+    "Explorar solo las costas de América",
+    "Encontrar una ruta occidental hacia China"
+   ],
+   "correct": "Completar la primera vuelta al mundo",
+   "hint": "Aunque Magallanes murió durante el viaje, Elcano y parte de la tripulación regresaron a España.",
+   "clue": "Piensa en el hecho que hizo famosa a esa expedición.",
+   "option_notes": {
+    "Encontrar una ruta occidental hacia China": "Atribuye a Magallanes el objetivo principal de Colón.",
+    "Rodear África para llegar a India": "Confunde esta expedición con la de Vasco da Gama.",
+    "Explorar solo las costas de América": "Olvida que la expedición cruzó el océano Pacífico."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "Un esquema muestra: España → océano Atlántico → islas del Caribe. ¿Qué viaje representa?",
+   "options": [
+    "El viaje de Vasco da Gama",
+    "El primer viaje de Cristóbal Colón",
+    "Una ruta terrestre de Marco Polo",
+    "La expedición de Hernando de Magallanes"
+   ],
+   "correct": "El primer viaje de Cristóbal Colón",
+   "hint": "La primera expedición de Colón salió de España y llegó a islas del Caribe tras cruzar el Atlántico.",
+   "clue": "Relaciona el punto de partida, el océano y el primer destino.",
+   "option_notes": {
+    "La expedición de Hernando de Magallanes": "Confunde el Caribe con el paso hacia el Pacífico.",
+    "El viaje de Vasco da Gama": "Confunde la ruta por África con la de Colón.",
+    "Una ruta terrestre de Marco Polo": "Confunde un viaje terrestre con una travesía atlántica."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "Vasco da Gama quería llegar a Asia. ¿Qué ruta siguió para lograrlo?",
+   "options": [
+    "Cruzó el Pacífico y llegó a Filipinas",
+    "Viajó por tierra desde Europa hasta China",
+    "Rodeó el extremo sur de África y continuó hacia India",
+    "Navegó al oeste y llegó a las islas del Caribe"
+   ],
+   "correct": "Rodeó el extremo sur de África y continuó hacia India",
+   "hint": "Vasco da Gama llegó a India siguiendo una ruta marítima alrededor del sur de África.",
+   "clue": "Busca la alternativa que combina una vuelta por África con un destino asiático.",
+   "option_notes": {
+    "Cruzó el Pacífico y llegó a Filipinas": "Confunde a Vasco da Gama con la expedición de Magallanes.",
+    "Navegó al oeste y llegó a las islas del Caribe": "Confunde su ruta con el primer viaje de Colón.",
+    "Viajó por tierra desde Europa hasta China": "Confunde una ruta marítima con una ruta terrestre."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "En un diario se lee: «Llevamos semanas sin ver tierra; faltan agua y alimentos». ¿Qué dificultad muestra?",
+   "options": [
+    "El agotamiento de las provisiones durante la travesía",
+    "La seguridad de navegar siempre cerca de la costa",
+    "La facilidad de conseguir agua en mar abierto",
+    "El aumento de provisiones durante la travesía"
+   ],
+   "correct": "El agotamiento de las provisiones durante la travesía",
+   "hint": "Una travesía larga podía dejar a la tripulación sin comida ni agua fresca.",
+   "clue": "Busca el problema que aparece directamente en el diario.",
+   "option_notes": {
+    "El aumento de provisiones durante la travesía": "Interpreta la falta de alimentos como una abundancia.",
+    "La facilidad de conseguir agua en mar abierto": "Confunde el agua del mar con agua para beber.",
+    "La seguridad de navegar siempre cerca de la costa": "Ignora que el diario indica semanas sin ver tierra."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "medium",
+   "text": "¿Por qué la brújula, las cartas náuticas y mejores barcos facilitaron viajes por mar abierto?",
+   "options": [
+    "Permitieron orientarse y resistir travesías más largas",
+    "Permitieron evitar por completo tormentas y enfermedades",
+    "Permitieron viajar sin alimentos ni agua",
+    "Permitieron saber siempre qué tiempo habría"
+   ],
+   "correct": "Permitieron orientarse y resistir travesías más largas",
+   "hint": "Estos avances ayudaron a mantener el rumbo y soportar mejor los viajes prolongados.",
+   "clue": "Relaciona la orientación con la duración del viaje.",
+   "option_notes": {
+    "Permitieron saber siempre qué tiempo habría": "Atribuye a esos avances un pronóstico perfecto del tiempo.",
+    "Permitieron evitar por completo tormentas y enfermedades": "Supone que la tecnología eliminaba todos los peligros.",
+    "Permitieron viajar sin alimentos ni agua": "Olvida que la tripulación necesitaba provisiones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Colón buscó Asia navegando al oeste; Vasco da Gama la alcanzó rodeando África. ¿Qué conclusión se desprende?",
+   "options": [
+    "Solo existía una ruta marítima posible hacia Asia",
+    "Ambos llegaron a Asia cruzando el océano Pacífico",
+    "Había más de una ruta marítima posible hacia Asia",
+    "Las rutas terrestres eran siempre más rápidas"
+   ],
+   "correct": "Había más de una ruta marítima posible hacia Asia",
+   "hint": "Los dos viajes tenían un destino general parecido, pero usaron caminos marítimos diferentes.",
+   "clue": "Compara la dirección y el recorrido, no solo el destino.",
+   "option_notes": {
+    "Solo existía una ruta marítima posible hacia Asia": "No reconoce que los exploradores usaron recorridos distintos.",
+    "Ambos llegaron a Asia cruzando el océano Pacífico": "Atribuye a ambos una ruta que no siguieron.",
+    "Las rutas terrestres eran siempre más rápidas": "Saca una conclusión que no aparece en el ejemplo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Lee: «Los reinos europeos competían por las especias y financiaban naves con brújulas y cartas». ¿Qué relación explica mejor el registro?",
+   "options": [
+    "La competencia comercial impulsó viajes apoyados por avances náuticos",
+    "Los avances náuticos hicieron innecesaria la competencia comercial",
+    "Las especias se producían principalmente en puertos europeos",
+    "La competencia comercial llevó a cerrar las rutas marítimas"
+   ],
+   "correct": "La competencia comercial impulsó viajes apoyados por avances náuticos",
+   "hint": "El interés por comerciar llevó a los reinos a financiar expediciones y aprovechar nuevos instrumentos.",
+   "clue": "Une las dos pistas: la razón económica y los medios para navegar.",
+   "option_notes": {
+    "Los avances náuticos hicieron innecesaria la competencia comercial": "Invierte la relación entre tecnología y competencia.",
+    "La competencia comercial llevó a cerrar las rutas marítimas": "Confunde competir por rutas con cerrarlas.",
+    "Las especias se producían principalmente en puertos europeos": "Confunde los lugares de producción de las especias."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Una expedición salió de España, encontró un paso al sur de América, cruzó el Pacífico y volvió a España con una nave. ¿Qué puedes inferir?",
+   "options": [
+    "Solo recorrió costas europeas y africanas",
+    "Fue un viaje corto por aguas conocidas",
+    "Regresó sin enfrentar pérdidas ni dificultades",
+    "Fue una travesía muy extensa y completó una vuelta al mundo"
+   ],
+   "correct": "Fue una travesía muy extensa y completó una vuelta al mundo",
+   "hint": "Unió océanos y continentes; regresar con una nave permitió completar la primera vuelta al mundo.",
+   "clue": "Sigue la secuencia: salida, paso, océano cruzado y regreso.",
+   "option_notes": {
+    "Fue un viaje corto por aguas conocidas": "Minimiza la distancia y la exploración realizada.",
+    "Solo recorrió costas europeas y africanas": "Ignora el cruce del océano Pacífico.",
+    "Regresó sin enfrentar pérdidas ni dificultades": "No considera que volvió solo una nave."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA1",
+   "difficulty": "hard",
+   "text": "Una estudiante afirma: «Colón y Magallanes hicieron el mismo viaje». ¿Cuál corrección es más precisa?",
+   "options": [
+    "Ambos rodearon África para llegar a India.",
+    "Colón cruzó el Atlántico hacia el oeste; Magallanes pasó al Pacífico por el sur de América.",
+    "Colón cruzó el Pacífico y Magallanes llegó primero al Caribe.",
+    "Ambos viajaron por tierra desde Europa hasta Asia."
+   ],
+   "correct": "Colón cruzó el Atlántico hacia el oeste; Magallanes pasó al Pacífico por el sur de América.",
+   "hint": "Los dos salieron de Europa, pero eligieron rutas distintas y sus expediciones tuvieron resultados diferentes.",
+   "clue": "Compara los océanos y el paso usado por cada expedición.",
+   "option_notes": {},
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

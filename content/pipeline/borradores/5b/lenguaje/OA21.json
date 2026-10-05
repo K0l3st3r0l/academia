@@ -1,0 +1,264 @@
+{
+ "oa": "OA21",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "Lee la oración: «Cada mañana, Tomás ___ hasta la escuela». ¿Qué forma de «caminar» la completa correctamente?",
+   "options": [
+    "camina",
+    "caminas",
+    "camino",
+    "caminan"
+   ],
+   "correct": "camina",
+   "hint": "«Tomás» es tercera persona singular y «cada mañana» indica una acción habitual.",
+   "clue": "Fíjate en quién realiza la acción y si es una persona o varias.",
+   "option_notes": {
+    "camino": "Usa primera persona, aunque el sujeto es Tomás.",
+    "caminas": "Usa segunda persona singular, no tercera persona.",
+    "caminan": "Usa tercera persona plural, pero Tomás es singular."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "En el diario de Benjamín aparece: «Ayer, nosotros ___ en la plaza». El verbo es «correr». Elige la forma correcta.",
+   "options": [
+    "corrimos",
+    "corrieron",
+    "corremos",
+    "correremos"
+   ],
+   "correct": "corrimos",
+   "hint": "«Ayer» señala pasado y «nosotros» exige una forma plural de primera persona.",
+   "clue": "Mira primero el momento de la acción y luego quiénes la realizan.",
+   "option_notes": {
+    "corremos": "Usa presente en vez de pasado.",
+    "correremos": "Usa futuro en vez de pasado.",
+    "corrieron": "Usa tercera persona plural, no «nosotros»."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "La presentación todavía no ocurre: mañana, las niñas ___ una cueca en el acto de la escuela. ¿Qué forma futura de «bailar» completa la oración?",
+   "options": [
+    "bailaron",
+    "bailarán",
+    "bailan",
+    "bailarían"
+   ],
+   "correct": "bailarán",
+   "hint": "La acción aún no ocurre y «las niñas» pide tercera persona plural en futuro.",
+   "clue": "Relaciona el momento anunciado con el sujeto plural.",
+   "option_notes": {
+    "bailaron": "Usa pasado, aunque la presentación aún no ocurre.",
+    "bailan": "Usa presente en vez de futuro.",
+    "bailarían": "Usa condicional en vez de futuro."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "easy",
+   "text": "¿Cuál oración usa correctamente el verbo «abrir» en presente para «ella»?",
+   "options": [
+    "Ella abrirá la ventana.",
+    "Ella abres la ventana.",
+    "Ella abren la ventana.",
+    "Ella abre la ventana."
+   ],
+   "correct": "Ella abre la ventana.",
+   "hint": "«Ella» es tercera persona singular y el presente de «abrir» es «abre».",
+   "clue": "Revisa a la vez la persona y el tiempo que pide la pregunta.",
+   "option_notes": {
+    "Ella abres la ventana.": "Usa una forma de segunda persona singular.",
+    "Ella abren la ventana.": "Usa una forma plural con un sujeto singular.",
+    "Ella abrirá la ventana.": "Usa futuro en vez de presente."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "Completa el mensaje: «Ahora mismo, mi hermana y yo ___ sopaipillas; nuestros vecinos ___ la mesa». Elige el par de «comer» y «limpiar».",
+   "options": [
+    "comen / limpiamos",
+    "comemos / limpian",
+    "comeremos / limpiarán",
+    "como / limpia"
+   ],
+   "correct": "comemos / limpian",
+   "hint": "Hay dos sujetos distintos y «ahora mismo» pide presente para ambos.",
+   "clue": "Separa cada sujeto y busca el número de cada grupo.",
+   "option_notes": {
+    "como / limpia": "Usa singular para los dos sujetos plurales.",
+    "comen / limpiamos": "Intercambia las personas y los números de los sujetos.",
+    "comeremos / limpiarán": "Usa futuro, aunque la acción ocurre ahora mismo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "Lee: «El grupo aprendió una canción y compartió sus ideas». Si el sujeto cambia a «Los grupos», ¿qué oración conserva el pasado y la concordancia?",
+   "options": [
+    "Los grupos aprendieron una canción y compartieron sus ideas.",
+    "Los grupos aprenderán una canción y compartirán sus ideas.",
+    "Los grupos aprenden una canción y comparten sus ideas.",
+    "Los grupos aprendía una canción y compartía sus ideas."
+   ],
+   "correct": "Los grupos aprendieron una canción y compartieron sus ideas.",
+   "hint": "Conserva el pasado y cambia cada verbo a tercera persona plural.",
+   "clue": "Observa qué cambia en el sujeto y qué debe mantenerse en el tiempo.",
+   "option_notes": {
+    "Los grupos aprenden una canción y comparten sus ideas.": "Pasa ambos verbos al presente.",
+    "Los grupos aprenderán una canción y compartirán sus ideas.": "Pasa ambos verbos al futuro.",
+    "Los grupos aprendía una canción y compartía sus ideas.": "Usa formas singulares para un sujeto plural."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "Aún no lo haces. Esta tarde, tú ___ la mochila y ___ tus cuadernos antes de salir. ¿Qué par de formas en futuro corresponde?",
+   "options": [
+    "ordenarías / revisarías",
+    "ordenaste / revisaste",
+    "ordenarás / revisarás",
+    "ordenas / revisas"
+   ],
+   "correct": "ordenarás / revisarás",
+   "hint": "«Esta tarde» anuncia futuro y «tú» exige segunda persona singular.",
+   "clue": "Busca el momento de la acción y la persona que la realiza.",
+   "option_notes": {
+    "ordenaste / revisaste": "Usa pasado en vez de futuro.",
+    "ordenas / revisas": "Usa presente en vez de futuro.",
+    "ordenarías / revisarías": "Usa condicional en vez de futuro."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "medium",
+   "text": "—¿Qué hacen ustedes después de correr? —Nosotros ___ agua y ___ las ventanas. Elige las formas de «beber» y «abrir».",
+   "options": [
+    "beberemos / abriremos",
+    "bebieron / abrieron",
+    "bebemos / abrimos",
+    "bebe / abre"
+   ],
+   "correct": "bebemos / abrimos",
+   "hint": "La pregunta está en presente y la respuesta tiene el sujeto «nosotros».",
+   "clue": "Haz coincidir el tiempo de «hacen» con la persona de «nosotros».",
+   "option_notes": {
+    "bebe / abre": "Usa tercera persona singular en vez de nosotros.",
+    "bebieron / abrieron": "Usa pasado y tercera persona plural.",
+    "beberemos / abriremos": "Usa futuro en vez de presente."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "Lee: «El sábado pasado, Martina y su primo ___ una huerta. Primero, ella ___ los almácigos; luego, él ___ la tierra y, al final, ambos ___ semillas». Usa, en orden, «preparar», «regar», «cavar» y «plantar». ¿Qué opción completa correctamente el relato?",
+   "options": [
+    "preparó / regaron / cavaron / plantó",
+    "preparan / riega / cava / plantan",
+    "prepararán / regará / cavará / plantarán",
+    "prepararon / regó / cavó / plantaron"
+   ],
+   "correct": "prepararon / regó / cavó / plantaron",
+   "hint": "El relato ocurre en el pasado; cada verbo debe concordar con el sujeto cercano.",
+   "clue": "Resuelve cada espacio por separado: tiempo, persona y número.",
+   "option_notes": {
+    "preparó / regaron / cavaron / plantó": "Confunde el número de los sujetos en varias formas.",
+    "preparan / riega / cava / plantan": "Usa presente, aunque el relato ocurrió antes.",
+    "prepararán / regará / cavará / plantarán": "Usa futuro, aunque el relato ocurrió antes."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "En un aviso de la salida al mirador, la actividad aún no ocurre y participa toda la clase. ¿Cuál oración está correctamente escrita?",
+   "options": [
+    "Mañana, la clase caminaste, bebiste agua y subiste al mirador.",
+    "Mañana, la clase caminarán, beberán agua y subirán al mirador.",
+    "Mañana, la clase caminarás, beberás agua y subirás al mirador.",
+    "Mañana, la clase caminará, beberá agua y subirá al mirador."
+   ],
+   "correct": "Mañana, la clase caminará, beberá agua y subirá al mirador.",
+   "hint": "El sujeto escrito es «la clase»: singular; el aviso anuncia acciones futuras.",
+   "clue": "Concéntrate en la palabra que funciona como sujeto, no en cuántos alumnos hay.",
+   "option_notes": {
+    "Mañana, la clase caminarán, beberán agua y subirán al mirador.": "Usa plural por los estudiantes, no por el sujeto «la clase».",
+    "Mañana, la clase caminaste, bebiste agua y subiste al mirador.": "Usa segunda persona singular y formas de pasado.",
+    "Mañana, la clase caminarás, beberás agua y subirás al mirador.": "Usa segunda persona singular con «la clase»."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "Diego escribió: «Ayer, las niñas visitó el humedal y beberá agua». Si quiere mantener el pasado en ambas acciones, ¿qué versión corrige ambos verbos?",
+   "options": [
+    "Ayer, las niñas visitaron el humedal y beberán agua.",
+    "Ayer, las niñas visitaron el humedal y bebieron agua.",
+    "Ayer, las niñas visitó el humedal y bebieron agua.",
+    "Ayer, las niñas visitarán el humedal y bebieron agua."
+   ],
+   "correct": "Ayer, las niñas visitaron el humedal y bebieron agua.",
+   "hint": "«Las niñas» exige plural y las dos acciones deben quedar en pasado.",
+   "clue": "Revisa primero el sujeto y después compara el tiempo de ambos verbos.",
+   "option_notes": {
+    "Ayer, las niñas visitaron el humedal y beberán agua.": "Deja la segunda acción en futuro.",
+    "Ayer, las niñas visitó el humedal y bebieron agua.": "Mantiene «visitó» en singular pese al sujeto plural.",
+    "Ayer, las niñas visitarán el humedal y bebieron agua.": "Pasa la primera acción al futuro."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA21",
+   "difficulty": "hard",
+   "text": "Completa la bitácora: «Ahora mismo, la brigada ___ botellas; ayer, sus integrantes ___ cajas y mañana nosotros ___ el papel». ¿Qué opción usa correctamente «separar», «ordenar» y «clasificar»?",
+   "options": [
+    "separará / ordenaron / clasificaré",
+    "separan / ordenó / clasificarán",
+    "separa / ordenaron / clasificaremos",
+    "separó / ordenaron / clasificamos"
+   ],
+   "correct": "separa / ordenaron / clasificaremos",
+   "hint": "Cada marcador temporal cambia el tiempo y cada sujeto exige su propia persona y número.",
+   "clue": "Lee por partes: ahora, ayer y mañana; luego identifica quién actúa.",
+   "option_notes": {
+    "separan / ordenó / clasificarán": "Confunde los números de «la brigada» y «sus integrantes»; falla el futuro.",
+    "separó / ordenaron / clasificamos": "Usa pasado para «ahora» y no usa futuro para «mañana».",
+    "separará / ordenaron / clasificaré": "Usa futuro para «ahora» y primera persona singular con «nosotros»."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

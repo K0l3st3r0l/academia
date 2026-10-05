@@ -1,0 +1,264 @@
+{
+ "oa": "OA11",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "En el Norte Chico, ¿qué ejemplo muestra que el trabajo humano da más valor al agua, un recurso natural?",
+   "options": [
+    "Regar al mediodía para que el suelo reciba más calor",
+    "Usar más agua de la disponible para aumentar la cosecha",
+    "Construir canales y usar riego por goteo en los cultivos",
+    "Dejar el agua en un canal sin revisar sus pérdidas"
+   ],
+   "correct": "Construir canales y usar riego por goteo en los cultivos",
+   "hint": "El riego por goteo es una idea y un trabajo que permite aprovechar mejor el agua.",
+   "clue": "Piensa en una solución que reduzca la pérdida de un recurso escaso.",
+   "option_notes": {
+    "Dejar el agua en un canal sin revisar sus pérdidas": "Confunde dejar un recurso sin usar con aprovecharlo mejor",
+    "Regar al mediodía para que el suelo reciba más calor": "Cree que calentar el suelo mejora automáticamente el uso del agua",
+    "Usar más agua de la disponible para aumentar la cosecha": "Piensa que usar más agua siempre aumenta el valor de la cosecha"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "Las uvas son un recurso natural. ¿Qué trabajo les agrega valor al convertirlas en un producto elaborado?",
+   "options": [
+    "Regarlas con más agua después de la cosecha",
+    "Cosecharlas, fermentarlas y envasar el vino",
+    "Guardarlas al sol para que aumente su sabor natural",
+    "Cosecharlas y venderlas sin transformarlas ni clasificarlas"
+   ],
+   "correct": "Cosecharlas, fermentarlas y envasar el vino",
+   "hint": "Fermentar las uvas y envasar el vino transforma el recurso en un producto elaborado.",
+   "clue": "Busca el trabajo que transforme la uva en algo distinto y listo para consumir.",
+   "option_notes": {
+    "Cosecharlas y venderlas sin transformarlas ni clasificarlas": "No reconoce un proceso que convierta la uva en un producto elaborado",
+    "Guardarlas al sol para que aumente su sabor natural": "Confunde dejar el producto al sol con elaborarlo de forma controlada",
+    "Regarlas con más agua después de la cosecha": "Cree que regar después de cosechar transforma las uvas"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "En la Zona Sur, la madera puede usarse en la construcción. ¿Qué acción muestra que las personas le dan valor?",
+   "options": [
+    "Botar la madera cortada antes de llevarla al taller",
+    "Quemar todos los árboles para despejar el terreno",
+    "Secar y cortar la madera para construir una casa",
+    "Dejar los troncos en el bosque sin utilizarlos"
+   ],
+   "correct": "Secar y cortar la madera para construir una casa",
+   "hint": "Secar y cortar la madera permite convertirla en una parte útil de una construcción.",
+   "clue": "Fíjate en la acción que convierte la madera en una parte útil de una vivienda.",
+   "option_notes": {
+    "Dejar los troncos en el bosque sin utilizarlos": "Confunde no usar la madera con darle valor",
+    "Quemar todos los árboles para despejar el terreno": "Confunde despejar el terreno con aprovechar la madera",
+    "Botar la madera cortada antes de llevarla al taller": "Ignora que el trabajo puede preparar la madera para construir"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "easy",
+   "text": "¿Cuál es una forma sustentable de obtener madera y conservar el bosque?",
+   "options": [
+    "Usar fuego para eliminar la vegetación del bosque",
+    "Cortar todos los árboles y abandonar el terreno",
+    "Extraer árboles pequeños antes de que puedan crecer",
+    "Cortar algunos árboles y replantar otros según un plan"
+   ],
+   "correct": "Cortar algunos árboles y replantar otros según un plan",
+   "hint": "Replantar según un plan ayuda a que el bosque se recupere mientras se obtiene madera.",
+   "clue": "Pregunta qué opción permite obtener madera y que el bosque vuelva a crecer.",
+   "option_notes": {
+    "Cortar todos los árboles y abandonar el terreno": "Cree que abandonar el terreno permite que el bosque se cuide solo",
+    "Extraer árboles pequeños antes de que puedan crecer": "No considera el tiempo necesario para que los árboles crezcan",
+    "Usar fuego para eliminar la vegetación del bosque": "Confunde eliminar vegetación con obtener madera de forma sustentable"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Un agricultor del Norte Chico tiene poca agua en verano. ¿Qué proyecto le permite cultivar y usar mejor ese recurso?",
+   "options": [
+    "Regar todas las plantas con manguera abierta al mediodía",
+    "Dejar el terreno sin trabajar durante todo el año",
+    "Instalar riego por goteo y un estanque para guardar agua",
+    "Ampliar el cultivo sin cambiar la forma de regar"
+   ],
+   "correct": "Instalar riego por goteo y un estanque para guardar agua",
+   "hint": "El goteo reduce pérdidas y el estanque ayuda a guardar agua para usarla cuando se necesita.",
+   "clue": "La mejor idea debe guardar agua y evitar que se pierda al regar.",
+   "option_notes": {
+    "Regar todas las plantas con manguera abierta al mediodía": "Cree que dejar correr el agua asegura que llegue mejor a las plantas",
+    "Ampliar el cultivo sin cambiar la forma de regar": "Piensa que producir más basta, aunque se mantenga el desperdicio",
+    "Dejar el terreno sin trabajar durante todo el año": "Confunde no cultivar con administrar mejor el agua disponible"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Una cooperativa de la Zona Sur obtiene madera de un bosque. ¿Qué plan agrega valor y cuida el recurso?",
+   "options": [
+    "Seleccionar árboles, replantar y fabricar muebles durables",
+    "Quemar las ramas y ampliar el corte sin planificación",
+    "Cortar todos los árboles y vender los troncos sin trabajar",
+    "Dejar la madera húmeda y venderla sin revisar su calidad"
+   ],
+   "correct": "Seleccionar árboles, replantar y fabricar muebles durables",
+   "hint": "Seleccionar, replantar y fabricar muebles aprovecha la madera y favorece la recuperación del bosque.",
+   "clue": "Considera qué plan aprovecha la madera y permite que el bosque se renueve.",
+   "option_notes": {
+    "Dejar la madera húmeda y venderla sin revisar su calidad": "Confunde vender un recurso sin procesar con agregarle valor",
+    "Quemar las ramas y ampliar el corte sin planificación": "Acepta ampliar la extracción sin considerar la recuperación del bosque",
+    "Cortar todos los árboles y vender los troncos sin trabajar": "Piensa que cortar todo es mejor que planificar el uso del bosque"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Una caleta quiere seguir obteniendo mariscos durante muchos años. ¿Qué decisión combina trabajo humano y cuidado del recurso?",
+   "options": [
+    "Extraer todos los mariscos antes de que lleguen otras personas",
+    "Respetar vedas y tallas mínimas, y vigilar la extracción",
+    "Recoger solo los mariscos grandes durante todo el año",
+    "Vender más mariscos sin controlar cuánto se extrae"
+   ],
+   "correct": "Respetar vedas y tallas mínimas, y vigilar la extracción",
+   "hint": "Las vedas y tallas mínimas permiten que los mariscos se reproduzcan y crezcan.",
+   "clue": "Piensa en reglas que dejen crecer y reproducirse a los mariscos.",
+   "option_notes": {
+    "Extraer todos los mariscos antes de que lleguen otras personas": "Confunde competir por el recurso con cuidarlo a largo plazo",
+    "Recoger solo los mariscos grandes durante todo el año": "Considera solo el tamaño y olvida las épocas de protección",
+    "Vender más mariscos sin controlar cuánto se extrae": "Ignora que la extracción debe tener límites"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "medium",
+   "text": "Una cooperativa costera recolecta cochayuyo de forma autorizada. ¿Qué proyecto puede aumentar su valor?",
+   "options": [
+    "Venderlo mojado, sin limpiarlo ni seleccionarlo",
+    "Dejarlo en la playa hasta que pierda su color",
+    "Mezclarlo con arena para aumentar el peso de cada paquete",
+    "Secarlo, limpiarlo, envasarlo y venderlo como alimento"
+   ],
+   "correct": "Secarlo, limpiarlo, envasarlo y venderlo como alimento",
+   "hint": "Secar, limpiar y envasar transforma el cochayuyo en un producto listo para vender.",
+   "clue": "Busca acciones que preparen el recurso para venderlo como alimento.",
+   "option_notes": {
+    "Venderlo mojado, sin limpiarlo ni seleccionarlo": "Confunde vender el recurso sin preparar con aumentar su valor",
+    "Dejarlo en la playa hasta que pierda su color": "Cree que dejarlo deteriorarse mejora su calidad",
+    "Mezclarlo con arena para aumentar el peso de cada paquete": "Piensa que agregar peso significa mejorar el producto"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "En un valle del Norte Grande, una comunidad quiere cultivar, pero el agua es escasa y el suelo puede acumular sales. ¿Qué proyecto protege ambos recursos?",
+   "options": [
+    "Instalar riego por goteo, revisar la salinidad y cuidar el drenaje",
+    "Aumentar la superficie cultivada sin revisar el suelo",
+    "Extraer más agua y cambiar de cultivo cada vez que falte",
+    "Abrir nuevos canales y regar por inundación durante todo el día"
+   ],
+   "correct": "Instalar riego por goteo, revisar la salinidad y cuidar el drenaje",
+   "hint": "El goteo ahorra agua; revisar sales y drenaje ayuda a proteger el suelo.",
+   "clue": "La propuesta debe cuidar tanto el agua disponible como el suelo.",
+   "option_notes": {
+    "Abrir nuevos canales y regar por inundación durante todo el día": "Confunde llevar más agua con usarla de manera eficiente",
+    "Aumentar la superficie cultivada sin revisar el suelo": "Ignora que el cultivo puede dañar un suelo sin revisarlo",
+    "Extraer más agua y cambiar de cultivo cada vez que falte": "Propone reaccionar tarde, sin ahorrar agua ni cuidar el suelo"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "Una empresa de la Zona Sur quiere construir cabañas con madera nativa. ¿Qué propuesta da valor al bosque sin agotarlo?",
+   "options": [
+    "Cortar con plan, replantar especies locales y aprovechar cada pieza",
+    "Cortar todo el bosque, aunque se planten árboles en otra región",
+    "Extraer más madera cada año para construir cabañas rápidamente",
+    "Usar los árboles más jóvenes y dejar los grandes sin planificación"
+   ],
+   "correct": "Cortar con plan, replantar especies locales y aprovechar cada pieza",
+   "hint": "Un plan de corte, la replantación local y el buen uso de la madera cuidan el bosque.",
+   "clue": "La respuesta debe unir producción, recuperación del bosque y buen uso de la madera.",
+   "option_notes": {
+    "Cortar todo el bosque, aunque se planten árboles en otra región": "Cree que replantar lejos compensa cualquier daño al bosque local",
+    "Usar los árboles más jóvenes y dejar los grandes sin planificación": "Elige árboles sin plan y no asegura la recuperación del bosque",
+    "Extraer más madera cada año para construir cabañas rápidamente": "Prioriza producir rápido y olvida que el recurso puede agotarse"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "Una comunidad de pescadores quiere obtener más ingresos del cochayuyo, pero también conservarlo. ¿Qué proyecto responde mejor a ambas metas?",
+   "options": [
+    "Comprar cochayuyo de otra zona y abandonar el trabajo local",
+    "Recolectarlo sin límite y venderlo fresco para ganar más rápidamente",
+    "Recolectar solo ejemplares grandes y aumentar la extracción cada año",
+    "Medir la extracción, respetar vedas y elaborar alimentos envasados"
+   ],
+   "correct": "Medir la extracción, respetar vedas y elaborar alimentos envasados",
+   "hint": "Medir la extracción y elaborar productos permite cuidar el cochayuyo y aumentar su valor.",
+   "clue": "Busca una propuesta que limite la extracción y cree un producto nuevo.",
+   "option_notes": {
+    "Recolectarlo sin límite y venderlo fresco para ganar más rápidamente": "Confunde ganar rápido con mantener el recurso disponible",
+    "Recolectar solo ejemplares grandes y aumentar la extracción cada año": "Cree que elegir ejemplares grandes basta, aunque aumenta la extracción",
+    "Comprar cochayuyo de otra zona y abandonar el trabajo local": "Abandona una oportunidad local de trabajo y de agregar valor"
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA11",
+   "difficulty": "hard",
+   "text": "En la Zona Central, un grupo cultiva tomates. El proyecto los transforma en salsa, envasa el producto y usa los restos para compost. ¿Qué se infiere?",
+   "options": [
+    "El proyecto aumenta el tamaño natural de cada tomate",
+    "El proyecto agrega valor y aprovecha mejor los restos del cultivo",
+    "El proyecto reemplaza el trabajo humano por la naturaleza",
+    "El proyecto usa más agua porque transforma los tomates"
+   ],
+   "correct": "El proyecto agrega valor y aprovecha mejor los restos del cultivo",
+   "hint": "La salsa y el compost aprovechan el cultivo en más de una forma y reducen residuos.",
+   "clue": "Observa qué cambia en el tomate y qué ocurre con los restos.",
+   "option_notes": {
+    "El proyecto usa más agua porque transforma los tomates": "Supone un mayor uso de agua sin información que lo demuestre",
+    "El proyecto reemplaza el trabajo humano por la naturaleza": "Confunde aprovechar el cultivo con dejar de necesitar trabajo",
+    "El proyecto aumenta el tamaño natural de cada tomate": "Cree que procesar cambia el tamaño natural de los tomates"
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

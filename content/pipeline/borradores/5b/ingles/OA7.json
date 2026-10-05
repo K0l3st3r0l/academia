@@ -1,0 +1,264 @@
+{
+ "oa": "OA7",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Lee: “Pia is a little penguin. She swims in the cold sea and eats small fish. At night, she sleeps on the beach with her family.” ¿Cuál es el tema general del texto?",
+   "options": [
+    "La preparación de una comida para animales",
+    "Un paseo de niños por la ciudad",
+    "Un viaje de una familia a la montaña",
+    "La vida de una pingüina junto al mar"
+   ],
+   "correct": "La vida de una pingüina junto al mar",
+   "hint": "El texto reúne acciones de Pia, su hogar y su familia cerca del mar.",
+   "clue": "Busca la idea que une al personaje, el lugar y sus acciones.",
+   "option_notes": {
+    "Un viaje de una familia a la montaña": "Confunde el mar con la montaña e inventa un viaje.",
+    "La preparación de una comida para animales": "Se fija solo en que Pia come y olvida las demás acciones.",
+    "Un paseo de niños por la ciudad": "Agrega niños y una ciudad que no aparecen."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Lee: “Tom and Ana visit a farm. They see a horse, three hens and a small dog. Ana gives the dog some water.” ¿Qué personaje le da agua al perro?",
+   "options": [
+    "Ana",
+    "Tom",
+    "El perro",
+    "El caballo"
+   ],
+   "correct": "Ana",
+   "hint": "El texto dice directamente que Ana le da agua al perro.",
+   "clue": "Fíjate en el sujeto de la oración que dice gives.",
+   "option_notes": {
+    "Tom": "Confunde al hermano con la persona que entrega el agua.",
+    "El perro": "Confunde a quien recibe el agua con quien la da.",
+    "El caballo": "Elige otro animal de la granja, pero no realiza la acción."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Lee: “On Saturday, Ben reads under a tree in the park. His mother sits on a bench. Birds sing near them.” ¿Dónde está Ben?",
+   "options": [
+    "En el parque",
+    "En la escuela",
+    "En la playa",
+    "En una granja"
+   ],
+   "correct": "En el parque",
+   "hint": "Ben lee bajo un árbol en el parque; ese es el lugar de la escena.",
+   "clue": "Busca la palabra que nombra el lugar donde Ben lee.",
+   "option_notes": {
+    "En la playa": "Confunde el parque con otro lugar al aire libre.",
+    "En la escuela": "Agrega un lugar común, pero no mencionado.",
+    "En una granja": "Confunde el parque con otro lugar donde hay naturaleza."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "easy",
+   "text": "Lee: “Good morning, good morning! The sun is up. We clap and sing.” ¿Qué expresión usan los niños para saludar?",
+   "options": [
+    "See you soon",
+    "Good morning",
+    "Good night",
+    "Thank you"
+   ],
+   "correct": "Good morning",
+   "hint": "Good morning es la expresión que se usa para saludar durante la mañana.",
+   "clue": "Observa la hora del día que indica la canción.",
+   "option_notes": {
+    "Good night": "Confunde un saludo de mañana con uno nocturno.",
+    "See you soon": "Confunde un saludo con una frase de despedida.",
+    "Thank you": "Confunde un saludo con una expresión de agradecimiento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Lee: “At first, Luna has one seed. Then she plants it and waters it every day. Finally, a red flower grows.” ¿Qué ocurre en el middle (parte central)?",
+   "options": [
+    "Pierde su flor roja",
+    "Planta y riega una semilla",
+    "Encuentra una flor roja",
+    "Come una semilla pequeña"
+   ],
+   "correct": "Planta y riega una semilla",
+   "hint": "La parte central comienza con Then: Luna planta la semilla y la riega cada día.",
+   "clue": "Ubica la oración después de At first y antes de Finally.",
+   "option_notes": {
+    "Encuentra una flor roja": "Confunde el resultado final con la acción del middle.",
+    "Come una semilla pequeña": "Confunde plantar y regar con comer la semilla.",
+    "Pierde su flor roja": "Invierte el crecimiento de la flor y dice que Luna la pierde."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Lee: “At seven o'clock, Nico gets up. At eight o'clock, he goes to school. In the afternoon, he plays football.” ¿A qué hora va Nico a la escuela?",
+   "options": [
+    "A las 10:00",
+    "A las 7:00",
+    "A las 9:00",
+    "A las 8:00"
+   ],
+   "correct": "A las 8:00",
+   "hint": "La oración sobre ir a la escuela está junto a la hora eight o'clock.",
+   "clue": "Relaciona la acción de ir a la escuela con la hora que la acompaña.",
+   "option_notes": {
+    "A las 7:00": "Confunde la hora en que Nico se levanta con la ida a la escuela.",
+    "A las 9:00": "Elige una hora posterior que el texto no menciona.",
+    "A las 10:00": "Elige una hora posterior que el texto no menciona."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Lee: “In the kitchen, Sara has a cup, a plate and a spoon. She eats warm soup.” ¿Qué objeto usa Sara para comer la sopa?",
+   "options": [
+    "Una cuchara",
+    "Un plato",
+    "Un tenedor",
+    "Un vaso"
+   ],
+   "correct": "Una cuchara",
+   "hint": "La palabra spoon nombra el utensilio que Sara usa para comer la sopa.",
+   "clue": "Relaciona la comida con el objeto que sirve para llevarla a la boca.",
+   "option_notes": {
+    "Un vaso": "Confunde el recipiente con el utensilio para comer.",
+    "Un plato": "Confunde otro objeto de cocina con el utensilio usado.",
+    "Un tenedor": "Supone que la sopa se come con tenedor."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "medium",
+   "text": "Lee: “I see a small cat. The cat wears a hat. The cat sits on a mat.” ¿Qué palabra pertenece a la familia de palabras que termina en -at, como “cat”?",
+   "options": [
+    "sits",
+    "hat",
+    "small",
+    "fish"
+   ],
+   "correct": "hat",
+   "hint": "Cat y hat comparten la terminación y el sonido -at.",
+   "clue": "Mira cómo termina cada palabra, no lo que significa.",
+   "option_notes": {
+    "small": "Se fija en el significado de tamaño, no en la terminación -at.",
+    "sits": "Se fija en una acción, no en la terminación -at.",
+    "fish": "Elige una palabra conocida que no pertenece a la familia -at."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Lee: “Diego opens his lunch box. It has no sandwich. Valentina quietly cuts her sandwich in half and gives him a piece. Diego says, “Thank you!”” ¿Cómo es Valentina según sus acciones?",
+   "options": [
+    "Cansada y hambrienta",
+    "Triste y silenciosa",
+    "Amable y generosa",
+    "Enojada y apurada"
+   ],
+   "correct": "Amable y generosa",
+   "hint": "Valentina comparte su sándwich con Diego, una acción amable y generosa.",
+   "clue": "Observa qué hace Valentina por Diego, no solo lo que dice.",
+   "option_notes": {
+    "Triste y silenciosa": "Se fija en que Valentina habla poco y olvida su acción solidaria.",
+    "Enojada y apurada": "Confunde ayudar a Diego con estar enojada o apurada.",
+    "Cansada y hambrienta": "Supone que compartir comida significa que ella tiene hambre."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Lee: “At the end, the baby bird is safe in its nest. A boy gently lifts it from the grass. Before that, it falls from the nest.” ¿Cuál es el orden correcto de los hechos?",
+   "options": [
+    "El niño la levanta, el ave cae y queda segura en el nido.",
+    "El ave queda segura, cae al pasto y el niño la levanta.",
+    "El ave cae, el niño la levanta y queda segura en el nido.",
+    "El niño la levanta, queda segura y después cae."
+   ],
+   "correct": "El ave cae, el niño la levanta y queda segura en el nido.",
+   "hint": "Before that indica la caída primero; luego el niño la levanta y al final queda segura.",
+   "clue": "Ordena las pistas temporales: Before that, la acción del niño y At the end.",
+   "option_notes": {
+    "El niño la levanta, el ave cae y queda segura en el nido.": "Pone primero una acción que ocurre después de la caída.",
+    "El ave queda segura, cae al pasto y el niño la levanta.": "Lee At the end como si fuera el comienzo.",
+    "El niño la levanta, queda segura y después cae.": "Invierte el final y ubica la caída después de estar segura."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Lee: “Wash your hands, wash your hands, before you eat. Soap and water, nice and clean. Wash your hands, wash your hands, keep germs away.” ¿Por qué se repite “Wash your hands”?",
+   "options": [
+    "Para explicar cómo preparar comida",
+    "Para contar una aventura en el bosque",
+    "Para invitar a dormir temprano",
+    "Para destacar un hábito de higiene"
+   ],
+   "correct": "Para destacar un hábito de higiene",
+   "hint": "La repetición llama la atención sobre lavarse las manos para mantenerse limpio y alejar gérmenes.",
+   "clue": "Relaciona la frase repetida con soap, clean y germs.",
+   "option_notes": {
+    "Para contar una aventura en el bosque": "Confunde una canción de cuidado personal con una historia de aventura.",
+    "Para explicar cómo preparar comida": "Confunde lavarse las manos con cocinar.",
+    "Para invitar a dormir temprano": "Confunde una acción antes de comer con una rutina de sueño."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA7",
+   "difficulty": "hard",
+   "text": "Lee: “At sunrise, a pudú in southern Chile leaves the forest to look for leaves. At sunset, it hears a dog and runs back to the trees. The forest is quiet again.” ¿Qué se puede inferir sobre el pudú?",
+   "options": [
+    "Duerme de día y juega con perros.",
+    "Vive en la ciudad y busca personas.",
+    "Busca comida de día y evita el peligro.",
+    "Come flores de noche y sigue ruidos."
+   ],
+   "correct": "Busca comida de día y evita el peligro.",
+   "hint": "Sale a buscar hojas con luz y corre al oír al perro, señales de alimento y peligro.",
+   "clue": "Une lo que hace al amanecer con lo que hace cuando oye al perro.",
+   "option_notes": {
+    "Duerme de día y juega con perros.": "Invierte las acciones del pudú y confunde huir con jugar.",
+    "Vive en la ciudad y busca personas.": "Imagina un lugar y una actividad que no aparecen.",
+    "Come flores de noche y sigue ruidos.": "Cambia las hojas por flores y el día por la noche."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

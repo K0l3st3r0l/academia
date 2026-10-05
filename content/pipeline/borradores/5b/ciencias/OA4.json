@@ -1,0 +1,266 @@
+{
+ "oa": "OA4",
+ "source": "ia:gpt-5.6-luna",
+ "job": "job-20261005-03ee119d",
+ "questions": [
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "¿Qué órgano impulsa la sangre para que circule por todo tu cuerpo?",
+   "options": [
+    "Los riñones",
+    "El corazón",
+    "El estómago",
+    "Los pulmones"
+   ],
+   "correct": "El corazón",
+   "hint": "El corazón se contrae y empuja la sangre hacia los vasos sanguíneos.",
+   "clue": "Piensa en la parte que funciona como una bomba.",
+   "option_notes": {
+    "Los pulmones": "Confunde el intercambio de gases con el bombeo de sangre.",
+    "El estómago": "Cree que digestión y circulación ocurren en el mismo órgano.",
+    "Los riñones": "Confunde la filtración de la sangre con su impulso."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "Después de digerir una marraqueta, ¿qué puede transportar la sangre desde el intestino hasta las células?",
+   "options": [
+    "El sudor de la piel",
+    "El aire inspirado",
+    "Los nutrientes digeridos",
+    "El dióxido de carbono"
+   ],
+   "correct": "Los nutrientes digeridos",
+   "hint": "La digestión transforma los alimentos en nutrientes que la sangre lleva a las células.",
+   "clue": "Busca lo que proviene de los alimentos y puede ser usado por las células.",
+   "option_notes": {
+    "El aire inspirado": "Confunde el oxígeno del aire con sustancias obtenidas de alimentos.",
+    "El sudor de la piel": "Cree que una secreción de la piel proviene de la digestión.",
+    "El dióxido de carbono": "Confunde un desecho celular con nutrientes absorbidos en el intestino."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "Completa la oración: las estructuras que forman una red de tubos por donde circula la sangre son...",
+   "options": [
+    "Los huesos",
+    "Los músculos",
+    "Los vasos sanguíneos",
+    "Los pulmones"
+   ],
+   "correct": "Los vasos sanguíneos",
+   "hint": "Los vasos sanguíneos son conductos que llevan sangre entre el corazón y los tejidos.",
+   "clue": "Piensa en los conductos por donde se mueve la sangre.",
+   "option_notes": {
+    "Los pulmones": "Confunde el órgano del intercambio de gases con los conductos.",
+    "Los músculos": "Confunde tejidos que usan sangre con las estructuras que la conducen.",
+    "Los huesos": "Cree que la sangre circula por dentro de los huesos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "easy",
+   "text": "Al salir de los pulmones hacia las células, ¿qué gas lleva la sangre?",
+   "options": [
+    "Oxígeno",
+    "Vapor de agua",
+    "Dióxido de carbono",
+    "Nitrógeno"
+   ],
+   "correct": "Oxígeno",
+   "hint": "La sangre recoge oxígeno en los pulmones y lo lleva por los vasos hasta las células.",
+   "clue": "Es el gas que las células necesitan para funcionar.",
+   "option_notes": {
+    "Dióxido de carbono": "Invierte el recorrido de un gas que sale de las células.",
+    "Vapor de agua": "Confunde un producto de la respiración con el gas principal transportado.",
+    "Nitrógeno": "Cree que el gas más abundante del aire es el que usan las células."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Camila come una sopaipilla. Para que sus nutrientes lleguen a una célula de su brazo, ¿por dónde deben pasar en orden?",
+   "options": [
+    "Intestino → sangre → corazón → vasos → célula",
+    "Intestino → pulmones → corazón → célula",
+    "Estómago → pulmones → sangre → célula",
+    "Boca → corazón → intestino → célula"
+   ],
+   "correct": "Intestino → sangre → corazón → vasos → célula",
+   "hint": "Los nutrientes pasan del intestino a la sangre; el corazón la impulsa por vasos hasta la célula.",
+   "clue": "Ordena el camino desde donde se absorben los nutrientes hasta la célula.",
+   "option_notes": {
+    "Boca → corazón → intestino → célula": "Supone que la comida pasa directamente de la boca al corazón.",
+    "Estómago → pulmones → sangre → célula": "Confunde el recorrido de nutrientes con el intercambio de gases.",
+    "Intestino → pulmones → corazón → célula": "Cree que los pulmones reciben nutrientes antes de los tejidos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "En una corrida en el Parque O'Higgins, tus músculos necesitan más oxígeno. ¿Qué debe ocurrir para entregárselo?",
+   "options": [
+    "La sangre fabrica oxígeno en el corazón y lo lleva a los músculos.",
+    "Los vasos producen oxígeno en los músculos y lo llevan al pulmón.",
+    "La sangre toma oxígeno en los pulmones y lo lleva por vasos a los músculos.",
+    "Los músculos absorben oxígeno del estómago mediante la sangre."
+   ],
+   "correct": "La sangre toma oxígeno en los pulmones y lo lleva por vasos a los músculos.",
+   "hint": "Los pulmones incorporan oxígeno a la sangre, que el corazón impulsa por vasos hacia los músculos.",
+   "clue": "Sigue el camino del oxígeno: entra al cuerpo antes de llegar a los músculos.",
+   "option_notes": {
+    "La sangre fabrica oxígeno en el corazón y lo lleva a los músculos.": "Cree que el corazón produce el oxígeno que transporta la sangre.",
+    "Los vasos producen oxígeno en los músculos y lo llevan al pulmón.": "Confunde los vasos con órganos que fabrican gases e invierte el recorrido.",
+    "Los músculos absorben oxígeno del estómago mediante la sangre.": "Confunde el sistema digestivo con el lugar donde se obtiene oxígeno."
+   },
+   "warnings": [
+    "alternativa larga"
+   ],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "Una célula de tu pierna produce dióxido de carbono. Elige la secuencia que termina correctamente en la exhalación.",
+   "options": [
+    "Célula → pulmones → sangre → corazón → vasos → aire",
+    "Célula → sangre → vasos → corazón → pulmones → aire",
+    "Célula → sangre → corazón → estómago → pulmones → aire",
+    "Pulmones → sangre → corazón → vasos → célula → aire"
+   ],
+   "correct": "Célula → sangre → vasos → corazón → pulmones → aire",
+   "hint": "El dióxido de carbono pasa a la sangre, vuelve al corazón y llega a los pulmones para exhalarse.",
+   "clue": "Busca el órgano donde termina el recorrido de este gas antes de salir.",
+   "option_notes": {
+    "Célula → sangre → corazón → estómago → pulmones → aire": "Reemplaza los pulmones por el estómago en el recorrido del gas.",
+    "Pulmones → sangre → corazón → vasos → célula → aire": "Invierte el sentido del recorrido del dióxido de carbono.",
+    "Célula → pulmones → sangre → corazón → vasos → aire": "Supone que el gas viaja directamente desde la célula a los pulmones."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "medium",
+   "text": "En una caída, Sofía se raspa la rodilla y sangra. ¿Qué explica mejor que la sangre salga por la piel?",
+   "options": [
+    "Un vaso sanguíneo cercano se dañó y dejó salir sangre.",
+    "El corazón envió sangre directamente a la piel raspada.",
+    "La piel fabricó sangre al recibir aire del ambiente.",
+    "Los pulmones enviaron sangre directamente hacia la herida."
+   ],
+   "correct": "Un vaso sanguíneo cercano se dañó y dejó salir sangre.",
+   "hint": "La sangre normalmente circula dentro de vasos; si uno se daña, puede salir por la herida.",
+   "clue": "Relaciona la sangre que sale con los tubos que la contienen.",
+   "option_notes": {
+    "El corazón envió sangre directamente a la piel raspada.": "Cree que el corazón conecta directamente con cada parte del cuerpo.",
+    "La piel fabricó sangre al recibir aire del ambiente.": "Confunde la piel con un órgano que produce sangre.",
+    "Los pulmones enviaron sangre directamente hacia la herida.": "Confunde el transporte de gases con el envío de sangre."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Martina dice: «El corazón lleva el oxígeno dentro de sus paredes hasta los músculos». ¿Qué corrección es la más adecuada?",
+   "options": [
+    "La sangre bombea al corazón y los huesos llevan oxígeno al músculo.",
+    "Los músculos impulsan sangre y los pulmones fabrican nutrientes.",
+    "Los vasos producen oxígeno y el corazón lo guarda hasta usarlo.",
+    "El corazón impulsa sangre; los vasos la llevan con oxígeno a músculos."
+   ],
+   "correct": "El corazón impulsa sangre; los vasos la llevan con oxígeno a músculos.",
+   "hint": "El corazón es la bomba; la sangre transporta oxígeno y los vasos forman el camino.",
+   "clue": "Distingue quién impulsa la sangre, quién la transporta y por dónde circula.",
+   "option_notes": {
+    "Los vasos producen oxígeno y el corazón lo guarda hasta usarlo.": "Atribuye a vasos y corazón funciones de fabricar y almacenar oxígeno.",
+    "Los músculos impulsan sangre y los pulmones fabrican nutrientes.": "Confunde el papel de los músculos y de los pulmones.",
+    "La sangre bombea al corazón y los huesos llevan oxígeno al músculo.": "Invierte el papel del corazón y atribuye transporte a los huesos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "La sangre hace este recorrido: pulmones → corazón → músculos → corazón. ¿Qué proceso completa mejor el recorrido?",
+   "options": [
+    "El dióxido de carbono va del corazón al estómago para ser digerido.",
+    "Los nutrientes van de pulmones a músculos para alimentar las células.",
+    "El oxígeno vuelve de músculos a pulmones para entrar al cuerpo.",
+    "El dióxido de carbono va de músculos a pulmones para salir al exhalar."
+   ],
+   "correct": "El dióxido de carbono va de músculos a pulmones para salir al exhalar.",
+   "hint": "Las células musculares entregan dióxido de carbono a la sangre, que lo lleva a los pulmones.",
+   "clue": "Completa el recorrido pensando qué gas debe regresar a los pulmones.",
+   "option_notes": {
+    "El oxígeno vuelve de músculos a pulmones para entrar al cuerpo.": "Invierte el sentido habitual del transporte de oxígeno.",
+    "Los nutrientes van de pulmones a músculos para alimentar las células.": "Confunde los pulmones con el lugar donde se absorben nutrientes.",
+    "El dióxido de carbono va del corazón al estómago para ser digerido.": "Cree que el estómago procesa un gas de desecho."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Al comparar la sangre antes y después de pasar por un músculo, se observa menos oxígeno y más dióxido de carbono después. ¿Qué se infiere?",
+   "options": [
+    "El corazón transformó nutrientes en dióxido de carbono.",
+    "Los pulmones quitaron oxígeno y dieron dióxido de carbono.",
+    "El músculo fabricó oxígeno y recibió dióxido de carbono.",
+    "El músculo recibió oxígeno y entregó dióxido de carbono a la sangre."
+   ],
+   "correct": "El músculo recibió oxígeno y entregó dióxido de carbono a la sangre.",
+   "hint": "Al pasar por el músculo, la sangre entrega oxígeno y recoge dióxido de carbono celular.",
+   "clue": "Compara qué sustancia disminuyó y cuál aumentó en la sangre.",
+   "option_notes": {
+    "El músculo fabricó oxígeno y recibió dióxido de carbono.": "Invierte el intercambio de gases entre músculo y sangre.",
+    "Los pulmones quitaron oxígeno y dieron dióxido de carbono.": "Atribuye a los pulmones el intercambio que ocurre en los músculos.",
+    "El corazón transformó nutrientes en dióxido de carbono.": "Atribuye al corazón una transformación propia de las células."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA4",
+   "difficulty": "hard",
+   "text": "Un grupo analiza sangre antes y después de distintos órganos. ¿Qué resultado apoyaría mejor que la sangre transporta sustancias?",
+   "options": [
+    "Tras ambos, la sangre deja de circular por los vasos.",
+    "Tras pulmones, aumenta el oxígeno; tras intestino, los nutrientes.",
+    "Tras pulmones, aumentan nutrientes; tras intestino, el oxígeno.",
+    "Tras ambos, aumenta dióxido de carbono producido por el corazón."
+   ],
+   "correct": "Tras pulmones, aumenta el oxígeno; tras intestino, los nutrientes.",
+   "hint": "Los pulmones incorporan oxígeno y el intestino aporta nutrientes; la sangre los transporta.",
+   "clue": "Relaciona cada órgano con lo que la sangre recoge allí.",
+   "option_notes": {
+    "Tras pulmones, aumentan nutrientes; tras intestino, el oxígeno.": "Intercambia las sustancias que se obtienen en pulmones e intestino.",
+    "Tras ambos, aumenta dióxido de carbono producido por el corazón.": "Cree que el corazón produce dióxido de carbono.",
+    "Tras ambos, la sangre deja de circular por los vasos.": "Confunde el paso por órganos con la detención de la circulación."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}

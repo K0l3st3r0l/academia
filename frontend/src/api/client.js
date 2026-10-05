@@ -67,6 +67,27 @@ export const resetStudentPinsBulk = (courseName) =>
 export const getCurriculum = (gradeLevel, subject) =>
   client.get(`/api/curriculum/${gradeLevel}/${subject}`);
 
+export const getQuestions = (params) =>
+  client.get('/api/questions', { params });
+
+export const getQuestionSummary = () =>
+  client.get('/api/questions/summary');
+
+export const createQuestion = (question) =>
+  client.post('/api/questions', question);
+
+export const updateQuestion = (id, question) =>
+  client.put(`/api/questions/${id}`, question);
+
+export const reviewQuestion = (id, decision, note) =>
+  client.patch(`/api/questions/${id}/review`, { decision, note });
+
+export const toggleQuestion = (id) =>
+  client.patch(`/api/questions/${id}/toggle`);
+
+export const deleteQuestion = (id) =>
+  client.delete(`/api/questions/${id}`);
+
 export const getRoom = (code) =>
   client.get(`/api/rooms/${code}`);
 

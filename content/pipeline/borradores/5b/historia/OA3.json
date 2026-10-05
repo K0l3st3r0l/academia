@@ -1,0 +1,264 @@
+{
+ "oa": "OA3",
+ "source": "ia:gpt-5.6-luna",
+ "job": "directo:gpt-5.6-luna@max",
+ "questions": [
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿Cuál fue una consecuencia de la conquista para la alimentación de Europa?",
+   "options": [
+    "El maíz comenzó a cultivarse solo en Asia",
+    "El trigo dejó de cultivarse en Europa",
+    "El cacao desapareció de América",
+    "La papa pasó a formar parte de la alimentación europea"
+   ],
+   "correct": "La papa pasó a formar parte de la alimentación europea",
+   "hint": "La papa era originaria de América y pasó a formar parte de la alimentación europea.",
+   "clue": "Piensa en un alimento americano que hoy se consume en Europa.",
+   "option_notes": {
+    "El trigo dejó de cultivarse en Europa": "Confunde un cultivo europeo con una desaparición que no ocurrió.",
+    "El cacao desapareció de América": "Confunde el origen americano del cacao con su desaparición.",
+    "El maíz comenzó a cultivarse solo en Asia": "Confunde el intercambio de cultivos con un traslado exclusivo."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿Qué ocurrió con gran parte de la población indígena de América durante la conquista?",
+   "options": [
+    "Se trasladó por completo a ciudades europeas",
+    "Disminuyó por epidemias, guerras y trabajo forzado",
+    "Aumentó por nuevas técnicas de agricultura",
+    "Desaparecieron las enfermedades que ya existían"
+   ],
+   "correct": "Disminuyó por epidemias, guerras y trabajo forzado",
+   "hint": "Las epidemias, los conflictos y el trabajo forzado redujeron fuertemente la población indígena.",
+   "clue": "Compara la población antes y después del contacto con los europeos.",
+   "option_notes": {
+    "Aumentó por nuevas técnicas de agricultura": "Atribuye el aumento a la agricultura, sin considerar las pérdidas demográficas.",
+    "Se trasladó por completo a ciudades europeas": "Imagina una migración total que no ocurrió.",
+    "Desaparecieron las enfermedades que ya existían": "Confunde la llegada de enfermedades nuevas con su desaparición."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos animales fue introducido por los europeos en América durante la conquista?",
+   "options": [
+    "El caballo",
+    "El puma",
+    "El cóndor",
+    "La llama"
+   ],
+   "correct": "El caballo",
+   "hint": "El caballo fue introducido en América por los europeos.",
+   "clue": "Busca el animal que llegó con los europeos.",
+   "option_notes": {
+    "La llama": "La llama es un animal originario de América.",
+    "El cóndor": "El cóndor es una especie nativa de América.",
+    "El puma": "El puma también es originario de América."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "easy",
+   "text": "¿Cuál de estos idiomas llegó desde Europa y se extendió ampliamente en América después de la conquista?",
+   "options": [
+    "El guaraní",
+    "El español",
+    "El quechua",
+    "El mapudungun"
+   ],
+   "correct": "El español",
+   "hint": "El español fue llevado por los conquistadores y se extendió ampliamente en América.",
+   "clue": "Distingue la lengua europea de las lenguas originarias.",
+   "option_notes": {
+    "El mapudungun": "Es una lengua originaria del pueblo mapuche, no europea.",
+    "El quechua": "Es una lengua originaria de los Andes americanos.",
+    "El guaraní": "Es una lengua originaria de Sudamérica."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "Los mapas europeos del siglo XVI comenzaron a mostrar costas americanas que antes no conocían. ¿Qué consecuencia del proceso de conquista se observa?",
+   "options": [
+    "Se dejó de explorar el océano Pacífico",
+    "Se redujo el tamaño conocido de la Tierra",
+    "Se amplió el conocimiento geográfico de Europa",
+    "Se borraron las rutas marítimas del Atlántico"
+   ],
+   "correct": "Se amplió el conocimiento geográfico de Europa",
+   "hint": "Los viajes aportaron información sobre territorios y costas que no aparecían en los mapas europeos.",
+   "clue": "Relaciona la aparición de nuevas costas con lo que Europa llegó a conocer.",
+   "option_notes": {
+    "Se redujo el tamaño conocido de la Tierra": "Confunde la aparición de nuevos territorios con una reducción del conocimiento.",
+    "Se borraron las rutas marítimas del Atlántico": "Supone que los viajes hicieron desaparecer las rutas marítimas.",
+    "Se dejó de explorar el océano Pacífico": "Confunde el aumento del conocimiento con el fin de explorar."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "En la Zona Sur de Chile, algunas comunidades comenzaron a usar caballos traídos por los europeos para trasladarse. ¿Qué cambio muestra este ejemplo?",
+   "options": [
+    "Un animal europeo pasó a ser parte de la vida americana",
+    "Las comunidades dejaron de moverse por completo",
+    "Europa adoptó todos los animales americanos",
+    "Los animales nativos dejaron de existir de inmediato"
+   ],
+   "correct": "Un animal europeo pasó a ser parte de la vida americana",
+   "hint": "El caballo fue introducido desde Europa y cambió actividades cotidianas en América.",
+   "clue": "Fíjate en el origen del caballo y en el uso que comenzó a tener.",
+   "option_notes": {
+    "Los animales nativos dejaron de existir de inmediato": "Confunde la llegada de un animal con la desaparición inmediata de otros.",
+    "Las comunidades dejaron de moverse por completo": "Confunde un cambio de transporte con el abandono total del movimiento.",
+    "Europa adoptó todos los animales americanos": "Generaliza el intercambio: Europa no adoptó todos los animales americanos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "La plata americana llegó a España y luego circuló por otros lugares de Europa. ¿Qué consecuencia económica explica mejor este recorrido?",
+   "options": [
+    "Desapareció el uso de monedas",
+    "Se cerraron los puertos europeos",
+    "Aumentó la circulación de metales preciosos",
+    "Disminuyó el comercio entre continentes"
+   ],
+   "correct": "Aumentó la circulación de metales preciosos",
+   "hint": "La plata americana aumentó la cantidad de metales preciosos que circulaban en la economía europea.",
+   "clue": "Relaciona la plata con la cantidad de metales que circulan en la economía.",
+   "option_notes": {
+    "Desapareció el uso de monedas": "Confunde el aumento de metales con la desaparición de las monedas.",
+    "Se cerraron los puertos europeos": "Supone que la plata provocó el cierre de los puertos.",
+    "Disminuyó el comercio entre continentes": "Invierte el efecto: el contacto no redujo el comercio."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "medium",
+   "text": "En una ciudad colonial convivían personas indígenas, europeas y africanas, y aparecieron nuevas costumbres. ¿Qué proceso explica mejor esta situación?",
+   "options": [
+    "El mestizaje",
+    "La separación total de los grupos",
+    "El aislamiento de América",
+    "La desaparición de las culturas indígenas"
+   ],
+   "correct": "El mestizaje",
+   "hint": "El mestizaje surgió del contacto entre distintos pueblos y produjo nuevas costumbres.",
+   "clue": "Busca el proceso que explica nuevas costumbres entre distintos pueblos.",
+   "option_notes": {
+    "La separación total de los grupos": "Confunde la mezcla entre grupos con una separación completa.",
+    "La desaparición de las culturas indígenas": "Generaliza: las culturas indígenas no desaparecieron por completo.",
+    "El aislamiento de América": "Confunde el contacto entre pueblos con un aislamiento."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Lee: «En Europa se cultivaron papas y maíz; en América se criaron caballos y ovejas». ¿Qué conclusión se puede sacar?",
+   "options": [
+    "Cada continente conservó sus seres vivos sin cambios",
+    "Hubo un intercambio de seres vivos entre continentes",
+    "América perdió todos sus animales nativos",
+    "Europa perdió sus cultivos tradicionales"
+   ],
+   "correct": "Hubo un intercambio de seres vivos entre continentes",
+   "hint": "El texto muestra que plantas y animales pasaron de un continente al otro y cambiaron la vida de ambos.",
+   "clue": "Busca una idea que explique los dos movimientos mencionados en el texto.",
+   "option_notes": {
+    "Cada continente conservó sus seres vivos sin cambios": "Niega los cambios que el texto muestra entre ambos continentes.",
+    "Europa perdió sus cultivos tradicionales": "El texto no indica que Europa perdiera sus cultivos.",
+    "América perdió todos sus animales nativos": "Confunde la llegada de animales nuevos con la desaparición total de los nativos."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Una comunidad indígena perdió población por epidemias y, luego, debió obedecer a autoridades coloniales. ¿Qué consecuencia política se puede inferir?",
+   "options": [
+    "Amplió su independencia",
+    "Recuperó todas sus autoridades",
+    "Perdió parte de su autonomía",
+    "Quedó fuera del territorio colonial"
+   ],
+   "correct": "Perdió parte de su autonomía",
+   "hint": "Las epidemias y el dominio colonial redujeron su capacidad de decidir por sí misma.",
+   "clue": "Relaciona las nuevas autoridades con la capacidad de la comunidad para decidir.",
+   "option_notes": {
+    "Amplió su independencia": "Confunde el dominio colonial con un aumento de independencia.",
+    "Recuperó todas sus autoridades": "Supone que las autoridades tradicionales recuperaron todo su poder.",
+    "Quedó fuera del territorio colonial": "Confunde la obediencia colonial con quedar fuera del territorio controlado."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "En la Zona Central de Chile, se introdujeron trigo y ganado, y algunos espacios se destinaron a esas actividades. ¿Qué consecuencia ambiental es más probable?",
+   "options": [
+    "Se mantuvo igual el uso del suelo",
+    "El clima cambió en toda la Zona Central",
+    "Las montañas cambiaron de ubicación",
+    "Se modificó el uso del suelo"
+   ],
+   "correct": "Se modificó el uso del suelo",
+   "hint": "Nuevos cultivos y animales ocuparon terrenos y cambiaron parte del paisaje de la Zona Central.",
+   "clue": "Piensa en qué cambia cuando un terreno se usa para cultivar o criar animales.",
+   "option_notes": {
+    "Se mantuvo igual el uso del suelo": "Contradice el cambio de actividad descrito en el enunciado.",
+    "El clima cambió en toda la Zona Central": "Confunde un cambio local de uso del suelo con un cambio climático regional.",
+    "Las montañas cambiaron de ubicación": "Confunde el uso de terrenos con cambios en la ubicación de montañas."
+   },
+   "warnings": [],
+   "check": []
+  },
+  {
+   "oa_code": "OA3",
+   "difficulty": "hard",
+   "text": "Un estudiante anota: «Europa recibió nuevos alimentos y América recibió enfermedades, animales y autoridades coloniales». ¿Qué conclusión resume mejor sus apuntes?",
+   "options": [
+    "La conquista cambió únicamente la vida de América",
+    "Los cambios fueron iguales en Europa y América",
+    "La conquista no produjo cambios duraderos",
+    "La conquista transformó de forma distinta a Europa y a América"
+   ],
+   "correct": "La conquista transformó de forma distinta a Europa y a América",
+   "hint": "Los apuntes muestran efectos importantes en ambos continentes, pero con características diferentes.",
+   "clue": "Compara el tipo de consecuencias anotadas para cada continente.",
+   "option_notes": {
+    "La conquista cambió únicamente la vida de América": "Olvida que los apuntes también muestran cambios en Europa.",
+    "Los cambios fueron iguales en Europa y América": "Confunde consecuencias diferentes con una transformación idéntica.",
+    "La conquista no produjo cambios duraderos": "Contradice los efectos que el estudiante registró."
+   },
+   "warnings": [],
+   "check": []
+  }
+ ],
+ "dropped": [],
+ "checked": {
+  "model": "grok-4.6",
+  "job": "directo:grok-4.6@high"
+ }
+}
