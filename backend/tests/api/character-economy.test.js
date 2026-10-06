@@ -27,6 +27,14 @@ async function studentWithCharacter({ tokens = 0, name = 'Cóndor Sabio' } = {})
 const balance = async id => (await pool.query('SELECT tokens_balance FROM local_students WHERE id = $1', [id])).rows[0].tokens_balance;
 
 describe('cuenta de prueba', () => {
+  it('antes de crear el personaje ya trae todos los artículos (el editor los necesita para crearlo)', async () => {
+    const tester = await createStudent(pool, { courseName: '5° Básico A', isTest: true });
+    const res = await request(app).get('/api/characters/me').set('Authorization', `Bearer ${signToken(studentPayload(tester))}`);
+    expect(res.status).toBe(404);
+    const priced = Object.values(CATALOG).filter(Array.isArray).flat().filter(e => e.price > 0).map(e => e.id);
+    expect(res.body.ownedItems.sort()).toEqual(priced.sort());
+  });
+
   it('tiene todos los artículos sin comprarlos', async () => {
     const tester = await createStudent(pool, { courseName: '5° Básico A', isTest: true });
     const token = signToken(studentPayload(tester));

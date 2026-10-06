@@ -138,11 +138,13 @@ export default function CharacterEditor() {
         setCatalog(catalogRes.data);
         setTokens(meRes.data.student?.tokens_balance ?? 0);
         const existing = characterRes?.data?.character;
+        // Without a character the answer is a 404 that still lists the items already owned.
+        const owns = characterRes?.data?.ownedItems ?? characterRes?.response?.data?.ownedItems ?? [];
+        setOwned(new Set(owns));
         // A character saved with an older catalog starts over from fresh defaults.
         if (existing && existing.layers?.hairStyle) {
           setCharacter(existing);
           setLayers({ ...defaultLayers(catalogRes.data), ...existing.layers });
-          setOwned(new Set(characterRes.data.ownedItems || []));
           setIsNew(false);
         } else {
           if (existing) setCharacter(existing);

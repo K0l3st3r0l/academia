@@ -32,7 +32,11 @@ router.get('/catalog', (req, res) => {
 router.get('/me', authenticateToken, requireStudent, async (req, res) => {
   try {
     const { rows } = await pool.query(`SELECT ${CHARACTER_FIELDS} FROM characters WHERE student_id = $1`, [req.user.id]);
-    if (!rows.length) return res.status(404).json({ error: 'Aún no tienes un personaje' });
+    // Items can be owned before the character exists (bought while creating it, or the test
+    // account, which owns everything): the editor needs them to let the student create it.
+    if (!rows.length) {
+      return res.status(404).json({ error: 'Aún no tienes un personaje', ownedItems: await ownedItems(req.user.id), tokens: await balanceOf(req.user.id) });
+    }
     res.json({ character: rows[0], ownedItems: await ownedItems(req.user.id), tokens: await balanceOf(req.user.id) });
   } catch (err) {
     logger.error('Get character error:', err.message);
