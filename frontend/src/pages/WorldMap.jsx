@@ -2,9 +2,8 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getWorldMap } from '../api/client';
 import { getStudentUser } from '../api/studentAuth';
-import CharacterView from '../components/character/CharacterView';
-import PetView from '../components/pet/PetView';
 import { Tokens } from '../components/TokenCoin';
+import Explorer from '../components/world/Explorer';
 import MapNode from '../components/world/MapNode';
 import { Cloud, Condor, INK, LockIcon, Sparkle, Star, Stars } from '../components/world/WorldParts';
 import useCompanions from '../components/world/useCompanions';
@@ -15,12 +14,20 @@ export const SUBJECT_NAMES = {
 export const OUTLINE = {
   textShadow: `-2px -2px 0 ${INK}, 2px -2px 0 ${INK}, -2px 2px 0 ${INK}, 2px 2px 0 ${INK}, 0 4px 0 ${INK}`,
 };
-const ENTRY = 'entrada';
-const STEP_MS = 850;
 
-// Where the avatar was last seen on this map, per student: on return it walks from there.
+// Where the character was left on this map, per student, and which level was current then: on
+// return it appears there, and walks to the level only if a new one opened meanwhile.
 const positionKey = subject => `academia_world_${getStudentUser()?.id ?? 'x'}_${subject}`;
 export const celebrateKey = subject => `academia_world_celebrate_${subject}`;
+
+function readSaved(subject) {
+  try {
+    const saved = JSON.parse(readStorage(localStorage, positionKey(subject)));
+    return Array.isArray(saved?.at) ? saved : null;
+  } catch {
+    return null; // nothing saved, or the older format that kept only a level key
+  }
+}
 
 function readStorage(storage, key) {
   try { return storage.getItem(key); } catch { return null; }
@@ -30,34 +37,8 @@ function writeStorage(storage, key, value) {
     if (value === null) storage.removeItem(key);
     else storage.setItem(key, value);
   } catch {
-    // Without storage the avatar simply appears at its level.
+    // Without storage the character starts at the dock each time.
   }
-}
-
-// The path an avatar can walk on one island: the dock, every level, the challenge.
-function pathOf(island) {
-  return [
-    { key: ENTRY, at: island.entry },
-    ...island.levels.map(l => ({ key: l.key, at: l.at })),
-    { key: island.challenge.key, at: island.challenge.at },
-  ];
-}
-
-// Where the avatar and the pet stand next to a pad, in island pixels: on the side (left or right)
-// that keeps them farthest from the other levels and their stars, so they never cover one.
-const AVATAR_DX = 105;
-const PET_DX = 190;
-function standAt([x, y], island) {
-  const others = [...island.levels.map(l => l.at), island.challenge.at]
-    .filter(([ox, oy]) => ox !== x || oy !== y)
-    .map(([ox, oy]) => [ox, oy - 30]);
-  const clearance = side => {
-    const spots = [[x + side * AVATAR_DX, y - 80], [x + side * PET_DX, y - 20]];
-    if (spots.some(([sx]) => sx < 90 || sx > island.width - 90)) return -1;
-    return Math.min(...spots.flatMap(([sx, sy]) => others.map(([ox, oy]) => Math.hypot(sx - ox, sy - oy))));
-  };
-  const side = clearance(1) > clearance(-1) ? 1 : -1;
-  return { avatar: [x + side * AVATAR_DX, y + 16], pet: [x + side * PET_DX, y + 30] };
 }
 
 function useWidth(ref) {
@@ -168,14 +149,29 @@ function LevelSheet({ level, number, onClose, onPlay }) {
   );
 }
 
-function Island({ island, current, celebrate, avatar, companions, onSelect, currentRef }) {
+function Island({ island, current, celebrate, explorer, companions, controls, onSelect, onRest, currentRef }) {
   const ref = useRef(null);
+  const explorerRef = useRef(null);
   const width = useWidth(ref);
   const pct = ([x, y]) => ({ left: `${(x / island.width) * 100}%`, top: `${(y / island.height) * 100}%` });
   const levels = [...island.levels.map((l, i) => ({ ...l, number: i + 1 })), { ...island.challenge, challenge: true }];
-  const avatarHeight = width * 0.17;
-  const stand = avatar && standAt(avatar.at, island);
-  const transition = `left ${STEP_MS}ms ease-in-out, top ${STEP_MS}ms ease-in-out`;
+  const walking = explorer && companions.look && width > 0;
+
+  // A tap on the path walks there; a tap on a level walks to it and then opens it. Opening a level
+  // with the keyboard on its button (no pointer) skips the walk.
+  const tapIsland = e => {
+    if (!explorerRef.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    explorerRef.current.walkTo(
+      [((e.clientX - rect.left) / rect.width) * island.width, ((e.clientY - rect.top) / rect.height) * island.height],
+      null,
+      { marker: true },
+    );
+  };
+  const selectLevel = (level, e) => {
+    if (!explorerRef.current || e?.detail === 0) onSelect(level);
+    else explorerRef.current.goToLevel(level, () => onSelect(level));
+  };
 
   return (
     <section
@@ -185,7 +181,12 @@ function Island({ island, current, celebrate, avatar, companions, onSelect, curr
     >
       <div className="hidden md:block absolute left-[6%] top-[30%] world-drift"><Cloud width={260} /></div>
       <div className="hidden md:block absolute right-[5%] top-[62%] world-drift" style={{ animationDelay: '-11s' }}><Cloud width={300} /></div>
-      <div ref={ref} className="relative mx-auto w-full max-w-[520px] md:max-w-[600px] world-float" style={{ aspectRatio: `${island.width} / ${island.height}` }}>
+      <div
+        ref={ref}
+        onClick={walking ? tapIsland : undefined}
+        className={`relative isolate mx-auto w-full max-w-[520px] md:max-w-[600px] world-float ${walking ? 'cursor-pointer' : ''}`}
+        style={{ aspectRatio: `${island.width} / ${island.height}` }}
+      >
         <img
           src={`/world/${island.image}-1024.webp`}
           srcSet={`/world/${island.image}-640.webp 640w, /world/${island.image}-1024.webp 1024w`}
@@ -207,34 +208,25 @@ function Island({ island, current, celebrate, avatar, companions, onSelect, curr
             island={island}
             current={level.key === current}
             celebrate={level.key === celebrate}
-            onSelect={onSelect}
+            onSelect={selectLevel}
             buttonRef={level.key === current ? currentRef : undefined}
           />
         ))}
-        {avatar && width > 0 && (
-          <>
-            {companions.pet && (
-              <div
-                className="absolute -translate-x-1/2 -translate-y-full pointer-events-none"
-                style={{ ...pct(stand.pet), transition, transitionDelay: '120ms', zIndex: 7 }}
-              >
-                <div className={avatar.walking ? 'world-walk' : ''}>
-                  <PetView species={companions.pet.species} stage={companions.pet.stage} size={width * 0.1}
-                    catalog={companions.petCatalog} label={companions.pet.name} idle={!avatar.walking} />
-                </div>
-              </div>
-            )}
-            {companions.look && (
-              <div
-                className="absolute -translate-x-1/2 -translate-y-full pointer-events-none"
-                style={{ ...pct(stand.avatar), transition, zIndex: 8 }}
-              >
-                <div className={avatar.walking ? 'world-walk' : 'animate-breathe'}>
-                  <CharacterView look={companions.look} size={avatarHeight} label="Tu personaje" />
-                </div>
-              </div>
-            )}
-          </>
+        {walking && (
+          <Explorer
+            ref={explorerRef}
+            island={island}
+            width={width}
+            look={companions.look}
+            pet={companions.pet}
+            petCatalog={companions.petCatalog}
+            start={explorer.start}
+            goal={explorer.goal}
+            stops={levels}
+            controls={controls}
+            onInteract={onSelect}
+            onRest={onRest}
+          />
         )}
       </div>
     </section>
@@ -248,10 +240,11 @@ export default function WorldMap() {
   const [map, setMap] = useState(null);
   const [error, setError] = useState(null);
   const [selected, setSelected] = useState(null);
-  const [avatar, setAvatar] = useState(null);
+  const [explorer, setExplorer] = useState(null);
   const [celebrate] = useState(() => readStorage(sessionStorage, celebrateKey(subject)));
   const currentRef = useRef(null);
   const scrolled = useRef(false);
+  const [finePointer] = useState(() => window.matchMedia?.('(pointer: fine)').matches ?? false);
 
   useEffect(() => {
     getWorldMap(subject)
@@ -260,37 +253,31 @@ export default function WorldMap() {
     writeStorage(sessionStorage, celebrateKey(subject), null);
   }, [subject]);
 
-  // The avatar walks pad by pad from where it was last time to the level to play now.
+  // The character starts where the student left it; if a new level opened since, it walks there.
   useEffect(() => {
-    if (!map) return undefined;
-    const island = map.islands.find(i => pathOf(i).some(p => p.key === map.current)) ?? map.islands[0];
-    if (!island) return undefined;
-    const path = pathOf(island);
-    const to = Math.max(0, path.findIndex(p => p.key === map.current));
-    const seen = path.findIndex(p => p.key === readStorage(localStorage, positionKey(subject)));
-    const from = seen === -1 ? 0 : Math.min(seen, to);
-    writeStorage(localStorage, positionKey(subject), path[to].key);
-
-    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    let step = reduced ? to : from;
-    setAvatar({ unit: island.unit, at: path[step].at, walking: false });
-    if (step === to) return undefined;
-    const timers = [];
-    const walk = () => {
-      step += 1;
-      setAvatar({ unit: island.unit, at: path[step].at, walking: true });
-      if (step < to) timers.push(setTimeout(walk, STEP_MS));
-      else timers.push(setTimeout(() => setAvatar(a => ({ ...a, walking: false })), STEP_MS));
-    };
-    timers.push(setTimeout(walk, 700));
-    return () => timers.forEach(clearTimeout);
+    if (!map) return;
+    const island = map.islands.find(i => [...i.levels, i.challenge].some(l => l.key === map.current)) ?? map.islands[0];
+    if (!island) return;
+    const saved = readSaved(subject);
+    const here = saved?.unit === island.unit;
+    setExplorer({
+      unit: island.unit,
+      start: here ? saved.at : island.entry,
+      goal: here && saved.current === map.current ? null : map.current,
+    });
   }, [map, subject]);
 
+  const saveSpot = at => {
+    if (explorer && map) {
+      writeStorage(localStorage, positionKey(subject), JSON.stringify({ unit: explorer.unit, at, current: map.current }));
+    }
+  };
+
   useEffect(() => {
-    if (!map || !avatar || scrolled.current) return;
+    if (!map || !explorer || scrolled.current) return;
     scrolled.current = true;
     requestAnimationFrame(() => currentRef.current?.scrollIntoView({ block: 'center' }));
-  }, [map, avatar]);
+  }, [map, explorer]);
 
   if (error || !map) {
     return (
@@ -342,15 +329,19 @@ export default function WorldMap() {
           island={island}
           current={map.current}
           celebrate={celebrate}
-          avatar={avatar?.unit === island.unit ? avatar : null}
+          explorer={explorer?.unit === island.unit ? explorer : null}
           companions={companions}
+          controls={!selected}
           onSelect={setSelected}
+          onRest={saveSpot}
           currentRef={currentRef}
         />
       ))}
 
-      <p className="text-center text-sm font-bold py-5" style={{ color: INK }}>
-        Toca un nivel para jugar
+      <p className="text-center text-sm font-bold py-5 px-4" style={{ color: INK }}>
+        {finePointer
+          ? 'Camina con las flechas o haciendo clic en el camino. Haz clic en un nivel para jugar.'
+          : 'Toca el camino para caminar y un nivel para jugar.'}
       </p>
 
       {selected && (

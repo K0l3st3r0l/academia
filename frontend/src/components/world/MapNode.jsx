@@ -32,7 +32,8 @@ export default function MapNode({ level, number, island, current, celebrate, onS
         top: `${(y / island.height) * 100}%`,
         width: `${width}%`,
         transform: 'translate(-50%, -62%)',
-        zIndex: current ? 6 : 5,
+        // Sorted by depth with the walking character and pet (Explorer): nearer pads in front.
+        zIndex: 100 + Math.round(y / 4),
       }}
     >
       {showStars && (
@@ -50,7 +51,10 @@ export default function MapNode({ level, number, island, current, celebrate, onS
       <button
         ref={buttonRef}
         type="button"
-        onClick={() => onSelect(level)}
+        onClick={e => {
+          e.stopPropagation(); // a tap on a level is not a tap on the path
+          onSelect(level, e);
+        }}
         aria-label={describe(level, number)}
         className={`relative block w-full aspect-square focus:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-full ${current ? 'world-bob' : ''}`}
         style={{ opacity: level.state === 'preparing' ? 0.85 : 1 }}

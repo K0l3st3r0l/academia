@@ -106,6 +106,7 @@ async function getMap(studentId, gradeLevel, subject) {
       height: island.height,
       entry: island.entry,
       sparkles: island.sparkles ?? [],
+      walk: island.walk ?? null,
       levels,
       challenge: {
         key, label: island.boss.name, at: island.boss.at, oaCodes, stars, state,

@@ -120,6 +120,37 @@
     0%, 100% { transform: translateY(0) rotate(-2deg); }
     50% { transform: translateY(-6%) rotate(2deg); }
   }
+  /* The pet on the map (Explorer): it trots behind the character, sniffs the ground, scratches. */
+  .pet-trot {
+    animation: pet-trot 0.28s ease-in-out infinite;
+    transform-origin: 50% 100%;
+  }
+  @keyframes pet-trot {
+    0%, 100% { transform: translateY(0) scale(1.05, 0.95); }
+    50% { transform: translateY(-14%) scale(0.97, 1.04); }
+  }
+  .pet-sniff {
+    animation: pet-sniff 0.9s ease-in-out infinite;
+    transform-origin: 50% 100%;
+  }
+  @keyframes pet-sniff {
+    0%, 100% { transform: rotate(-2deg) translateY(0); }
+    20% { transform: rotate(-9deg) translateY(4%); }
+    30% { transform: rotate(-6deg) translateY(3%); }
+    40% { transform: rotate(-10deg) translateY(5%); }
+    60% { transform: rotate(-3deg) translateY(1%); }
+    80% { transform: rotate(-8deg) translateY(4%); }
+  }
+  .pet-scratch {
+    animation: pet-scratch 0.16s linear infinite;
+    transform-origin: 50% 100%;
+  }
+  @keyframes pet-scratch {
+    0%, 100% { transform: translateX(0) rotate(4deg) scale(1, 0.97); }
+    25% { transform: translateX(-3%) rotate(7deg) scale(1, 0.95); }
+    50% { transform: translateX(2%) rotate(3deg) scale(1, 0.97); }
+    75% { transform: translateX(-2%) rotate(8deg) scale(1, 0.95); }
+  }
   .world-glide {
     animation: world-glide 34s linear infinite;
   }
@@ -221,7 +252,7 @@
   }
   @media (prefers-reduced-motion: reduce) {
     .animate-breathe, .animate-hop, .world-float, .world-drift, .world-twinkle, .world-pulse,
-    .world-bob, .world-walk, .world-glide, .world-rise, .title-pan, .title-glow, .title-flicker,
+    .world-bob, .world-walk, .world-glide, .world-rise, .pet-trot, .pet-sniff, .pet-scratch, .title-pan, .title-glow, .title-flicker,
     .title-meteor, .title-rise, .title-float { animation: none; }
     .title-twinkle { animation: none; opacity: 0.8; transform: scale(0.8); }
     .title-parallax { transform: none; }

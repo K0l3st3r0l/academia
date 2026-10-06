@@ -10,6 +10,7 @@ import { TokenCoin } from '../components/TokenCoin';
 import { Star } from '../components/world/WorldParts';
 import { Copihues, CopihueIcon, COPIHUE_REASONS } from '../components/Copihue';
 import { shortName } from '../utils/displayName';
+import TitleBackdrop from '../components/welcome/TitleBackdrop';
 
 // Shown once per new stage: the pet grew since the student last looked.
 function GrowthCelebration({ pet, catalog, stage, onClose }) {
@@ -114,12 +115,13 @@ export default function AlumnoHome() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 py-8">
+    <div className="relative isolate min-h-screen flex flex-col items-center px-4 py-8">
+      <TitleBackdrop />
       <header className="w-full max-w-sm flex items-center justify-between mb-8">
-        <h1 className="text-3xl font-black text-brand-light">
+        <h1 className="text-3xl font-black text-white drop-shadow-lg">
           Academ<span className="text-gold">IA</span>
         </h1>
-        <button onClick={handleLogout} className="text-gray-500 hover:text-gray-300 text-sm">
+        <button onClick={handleLogout} className="rounded-xl bg-card/90 px-4 py-3 text-gray-200 hover:bg-card hover:text-white text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
           Salir
         </button>
       </header>
@@ -271,9 +273,9 @@ export default function AlumnoHome() {
 
         {character && <AttributeSheet attributes={attributes} />}
 
-        <p className="text-center text-gray-500 text-sm">
+        <p className="rounded-xl bg-card/90 px-4 py-3 text-center text-gray-200 text-sm">
           ¿Vas a jugar en clase?{' '}
-          <Link to="/?modo=clase" className="text-brand-light underline">Entra con el código de sala</Link>
+          <Link to="/?modo=clase" className="text-gold underline hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded">Entra con el código de sala</Link>
         </p>
       </main>
       {copihues?.unseen?.length > 0 ? (
