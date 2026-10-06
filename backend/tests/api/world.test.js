@@ -111,7 +111,7 @@ describe('jugar un nivel', () => {
     const { start, last } = await play(auth, 'OA1');
     expect(start.body.questions).toHaveLength(6);
     expect(start.body.questions[0]).not.toHaveProperty('correct');
-    expect(last.body.finished).toEqual({ stars: 3, previousStars: 0, correct: 6, total: 6, bonus: 15, tokens: 45 });
+    expect(last.body.finished).toMatchObject({ stars: 3, previousStars: 0, correct: 6, total: 6, bonus: 15, tokens: 45 });
     expect(await balance(row.id)).toBe(45);
 
     const { rows: answers } = await pool.query('SELECT attempt_id FROM student_answers WHERE student_id = $1', [row.id]);

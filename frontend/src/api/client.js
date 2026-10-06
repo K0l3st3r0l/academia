@@ -168,3 +168,19 @@ export const answerLevel = (attemptId, index, answer, timeMs) =>
 
 export const askCompanion = (attemptId, index) =>
   studentClient.post(`/api/world/attempts/${attemptId}/clue`, { index });
+
+// Copihues: recognition currency. Students see theirs; staff give them with a reason.
+export const getCopihuesMe = () =>
+  studentClient.get('/api/copihues/me');
+
+export const markCopihuesSeen = () =>
+  studentClient.post('/api/copihues/me/seen');
+
+export const giveCopihues = (studentIds, amount, reason) =>
+  client.post('/api/copihues/awards', { studentIds, amount, reason });
+
+export const getCopihueAwards = (courseName) =>
+  client.get('/api/copihues/awards', { params: { course_name: courseName } });
+
+export const undoCopihueAward = (id) =>
+  client.delete(`/api/copihues/awards/${id}`);

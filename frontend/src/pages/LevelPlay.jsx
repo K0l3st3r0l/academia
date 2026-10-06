@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { answerLevel, askCompanion, startLevel } from '../api/client';
 import PetView from '../components/pet/PetView';
 import { Tokens } from '../components/TokenCoin';
+import { Copihues, COPIHUE_REASONS } from '../components/Copihue';
 import { INK, Stars } from '../components/world/WorldParts';
 import useCompanions from '../components/world/useCompanions';
 import { OUTLINE, celebrateKey } from './WorldMap';
@@ -107,6 +108,16 @@ function Result({ finished, level, pet, petCatalog, onMap, onReplay }) {
           <p className="mt-3"><Tokens value={`+${finished.tokens}`} size={40} className="font-black text-4xl" /></p>
         )}
         {finished.bonus > 0 && <p className="text-sm text-gray-600">Incluye +{finished.bonus} por estrellas nuevas</p>}
+        {finished.copihues?.length > 0 && (
+          <div className="mt-3 flex flex-wrap justify-center gap-2">
+            {finished.copihues.map(c => (
+              <p key={c.reason} className="inline-flex items-center gap-2 rounded-full px-3 py-1 font-black world-star-pop" style={{ background: '#FDE2E5', animationDelay: '1.4s' }}>
+                <Copihues value={`+${c.amount}`} size={24} className="font-black text-[#C81E36] text-lg" />
+                <span className="text-sm" style={{ color: INK }}>{COPIHUE_REASONS[c.reason]}</span>
+              </p>
+            ))}
+          </div>
+        )}
         {record && <p className="mt-2 font-black text-brand">¡Mejoraste tu récord!</p>}
         {finished.stars === 0 && (
           <p className="mt-3 text-gray-700">Acierta al menos la mitad para abrir el siguiente nivel. ¡Inténtalo otra vez!</p>

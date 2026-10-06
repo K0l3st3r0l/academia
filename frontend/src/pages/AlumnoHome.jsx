@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats, getPetCatalog, getPetMe, markPetSeen, getWorldMap } from '../api/client';
+import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats, getPetCatalog, getPetMe, markPetSeen, getWorldMap, getCopihuesMe, markCopihuesSeen } from '../api/client';
 import { getStudentUser, studentLogout } from '../api/studentAuth';
 import CharacterView from '../components/character/CharacterView';
 import { layersToLook } from '../components/character/look';
@@ -8,6 +8,8 @@ import AttributeSheet from '../components/AttributeSheet';
 import PetView from '../components/pet/PetView';
 import { TokenCoin } from '../components/TokenCoin';
 import { Star } from '../components/world/WorldParts';
+import { Copihues, CopihueIcon, COPIHUE_REASONS } from '../components/Copihue';
+import { shortName } from '../utils/displayName';
 
 // Shown once per new stage: the pet grew since the student last looked.
 function GrowthCelebration({ pet, catalog, stage, onClose }) {
@@ -29,6 +31,35 @@ function GrowthCelebration({ pet, catalog, stage, onClose }) {
   );
 }
 
+const giverOf = r => shortName({ first_name: r.giver_first_name, last_name: r.giver_last_name });
+
+// Shown once for the copihues teachers gave since the student last looked: recognition is the
+// point, so it gets its own moment, with the teacher's words.
+function CopihueCelebration({ awards, onClose }) {
+  const total = awards.reduce((sum, a) => sum + a.amount, 0);
+  return (
+    <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4" role="dialog" aria-modal="true" aria-labelledby="copihue-title">
+      <div className="bg-card rounded-2xl p-6 shadow-2xl max-w-xs w-full text-center animate-pop">
+        <div className="flex justify-center"><CopihueIcon size={88} className="animate-hop" /></div>
+        <p id="copihue-title" className="text-2xl font-black text-white mt-2">
+          ¡Recibiste {total === 1 ? 'un copihue' : `${total} copihues`}!
+        </p>
+        <ul className="mt-3 space-y-2 text-left">
+          {awards.map(a => (
+            <li key={a.id} className="bg-surface rounded-xl px-3 py-2">
+              <p className="text-white font-semibold">«{a.detail}»</p>
+              <p className="text-gray-400 text-sm">{giverOf(a)}{a.amount > 1 ? ` · ${a.amount} copihues` : ''}</p>
+            </li>
+          ))}
+        </ul>
+        <button type="button" onClick={onClose} autoFocus className="mt-5 w-full bg-brand hover:bg-brand-dark text-white font-black py-3 rounded-xl text-lg">
+          ¡Gracias!
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function AlumnoHome() {
   const [student, setStudent] = useState(getStudentUser());
   const [loading, setLoading] = useState(true);
@@ -38,6 +69,7 @@ export default function AlumnoHome() {
   const [petCatalog, setPetCatalog] = useState(null);
   const [petInfo, setPetInfo] = useState(null);
   const [world, setWorld] = useState(null);
+  const [copihues, setCopihues] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -60,6 +92,7 @@ export default function AlumnoHome() {
     getPetMe().then(res => setPetInfo(res.data)).catch(() => setPetInfo(null));
     // Only courses with a drawn map get the card (today, Matemática 5°).
     getWorldMap('matematica').then(res => setWorld(res.data)).catch(() => setWorld(null));
+    getCopihuesMe().then(res => setCopihues(res.data)).catch(() => setCopihues(null));
   }, []);
 
   const pet = petInfo?.pet;
@@ -68,6 +101,11 @@ export default function AlumnoHome() {
   const closeCelebration = () => {
     setPetInfo(info => ({ ...info, pet: { ...info.pet, stage_seen: info.growth.stage } }));
     markPetSeen().catch(() => {});
+  };
+
+  const closeCopihues = () => {
+    setCopihues(c => ({ ...c, unseen: [] }));
+    markCopihuesSeen().catch(() => {});
   };
 
   const handleLogout = () => {
@@ -116,17 +154,47 @@ export default function AlumnoHome() {
           </Link>
         )}
 
-        <div className="bg-card rounded-2xl p-6 shadow-xl text-center">
-          <p className="text-gray-400 text-sm mb-1">Tus tokens</p>
-          {loading ? (
-            <p className="text-gray-500">Cargando...</p>
-          ) : (
-            <p className="text-5xl font-black text-gold inline-flex items-center gap-3 tabular-nums">
-              <TokenCoin size={56} />
-              {student?.tokens_balance ?? 0}
+        <div className="bg-card rounded-2xl p-6 shadow-xl grid grid-cols-2 divide-x divide-gray-700 text-center">
+          <div className="pr-3">
+            <p className="text-gray-400 text-sm mb-1">Tus tokens</p>
+            {loading ? (
+              <p className="text-gray-500">Cargando...</p>
+            ) : (
+              <p className="text-4xl font-black text-gold inline-flex items-center gap-2 tabular-nums">
+                <TokenCoin size={48} />
+                {student?.tokens_balance ?? 0}
+              </p>
+            )}
+            <p className="text-gray-500 text-xs mt-1">por tu esfuerzo</p>
+          </div>
+          <div className="pl-3">
+            <p className="text-gray-400 text-sm mb-1">Tus copihues</p>
+            <p className="text-4xl font-black text-[#FF6B7A] inline-flex items-center gap-1 tabular-nums">
+              <CopihueIcon size={48} />
+              {copihues?.balance ?? 0}
             </p>
-          )}
+            <p className="text-gray-500 text-xs mt-1">por tus logros</p>
+          </div>
         </div>
+
+        {copihues?.recent?.length > 0 && (
+          <div className="bg-card rounded-2xl p-5 shadow-xl">
+            <p className="text-white font-black mb-3">Tus reconocimientos</p>
+            <ul className="space-y-2">
+              {copihues.recent.slice(0, 4).map(r => (
+                <li key={r.id} className="flex items-start gap-3">
+                  <Copihues value={`+${r.amount}`} size={20} className="font-black text-[#FF6B7A] shrink-0 mt-0.5" />
+                  <div className="min-w-0">
+                    <p className="text-white text-sm font-semibold">
+                      {r.reason === 'teacher' ? `«${r.detail}»` : COPIHUE_REASONS[r.reason]}
+                    </p>
+                    <p className="text-gray-400 text-xs">{r.reason === 'teacher' ? giverOf(r) : r.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="bg-card rounded-2xl p-6 shadow-xl text-center">
           {character ? (
@@ -208,7 +276,9 @@ export default function AlumnoHome() {
           <Link to="/?modo=clase" className="text-brand-light underline">Entra con el código de sala</Link>
         </p>
       </main>
-      {grew && petCatalog && (
+      {copihues?.unseen?.length > 0 ? (
+        <CopihueCelebration awards={copihues.unseen} onClose={closeCopihues} />
+      ) : grew && petCatalog && (
         <GrowthCelebration pet={pet} catalog={petCatalog} stage={growth.stage} onClose={closeCelebration} />
       )}
     </div>

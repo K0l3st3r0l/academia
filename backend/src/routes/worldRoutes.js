@@ -7,8 +7,9 @@ const { trackEvent } = require('../services/eventTracker');
 const { deriveGradeLevel } = require('../services/gradeLevel');
 const { pickForStudent } = require('../services/questionPicker');
 const { scheduleRating } = require('../services/skillRatings');
+const { levelAchievements } = require('../services/copihues');
 const {
-  getMap, findLevel, starsFor, LEVEL_QUESTIONS, CHALLENGE_QUESTIONS, MIN_QUESTIONS, STAR_BONUS,
+  getMap, findLevel, levelLabel, starsFor, LEVEL_QUESTIONS, CHALLENGE_QUESTIONS, MIN_QUESTIONS, STAR_BONUS,
 } = require('../services/world');
 
 const router = express.Router();
@@ -163,8 +164,17 @@ router.post('/attempts/:id/answer', async (req, res) => {
          WHERE id = $1`,
         [attempt.id, answered, right, attemptTokens, finished?.stars ?? null, !!finished]
       );
-      const { rows: [{ tokens_balance: balance }] } = await client.query(
-        'SELECT tokens_balance FROM local_students WHERE id = $1', [req.user.id]
+      if (finished) {
+        const isChallenge = attempt.level_key.startsWith('desafio-');
+        const label = await levelLabel(client, { subject: attempt.subject, gradeLevel: attempt.grade_level, key: attempt.level_key });
+        const copihues = await levelAchievements(client, {
+          studentId: req.user.id, subject: attempt.subject, gradeLevel: attempt.grade_level, levelKey: attempt.level_key,
+          label, isChallenge, stars: finished.stars, previousStars: finished.previousStars,
+        });
+        finished.copihues = copihues.map(({ amount, reason, detail }) => ({ amount, reason, detail }));
+      }
+      const { rows: [{ tokens_balance: balance, copihues_balance: copihues }] } = await client.query(
+        'SELECT tokens_balance, copihues_balance FROM local_students WHERE id = $1', [req.user.id]
       );
 
       return {
@@ -177,6 +187,7 @@ router.post('/attempts/:id/answer', async (req, res) => {
           tokens,
           alreadyPaid: correct && before.length > 0,
           balance,
+          copihues,
           finished,
         },
         level: finished && { subject: attempt.subject, key: attempt.level_key, ...finished },

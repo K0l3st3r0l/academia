@@ -14,6 +14,7 @@ const petRoutes = require('./routes/petRoutes');
 const studentAccountRoutes = require('./routes/studentAccountRoutes');
 const curriculumRoutes = require('./routes/curriculumRoutes');
 const worldRoutes = require('./routes/worldRoutes');
+const copihueRoutes = require('./routes/copihueRoutes');
 const { getActiveRoomsCount } = require('./sockets/gameSocket');
 
 const DB_HEALTHCHECK_TIMEOUT_MS = 2000;
@@ -72,6 +73,7 @@ app.use('/api/pets', petRoutes);
 app.use('/api/student-account', studentAccountRoutes);
 app.use('/api/curriculum', curriculumRoutes);
 app.use('/api/world', worldRoutes);
+app.use('/api/copihues', copihueRoutes);
 
 app.use((err, req, res, _next) => {
   logger.error({ method: req.method, path: req.path, userId: req.user?.id, stack: err.stack }, err.message || 'unhandled error');

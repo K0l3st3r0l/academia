@@ -134,6 +134,18 @@ async function getMap(studentId, gradeLevel, subject) {
   };
 }
 
+// A level's name for the student: the OA's short label, or the island's challenge name.
+async function levelLabel(client, { subject, gradeLevel, key }) {
+  const island = loadLayout(gradeLevel)?.maps.find(m => m.subject === subject)?.islands
+    .find(i => challengeKey(i.unit) === key);
+  if (island) return island.boss.name;
+  const { rows } = await client.query(
+    'SELECT label FROM curriculum_oas WHERE subject = $1 AND grade_level = $2 AND code = $3',
+    [subject, gradeLevel, key]
+  );
+  return rows[0]?.label ?? key;
+}
+
 function findLevel(worldMap, key) {
   for (const island of worldMap.islands) {
     const level = island.levels.find(l => l.key === key);
@@ -146,6 +158,7 @@ function findLevel(worldMap, key) {
 module.exports = {
   getMap,
   findLevel,
+  levelLabel,
   starsFor,
   payFor,
   challengeKey,

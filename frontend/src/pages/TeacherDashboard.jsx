@@ -11,6 +11,7 @@ import CharacterNamesReview from '../components/CharacterNamesReview';
 import RoundSettings from '../components/RoundSettings';
 import { gradeLevelOf, saveRoundSetup } from '../utils/roundSetup';
 import { Tokens } from '../components/TokenCoin';
+import { CopihueIcon } from '../components/Copihue';
 
 function formatDateTime(iso) {
   if (!iso) return '—';
@@ -223,7 +224,7 @@ export default function TeacherDashboard() {
         </button>
       </header>
 
-      <nav aria-label="Opciones del profesor" className={`max-w-2xl mx-auto mb-6 grid grid-cols-2 ${isAdmin ? 'sm:grid-cols-5' : 'sm:grid-cols-4'} gap-2`}>
+      <nav aria-label="Opciones del profesor" className={`max-w-2xl mx-auto mb-6 grid grid-cols-2 ${isAdmin ? 'sm:grid-cols-4' : 'sm:grid-cols-5'} gap-2`}>
         {sections.map(s => (
           <button key={s.id} type="button" onClick={() => scrollToSection(s.id)} className={OPTION_CLASS}>
             {s.label}
@@ -232,6 +233,9 @@ export default function TeacherDashboard() {
         <Link to="/teacher/questions" className={OPTION_CLASS}>
           Banco de preguntas
           {draftCount > 0 && <span className="block text-xs font-normal text-gold">{draftCount} por revisar</span>}
+        </Link>
+        <Link to="/teacher/copihues" className={`${OPTION_CLASS} inline-flex items-center justify-center gap-1.5`}>
+          <CopihueIcon size={18} /> Copihues
         </Link>
       </nav>
 

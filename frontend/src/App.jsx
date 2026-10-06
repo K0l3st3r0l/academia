@@ -13,6 +13,7 @@ import CharacterEditor from './pages/CharacterEditor';
 import PetPage from './pages/PetPage';
 import WorldMap from './pages/WorldMap';
 import LevelPlay from './pages/LevelPlay';
+import TeacherCopihues from './pages/TeacherCopihues';
 import CreateStudentPassword from './pages/CreateStudentPassword';
 
 function ProtectedTeacher({ children }) {
@@ -69,6 +70,10 @@ export default function App() {
           <Route
             path="/teacher/questions"
             element={<ProtectedTeacher><QuestionBank /></ProtectedTeacher>}
+          />
+          <Route
+            path="/teacher/copihues"
+            element={<ProtectedTeacher><TeacherCopihues /></ProtectedTeacher>}
           />
           <Route
             path="/teacher/game/:code"
