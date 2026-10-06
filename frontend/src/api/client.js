@@ -184,3 +184,10 @@ export const getCopihueAwards = (courseName) =>
 
 export const undoCopihueAward = (id) =>
   client.delete(`/api/copihues/awards/${id}`);
+
+// Reading speed from Anahuac → copihues for students who improved.
+export const getReadingSync = () =>
+  client.get('/api/copihues/reading-sync');
+
+export const runReadingSyncNow = () =>
+  client.post('/api/copihues/reading-sync');

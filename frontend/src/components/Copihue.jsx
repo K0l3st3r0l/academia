@@ -35,4 +35,5 @@ export const COPIHUE_REASONS = {
   level_perfect: 'Nivel perfecto',
   challenge: 'Desafío ganado',
   streak: 'Días seguidos',
+  reading: 'Lectura más rápida',
 };

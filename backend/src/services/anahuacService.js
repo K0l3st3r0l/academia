@@ -58,4 +58,14 @@ async function getActiveStudents(anahuacToken) {
   return res.data;
 }
 
-module.exports = { loginToAnahuac, getAnahuacProfile, getSchoolCourses, getActiveStudents };
+// Reading speed measurements tied to each student (Anahuac resolves LeoMejor rows by name).
+// Needs the UTP «velocidad lectora» permission in Anahuac: other staff get a 403.
+async function getReadingSpeedByStudent(anahuacToken, fromYear) {
+  const res = await callAnahuac('get', '/api/utp/velocidad-lectora/por-alumno', {
+    headers: { Authorization: `Bearer ${anahuacToken}` },
+    params: { desde_anio: fromYear },
+  }, 'getReadingSpeedByStudent');
+  return res.data;
+}
+
+module.exports = { loginToAnahuac, getAnahuacProfile, getSchoolCourses, getActiveStudents, getReadingSpeedByStudent };

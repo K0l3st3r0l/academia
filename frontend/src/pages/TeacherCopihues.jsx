@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getCourses, getStudentsByCourse, giveCopihues, getCopihueAwards, undoCopihueAward } from '../api/client';
+import { getCourses, getStudentsByCourse, giveCopihues, getCopihueAwards, undoCopihueAward, getReadingSync, runReadingSyncNow } from '../api/client';
 import { CopihueIcon, Copihues } from '../components/Copihue';
 import { shortName } from '../utils/displayName';
 
@@ -18,6 +18,56 @@ const MAX_REASON = 120;
 
 function formatDate(iso) {
   return new Date(iso).toLocaleString('es-CL', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+}
+
+// Reading speed lives in Anahuac (LeoMejor and ProsodIA). It is checked by itself whenever
+// someone with UTP access to it logs in; the button checks now.
+function ReadingSpeed() {
+  const [last, setLast] = useState(null);
+  const [checking, setChecking] = useState(false);
+  const [message, setMessage] = useState(null);
+
+  useEffect(() => {
+    getReadingSync().then(res => setLast(res.data.last)).catch(() => {});
+  }, []);
+
+  const check = async () => {
+    setChecking(true);
+    setMessage(null);
+    try {
+      const { data } = await runReadingSyncNow();
+      setLast(data.last);
+      const n = data.summary?.awarded ?? 0;
+      setMessage({ text: n ? `${n === 1 ? '1 alumno recibió' : `${n} alumnos recibieron`} copihues por leer más rápido.` : 'No hay mejoras nuevas desde la última revisión.' });
+    } catch (err) {
+      setMessage({ error: true, text: err.response?.data?.error ?? 'No se pudo revisar.' });
+    } finally {
+      setChecking(false);
+    }
+  };
+
+  return (
+    <section className="bg-card rounded-2xl p-6 shadow-xl mt-6">
+      <h2 className="text-xl font-bold mb-1 flex items-center gap-2"><CopihueIcon size={24} /> Velocidad lectora</h2>
+      <p className="text-sm text-gray-300">
+        Cuando un alumno lee más palabras por minuto que en su medición anterior (LeoMejor o ProsodIA), recibe
+        3 copihues. Cuenta la mejora, no el nivel: también gana quien lee lento pero avanza.
+      </p>
+      <p className="text-xs text-gray-500 mt-2">
+        Se revisa solo cuando entra alguien con acceso a velocidad lectora en Anahuac (UTP).
+        {last && ` Última revisión: ${formatDate(last.at)}.`}
+      </p>
+      <button
+        type="button"
+        onClick={check}
+        disabled={checking}
+        className="mt-4 border border-gray-700 hover:border-brand text-gray-200 hover:text-white disabled:opacity-40 rounded-xl px-4 py-2 font-semibold"
+      >
+        {checking ? 'Revisando…' : 'Revisar ahora'}
+      </button>
+      {message && <p role="status" className={`text-sm font-semibold mt-3 ${message.error ? 'text-wrong' : 'text-correct'}`}>{message.text}</p>}
+    </section>
+  );
 }
 
 export default function TeacherCopihues() {
@@ -227,6 +277,8 @@ export default function TeacherCopihues() {
             <p role="status" className={`text-sm font-semibold ${message.error ? 'text-wrong' : 'text-correct'}`}>{message.text}</p>
           )}
         </section>
+
+        <ReadingSpeed />
 
         {course && awards.length > 0 && (
           <section className="bg-card rounded-2xl p-6 shadow-xl mt-6">

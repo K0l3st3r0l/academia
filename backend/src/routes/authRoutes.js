@@ -4,9 +4,10 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const pool = require('../db');
 const { loginToAnahuac, getAnahuacProfile } = require('../services/anahuacService');
-const { authenticateToken, requireStudent } = require('../middleware/auth');
+const { authenticateToken, requireStudent, STAFF_ROLES } = require('../middleware/auth');
 const anahuacTokenCache = require('../services/anahuacTokenCache');
 const { trackEvent } = require('../services/eventTracker');
+const { syncAfterLogin } = require('../services/readingSpeed');
 const { normalizeRut } = require('../utils/rut');
 const studentLoginRateLimiter = require('../services/studentLoginRateLimiter');
 const { startStudentSession } = require('../services/studentSession');
@@ -45,6 +46,9 @@ router.post('/login', async (req, res) => {
 
     // 4. Cache Anahuac token server-side (never sent to frontend)
     anahuacTokenCache.set(localUser.id, anahuacToken);
+    // Staff with Anahuac's reading speed permission bring the new measurements (copihues for
+    // students who improved). In the background: login never waits for it.
+    if (localUser.roles?.some(r => STAFF_ROLES.includes(r))) syncAfterLogin(anahuacToken);
 
     // 5. Issue AcademIA JWT
     const token = jwt.sign(

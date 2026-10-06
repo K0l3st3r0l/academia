@@ -5,6 +5,8 @@ const { authenticateToken, requireStudent, requireTeacher } = require('../middle
 const { inTransaction } = require('../db/transaction');
 const { trackEvent } = require('../services/eventTracker');
 const { giveCopihues, MAX_TEACHER_AWARD } = require('../services/copihues');
+const { runReadingSync, lastSync } = require('../services/readingSpeed');
+const anahuacTokenCache = require('../services/anahuacTokenCache');
 
 const router = express.Router();
 
@@ -140,6 +142,31 @@ router.delete('/awards/:id', authenticateToken, requireTeacher, async (req, res)
   } catch (err) {
     logger.error({ err }, 'copihues undo error');
     res.status(500).json({ error: 'Error al deshacer el reconocimiento' });
+  }
+});
+
+// Reading speed (from Anahuac): when it was last checked, and checking now with this staff
+// member's Anahuac session, which needs the UTP «velocidad lectora» permission there.
+router.get('/reading-sync', authenticateToken, requireTeacher, async (req, res) => {
+  res.json({ last: await lastSync() });
+});
+
+router.post('/reading-sync', authenticateToken, requireTeacher, async (req, res) => {
+  const anahuacToken = anahuacTokenCache.get(req.user.id);
+  if (!anahuacToken) return res.status(401).json({ error: 'Tu sesión de Anahuac expiró. Cierra sesión y vuelve a entrar.', code: 'no_session' });
+  try {
+    const summary = await runReadingSync(anahuacToken, { force: true });
+    res.json({ summary, last: await lastSync() });
+  } catch (err) {
+    const status = err.response?.status ?? err.statusCode;
+    if (status === 403) {
+      return res.status(403).json({ error: 'Tu cuenta de Anahuac no tiene acceso a velocidad lectora. Lo puede revisar alguien de UTP.', code: 'no_permission' });
+    }
+    if (status === 404) {
+      return res.status(503).json({ error: 'Anahuac todavía no entrega la velocidad lectora a AcademIA (falta publicar esa actualización).', code: 'not_available' });
+    }
+    logger.warn({ status, message: err.message }, 'reading speed sync (manual) failed');
+    res.status(502).json({ error: 'Anahuac no respondió. Inténtalo más tarde.' });
   }
 });
 
