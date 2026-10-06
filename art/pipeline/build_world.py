@@ -61,6 +61,8 @@ def walk_grid(rgb, island):
     ImageDraw.Draw(dock).polygon([tuple(p) for p in island['dock']], fill=1)
     dock = np.asarray(dock, bool)
     verge = ndimage.distance_transform_edt(~path) <= VERGE
+    a = rgb / 255
+    verge &= ~((a.max(-1) > 0.75) & (a.max(-1) - a.min(-1) < 0.15 * a.max(-1)))  # no walls, no salt
     verge &= ~ndimage.binary_dilation(dock, iterations=VERGE)  # around the dock there is only air
     walk = ndimage.binary_closing(path | verge | dock, iterations=4)
     rows, cols = rgb.shape[0] // WALK_CELL, rgb.shape[1] // WALK_CELL

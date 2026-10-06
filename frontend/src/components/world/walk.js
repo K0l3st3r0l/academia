@@ -157,7 +157,8 @@ export function findPath(g, from, to) {
 // clear of the pad's button (and its stars) so the level stays visible and easy to tap.
 // body: [width, height] of the figure, button: radius of a level button, in island pixels.
 export function spotBeside(g, pad, { body: [bw, bh], button: r, others = [] }) {
-  const boxOf = ([x, y]) => [x - r, y - 1.6 * r, x + r, y + 0.8 * r];
+  // The button is round: the body may graze its sides, never cover its face or the stars above.
+  const boxOf = ([x, y]) => [x - 0.75 * r, y - 1.6 * r, x + 0.75 * r, y + 0.7 * r];
   const hits = (a, b) => a[0] < b[2] && a[2] > b[0] && a[1] < b[3] && a[3] > b[1];
   const padBox = boxOf(pad);
   const otherBoxes = others.map(boxOf);

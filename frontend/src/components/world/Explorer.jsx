@@ -87,6 +87,12 @@ const Explorer = forwardRef(function Explorer(
   const live = useRef({});
   live.current = { k, controls, stops, onInteract, onRest };
 
+  // The pet never settles on a level button: it would hide the number or the lock.
+  const clearOfPads = ([x, y]) => {
+    const r = BUTTON_RADIUS * island.width;
+    return live.current.stops.every(({ at }) => Math.abs(x - at[0]) > r + petH * 0.3 || y < at[1] - 1.4 * r || y - petH > at[1] + 0.7 * r);
+  };
+
   const spots = useRef(new Map());
   const spotFor = level => {
     if (!spots.current.has(level.key)) {
@@ -345,21 +351,27 @@ const Explorer = forwardRef(function Explorer(
         if (!advance(p, dt) && !moving) {
           p.mode = 'idle';
           p.action = 'rest';
-          p.until = now + rand(300, 900);
+          p.until = clearOfPads([p.x, p.y]) ? now + rand(300, 900) : now;
+          p.mustMove = !clearOfPads([p.x, p.y]);
         }
       } else if (p.path.length) {
         advance(p, dt);
       } else if (now >= p.until) {
-        const action = reduced ? 'rest' : pickAction();
+        const action = p.mustMove ? 'wander' : reduced ? 'rest' : pickAction();
         p.action = action;
         p.flipAt = [];
         if (action === 'wander') {
-          const angle = rand(0, Math.PI * 2);
-          const radius = rand(60, 150);
-          const target = nearestStand(grid, [c.x + Math.cos(angle) * radius, c.y + Math.sin(angle) * radius * 0.6]);
-          if (target && dist(target, [c.x, c.y]) > 45) {
-            p.path = findPath(grid, [p.x, p.y], target);
-            p.speed = rand(90, 130);
+          // A free spot near the character: on the ground, off the buttons, not on its feet.
+          for (let tries = 0; tries < 12; tries++) {
+            const angle = rand(0, Math.PI * 2);
+            const radius = rand(60, 150);
+            const target = [c.x + Math.cos(angle) * radius, c.y + Math.sin(angle) * radius * 0.6];
+            if (canStand(grid, target) && clearOfPads(target) && dist(target, [c.x, c.y]) > 45) {
+              p.path = findPath(grid, [p.x, p.y], target);
+              p.speed = p.mustMove ? SPEED * 0.8 : rand(90, 130);
+              p.mustMove = false;
+              break;
+            }
           }
           p.until = now + 200;
         } else if (action === 'zoom') {
@@ -457,7 +469,7 @@ const Explorer = forwardRef(function Explorer(
             zIndex: 600,
           }}
         >
-          Enter ↵ para jugar
+          Enter ↵
         </span>
       )}
     </>
