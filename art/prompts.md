@@ -97,7 +97,47 @@ imagen de referencia** y antepone el estilo base. Guarda con el sufijo de la hoj
 
 ---
 
-## 2. Mapa piloto (después de elegir el personaje)
+## 2. Mundo: una isla flotante por unidad (decidido 2026-10-06)
 
-Se escribe cuando esté decidida la hoja de personaje, para que el mapa use el mismo
-estilo y la hoja elegida vaya como imagen de referencia.
+Cada unidad de una asignatura es **una isla** (1024×1536, vertical) que flota sobre un mar
+de nubes. Las islas se apilan en el mapa: la Unidad 1 abajo y las siguientes encima, unidas
+por puentes. Temática: **regiones y paisajes de Chile**, como las mascotas y las monedas.
+Los niveles y el desafío los dibuja la app encima; la imagen solo trae los discos vacíos.
+
+Se generan con `art/gen.sh`, se dejan en `art/incoming/mundo/<asignatura>-<curso>-u<unidad>.png`
+y se procesan con `art/pipeline/build_world.py`: encuentra los discos por su color y escribe
+sus posiciones en `shared/world/<curso>.json`. Por eso las reglas de composición no se tocan.
+
+**Reglas de composición (toda isla):**
+
+- Una sola isla flotante tipo diorama, vista 3/4 desde arriba, gruesa y de juguete.
+- Arriba, cielo azul abierto; abajo, mar de nubes suave. Así empalman al apilarlas.
+- Abajo al centro, un **muelle de madera** (entrada). Arriba, un **puente colgante** que sale
+  por el borde superior hacia la isla siguiente (la última unidad no lo lleva).
+- Un camino de arena serpentea del muelle a la cima con **N discos de piedra redondos,
+  lisos, sin marcas** (N = OA de la unidad) y, en la cima, una **plaza redonda más grande**
+  para el desafío. Los discos son de piedra clara beige grisácea: `build_world.py` los
+  detecta por ese color.
+- Sin personajes, sin texto, sin números.
+
+**Plantilla** (con la Isla 1 adjunta como referencia, para que todas se vean iguales):
+
+> [Estilo base]
+> Match exactly the art style, camera angle, island scale, outline weight and lighting of the
+> attached reference island. Portrait game level map for a phone screen. A single floating
+> island diorama hovering over a soft sea of clouds, seen from a high three-quarter angle,
+> chunky and toy-like. The island is inspired by {paisaje de Chile y sus elementos}. A sandy path
+> winds across the island from a wooden dock at the bottom up to {hito de la cima}; along it,
+> {N} empty round stone pads evenly spaced (plain and unmarked, the same light beige-grey stone
+> as the reference), and a bigger round plaza in front of {hito} for the final challenge. From
+> the plaza a rope bridge rises out of the top edge of the frame toward a second island whose
+> underside is barely visible, half hidden in clouds. Bright, saturated, cheerful, readable at
+> small size. No characters, no text, no numbers.
+
+### Islas hechas
+
+| Archivo | Unidad | Prompt |
+|---|---|---|
+| `matematica-5b-u1.png` | Matemática 5° · Unidad 1 · Isla del Observatorio (Atacama: salar con flamencos, vicuñas, cardones, observatorio) | `art/mapa/matematica-5b-u1.txt` |
+
+`art/mapa/concepto-a-saga.txt` es el boceto descartado de mapa continuo estilo saga.

@@ -155,3 +155,16 @@ export const getPetNames = (status) =>
 
 export const reviewPetName = (studentId, status) =>
   client.patch(`/api/pets/names/${studentId}`, { status });
+
+// Modo Libre: the world map and its levels (home practice).
+export const getWorldMap = (subject) =>
+  studentClient.get(`/api/world/${subject}`);
+
+export const startLevel = (subject, key) =>
+  studentClient.post(`/api/world/${subject}/levels/${key}/start`);
+
+export const answerLevel = (attemptId, index, answer, timeMs) =>
+  studentClient.post(`/api/world/attempts/${attemptId}/answer`, { index, answer, timeMs });
+
+export const askCompanion = (attemptId, index) =>
+  studentClient.post(`/api/world/attempts/${attemptId}/clue`, { index });

@@ -11,6 +11,8 @@ import QuestionBank from './pages/QuestionBank';
 import AlumnoHome from './pages/AlumnoHome';
 import CharacterEditor from './pages/CharacterEditor';
 import PetPage from './pages/PetPage';
+import WorldMap from './pages/WorldMap';
+import LevelPlay from './pages/LevelPlay';
 import CreateStudentPassword from './pages/CreateStudentPassword';
 
 function ProtectedTeacher({ children }) {
@@ -50,6 +52,14 @@ export default function App() {
           <Route
             path="/alumno/companero"
             element={<ProtectedStudent><PetPage /></ProtectedStudent>}
+          />
+          <Route
+            path="/alumno/mundo/:subject"
+            element={<ProtectedStudent><WorldMap /></ProtectedStudent>}
+          />
+          <Route
+            path="/alumno/mundo/:subject/:key"
+            element={<ProtectedStudent><LevelPlay /></ProtectedStudent>}
           />
           <Route path="/projector/:code" element={<ProjectorView />} />
           <Route

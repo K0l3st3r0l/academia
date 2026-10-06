@@ -60,7 +60,99 @@
     45% { transform: translateY(-14%) scale(0.97, 1.04); }
     70% { transform: translateY(0) scale(1.04, 0.96); }
   }
+  /* World map (Modo Libre): each island fades into the sky at its edges, so islands and cloud
+     banks blend into one column; wider screens fade the sides more, where the sky shows around it. */
+  .world-island-art {
+    --fade-x: 4%;
+    mask-image: linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%),
+      linear-gradient(to right, transparent 0, #000 var(--fade-x), #000 calc(100% - var(--fade-x)), transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%),
+      linear-gradient(to right, transparent 0, #000 var(--fade-x), #000 calc(100% - var(--fade-x)), transparent 100%);
+    -webkit-mask-composite: source-in;
+  }
+  @media (min-width: 600px) {
+    .world-island-art { --fade-x: 14%; }
+  }
+  /* The island floats, clouds drift, crystals twinkle. */
+  .world-float {
+    animation: world-float 7s ease-in-out infinite;
+  }
+  @keyframes world-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .world-drift {
+    animation: world-drift 26s ease-in-out infinite alternate;
+  }
+  @keyframes world-drift {
+    from { transform: translateX(-6%); }
+    to { transform: translateX(6%); }
+  }
+  .world-twinkle {
+    animation: world-twinkle 2.6s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  @keyframes world-twinkle {
+    0%, 100% { transform: scale(0.4) rotate(0deg); opacity: 0; }
+    45% { transform: scale(1) rotate(20deg); opacity: 1; }
+    70% { transform: scale(0.7) rotate(35deg); opacity: 0.6; }
+  }
+  .world-pulse {
+    animation: world-pulse 1.8s ease-out infinite;
+  }
+  @keyframes world-pulse {
+    0% { transform: scale(0.9); opacity: 0.9; }
+    100% { transform: scale(1.7); opacity: 0; }
+  }
+  .world-bob {
+    animation: world-bob 1.6s ease-in-out infinite;
+  }
+  @keyframes world-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7%); }
+  }
+  .world-walk {
+    animation: world-walk 0.32s ease-in-out infinite;
+  }
+  @keyframes world-walk {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-6%) rotate(2deg); }
+  }
+  .world-glide {
+    animation: world-glide 34s linear infinite;
+  }
+  @keyframes world-glide {
+    0% { transform: translate(-20vw, 0); }
+    50% { transform: translate(60vw, 14px); }
+    100% { transform: translate(140vw, 0); }
+  }
+  .world-star-pop {
+    animation: world-star-pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+  }
+  @keyframes world-star-pop {
+    0% { transform: scale(0) rotate(-40deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+  .world-sheet {
+    animation: world-sheet 0.22s ease-out;
+  }
+  @keyframes world-sheet {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  .world-rise {
+    animation: world-rise 1.1s ease-out forwards;
+  }
+  @keyframes world-rise {
+    0% { transform: translateY(0) scale(0.8); opacity: 0; }
+    20% { transform: translateY(-6px) scale(1.15); opacity: 1; }
+    100% { transform: translateY(-34px) scale(1); opacity: 0; }
+  }
   @media (prefers-reduced-motion: reduce) {
-    .animate-breathe, .animate-hop { animation: none; }
+    .animate-breathe, .animate-hop, .world-float, .world-drift, .world-twinkle, .world-pulse,
+    .world-bob, .world-walk, .world-glide, .world-rise { animation: none; }
+    .world-star-pop, .world-sheet { animation-duration: 1ms; }
   }
 }

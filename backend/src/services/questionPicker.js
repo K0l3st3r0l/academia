@@ -72,4 +72,40 @@ async function pickQuestions({ subject, gradeLevel, oaCodes = [], level = DEFAUL
     .map(({ q }) => q);
 }
 
-module.exports = { pickQuestions, rankCandidates, classSuccess, LEVEL_TARGETS, DEFAULT_LEVEL };
+// Home practice (plan-modo-libre §3.3): most questions at ~78% expected success for this student
+// and the last ones a bit harder (~60%) so the rating can climb. A challenge takes one
+// question per OA. Questions the student already got right go last: they no longer pay.
+const PRACTICE_TARGETS = { easy: 0.78, stretch: 0.6 };
+const STRETCH_SHARE = 1 / 3;
+
+async function pickForStudent({ studentId, subject, gradeLevel, oaCodes, count, onePerOa = false, random = Math.random }) {
+  const { rows: candidates } = await pool.query(
+    `SELECT q.* FROM questions q
+     WHERE q.subject = $1 AND q.grade_level = $2 AND q.oa_code = ANY($3::text[])
+       AND q.active = true AND q.status = 'approved'`,
+    [subject, gradeLevel, oaCodes]
+  );
+  const { rows: right } = await pool.query(
+    'SELECT DISTINCT question_id FROM student_answers WHERE student_id = $1 AND is_correct AND question_id IS NOT NULL',
+    [studentId]
+  );
+  const usedIds = new Set(right.map(r => r.question_id));
+  const students = await loadStudentSkills([studentId], subject);
+  const rank = (from, target, n) => rankCandidates(from, students, { target, count: n, usedIds, random });
+
+  let picked;
+  if (onePerOa) {
+    picked = oaCodes
+      .map(code => rank(candidates.filter(q => q.oa_code === code), (PRACTICE_TARGETS.easy + PRACTICE_TARGETS.stretch) / 2, 1)[0])
+      .filter(Boolean)
+      .slice(0, count);
+  } else {
+    const stretch = Math.round(count * STRETCH_SHARE);
+    const easy = rank(candidates, PRACTICE_TARGETS.easy, count - stretch);
+    const taken = new Set(easy.map(({ q }) => q.id));
+    picked = [...easy, ...rank(candidates.filter(q => !taken.has(q.id)), PRACTICE_TARGETS.stretch, stretch)];
+  }
+  return picked.sort((a, b) => b.success - a.success).map(({ q }) => q);
+}
+
+module.exports = { pickQuestions, pickForStudent, rankCandidates, classSuccess, LEVEL_TARGETS, DEFAULT_LEVEL, PRACTICE_TARGETS };

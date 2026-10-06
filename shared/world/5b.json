@@ -1,0 +1,40 @@
+{
+  "grade_level": "5b",
+  "maps": [
+    {
+      "subject": "matematica",
+      "islands": [
+        {
+          "unit": 1,
+          "name": "Isla del Observatorio",
+          "image": "matematica-5b-u1",
+          "width": 1024,
+          "height": 1536,
+          "levels": ["OA1", "OA2", "OA3", "OA4", "OA5", "OA6", "OA14", "OA15"],
+          "nodes": [
+            [603, 1105],
+            [557, 1003],
+            [452, 905],
+            [574, 816],
+            [682, 714],
+            [719, 597],
+            [619, 514],
+            [499, 434]
+          ],
+          "boss": {
+            "name": "Desafío del Observatorio",
+            "at": [588, 325]
+          },
+          "entry": [480, 1236],
+          "sparkles": [
+            [150, 1060],
+            [318, 1172],
+            [768, 1205],
+            [982, 1035],
+            [838, 42]
+          ]
+        }
+      ]
+    }
+  ]
+}

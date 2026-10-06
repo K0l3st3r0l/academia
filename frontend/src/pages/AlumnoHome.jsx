@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats, getPetCatalog, getPetMe, markPetSeen } from '../api/client';
+import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats, getPetCatalog, getPetMe, markPetSeen, getWorldMap } from '../api/client';
 import { getStudentUser, studentLogout } from '../api/studentAuth';
 import CharacterView from '../components/character/CharacterView';
 import { layersToLook } from '../components/character/look';
 import AttributeSheet from '../components/AttributeSheet';
 import PetView from '../components/pet/PetView';
 import { TokenCoin } from '../components/TokenCoin';
+import { Star } from '../components/world/WorldParts';
 
 // Shown once per new stage: the pet grew since the student last looked.
 function GrowthCelebration({ pet, catalog, stage, onClose }) {
@@ -36,6 +37,7 @@ export default function AlumnoHome() {
   const [attributes, setAttributes] = useState(null);
   const [petCatalog, setPetCatalog] = useState(null);
   const [petInfo, setPetInfo] = useState(null);
+  const [world, setWorld] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -56,6 +58,8 @@ export default function AlumnoHome() {
       .catch(() => setAttributes(null));
     getPetCatalog().then(res => setPetCatalog(res.data)).catch(() => {});
     getPetMe().then(res => setPetInfo(res.data)).catch(() => setPetInfo(null));
+    // Only courses with a drawn map get the card (today, Matemática 5°).
+    getWorldMap('matematica').then(res => setWorld(res.data)).catch(() => setWorld(null));
   }, []);
 
   const pet = petInfo?.pet;
@@ -87,6 +91,30 @@ export default function AlumnoHome() {
           <h2 className="text-3xl font-black text-white mb-1">¡Hola, {student?.first_name?.split(' ')[0] || 'alumno'}!</h2>
           <p className="text-gray-500 text-sm">{student?.course_name}</p>
         </div>
+
+        {world && (
+          <Link
+            to="/alumno/mundo/matematica"
+            className="block rounded-2xl overflow-hidden shadow-xl border-4 border-surface relative group"
+            aria-label={`Jugar en el mapa de Matemática: ${world.stars.earned} de ${world.stars.max} estrellas`}
+          >
+            <img
+              src={`/world/${world.islands[0].image}-640.webp`}
+              alt=""
+              className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+              style={{ objectPosition: '50% 58%' }}
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-surface/95 via-surface/70 to-transparent px-4 pt-8 pb-3 flex items-end justify-between">
+              <div>
+                <p className="text-xl font-black text-white leading-tight">Matemática</p>
+                <p className="text-sm text-gray-300 inline-flex items-center gap-1">
+                  <Star filled size={16} /> {world.stars.earned} de {world.stars.max}
+                </p>
+              </div>
+              <span className="bg-brand group-hover:bg-brand-dark text-white font-black px-4 py-2 rounded-xl">¡A jugar!</span>
+            </div>
+          </Link>
+        )}
 
         <div className="bg-card rounded-2xl p-6 shadow-xl text-center">
           <p className="text-gray-400 text-sm mb-1">Tus tokens</p>

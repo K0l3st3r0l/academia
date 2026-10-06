@@ -6,6 +6,7 @@ const { verifyRoomTicket, issueProjectorKey, verifyProjectorKey } = require('../
 const { VALID_SUBJECTS } = require('../routes/questionRoutes');
 const { scheduleRating } = require('../services/skillRatings');
 const { pickQuestions, LEVEL_TARGETS, DEFAULT_LEVEL } = require('../services/questionPicker');
+const { deriveGradeLevel } = require('../services/gradeLevel');
 
 // In-memory game state per room
 // Map<roomCode, RoomState>
@@ -42,15 +43,6 @@ function withErrorLogging(socket, eventName, handler) {
       }, `game socket handler error: ${eventName}`);
     }
   };
-}
-
-function deriveGradeLevel(courseName) {
-  if (!courseName) return null;
-  const match = courseName.match(/(\d+)\s*°/);
-  if (!match) return null;
-  const grade = parseInt(match[1], 10);
-  if (grade < 1 || grade > 8) return null;
-  return `${grade}b`;
 }
 
 function buildLeaderboard(students) {

@@ -100,6 +100,8 @@ await runMigrations();
 const { default: pool } = await import('../src/db/index.js');
 
 const APP_TABLES = [
+  'student_level_progress',
+  'practice_attempts',
   'student_skill_ratings',
   'curriculum_oas',
   'curriculum_units',
