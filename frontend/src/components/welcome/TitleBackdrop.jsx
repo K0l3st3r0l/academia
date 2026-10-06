@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { Cloud } from '../world/WorldParts';
 
 // Night over the Atacama island of the world map, as a game title screen. The picture is still;
 // what moves is drawn on top of it at points picked by hand on the source pixels
@@ -39,6 +38,14 @@ const ART = {
 const MOTES = [[4, 4, 19, true], [11, 3, 24, false], [19, 5, 16, false], [27, 3, 22, true], [36, 4, 26, false],
   [44, 3, 18, true], [53, 5, 23, false], [61, 3, 17, true], [69, 4, 25, false], [77, 3, 20, true],
   [85, 5, 15, false], [93, 3, 21, true]];
+
+// Banks of mist drifting in front of the scene, in the lavender of the painted clouds.
+const MIST = [
+  { left: '-18%', bottom: '-9%', width: '62%', height: '30%', delay: 0 },
+  { right: '-22%', bottom: '-11%', width: '66%', height: '32%', delay: -11 },
+  { left: '22%', bottom: '-15%', width: '56%', height: '24%', delay: -19, wideOnly: true },
+];
+const MIST_FILL = 'radial-gradient(ellipse at center, rgba(205, 190, 255, 0.5) 0%, rgba(160, 140, 235, 0.28) 38%, transparent 70%)';
 
 const WIDE_QUERY = '(min-aspect-ratio: 1/1)';
 const STAR_PATH = 'M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z';
@@ -236,18 +243,14 @@ export default function TitleBackdrop() {
         />
       ))}
 
-      <div className="title-parallax absolute inset-x-0 bottom-0" style={{ '--depth': '34px' }}>
-        <div className="world-drift absolute -left-24 bottom-[-3rem] opacity-90">
-          <Cloud width={wide ? 460 : 320} tint="#B79BEA" shade="#7A68D2" />
-        </div>
-        <div className="world-drift absolute -right-28 bottom-[-4rem] opacity-90" style={{ animationDelay: '-11s' }}>
-          <Cloud width={wide ? 520 : 340} tint="#B79BEA" shade="#7A68D2" />
-        </div>
-        {wide && (
-          <div className="world-drift absolute left-[38%] bottom-[-5rem] opacity-60" style={{ animationDelay: '-19s' }}>
-            <Cloud width={420} tint="#A58BE6" shade="#6D5CC8" />
-          </div>
-        )}
+      <div className="title-parallax absolute inset-0" style={{ '--depth': '34px' }}>
+        {MIST.filter(m => wide || !m.wideOnly).map(({ wideOnly, delay: d, ...place }, i) => (
+          <div
+            key={`f${i}`}
+            className="world-drift absolute"
+            style={{ ...place, animationDelay: `${d}s`, background: MIST_FILL }}
+          />
+        ))}
       </div>
     </div>
   );
