@@ -58,7 +58,7 @@ async function getActiveStudents(anahuacToken) {
   return res.data;
 }
 
-// Reading speed measurements tied to each student (Anahuac resolves LeoMejor rows by name).
+// ProsodIA reading speed measurements, the ones tied to a student.
 // Needs the UTP «velocidad lectora» permission in Anahuac: other staff get a 403.
 async function getReadingSpeedByStudent(anahuacToken, fromYear) {
   const res = await callAnahuac('get', '/api/utp/velocidad-lectora/por-alumno', {

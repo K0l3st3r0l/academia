@@ -15,7 +15,7 @@ beforeEach(() => { stub.reset(); _reset(); });
 
 const YEAR = new Date().getFullYear();
 const settle = () => new Promise(resolve => setTimeout(resolve, 150));
-const m = (studentId, anio, semestre, pcpm, fecha = `${anio}-${semestre === 1 ? '05' : '11'}-10`) => ({ student_id: studentId, cruce: 'nombre', anio, semestre, fecha, pcpm });
+const m = (studentId, anio, semestre, pcpm, fecha = `${anio}-${semestre === 1 ? '05' : '11'}-10`) => ({ student_id: studentId, anio, semestre, fecha, pcpm });
 
 // Logs a UTP in through Anahuac so AcademIA keeps its Anahuac session; the automatic pass at
 // login finds no permission (403) and does nothing.
@@ -29,13 +29,13 @@ async function loginUtp() {
 }
 
 describe('velocidad lectora → copihues', () => {
-  it('cuenta solo las mejoras respecto de la medición anterior, medidas este año', () => {
+  it('cuenta solo las mejoras respecto de la medición anterior del mismo alumno', () => {
     const found = improvements([
-      m(1, YEAR - 1, 2, 80), m(1, YEAR, 1, 95),
-      m(2, YEAR - 1, 2, 90), m(2, YEAR, 1, 85),
-      m(3, YEAR - 2, 2, 50), m(3, YEAR - 1, 2, 70),
-      m(4, YEAR, 1, 60), m(4, YEAR, 2, 61),
-    ], YEAR);
+      m(1, YEAR, 2, 80), m(1, YEAR, 2, 95, `${YEAR}-12-01`),
+      m(2, YEAR, 1, 90), m(2, YEAR, 2, 85),
+      m(3, YEAR, 2, 70),
+      m(4, YEAR - 1, 2, 60), m(4, YEAR, 1, 61), m(4, YEAR, 2, 59),
+    ]);
     expect(found.map(f => [f.anahuacId, f.before.pcpm, f.now.pcpm])).toEqual([[1, 80, 95], [4, 60, 61]]);
   });
 

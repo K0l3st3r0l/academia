@@ -6,8 +6,9 @@ const { getReadingSpeedByStudent } = require('./anahuacService');
 const { giveCopihues } = require('./copihues');
 
 // A student who reads faster than in their previous measurement gets copihues: the improvement
-// counts, not the level, so a slow reader who advances is recognized too. Measurements come
-// twice a year (LeoMejor) or from ProsodIA, so this is rare and worth more than a perfect level.
+// counts, not the level, so a slow reader who advances is recognized too. Only ProsodIA
+// measurements count (Anahuac sends no others): LeoMejor's were taken in other conditions, so
+// each student's first ProsodIA reading is the starting point. Rare, so worth more than a level.
 const READING_COPIHUES = 3;
 // After a successful pass, automatic ones (at staff login) wait this long.
 const AUTO_EVERY_MS = 6 * 60 * 60 * 1000;
@@ -19,9 +20,8 @@ function periodKey(m) {
   return `reading:${m.anio}-${m.semestre ?? 0}-${m.fecha ?? ''}`;
 }
 
-// Compares each measurement with the student's previous one. Only improvements measured this
-// year or later pay, so the launch does not reach back to old school years.
-function improvements(measurements, currentYear) {
+// Compares each measurement with the student's previous one.
+function improvements(measurements) {
   const byStudent = new Map();
   for (const m of measurements) {
     if (!byStudent.has(m.student_id)) byStudent.set(m.student_id, []);
@@ -32,15 +32,16 @@ function improvements(measurements, currentYear) {
     list.sort((a, b) => a.anio - b.anio || (a.semestre ?? 0) - (b.semestre ?? 0) || (a.fecha ?? '').localeCompare(b.fecha ?? ''));
     for (let i = 1; i < list.length; i += 1) {
       const [before, now] = [list[i - 1], list[i]];
-      if (now.anio >= currentYear && now.pcpm > before.pcpm) found.push({ anahuacId, before, now });
+      if (now.pcpm > before.pcpm) found.push({ anahuacId, before, now });
     }
   }
   return found;
 }
 
-async function syncReadingSpeed(anahuacToken, { currentYear = new Date().getFullYear() } = {}) {
-  const measurements = await getReadingSpeedByStudent(anahuacToken, currentYear - 1);
-  const found = improvements(measurements, currentYear);
+// From last year on, so a December reading is the baseline for March's.
+async function syncReadingSpeed(anahuacToken) {
+  const measurements = await getReadingSpeedByStudent(anahuacToken, new Date().getFullYear() - 1);
+  const found = improvements(measurements);
   const ids = [...new Set(found.map(f => f.anahuacId))];
   const { rows: students } = await pool.query(
     'SELECT id, anahuac_id FROM local_students WHERE anahuac_id = ANY($1::int[])', [ids]

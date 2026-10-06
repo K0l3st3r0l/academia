@@ -20,7 +20,7 @@ function formatDate(iso) {
   return new Date(iso).toLocaleString('es-CL', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
 }
 
-// Reading speed lives in Anahuac (LeoMejor and ProsodIA). It is checked by itself whenever
+// Reading speed lives in Anahuac (ProsodIA evaluations). It is checked by itself whenever
 // someone with UTP access to it logs in; the button checks now.
 function ReadingSpeed() {
   const [last, setLast] = useState(null);
@@ -50,8 +50,9 @@ function ReadingSpeed() {
     <section className="bg-card rounded-2xl p-6 shadow-xl mt-6">
       <h2 className="text-xl font-bold mb-1 flex items-center gap-2"><CopihueIcon size={24} /> Velocidad lectora</h2>
       <p className="text-sm text-gray-300">
-        Cuando un alumno lee más palabras por minuto que en su medición anterior (LeoMejor o ProsodIA), recibe
-        3 copihues. Cuenta la mejora, no el nivel: también gana quien lee lento pero avanza.
+        Cuando un alumno lee más palabras por minuto que en su evaluación anterior con ProsodIA, recibe
+        3 copihues. Cuenta la mejora, no el nivel: también gana quien lee lento pero avanza. Su primera
+        evaluación con ProsodIA es el punto de partida.
       </p>
       <p className="text-xs text-gray-500 mt-2">
         Se revisa solo cuando entra alguien con acceso a velocidad lectora en Anahuac (UTP).

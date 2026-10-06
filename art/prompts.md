@@ -141,3 +141,22 @@ sus posiciones en `shared/world/<curso>.json`. Por eso las reglas de composició
 | `matematica-5b-u1.png` | Matemática 5° · Unidad 1 · Isla del Observatorio (Atacama: salar con flamencos, vicuñas, cardones, observatorio) | `art/mapa/matematica-5b-u1.txt` |
 
 `art/mapa/concepto-a-saga.txt` es el boceto descartado de mapa continuo estilo saga.
+
+---
+
+## 3. Portada: pantalla de título (2026-10-06)
+
+Fondo de `games.laravas.com`: la Isla 1 **de noche**, con la Vía Láctea sobre el observatorio.
+Noche y no día como el mapa porque la portada es oscura y el texto blanco tiene que leerse.
+Dos encuadres de la misma escena, generados con la Isla 1 adjunta como referencia:
+
+| Archivo | Uso | Regla de composición |
+|---|---|---|
+| `art/incoming/portada/fondo-ancho.png` (1536×1024) | Pantallas horizontales | Islas a los lados; el tercio central libre para el menú |
+| `art/incoming/portada/fondo-alto.png` (1024×1536) | Celulares y tablets verticales | Mitad de arriba libre para el logo; isla abajo |
+
+Prompts en `art/portada/`. `art/pipeline/build_portada.py` las pasa a WebP en
+`frontend/public/portada/`. Lo que se anima (estrellas, cristales, ventanas del observatorio,
+destellos de la laguna, estrellas fugaces) se dibuja encima en `TitleBackdrop.jsx`, en puntos
+**elegidos a mano sobre los píxeles de estas imágenes**: si se regenera una, hay que volver a
+ubicarlos.
