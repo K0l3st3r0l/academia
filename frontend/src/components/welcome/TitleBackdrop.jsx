@@ -58,11 +58,16 @@ function useMatch(query) {
 // Deterministic spread of delays and durations, so every visit looks the same and nothing syncs up.
 const delay = (i, span) => `${-((i * 1.618) % span).toFixed(2)}s`;
 
-function At({ art, x, y, children }) {
+// size, in picture pixels, makes the spot scale with the picture.
+function At({ art, x, y, size, children }) {
   return (
     <span
       className="absolute -translate-x-1/2 -translate-y-1/2"
-      style={{ left: `${(x / art.w) * 100}%`, top: `${(y / art.h) * 100}%` }}
+      style={{
+        left: `${(x / art.w) * 100}%`,
+        top: `${(y / art.h) * 100}%`,
+        ...(size && { width: `${(size / art.w) * 100}%`, aspectRatio: '1' }),
+      }}
     >
       {children}
     </span>
@@ -88,15 +93,11 @@ function Twinkle({ size, i, span = 4.5, color = '#FFF6D8' }) {
   );
 }
 
-function Glow({ art, size, i, color, className, span }) {
+function Glow({ i, color, className, span }) {
   return (
     <span
-      className={`${className} block rounded-full`}
+      className={`${className} block w-full h-full rounded-full`}
       style={{
-        width: `${(size / art.w) * 100}vw`,
-        maxWidth: size * 1.4,
-        minWidth: size * 0.6,
-        aspectRatio: '1',
         animationDuration: `${span + (i % 4) * 0.7}s`,
         animationDelay: delay(i, span),
         background: color,
@@ -113,8 +114,15 @@ export default function TitleBackdrop() {
   const reduced = useMatch('(prefers-reduced-motion: reduce)');
   const finePointer = useMatch('(pointer: fine)');
   const art = wide ? ART.wide : ART.tall;
-  const [loaded, setLoaded] = useState(false);
+  const [loadedName, setLoadedName] = useState(null);
+  const loaded = loadedName === art.name;
   const rootRef = useRef(null);
+  const imgRef = useRef(null);
+
+  // A cached picture can finish before React listens for its load event.
+  useEffect(() => {
+    if (imgRef.current?.complete && imgRef.current.naturalWidth) setLoadedName(art.name);
+  }, [art.name]);
 
   // The scene leans a little away from the mouse: the far art less, the near clouds more.
   useEffect(() => {
@@ -152,24 +160,25 @@ export default function TitleBackdrop() {
           <div className={`title-pan absolute inset-0 transition-opacity duration-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
             <img
               key={art.name}
+              ref={imgRef}
               src={`${base}-${art.widths[1]}.webp`}
               srcSet={art.widths.map(width => `${base}-${width}.webp ${width}w`).join(', ')}
               sizes="100vw"
               alt=""
               fetchpriority="high"
               decoding="async"
-              onLoad={() => setLoaded(true)}
+              onLoad={() => setLoadedName(art.name)}
               className="absolute inset-0 w-full h-full"
               draggable="false"
             />
             {art.crystals.map(([x, y], i) => (
-              <At key={`c${i}`} art={art} x={x} y={y}>
-                <Glow art={art} size={70} i={i} color={CRYSTAL_GLOW} className="title-glow" span={3.2} />
+              <At key={`c${i}`} art={art} x={x} y={y} size={70}>
+                <Glow i={i} color={CRYSTAL_GLOW} className="title-glow" span={3.2} />
               </At>
             ))}
             {art.glows.map(([x, y, r], i) => (
-              <At key={`g${i}`} art={art} x={x} y={y}>
-                <Glow art={art} size={r * 2.6} i={i} color={WARM_GLOW} className="title-flicker" span={2.8} />
+              <At key={`g${i}`} art={art} x={x} y={y} size={r * 2.6}>
+                <Glow i={i} color={WARM_GLOW} className="title-flicker" span={2.8} />
               </At>
             ))}
             {art.stars.map(([x, y], i) => (

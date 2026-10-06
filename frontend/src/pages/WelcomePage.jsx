@@ -8,6 +8,8 @@ import StudentLoginForm from '../components/StudentLoginForm';
 import StudentAccess from '../components/StudentAccess';
 import { getAuthConfig } from '../api/client';
 import TeacherLoginForm from '../components/TeacherLoginForm';
+import TitleBackdrop from '../components/welcome/TitleBackdrop';
+import { INK } from '../components/world/WorldParts';
 import { shortName } from '../utils/displayName';
 
 const MODES = [
@@ -32,6 +34,12 @@ const MODES = [
 ];
 
 const MODE_IDS = MODES.map(m => m.id);
+const PANEL = 'bg-card/95 ring-1 ring-white/10 shadow-2xl shadow-black/50';
+const outline = (px, glow) => ({
+  textShadow: `-${px}px -${px}px 0 ${INK}, ${px}px -${px}px 0 ${INK}, -${px}px ${px}px 0 ${INK}, ${px}px ${px}px 0 ${INK}, 0 ${px * 2}px 0 ${INK}${glow ? `, ${glow}` : ''}`,
+});
+const TITLE_STYLE = outline(3, '0 0 32px rgba(155, 111, 240, 0.85)');
+const HEADING_STYLE = outline(2);
 const LAST_MODE_KEY = 'academia_welcome_mode';
 
 // A shared classroom tablet reopens on "Clase"; a teacher's laptop, on "Profesor".
@@ -59,7 +67,7 @@ function initialMode(param) {
 
 function OpenSession({ name, role, homePath, homeLabel, onLogout }) {
   return (
-    <div className="bg-card rounded-2xl px-4 py-3 shadow-xl flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+    <div className={`${PANEL} rounded-2xl px-4 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2`}>
       <p className="text-sm text-gray-300">
         Sesión abierta: <span className="font-bold text-white">{name}</span>{' '}
         <span className="text-gray-500">({role})</span>
@@ -125,13 +133,16 @@ export default function WelcomePage() {
   const hasSession = (user && isTeacher) || student;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
+    <div className="relative isolate min-h-screen flex flex-col items-center justify-center px-4 py-8">
+      <TitleBackdrop />
       <div className="w-full max-w-sm">
         <header className="text-center mb-8">
-          <h1 className="text-5xl font-black tracking-tight text-brand-light mb-1">
+          <h1 className="title-float text-6xl font-black tracking-tight text-white mb-3" style={TITLE_STYLE}>
             Academ<span className="text-gold">IA</span>
           </h1>
-          <p className="text-gray-400 text-sm">Plataforma educativa gamificada</p>
+          <p className="inline-block px-3 py-1 rounded-full text-sm font-bold text-gray-200" style={{ background: `${INK}B3` }}>
+            Plataforma educativa gamificada
+          </p>
         </header>
 
         {hasSession && (
@@ -157,14 +168,14 @@ export default function WelcomePage() {
           </div>
         )}
 
-        <h2 id="welcome-modes-label" className="text-center text-gray-300 font-bold mb-3">
+        <h2 id="welcome-modes-label" className="text-center text-white font-black text-lg mb-3" style={HEADING_STYLE}>
           ¿Cómo quieres entrar?
         </h2>
 
         <div
           role="tablist"
           aria-labelledby="welcome-modes-label"
-          className="grid grid-cols-3 gap-1.5 bg-card p-1.5 rounded-2xl shadow-xl"
+          className={`grid grid-cols-3 gap-1.5 p-1.5 rounded-2xl ${PANEL}`}
         >
           {MODES.map(m => {
             const selected = m.id === mode;
@@ -197,7 +208,7 @@ export default function WelcomePage() {
           role="tabpanel"
           id="welcome-panel"
           aria-labelledby={`welcome-tab-${mode}`}
-          className="bg-card rounded-2xl p-6 shadow-xl mt-3"
+          className={`rounded-2xl p-6 mt-3 ${PANEL}`}
         >
           <p className="text-gray-400 text-sm text-center mb-5">{current.description}</p>
           {mode === 'clase' && (

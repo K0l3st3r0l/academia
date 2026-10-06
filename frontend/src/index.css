@@ -150,9 +150,81 @@
     20% { transform: translateY(-6px) scale(1.15); opacity: 1; }
     100% { transform: translateY(-34px) scale(1); opacity: 0; }
   }
+  /* Welcome page title screen (TitleBackdrop): the night scene breathes, leans with the mouse,
+     and its stars, crystals and lights come alive. */
+  .title-pan {
+    animation: title-pan 38s ease-in-out infinite alternate;
+  }
+  @keyframes title-pan {
+    from { transform: scale(1.05) translate(0, 0); }
+    to { transform: scale(1.1) translate(-1%, -1.2%); }
+  }
+  .title-parallax {
+    transform: translate3d(calc(var(--px, 0) * var(--depth) * -1), calc(var(--py, 0) * var(--depth) * -0.6), 0);
+    transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+  .title-twinkle {
+    animation: title-twinkle 4.5s ease-in-out infinite;
+  }
+  @keyframes title-twinkle {
+    0%, 100% { transform: scale(0.25) rotate(0deg); opacity: 0; }
+    50% { transform: scale(1) rotate(45deg); opacity: 1; }
+  }
+  .title-glow {
+    animation: title-glow 3.2s ease-in-out infinite;
+  }
+  @keyframes title-glow {
+    0%, 100% { transform: scale(0.8); opacity: 0.25; }
+    50% { transform: scale(1.15); opacity: 0.95; }
+  }
+  .title-flicker {
+    animation: title-flicker 2.8s linear infinite;
+  }
+  @keyframes title-flicker {
+    0%, 100% { opacity: 0.7; }
+    18% { opacity: 0.95; }
+    32% { opacity: 0.6; }
+    47% { opacity: 1; }
+    66% { opacity: 0.75; }
+    82% { opacity: 0.9; }
+  }
+  /* Most of the cycle is waiting: a streak crosses the sky every few seconds. */
+  .title-meteor {
+    opacity: 0;
+    transform-origin: 0 50%;
+    animation: title-meteor 9s ease-in infinite;
+  }
+  @keyframes title-meteor {
+    0% { transform: rotate(26deg) translateX(0) scaleX(0.3); opacity: 0; }
+    2% { opacity: 1; }
+    10% { transform: rotate(26deg) translateX(min(42vw, 420px)) scaleX(1); opacity: 0; }
+    100% { transform: rotate(26deg) translateX(min(42vw, 420px)) scaleX(1); opacity: 0; }
+  }
+  .title-rise {
+    opacity: 0;
+    animation: title-rise 20s linear infinite;
+  }
+  @keyframes title-rise {
+    0% { transform: translate(0, 0); opacity: 0; }
+    10% { opacity: 0.9; }
+    35% { transform: translate(14px, -38vh); }
+    65% { transform: translate(-12px, -72vh); }
+    85% { opacity: 0.8; }
+    100% { transform: translate(6px, -105vh); opacity: 0; }
+  }
+  .title-float {
+    animation: title-float 6s ease-in-out infinite;
+  }
+  @keyframes title-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
   @media (prefers-reduced-motion: reduce) {
     .animate-breathe, .animate-hop, .world-float, .world-drift, .world-twinkle, .world-pulse,
-    .world-bob, .world-walk, .world-glide, .world-rise { animation: none; }
+    .world-bob, .world-walk, .world-glide, .world-rise, .title-pan, .title-glow, .title-flicker,
+    .title-meteor, .title-rise, .title-float { animation: none; }
+    .title-twinkle { animation: none; opacity: 0.8; transform: scale(0.8); }
+    .title-parallax { transform: none; }
     .world-star-pop, .world-sheet { animation-duration: 1ms; }
   }
 }
