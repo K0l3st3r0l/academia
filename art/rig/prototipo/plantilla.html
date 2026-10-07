@@ -1,0 +1,1428 @@
+<title>Rig de perfil AcademIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
+<style>
+  /* Layout: the stage first (the thing being tested), controls in one compact row under it,
+     then a short note on what is real and what is still to come. AcademIA's own dark look. */
+  :root {
+    --night: #1A1A2E;     /* page ground, the game's surface */
+    --panel: #16213E;     /* controls */
+    --line: #2B3560;      /* panel edges, inactive chips */
+    --text: #EDEBFA;
+    --muted: #A9A6C6;
+    --brand: #6C3CE1;
+    --brand-light: #9B6FF0;
+    --gold: #F5C842;
+    --ink: #1A1A2E;
+    --font-display: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+    --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--night); color: var(--text); }
+  body { font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 40px; display: grid; gap: 16px; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+  h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 3.4vw, 2.1rem); margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+  h1 span { color: var(--gold); }
+  header p { margin: 0; color: var(--muted); font-weight: 700; }
+  .stage { position: relative; border-radius: 18px; overflow: hidden; border: 3px solid var(--ink); box-shadow: 0 6px 0 #0d0d1a; background: #7FB0FB; }
+  canvas { display: block; width: 100%; height: clamp(300px, 52vw, 470px); touch-action: none; }
+  .stage:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .hud { position: absolute; left: 12px; top: 10px; display: flex; gap: 6px; flex-wrap: wrap; pointer-events: none; }
+  .hud span { background: rgba(26, 26, 46, 0.82); color: var(--text); font-weight: 800; font-size: 12px; padding: 3px 10px; border-radius: 999px; font-variant-numeric: tabular-nums; }
+  .hud .energy { width: 92px; padding: 4px; display: flex; align-items: center; }
+  .hud .energy i { display: block; height: 10px; width: 0; border-radius: 999px; background: var(--gold); transition: width 0.1s linear; }
+  .hud .energy.full i { box-shadow: 0 0 10px var(--gold); }
+  .pad { position: absolute; inset: auto 10px 10px 10px; display: flex; justify-content: space-between; gap: 10px; pointer-events: none; }
+  .pad .group { display: flex; gap: 8px; pointer-events: auto; }
+  .pad button { width: 58px; height: 58px; border-radius: 50%; border: 3px solid var(--ink); background: rgba(255, 255, 255, 0.86); color: var(--ink); font: 900 20px var(--font-display); box-shadow: 0 4px 0 var(--ink); touch-action: none; user-select: none; -webkit-user-select: none; }
+  .pad button[aria-pressed="true"], .pad button.down { background: var(--gold); transform: translateY(2px); box-shadow: 0 2px 0 var(--ink); }
+  .pad .jump { width: 70px; height: 70px; background: var(--brand); color: #fff; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px 20px; background: var(--panel); border: 2px solid var(--line); border-radius: 16px; padding: 14px 16px; }
+  .field { display: grid; gap: 6px; min-width: 0; }
+  .field > span { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { border: 2px solid var(--line); background: transparent; color: var(--text); font: 800 13px var(--font-body); padding: 6px 12px; border-radius: 999px; cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--brand); border-color: var(--brand-light); }
+  .swatch { width: 30px; height: 30px; border-radius: 50%; border: 3px solid var(--line); cursor: pointer; padding: 0; }
+  .swatch[aria-pressed="true"] { border-color: var(--gold); box-shadow: 0 0 0 2px var(--ink) inset; }
+  .chip:focus-visible, .swatch:focus-visible, .pad button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .keys { color: var(--muted); font-weight: 700; margin: 0; }
+  kbd { font: 800 12px var(--font-body); background: var(--panel); border: 2px solid var(--line); border-bottom-width: 3px; border-radius: 6px; padding: 0 6px; color: var(--text); }
+  .notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; }
+  .notes section { min-width: 0; }
+  .notes h2 { font-family: var(--font-display); font-weight: 900; font-size: 1.05rem; margin: 0 0 4px; }
+  .notes p, .notes li { color: var(--muted); margin: 0; max-width: 62ch; }
+  .notes ul { margin: 0; padding-left: 18px; display: grid; gap: 2px; }
+  @media (hover: none) { .keys { display: none; } }
+  @media (hover: hover) and (pointer: fine) { .pad { display: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Rig de perfil <span>AcademIA</span></h1>
+    <p>Prototipo · personaje y mascota cuadro a cuadro desde video</p>
+  </header>
+
+  <div class="stage" id="stage" tabindex="0" aria-label="Escenario de prueba. Muévete con las flechas, corre con Shift y salta con espacio.">
+    <canvas id="view"></canvas>
+    <div class="hud">
+      <span id="hud-state">Quieto</span><span id="hud-speed">0,0 km/h</span>
+      <span class="energy" title="Energía: corre a toda velocidad para cargarla"><i id="hud-energy"></i></span>
+    </div>
+    <div class="pad">
+      <div class="group">
+        <button type="button" id="pad-left" aria-label="Izquierda">◀</button>
+        <button type="button" id="pad-right" aria-label="Derecha">▶</button>
+      </div>
+      <div class="group">
+        <button type="button" id="pad-run" aria-pressed="false" aria-label="Correr">⚡</button>
+        <button type="button" id="pad-jump" class="jump" aria-label="Saltar">▲</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="field">
+      <span>Animación</span>
+      <div class="chips" id="modes">
+        <button type="button" class="chip" data-mode="play" aria-pressed="true">Jugar libre</button>
+        <button type="button" class="chip" data-mode="idle" aria-pressed="false">Quieto</button>
+        <button type="button" class="chip" data-mode="walk" aria-pressed="false">Caminar</button>
+        <button type="button" class="chip" data-mode="run" aria-pressed="false">Correr</button>
+        <button type="button" class="chip" data-mode="jump" aria-pressed="false">Saltar</button>
+        <button type="button" class="chip" data-mode="super" aria-pressed="false">Súper salto</button>
+      </div>
+    </div>
+    <div class="field">
+      <span>Ropa</span>
+      <div class="chips" id="clothes"></div>
+    </div>
+    <div class="field">
+      <span>Piel</span>
+      <div class="chips" id="skins"></div>
+    </div>
+    <div class="field">
+      <span>Peinado</span>
+      <div class="chips" id="styles"></div>
+    </div>
+    <div class="field">
+      <span>Ver</span>
+      <div class="chips">
+        <button type="button" class="chip" id="fx" aria-pressed="true">Efectos</button>
+        <button type="button" class="chip" id="pet" aria-pressed="true">Mascota</button>
+        <button type="button" class="chip" id="bones" aria-pressed="false">Huesos</button>
+        <button type="button" class="chip" id="rig" aria-pressed="false">Rig</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="keys"><kbd>←</kbd> <kbd>→</kbd> o <kbd>A</kbd> <kbd>D</kbd> caminar · <kbd>Shift</kbd> o doble toque correr · <kbd>Espacio</kbd> o <kbd>↑</kbd> saltar (mantén la tecla para saltar más alto). Corre a fondo hasta llenar la barra dorada y salta: súper salto. Quédate quieto: el niño se gira hacia ti, silba, luego lee, explora con lupa o pinta, se aburre y se duerme (en «Quieto» el tiempo corre 3× más rápido). Haz clic en el escenario si las teclas no responden.</p>
+
+  <div class="notes">
+    <section>
+      <h2>Qué es real</h2>
+      <ul>
+        <li>Niño cuadro a cuadro desde videos de Grok: caminar (25 cuadros), correr (16), girarse hacia ti (12) y reposo de frente (9). La cabeza es una capa aparte: el chip «Peinado» la cambia en todos los cuadros. El chip «Rig» muestra el esqueleto anterior para comparar.</li>
+        <li>Zorro cuadro a cuadro desde videos de Grok: ciclo de caminar (15 cuadros) y galope (12, con la fase recogida y el impulso de las patas traseras), más sentado y rascarse.</li>
+                <li>Ropa y piel se repintan como en el editor actual.</li>
+        <li>Los cuadros avanzan con la distancia recorrida, para que pies y patas no patinen.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Movimiento y efectos</h2>
+      <ul>
+        <li>Polvo en cada pisada y líneas de viento al correr a fondo.</li>
+        <li>Estirar al despegar, aplastar al caer, onda y polvo al aterrizar.</li>
+        <li>Energía: corre a fondo para cargarla; el súper salto despega como cohete con el puño arriba, se encoge en bolita, cae con los brazos arriba y aterriza como superhéroe.</li>
+        <li>Plataformas que rebotan, cactus que se mecen, polvo en el aire.</li>
+        <li>Quieto, el niño se gira hacia ti y pasa por etapas: silba, lee, explora con lupa o pinta (al azar), se aburre y se duerme; al moverse se levanta y vuelve de perfil.</li>
+        <li>La cara cambia con la etapa: silbando, mirando hacia abajo, aburrida o dormida, con cualquier peinado.</li>
+        <li>Controles: salto inmediato, salto más alto si mantienes la tecla, margen para saltar justo antes de caer o al salir del borde.</li>
+        <li>El zorro camina, galopa, salta detrás del niño, se sienta, se rasca y se echa panza arriba; si el niño se duerme, se duerme a su lado.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Qué falta</h2>
+      <ul>
+        <li>Cabezas de perfil para todo el catálogo (peinados y rasgos), hechas con Grok sobre la cabeza de referencia como «Cola» y «Afro».</li>
+        <li>Prendas con otra forma (falda, jeans, buzo, calzado): por ahora solo cambia el color.</li>
+        <li>Unos 4 videos por mascota y etapa (caminar, correr, sentado y rascarse) para 6 especies × 3 etapas.</li>
+        <li>Accesorios de mascota: un punto de anclaje por cuadro (cabeza, cuello, lomo).</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script>
+const RIG = __RIG_JSON__;
+const SRC = __SRC_JSON__;
+const PET_SPRITES = __PET_JSON__;
+const KID_SPRITES = __KID_JSON__;
+const CLOTHES = [['#6C3CE1', 'Morado'], ['#14B8A6', 'Turquesa'], ['#F87171', 'Coral'], ['#3B82F6', 'Azul'], ['#F5C842', 'Dorado'], ['#334155', 'Grafito']];
+const SKINS = [['#F3C9A5', 'Clara'], ['#E9A86E', 'Media'], ['#B9783F', 'Morena'], ['#7A4A2A', 'Oscura']];
+const INK = '#1A1A2E';
+const DEG = Math.PI / 180;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const canvas = document.getElementById('view');
+const ctx = canvas.getContext('2d');
+const stage = document.getElementById('stage');
+
+// ---------- textures: recolour clothes (magenta) and skin, and darken the far limbs ----------
+const images = {};
+const masks = {};
+const kidTex = new Map();
+let tex = { near: {}, far: {} };
+
+function loadImages() {
+  return Promise.all(Object.entries(SRC).map(([name, src]) => new Promise(done => {
+    const img = new Image();
+    img.onload = () => { images[name] = img; done(); };
+    img.src = src;
+  })));
+}
+
+function hsv(r, g, b) {
+  const max = Math.max(r, g, b), min = Math.min(r, g, b), d = max - min;
+  let h = 0;
+  if (d) h = max === r ? ((g - b) / d) % 6 : max === g ? (b - r) / d + 2 : (r - g) / d + 4;
+  return [(h * 60 + 360) % 360, max ? d / max : 0, max / 255];
+}
+
+// Per pixel: 1 = clothes, 2 = skin, plus its brightness relative to the family's main fill.
+function classify(name) {
+  const img = images[name];
+  const c = document.createElement('canvas');
+  c.width = img.width; c.height = img.height;
+  const g = c.getContext('2d');
+  g.drawImage(img, 0, 0);
+  const data = g.getImageData(0, 0, c.width, c.height);
+  const kind = new Uint8Array(c.width * c.height);
+  const value = new Float32Array(c.width * c.height);
+  const p = data.data;
+  const video = name.startsWith('kid_');
+  for (let i = 0; i < kind.length; i++) {
+    if (p[i * 4 + 3] < 10) continue;
+    const [h, s, v] = hsv(p[i * 4], p[i * 4 + 1], p[i * 4 + 2]);
+    value[i] = v;
+    if (h > 280 && h < 335 && s > 0.45 && v > 0.35) kind[i] = 1;
+    else if (video ? h > 8 && h < 40 && s > 0.2 && s < 0.86 && v > 0.55 : h > 12 && h < 42 && s > 0.25 && s < 0.62 && v > 0.66) kind[i] = 2;
+  }
+  // Video frames are shaded and noisy, not flat fills: their skin runs more saturated than the
+  // pieces' (hair is told apart by being darker, under 0.5), and stray pixels inside a patch of
+  // clothes or skin would stay in the old colour as specks. Those join the patch around them.
+  if (video) {
+    const w = c.width;
+    for (let pass = 0; pass < 2; pass++) {
+      const next = kind.slice();
+      for (let y = 1; y < c.height - 1; y++) for (let x = 1; x < w - 1; x++) {
+        const i = y * w + x;
+        if (kind[i] || p[i * 4 + 3] < 10 || value[i] < 0.3) continue;
+        const votes = [0, 0, 0];
+        for (const o of [-w - 1, -w, -w + 1, -1, 1, w - 1, w, w + 1]) votes[kind[i + o]]++;
+        if (votes[1] >= 5) next[i] = 1;
+        else if (votes[2] >= 5) next[i] = 2;
+      }
+      kind.set(next);
+    }
+  }
+  // Main fill of each family: the brightness most pixels share.
+  const ref = [0, 0, 0];
+  for (const k of [1, 2]) {
+    const vals = [];
+    for (let i = 0; i < kind.length; i++) if (kind[i] === k) vals.push(value[i]);
+    vals.sort((a, b) => a - b);
+    ref[k] = vals.length ? vals[Math.floor(vals.length * 0.7)] : 1;
+  }
+  masks[name] = { data, kind, value, ref, w: c.width, h: c.height };
+}
+
+function hex(c) { return [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16)); }
+
+function paint(name, clothes, skin, shade) {
+  const m = masks[name];
+  const out = new ImageData(new Uint8ClampedArray(m.data.data), m.w, m.h);
+  const p = out.data;
+  const colours = [null, hex(clothes), hex(skin)];
+  for (let i = 0; i < m.kind.length; i++) {
+    const k = m.kind[i];
+    if (k) {
+      const f = m.value[i] / m.ref[k];
+      const base = colours[k];
+      for (let ch = 0; ch < 3; ch++) {
+        const v = f <= 1 ? base[ch] * f : base[ch] + (255 - base[ch]) * Math.min(1, (f - 1) * 1.5);
+        p[i * 4 + ch] = v;
+      }
+    }
+    if (shade !== 1 && p[i * 4 + 3]) for (let ch = 0; ch < 3; ch++) p[i * 4 + ch] *= shade;
+  }
+  const c = document.createElement('canvas');
+  c.width = m.w; c.height = m.h;
+  c.getContext('2d').putImageData(out, 0, 0);
+  return c;
+}
+
+const look = { clothes: CLOTHES[0][0], skin: SKINS[1][0], style: 'desordenado' };
+function repaint() {
+  kidTex.clear();
+  for (const name of Object.keys(SRC)) {
+    if (name.startsWith('pet_') || name.startsWith('kid_') || name.startsWith('kidocc_')) continue;
+    tex.near[name] = paint(name, look.clothes, look.skin, 1);
+    if (!['head', 'head_front', 'torso'].includes(name)) tex.far[name] = paint(name, look.clothes, look.skin, 0.72);
+  }
+}
+
+// ---------- the world: Atacama, side view ----------
+const WORLD_W = 2600;
+let W = 0, H = 0, CH = 100, GROUND = 0, SCALE = 0.3, WALK = 120, RUN = 330, GRAVITY = 2000;
+const platforms = [];
+const cacti = [];
+const motes = [];
+function layout() {
+  const rect = canvas.getBoundingClientRect();
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  canvas.width = Math.round(rect.width * dpr);
+  canvas.height = Math.round(rect.height * dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  W = rect.width; H = rect.height;
+  GROUND = H - Math.max(54, H * 0.15);
+  CH = H * 0.24; // the child's height on screen
+  SCALE = CH / 700; // the assembled child is ~700 piece pixels tall
+  // Speeds follow the child's size, so strides match the legs.
+  WALK = CH * 0.72;
+  RUN = CH * 2.0;
+  GRAVITY = H * 4.4;
+  const unit = H / 470;
+  platforms.length = 0;
+  for (const [x, up, w] of [[520, 120, 230], [880, 215, 210], [1280, 140, 280], [1660, 240, 200], [2050, 150, 260]]) {
+    platforms.push({ x, y: GROUND - up * unit, w, dip: 0, dipV: 0 });
+  }
+  cacti.length = 0;
+  for (let x = 140; x < WORLD_W; x += 430) cacti.push({ x, a: 0, v: 0 });
+  motes.length = 0;
+  for (let i = 0; i < 26; i++) motes.push({ x: Math.random() * WORLD_W, y: Math.random() * GROUND, r: 1 + Math.random() * 2.2, s: 0.3 + Math.random() * 0.7 });
+}
+
+function strataBlock(x, y, w, h, top = true) {
+  ctx.fillStyle = '#E2733F';
+  ctx.fillRect(x, y, w, h);
+  ctx.fillStyle = '#C85B33';
+  for (let i = 1; i < 4; i++) ctx.fillRect(x, y + (h * i) / 4 + 6, w, Math.max(4, h * 0.06));
+  if (top) {
+    ctx.fillStyle = '#F7D49A';
+    ctx.fillRect(x, y, w, Math.min(16, h * 0.3));
+  }
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = INK;
+  ctx.beginPath();
+  ctx.roundRect(x, y, w, h, 8);
+  ctx.stroke();
+}
+
+function cactus(c, base, h) {
+  ctx.save();
+  ctx.translate(c.x, base);
+  ctx.rotate(c.a);
+  ctx.fillStyle = '#3E8E5A';
+  ctx.strokeStyle = INK;
+  ctx.lineWidth = 3;
+  const w = h * 0.22;
+  for (const [cx, cy, cw, ch] of [[-w / 2, -h, w, h], [-w * 1.6, -h * 0.7, w * 0.8, h * 0.35], [w * 0.8, -h * 0.82, w * 0.8, h * 0.4]]) {
+    ctx.beginPath();
+    ctx.roundRect(cx, cy, cw, ch, cw / 2);
+    ctx.fill();
+    ctx.stroke();
+  }
+  ctx.beginPath();
+  ctx.moveTo(-w * 1.2, -h * 0.42); ctx.lineTo(-w / 2, -h * 0.42);
+  ctx.moveTo(w / 2, -h * 0.5); ctx.lineTo(w * 1.2, -h * 0.5);
+  ctx.lineWidth = w * 0.55; ctx.strokeStyle = '#3E8E5A'; ctx.stroke();
+  ctx.restore();
+}
+
+let camY = 0;
+function drawWorld(cam) {
+  ctx.fillStyle = '#5B9BFA'; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = '#8DBBFC'; ctx.fillRect(0, H * 0.32, W, H);
+  ctx.fillStyle = '#C3D3FC'; ctx.fillRect(0, H * 0.52, W, H);
+  // Far volcanoes and near hills move slower than the ground: depth.
+  const ridge = (factor, colour, peak, base, step) => {
+    ctx.fillStyle = colour;
+    ctx.beginPath();
+    ctx.moveTo(0, H);
+    const off = (cam * factor) % step;
+    for (let x = -step - off; x < W + step * 2; x += step) {
+      ctx.lineTo(x, base);
+      ctx.lineTo(x + step * 0.5, base - peak * (0.75 + 0.25 * Math.sin((x + cam * factor) * 0.003)));
+    }
+    ctx.lineTo(W + step * 2, H);
+    ctx.fill();
+  };
+  // High jumps lift the camera; far layers move less with it.
+  ridge(0.15, '#9C8AD8', H * 0.22, GROUND - H * 0.1 - camY * 0.3, 260);
+  ridge(0.35, '#C7845A', H * 0.12, GROUND - 4 - camY * 0.6, 180);
+  ctx.save();
+  ctx.translate(-cam, -camY);
+  for (const c of cacti) cactus(c, GROUND + 2, H * 0.16);
+  strataBlock(-20, GROUND, WORLD_W + 40, H - GROUND + 20);
+  for (const p of platforms) strataBlock(p.x, p.y + p.dip, p.w, Math.max(34, H * 0.08));
+  ctx.restore();
+}
+
+// ---------- the rig ----------
+const P = RIG.parts;
+const pose = { lean: 0, head: 0, thigh: [0, 0], knee: [5, 5], arm: [0, 0], elbow: [12, 12] };
+const target = JSON.parse(JSON.stringify(pose));
+
+let C = ctx; // where the child is drawn: the stage, or the blur layer of the speed trail
+const rot = ([x, y], a) => [x * Math.cos(a) - y * Math.sin(a), x * Math.sin(a) + y * Math.cos(a)];
+const add = (a, b) => [a[0] + b[0], a[1] + b[1]];
+const sub = (a, b) => [a[0] - b[0], a[1] - b[1]];
+
+// Joint positions in piece pixels, hip at the origin. Angles are degrees, forward positive.
+function solve(p) {
+  const torsoA = p.lean * DEG;
+  const hip = P.torso.hip;
+  const neck = rot(sub(P.torso.neck, hip), torsoA);
+  const shoulder = rot(sub(P.torso.shoulder, hip), torsoA);
+  const legs = [0, 1].map(i => {
+    const at = i ? [-12, -6] : [0, 0];
+    const tA = -p.thigh[i] * DEG;
+    const knee = add(at, rot(sub(P.thigh.end, P.thigh.pivot), tA));
+    const sA = tA + p.knee[i] * DEG;
+    const shinH = P.shin.size[1];
+    const heel = add(knee, rot(sub([P.shin.pivot[0] - 4, shinH - 10], P.shin.pivot), sA));
+    const toe = add(knee, rot(sub([P.shin.size[0] - 16, shinH - 12], P.shin.pivot), sA));
+    return { at, tA, knee, sA, heel, toe };
+  });
+  const arms = [0, 1].map(i => {
+    const at = add(shoulder, i ? [-16, 4] : [0, 0]);
+    const uA = -p.arm[i] * DEG;
+    const elbow = add(at, rot(sub(P.upper_arm.end, P.upper_arm.pivot), uA));
+    const fA = uA - p.elbow[i] * DEG;
+    return { at, uA, elbow, fA };
+  });
+  return { torsoA, neck, shoulder, legs, arms, head: p.head };
+}
+
+function piece(name, side, at, angle, pivot) {
+  const img = (side === 'far' ? tex.far : tex.near)[name];
+  C.save();
+  C.translate(at[0], at[1]);
+  C.rotate(angle);
+  C.drawImage(img, -pivot[0], -pivot[1]);
+  C.restore();
+}
+
+function drawRig(j, showBones) {
+  const far = 1, near = 0;
+  piece('upper_arm', 'far', j.arms[far].at, j.arms[far].uA, P.upper_arm.pivot);
+  piece('forearm', 'far', j.arms[far].elbow, j.arms[far].fA, P.forearm.pivot);
+  for (const i of [far, near]) {
+    const side = i ? 'far' : 'near';
+    piece('shin', side, j.legs[i].knee, j.legs[i].sA, P.shin.pivot);
+    piece('thigh', side, j.legs[i].at, j.legs[i].tA, P.thigh.pivot);
+  }
+  piece('torso', 'near', [0, 0], j.torsoA, P.torso.hip);
+  C.save();
+  C.translate(j.neck[0] + 4, j.neck[1] + 16);
+  C.rotate(j.torsoA * 0.4 + j.head * DEG);
+  C.scale(j.headSqueeze ?? 1, 1);
+  const front = j.headView === 'front';
+  const headPivot = front ? P.head_front.pivot : P.head.pivot;
+  C.drawImage(front ? tex.near.head_front : tex.near.head, -headPivot[0], -headPivot[1] + (front ? 6 : 0));
+  C.restore();
+  piece('upper_arm', 'near', j.arms[near].at, j.arms[near].uA, P.upper_arm.pivot);
+  piece('forearm', 'near', j.arms[near].elbow, j.arms[near].fA, P.forearm.pivot);
+  if (showBones) {
+    C.lineWidth = 6;
+    C.strokeStyle = 'rgba(245, 200, 66, 0.9)';
+    C.fillStyle = '#F5C842';
+    const bone = (a, b) => { C.beginPath(); C.moveTo(...a); C.lineTo(...b); C.stroke(); };
+    bone([0, 0], j.neck);
+    for (const l of j.legs) { bone(l.at, l.knee); bone(l.knee, l.heel); }
+    for (const a of j.arms) bone(a.at, a.elbow);
+    for (const pt of [[0, 0], j.neck, j.shoulder, ...j.legs.map(l => l.knee), ...j.arms.map(a => a.elbow)]) {
+      C.beginPath(); C.arc(pt[0], pt[1], 9, 0, Math.PI * 2); C.fill();
+    }
+  }
+}
+
+// ---------- effects: one pool of particles in world space ----------
+const fx = [];
+let effects = !reduced;
+let shake = 0;
+const rand = (a, b) => a + Math.random() * (b - a);
+function emit(kind, x, y, o = {}) {
+  if (!effects || fx.length > 260) return;
+  fx.push({ kind, x, y, vx: 0, vy: 0, life: 0, max: 0.5, size: 10, spin: 0, a: rand(0, 6.28), grow: 1, ...o });
+}
+function dust(x, y, n, power) {
+  for (let i = 0; i < n; i++) {
+    const dir = i % 2 ? 1 : -1;
+    emit('dust', x + rand(-6, 6), y - 2, {
+      vx: dir * rand(0.2, 1) * power * H * 0.35, vy: -rand(0.1, 0.5) * power * H * 0.25,
+      size: H * rand(0.014, 0.026) * (0.6 + power * 0.5), max: rand(0.35, 0.6), grow: 1.8,
+    });
+  }
+}
+function updateFx(dt) {
+  for (let i = fx.length - 1; i >= 0; i--) {
+    const p = fx[i];
+    p.life += dt;
+    if (p.life >= p.max) { fx.splice(i, 1); continue; }
+    p.x += p.vx * dt;
+    p.y += p.vy * dt;
+    p.a += p.spin * dt;
+    if (p.kind === 'dust') { p.vx *= 1 - dt * 3; p.vy *= 1 - dt * 2; }
+  }
+}
+function drawFx(layer) {
+  for (const p of fx) {
+    const t = p.life / p.max;
+    if ((p.kind === 'line' || p.kind === 'ring') !== (layer === 'back')) continue;
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.globalAlpha = (1 - t) * (p.alpha ?? 1);
+    if (p.kind === 'dust') {
+      const r = p.size * (1 + t * p.grow);
+      ctx.fillStyle = '#FBE7C3';
+      ctx.strokeStyle = 'rgba(26, 26, 46, 0.55)';
+      ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    } else if (p.kind === 'line') {
+      ctx.rotate(p.angle ?? 0);
+      ctx.strokeStyle = '#FFFFFF';
+      ctx.lineCap = 'round';
+      ctx.lineWidth = p.size;
+      ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(p.len * (1 - t * 0.5), 0); ctx.stroke();
+    } else if (p.kind === 'ring') {
+      ctx.strokeStyle = p.colour ?? '#FFFFFF';
+      ctx.lineWidth = Math.max(2, p.size * (1 - t));
+      ctx.beginPath(); ctx.ellipse(0, 0, p.r * (0.3 + t), p.r * 0.22 * (0.3 + t), 0, 0, Math.PI * 2); ctx.stroke();
+    } else if (p.kind === 'heart') {
+      ctx.translate(0, -t * H * 0.08);
+      ctx.fillStyle = '#F87171';
+      ctx.strokeStyle = INK;
+      ctx.lineWidth = 2;
+      const s = p.size;
+      ctx.beginPath();
+      ctx.moveTo(0, s * 0.35);
+      ctx.bezierCurveTo(-s, -s * 0.35, -s * 0.45, -s, 0, -s * 0.45);
+      ctx.bezierCurveTo(s * 0.45, -s, s, -s * 0.35, 0, s * 0.35);
+      ctx.fill(); ctx.stroke();
+    } else if (p.kind === 'z') {
+      ctx.fillStyle = INK;
+      ctx.font = `800 ${p.size * (1 + t * p.grow)}px Nunito, sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.fillText('z', 0, 0);
+    }
+    ctx.restore();
+  }
+}
+
+// ---------- motion ----------
+const body = { x: 260, y: 0, vx: 0, vy: 0, ground: true, face: 1, phase: 0, dist: 0, crouch: 0, land: 0, rootY: null,
+  squash: 0, energy: 0, super: false, superV0: 0, superTime: 0, superLand: 0, lastStep: 0, trail: [], fallFrom: 0,
+  still: 0, view: 'side', turnFrom: 'side', turn: 0 };
+const TURN = 0.16;
+// A figure turns by narrowing to a sliver and widening again on its other view.
+function turnTo(f, want) {
+  if (want === f.view || f.turn > 0) return;
+  f.turnFrom = f.view;
+  f.view = want;
+  f.turn = TURN;
+}
+function turnScale(f) {
+  if (f.turn <= 0) return [f.view, 1];
+  const p = 1 - f.turn / TURN;
+  return p < 0.5 ? [f.turnFrom, Math.max(0.06, 1 - 2 * p)] : [f.view, Math.max(0.06, 2 * p - 1)];
+}
+const input = { left: false, right: false, run: false, jump: false, jumpHeld: false };
+let mode = 'play';
+let bones = false;
+let rig = false;
+let auto = 0;
+let jumps = 0;
+let jumpBuffer = 0, coyote = 0, jumpCut = false;
+
+function superDrawing() {
+  const v0 = body.superV0;
+  if (body.vy < -0.35 * v0) return ['superUp', body.vy < -0.8 * v0 ? 0 : 1];
+  if (body.vy > 0.35 * v0) return ['superDown', body.vy > 0.8 * v0 ? 1 : 0];
+  return ['superTop', Math.floor(body.superTime / 0.07) % 2];
+}
+
+function setTargets(dt) {
+  const t = target;
+  const speed = Math.abs(body.vx);
+  const running = speed > (WALK + RUN) / 2;
+  if (!body.ground) {
+    const rising = body.vy < 0;
+    if (body.super) {
+      const [action] = superDrawing();
+      Object.assign(t, action === 'superUp'
+        ? { lean: 6, head: -6, thigh: [18, -12], knee: [25, 60], arm: [175, 35], elbow: [12, 70] }
+        : action === 'superTop'
+          ? { lean: 20, head: 10, thigh: [95, 85], knee: [120, 115], arm: [70, 60], elbow: [70, 70] }
+          : { lean: 2, head: -4, thigh: [20, -8], knee: [35, 20], arm: [155, 145], elbow: [15, 25] });
+    } else Object.assign(t, rising
+        ? { lean: 6, thigh: [62, 8], knee: [95, 30], arm: [150, 120], elbow: [20, 30] }
+        : { lean: 2, thigh: [28, -6], knee: [40, 15], arm: [125, 105], elbow: [15, 25] });
+  } else if (body.superLand > 0) {
+    Object.assign(t, body.superLand > 0.12
+      ? { lean: 34, head: 15, thigh: [68, 50], knee: [105, 90], arm: [-30, -40], elbow: [15, 40] }
+      : { lean: 23, head: 8, thigh: [45, 30], knee: [75, 55], arm: [-20, -30], elbow: [20, 35] });
+  } else if (body.crouch > 0 || body.land > 0) {
+    Object.assign(t, { lean: 14, thigh: [48, 40], knee: [80, 72], arm: [-35, -45], elbow: [30, 30] });
+  } else if (speed > 12) {
+    const ph = body.phase;
+    if (running) {
+      const legs = i => 12 + 46 * Math.sin(ph + i * Math.PI);
+      const knee = i => 18 + 95 * Math.pow(0.5 + 0.5 * Math.cos(ph + i * Math.PI), 2);
+      Object.assign(t, {
+        lean: 12, thigh: [legs(0), legs(1)], knee: [knee(0), knee(1)],
+        arm: [-48 * Math.sin(ph), 48 * Math.sin(ph)], elbow: [88, 88],
+      });
+    } else {
+      const legs = i => 26 * Math.sin(ph + i * Math.PI);
+      const knee = i => 6 + 42 * Math.max(0, Math.cos(ph + i * Math.PI));
+      Object.assign(t, {
+        lean: 3, thigh: [legs(0), legs(1)], knee: [knee(0), knee(1)],
+        arm: [-22 * Math.sin(ph), 22 * Math.sin(ph)], elbow: [18 + 8 * Math.max(0, -Math.sin(ph)), 18 + 8 * Math.max(0, Math.sin(ph))],
+      });
+    }
+    t.head = 2 * Math.sin(2 * ph);
+  } else {
+    const b = performance.now() / 1000;
+    const breathe = reduced ? 0 : Math.sin(b * 2.2);
+    Object.assign(t, { lean: 1 + breathe, head: breathe * 1.5, thigh: [2, -3], knee: [4, 6], arm: [2 + breathe * 3, -4 - breathe * 2], elbow: [10, 14] });
+  }
+  // Ease every joint toward its target: quick enough to read as one motion, never a snap.
+  const k = Math.min(1, dt * (body.ground ? 22 : 14));
+  for (const key of Object.keys(pose)) {
+    if (Array.isArray(pose[key])) for (const i of [0, 1]) pose[key][i] += (t[key][i] - pose[key][i]) * k;
+    else pose[key] += (t[key] - pose[key]) * k;
+  }
+  body.stateLabel = !body.ground ? (body.super ? '¡Súper salto!' : body.vy < 0 ? 'Saltando' : 'Cayendo') : running ? 'Corriendo' : speed > 12 ? 'Caminando' : 'Quieto';
+  return running;
+}
+
+function supportAt(x, footY, prevFootY) {
+  for (const p of platforms) {
+    if (x > p.x - 8 && x < p.x + p.w + 8 && prevFootY <= p.y + 2 && footY >= p.y) return p;
+  }
+  return footY >= GROUND ? { y: GROUND } : null;
+}
+function standingOn(x, y) {
+  if (Math.abs(y - GROUND) < 1) return true;
+  return platforms.some(p => Math.abs(y - p.y) < 1 && x > p.x - 8 && x < p.x + p.w + 8);
+}
+
+function jump(b, power) {
+  b.vy = -Math.sqrt(2 * GRAVITY * H * power);
+  b.ground = false;
+}
+
+function takeoff() {
+  body.super = body.energy >= 1;
+  jump(body, body.super ? 0.9 : 0.56);
+  body.superV0 = body.super ? -body.vy : 0;
+  body.superTime = body.superLand = 0;
+  jumpBuffer = coyote = 0;
+  jumpCut = false;
+  body.land = 0;
+  body.squash = -1;
+  body.fallFrom = body.y;
+  jumps++;
+  dust(body.x, body.y, body.super ? 18 : 5, body.super ? 1.8 : 0.8);
+  if (body.super) {
+    body.energy = 0;
+    shake = 0.2;
+    emit('ring', body.x, body.y, { r: CH * 0.8, size: 6, max: 0.5, colour: '#F5C842' });
+    emit('ring', body.x, body.y + 2, { r: CH * 1.25, size: 3, max: 0.4, alpha: 0.6 });
+    pet.cheer = 1.2;
+  }
+  pet.jumpAt = performance.now() + 220;
+}
+
+function step(dt) {
+  // Preview modes drive the same body with a virtual pad, on a treadmill.
+  let left = input.left, right = input.right, run = input.run, wantJump = input.jump;
+  if (mode !== 'play') {
+    left = false;
+    right = mode === 'walk' || mode === 'run' || mode === 'super';
+    run = mode === 'run' || mode === 'super';
+    wantJump = false;
+    if (mode === 'jump' || mode === 'super') {
+      auto -= dt;
+      const ready = mode === 'jump' || body.energy >= 1;
+      if (auto <= 0 && body.ground && ready) { wantJump = true; auto = mode === 'jump' ? 1.3 : 0.6; }
+    }
+  }
+  jumpBuffer = wantJump ? 0.12 : Math.max(0, jumpBuffer - dt);
+  coyote = body.ground ? 0.1 : Math.max(0, coyote - dt);
+  const want = (right - left) * (run ? RUN : WALK);
+  const braking = !want || want * body.vx < 0;
+  const accel = (body.ground ? (braking ? 6 : 3.8) : 1.5) * H;
+  body.vx += Math.max(-accel * dt, Math.min(accel * dt, want - body.vx));
+  if (want) body.face = Math.sign(want);
+  const speed = Math.abs(body.vx);
+
+  if (jumpBuffer > 0 && (body.ground || coyote > 0)) takeoff();
+  if (mode === 'play' && !input.jumpHeld && !jumpCut && !body.super && body.vy < 0) {
+    body.vy *= 0.45;
+    jumpCut = true;
+  }
+
+  // Energy fills while running flat out and drains slowly otherwise.
+  if (body.ground && speed > RUN * 0.92) body.energy = Math.min(1, body.energy + dt * 0.5);
+  else if (body.ground) body.energy = Math.max(0, body.energy - dt * 0.12);
+
+  if (body.land > 0) body.land -= dt;
+  // The landing pose never delays a move or another jump.
+  body.superLand = want || speed > 12 || !body.ground ? 0 : Math.max(0, body.superLand - dt);
+
+  const prevY = body.y;
+  body.x += body.vx * dt;
+  if (mode !== 'play' && body.x > WORLD_W - 200) { body.x = 260; pet.x = body.x - CH * 0.8; body.trail.length = 0; }
+  body.x = Math.max(40, Math.min(WORLD_W - 40, body.x));
+  if (!body.ground) {
+    // Hang near the apex without changing the take-off impulse or normal jumps.
+    const hang = body.super && Math.abs(body.vy) < 0.25 * body.superV0;
+    body.vy += GRAVITY * dt * (hang ? 0.45 : 1);
+    body.y += body.vy * dt;
+    if (body.super) body.superTime = Math.abs(body.vy) <= 0.35 * body.superV0 ? body.superTime + dt : 0;
+    if (body.vy > 0) {
+      const top = supportAt(body.x, body.y, prevY);
+      if (top) {
+        const impact = Math.min(1.6, body.vy / Math.sqrt(2 * GRAVITY * H * 0.56));
+        body.y = top.y; body.vy = 0; body.ground = true; body.land = 0.08 + impact * 0.06;
+        body.superLand = body.super && !want && speed <= 12 ? 0.32 : 0;
+        body.squash = Math.min(1, impact);
+        dust(body.x, body.y, (body.super ? 10 : 4) + Math.round(impact * 6), impact * (body.super ? 1.35 : 1));
+        emit('ring', body.x, body.y + 2, { r: CH * (body.super ? 0.8 : 0.45) * impact, size: body.super ? 7 : 5, max: body.super ? 0.4 : 0.35 });
+        if (top.dip !== undefined) top.dipV = H * 0.5 * impact;
+        if (body.super || impact > 1.2) { shake = Math.max(shake, (body.super ? 0.3 : 0.25) * impact); dust(body.x, body.y, body.super ? 10 : 6, body.super ? 1.6 : 1.2); }
+        body.super = false;
+      }
+    }
+  } else if (!standingOn(body.x, body.y)) {
+    body.ground = false; body.vy = 0; body.fallFrom = body.y;
+  }
+  // Consume a buffered press on the landing frame, before another frame can expire it.
+  if (jumpBuffer > 0 && body.ground) takeoff();
+
+  // Cycle speed follows ground speed, so feet do not skate.
+  const running = speed > (WALK + RUN) / 2;
+  body.phase += dt * (running ? speed / (0.28 * CH) : speed / (0.13 * CH));
+  // A footstep each half cycle: dust at the planted foot, more when running.
+  const stepIndex = Math.floor(body.phase / Math.PI);
+  if (body.ground && speed > 12 && stepIndex !== body.lastStep) dust(body.x - body.face * H * 0.01, body.y, running ? 3 : 1, running ? 0.7 : 0.3);
+  body.lastStep = stepIndex;
+  // Speed lines at full speed.
+  if (speed > RUN * 0.9 && Math.random() < dt * (body.energy >= 1 ? 40 : 22)) {
+    emit('line', body.x - body.face * rand(CH * 0.17, CH * 0.4), body.y - rand(CH * 0.1, CH * 0.95), {
+      vx: -body.face * H * 1.4, len: -body.face * rand(CH * 0.22, CH * 0.5), size: rand(2, 3.5), max: 0.22,
+    });
+  }
+  // Thin wind passes opposite the child's vertical motion, away from the apex.
+  if (body.super && !body.ground && Math.abs(body.vy) > 0.35 * body.superV0 && Math.random() < dt * 32) {
+    const dir = -Math.sign(body.vy);
+    emit('line', body.x + (Math.random() < 0.5 ? -1 : 1) * rand(CH * 0.2, CH * 0.45), body.y - rand(CH * 0.1, CH * 1.1), {
+      vy: dir * H * 1.3, angle: Math.PI / 2, len: dir * rand(CH * 0.3, CH * 0.7), size: rand(0.8, 1.4), max: 0.18, alpha: 0.28,
+    });
+  }
+  body.squash += (0 - body.squash) * Math.min(1, dt * 9);
+
+  // The world answers: platforms spring back, cacti sway when someone runs past.
+  for (const p of platforms) {
+    p.dipV += (-p.dip * 900 - p.dipV * 14) * dt;
+    p.dip += p.dipV * dt;
+  }
+  for (const c of cacti) {
+    if (Math.abs(body.x - c.x) < H * 0.08 && body.ground && speed > WALK * 1.2) c.v += -body.face * speed * 0.0016 * 60 * dt;
+    c.v += (-c.a * 60 - c.v * 5) * dt;
+    c.a += c.v * dt;
+  }
+  for (const m of motes) {
+    m.x -= (H * 0.04 + (running ? body.vx * 0.08 : 0)) * m.s * dt;
+    m.y += Math.sin(performance.now() / 900 + m.x * 0.01) * 6 * dt;
+    if (m.x < 0) m.x += WORLD_W;
+    if (m.x > WORLD_W) m.x -= WORLD_W;
+  }
+
+  setTargets(dt);
+  // Standing still for a moment the child turns its head to us; any move turns it back.
+  const resting = body.ground && speed < 12 && !left && !right && !wantJump && jumpBuffer <= 0 && body.crouch <= 0 && body.land <= 0 && body.superLand <= 0;
+  body.still = resting ? body.still + dt * (mode === 'idle' ? 3 : 1) : 0;
+  turnTo(body, body.still > 0.35 ? 'front' : 'side');
+  body.turn = Math.max(0, body.turn - dt);
+  stepKid(dt);
+  if (KID && body.still > 0) {
+    const action = kid.action === 'rise' ? kid.next : kid.action.replace(/In$/, '');
+    if (KID_LABELS[action]) body.stateLabel = KID_LABELS[action];
+  }
+  stepPet(dt);
+  updateFx(dt);
+  input.jump = false;
+}
+
+// ---------- the pet: frame-by-frame poses cut from its animation video ----------
+// Pets are animated frame by frame, not rigged: each action is a run of drawings cut from a Grok
+// video (art/rig/mascotas/video_a_sprites.py) that share a scale and a ground line. Walk and run
+// are full cycles from clips that start and end on the same pose.
+const PET = PET_SPRITES;
+// Ground covered by one full cycle, in drawing pixels (half size). Walk: measured from the paws
+// planted in the clip (87), lengthened by a quarter so a pet keeping up with a walking child
+// does not pedal; run: a bound about one and a half bodies long.
+const PET_STRIDE = { walk: 110, run: 300 };
+const pet = { x: 140, y: 0, vx: 0, vy: 0, ground: true, face: 1, dist: 0, jumpAt: 0, cheer: 0, on: true,
+  action: 'sit', until: 0, wander: null, squash: 0, shown: 'sit', pose: null, frame: 0, bellyTime: 0, next: 'sit', rate: 36 };
+// While the child waits the pet mostly sits; now and then it scratches or wanders a little.
+const PET_ACTIONS = [['sit', 6], ['scratch', 3], ['wander', 1], ['belly', 3]];
+
+function bellyPet(now, sleeping) {
+  pet.action = sleeping ? 'sleep' : 'belly';
+  pet.pose = 'bellyIn';
+  pet.frame = pet.bellyTime = 0;
+  pet.until = sleeping ? Infinity : now + rand(4, 7) * 1000;
+  pet.wander = null;
+}
+
+function wakePet(next, rate = 36) {
+  pet.next = next;
+  pet.rate = rate;
+  pet.wander = null;
+  // Undo relaxing before undoing the roll onto its back.
+  if (pet.pose === 'rest' || pet.pose === 'restIn') {
+    pet.frame = pet.pose === 'rest' ? PET.actions.restIn.length - 1 : Math.floor(pet.frame);
+    pet.pose = 'wake';
+  } else if (pet.pose === 'belly' || pet.pose === 'bellyIn') {
+    pet.frame = pet.pose === 'belly' ? PET.actions.bellyIn.length - 1 : Math.floor(pet.frame);
+    pet.pose = 'up';
+  }
+}
+
+function stepPetPose(dt, now) {
+  if (!pet.pose) return;
+  if (pet.pose === 'wake' || pet.pose === 'up') {
+    pet.frame -= dt * pet.rate;
+    if (pet.frame < 0) {
+      if (pet.pose === 'wake') {
+        pet.pose = 'up';
+        pet.frame = PET.actions.bellyIn.length - 1;
+      } else {
+        pet.pose = null;
+        pet.action = pet.next;
+        pet.until = now + rand(3.5, 6.5) * 1000;
+      }
+    }
+    return;
+  }
+  pet.frame += dt * (pet.pose === 'rest' ? 6 : 12);
+  // Asleep, its own small z's rise from its head (at the front end of the lying drawing).
+  if (pet.pose === 'rest') {
+    pet.z = (pet.z || 0) + dt;
+    if (pet.z >= 1.3) {
+      pet.z = 0;
+      pet.zBig = !pet.zBig;
+      emit('z', pet.x + pet.face * PET.size[0] * petScale() * 0.3, pet.y - CH * 0.3,
+        { vx: pet.face * CH * 0.05, vy: -CH * 0.14, size: CH * (pet.zBig ? 0.17 : 0.12), max: 2, alpha: 0.75, grow: 0.4 });
+    }
+  } else pet.z = 0;
+  if (pet.pose === 'bellyIn' || pet.pose === 'restIn') {
+    if (pet.frame >= PET.actions[pet.pose].length) {
+      // Going to sleep it settles straight away; playing, it paddles first.
+      pet.pose = pet.pose === 'bellyIn' ? (pet.action === 'sleep' ? 'restIn' : 'belly') : 'rest';
+      pet.frame = pet.bellyTime = 0;
+    }
+  } else {
+    pet.frame %= PET.actions[pet.pose].length;
+    if (pet.pose === 'belly') {
+      pet.bellyTime += dt;
+      if (pet.action === 'sleep' && pet.bellyTime >= 0.6) {
+        pet.pose = 'restIn';
+        pet.frame = 0;
+      } else if (pet.action === 'belly' && now >= pet.until) wakePet('sit', 24);
+    }
+  }
+}
+
+function pickPetAction(now) {
+  let roll = Math.random() * PET_ACTIONS.reduce((s, [, w]) => s + w, 0);
+  for (const [name, w] of PET_ACTIONS) {
+    roll -= w;
+    if (roll < 0) {
+      if (name === 'belly') { bellyPet(now, false); return; }
+      pet.action = name;
+      pet.until = now + (name === 'sit' ? rand(3.5, 6.5) : rand(1.6, 2.6)) * 1000;
+      pet.wander = name === 'wander' ? body.x + rand(-1, 1) * CH * 1.1 : null;
+      return;
+    }
+  }
+}
+
+function stepPet(dt) {
+  if (!pet.on) return;
+  const now = performance.now();
+  const near = Math.abs(body.x - pet.x) < CH * 1.4 && Math.abs(body.y - pet.y) < CH * 0.5;
+  const childMoving = Math.abs(body.vx) > 12 || !body.ground;
+  const sleeping = KID && (kid.action === 'sleep' || kid.action === 'sleepIn') && body.still > 0 && body.ground;
+  const ledge = pet.ground && body.y > pet.y + 10 && platforms.find(p => Math.abs(pet.y - p.y) < 1 && pet.x > p.x - 8 && pet.x < p.x + p.w + 8);
+  // Follow while the child moves or is far; otherwise do its own thing.
+  let goal = null;
+  if (childMoving || !near || ledge) {
+    goal = body.x - body.face * CH * 0.75;
+    pet.wander = null;
+    if (pet.pose) wakePet('follow');
+    else pet.action = 'follow';
+  }
+  else {
+    if (sleeping && pet.ground && Math.abs(pet.vx) <= 12) {
+      if (!pet.pose) bellyPet(now, true);
+      else if (pet.action === 'belly' && (pet.pose === 'bellyIn' || pet.pose === 'belly')) {
+        pet.action = 'sleep';
+        pet.until = Infinity;
+        pet.bellyTime = 0;
+      }
+    } else if (pet.action === 'sleep' && pet.pose) wakePet('sit');
+    if (!pet.pose && (pet.action === 'follow' || now > pet.until)) pickPetAction(now);
+    if (pet.wander !== null) goal = pet.wander;
+  }
+  // Stuck on a ledge above the child: walk off its nearest edge and drop down.
+  if (ledge) goal = pet.x - ledge.x < ledge.x + ledge.w - pet.x ? ledge.x - CH * 0.4 : ledge.x + ledge.w + CH * 0.4;
+  stepPetPose(dt, now);
+  // Finish getting up before following; the existing acceleration handles the move.
+  if (pet.pose) goal = null;
+  const gap = goal === null ? 0 : goal - pet.x;
+  const want = Math.abs(gap) < CH * 0.12 ? 0 : Math.sign(gap) * Math.min(RUN * 1.15, Math.abs(gap) * 3.2);
+  pet.vx += (want - pet.vx) * Math.min(1, dt * 8);
+  if (pet.action === 'wander' && Math.abs(gap) < CH * 0.12) pet.wander = null;
+  if (Math.abs(pet.vx) > 8) pet.face = Math.sign(pet.vx);
+  else pet.face = Math.sign(body.x - pet.x) || pet.face;
+
+  // Jump after the child, or up to wherever the child is standing.
+  const above = body.ground && body.y < pet.y - 10 && Math.abs(body.x - pet.x) < CH * 1.8;
+  if (pet.ground && ((pet.jumpAt && now >= pet.jumpAt) || above)) {
+    jump(pet, above ? Math.min(0.75, (pet.y - body.y) / H + 0.2) : 0.42);
+    pet.jumpAt = 0;
+    pet.squash = -0.6;
+    dust(pet.x, pet.y, 3, 0.5);
+  }
+  const prevY = pet.y;
+  pet.x += pet.vx * dt;
+  if (!pet.ground) {
+    pet.vy += GRAVITY * dt;
+    pet.y += pet.vy * dt;
+    if (pet.vy > 0) {
+      const top = supportAt(pet.x, pet.y, prevY);
+      if (top) { pet.y = top.y; pet.vy = 0; pet.ground = true; pet.squash = 0.6; dust(pet.x, pet.y, 2, 0.4); }
+    }
+  } else if (!standingOn(pet.x, pet.y)) {
+    pet.ground = false; pet.vy = 0;
+  }
+  const speed = Math.abs(pet.vx);
+  // Drawings advance with the distance covered, so paws do not skate.
+  if (pet.ground && speed > 12) pet.dist += dt * speed;
+  pet.squash += (0 - pet.squash) * Math.min(1, dt * 10);
+  if (speed > 12 && pet.ground && Math.random() < dt * 5) dust(pet.x, pet.y, 1, 0.3);
+  if (pet.cheer > 0) {
+    pet.cheer -= dt;
+    if (Math.random() < dt * 6) emit('heart', pet.x + rand(-CH * 0.1, CH * 0.1), pet.y - CH * 0.6, { size: CH * 0.07, max: 0.9 });
+  }
+}
+
+const cycle = (n, k) => ((Math.floor(n) % k) + k) % k;
+const petScale = () => CH * 0.6 / PET.sit; // screen pixels per drawing pixel
+function gait(action) {
+  const frames = PET.actions[action].length;
+  return `${action}-${cycle(pet.dist / (PET_STRIDE[action] * petScale()) * frames, frames)}`;
+}
+function petDrawing() {
+  const speed = Math.abs(pet.vx);
+  // In the air: the leap of the gallop going up, the reach for the ground coming down.
+  if (!pet.ground) return pet.vy < 0 ? 'run-6' : 'run-8';
+  if (pet.pose) {
+    const action = pet.pose === 'wake' ? 'restIn' : pet.pose === 'up' ? 'bellyIn' : pet.pose;
+    return PET.actions[action][Math.max(0, Math.floor(pet.frame))].replace(/\.png$/, '');
+  }
+  // From about a child's height per second the walk would pedal too fast: it gallops.
+  if (speed > RUN * 0.5) return gait('run');
+  if (speed > 12) return gait('walk');
+  if (pet.action === 'scratch') return `scratch-${Math.floor(performance.now() / 160) % 2}`;
+  // Sitting it breathes, blinks and flicks an ear instead of holding still like a photo.
+  if (reduced) return 'sit-0';
+  return `breathe-${cycle(performance.now() / 1000 * 8, PET.actions.breathe.length)}`;
+}
+
+function drawPet(cam) {
+  if (!pet.on) return;
+  const name = petDrawing();
+  // Changing between sitting and moving, a little hop hides the cut between drawings.
+  const kind = pet.ground && pet.pose ? 'sit' : name.split('-')[0].replace('breathe', 'sit');
+  if (kind !== pet.shown) {
+    if ((kind === 'sit') !== (pet.shown === 'sit')) pet.squash = Math.max(pet.squash, 0.35);
+    pet.shown = kind;
+  }
+  const img = images['pet_' + name];
+  const h = PET.size[1] * petScale();
+  const w = (img.width / img.height) * h;
+  const x = pet.x - cam;
+  const lift = pet.ground ? 0 : Math.min(1, (GROUND - pet.y) / H);
+  ctx.fillStyle = `rgba(26, 26, 46, ${0.22 * (1 - lift)})`;
+  ctx.beginPath();
+  ctx.ellipse(x, pet.y + 2, CH * (pet.pose ? 0.32 : 0.24), CH * 0.04, 0, 0, Math.PI * 2);
+  ctx.fill();
+  const breathe = name === 'sit-0' && !reduced ? Math.sin(performance.now() / 500) * 0.012 : 0;
+  const sq = (effects ? pet.squash : 0) - breathe;
+  ctx.save();
+  ctx.translate(x, pet.y + 2);
+  ctx.scale(pet.face * (1 + 0.12 * sq), 1 - 0.12 * sq);
+  ctx.drawImage(img, -w / 2, -h * PET.ground / PET.size[1], w, h);
+  ctx.restore();
+}
+
+// ---------- the child: frame-by-frame poses cut from its animation video ----------
+const KID = KID_SPRITES;
+const kid = { action: 'side', turn: 0, frame: 0, activity: null, lastActivity: null, reverse: null, next: 'back', rate: 36,
+  blink: 0, blinkWait: 0, z: 0 };
+const KID_ACTIVITIES = ['read', 'lupa', 'paint'];
+const KID_LABELS = { whistle: 'Silbando', read: 'Leyendo', lupa: 'Explorando', paint: 'Pintando', bored: 'Aburrido', sleep: 'Durmiendo' };
+const kidScale = () => CH / KID.stand;
+
+function stepKid(dt) {
+  if (!KID) return;
+  const speed = Math.abs(body.vx);
+  if (body.ground) body.dist += speed * dt;
+  if (!body.ground && (body.vy < 0 || body.super)) {
+    kid.action = 'side';
+    kid.turn = kid.frame = kid.blink = kid.z = 0;
+    return;
+  }
+  const interrupted = !body.ground || speed > 12 || body.still === 0;
+  if (interrupted) {
+    kid.blink = kid.z = 0;
+    if (kid.action === 'rise') { kid.next = 'back'; kid.rate = 36; }
+    else if (KID_ACTIVITIES.includes(kid.action.replace(/In$/, '')) || kid.action === 'sleepIn' || kid.action === 'sleep') {
+      kid.reverse = kid.action.endsWith('In') ? kid.action : kid.action + 'In';
+      kid.frame = kid.action.endsWith('In') ? Math.floor(kid.frame) : KID.actions[kid.reverse].length - 1;
+      kid.action = 'rise';
+      kid.next = 'back';
+      kid.rate = 36;
+      return;
+    } else if (kid.action !== 'side' && kid.action !== 'back') {
+      kid.turn = kid.action === 'turn' ? Math.floor(kid.turn) : KID.actions.turn.length - 1;
+      kid.action = 'back';
+      return;
+    }
+  }
+  if (kid.action === 'rise') {
+    kid.frame -= dt * kid.rate;
+    if (kid.frame < 0) {
+      kid.action = kid.next;
+      kid.frame = 0;
+      kid.turn = KID.actions.turn.length - 1;
+    }
+    return;
+  }
+  if (kid.action === 'back') {
+    kid.turn -= dt * 40;
+    if (kid.turn < 0) { kid.action = 'side'; kid.turn = 0; }
+    return;
+  }
+  if (interrupted) return;
+  if (body.still <= 0.35) return;
+  kid.blink = Math.max(0, kid.blink - dt);
+  kid.blinkWait -= dt;
+  if (kid.blinkWait <= 0) { kid.blink = 0.12; kid.blinkWait = rand(2.5, 5); }
+  if (kid.action === 'side') {
+    kid.action = 'turn';
+    kid.turn = 0;
+    kid.blink = 0;
+    kid.blinkWait = rand(2.5, 5);
+  } else if (kid.action === 'turn') {
+    kid.turn += dt * 14;
+    if (kid.turn >= KID.actions.turn.length) {
+      kid.action = 'front';
+      kid.turn = KID.actions.turn.length - 1;
+    }
+  } else {
+    if (body.still >= 31 && kid.action !== 'sleepIn' && kid.action !== 'sleep') {
+      kid.action = 'sleepIn';
+      kid.frame = 0;
+    } else if (body.still >= 24 && (KID_ACTIVITIES.includes(kid.action) || KID_ACTIVITIES.includes(kid.action.replace(/In$/, '')))) {
+      kid.reverse = kid.activity + 'In';
+      kid.frame = kid.action.endsWith('In') ? Math.floor(kid.frame) : KID.actions[kid.reverse].length - 1;
+      kid.action = 'rise';
+      kid.next = 'bored';
+      kid.rate = 30;
+      return;
+    } else if (body.still >= 9 && (kid.action === 'front' || kid.action === 'whistle')) {
+      const choices = KID_ACTIVITIES.filter(a => a !== kid.lastActivity);
+      kid.activity = kid.lastActivity = choices[Math.floor(Math.random() * choices.length)];
+      kid.action = kid.activity + 'In';
+      kid.frame = 0;
+    } else if (body.still >= 2.5 && kid.action === 'front') {
+      kid.action = 'whistle';
+      kid.frame = 0;
+    }
+    if (kid.action.endsWith('In')) {
+      kid.frame += dt * 12;
+      if (kid.frame >= KID.actions[kid.action].length) {
+        kid.action = kid.action.slice(0, -2);
+        kid.frame = 0;
+      }
+    } else if (kid.action !== 'front') {
+      // The magnifying glass follows a ladybug across: played forward and back, never jumping.
+      const n = KID.actions[kid.action].length;
+      kid.frame = (kid.frame + dt * (kid.action === 'whistle' ? 12 : kid.action === 'sleep' ? 8 : 10)) % (kid.action === 'lupa' ? 2 * n - 2 : n);
+    }
+  }
+  if (kid.action === 'sleep') {
+    kid.z += dt;
+    if (kid.z >= 0.9) {
+      kid.z %= 0.9;
+      const frame = kidDrawing(), anchor = KID.anchors[frame];
+      const head = KID.styles[look.style][kidHead(frame)], s = kidScale();
+      // Beside the head, not over it, and big enough to read at a glance; every other one larger.
+      kid.zBig = !kid.zBig;
+      emit('z', body.x + body.face * ((anchor.x - KID.size[0] / 2) * s + CH * 0.16), body.y + (anchor.y - KID.ground - head.pivot[1]) * s + CH * 0.06,
+        { vx: body.face * CH * 0.06, vy: -CH * 0.16, size: CH * (kid.zBig ? 0.26 : 0.19), max: 2.2, alpha: 0.85, grow: 0.4 });
+    }
+  } else kid.z = 0;
+}
+
+function kidFrame(action, i) { return KID.actions[action][i].replace(/\.png$/, ''); }
+function kidGait(action) {
+  const frames = KID.actions[action].length;
+  const stride = (action === 'run' ? 1.5 : 0.9) * CH;
+  return kidFrame(action, cycle(body.dist / stride * frames, frames));
+}
+function kidDrawing() {
+  kid.backwards = false;
+  if (!body.ground && (body.vy < 0 || (kid.action !== 'rise' && kid.action !== 'back'))) return body.super ? kidFrame(...superDrawing()) : kidFrame('run', body.vy < 0 ? 0 : 7);
+  if (body.superLand > 0) return kidFrame('superLand', body.superLand > 0.12 ? 0 : 1);
+  if (kid.action === 'turn' || kid.action === 'back') return kidFrame('turn', Math.floor(kid.turn));
+  if (kid.action === 'front') return kidFrame('turn', KID.actions.turn.length - 1);
+  if (kid.action === 'rise') { kid.backwards = true; return kidFrame(kid.reverse, Math.max(0, Math.floor(kid.frame))); }
+  if (KID.actions[kid.action]) {
+    const n = KID.actions[kid.action].length, i = Math.floor(kid.frame);
+    kid.backwards = i >= n;
+    return kidFrame(kid.action, i < n ? i : 2 * n - 2 - i);
+  }
+  const speed = Math.abs(body.vx);
+  if (speed > (WALK + RUN) / 2) return kidGait('run');
+  if (speed > 12) return kidGait('walk');
+  return kidFrame('turn', 0);
+}
+
+function kidTexture(name) {
+  const key = `${name}|${look.clothes}|${look.skin}`;
+  if (!kidTex.has(key)) kidTex.set(key, paint(name, look.clothes, look.skin, 1));
+  return kidTex.get(key);
+}
+function kidForeground(frame) {
+  const name = 'kidocc_' + frame;
+  const key = `${name}|${look.clothes}|${look.skin}`;
+  if (!kidTex.has(key)) {
+    const c = document.createElement('canvas');
+    c.width = KID.size[0]; c.height = KID.size[1];
+    const g = c.getContext('2d');
+    g.drawImage(kidTexture('kid_' + frame), 0, 0, c.width, c.height);
+    // Keep the recoloured body only where hands or knees cover the head.
+    g.globalCompositeOperation = 'destination-in';
+    g.drawImage(images[name], 0, 0, c.width, c.height);
+    kidTex.set(key, c);
+  }
+  return kidTex.get(key);
+}
+function kidHead(frame) {
+  const view = KID.anchors[frame].view;
+  const face = KID.faces?.[frame] || (kid.blink > 0 ? 'dormido' : null);
+  return view === 'front' && face && KID.styles[look.style]['front_' + face] ? 'front_' + face : view;
+}
+function drawKid() {
+  const frame = kidDrawing();
+  const img = kidTexture('kid_' + frame);
+  const anchor = KID.anchors[frame];
+  const view = kidHead(frame);
+  const head = KID.styles[look.style][view];
+  const s = kidScale();
+  const breathe = kid.action === 'front' && !reduced ? Math.sin(performance.now() / 500) * 0.01 : 0;
+  C.scale(body.face * s * (1 + breathe * 0.3), s * (1 + breathe));
+  C.translate(-KID.size[0] / 2, -KID.ground);
+  C.drawImage(img, 0, 0, KID.size[0], KID.size[1]);
+  C.save();
+  C.translate(anchor.x, anchor.y);
+  C.rotate(anchor.angle * DEG);
+  C.drawImage(kidTexture('kid_head_' + look.style + '_' + view), -head.pivot[0], -head.pivot[1], head.size[0], head.size[1]);
+  C.restore();
+  if (anchor.occ) C.drawImage(kidForeground(frame), 0, 0);
+  // The ladybug walks the way it faces: played backwards, it turns round instead of reversing.
+  const bug = KID.bug && KID.bug.frames[frame];
+  // Kneeling near a ledge, the ladybug's path can run past the edge: it only shows on solid ground.
+  if (bug && standingOn(body.x + body.face * (bug.x - KID.size[0] / 2) * kidScale(), body.y)) {
+    const [w, h] = KID.bug.size;
+    const turn = bug.dir * (kid.backwards ? -1 : 1) !== KID.bug.facing;
+    C.save();
+    C.translate(bug.x, bug.y);
+    if (turn) C.scale(-1, 1);
+    C.drawImage(images.kid_bug, -w / 2, -h, w, h);
+    C.restore();
+  }
+}
+
+// ---------- drawing ----------
+function drawChild(j, x, footY, rootY, alpha) {
+  C.save();
+  C.globalAlpha = alpha;
+  // Squash and stretch about the feet: wider and shorter on landing, taller on take-off.
+  const sq = effects ? body.squash : 0;
+  C.translate(x, footY);
+  C.scale(1 + 0.14 * sq, 1 - 0.14 * sq);
+  if (KID && !rig) drawKid();
+  else {
+    C.translate(0, rootY - footY);
+    C.scale(body.face * SCALE, SCALE);
+    drawRig(j, bones && alpha === 1);
+  }
+  C.restore();
+}
+
+function mix(a, b, f) {
+  const [x, y] = [hex(a), hex(b)];
+  return `rgb(${x.map((v, i) => Math.round(v + (y[i] - v) * f)).join(',')})`;
+}
+
+
+function frame(dt) {
+  step(dt);
+  const j = solve(pose);
+  const s = SCALE;
+  // On the ground the lowest heel or toe touches it; in the air the hip keeps its height.
+  const lowest = Math.max(...j.legs.flatMap(l => [l.heel[1], l.toe[1]]));
+  const standing = P.thigh.end[1] - P.thigh.pivot[1] + P.shin.size[1] - P.shin.pivot[1] - 10;
+  const wantRoot = body.ground ? body.y - lowest * s : body.y - standing * s;
+  body.rootY = body.rootY === null ? wantRoot : body.rootY + (wantRoot - body.rootY) * Math.min(1, dt * 30);
+
+  shake = Math.max(0, shake - dt);
+  const quake = effects && shake > 0 ? [rand(-1, 1) * shake * H * 0.05, rand(-1, 1) * shake * H * 0.04] : [0, 0];
+  const cam = Math.max(0, Math.min(WORLD_W - W, body.x - W * 0.42));
+  camY += (Math.min(0, body.y - H * 0.62) - camY) * Math.min(1, dt * 6);
+  ctx.save();
+  ctx.translate(quake[0], quake[1]);
+  drawWorld(cam);
+  ctx.translate(0, -camY);
+
+  ctx.save();
+  ctx.translate(-cam, 0);
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.55)';
+  if (effects) for (const m of motes) { ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, Math.PI * 2); ctx.fill(); }
+  drawFx('back');
+  ctx.restore();
+
+  // Contact shadow on whatever is under the character.
+  const sx = body.x - cam;
+  const floor = body.ground ? body.y : (platforms.find(p => body.x > p.x && body.x < p.x + p.w && p.y >= body.y)?.y ?? GROUND);
+  const lift = Math.min(1, (floor - body.y) / (H * 0.5));
+  ctx.fillStyle = `rgba(26, 26, 46, ${0.28 * (1 - lift * 0.7)})`;
+  ctx.beginPath();
+  ctx.ellipse(sx, floor + 3, CH * 0.21 * (1 - lift * 0.4), CH * 0.045, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Energy glow under the feet when the bar is full.
+  if (effects && body.energy >= 1) {
+    const pulse = 0.5 + 0.5 * Math.sin(performance.now() / 120);
+    ctx.fillStyle = `rgba(245, 200, 66, ${0.25 + 0.2 * pulse})`;
+    ctx.beginPath();
+    ctx.ellipse(sx, floor + 2, CH * 0.3, CH * 0.07, 0, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  drawPet(cam);
+
+  [j.headView, j.headSqueeze] = turnScale(body);
+  drawChild(j, sx, body.y, body.rootY, 1);
+
+  ctx.save();
+  ctx.translate(-cam, 0);
+  drawFx('front');
+  ctx.restore();
+  ctx.restore();
+
+  hudState.textContent = body.stateLabel;
+  // A child walks at about 4.5 km/h: the stage speed is shown in those terms.
+  hudSpeed.textContent = `${(Math.abs(body.vx) / WALK * 4.5).toFixed(1).replace('.', ',')} km/h`;
+  hudEnergy.style.width = `${Math.round(body.energy * 100)}%`;
+  hudEnergy.parentElement.classList.toggle('full', body.energy >= 1);
+}
+
+const hudState = document.getElementById('hud-state');
+const hudSpeed = document.getElementById('hud-speed');
+const hudEnergy = document.getElementById('hud-energy');
+
+// ---------- input ----------
+const KEYS = { ArrowLeft: 'left', KeyA: 'left', ArrowRight: 'right', KeyD: 'right' };
+const JUMP_KEYS = ['Space', 'ArrowUp', 'KeyW'];
+const held = new Set();
+const taps = new Map();
+const pad = { left: false, right: false, jumpHeld: false };
+let runLatch = false, runKey = null;
+function syncInput() {
+  input.left = pad.left || held.has('ArrowLeft') || held.has('KeyA');
+  input.right = pad.right || held.has('ArrowRight') || held.has('KeyD');
+  input.run = runLatch || held.has('ShiftLeft') || held.has('ShiftRight') || runKey !== null;
+  input.jumpHeld = pad.jumpHeld || JUMP_KEYS.some(key => held.has(key));
+}
+addEventListener('keydown', e => {
+  if (e.target.closest && e.target.closest('button') && (e.key === ' ' || e.key === 'Enter')) return;
+  const direction = KEYS[e.code], jumping = JUMP_KEYS.includes(e.code);
+  if (!direction && !jumping && e.key !== 'Shift') return;
+  const first = !e.repeat && !held.has(e.code);
+  held.add(e.code);
+  if (direction && first) {
+    const now = performance.now();
+    if (now - (taps.get(e.code) ?? -Infinity) <= 250) runKey = e.code;
+    taps.set(e.code, now);
+  }
+  if (jumping && first) input.jump = true;
+  syncInput();
+  if (direction || jumping) { setMode('play'); e.preventDefault(); }
+});
+addEventListener('keyup', e => {
+  held.delete(e.code);
+  if (e.code === runKey) runKey = null;
+  syncInput();
+});
+addEventListener('blur', () => {
+  held.clear();
+  taps.clear();
+  runKey = null;
+  pad.left = pad.right = pad.jumpHeld = false;
+  input.jump = false;
+  jumpBuffer = 0;
+  syncInput();
+  for (const b of document.querySelectorAll('.pad .down')) b.classList.remove('down');
+});
+
+const hold = (id, key) => {
+  const el = document.getElementById(id);
+  const on = e => {
+    e.preventDefault();
+    pad[key] = true;
+    if (key === 'jumpHeld') input.jump = true;
+    syncInput();
+    el.classList.add('down');
+    setMode('play');
+    el.setPointerCapture?.(e.pointerId);
+  };
+  const off = () => { pad[key] = false; syncInput(); el.classList.remove('down'); };
+  el.addEventListener('pointerdown', on);
+  el.addEventListener('pointerup', off);
+  el.addEventListener('pointercancel', off);
+  el.addEventListener('lostpointercapture', off);
+};
+hold('pad-left', 'left');
+hold('pad-right', 'right');
+hold('pad-jump', 'jumpHeld');
+document.getElementById('pad-run').addEventListener('click', e => {
+  runLatch = !runLatch;
+  syncInput();
+  e.currentTarget.setAttribute('aria-pressed', String(runLatch));
+});
+stage.addEventListener('pointerdown', () => stage.focus({ preventScroll: true }));
+for (const panel of document.querySelectorAll('.controls, .pad')) panel.addEventListener('click', e => {
+  // Keyboard activation has detail 0; keep that focus for Tab navigation.
+  if (e.detail > 0 && e.target.closest('button')) stage.focus({ preventScroll: true });
+});
+
+function setMode(next) {
+  if (mode === next) return;
+  mode = next;
+  jumpBuffer = coyote = 0;
+  auto = 0.3;
+  for (const b of document.querySelectorAll('#modes .chip')) b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
+}
+document.getElementById('modes').addEventListener('click', e => {
+  const b = e.target.closest('[data-mode]');
+  if (b) setMode(b.dataset.mode);
+});
+const toggle = (id, apply) => document.getElementById(id).addEventListener('click', e => {
+  const on = e.currentTarget.getAttribute('aria-pressed') !== 'true';
+  e.currentTarget.setAttribute('aria-pressed', String(on));
+  apply(on);
+});
+toggle('bones', on => { bones = on; });
+document.getElementById('rig').hidden = !KID;
+toggle('rig', on => { rig = on; });
+toggle('fx', on => { effects = on; if (!on) fx.length = 0; });
+toggle('pet', on => { pet.on = on; pet.x = body.x - body.face * CH * 0.8; pet.y = body.y; });
+
+function swatches(id, list, key) {
+  const box = document.getElementById(id);
+  for (const [colour, label] of list) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'swatch';
+    b.style.background = colour;
+    b.title = label;
+    b.setAttribute('aria-label', label);
+    b.setAttribute('aria-pressed', String(look[key] === colour));
+    b.addEventListener('click', () => {
+      look[key] = colour;
+      for (const s of box.children) s.setAttribute('aria-pressed', String(s === b));
+      repaint();
+    });
+    box.appendChild(b);
+  }
+}
+
+function hairstyles() {
+  const box = document.getElementById('styles');
+  box.parentElement.hidden = !KID;
+  if (!KID) return;
+  for (const [style, data] of Object.entries(KID.styles)) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip';
+    b.textContent = data.label;
+    b.setAttribute('aria-pressed', String(look.style === style));
+    // Warm both views once; switching styles reuses the recoloured textures.
+    for (const view of ['profile', 'front']) kidTexture('kid_head_' + style + '_' + view);
+    b.addEventListener('click', () => {
+      look.style = style;
+      for (const s of box.children) s.setAttribute('aria-pressed', String(s === b));
+    });
+    box.appendChild(b);
+  }
+}
+
+// ---------- start ----------
+async function start() {
+  await loadImages();
+  for (const name of Object.keys(SRC)) if (!name.startsWith('pet_') && !name.startsWith('kidocc_')) classify(name);
+  repaint();
+  swatches('clothes', CLOTHES, 'clothes');
+  swatches('skins', SKINS, 'skin');
+  hairstyles();
+  layout();
+  body.y = GROUND;
+  pet.y = GROUND;
+  if (reduced) document.getElementById('fx').setAttribute('aria-pressed', 'false');
+  addEventListener('resize', layout);
+  let last = performance.now();
+  const loop = now => {
+    // The first frame's timestamp can come slightly before `last`: never step back in time.
+    const dt = Math.max(0, Math.min(0.033, (now - last) / 1000));
+    last = now;
+    frame(dt);
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+  if (!reduced) setMode('super');
+}
+start();
+</script>

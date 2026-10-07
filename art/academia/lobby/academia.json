@@ -1,0 +1,1511 @@
+{
+  "id": "academia",
+  "title": "La Academia",
+  "unit": "CH",
+  "size": [
+    60,
+    9
+  ],
+  "ground": 7.8,
+  "backgrounds": [
+    {
+      "sprite": "muro",
+      "x": 0,
+      "y": 0,
+      "w": 10.95,
+      "h": 7.3,
+      "parallax": 1,
+      "repeat": true,
+      "mirror": true
+    },
+    {
+      "sprite": "atrio",
+      "x": 24.514,
+      "y": 0,
+      "w": 12.972,
+      "h": 7.3,
+      "parallax": 1,
+      "repeat": false
+    }
+  ],
+  "floors": [
+    {
+      "id": "walnut-floor",
+      "x": 0,
+      "y": 7.8,
+      "w": 60,
+      "h": 1.2,
+      "sprite": "suelo",
+      "back": 7.3,
+      "front": 7.95
+    }
+  ],
+  "platforms": [
+    {
+      "id": "gallery-left",
+      "x": 6.6,
+      "y": 4.4,
+      "w": 12.9,
+      "h": 0.18,
+      "oneWay": true,
+      "sprite": "galeria",
+      "support": "columns",
+      "columns": [
+        7.2,
+        12.8,
+        18.4
+      ]
+    },
+    {
+      "id": "gallery-right",
+      "x": 40.5,
+      "y": 4.4,
+      "w": 12.9,
+      "h": 0.18,
+      "oneWay": true,
+      "sprite": "galeria",
+      "support": "columns",
+      "columns": [
+        41.1,
+        46.7,
+        52.3
+      ]
+    },
+    {
+      "id": "hanging-left",
+      "x": 20,
+      "y": 6.3,
+      "w": 1.65,
+      "h": 0.28,
+      "oneWay": true,
+      "sprite": "colgante",
+      "support": "chains"
+    },
+    {
+      "id": "hanging-right",
+      "x": 38.4,
+      "y": 6.3,
+      "w": 1.65,
+      "h": 0.28,
+      "oneWay": true,
+      "sprite": "colgante",
+      "support": "chains"
+    },
+    {
+      "id": "high",
+      "x": 21.5,
+      "y": 1.5,
+      "w": 2.5,
+      "h": 0.3,
+      "oneWay": true,
+      "sprite": "colgante",
+      "support": "chains"
+    }
+  ],
+  "stairs": [
+    {
+      "id": "left-approach",
+      "x": 0.48,
+      "y": 7.6,
+      "w": 0.22,
+      "h": 0.2,
+      "approach": true
+    },
+    {
+      "id": "left-step-0",
+      "x": 0.7125465838509317,
+      "y": 7.407204968944099,
+      "w": 0.16282608695652168,
+      "h": 0.3927950310559005,
+      "sourceTread": 0
+    },
+    {
+      "id": "left-step-1",
+      "x": 0.8603726708074534,
+      "y": 7.204472049689441,
+      "w": 0.33599378881987585,
+      "h": 0.5955279503105588,
+      "sourceTread": 1
+    },
+    {
+      "id": "left-step-2",
+      "x": 1.1813664596273292,
+      "y": 7.027080745341615,
+      "w": 0.34444099378881965,
+      "h": 0.772919254658385,
+      "sourceTread": 2
+    },
+    {
+      "id": "left-step-3",
+      "x": 1.5108074534161489,
+      "y": 6.849689440993789,
+      "w": 0.3444409937888201,
+      "h": 0.9503105590062111,
+      "sourceTread": 3
+    },
+    {
+      "id": "left-step-4",
+      "x": 1.840248447204969,
+      "y": 6.676521739130434,
+      "w": 0.34021739130434747,
+      "h": 1.1234782608695655,
+      "sourceTread": 4
+    },
+    {
+      "id": "left-step-5",
+      "x": 2.1654658385093164,
+      "y": 6.499130434782609,
+      "w": 0.3402173913043479,
+      "h": 1.3008695652173907,
+      "sourceTread": 5
+    },
+    {
+      "id": "left-step-6",
+      "x": 2.4906832298136643,
+      "y": 6.330186335403726,
+      "w": 0.3486645962732918,
+      "h": 1.4698136645962734,
+      "sourceTread": 6
+    },
+    {
+      "id": "left-step-7",
+      "x": 2.824347826086956,
+      "y": 6.157018633540373,
+      "w": 0.33599378881987574,
+      "h": 1.642981366459627,
+      "sourceTread": 7
+    },
+    {
+      "id": "left-step-8",
+      "x": 3.145341614906832,
+      "y": 5.9838509316770185,
+      "w": 0.3444409937888201,
+      "h": 1.8161490683229813,
+      "sourceTread": 8
+    },
+    {
+      "id": "left-step-9",
+      "x": 3.474782608695652,
+      "y": 5.806459627329192,
+      "w": 0.34444099378881965,
+      "h": 1.9935403726708074,
+      "sourceTread": 9
+    },
+    {
+      "id": "left-step-10",
+      "x": 3.8042236024844716,
+      "y": 5.633291925465839,
+      "w": 0.34021739130434836,
+      "h": 2.166708074534161,
+      "sourceTread": 10
+    },
+    {
+      "id": "left-step-11",
+      "x": 4.12944099378882,
+      "y": 5.4601242236024845,
+      "w": 0.3444409937888201,
+      "h": 2.3398757763975153,
+      "sourceTread": 11
+    },
+    {
+      "id": "left-step-12",
+      "x": 4.45888198757764,
+      "y": 5.282732919254658,
+      "w": 0.34021739130434747,
+      "h": 2.5172670807453414,
+      "sourceTread": 12
+    },
+    {
+      "id": "left-step-13",
+      "x": 4.784099378881987,
+      "y": 5.109565217391305,
+      "w": 0.3444409937888201,
+      "h": 2.690434782608695,
+      "sourceTread": 13
+    },
+    {
+      "id": "left-step-14",
+      "x": 5.1135403726708075,
+      "y": 4.923726708074534,
+      "w": 0.3486645962732918,
+      "h": 2.8762732919254654,
+      "sourceTread": 14
+    },
+    {
+      "id": "left-step-15",
+      "x": 5.447204968944099,
+      "y": 4.746335403726708,
+      "w": 0.35288819875776356,
+      "h": 3.0536645962732916,
+      "sourceTread": 15
+    },
+    {
+      "id": "left-step-16",
+      "x": 5.785093167701863,
+      "y": 4.573167701863355,
+      "w": 0.3571118012422362,
+      "h": 3.226832298136645,
+      "sourceTread": 16
+    },
+    {
+      "id": "left-step-17",
+      "x": 6.127204968944099,
+      "y": 4.4,
+      "w": 0.6020807453416145,
+      "h": 3.3999999999999995,
+      "sourceTread": 17
+    },
+    {
+      "id": "right-approach",
+      "x": 59.3,
+      "y": 7.6,
+      "w": 0.22,
+      "h": 0.2,
+      "approach": true
+    },
+    {
+      "id": "right-step-0",
+      "x": 59.12462732919255,
+      "y": 7.407204968944099,
+      "w": 0.16282608695652168,
+      "h": 0.3927950310559005,
+      "sourceTread": 0
+    },
+    {
+      "id": "right-step-1",
+      "x": 58.80363354037267,
+      "y": 7.204472049689441,
+      "w": 0.33599378881987585,
+      "h": 0.5955279503105588,
+      "sourceTread": 1
+    },
+    {
+      "id": "right-step-2",
+      "x": 58.47419254658385,
+      "y": 7.027080745341615,
+      "w": 0.34444099378881965,
+      "h": 0.772919254658385,
+      "sourceTread": 2
+    },
+    {
+      "id": "right-step-3",
+      "x": 58.14475155279503,
+      "y": 6.849689440993789,
+      "w": 0.3444409937888201,
+      "h": 0.9503105590062111,
+      "sourceTread": 3
+    },
+    {
+      "id": "right-step-4",
+      "x": 57.81953416149068,
+      "y": 6.676521739130434,
+      "w": 0.34021739130434747,
+      "h": 1.1234782608695655,
+      "sourceTread": 4
+    },
+    {
+      "id": "right-step-5",
+      "x": 57.49431677018633,
+      "y": 6.499130434782609,
+      "w": 0.3402173913043479,
+      "h": 1.3008695652173907,
+      "sourceTread": 5
+    },
+    {
+      "id": "right-step-6",
+      "x": 57.16065217391304,
+      "y": 6.330186335403726,
+      "w": 0.3486645962732918,
+      "h": 1.4698136645962734,
+      "sourceTread": 6
+    },
+    {
+      "id": "right-step-7",
+      "x": 56.839658385093166,
+      "y": 6.157018633540373,
+      "w": 0.33599378881987574,
+      "h": 1.642981366459627,
+      "sourceTread": 7
+    },
+    {
+      "id": "right-step-8",
+      "x": 56.510217391304344,
+      "y": 5.9838509316770185,
+      "w": 0.3444409937888201,
+      "h": 1.8161490683229813,
+      "sourceTread": 8
+    },
+    {
+      "id": "right-step-9",
+      "x": 56.18077639751552,
+      "y": 5.806459627329192,
+      "w": 0.34444099378881965,
+      "h": 1.9935403726708074,
+      "sourceTread": 9
+    },
+    {
+      "id": "right-step-10",
+      "x": 55.85555900621118,
+      "y": 5.633291925465839,
+      "w": 0.34021739130434836,
+      "h": 2.166708074534161,
+      "sourceTread": 10
+    },
+    {
+      "id": "right-step-11",
+      "x": 55.52611801242236,
+      "y": 5.4601242236024845,
+      "w": 0.3444409937888201,
+      "h": 2.3398757763975153,
+      "sourceTread": 11
+    },
+    {
+      "id": "right-step-12",
+      "x": 55.20090062111801,
+      "y": 5.282732919254658,
+      "w": 0.34021739130434747,
+      "h": 2.5172670807453414,
+      "sourceTread": 12
+    },
+    {
+      "id": "right-step-13",
+      "x": 54.87145962732919,
+      "y": 5.109565217391305,
+      "w": 0.3444409937888201,
+      "h": 2.690434782608695,
+      "sourceTread": 13
+    },
+    {
+      "id": "right-step-14",
+      "x": 54.5377950310559,
+      "y": 4.923726708074534,
+      "w": 0.3486645962732918,
+      "h": 2.8762732919254654,
+      "sourceTread": 14
+    },
+    {
+      "id": "right-step-15",
+      "x": 54.19990683229814,
+      "y": 4.746335403726708,
+      "w": 0.35288819875776356,
+      "h": 3.0536645962732916,
+      "sourceTread": 15
+    },
+    {
+      "id": "right-step-16",
+      "x": 53.85779503105591,
+      "y": 4.573167701863355,
+      "w": 0.3571118012422362,
+      "h": 3.226832298136645,
+      "sourceTread": 16
+    },
+    {
+      "id": "right-step-17",
+      "x": 53.270714285714284,
+      "y": 4.4,
+      "w": 0.6020807453416145,
+      "h": 3.3999999999999995,
+      "sourceTread": 17
+    }
+  ],
+  "props": [
+    {
+      "sprite": "jardin",
+      "x": 9.5,
+      "y": 7.8,
+      "w": 2.6,
+      "h": 1.43,
+      "layer": "back"
+    },
+    {
+      "sprite": "tablon",
+      "x": 13.5,
+      "y": 7.8,
+      "w": 2.25,
+      "h": 1.98,
+      "layer": "back"
+    },
+    {
+      "sprite": "maniqui",
+      "x": 17,
+      "y": 7.8,
+      "w": 1.15,
+      "h": 1.71,
+      "layer": "back"
+    },
+    {
+      "sprite": "reloj",
+      "x": 23,
+      "y": 7.8,
+      "w": 2.95,
+      "h": 3.25,
+      "layer": "back"
+    },
+    {
+      "sprite": "portal",
+      "x": 31,
+      "y": 7.8,
+      "w": 3.05,
+      "h": 3.2,
+      "layer": "back"
+    },
+    {
+      "sprite": "tienda",
+      "x": 37,
+      "y": 7.8,
+      "w": 2.85,
+      "h": 2.92,
+      "layer": "back"
+    },
+    {
+      "sprite": "banco",
+      "x": 45,
+      "y": 7.8,
+      "w": 2.8,
+      "h": 2.38,
+      "layer": "back"
+    },
+    {
+      "sprite": "arcade",
+      "x": 50,
+      "y": 7.8,
+      "w": 1.35,
+      "h": 2.32,
+      "layer": "back"
+    },
+    {
+      "sprite": "banca",
+      "x": 9,
+      "y": 4.4,
+      "w": 1.65,
+      "h": 1.04,
+      "layer": "back"
+    },
+    {
+      "sprite": "lectura",
+      "x": 12.5,
+      "y": 4.4,
+      "w": 2.15,
+      "h": 2.27,
+      "layer": "back"
+    }
+  ],
+  "entities": [
+    {
+      "id": "start",
+      "type": "spawn",
+      "x": 27,
+      "y": 7.8,
+      "name": "Llegada"
+    },
+    {
+      "id": "estela",
+      "type": "npc",
+      "x": 28.5,
+      "y": 7.8,
+      "name": "Estela",
+      "sprite": "estela_idle-0",
+      "w": 1.3418511066398389,
+      "h": 1.9,
+      "dialogue": "welcome",
+      "after": "travel"
+    },
+    {
+      "id": "merchant",
+      "type": "npc",
+      "x": 35,
+      "y": 7.8,
+      "name": "Mercader del Tiempo",
+      "sprite": "mercader",
+      "w": 1.2,
+      "h": 1.58,
+      "dialogue": "merchant",
+      "after": "shop"
+    },
+    {
+      "id": "tempo",
+      "type": "npc",
+      "x": 43,
+      "y": 7.8,
+      "name": "Tempo",
+      "sprite": "tempo",
+      "w": 1.18,
+      "h": 1.52,
+      "dialogue": "tempo",
+      "after": "bank"
+    },
+    {
+      "id": "garden",
+      "type": "station",
+      "x": 9.5,
+      "y": 7.8,
+      "name": "Jardín de mascotas",
+      "action": "garden",
+      "prompt": "Usar",
+      "w": 2.6,
+      "h": 1.43
+    },
+    {
+      "id": "reading",
+      "type": "station",
+      "x": 12.5,
+      "y": 4.4,
+      "name": "Rincón de lectura",
+      "action": "reading",
+      "prompt": "Usar",
+      "w": 2.15,
+      "h": 2.27
+    },
+    {
+      "id": "clock",
+      "type": "station",
+      "x": 23,
+      "y": 7.8,
+      "name": "Reloj de las Épocas",
+      "action": "clock",
+      "prompt": "Usar",
+      "w": 2.95,
+      "h": 3.25
+    },
+    {
+      "id": "shop",
+      "type": "station",
+      "x": 37,
+      "y": 7.8,
+      "name": "Tienda del Tiempo",
+      "action": "shop",
+      "prompt": "Usar",
+      "w": 2.85,
+      "h": 2.92
+    },
+    {
+      "id": "bank",
+      "type": "station",
+      "x": 45,
+      "y": 7.8,
+      "name": "Banco del Tiempo",
+      "action": "bank",
+      "prompt": "Usar",
+      "w": 2.8,
+      "h": 2.38
+    },
+    {
+      "id": "arcade",
+      "type": "station",
+      "x": 50,
+      "y": 7.8,
+      "name": "Arcade",
+      "action": "arcade",
+      "prompt": "Usar",
+      "w": 1.35,
+      "h": 2.32
+    },
+    {
+      "id": "board",
+      "type": "station",
+      "x": 13.5,
+      "y": 7.8,
+      "name": "Tablón de expediciones",
+      "action": "board",
+      "prompt": "Usar",
+      "w": 2.25,
+      "h": 1.98
+    },
+    {
+      "id": "dummy",
+      "type": "station",
+      "x": 17,
+      "y": 7.8,
+      "name": "Entrenamiento",
+      "action": "practice",
+      "prompt": "Usar",
+      "w": 1.15,
+      "h": 1.71
+    },
+    {
+      "id": "portal",
+      "type": "portal",
+      "x": 31,
+      "y": 7.8,
+      "name": "Portal del Tiempo",
+      "action": "travel",
+      "radius": 1.2,
+      "w": 3.05,
+      "h": 3.2
+    },
+    {
+      "id": "telescope",
+      "type": "secret",
+      "x": 52,
+      "y": 4.4,
+      "name": "El mismo cielo",
+      "sprite": "telescopio",
+      "w": 1.5,
+      "h": 1.99,
+      "action": "telescope",
+      "revealRadius": 2
+    },
+    {
+      "id": "high-chest",
+      "type": "chest",
+      "x": 22.75,
+      "y": 1.5,
+      "name": "Cofre de las alturas",
+      "hidden": true,
+      "revealRadius": 1.7,
+      "reward": {
+        "tokens": 15,
+        "item": {
+          "id": "medallon",
+          "name": "Medallón del cielo",
+          "text": "Recuerdo de tu súper salto."
+        }
+      },
+      "sprite": "cofre",
+      "w": 0.95,
+      "h": 0.92
+    },
+    {
+      "id": "spark-chest",
+      "type": "chest",
+      "x": 46.5,
+      "y": 4.4,
+      "name": "Cofre de las chispas",
+      "requiresSparks": 12,
+      "reward": {
+        "tokens": 20,
+        "item": {
+          "id": "insignia",
+          "name": "Insignia de exploración",
+          "text": "Encontraste todas las chispas de la Academia."
+        }
+      },
+      "sprite": "cofre",
+      "w": 0.95,
+      "h": 0.92
+    },
+    {
+      "id": "guide",
+      "type": "sign",
+      "x": 25.5,
+      "y": 7.8,
+      "name": "Camino de estrellas",
+      "text": "Corre para llenar tu energía. Con la barra llena, salta: ¡súper salto! Usa ↓ o S para bajar de una plataforma."
+    },
+    {
+      "id": "spark-1",
+      "type": "collectible",
+      "x": 8,
+      "y": 7.15,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "spark-2",
+      "type": "collectible",
+      "x": 16,
+      "y": 7.15,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "spark-3",
+      "type": "collectible",
+      "x": 33,
+      "y": 7.15,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "spark-4",
+      "type": "collectible",
+      "x": 48,
+      "y": 7.15,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "spark-5",
+      "type": "collectible",
+      "x": 10.5,
+      "y": 3.75,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "spark-6",
+      "type": "collectible",
+      "x": 18,
+      "y": 3.75,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "spark-7",
+      "type": "collectible",
+      "x": 42,
+      "y": 3.75,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "spark-8",
+      "type": "collectible",
+      "x": 20.8,
+      "y": 5.65,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "spark-9",
+      "type": "collectible",
+      "x": 39.2,
+      "y": 5.65,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "spark-10",
+      "type": "collectible",
+      "x": 23.4,
+      "y": 0.85,
+      "name": "Chispa del tiempo"
+    },
+    {
+      "id": "reading-spark",
+      "type": "collectible",
+      "x": 12.5,
+      "y": 3.75,
+      "name": "Chispa de lectura",
+      "source": "reading"
+    },
+    {
+      "id": "sky-spark",
+      "type": "collectible",
+      "x": 52,
+      "y": 3.75,
+      "name": "Chispa del cielo",
+      "source": "telescope"
+    }
+  ],
+  "dialogues": {
+    "welcome": [
+      {
+        "type": "line",
+        "who": "estela",
+        "text": "Soy Estela, la guardiana del tiempo. ¡Bienvenido a la Academia!"
+      },
+      {
+        "type": "line",
+        "who": "estela",
+        "text": "Este observatorio está fuera del tiempo. Aquí puedes descansar, practicar y conocer a tus compañeros."
+      },
+      {
+        "type": "line",
+        "who": "estela",
+        "text": "Mira arriba: esas monedas son tus fichas. Las ganas con desafíos y cofres, y las gastas en el Puesto del Mercader o las guardas en el Banco de Tempo."
+      },
+      {
+        "type": "line",
+        "who": "estela",
+        "text": "Las estrellitas doradas que flotan son chispas del tiempo. Hay 12 escondidas: con las 12 se abre el Cofre de las chispas, en la galería de la derecha."
+      },
+      {
+        "type": "line",
+        "who": "estela",
+        "text": "Y el Reloj de las Épocas perdió sus 8 piezas. Cada viaje por el Portal te devuelve una. Si olvidas algo, toca cualquier contador de arriba."
+      },
+      {
+        "type": "line",
+        "who": "estela",
+        "text": "Viaja, ayuda, coopera y escucha. El pasado guarda muchas voces."
+      },
+      {
+        "type": "goal",
+        "text": "Explora la Academia, conoce al Mercader y a Tempo y encuentra las 12 chispas."
+      },
+      {
+        "type": "line",
+        "who": "estela",
+        "text": "Hoy, explora la Academia. Conoce al Mercader y a Tempo y busca las doce chispas del tiempo."
+      },
+      {
+        "type": "set",
+        "flag": "welcomed",
+        "value": true
+      }
+    ],
+    "ready": [
+      {
+        "type": "choice",
+        "id": "ready",
+        "prompt": "¿Listo para viajar?",
+        "options": [
+          {
+            "text": "¡Vamos al Portal del Tiempo!",
+            "set": {
+              "travelReady": true
+            }
+          },
+          {
+            "text": "Seguir explorando",
+            "set": {
+              "travelReady": false
+            }
+          }
+        ]
+      }
+    ],
+    "merchant": [
+      {
+        "type": "line",
+        "who": "mercader",
+        "text": "¡Por todos los mapas! Mi carro trae tesoros de muchas épocas. ¿Buscas algo para tu próxima aventura?"
+      },
+      {
+        "type": "line",
+        "who": "mercader",
+        "text": "Puedes comprar con fichas y vender por la mitad del precio. Tus recuerdos van a la mochila."
+      },
+      {
+        "type": "set",
+        "flag": "metMerchant",
+        "value": true
+      }
+    ],
+    "tempo": [
+      {
+        "type": "line",
+        "who": "tempo",
+        "text": "Bienvenido al Banco del Tiempo. Soy Tempo. Tic… ¡qué gusto conocerte! …tac."
+      },
+      {
+        "type": "line",
+        "who": "tempo",
+        "text": "Ahorrar es guardar hoy para un plan de mañana. Cada semana tus ahorros crecen un 5%, hasta 10 fichas."
+      },
+      {
+        "type": "set",
+        "flag": "metTempo",
+        "value": true
+      }
+    ],
+    "telescope": [
+      {
+        "type": "line",
+        "who": "estela",
+        "text": "Todos miraron el mismo cielo. Cada pueblo encontró sus propias historias entre luces y sombras."
+      }
+    ]
+  },
+  "sparkTotal": 12,
+  "characters": {
+    "estela": {
+      "name": "Estela",
+      "portrait": "estela_idle-0",
+      "color": "#7c5cff"
+    },
+    "mercader": {
+      "name": "Mercader del Tiempo",
+      "portrait": "mercader",
+      "color": "#976522"
+    },
+    "tempo": {
+      "name": "Tempo",
+      "portrait": "tempo",
+      "color": "#267a99"
+    },
+    "narrador": {
+      "name": "La Academia"
+    },
+    "mascota": {
+      "name": "Tu mascota",
+      "portrait": "pet_sit-0"
+    }
+  },
+  "catalog": [
+    {
+      "id": "panuelo",
+      "name": "Pañuelo de marinero para tu mascota",
+      "price": 10,
+      "text": "Un pequeño pañuelo para un gran viaje.",
+      "icon": "objeto_panuelo",
+      "merchantLine": "¡Tu mascota se verá lista para zarpar! Un pañuelo para un gran compañero."
+    },
+    {
+      "id": "sombrero",
+      "name": "Sombrero de explorador",
+      "price": 20,
+      "text": "Para salir a descubrir.",
+      "icon": "objeto_sombrero",
+      "merchantLine": "Para ti, que siempre quieres descubrir qué hay más allá."
+    },
+    {
+      "id": "brujula",
+      "name": "Brújula de bolsillo",
+      "price": 25,
+      "text": "Un norte que cabe en tu mano.",
+      "icon": "objeto_brujula",
+      "merchantLine": "Un norte que cabe en tu mano. ¡Nunca te perderás!"
+    },
+    {
+      "id": "capa",
+      "name": "Capa de estrellas",
+      "price": 40,
+      "text": "Un pedacito de cielo en tu mochila.",
+      "icon": "objeto_capa",
+      "merchantLine": "Lleva un pedacito de cielo contigo. ¡Te queda de maravilla!"
+    },
+    {
+      "id": "linterna",
+      "name": "Linterna de época",
+      "price": 15,
+      "text": "Luz para tus próximas aventuras.",
+      "icon": "objeto_linterna",
+      "merchantLine": "Cuando el camino se oscurezca, tú llevarás la luz."
+    },
+    {
+      "id": "mapa",
+      "name": "Mapa antiguo enmarcado",
+      "price": 30,
+      "text": "Cada línea guarda una historia.",
+      "icon": "objeto_mapa",
+      "merchantLine": "Cada línea guarda una historia. ¿Cuál vas a descubrir tú?"
+    }
+  ],
+  "chapters": [
+    {
+      "title": "Hacia lo desconocido",
+      "year": "1492",
+      "available": true
+    },
+    {
+      "title": "Magallanes y el paso del sur",
+      "year": "1520",
+      "available": false
+    },
+    {
+      "title": "Almagro: caminos hacia Chile",
+      "year": "1536",
+      "available": false
+    },
+    {
+      "title": "La fundación de Santiago",
+      "year": "1541",
+      "available": false
+    },
+    {
+      "title": "Vidas en la colonia",
+      "year": "siglos XVI–XVIII",
+      "available": false
+    },
+    {
+      "title": "Santiago tiembla",
+      "year": "1647",
+      "available": false
+    },
+    {
+      "title": "Los parlamentos de Quilín",
+      "year": "1641",
+      "available": false
+    },
+    {
+      "title": "Lo que queda hoy",
+      "year": "hoy",
+      "available": false
+    }
+  ],
+  "classmates": [
+    {
+      "id": "martina",
+      "name": "Martina",
+      "x": 15,
+      "y": 7.8,
+      "style": "cola",
+      "clothes": "#14b8a6",
+      "skin": "#f3c9a5",
+      "pieces": 2,
+      "featured": "Brújula de bolsillo",
+      "zone": [
+        7.3,
+        18.8
+      ]
+    },
+    {
+      "id": "benja",
+      "name": "Benja",
+      "x": 10.5,
+      "y": 4.4,
+      "style": "desordenado",
+      "clothes": "#3b82f6",
+      "skin": "#b9783f",
+      "pieces": 1,
+      "featured": "Sombrero de explorador",
+      "zone": [
+        7.1,
+        19
+      ]
+    },
+    {
+      "id": "sofi",
+      "name": "Sofi",
+      "x": 47.5,
+      "y": 7.8,
+      "style": "afro",
+      "clothes": "#f87171",
+      "skin": "#7a4a2a",
+      "pieces": 3,
+      "featured": "Capa de estrellas",
+      "zone": [
+        41,
+        52.8
+      ]
+    },
+    {
+      "id": "tomas",
+      "name": "Tomás",
+      "x": 48,
+      "y": 4.4,
+      "style": "desordenado",
+      "clothes": "#f5c842",
+      "skin": "#e9a86e",
+      "pieces": 0,
+      "featured": "Pañuelo de marinero",
+      "zone": [
+        41,
+        52.8
+      ]
+    }
+  ],
+  "phrases": [
+    "¡Hola!",
+    "¡Bien hecho!",
+    "¿Vamos a una expedición?",
+    "¡Mira mi mascota!"
+  ],
+  "practice": {
+    "count": 3,
+    "tokensEach": 2,
+    "source": "ref/cap1.json"
+  },
+  "stationCopy": {
+    "arcade": {
+      "title": "Arcade del Tiempo",
+      "text": "Pronto: minijuegos para descubrir, pensar y practicar."
+    },
+    "board": {
+      "title": "Expediciones",
+      "text": "Pronto: aventuras en grupo con compañeros de tu mismo curso. Nos comunicaremos con gestos y frases elegidas."
+    }
+  },
+  "reading": [
+    "En 1492, los navegantes usaban la brújula, las estrellas y sus cálculos para orientarse. No tenían GPS.",
+    "La Cruz del Sur ayuda a encontrar el sur en el cielo. Desde Chile podemos buscar sus cuatro estrellas principales.",
+    "En la Vía Láctea, pueblos andinos reconocen una llama en las zonas oscuras entre las estrellas: la Yacana."
+  ],
+  "sky": [
+    {
+      "title": "Cruz del Sur",
+      "text": "Sus estrellas luminosas ayudan a orientarse hacia el sur."
+    },
+    {
+      "title": "Yacana, la Llama",
+      "text": "En la tradición andina, una llama aparece en las nubes oscuras de la Vía Láctea."
+    }
+  ],
+  "version": "2.1",
+  "stairArt": {
+    "size": [
+      1495,
+      997
+    ],
+    "ground": 996,
+    "landing": 191,
+    "treads": [
+      [
+        74,
+        895
+      ],
+      [
+        109,
+        847
+      ],
+      [
+        185,
+        805
+      ],
+      [
+        263,
+        763
+      ],
+      [
+        341,
+        722
+      ],
+      [
+        418,
+        680
+      ],
+      [
+        495,
+        640
+      ],
+      [
+        574,
+        599
+      ],
+      [
+        650,
+        558
+      ],
+      [
+        728,
+        516
+      ],
+      [
+        806,
+        475
+      ],
+      [
+        883,
+        434
+      ],
+      [
+        961,
+        392
+      ],
+      [
+        1038,
+        351
+      ],
+      [
+        1116,
+        307
+      ],
+      [
+        1195,
+        265
+      ],
+      [
+        1275,
+        224
+      ],
+      [
+        1356,
+        183
+      ]
+    ],
+    "scale": 0.004223602484472049,
+    "left": 0.4,
+    "right": 59.6,
+    "width": 6.314285714285713
+  },
+  "palette": {
+    "tienda": 12,
+    "arcade": 176,
+    "reloj": 203,
+    "banco": 196,
+    "lectura": 348,
+    "banca": 209,
+    "tablon": 35,
+    "maniqui": 38,
+    "jardin": 162,
+    "portal": 207,
+    "telescopio": 208,
+    "mercader": 12
+  },
+  "animations": {
+    "portal": {
+      "vortex": {
+        "center": [
+          226,
+          280
+        ],
+        "radius": [
+          125,
+          137
+        ],
+        "bounds": [
+          100,
+          148,
+          351,
+          417
+        ]
+      },
+      "lights": [
+        [
+          48,
+          351,
+          24
+        ],
+        [
+          406,
+          354,
+          24
+        ]
+      ]
+    },
+    "reloj": {
+      "circles": [
+        [
+          215,
+          236,
+          74,
+          0.1
+        ],
+        [
+          166,
+          65,
+          25,
+          -0.17
+        ],
+        [
+          124,
+          298,
+          39,
+          -0.13
+        ],
+        [
+          317,
+          169,
+          35,
+          -0.16
+        ],
+        [
+          170,
+          420,
+          30,
+          0.14
+        ],
+        [
+          280,
+          327,
+          24,
+          0.12
+        ],
+        [
+          128,
+          81,
+          23,
+          0.15
+        ],
+        [
+          310,
+          86,
+          25,
+          -0.15
+        ]
+      ],
+      "hand": [
+        215,
+        236,
+        99
+      ],
+      "lights": [
+        [
+          224,
+          46,
+          30
+        ]
+      ]
+    },
+    "tienda": {
+      "lights": [
+        [
+          26,
+          155,
+          20
+        ],
+        [
+          106,
+          152,
+          18
+        ],
+        [
+          336,
+          262,
+          22
+        ]
+      ],
+      "sway": {
+        "polygon": [
+          [
+            348,
+            87
+          ],
+          [
+            399,
+            80
+          ],
+          [
+            390,
+            211
+          ],
+          [
+            373,
+            195
+          ],
+          [
+            354,
+            216
+          ]
+        ],
+        "pivot": [
+          373,
+          85
+        ],
+        "amplitude": 0.035
+      },
+      "twinkle": [
+        203,
+        172
+      ]
+    },
+    "banco": {
+      "circles": [
+        [
+          143,
+          194,
+          42,
+          0.07
+        ]
+      ],
+      "lights": [
+        [
+          23,
+          170,
+          20
+        ],
+        [
+          325,
+          164,
+          18
+        ],
+        [
+          378,
+          169,
+          19
+        ]
+      ]
+    },
+    "arcade": {
+      "screen": [
+        [
+          54,
+          65
+        ],
+        [
+          129,
+          69
+        ],
+        [
+          140,
+          129
+        ],
+        [
+          44,
+          126
+        ]
+      ]
+    },
+    "lectura": {
+      "lights": [
+        [
+          198,
+          39,
+          20
+        ],
+        [
+          254,
+          149,
+          31
+        ]
+      ]
+    },
+    "jardin": {
+      "sway": {
+        "polygon": [
+          [
+            26,
+            45
+          ],
+          [
+            70,
+            39
+          ],
+          [
+            90,
+            98
+          ],
+          [
+            48,
+            144
+          ],
+          [
+            13,
+            132
+          ]
+        ],
+        "pivot": [
+          49,
+          140
+        ],
+        "amplitude": 0.022
+      },
+      "butterfly": [
+        180,
+        68
+      ]
+    },
+    "maniqui": {
+      "wobble": 0.035
+    },
+    "telescopio": {
+      "twinkle": [
+        191,
+        54
+      ]
+    },
+    "tablon": {
+      "sway": {
+        "polygon": [
+          [
+            204,
+            72
+          ],
+          [
+            216,
+            74
+          ],
+          [
+            216,
+            95
+          ],
+          [
+            209,
+            87
+          ]
+        ],
+        "pivot": [
+          204,
+          72
+        ],
+        "amplitude": 0.07
+      }
+    },
+    "muro": {
+      "lights": [
+        [
+          768,
+          263,
+          53
+        ]
+      ]
+    },
+    "atrio": {
+      "lights": [
+        [
+          236,
+          272,
+          54
+        ],
+        [
+          1435,
+          272,
+          54
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+Storybook cartoon game UI art for a children's adventure game: clean dark brown outlines, soft cel shading, warm honey and walnut wood, polished brass and gold, deep teal accents, the same art style as the reference image.
+A game UI kit sprite sheet: separate pieces well apart from each other on a flat chroma green background (#00B140), landscape. Nothing overlaps, no shadows on the green, no text or letters anywhere.
+1) Top left, large: an empty rectangular menu window frame: a thick dark walnut wood border with polished brass corner caps and small rivets, evenly thick on all four sides; the inside of the frame is completely empty flat chroma green.
+2) Top right: a blank horizontal title ribbon banner of deep teal cloth with gold trim and folded ends.
+3) Middle right: a blank rectangle of warm parchment paper with softly worn edges.
+4) Bottom row, left to right: a square item slot (brass frame with dark teal velvet inside); a small blank paper price tag with a string; a round brass close button with an X; a blank rounded golden button with small teal gems at both ends; a blank rounded deep teal button with brass trim; a blank wooden shelf plank with brass brackets.

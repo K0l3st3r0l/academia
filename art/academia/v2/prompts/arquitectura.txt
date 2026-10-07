@@ -1,0 +1,7 @@
+Storybook cartoon game art for a children's 2D platformer: clean dark brown outlines, soft cel shading, rich but warm colours, the same art style as the reference image.
+A sprite sheet of separate architecture pieces for a 2D side-scrolling platformer, each piece well apart from the others on a flat chroma green background (#00B140), landscape. Nothing overlaps, no shadows on the green.
+1) Top row, full width: a long horizontal wooden balcony gallery floor seen from the side and slightly from above: a thin band of walnut floor planks on top (the walkable surface, seen a little from above), and below it a thick carved honey-wood beam with brass rivets and small brass star ornaments hanging underneath.
+2) Second row, full width: a long horizontal balcony railing seen straight from the front: a polished brass handrail on top, slim turned brass balusters evenly spaced with clear gaps of green between them, and a thin wooden bottom rail.
+3) Bottom row, left: two tall cream sandstone columns with brass capitals and bases, straight-on view.
+4) Bottom row, right: a flat round hanging wooden platform with a polished brass rim and small brass hooks at both ends for chains (no chains), seen from the side and slightly from above, with three small warm candle lights along its rim.
+Palette: honey and walnut wood, polished brass, cream sandstone. No purple. No characters, no text.

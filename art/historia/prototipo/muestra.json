@@ -1,0 +1,671 @@
+{
+  "id": "muestra_motor",
+  "number": 1,
+  "title": "Dos miradas, un horizonte",
+  "year": "1492",
+  "goals": [
+    "Preparar las provisiones del viaje",
+    "Escuchar otra mirada al llegar a la playa"
+  ],
+  "characters": {
+    "estela": {
+      "name": "Estela",
+      "portrait": "estela",
+      "color": "#7C5CFF"
+    },
+    "diego": {
+      "name": "Diego",
+      "portrait": "diego",
+      "color": "#347E85"
+    },
+    "nina_lucaya": {
+      "name": "Niña lucaya",
+      "portrait": "nina_lucaya",
+      "color": "#A45470"
+    },
+    "mascota": {
+      "name": "Tu zorro",
+      "portrait": "mascota",
+      "color": "#A15D30"
+    },
+    "narrador": {
+      "name": "",
+      "portrait": null
+    }
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "title": "Antes de zarpar",
+      "place": "Puerto de Palos",
+      "date": "Agosto de 1492",
+      "background": "bg_palos",
+      "perspective": "Tripulación",
+      "beats": [
+        {
+          "type": "set",
+          "flag": "confianza",
+          "value": 1
+        },
+        {
+          "type": "goal",
+          "text": "Preparar las provisiones del viaje"
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "El puerto despierta. Tu viaje comienza entre barriles y velas."
+        },
+        {
+          "type": "line",
+          "who": "estela",
+          "text": "¡Hola, viajero! Esta es una muestra breve del motor. Tus decisiones dejarán recuerdos.",
+          "mood": "feliz"
+        },
+        {
+          "type": "choice",
+          "id": "carga",
+          "prompt": "Puedes llevar una carga extra. ¿Qué eliges?",
+          "options": [
+            {
+              "text": "Barriles de agua",
+              "set": {
+                "carga": "agua"
+              },
+              "then": [
+                {
+                  "type": "line",
+                  "who": "diego",
+                  "text": "El agua será valiosa en el mar.",
+                  "mood": "serio"
+                },
+                {
+                  "type": "if",
+                  "cond": {
+                    "flag": "confianza",
+                    "eq": 1
+                  },
+                  "then": [
+                    {
+                      "type": "choice",
+                      "id": "ayuda",
+                      "prompt": "¿Cómo ayudas a la tripulación?",
+                      "options": [
+                        {
+                          "text": "Invito a Diego a contar conmigo",
+                          "set": {
+                            "companero": "diego"
+                          },
+                          "then": [
+                            {
+                              "type": "set",
+                              "flag": "equipo",
+                              "value": true
+                            },
+                            {
+                              "type": "line",
+                              "who": "diego",
+                              "text": "Contemos juntos.",
+                              "mood": "feliz"
+                            }
+                          ]
+                        },
+                        {
+                          "text": "Reviso las provisiones por mi cuenta",
+                          "set": {
+                            "companero": "solo"
+                          },
+                          "then": [
+                            {
+                              "type": "line",
+                              "who": "estela",
+                              "text": "Puedes pedir ayuda cuando la necesites."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "else": [
+                    {
+                      "type": "line",
+                      "who": "estela",
+                      "text": "Primero conozcamos a la tripulación."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Herramientas para reparar",
+              "set": {
+                "carga": "herramientas"
+              },
+              "then": [
+                {
+                  "type": "line",
+                  "who": "diego",
+                  "text": "Cuidar el barco también es importante.",
+                  "mood": "sorpresa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "if",
+          "cond": {
+            "flag": "carga",
+            "ne": "agua"
+          },
+          "then": [
+            {
+              "type": "item",
+              "id": "cuerda",
+              "name": "Cuerda de grumete",
+              "text": "Un recuerdo de tu ayuda con las reparaciones."
+            }
+          ],
+          "else": [
+            {
+              "type": "item",
+              "id": "cantimplora",
+              "name": "Cantimplora de viajero",
+              "text": "Un recuerdo de tu cuidado de las provisiones."
+            }
+          ]
+        },
+        {
+          "type": "challenge",
+          "id": "A",
+          "subject": "matematica",
+          "oa": [
+            "MA-OA4"
+          ],
+          "kind": "mc",
+          "who": "estela",
+          "variants": {
+            "inicial": {
+              "prompt": "Hay 2 barriles y llega 1 más. ¿Cuántos hay?",
+              "options": [
+                "2",
+                "3",
+                "4"
+              ],
+              "answer": 1,
+              "explain": "2 + 1 = 3 barriles."
+            },
+            "intermedio": {
+              "prompt": "Hay 3 filas de 4 barriles. ¿Cuántos barriles hay?",
+              "options": [
+                "7",
+                "12",
+                "16"
+              ],
+              "answer": 1,
+              "explain": "3 × 4 = 12. Cada fila tiene 4 barriles."
+            },
+            "avanzado": {
+              "prompt": "Hay 6 filas de 8 barriles. ¿Cuántos barriles hay?",
+              "options": [
+                "14",
+                "48",
+                "56"
+              ],
+              "answer": 1,
+              "explain": "6 × 8 = 48 barriles."
+            }
+          },
+          "hint": "Cuenta los barriles de cada fila. Puedes sumar filas iguales.",
+          "success": "¡Ya sabemos cuántos barriles embarcar!",
+          "tokens": 3,
+          "intro": "Antes de partir, contemos las provisiones."
+        },
+        {
+          "type": "challenge",
+          "id": "B",
+          "subject": "matematica",
+          "oa": [
+            "MA-OA6"
+          ],
+          "kind": "numeric",
+          "who": "estela",
+          "variants": {
+            "inicial": {
+              "prompt": "6 panes se reparten entre 2 personas. ¿Cuántos recibe cada una?",
+              "answer": 3,
+              "unit": "panes",
+              "tolerance": 0,
+              "explain": "6 ÷ 2 = 3 panes por persona."
+            },
+            "intermedio": {
+              "prompt": "24 panes se reparten entre 4 personas. ¿Cuántos recibe cada una?",
+              "answer": 6,
+              "unit": "panes",
+              "tolerance": 0,
+              "explain": "24 ÷ 4 = 6. Cada persona recibe 6 panes."
+            },
+            "avanzado": {
+              "prompt": "72 panes se reparten entre 6 personas. ¿Cuántos recibe cada una?",
+              "answer": 12,
+              "unit": "panes",
+              "tolerance": 0,
+              "explain": "72 ÷ 6 = 12 panes por persona."
+            }
+          },
+          "hint": "Reparte la misma cantidad a cada persona.",
+          "success": "El reparto quedó justo.",
+          "tokens": 4
+        },
+        {
+          "type": "challenge",
+          "id": "C",
+          "subject": "ingles",
+          "oa": [
+            "IN-OA1"
+          ],
+          "kind": "match",
+          "who": "estela",
+          "variants": {
+            "inicial": {
+              "prompt": "Une las palabras con su significado.",
+              "pairs": [
+                [
+                  "water",
+                  "agua"
+                ],
+                [
+                  "sun",
+                  "sol"
+                ],
+                [
+                  "ship",
+                  "barco"
+                ]
+              ],
+              "explain": "Water significa agua; sun, sol; ship, barco."
+            },
+            "intermedio": {
+              "prompt": "Ayuda a traducir estas palabras del viaje.",
+              "pairs": [
+                [
+                  "water",
+                  "agua"
+                ],
+                [
+                  "sail",
+                  "vela"
+                ],
+                [
+                  "shore",
+                  "orilla"
+                ]
+              ],
+              "explain": "Water es agua; sail es vela; shore es orilla."
+            },
+            "avanzado": {
+              "prompt": "Une cada frase con su significado.",
+              "pairs": [
+                [
+                  "fresh water",
+                  "agua dulce"
+                ],
+                [
+                  "open sea",
+                  "mar abierto"
+                ],
+                [
+                  "safe shore",
+                  "orilla segura"
+                ]
+              ],
+              "explain": "Fresh water: agua dulce. Open sea: mar abierto. Safe shore: orilla segura."
+            }
+          },
+          "hint": "Water es lo que bebes cuando tienes sed.",
+          "success": "¡Las palabras también nos ayudan a viajar!",
+          "tokens": 3
+        },
+        {
+          "type": "challenge",
+          "id": "D",
+          "subject": "ciencias",
+          "oa": [
+            "CN-OA1"
+          ],
+          "kind": "order",
+          "who": "estela",
+          "variants": {
+            "inicial": {
+              "prompt": "Ordena estas etapas de una planta.",
+              "items": [
+                "Semilla",
+                "Brote",
+                "Planta adulta"
+              ],
+              "explain": "De una semilla nace un brote que crece hasta ser una planta adulta."
+            },
+            "intermedio": {
+              "prompt": "Ordena el crecimiento de una planta.",
+              "items": [
+                "Semilla",
+                "Germinación",
+                "Brote",
+                "Planta adulta"
+              ],
+              "explain": "La semilla germina, aparece un brote y luego una planta adulta."
+            },
+            "avanzado": {
+              "prompt": "Ordena el ciclo de esta planta con flores.",
+              "items": [
+                "Semilla",
+                "Germinación",
+                "Planta joven",
+                "Planta con flores",
+                "Fruto con semillas"
+              ],
+              "explain": "Las semillas germinan y forman plantas. Las flores pueden dar frutos con nuevas semillas."
+            }
+          },
+          "hint": "Piensa en lo que ocurre antes de que aparezca el primer brote.",
+          "success": "Ahora conoces un ciclo de vida.",
+          "tokens": 3
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Desde la playa",
+      "place": "Una isla de las Bahamas",
+      "date": "Octubre de 1492",
+      "background": "bg_playa",
+      "perspective": "Pueblo lucayo",
+      "beats": [
+        {
+          "type": "perspective",
+          "title": "El horizonte tiene dos lados",
+          "text": "Deja el barco por un momento. Mira la llegada desde la playa, junto a quienes ya viven aquí."
+        },
+        {
+          "type": "goal",
+          "text": "Escuchar otra mirada al llegar a la playa"
+        },
+        {
+          "type": "line",
+          "who": "nina_lucaya",
+          "text": "Veo velas nuevas. Me pregunto quién viene y qué busca.",
+          "mood": "preocupado"
+        },
+        {
+          "type": "if",
+          "cond": {
+            "flag": "equipo",
+            "set": true
+          },
+          "then": [
+            {
+              "type": "line",
+              "who": "estela",
+              "text": "Trabajaste en equipo. Ahora escucha también a quienes están en la playa."
+            }
+          ],
+          "else": [
+            {
+              "type": "line",
+              "who": "estela",
+              "text": "Cada persona puede mirar esta llegada de una manera distinta."
+            }
+          ]
+        },
+        {
+          "type": "challenge",
+          "id": "E",
+          "subject": "matematica",
+          "oa": [
+            "MA-OA16"
+          ],
+          "kind": "grid",
+          "who": "estela",
+          "variants": {
+            "inicial": {
+              "prompt": "Marca (2, 1): 2 a la derecha y 1 hacia arriba.",
+              "size": [
+                4,
+                3
+              ],
+              "marks": [
+                {
+                  "at": [
+                    0,
+                    0
+                  ],
+                  "label": "Inicio"
+                }
+              ],
+              "answer": [
+                2,
+                1
+              ],
+              "explain": "Desde (0, 0), avanza 2 hacia la derecha y sube 1: (2, 1)."
+            },
+            "intermedio": {
+              "prompt": "Encuentra el punto (4, 2) en este mapa de práctica.",
+              "size": [
+                6,
+                4
+              ],
+              "marks": [
+                {
+                  "at": [
+                    1,
+                    1
+                  ],
+                  "label": "Barco"
+                }
+              ],
+              "answer": [
+                4,
+                2
+              ],
+              "explain": "La primera coordenada es horizontal. La segunda es vertical: 4 a la derecha, 2 hacia arriba."
+            },
+            "avanzado": {
+              "prompt": "El barco está en (1, 2). Avanza 6 a la derecha y sube 1. Marca el destino.",
+              "size": [
+                10,
+                8
+              ],
+              "marks": [
+                {
+                  "at": [
+                    1,
+                    2
+                  ],
+                  "label": "Barco"
+                },
+                {
+                  "at": [
+                    9,
+                    6
+                  ],
+                  "label": "Isla"
+                }
+              ],
+              "answer": [
+                7,
+                3
+              ],
+              "explain": "1 + 6 = 7 y 2 + 1 = 3. El destino es (7, 3)."
+            }
+          },
+          "hint": "Cuenta primero hacia la derecha. Después cuenta hacia arriba.",
+          "success": "¡Encontraste el destino en el mapa!",
+          "tokens": 4
+        },
+        {
+          "type": "challenge",
+          "id": "F",
+          "subject": "lenguaje",
+          "oa": [
+            "LE-OA2",
+            "LE-OA6"
+          ],
+          "kind": "reading",
+          "who": "estela",
+          "variants": {
+            "inicial": {
+              "passage": "Una niña mira el mar. En el horizonte ve unas velas. Llama a su familia para mirar juntos.",
+              "source": "Adaptado de un relato ficticio creado para esta muestra.",
+              "questions": [
+                {
+                  "prompt": "¿Qué ve la niña?",
+                  "options": [
+                    "Unas velas",
+                    "Un bosque",
+                    "Una montaña"
+                  ],
+                  "answer": 0,
+                  "explain": "El texto dice que ve unas velas en el horizonte."
+                }
+              ],
+              "explain": "Busca la información en el texto antes de elegir."
+            },
+            "intermedio": {
+              "passage": "Una niña observa unas velas que se acercan a su isla. Nunca ha visto barcos como esos. Llama a su familia y espera con curiosidad junto a la playa.",
+              "source": "Adaptado de un relato ficticio creado para esta muestra.",
+              "questions": [
+                {
+                  "prompt": "¿Por qué llama a su familia?",
+                  "options": [
+                    "Para mostrarle los barcos",
+                    "Para buscar agua",
+                    "Para salir de la isla"
+                  ],
+                  "answer": 0,
+                  "explain": "Llama a su familia después de ver barcos nuevos."
+                },
+                {
+                  "prompt": "¿Cómo espera la niña?",
+                  "options": [
+                    "Con sueño",
+                    "Con curiosidad",
+                    "Con enojo"
+                  ],
+                  "answer": 1,
+                  "explain": "La última oración dice que espera con curiosidad."
+                }
+              ],
+              "explain": "Una respuesta aparece directamente. La otra conecta dos acciones del relato."
+            },
+            "avanzado": {
+              "passage": "Al ver velas desconocidas, una niña llama a su familia. Las personas se reúnen en la playa. Algunas sienten curiosidad; otras, preocupación. Todavía no saben quiénes vienen ni qué buscan.",
+              "source": "Adaptado de un relato ficticio creado para esta muestra.",
+              "questions": [
+                {
+                  "prompt": "¿Qué permite inferir el relato?",
+                  "options": [
+                    "Todos piensan igual",
+                    "Hay distintas emociones ante lo desconocido",
+                    "Ya conocen a los visitantes"
+                  ],
+                  "answer": 1,
+                  "explain": "Unas personas sienten curiosidad y otras preocupación."
+                },
+                {
+                  "prompt": "¿Qué información les falta?",
+                  "options": [
+                    "Dónde está su playa",
+                    "Quiénes llegan y qué buscan",
+                    "Si existe el mar"
+                  ],
+                  "answer": 1,
+                  "explain": "La última oración expresa esas dos dudas."
+                }
+              ],
+              "explain": "Para inferir, combina pistas del texto sin inventar información."
+            }
+          },
+          "hint": "Vuelve al relato. Busca qué ve la niña y cómo se siente.",
+          "success": "Escuchar y leer nos acerca a otras miradas.",
+          "tokens": 3
+        },
+        {
+          "type": "set",
+          "flag": "escucho",
+          "value": true
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Guardas las dos miradas en tu cuaderno del tiempo."
+        }
+      ]
+    }
+  ],
+  "chronicle": {
+    "title": "Así ocurrió",
+    "paragraphs": [
+      "Esta es una muestra del motor, con desafíos y diálogos ficticios.",
+      "En 1492, la expedición de Colón cruzó el Atlántico y llegó a las Bahamas. El pueblo lucayo ya habitaba esas islas. La llegada fue el inicio de cambios profundos para sus habitantes."
+    ]
+  },
+  "recap": [
+    {
+      "if": {
+        "flag": "carga",
+        "eq": "agua"
+      },
+      "text": "Elegiste llevar agua y cuidaste las provisiones."
+    },
+    {
+      "if": {
+        "flag": "carga",
+        "eq": "herramientas"
+      },
+      "text": "Elegiste herramientas para ayudar a reparar el barco."
+    },
+    {
+      "if": {
+        "flag": "equipo",
+        "set": true
+      },
+      "text": "Invitaste a Diego a trabajar contigo."
+    },
+    {
+      "if": {
+        "flag": "escucho",
+        "eq": true
+      },
+      "text": "Escuchaste una voz desde la playa."
+    }
+  ],
+  "reflection": {
+    "oa": [
+      "HI-OA20",
+      "HI-OA21"
+    ],
+    "prompt": "¿Qué harías para que dos grupos que no se conocen puedan entenderse?",
+    "options": [
+      {
+        "id": "escuchar",
+        "text": "Escucharía lo que cada grupo necesita"
+      },
+      {
+        "id": "preguntar",
+        "text": "Haría preguntas antes de decidir"
+      }
+    ],
+    "reasons": [
+      "Porque todas las personas tienen una mirada que compartir.",
+      "Porque preguntar nos ayuda a comprender."
+    ],
+    "closing": "Tu razón tiene valor. Escuchar otras miradas nos ayuda a pensar y a cuidar a las personas."
+  },
+  "rewards": {
+    "piece": {
+      "id": "engranaje_muestra",
+      "name": "El engranaje de las dos miradas",
+      "text": "Una pieza para tu reloj y un recuerdo de lo que aprendiste."
+    }
+  }
+}

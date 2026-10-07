@@ -1,0 +1,720 @@
+<title>AcademIA · Viajeros de la historia</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--night:#1a1a2e;--deep:#101223;--ink:#202039;--paper:#fff3d8;--gold:#f5c842;--teal:#83ded5;--muted:#c2bedc;--purple:#9278fa;--line:#52476e;font-family:'Nunito',system-ui,sans-serif;font-size:18px}
+*{box-sizing:border-box}body{margin:0;background:var(--deep);color:#fff4df}button,input,select,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button,select,input,textarea{border-radius:14px}button{min-height:48px;padding:10px 18px;border:1px solid var(--line);color:#fff4df;background:#29243e;font-weight:800}button:hover{background:#39304f;border-color:var(--gold)}button:disabled{cursor:default;opacity:.5}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--teal);outline-offset:4px}button.primary{background:var(--gold);color:#241c36;border-color:var(--gold);box-shadow:0 4px 0 #ad8430}button.primary:hover{background:#ffdc71}button.quiet{background:transparent;border-color:transparent;color:var(--muted)}h1,h2,h3,.brand,.name,.display{font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;line-height:1.12}h1,h2,h3,p{margin:0}h1{font-size:clamp(2.4rem,6vw,4.6rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.45rem}p{line-height:1.65}small,.small{font-size:.8rem}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;font-weight:900;color:var(--teal)}.muted{color:var(--muted)}.gold{color:var(--gold)}.stack{display:grid;gap:18px}.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.spread{justify-content:space-between}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}
+#game{position:relative;min-height:100svh;isolation:isolate;overflow-x:clip;background:var(--night)}.background{position:absolute;inset:0;z-index:-3;background:radial-gradient(ellipse at 70% 20%,#4e427b 0,#252840 45%,#112b38 100%);overflow:hidden}.background-image{position:absolute;inset:-3%;background-position:center;background-size:cover;opacity:.8;animation:pan 45s ease-in-out infinite alternate}.background:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#10122388 0%,#10122322 40%,#101223e8 100%)}.star-map{position:absolute;inset:0;z-index:-2;pointer-events:none;opacity:.22;background-image:radial-gradient(circle at 10% 19%,#f5c842 1px,transparent 2px),radial-gradient(circle at 82% 36%,#fff 1px,transparent 2px),radial-gradient(circle at 44% 74%,#fff 1px,transparent 2px);background-size:177px 223px,283px 307px,379px 269px}
+.hud{position:relative;z-index:3;display:flex;gap:18px;align-items:center;padding:16px 4vw;border-bottom:1px solid #f5c84230;background:#15152de8}.brand{font-size:1.5rem;letter-spacing:-.03em;color:#fff4df}.brand span{color:var(--gold)}.chapter-label{font-size:.74rem;color:var(--muted);max-width:220px}.hud-goal{margin-left:auto;max-width:340px;display:flex;align-items:center;gap:10px;text-align:left;font-size:.72rem;background:#27243d;color:#fff4df}.hud-goal .goal-symbol{font-size:1.3rem;color:var(--teal)}.hud-stat{white-space:nowrap;background:#29243e;color:var(--gold);border:1px solid #f5c84244;border-radius:99px;padding:9px 15px;font-weight:900}.icon-button{padding:8px 12px;font-size:1.2rem}.stage{position:relative;max-width:1200px;min-height:calc(100svh - 91px);margin:auto;padding:38px 30px;display:flex;flex-direction:column;justify-content:center;align-items:stretch}.stage:focus{outline:none}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:620px}.hero-copy{position:relative;z-index:1;display:grid;gap:25px;max-width:640px}.hero-copy h1{letter-spacing:-.025em}.hero-subtitle{max-width:440px;color:#e1ddf0;font-size:1.05rem}.hero-actions{display:flex;flex-wrap:wrap;gap:14px}.hero-actions .primary{padding:15px 28px}.hero-art{position:relative;min-height:500px;display:grid;place-items:center}.portal{width:90%;aspect-ratio:1;border:1px solid #f5c84288;border-radius:50%;position:absolute;box-shadow:0 0 0 22px #b7a3ed08,0 0 0 23px #b7a3ed22;background:radial-gradient(circle,#7861b040,transparent 65%)}.portal:before,.portal:after{content:'✦';position:absolute;color:var(--gold);font-size:3rem}.portal:before{top:2%;left:14%}.portal:after{bottom:4%;right:12%}.hero-portrait{width:min(100%,390px);height:500px;object-fit:cover;object-position:50% 25%;border-radius:180px 180px 70px 70px;position:relative;box-shadow:0 24px 60px #06071177;border:2px solid #ddcaef44}.hero-art .portrait-fallback{width:260px;height:260px;font-size:7rem}.year-seal{position:absolute;right:0;bottom:50px;border:1px solid #f5c84266;border-radius:18px;background:#1c1b33;padding:15px 25px;transform:rotate(4deg)}.year-seal strong{font-family:'Baloo 2',sans-serif;font-size:2rem;color:var(--gold)}.hero-footer{border-top:1px solid #ece1ff25;padding-top:20px;color:var(--muted);font-size:.78rem;display:flex;gap:25px;flex-wrap:wrap}.compass{width:100px;height:100px;color:var(--gold);margin:auto}.scene-card,.perspective-card{text-align:center;max-width:760px;align-self:center;padding:46px 35px;background:#17182dde;border:1px solid #f5c84266;border-radius:28px;display:grid;gap:22px;width:100%;animation:appear .4s ease}.scene-card .eyebrow,.perspective-card .eyebrow{color:var(--gold)}.scene-card p{color:#e1ddf0}.scene-divider{width:80px;height:2px;background:var(--gold);margin:auto}.perspective-card{min-height:440px;place-content:center;background:#201c39f5}.scene-position{margin-top:auto;padding-bottom:20px;color:#f7ecda;font-size:.85rem;text-shadow:0 2px 4px #111}.dialogue-stage{justify-content:flex-end;min-height:calc(100svh - 170px);display:flex;flex-direction:column}.dialogue{display:grid;grid-template-columns:130px 1fr;gap:22px;align-items:center;background:#1a1a2ef5;border:1px solid #f5c84299;border-radius:24px;padding:24px 28px;box-shadow:0 20px 80px #06081266}.portrait{width:125px;height:155px;object-fit:cover;object-position:50% 25%;border-radius:20px;background:#342d50;border:1px solid #b0a3d333}.portrait-fallback{display:grid;place-items:center;border-radius:50%;color:#fff4df;background:#494066;font-family:'Baloo 2',sans-serif;font-size:2.7rem;width:100px;height:100px;border:2px solid #a690cf}.mood-feliz,.mood-sorpresa{animation:portrait-pop .5s ease}.mood-serio{filter:saturate(.8)}.mood-preocupado{filter:saturate(.75);border-color:#91a5ca}.name{display:inline-block;border-radius:9px;padding:6px 13px;background:var(--speaker,#9278fa);color:#fff;font-size:1.1rem;margin-bottom:12px;text-shadow:0 1px 3px #0009}.line-text{font-size:1.16rem;line-height:1.65;min-height:3.3em;white-space:pre-wrap;overflow-wrap:anywhere}.narration{grid-template-columns:1fr}.narration .line-text{font-style:italic;color:#e3dcee}.dialogue-controls{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.dialogue-controls button{font-size:.8rem}.continue-line{color:var(--gold);background:#2d2941;border-color:#f5c84255}.choice-card{margin-top:auto;width:min(820px,100%);align-self:center;background:#19182fef;border:1px solid #f5c84288;border-radius:26px;padding:30px;display:grid;gap:22px}.options{display:grid;gap:12px}.option{display:flex;gap:14px;align-items:center;text-align:left;width:100%;padding:16px 18px;line-height:1.45}.option .key{width:30px;height:30px;flex-shrink:0;display:grid;place-items:center;border-radius:8px;background:#f5c84220;color:var(--gold);font-size:.85rem}.option.selected{border-color:var(--teal);background:#254149;color:#fff4df}.option.selected .key{background:#83ded533;color:#83ded5}
+.challenge{width:min(850px,100%);align-self:center;position:relative;display:grid;gap:20px;padding:30px 36px;border-radius:8px 26px 26px 8px;border:1px solid #d7b97b;background:var(--paper);color:var(--ink);box-shadow:-7px 0 0 #d2b98a,0 24px 70px #05071566;animation:appear .3s ease}.challenge:before{content:'';height:5px;background:var(--ink);position:absolute;top:0;left:30px;right:30px;opacity:.15}.challenge button{background:#fff8e8;color:var(--ink);border-color:#d1bc98}.challenge button:hover{background:#f3e4c6;border-color:#89769f}.challenge button.primary{background:#352c58;color:#fff4df;border-color:#352c58;box-shadow:0 3px 0 #1d1738}.challenge .eyebrow{color:#685279}.log-meta{font-size:.75rem;color:#655b72}.subject-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e6ddc7;color:#43315d;font-size:1.4rem}.challenge .option .key{background:#ece0c9;color:#5a476c}.challenge .option.selected{background:#e0ede1;border-color:#326e6b;color:#202039}.challenge-intro{font-style:italic;color:#53465f}.attempt-label{color:#756677;font-size:.75rem}.paper-rule{border:0;border-top:1px solid #d9c4a2;width:100%;margin:0}.feedback{background:#e5ecd9;border:1px solid #b7c9a1;padding:18px 22px;border-radius:18px;display:grid;gap:12px}.feedback.help{background:#f1e1c3;border-color:#cdb383}.feedback h3{color:#253d32}.feedback .hint-row{display:flex;gap:14px;align-items:center}.feedback .portrait{width:70px;height:80px;border:0}.feedback .portrait-fallback{width:65px;height:65px;font-size:1.8rem}.feedback small{color:#53465f}.explanation{background:#efe2c6;border-left:3px solid #8e75a8;padding:16px;border-radius:0 12px 12px 0;line-height:1.6;white-space:pre-wrap}.challenge input,.challenge textarea{color:#202039;background:#fffbef;border:2px solid #b3a3bc;padding:12px;width:100%}.number-input{font-size:2.2rem;text-align:center;max-width:320px}.digit-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:320px}.digit-pad button{font-size:1.2rem;padding:8px}.number-wrap{display:grid;place-items:center;gap:12px}.number-wrap .unit{color:#655b72}.match-columns{display:grid;grid-template-columns:1fr 1fr;gap:12px}.match-column{display:grid;gap:10px}.match-column button{text-align:left;min-height:65px;overflow-wrap:anywhere}.match-column button.active{background:#dfd0ed;border:2px solid #6f4c91}.match-column button.locked{background:#dde8dd;color:#314b41;opacity:1;border-color:#86aa9c}.order-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}.order-item{display:flex;gap:10px;align-items:center;padding:10px 12px;border:1px solid #d1bc98;background:#fff8e8;border-radius:14px}.order-item .order-text{flex:1}.order-item .order-controls{display:flex;gap:4px}.order-controls button{min-width:44px;padding:8px}.grid-wrap{background:#fff8e8;border-radius:18px;padding:15px 8px;border:1px solid #d1bc98}.coordinate-grid{width:100%;max-height:390px;display:block;touch-action:manipulation}.grid-lines{stroke:#d8cab5;stroke-width:1}.grid-axis{stroke:#4c3e5d;stroke-width:2}.grid-label{fill:#594b66;font:13px 'Nunito',sans-serif;font-weight:800}.grid-point{fill:transparent;cursor:pointer}.grid-point:hover,.grid-point:focus{fill:#6d53a944;stroke:#55417a;stroke-width:2;outline:none}.grid-point.chosen{fill:#655087;stroke:#35264e;stroke-width:2}.grid-mark{fill:#367570;font:13px 'Nunito',sans-serif;font-weight:900;pointer-events:none}.coordinate-readout{color:#524061;font-weight:900;text-align:center;min-height:28px}.passage{padding:20px;background:#f5e9cc;border-radius:14px;border:1px solid #d9c4a2;line-height:1.7;white-space:pre-wrap}.source{font-size:.78rem;color:#6c5866}.reading-question{display:grid;gap:12px}.reading-question h3{font-family:'Nunito',sans-serif;font-size:1rem;line-height:1.5}.reading-question .option{padding:12px}.book-card{width:min(850px,100%);align-self:center;display:grid;gap:22px;padding:38px;background:#1c1b33f5;border:1px solid #f5c84266;border-radius:26px}.book-card p{color:#e1ddf0}.book-card .paragraphs{display:grid;gap:18px}.recap-line{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:15px;background:#302944;color:#e1ddf0}.recap-line .gold{flex-shrink:0}.reflection-reasons{display:grid;gap:10px}.reflection textarea{background:#252239;color:#fff4df;border:1px solid #84729e;width:100%;padding:16px;min-height:110px;resize:vertical}.reward-display{text-align:center;display:grid;gap:16px;border:1px solid #f5c84255;background:#f5c8420d;border-radius:22px;padding:28px}.reward-icon{font-size:4rem;color:var(--gold)}.item-chip{display:inline-flex;gap:8px;align-items:center;background:#332c4a;color:#ece6f5;padding:9px 13px;border:1px solid #715889;border-radius:12px;font-size:.85rem}.end-card{max-width:930px}.summary-table{border-collapse:collapse;width:100%;font-size:.84rem;text-align:left}.summary-table th,.summary-table td{padding:12px 8px;border-bottom:1px solid #53446a;vertical-align:top}.summary-table th{color:var(--teal);font-size:.75rem}.summary-table td{color:#e1ddf0}.summary-wrap{overflow:auto}.summary-oa{display:block;font-size:.73rem;color:var(--muted);margin-top:4px}.summary-detail{display:grid;gap:8px;font-size:.85rem;color:#ded5ee}.summary-detail summary{cursor:pointer;color:var(--teal);min-height:44px;padding-top:12px}.toast{position:relative;width:fit-content;margin:12px auto 0;background:#302447;color:#fff4df;border:1px solid var(--gold);border-radius:18px;padding:15px 24px;box-shadow:0 10px 30px #0006;max-width:calc(100% - 30px);text-align:center;overflow-wrap:anywhere;pointer-events:none}.modal-shell{position:fixed;inset:0;z-index:30;background:#09091cc9;display:grid;place-items:center;padding:20px;overflow:auto}.modal{width:min(600px,100%);max-height:calc(100svh - 40px);overflow:auto;border:1px solid #9375b1;border-radius:24px;background:#1e1b34;color:#fff4df;padding:28px;display:grid;gap:22px;box-shadow:0 30px 80px #0008}.modal h2{font-size:1.7rem}.modal label{display:grid;gap:9px;font-size:.85rem;color:#e1ddf0}.modal select{padding:12px;border:1px solid #817098;background:#302741;color:#fff4df;min-height:48px;width:100%}.modal .toggle{display:flex;align-items:center;gap:12px}.modal input[type=checkbox]{accent-color:var(--gold);width:22px;height:22px}.modal ul{padding-left:22px;color:#e1ddf0;line-height:1.6}.backlog-entry{display:grid;gap:5px;padding:12px 0;border-bottom:1px solid #524469}.backlog-entry strong{color:var(--gold)}.empty-note{color:var(--muted);font-size:.85rem}.danger{border-color:#ac7289;color:#ffd1da;background:#3e253e}.footer-note{text-align:center;color:var(--muted);font-size:.72rem;margin-top:22px}
+h1,h2,h3,p,.option,.summary-detail{overflow-wrap:anywhere}.chapter-label,.hud-goal,.order-text{min-width:0}.perspective-card.full-view{position:fixed;inset:0;z-index:8;width:100%;max-width:none;min-height:100svh;border:0;border-radius:0;padding:clamp(25px,8vw,100px);background:#201c39;justify-items:center;overflow-y:auto}.perspective-card.full-view p{max-width:620px}.perspective-card.full-view h2{max-width:760px}.challenge .long-prompt{font-size:1.25rem;line-height:1.45}.numeric-controls{display:grid;gap:18px}.numeric-workspace .digit-pad{justify-self:center;width:100%}.feedback-speaker{font-family:'Baloo 2',sans-serif;font-weight:800;color:#534063}
+@keyframes pan{from{transform:scale(1.02) translateX(-1%)}to{transform:scale(1.09) translateX(1%)}}@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes portrait-pop{50%{transform:translateY(-5px)}}
+@media(max-width:850px){.hud{gap:10px;padding:12px 20px;flex-wrap:wrap}.hud-goal{order:5;width:100%;max-width:none;text-overflow:ellipsis}.chapter-label{flex:1}.hud-stat{padding:8px 12px}.stage{min-height:calc(100svh - 150px);padding:25px 22px}.hero{gap:20px;min-height:560px}.hero-art{min-height:390px}.hero-portrait{height:390px;width:290px}.year-seal{right:-10px;bottom:10px;padding:10px 20px}.dialogue-stage{min-height:calc(100svh - 200px)}.dialogue{grid-template-columns:100px 1fr;padding:22px;gap:18px}.portrait{width:100px;height:125px}.hero-copy h1{font-size:3rem}}
+@media(max-width:560px){:root{font-size:16px}.hud{padding:12px 14px;gap:8px}.brand{font-size:1.35rem}.chapter-label{max-width:none;font-size:.66rem}.hud-stat{font-size:.84rem;padding:7px 10px}.icon-button{min-width:44px;padding:7px}.hud-goal{font-size:.7rem;min-height:44px;padding:8px 12px}.stage{padding:24px 16px;min-height:calc(100svh - 132px)}.hero{grid-template-columns:1fr;gap:28px;min-height:0}.hero-art{grid-row:1;min-height:260px;width:260px;justify-self:center}.hero-portrait{height:260px;width:190px;border-radius:90px 90px 35px 35px}.portal{width:240px}.year-seal{bottom:5px;right:-25px;padding:9px 15px}.year-seal strong{font-size:1.6rem}.hero-copy{gap:18px;text-align:center}.hero-copy h1{font-size:2.7rem}.hero-subtitle{font-size:1rem}.hero-actions{justify-content:center}.hero-actions button{width:100%}.hero-footer{justify-content:center;gap:12px;padding-top:16px}.scene-card,.perspective-card{padding:30px 22px;gap:18px}.dialogue-stage{min-height:0;padding-top:190px}.scene-position{font-size:.74rem;margin:0;padding-bottom:16px}.dialogue{grid-template-columns:64px 1fr;gap:14px;padding:20px 16px;border-radius:19px}.portrait{width:64px;height:90px;border-radius:13px}.portrait-fallback{width:60px;height:60px;font-size:2rem}.line-text{font-size:1.08rem}.name{font-size:1rem;padding:4px 10px}.dialogue-controls{grid-column:1/-1}.dialogue .dialogue-copy{min-width:0}.narration{grid-template-columns:1fr}.choice-card{padding:24px 20px}.challenge{padding:26px 18px;gap:18px;width:calc(100% - 5px);margin-left:5px}.challenge h2{font-size:1.6rem;line-height:1.2}.challenge .long-prompt{font-size:1.1rem;line-height:1.45}.numeric-workspace{gap:12px}.numeric-controls{position:sticky;top:12px;z-index:1;gap:12px;padding:8px 0;background:var(--paper)}.number-wrap{gap:8px}.number-input{font-size:1.8rem}.digit-pad{grid-template-columns:repeat(4,1fr);gap:6px}.digit-pad button{min-height:44px;padding:6px;font-size:1.1rem}.challenge .option{padding:13px 12px}.match-columns{gap:8px}.match-column button{padding:10px;font-size:.86rem}.order-item{padding:8px;gap:6px}.order-controls button{padding:6px}.book-card{padding:28px 20px}.modal{padding:22px}.summary-table th,.summary-table td{padding:11px 5px;font-size:.76rem}.feedback{padding:16px}.hud #items-button{font-size:.8rem}.background-image{background-position:center top}.stage>.footer-note{font-size:.65rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.background-image{transform:none}}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<main id="game" lang="es-CL">
+  <div class="background" aria-hidden="true"><div class="background-image" id="background-image"></div></div>
+  <div class="star-map" aria-hidden="true"></div>
+  <header class="hud">
+    <div class="brand">Academ<span>IA</span></div>
+    <div class="chapter-label" id="chapter-label"></div>
+    <button class="hud-goal" id="goals-button" aria-label="Ver los objetivos del capítulo"><span class="goal-symbol" aria-hidden="true">⌖</span><span id="current-goal">Tu viaje está por comenzar</span></button>
+    <span class="hud-stat" aria-label="Fichas de tiempo"><span aria-hidden="true">✦</span> <span id="tokens">0</span></span>
+    <button id="items-button" aria-label="Ver tus objetos">◇ <span id="item-count">0</span></button>
+    <button class="icon-button" id="settings-button" aria-label="Abrir ajustes">⚙</button>
+  </header>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <section class="stage" id="stage" tabindex="-1" aria-label="Historia"></section>
+  <div class="modal-shell" id="modal-shell" hidden><section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section></div>
+  <div class="sr-only" id="announcer" role="status" aria-live="polite"></div>
+</main>
+<script>
+// STORY_ENGINE_START
+const STORY_LEVELS = ['inicial', 'intermedio', 'avanzado'];
+const STORY_SUBJECTS = ['matematica', 'lenguaje', 'ciencias', 'historia', 'ingles'];
+const storyClone = value => JSON.parse(JSON.stringify(value));
+class StoryEngine {
+  constructor(chapter, settings = {}) {
+    if (!chapter || !Array.isArray(chapter.scenes) || !chapter.scenes.length) throw new Error('El capítulo no tiene escenas.');
+    this.chapter = chapter;
+    const level = STORY_LEVELS.includes(settings.startingLevel) ? settings.startingLevel : 'intermedio';
+    this.state = {version:1, chapterId:chapter.id, startingLevel:level, phase:'chapter', sceneIndex:-1,
+      flags:{}, tokens:0, items:[], currentGoal:'', goals:[], levels:Object.fromEntries(STORY_SUBJECTS.map(s => [s, level])),
+      streaks:Object.fromEntries(STORY_SUBJECTS.map(s => [s, 0])), results:{}, choices:{}, reflection:null, piece:null,
+      stack:[], pending:null, checkpoint:null};
+  }
+  condition(cond) {
+    if (!cond) return true;
+    const flags = this.state.flags;
+    if (Object.hasOwn(cond, 'eq')) return Object.hasOwn(flags, cond.flag) && flags[cond.flag] === cond.eq;
+    if (Object.hasOwn(cond, 'ne')) return flags[cond.flag] !== cond.ne;
+    if (Object.hasOwn(cond, 'set')) return Object.hasOwn(flags, cond.flag) === Boolean(cond.set);
+    return false;
+  }
+  levelFor(subject) { return this.state.levels[subject] || this.state.startingLevel; }
+  variantFor(beat) {
+    const level = this.levelFor(beat.subject);
+    const variant = beat.variants[level] || beat.variants.intermedio || beat.variants.inicial || beat.variants.avanzado;
+    if (!variant) throw new Error(`El desafío ${beat.id} no tiene variantes.`);
+    return {level, variant};
+  }
+  scene() { return this.chapter.scenes[this.state.sceneIndex] || null; }
+  view() {
+    if (this.state.phase === 'beats') return this.state.pending;
+    if (this.state.phase === 'scene') return {type:'scene', scene:this.scene()};
+    if (this.state.phase === 'recap') return {type:'recap', lines:(this.chapter.recap || []).filter(line => this.condition(line.if))};
+    return {type:this.state.phase};
+  }
+  enterScene(index) {
+    if (!Number.isInteger(index) || index < 0 || index >= this.chapter.scenes.length) throw new Error('Escena desconocida.');
+    this.state.sceneIndex = index; this.state.phase = 'scene'; this.state.stack = []; this.state.pending = null;
+    const snapshot = storyClone(this.state); delete snapshot.checkpoint;
+    this.state.checkpoint = snapshot;
+    return this.view();
+  }
+  checkpoint() { return this.state.checkpoint ? JSON.stringify(this.state.checkpoint) : null; }
+  walk() {
+    this.state.pending = null;
+    while (this.state.stack.length) {
+      const frame = this.state.stack[this.state.stack.length - 1];
+      if (frame.index >= frame.beats.length) { this.state.stack.pop(); continue; }
+      const beat = frame.beats[frame.index++];
+      if (beat.type === 'set') { this.state.flags[beat.flag] = beat.value; continue; }
+      if (beat.type === 'goal') {
+        this.state.currentGoal = beat.text;
+        if (!this.state.goals.includes(beat.text)) this.state.goals.push(beat.text);
+        continue;
+      }
+      if (beat.type === 'if') {
+        this.state.stack.push({beats:(this.condition(beat.cond) ? beat.then : beat.else) || [], index:0}); continue;
+      }
+      if (beat.type === 'item' && !this.state.items.some(item => item.id === beat.id)) this.state.items.push({id:beat.id, name:beat.name, text:beat.text});
+      const pending = {type:beat.type, beat};
+      if (beat.type === 'challenge') Object.assign(pending, this.variantFor(beat), {attempts:0, resolved:false, stage:beat.intro ? 'intro' : 'question', outcome:null});
+      if (!['line','perspective','item','choice','challenge'].includes(beat.type)) throw new Error(`Tipo de beat desconocido: ${beat.type}`);
+      this.state.pending = pending;
+      return this.view();
+    }
+    if (this.state.sceneIndex + 1 < this.chapter.scenes.length) return this.enterScene(this.state.sceneIndex + 1);
+    this.state.phase = 'chronicle'; return this.view();
+  }
+  advance() {
+    const phase = this.state.phase;
+    if (phase === 'chapter') return this.enterScene(0);
+    if (phase === 'scene') { this.state.phase = 'beats'; this.state.stack = [{beats:this.scene().beats || [], index:0}]; return this.walk(); }
+    if (phase === 'beats') {
+      const pending = this.state.pending;
+      if (pending.type === 'choice') throw new Error('Elige una opción para continuar.');
+      if (pending.type === 'challenge') {
+        if (pending.stage === 'intro') { pending.stage = 'question'; return this.view(); }
+        if (pending.stage === 'hint') { pending.stage = 'question'; return this.view(); }
+        if (!pending.resolved) throw new Error('Resuelve el desafío para continuar.');
+      }
+      return this.walk();
+    }
+    const transitions = {chronicle:'recap', recap:this.chapter.reflection ? 'reflection' : 'rewards', closing:'rewards', rewards:'end'};
+    if (transitions[phase]) {
+      this.state.phase = transitions[phase];
+      if (this.state.phase === 'rewards') this.state.piece = this.chapter.rewards?.piece || null;
+    }
+    return this.view();
+  }
+  choose(index) {
+    const pending = this.state.pending;
+    if (this.state.phase !== 'beats' || pending?.type !== 'choice') throw new Error('No hay una decisión pendiente.');
+    const option = Number.isInteger(index) && pending.beat.options[index];
+    if (!option) throw new Error('Opción desconocida.');
+    Object.assign(this.state.flags, option.set || {});
+    this.state.choices[pending.beat.id] = index;
+    this.state.stack.push({beats:option.then || [], index:0});
+    return this.walk();
+  }
+  checkAnswer(kind, variant, answer) {
+    if (kind === 'mc') return Number.isInteger(answer) && answer === variant.answer;
+    if (kind === 'numeric') {
+      const text = String(answer ?? '').trim().replace(',', '.');
+      if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(text)) return false;
+      const value = Number(text);
+      return Number.isFinite(value) && Math.abs(value - variant.answer) <= (variant.tolerance || 0);
+    }
+    if (kind === 'match') return Array.isArray(answer) && answer.length === variant.pairs.length && variant.pairs.every(expected => answer.filter(pair => Array.isArray(pair) && pair[0] === expected[0] && pair[1] === expected[1]).length === 1);
+    if (kind === 'order') return Array.isArray(answer) && answer.length === variant.items.length && answer.every((item, i) => item === variant.items[i]);
+    if (kind === 'grid') return Array.isArray(answer) && answer.length === 2 && answer.every((n, i) => n === variant.answer[i]);
+    if (kind === 'reading') return Array.isArray(answer) && answer.length === variant.questions.length && answer.every((value, i) => Number.isInteger(value) && value === variant.questions[i].answer);
+    throw new Error(`Desafío desconocido: ${kind}`);
+  }
+  submit(answer) {
+    const pending = this.state.pending;
+    if (this.state.phase !== 'beats' || pending?.type !== 'challenge' || pending.stage !== 'question' || pending.resolved) throw new Error('No hay un desafío listo para responder.');
+    const {beat, variant} = pending;
+    const correct = this.checkAnswer(beat.kind, variant, answer);
+    pending.attempts++;
+    if (!correct) {
+      this.state.streaks[beat.subject] = 0;
+      this.state.levels[beat.subject] = STORY_LEVELS[Math.max(0, STORY_LEVELS.indexOf(this.levelFor(beat.subject)) - 1)];
+      if (pending.attempts === 1) { pending.stage = 'hint'; return {status:'hint', text:beat.hint}; }
+    }
+    const firstTry = correct && pending.attempts === 1;
+    if (firstTry) {
+      this.state.streaks[beat.subject] = (this.state.streaks[beat.subject] || 0) + 1;
+      if (this.state.streaks[beat.subject] >= 2) {
+        this.state.levels[beat.subject] = STORY_LEVELS[Math.min(2, STORY_LEVELS.indexOf(this.levelFor(beat.subject)) + 1)];
+        this.state.streaks[beat.subject] = 0;
+      }
+    }
+    const tokens = correct ? (beat.tokens ?? 0) + (firstTry ? 1 : 0) : 1;
+    this.state.tokens += tokens;
+    for (const oa of beat.oa || []) {
+      const result = this.state.results[oa] ||= {subject:beat.subject, firstTry:0, helped:0, solvedWithHint:0, explained:0, reflections:0};
+      if (firstTry) result.firstTry++;
+      else { result.helped++; if (correct) result.solvedWithHint++; else result.explained++; }
+    }
+    pending.resolved = true; pending.stage = 'feedback';
+    pending.outcome = {status:correct ? 'success' : 'help', firstTry, tokens, text:correct ? beat.success : 'Aprendamos con la explicación.'};
+    return pending.outcome;
+  }
+  reflect(optionId) {
+    if (this.state.phase !== 'reflection' || !this.chapter.reflection.options.some(option => option.id === optionId)) throw new Error('Elige una idea.');
+    this.state.reflection = {optionId, reason:''}; this.state.phase = 'reason'; return this.view();
+  }
+  justify(reason) {
+    const text = String(reason).trim();
+    const predefined = this.chapter.reflection?.reasons?.includes(text);
+    if (this.state.phase !== 'reason' || !text || (!predefined && text.length > 200)) throw new Error('Escribe o elige una razón de hasta 200 caracteres.');
+    this.state.reflection.reason = text;
+    for (const oa of this.chapter.reflection.oa || []) {
+      const result = this.state.results[oa] ||= {subject:'historia', firstTry:0, helped:0, solvedWithHint:0, explained:0, reflections:0};
+      result.reflections++;
+    }
+    this.state.phase = 'closing'; return this.view();
+  }
+  summary() {
+    return STORY_SUBJECTS.map(subject => {
+      const entries = Object.entries(this.state.results).filter(([, value]) => value.subject === subject);
+      return {subject, level:this.levelFor(subject), entries};
+    }).filter(row => row.entries.length);
+  }
+  serialize() { return JSON.stringify(this.state); }
+  restore(serialized) {
+    const state = typeof serialized === 'string' ? JSON.parse(serialized) : storyClone(serialized);
+    if (state.version !== 1 || state.chapterId !== this.chapter.id || !['chapter','scene','beats','chronicle','recap','reflection','reason','closing','rewards','end'].includes(state.phase)) throw new Error('La partida no corresponde a este capítulo.');
+    if (!Number.isInteger(state.sceneIndex) || state.sceneIndex < -1 || state.sceneIndex >= this.chapter.scenes.length || !state.flags || !Array.isArray(state.items) || !Array.isArray(state.stack) || !Array.isArray(state.goals) || !state.levels || !state.streaks || !state.results || !state.choices || !Number.isFinite(state.tokens) || state.tokens < 0 || (state.phase === 'beats' && !state.pending)) throw new Error('La partida está incompleta.');
+    this.state = storyClone(state);
+    if (!this.state.checkpoint && this.state.phase === 'scene') { const checkpoint = storyClone(state); delete checkpoint.checkpoint; this.state.checkpoint = checkpoint; }
+    return this.view();
+  }
+}
+// STORY_ENGINE_END
+
+const CHAPTER = __CHAPTER__;
+const IMAGES = __IMAGES__;
+// UI_START
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const subjects = {matematica:['Matemática','∑'],lenguaje:['Lenguaje','Aa'],ciencias:['Ciencias','❋'],historia:['Historia','⌛'],ingles:['Inglés','Hi']};
+  const levelNames = {inicial:'Inicial',intermedio:'Intermedio',avanzado:'Avanzado'};
+  const storageKey = `academia:chapter:${CHAPTER.id}:v1`;
+  const settingsKey = 'academia:settings:v1';
+  const safeRead = key => {try {return JSON.parse(localStorage.getItem(key));} catch {return null;}};
+  const safeWrite = (key, value) => {try {localStorage.setItem(key, JSON.stringify(value));} catch {}};
+  const safeRemove = key => {try {localStorage.removeItem(key);} catch {}};
+  const storedSettings = safeRead(settingsKey) || {};
+  const settings = {startingLevel:STORY_LEVELS.includes(storedSettings.startingLevel) ? storedSettings.startingLevel : 'intermedio',
+    testMode:storedSettings.testMode === true, speed:['slow','normal','instant'].includes(storedSettings.speed) ? storedSettings.speed : 'normal'};
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let engine = new StoryEngine(CHAPTER, settings);
+  let saved = safeRead(storageKey);
+  if (saved) {try {new StoryEngine(CHAPTER).restore(saved);} catch {saved = null; safeRemove(storageKey);}}
+  const stage = $('stage');
+  let typingTimer = null, finishTyping = null, lineContinue = null, toastTimer = null;
+  let numberActions = [], primaryAction = null, lastLogged = null, lastSavedCheckpoint = null;
+  let modalOpen = false, returnFocus = null, challengeUI = null;
+  const backlog = [];
+
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined && text !== null) node.textContent = String(text);
+    return node;
+  }
+  function button(text, action, className = '') {
+    const node = el('button', className, text); node.type = 'button'; node.addEventListener('click', action); return node;
+  }
+  function append(parent, ...children) { children.filter(Boolean).forEach(child => parent.append(child)); return parent; }
+  function announce(text) { $('announcer').textContent = text; }
+  function setBackground(key) {
+    const uri = IMAGES[key];
+    $('background-image').style.backgroundImage = uri && /^data:image\//.test(uri) ? `url("${uri}")` : 'none';
+  }
+  function portrait(who, className = 'portrait', mood = '') {
+    const character = CHAPTER.characters?.[who] || {name:who === 'mascota' ? 'Tu mascota' : who === 'estela' ? 'Estela' : 'Viajero'};
+    const uri = IMAGES[character.portrait || who];
+    const node = uri && /^data:image\//.test(uri) ? el('img', className) : el('div', 'portrait-fallback', character.name?.slice(0,1) || '✦');
+    if (node.tagName === 'IMG') {node.src = uri; node.alt = character.name || who;}
+    else {node.setAttribute('role','img'); node.setAttribute('aria-label',character.name || who);}
+    if (['feliz','serio','sorpresa','preocupado'].includes(mood)) node.classList.add(`mood-${mood}`);
+    return node;
+  }
+  function compass() {
+    const node = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    node.setAttribute('viewBox','0 0 100 100'); node.setAttribute('class','compass'); node.setAttribute('aria-hidden','true');
+    node.innerHTML = '<circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" stroke-width=".5"/><path d="M50 7L58 42 93 50 58 58 50 93 42 58 7 50 42 42Z" fill="none" stroke="currentColor"/><path d="M50 19L56 44 50 50 44 44Z" fill="currentColor"/><circle cx="50" cy="50" r="4" fill="currentColor"/>';
+    return node;
+  }
+  function remember(who, text, key) {
+    if (lastLogged === key) return;
+    lastLogged = key;
+    backlog.push({who:CHAPTER.characters?.[who]?.name || (who === 'narrador' ? 'Narración' : who === 'estela' ? 'Estela' : who), text});
+    if (backlog.length > 8) backlog.shift();
+  }
+  function dismissToast() {
+    clearTimeout(toastTimer); toastTimer = null; $('toast').hidden = true;
+  }
+  function toast(text) {
+    dismissToast(); $('toast').textContent = text; $('toast').hidden = false;
+    toastTimer = setTimeout(dismissToast, 2500);
+  }
+  function updateHUD() {
+    const scene = engine.scene();
+    $('chapter-label').textContent = `Capítulo ${CHAPTER.number ?? ''} · ${scene ? scene.title : CHAPTER.title}`;
+    $('current-goal').textContent = engine.state.currentGoal || CHAPTER.goals?.[0] || 'Descubre otras miradas';
+    $('tokens').textContent = engine.state.tokens; $('item-count').textContent = engine.state.items.length;
+  }
+  function saveCheckpoint() {
+    const checkpoint = engine.checkpoint();
+    if (engine.state.phase === 'scene' && checkpoint !== lastSavedCheckpoint) {
+      safeWrite(storageKey, JSON.parse(checkpoint)); lastSavedCheckpoint = checkpoint;
+    }
+  }
+  function advance() {engine.advance(); render();}
+  function makeNext(text = 'Continuar →', action = advance) {primaryAction = action; return button(text, action, 'primary');}
+  function reset() {
+    closeModal(); dismissToast();
+    engine = new StoryEngine(CHAPTER, settings); backlog.length = 0; lastLogged = null; saved = null; challengeUI = null;
+    lastSavedCheckpoint = null; safeRemove(storageKey); render();
+  }
+  function render() {
+    dismissToast();
+    clearTimeout(typingTimer); finishTyping = null; lineContinue = null; primaryAction = null; numberActions = [];
+    stage.replaceChildren(); updateHUD(); saveCheckpoint();
+    const view = engine.view();
+    document.querySelector('.hud').inert = view.type === 'perspective';
+    setBackground(view.type === 'chapter' ? 'bg_academia' : engine.scene()?.background);
+    const handlers = {chapter:renderTitle, scene:renderScene, line:renderLineBeat, choice:renderChoice, challenge:renderChallenge,
+      perspective:renderPerspective, item:renderItem, chronicle:renderChronicle, recap:renderRecap, reflection:renderReflection,
+      reason:renderReason, closing:renderClosing, rewards:renderRewards, end:renderEnd};
+    (handlers[view.type] || (() => {stage.append(el('p','','La historia no está disponible.'));}))(view);
+    stage.focus({preventScroll:true});
+    if (engine.state.phase === 'end') safeRemove(storageKey);
+  }
+  function renderTitle() {
+    const hero = el('div','hero'), copy = el('div','hero-copy'), art = el('div','hero-art');
+    append(copy, el('div','eyebrow',`Viajeros de la historia · Capítulo ${CHAPTER.number ?? 1}`), el('h1','',CHAPTER.title),
+      el('p','hero-subtitle','El reloj del tiempo te espera. Entra en la historia, resuelve desafíos y descubre otras miradas.'));
+    const actions = el('div','hero-actions');
+    if (saved) {
+      const continueSaved = () => {engine.restore(saved); saved = null; lastSavedCheckpoint = null; render();};
+      append(actions, makeNext('Continuar mi viaje →', continueSaved), button('Empezar de nuevo', reset));
+      const checkpointScene = CHAPTER.scenes[saved.sceneIndex];
+      copy.append(el('p','small muted',`Retomarás desde el inicio de «${checkpointScene?.title || CHAPTER.title}».`));
+    } else actions.append(makeNext('Comenzar el viaje →'));
+    append(copy, actions, append(el('div','hero-footer'), el('span','','✦ Desafíos para aprender'), el('span','','⌖ Tú eliges tu camino'), el('span','','↵ Avanza a tu ritmo')));
+    append(art, el('div','portal'), portrait('estela','hero-portrait'), append(el('div','year-seal'), el('div','eyebrow','Destino'), el('strong','',CHAPTER.year || 'Historia')));
+    append(hero,copy,art); stage.append(hero);
+  }
+  function renderScene(view) {
+    const scene = view.scene, card = el('div','scene-card');
+    append(card, el('div','eyebrow',`Escena ${engine.state.sceneIndex + 1} de ${CHAPTER.scenes.length}`), compass(), el('h1','',scene.title), el('div','scene-divider'),
+      el('p','',scene.place), el('p','small muted',scene.date), el('div','item-chip',`A través de los ojos de: ${scene.perspective || 'un viajero'}`), makeNext('Entrar en la escena →'));
+    stage.append(card);
+  }
+  function renderDialogue(who, text, mood, next = advance, key = engine.state.pending) {
+    remember(who,text,key);
+    const wrapper = el('div','dialogue-stage');
+    const scene = engine.scene();
+    if (scene) wrapper.append(el('p','scene-position',`${scene.place} · ${scene.date}`));
+    const narration = who === 'narrador';
+    const panel = el('div',`dialogue${narration ? ' narration' : ''}`), copy = el('div','dialogue-copy');
+    if (!narration) panel.append(portrait(who,'portrait',mood));
+    if (!narration) {
+      const name = el('div','name',CHAPTER.characters?.[who]?.name || who || 'Estela');
+      const color = CHAPTER.characters?.[who]?.color;
+      if (color && /^#[0-9a-f]{3,8}$/i.test(color)) name.style.setProperty('--speaker',color);
+      copy.append(name);
+    }
+    const line = el('p','line-text');
+    const visible = el('span'); visible.setAttribute('aria-hidden','true');
+    append(line, visible, el('span','sr-only',text)); copy.append(line);
+    const controls = el('div','dialogue-controls');
+    const historyControls = el('div','row');
+    append(historyControls, button('↺ Repetir línea', () => typeLine()), button('Últimas líneas', showBacklog, 'quiet'));
+    const nextButton = button('Completar texto ↓', () => progressLine(), 'continue-line');
+    append(controls,historyControls,nextButton); copy.append(controls); panel.append(copy); wrapper.append(panel); stage.append(wrapper);
+    const characters = Array.from(text || '');
+    function typeLine() {
+      clearTimeout(typingTimer); visible.textContent = ''; let index = 0;
+      const complete = () => {clearTimeout(typingTimer); visible.textContent = text; finishTyping = null; nextButton.textContent = 'Continuar →';};
+      finishTyping = complete; lineContinue = next; nextButton.textContent = 'Completar texto ↓';
+      if (settings.speed === 'instant' || reducedMotion.matches) {complete(); return;}
+      const step = () => {
+        if (modalOpen) {typingTimer = setTimeout(step, 100); return;}
+        visible.textContent += characters[index++] || '';
+        if (index >= characters.length) complete(); else typingTimer = setTimeout(step,settings.speed === 'slow' ? 55 : 22);
+      };
+      step();
+    }
+    function progressLine() {if (finishTyping) finishTyping(); else next();}
+    panel.addEventListener('click', event => {if (!event.target.closest('button')) progressLine();});
+    typeLine();
+  }
+  function renderLineBeat(view) {renderDialogue(view.beat.who,view.beat.text,view.beat.mood);}
+  function optionButton(text, index, action, selected = false) {
+    const node = button('',action,`option${selected ? ' selected' : ''}`);
+    append(node,el('span','key',index + 1),el('span','',text)); return node;
+  }
+  function renderChoice(view) {
+    const card = el('div','choice-card');
+    append(card,el('div','eyebrow','Tu decisión'),el('h2','',view.beat.prompt));
+    const options = el('div','options');
+    view.beat.options.forEach((option,index) => {
+      const action = () => {engine.choose(index); render();}; numberActions[index] = action;
+      options.append(optionButton(option.text,index,action));
+    });
+    append(card,options,el('p','small muted','Cada decisión abre una parte de tu historia. Puedes usar las teclas 1–4.')); stage.append(card);
+  }
+  function renderPerspective(view) {
+    const card = el('div','perspective-card full-view');
+    append(card,el('div','eyebrow','Cambia la mirada'),compass(),el('h2','',view.beat.title),el('p','',view.beat.text),makeNext('Mirar desde el otro lado →')); stage.append(card);
+  }
+  function renderItem(view) {
+    const card = el('div','scene-card');
+    append(card,el('div','eyebrow','Un recuerdo de tu viaje'),el('div','reward-icon','◇'),el('h2','',view.beat.name),el('p','',view.beat.text),makeNext('Guardar en mi mochila →')); stage.append(card);
+    toast(`Objeto obtenido: ${view.beat.name}`);
+  }
+  function paper(view) {
+    const card = el('section','challenge'), [name,icon] = subjects[view.beat.subject] || [view.beat.subject,'✦'];
+    const meta = el('div','row spread'), subject = el('div','row');
+    append(subject,el('span','subject-icon',icon),append(el('div'),el('div','eyebrow','Bitácora de viaje'),el('div','log-meta',`${name} · ${levelNames[view.level]}`)));
+    append(meta,subject,el('span','attempt-label',view.attempts ? 'Con una pista, vuelve a intentar' : 'A tu ritmo'));
+    card.append(meta);
+    if (settings.testMode) card.append(el('p','log-meta',`Modo prueba · ${(view.beat.oa || []).join(' · ')} · ${view.beat.id}`));
+    card.append(el('hr','paper-rule')); return card;
+  }
+  function explanation(view) {
+    const lines = [view.variant.explain, ...(view.beat.kind === 'reading' ? view.variant.questions.map(q => q.explain) : [])].filter(Boolean);
+    return lines.join('\n\n');
+  }
+  function renderChallenge(view) {
+    if (view.stage === 'intro') {renderDialogue(view.beat.who || 'estela',view.beat.intro,'',advance,view); return;}
+    const card = paper(view);
+    if (view.stage === 'hint') {
+      const feedback = el('div','feedback help');
+      append(feedback,append(el('div','hint-row'),portrait('mascota'),append(el('div'),el('h3','','Una pista para ti'),el('p','',view.beat.hint))),el('small','','Puedes intentarlo otra vez.'));
+      append(card,feedback,makeNext('Volver a intentar →',() => {challengeUI = null; advance();}));
+      stage.append(card); announce('Una pista para ti. Puedes intentarlo otra vez.'); return;
+    }
+    if (view.resolved) {
+      const outcome = view.outcome, feedback = el('div',`feedback${outcome.status === 'help' ? ' help' : ''}`);
+      append(feedback,el('h3','',outcome.status === 'success' ? (outcome.firstTry ? '¡Lo lograste a la primera!' : '¡Lo lograste con la pista!') : 'Sigamos aprendiendo'));
+      if (outcome.status === 'success') {
+        const who = view.beat.who || 'estela';
+        feedback.append(append(el('div','hint-row'),portrait(who),append(el('div'),el('div','feedback-speaker',CHAPTER.characters?.[who]?.name || who),el('p','',outcome.text))));
+      } else feedback.append(el('p','',outcome.text));
+      append(feedback,
+        el('small','',`+${outcome.tokens} ${outcome.tokens === 1 ? 'ficha de tiempo' : 'fichas de tiempo'}${outcome.firstTry ? ' · Incluye 1 de bonificación' : ''}`));
+      append(card,feedback,el('div','eyebrow','Así se resuelve'),el('p','explanation',explanation(view)),makeNext('Volver a la historia →',() => {challengeUI = null; advance();}));
+      stage.append(card); return;
+    }
+    if (!challengeUI || challengeUI.pending !== view || challengeUI.attempt !== view.attempts) {
+      challengeUI = {pending:view, attempt:view.attempts, value:null, reading:[], pairs:{}, activeLeft:null,
+        right:view.beat.kind === 'match' ? shuffle(view.variant.pairs.map((pair,i) => i)) : [],
+        order:view.beat.kind === 'order' ? shuffle(view.variant.items.map((item,i) => i)) : []};
+    }
+    const prompt = view.variant.prompt || 'Lee y descubre';
+    const heading = el('h2','challenge-prompt',prompt);
+    if (prompt.trim().split(/\s+/).length >= 40 || prompt.length > 240) heading.classList.add('long-prompt');
+    card.append(heading);
+    const workspace = el('div','stack'); card.append(workspace);
+    const submit = answer => {const result = engine.submit(answer); announce(result.status === 'hint' ? 'Aún no. Tu mascota tiene una pista.' : result.text); render();};
+    const kinds = {mc:renderMC,numeric:renderNumeric,match:renderMatch,order:renderOrder,grid:renderGrid,reading:renderReading};
+    kinds[view.beat.kind](workspace,view,submit); stage.append(card);
+  }
+  function shuffle(array) {
+    const shuffled = array.slice();
+    for (let i=shuffled.length - 1;i>0;i--) {const j=Math.floor(Math.random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
+    if (shuffled.length > 1 && shuffled.every((value,i) => value === array[i])) shuffled.push(shuffled.shift());
+    return shuffled;
+  }
+  function renderMC(workspace,view,submit) {
+    const options = el('div','options');
+    view.variant.options.forEach((text,index) => {const action = () => submit(index); numberActions[index] = action; options.append(optionButton(text,index,action));});
+    workspace.append(options);
+  }
+  function renderNumeric(workspace,view,submit) {
+    workspace.classList.add('numeric-workspace');
+    const controls = el('div','numeric-controls');
+    const wrap = el('div','number-wrap'), label = el('label','sr-only','Tu respuesta numérica');
+    label.htmlFor = 'numeric-answer';
+    const input = el('input','number-input'); input.id = 'numeric-answer'; input.type = 'text'; input.inputMode = 'decimal'; input.autocomplete = 'off'; input.maxLength = 20;
+    input.value = challengeUI.value || ''; input.setAttribute('aria-describedby','numeric-unit');
+    const unit = el('span','unit',view.variant.unit || 'Escribe un número'); unit.id = 'numeric-unit';
+    const pad = el('div','digit-pad'); pad.setAttribute('aria-label','Teclado de números');
+    const check = button('Comprobar respuesta →',() => submit(input.value),'primary');
+    const update = () => {challengeUI.value = input.value; check.disabled = !input.value.trim();}; input.addEventListener('input',update);
+    ['1','2','3','4','5','6','7','8','9','−','0','⌫',','].forEach(digit => {
+      const node = button(digit,() => {
+        if (digit === '⌫') input.value = input.value.slice(0,-1);
+        else if (digit === '−') input.value = input.value.startsWith('-') ? input.value.slice(1) : '-' + input.value;
+        else if (input.value.length < 20) input.value += digit;
+        update();
+      });
+      if (digit === '⌫') node.setAttribute('aria-label','Borrar último dígito');
+      if (digit === '−') node.setAttribute('aria-label','Cambiar signo');
+      pad.append(node);
+    });
+    input.addEventListener('keydown',event => {if (event.key === 'Enter' && !check.disabled) {event.preventDefault(); submit(input.value);}});
+    append(wrap,label,input,unit); append(controls,wrap,check); append(workspace,controls,pad); update();
+  }
+  function renderMatch(workspace,view,submit) {
+    const pairs = view.variant.pairs;
+    const directions = el('p','log-meta','Toca una palabra de la izquierda y después su pareja de la derecha.');
+    const columns = el('div','match-columns'), left = el('div','match-column'), right = el('div','match-column');
+    append(columns,left,right);
+    const check = button('Comprobar parejas →',() => submit(pairs.map((pair,i) => [pair[0],pairs[challengeUI.pairs[i]][1]])),'primary');
+    const leftButtons = [], rightButtons = {};
+    function update() {
+      leftButtons.forEach((node,i) => {
+        const paired = Object.hasOwn(challengeUI.pairs,i); node.disabled = paired;
+        node.classList.toggle('locked',paired); node.classList.toggle('active',challengeUI.activeLeft === i);
+        node.setAttribute('aria-pressed',String(challengeUI.activeLeft === i));
+        node.textContent = `${paired ? `${Number(i)+1} · ` : ''}${pairs[i][0]}`;
+      });
+      for (const [j,node] of Object.entries(rightButtons)) {
+        const partner = Object.entries(challengeUI.pairs).find(([,value]) => value === Number(j));
+        node.disabled = Boolean(partner); node.classList.toggle('locked',Boolean(partner));
+        node.textContent = `${partner ? `${Number(partner[0])+1} · ` : ''}${pairs[j][1]}`;
+      }
+      check.disabled = Object.keys(challengeUI.pairs).length !== pairs.length;
+    }
+    pairs.forEach((pair,i) => {const node = button(pair[0],() => {challengeUI.activeLeft = i; update();}); leftButtons.push(node); left.append(node);});
+    challengeUI.right.forEach(j => {
+      const node = button(pairs[j][1],() => {if (challengeUI.activeLeft === null) {announce('Primero elige una palabra de la izquierda.'); return;}
+        challengeUI.pairs[challengeUI.activeLeft] = j; challengeUI.activeLeft = null; update();});
+      rightButtons[j] = node; right.append(node);
+    });
+    append(workspace,directions,columns,button('Rehacer las parejas',() => {challengeUI.pairs = {}; challengeUI.activeLeft = null; update();},'quiet'),check); update();
+  }
+  function renderOrder(workspace,view,submit) {
+    workspace.append(el('p','log-meta','Usa las flechas para poner los pasos en orden. También puedes arrastrarlos.'));
+    const list = el('ol','order-list'); let dragging = null;
+    function move(from,to,focusDirection = null) {
+      if (to < 0 || to >= challengeUI.order.length || from === to) return;
+      const [item] = challengeUI.order.splice(from,1); challengeUI.order.splice(to,0,item); draw();
+      const row = list.children[to];
+      const target = focusDirection && row.querySelector(`[data-direction="${focusDirection}"]`);
+      if (target && !target.disabled) target.focus(); else row.focus();
+      announce(`Paso movido a la posición ${to+1}.`);
+    }
+    function draw() {
+      list.replaceChildren();
+      challengeUI.order.forEach((item,index) => {
+        const row = el('li','order-item'); row.draggable = true; row.tabIndex = -1;
+        append(row,el('span','eyebrow',index+1),el('span','order-text',view.variant.items[item]));
+        const controls = el('div','order-controls');
+        const up = button('↑',() => move(index,index-1,'up')), down = button('↓',() => move(index,index+1,'down'));
+        up.dataset.direction = 'up'; down.dataset.direction = 'down';
+        up.setAttribute('aria-label',`Subir: ${view.variant.items[item]}`); down.setAttribute('aria-label',`Bajar: ${view.variant.items[item]}`);
+        up.disabled = index === 0; down.disabled = index === challengeUI.order.length-1;
+        row.addEventListener('dragstart',event => {dragging=index; event.dataTransfer.setData('text/plain',String(index)); event.dataTransfer.effectAllowed='move';});
+        row.addEventListener('dragover',event => event.preventDefault());
+        row.addEventListener('drop',event => {event.preventDefault(); if (dragging !== null) move(dragging,index); dragging=null;});
+        row.addEventListener('dragend',() => {dragging=null;}); append(controls,up,down); row.append(controls); list.append(row);
+      });
+    }
+    draw(); append(workspace,list,button('Comprobar orden →',() => submit(challengeUI.order.map(i => view.variant.items[i])),'primary'));
+  }
+  function renderGrid(workspace,view,submit) {
+    const [maxX,maxY] = view.variant.size, margin = 40, step = 34, width = maxX*step+margin*2, height = maxY*step+margin*2;
+    const wrap = el('div','grid-wrap'), svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('class','coordinate-grid'); svg.setAttribute('viewBox',`0 0 ${width} ${height}`); svg.setAttribute('role','group'); svg.setAttribute('aria-label','Plano cartesiano. El origen está abajo a la izquierda.');
+    const sx = x => margin+x*step, sy = y => height-margin-y*step;
+    function shape(tag,attrs,text) {const node=document.createElementNS('http://www.w3.org/2000/svg',tag); for (const [key,value] of Object.entries(attrs)) node.setAttribute(key,String(value)); if (text !== undefined) node.textContent=text; svg.append(node); return node;}
+    for (let x=0;x<=maxX;x++) {shape('line',{x1:sx(x),y1:sy(0),x2:sx(x),y2:sy(maxY),class:x===0?'grid-axis':'grid-lines'});shape('text',{x:sx(x),y:sy(0)+22,'text-anchor':'middle',class:'grid-label'},x);}
+    for (let y=0;y<=maxY;y++) {shape('line',{x1:sx(0),y1:sy(y),x2:sx(maxX),y2:sy(y),class:y===0?'grid-axis':'grid-lines'});if(y)shape('text',{x:sx(0)-17,y:sy(y)+5,'text-anchor':'middle',class:'grid-label'},y);}
+    shape('text',{x:width-10,y:sy(0)+7,class:'grid-label'},'x');shape('text',{x:sx(0)-4,y:18,class:'grid-label'},'y');
+    for(const mark of view.variant.marks || []) {
+      shape('circle',{cx:sx(mark.at[0]),cy:sy(mark.at[1]),r:5,fill:'#367570'});
+      shape('text',{x:sx(mark.at[0]),y:sy(mark.at[1])-10,'text-anchor':mark.at[0]===0?'start':mark.at[0]===maxX?'end':'middle',class:'grid-mark'},mark.label);
+    }
+    const readout=el('p','coordinate-readout','Elige un punto (x, y).'); readout.setAttribute('aria-live','polite');
+    const check=button('Comprobar coordenadas →',() => submit(challengeUI.value),'primary'); check.disabled=!challengeUI.value;
+    let chosen=null; const points=[];
+    const select=(point,x,y) => {if(chosen){chosen.classList.remove('chosen');chosen.setAttribute('aria-pressed','false');}chosen=point;point.classList.add('chosen');point.setAttribute('aria-pressed','true');challengeUI.value=[x,y];readout.textContent=`Tu punto: (${x}, ${y})`;check.disabled=false;};
+    for(let y=0;y<=maxY;y++) for(let x=0;x<=maxX;x++) {
+      const point=shape('circle',{cx:sx(x),cy:sy(y),r:Math.min(16,step/2),class:'grid-point',tabindex:x===0&&y===0?'0':'-1',role:'button','aria-label':`(${x}, ${y})`,'aria-pressed':'false'}); points.push({point,x,y});
+      point.addEventListener('click',() => select(point,x,y));
+      const describe=() => {readout.textContent=`(${x}, ${y})${challengeUI.value ? ` · Elegido: (${challengeUI.value.join(', ')})` : ''}`;};
+      point.addEventListener('pointerenter',describe);point.addEventListener('focus',describe);
+      point.addEventListener('keydown',event => {
+        if(event.key==='Enter'||event.key===' ') {event.preventDefault();event.stopPropagation();select(point,x,y);return;}
+        const directions={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,1],ArrowDown:[0,-1]};
+        if(directions[event.key]) {event.preventDefault();const [dx,dy]=directions[event.key];const next=points.find(p=>p.x===x+dx&&p.y===y+dy);if(next){point.setAttribute('tabindex','-1');next.point.setAttribute('tabindex','0');next.point.focus();}}
+      });
+      if(challengeUI.value?.[0]===x&&challengeUI.value?.[1]===y)select(point,x,y);
+    }
+    wrap.append(svg);append(workspace,el('p','log-meta','Primero cuenta hacia la derecha (x), después hacia arriba (y). Con teclado, usa las flechas y Enter.'),wrap,readout,check);
+  }
+  function renderReading(workspace,view,submit) {
+    append(workspace,el('div','passage',view.variant.passage),el('p','source',view.variant.source));
+    const check=button('Comprobar respuestas →',() => submit(challengeUI.reading),'primary');
+    const update=() => {check.disabled=view.variant.questions.some((question,i)=>!Number.isInteger(challengeUI.reading[i]));};
+    view.variant.questions.forEach((question,i) => {
+      const section=el('div','reading-question');section.setAttribute('role','group');section.setAttribute('aria-label',`Pregunta ${i+1}`);
+      section.append(el('h3','',`${i+1}. ${question.prompt}`));const options=el('div','options'),buttons=[];
+      question.options.forEach((text,j) => {
+        const node=optionButton(text,j,() => {challengeUI.reading[i]=j;buttons.forEach((b,k)=>{b.classList.toggle('selected',k===j);b.setAttribute('aria-pressed',String(k===j));});update();},challengeUI.reading[i]===j);
+        node.setAttribute('aria-pressed',String(challengeUI.reading[i]===j));buttons.push(node);options.append(node);
+      });
+      section.append(options);workspace.append(section);
+    });
+    workspace.append(check);update();
+  }
+  function book(title,eyebrow='El cuaderno del tiempo') {
+    const card=el('div','book-card');append(card,el('div','eyebrow',eyebrow),el('h2','',title));return card;
+  }
+  function renderChronicle() {
+    const card=book(CHAPTER.chronicle?.title || 'Así ocurrió','La historia que compartimos'),paragraphs=el('div','paragraphs');
+    (CHAPTER.chronicle?.paragraphs || []).forEach(text=>paragraphs.append(el('p','',text)));append(card,paragraphs,makeNext('Ver mi recorrido →'));stage.append(card);
+  }
+  function renderRecap(view) {
+    const card=book('Lo que tú hiciste','Tu huella en este viaje');
+    if(!view.lines.length)card.append(el('p','','Recorriste la historia, escuchaste otras miradas y practicaste nuevas habilidades.'));
+    view.lines.forEach(line=>card.append(append(el('div','recap-line'),el('span','gold','✦'),el('p','',line.text))));
+    card.append(makeNext('Pensar en lo vivido →'));stage.append(card);
+  }
+  function renderReflection() {
+    const reflection=CHAPTER.reflection,card=book('Una idea para llevar contigo','No hay una respuesta incorrecta');
+    if(settings.testMode)card.append(el('p','small muted',reflection.oa.join(' · ')));
+    card.append(el('p','',reflection.prompt));const options=el('div','options');
+    reflection.options.forEach((option,i)=>{const action=()=>{engine.reflect(option.id);render();};numberActions[i]=action;options.append(optionButton(option.text,i,action));});
+    card.append(options);stage.append(card);
+  }
+  function renderReason() {
+    const reflection=CHAPTER.reflection,card=book('¿Por qué elegiste esa idea?','Tu voz también cuenta');card.classList.add('reflection');
+    const option=reflection.options.find(o=>o.id===engine.state.reflection.optionId);card.append(el('p','',`Tu idea: ${option.text}`));
+    const reasons=el('div','reflection-reasons');
+    reflection.reasons.forEach(reason=>reasons.append(button(reason,()=>{engine.justify(reason);render();},'option')));card.append(reasons);
+    const label=el('label','','O escribe tu propia razón:');label.htmlFor='own-reason';const area=el('textarea');area.id='own-reason';area.maxLength=200;area.placeholder='Pienso esto porque…';
+    const counter=el('p','small muted','0 / 200 caracteres'),next=button('Compartir mi razón →',()=>{engine.justify(area.value);render();},'primary');next.disabled=true;
+    area.addEventListener('input',()=>{counter.textContent=`${area.value.length} / 200 caracteres`;next.disabled=!area.value.trim();});
+    append(card,label,area,counter,next);stage.append(card);
+  }
+  function renderClosing() {renderDialogue('estela',CHAPTER.reflection.closing,'feliz',advance,'closing');}
+  function renderRewards() {
+    const card=book('El tiempo guarda tus recuerdos','Viaje completado'),piece=engine.state.piece;
+    if(piece)card.append(append(el('div','reward-display'),el('div','reward-icon','⚙'),el('h3','',piece.name),el('p','',piece.text)));
+    if(engine.state.items.length) {
+      card.append(el('h3','','Tu mochila'));const items=el('div','row');engine.state.items.forEach(item=>items.append(el('span','item-chip',`◇ ${item.name}`)));card.append(items);
+    }
+    append(card,el('p','',`Reuniste ${engine.state.tokens} fichas de tiempo mientras aprendías.`),makeNext('Ver lo que practiqué →'));stage.append(card);
+  }
+  function renderEnd() {
+    const card=book('¡Hasta el próximo viaje!','Aprender también es una aventura');card.classList.add('end-card');
+    card.append(el('p','','Cada pista te ayudó a avanzar. Esto es lo que practicaste:'));
+    const table=el('table','summary-table'),head=el('thead'),headRow=el('tr');
+    ['Asignatura','A la primera','Con ayuda'].forEach(text=>headRow.append(el('th','',text)));head.append(headRow);table.append(head);const body=el('tbody');
+    engine.summary().forEach(({subject,entries})=>{
+      const row=el('tr'),title=el('td','',subjects[subject]?.[0] || subject);
+      title.append(el('span','summary-oa',`Nivel actual: ${levelNames[engine.levelFor(subject)]}`));row.append(title);
+      // Count per OA explicitly; a challenge can practise more than one OA.
+      row.append(el('td','',entries.reduce((sum,[,r])=>sum+r.firstTry,0)),el('td','',entries.reduce((sum,[,r])=>sum+r.helped,0)));body.append(row);
+    });table.append(body);card.append(append(el('div','summary-wrap'),table));
+    card.append(el('p','small muted','Los conteos suman objetivos practicados. Un desafío puede trabajar más de un objetivo.'));
+    const details=el('details','summary-detail');details.append(el('summary','','Ver cada objetivo de aprendizaje'));
+    for(const [oa,result] of Object.entries(engine.state.results)) {
+      const name=subjects[result.subject]?.[0] || result.subject;
+      const parts=[];if(result.firstTry)parts.push(`${result.firstTry} a la primera`);if(result.helped)parts.push(`${result.helped} con ayuda`);if(result.reflections)parts.push('reflexión compartida');
+      details.append(el('p','',`${name} · ${oa}: ${parts.join(' · ')}`));
+    }
+    card.append(details);
+    if(engine.state.reflection) {
+      const choice=CHAPTER.reflection.options.find(o=>o.id===engine.state.reflection.optionId);
+      card.append(el('p','small muted',`Tu reflexión: ${choice.text} ${engine.state.reflection.reason}`));
+    }
+    append(card,makeNext('Jugar de nuevo',reset),el('p','small muted','En un nuevo viaje puedes tomar otras decisiones.'));stage.append(card);
+  }
+  function openModal(title) {
+    returnFocus=document.activeElement;modalOpen=true;$('modal-shell').hidden=false;
+    stage.inert=true;document.querySelector('.hud').inert=true;
+    const modal=$('modal');modal.replaceChildren();const header=el('div','row spread'),heading=el('h2','',title);heading.id='modal-title';
+    append(header,heading,button('✕',closeModal,'icon-button'));header.lastChild.setAttribute('aria-label','Cerrar');modal.append(header);
+    setTimeout(()=>header.lastChild.focus(),0);return modal;
+  }
+  function closeModal() {
+    if(!modalOpen)return;modalOpen=false;$('modal-shell').hidden=true;stage.inert=false;document.querySelector('.hud').inert=engine.view().type==='perspective';
+    if(returnFocus?.isConnected)returnFocus.focus();else stage.focus({preventScroll:true});
+  }
+  function showGoals() {
+    const modal=openModal('Tu misión'),goals=Array.from(new Set([...(CHAPTER.goals || []),...engine.state.goals]));
+    if(engine.state.currentGoal)modal.append(el('p','gold',`Ahora: ${engine.state.currentGoal}`));
+    const list=el('ul');goals.forEach(goal=>list.append(el('li','',goal)));modal.append(list);
+  }
+  function showItems() {
+    const modal=openModal('Tu mochila');
+    if(!engine.state.items.length)modal.append(el('p','empty-note','Tu mochila aún espera los recuerdos de este viaje.'));
+    engine.state.items.forEach(item=>modal.append(append(el('div','stack'),el('h3','',`◇ ${item.name}`),el('p','',item.text))));
+    if(engine.state.piece)modal.append(el('p','gold',`⚙ ${engine.state.piece.name}`));
+  }
+  function showBacklog() {
+    const modal=openModal('Las últimas líneas');
+    if(!backlog.length)modal.append(el('p','empty-note','Las voces de tu viaje aparecerán aquí.'));
+    backlog.forEach(line=>modal.append(append(el('div','backlog-entry'),el('strong','',line.who),el('p','',line.text))));
+  }
+  function showSettings() {
+    const modal=openModal('Ajusta tu viaje');
+    const levelLabel=el('label','','Nivel para comenzar un nuevo viaje'),level=el('select');
+    STORY_LEVELS.forEach(value=>{const option=el('option','',levelNames[value]);option.value=value;level.append(option);});level.value=settings.startingLevel;
+    level.addEventListener('change',()=>{settings.startingLevel=level.value;safeWrite(settingsKey,settings);if(engine.state.phase==='chapter'&&!saved)engine=new StoryEngine(CHAPTER,settings);});levelLabel.append(level);modal.append(levelLabel);
+    modal.append(el('p','small muted','Durante el viaje, el nivel de cada asignatura se ajusta con tus respuestas.'));
+    const speedLabel=el('label','','Velocidad del texto'),speed=el('select');
+    [['slow','Pausado'],['normal','Normal'],['instant','Todo al instante']].forEach(([value,text])=>{const option=el('option','',text);option.value=value;speed.append(option);});speed.value=settings.speed;
+    speed.addEventListener('change',()=>{settings.speed=speed.value;safeWrite(settingsKey,settings);if(settings.speed==='instant'&&finishTyping)finishTyping();});speedLabel.append(speed);modal.append(speedLabel);
+    const testLabel=el('label','toggle'),test=el('input');test.type='checkbox';test.checked=settings.testMode;
+    append(testLabel,test,el('span','','Modo prueba'));modal.append(testLabel);
+    const jumps=el('div','stack');const jumpLabel=el('label','','Ir al inicio de una escena'),jumpSelect=el('select');
+    CHAPTER.scenes.forEach((scene,i)=>{const option=el('option','',`${i+1}. ${scene.title}`);option.value=i;jumpSelect.append(option);});jumpSelect.value=Math.max(0,engine.state.sceneIndex);
+    jumpLabel.append(jumpSelect);append(jumps,jumpLabel,button('Ir a esta escena',()=>{closeModal();challengeUI=null;engine.enterScene(Number(jumpSelect.value));render();}));
+    jumps.hidden=!settings.testMode;modal.append(jumps);
+    test.addEventListener('change',()=>{settings.testMode=test.checked;safeWrite(settingsKey,settings);jumps.hidden=!settings.testMode;});
+    modal.append(button('Guardar ajustes y volver',()=>{closeModal();render();},'primary'));
+    modal.append(button('Reiniciar capítulo',reset,'danger'));
+  }
+  $('settings-button').addEventListener('click',showSettings);$('goals-button').addEventListener('click',showGoals);$('items-button').addEventListener('click',showItems);
+  $('modal-shell').addEventListener('click',event=>{if(event.target===$('modal-shell'))closeModal();});
+  document.addEventListener('keydown',event=>{
+    if(modalOpen) {
+      if(event.key==='Escape'){event.preventDefault();closeModal();return;}
+      if(event.key==='Tab') {
+        const focusable=Array.from($('modal').querySelectorAll('button,input,select,textarea,[tabindex="0"]')).filter(node=>!node.disabled&&!node.closest('[hidden]'));
+        const first=focusable[0],last=focusable[focusable.length-1];
+        if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+        else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+      }return;
+    }
+    if(event.altKey||event.ctrlKey||event.metaKey||event.repeat||event.target.closest('input,textarea,select,[contenteditable]'))return;
+    const index=Number(event.key)-1;
+    if(/^[1-4]$/.test(event.key)&&numberActions[index]){event.preventDefault();numberActions[index]();return;}
+    if(event.key===' '||event.key==='Enter') {
+      if(event.target.closest('button,[role="button"],summary'))return;
+      if(finishTyping){event.preventDefault();finishTyping();}
+      else if(lineContinue){event.preventDefault();lineContinue();}
+      else if(primaryAction){event.preventDefault();primaryAction();}
+    }
+  });
+  reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches&&finishTyping)finishTyping();});
+  render();
+})();
+// UI_END
+</script>

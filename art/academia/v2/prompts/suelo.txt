@@ -1,0 +1,4 @@
+Storybook cartoon game art for a children's 2D platformer: clean dark brown outlines, soft cel shading, rich but warm colours, the same art style as the reference image.
+A long horizontal floor strip for a 2D side-scrolling platformer, filling the full width of a landscape image, on a flat chroma green background (#00B140) above and below it.
+The strip shows the top surface of a polished floor seen from a low angle (about 20 degrees from the side), so the floor surface is a band that recedes slightly toward the back: warm honey-coloured wooden planks running left to right, with a thin inlaid brass line and small inlaid brass stars. Under the top surface, the front face of the floor: a thick dark walnut beam with a polished brass trim line and brass rivets.
+The top surface band is about 60 % of the strip's height, the front face 40 %. The pattern repeats evenly so it can tile horizontally. No purple. No objects, no characters, no text.

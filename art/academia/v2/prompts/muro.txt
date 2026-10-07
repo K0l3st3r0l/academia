@@ -1,0 +1,8 @@
+Storybook cartoon game art for a children's 2D platformer: clean dark brown outlines, soft cel shading, rich but warm colours, the same art style as the reference image.
+Back wall of a magical two-storey academy hall (an observatory outside of time), seen straight-on and flat to the camera like a 2D side-scrolling game background. One symmetric bay of the wall, filling the whole image edge to edge, landscape.
+Lower storey (bottom 45 % of the image): warm cream sandstone wall, a central arched alcove with honey-wood bookshelves full of colourful books, a globe, scrolls and small green potted plants; walnut wood wainscoting along the bottom, ending in a dark wood baseboard exactly at the bottom edge of the image. There is NO floor visible at all: the image ends at the baseboard.
+A plain horizontal stone cornice band across the full width at about 55 % from the top.
+Upper storey: two tall arched windows with polished brass frames showing a deep blue and teal night sky with stars, a crescent moon and faint golden constellation lines; between the windows a sandstone pilaster with a warm brass lamp.
+Top 12 %: warm wooden ceiling ribs.
+The left and right edges cut through the middle of a sandstone pilaster.
+Palette: cream sandstone, honey and walnut wood, polished brass, deep blue-teal sky, green plants, a few red and teal book spines. Absolutely no purple or violet anywhere. Calm, slightly soft background values so characters stand out in front of it. No characters, no text, no floor.

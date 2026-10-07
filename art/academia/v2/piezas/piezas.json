@@ -1,0 +1,150 @@
+{
+ "galeria": [
+  1501,
+  166
+ ],
+ "baranda": [
+  1466,
+  175
+ ],
+ "columna": [
+  169,
+  518
+ ],
+ "colgante": [
+  854,
+  144
+ ],
+ "suelo": [
+  2172,
+  302
+ ],
+ "escalera": [
+  1495,
+  997
+ ],
+ "cofre": [
+  1159,
+  1120
+ ],
+ "cofre_abierto": [
+  1159,
+  1120
+ ],
+ "objeto_medallon": [
+  283,
+  390
+ ],
+ "objeto_insignia": [
+  301,
+  303
+ ],
+ "objeto_panuelo": [
+  340,
+  329
+ ],
+ "objeto_sombrero": [
+  360,
+  270
+ ],
+ "objeto_brujula": [
+  301,
+  389
+ ],
+ "objeto_capa": [
+  370,
+  349
+ ],
+ "objeto_linterna": [
+  232,
+  414
+ ],
+ "objeto_mapa": [
+  357,
+  359
+ ],
+ "ui_marco": [
+  856,
+  597
+ ],
+ "ui_cinta": [
+  709,
+  213
+ ],
+ "ui_pergamino": [
+  657,
+  375
+ ],
+ "ui_casilla": [
+  183,
+  179
+ ],
+ "ui_etiqueta": [
+  199,
+  162
+ ],
+ "ui_cerrar": [
+  130,
+  129
+ ],
+ "ui_boton_oro": [
+  283,
+  98
+ ],
+ "ui_boton_teal": [
+  260,
+  104
+ ],
+ "ui_repisa": [
+  446,
+  140
+ ],
+ "ico_ficha": [
+  264,
+  275
+ ],
+ "ico_chispa": [
+  253,
+  269
+ ],
+ "ico_pieza": [
+  261,
+  308
+ ],
+ "ico_mochila": [
+  291,
+  309
+ ],
+ "ico_gestos": [
+  269,
+  287
+ ],
+ "ico_objetivos": [
+  299,
+  299
+ ],
+ "ico_ajustes": [
+  283,
+  284
+ ],
+ "ico_sonido": [
+  247,
+  292
+ ],
+ "ico_candado": [
+  221,
+  307
+ ],
+ "ico_libro": [
+  370,
+  274
+ ],
+ "muro": [
+  1536,
+  1024
+ ],
+ "atrio": [
+  1672,
+  941
+ ]
+}

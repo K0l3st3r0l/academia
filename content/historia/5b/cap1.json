@@ -1,0 +1,1507 @@
+{
+  "id": "cap1",
+  "number": 1,
+  "title": "Hacia lo desconocido",
+  "year": "1492",
+  "goals": [
+    "Ayudar a organizar el agua y acompañar a la tripulación durante el cruce.",
+    "Entenderte con una familia lucaya sin compartir idioma, respetando sus decisiones.",
+    "Recuperar el engranaje del horizonte, la primera pieza del Reloj de las Épocas."
+  ],
+  "characters": {
+    "estela": {
+      "name": "Estela",
+      "portrait": "estela",
+      "color": "#7C5CFF"
+    },
+    "narrador": {
+      "name": "",
+      "portrait": null
+    },
+    "ines": {
+      "name": "Inés",
+      "portrait": "ines",
+      "color": "#B54F77"
+    },
+    "diego": {
+      "name": "Diego",
+      "portrait": "diego",
+      "color": "#267A99"
+    },
+    "carpintero": {
+      "name": "Carpintero de la aventura",
+      "portrait": null,
+      "color": "#8A6038"
+    },
+    "nina_lucaya": {
+      "name": "Lía",
+      "portrait": "nina_lucaya",
+      "color": "#1C8068"
+    },
+    "madre_lucaya": {
+      "name": "Mamá de Lía",
+      "portrait": null,
+      "color": "#946034"
+    },
+    "padre_lucayo": {
+      "name": "Papá de Lía",
+      "portrait": null,
+      "color": "#486A8C"
+    },
+    "mascota": {
+      "name": "Tu mascota",
+      "portrait": "mascota",
+      "color": "#BD692B"
+    }
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "title": "El puerto de Palos",
+      "place": "Palos (actual Palos de la Frontera), Corona de Castilla",
+      "date": "2–3 de agosto de 1492",
+      "background": "bg_palos",
+      "perspective": "Tripulación",
+      "beats": [
+        {
+          "type": "line",
+          "who": "estela",
+          "text": "Desde la Academia, te envío a 1492. Tu Brújula del Tiempo te guiará hacia la primera pieza del Reloj.",
+          "mood": "feliz"
+        },
+        {
+          "type": "line",
+          "who": "estela",
+          "text": "Tú puedes ayudar, escuchar y resolver problemas. Los hechos del pasado seguirán su camino; tus decisiones construirán tu propia aventura.",
+          "mood": "serio"
+        },
+        {
+          "type": "line",
+          "who": "estela",
+          "text": "Busca el engranaje del horizonte. Y cuida a tu mascota: ya intentó guardar una estrella en la mochila.",
+          "mood": "feliz"
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Cruzas el portal. En Palos, las cuerdas crujen y el aire huele a mar. Tres barcos esperan."
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Diego e Inés son personajes inventados para esta aventura. Sus encuentros contigo acompañan los hechos reales."
+        },
+        {
+          "type": "line",
+          "who": "ines",
+          "text": "¡Llegaste justo! Soy Inés. Ayúdame a guardar los barriles en la bodega, donde va la carga. Yo me quedo en Palos.",
+          "mood": "feliz"
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "Soy Diego, tengo doce años y soy grumete: aprendo y ayudo en el barco. ¡Estos barriles pesan más que yo!",
+          "mood": "feliz"
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Viajan la Santa María, la Pinta y la Niña: barcos de vela de la expedición de Colón, con unos noventa hombres."
+        },
+        {
+          "type": "goal",
+          "text": "Ayuda a organizar la reserva de agua y elige tu carga extra."
+        },
+        {
+          "type": "line",
+          "who": "ines",
+          "text": "Tú harás cuentas con raciones inventadas para practicar. No conocemos aquí las cantidades reales de los barriles.",
+          "mood": "serio"
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Colón quería llegar a Asia navegando hacia el oeste para comerciar con especias y otros productos."
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "Las especias, como la pimienta, dan sabor a la comida. Oeste es la dirección por donde se pone el sol."
+        },
+        {
+          "type": "challenge",
+          "id": "J",
+          "subject": "historia",
+          "oa": [
+            "HI-OA1"
+          ],
+          "kind": "mc",
+          "intro": "Tu Brújula guarda el plan del viaje. Tú puedes ayudarme a entenderlo.",
+          "who": "diego",
+          "variants": {
+            "inicial": {
+              "prompt": "Colón quiere llegar a Asia.\n¿Para qué busca una ruta hasta allí?",
+              "options": [
+                "Para comerciar con especias y otros productos.",
+                "Para pescar en las Canarias.",
+                "Para reparar barcos en Palos."
+              ],
+              "answer": 0,
+              "explain": "Uno de sus objetivos era llegar a Asia para comerciar con especias y otros productos."
+            },
+            "intermedio": {
+              "prompt": "La ficha cuenta el objetivo del viaje y la dirección elegida.\n¿Qué plan corresponde a Colón?",
+              "options": [
+                "Llegar a Asia navegando al este para comerciar.",
+                "Quedarse en Canarias para pescar.",
+                "Llegar a Asia navegando al oeste para comerciar con especias."
+              ],
+              "answer": 2,
+              "explain": "Colón quería llegar a Asia para comerciar. Eligió navegar hacia el oeste y cruzar el Atlántico."
+            },
+            "avanzado": {
+              "prompt": "Los barcos cruzan el Atlántico hacia el oeste y llegan a las Bahamas, en América.\n¿Qué respuesta compara el plan de Colón con el lugar al que llegó?",
+              "options": [
+                "Planeaba quedarse en Canarias y llegó allí sin cruzar el océano.",
+                "Quería llegar a Asia para comerciar con especias, pero llegó a América.",
+                "Quería llegar a América y llegó a Asia para comprar especias."
+              ],
+              "answer": 1,
+              "explain": "El plan era llegar a Asia navegando al oeste para comerciar. La expedición llegó a las Bahamas, en América, así que el lugar de llegada fue distinto."
+            }
+          },
+          "hint": "¡Mi nariz busca pimienta! Recuerda el lugar al que quería llegar Colón y la dirección que eligió.",
+          "success": "¡Ya conoces el plan! Querer llegar a un lugar no asegura que el viaje termine allí.",
+          "tokens": 5
+        },
+        {
+          "type": "challenge",
+          "id": "A",
+          "subject": "matematica",
+          "oa": [
+            "MA-OA4",
+            "MA-OA6"
+          ],
+          "kind": "numeric",
+          "intro": "En este juego, una ración es agua para diez personas durante un día. Las 90 personas forman nueve grupos.",
+          "who": "ines",
+          "variants": {
+            "inicial": {
+              "prompt": "En este juego hay 101 raciones. Cada día, los 9 grupos gastan una ración por grupo.\n¿Para cuántos días completos alcanza el agua de todos? Divide 101 entre 9.",
+              "answer": 11,
+              "unit": "días completos",
+              "tolerance": 0,
+              "explain": "101 ÷ 9 = 11 y sobran 2 raciones. Esas 2 no alcanzan para otro día de los 9 grupos: hay agua para 11 días completos."
+            },
+            "intermedio": {
+              "prompt": "Hay 128 raciones en la reserva del juego. Cada uno de los 9 grupos gasta una ración diaria.\n¿Para cuántos días completos alcanza el agua de todos?",
+              "answer": 14,
+              "unit": "días completos",
+              "tolerance": 0,
+              "explain": "128 ÷ 9 = 14 y sobran 2 raciones. Se necesitan 9 para otro día de todos, así que el agua alcanza para 14 días completos."
+            },
+            "avanzado": {
+              "prompt": "Hay 248 raciones. Apartas 2 cajas de 13. Los 9 grupos gastan una ración por grupo cada día.\n¿Para cuántos días completos alcanza el agua que queda?",
+              "answer": 24,
+              "unit": "días completos",
+              "tolerance": 0,
+              "explain": "Apartas 2 × 13 = 26 raciones y quedan 248 − 26 = 222. Al dividir 222 entre 9, obtienes 24 y sobran 6. Esas 6 no cubren otro día para todos: alcanzan 24 días completos."
+            }
+          },
+          "hint": "¡Mi cola cuenta grupos! Cada día gastas 9 raciones; el resto debe cubrir esos mismos 9 grupos.",
+          "success": "Ya puedes marcar los días completos y guardar aparte lo que sobra. ¡La bodega también necesita cabeza!",
+          "tokens": 5
+        },
+        {
+          "type": "choice",
+          "id": "d1",
+          "prompt": "Te queda espacio para una carga extra. ¿Qué llevas para tu aventura?",
+          "options": [
+            {
+              "text": "Llevo agua potable en barriles extra.",
+              "set": {
+                "carga": "agua"
+              },
+              "then": [
+                {
+                  "type": "line",
+                  "who": "ines",
+                  "text": "¡Más agua! En Canarias revisarás los barriles con Diego. Yo te despido desde aquí.",
+                  "mood": "feliz"
+                }
+              ]
+            },
+            {
+              "text": "Llevo herramientas para ayudar con las reparaciones.",
+              "set": {
+                "carga": "herramientas"
+              },
+              "then": [
+                {
+                  "type": "line",
+                  "who": "diego",
+                  "text": "Tú guardas las herramientas bien sujetas. Si hace falta ayudar, sabremos dónde están; mis pies agradecen que no rueden.",
+                  "mood": "feliz"
+                }
+              ]
+            },
+            {
+              "text": "Llevo cuentas de vidrio y cascabeles para ofrecer como regalos.",
+              "set": {
+                "carga": "regalos"
+              },
+              "then": [
+                {
+                  "type": "line",
+                  "who": "ines",
+                  "text": "Tú guardas regalos para un posible encuentro. Recuerda preguntar antes de ofrecerlos; cada persona decide qué quiere.",
+                  "mood": "feliz"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "El 3 de agosto de 1492, la expedición sale de Palos. Inés se queda en el puerto."
+        },
+        {
+          "type": "line",
+          "who": "mascota",
+          "text": "¡Mi mochila va llena de curiosidad! Pesa poco, pero hace cosquillas.",
+          "mood": "feliz"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Una escala en Canarias",
+      "place": "Canarias: Gran Canaria y La Gomera",
+      "date": "Agosto–6 de septiembre de 1492",
+      "background": "bg_canarias",
+      "perspective": "Tripulación",
+      "beats": [
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "La Pinta tuvo problemas con el timón durante el trayecto. En Gran Canaria se realizan las reparaciones."
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "El carpintero de nuestra aventura es inventado. Puedes ayudarlo con una tarea pequeña.",
+          "mood": "serio"
+        },
+        {
+          "type": "goal",
+          "text": "Comprende las instrucciones del barco y marca un destino en la carta de práctica."
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "El timón cambia la dirección del barco. La proa es la parte delantera."
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "Si miras hacia la proa, babor queda a tu izquierda y estribor a tu derecha."
+        },
+        {
+          "type": "challenge",
+          "id": "B",
+          "subject": "historia",
+          "oa": [
+            "HI-OA1"
+          ],
+          "kind": "match",
+          "intro": "Nao y carabela son tipos de barcos de vela. La Santa María es una nao; la Pinta y la Niña son carabelas.",
+          "who": "diego",
+          "variants": {
+            "inicial": {
+              "prompt": "Mira hacia la proa del barco. Une timón, babor y estribor con lo que significa cada palabra.",
+              "pairs": [
+                [
+                  "timón",
+                  "Pieza que cambia la dirección del barco."
+                ],
+                [
+                  "babor",
+                  "Lado izquierdo cuando miras hacia la proa."
+                ],
+                [
+                  "estribor",
+                  "Lado derecho cuando miras hacia la proa."
+                ]
+              ],
+              "explain": "El timón cambia la dirección. Mirando hacia la proa, babor queda a la izquierda y estribor a la derecha."
+            },
+            "intermedio": {
+              "prompt": "La guía de la Pinta usa cuatro palabras. Une cada palabra con su significado para seguir las instrucciones del barco.",
+              "pairs": [
+                [
+                  "timón",
+                  "Pieza que cambia la dirección del barco."
+                ],
+                [
+                  "babor",
+                  "Lado izquierdo cuando miras hacia la proa."
+                ],
+                [
+                  "estribor",
+                  "Lado derecho cuando miras hacia la proa."
+                ],
+                [
+                  "carabela",
+                  "Barco de vela, como la Pinta y la Niña."
+                ]
+              ],
+              "explain": "El timón cambia la dirección; babor y estribor indican los lados al mirar hacia la proa. La Pinta y la Niña son carabelas."
+            },
+            "avanzado": {
+              "prompt": "Ayuda a preparar la guía de los tres barcos de 1492. Une cada palabra con su significado o con el barco que le corresponde.",
+              "pairs": [
+                [
+                  "timón",
+                  "Pieza que cambia la dirección del barco."
+                ],
+                [
+                  "babor",
+                  "Lado izquierdo cuando miras hacia la proa."
+                ],
+                [
+                  "estribor",
+                  "Lado derecho cuando miras hacia la proa."
+                ],
+                [
+                  "nao",
+                  "Barco de vela, como la Santa María."
+                ],
+                [
+                  "carabela",
+                  "Barco de vela, como la Pinta y la Niña."
+                ]
+              ],
+              "explain": "El timón cambia la dirección; babor y estribor indican los lados al mirar hacia la proa. La Santa María es una nao; la Pinta y la Niña son carabelas."
+            }
+          },
+          "hint": "¡Orejas hacia la proa! Mira hacia delante para ubicar los lados. Después recuerda el tipo de cada barco.",
+          "success": "¡Ya puedes orientarte en el barco! También conoces los tipos de barcos que viajaron en 1492.",
+          "tokens": 5
+        },
+        {
+          "type": "if",
+          "cond": {
+            "flag": "carga",
+            "eq": "herramientas"
+          },
+          "then": [
+            {
+              "type": "line",
+              "who": "carpintero",
+              "text": "Acércame esa herramienta y sujeta la bolsa. Yo me encargo del timón. ¡Buen equipo!",
+              "mood": "feliz"
+            },
+            {
+              "type": "line",
+              "who": "diego",
+              "text": "¡Tus herramientas nos sirvieron! Ahora tienes un compañero de trabajo.",
+              "mood": "feliz"
+            },
+            {
+              "type": "item",
+              "id": "distintivo_carpinteria",
+              "name": "Distintivo de carpintería",
+              "text": "Recuerdo cosmético de la Academia por tu ayuda con las herramientas. Adorna tu mochila al volver; no cambia el barco."
+            }
+          ]
+        },
+        {
+          "type": "if",
+          "cond": {
+            "flag": "carga",
+            "eq": "agua"
+          },
+          "then": [
+            {
+              "type": "line",
+              "who": "diego",
+              "text": "Tú revisas las tapas de tus barriles extra conmigo. Esa pequeña reserva de tu aventura nos ayuda a organizarnos.",
+              "mood": "feliz"
+            }
+          ]
+        },
+        {
+          "type": "if",
+          "cond": {
+            "flag": "carga",
+            "eq": "regalos"
+          },
+          "then": [
+            {
+              "type": "line",
+              "who": "diego",
+              "text": "Tú compruebas que las cuentas y los cascabeles siguen guardados. Podrás ofrecerlos cuando encontremos personas que quieran conversar.",
+              "mood": "feliz"
+            }
+          ]
+        },
+        {
+          "type": "line",
+          "who": "mascota",
+          "text": "¡Una carta sin sobre! Esta sirve para ubicar puntos, aunque yo prefiero ubicar mi próxima siesta.",
+          "mood": "sorpresa"
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "En esta cuadrícula, oeste es izquierda y norte es arriba. Cada punto tiene dos números: primero su posición hacia la derecha, después hacia arriba."
+        },
+        {
+          "type": "challenge",
+          "id": "C",
+          "subject": "matematica",
+          "oa": [
+            "MA-OA16"
+          ],
+          "kind": "grid",
+          "intro": "Tú marcas el destino en esta cuadrícula de práctica. Los puntos son inventados; no es un mapa real del viaje.",
+          "who": "diego",
+          "variants": {
+            "inicial": {
+              "prompt": "Empieza en Canarias, en (6, 2). Avanza 2 casillas al oeste, hacia la izquierda.\nMarca el punto de llegada.",
+              "size": [
+                8,
+                6
+              ],
+              "marks": [
+                {
+                  "at": [
+                    6,
+                    2
+                  ],
+                  "label": "Canarias: punto de práctica"
+                }
+              ],
+              "answer": [
+                4,
+                2
+              ],
+              "explain": "El primer número baja: 6 − 2 = 4. La altura sigue en 2, así que marcas (4, 2)."
+            },
+            "intermedio": {
+              "prompt": "Empieza en Canarias, en (8, 3). Avanza 5 casillas al oeste y luego 2 al norte.\nMarca el punto de llegada.",
+              "size": [
+                10,
+                8
+              ],
+              "marks": [
+                {
+                  "at": [
+                    8,
+                    3
+                  ],
+                  "label": "Canarias: punto de práctica"
+                }
+              ],
+              "answer": [
+                3,
+                5
+              ],
+              "explain": "El primer número pasa a 8 − 5 = 3. La altura sube a 3 + 2 = 5: marcas (3, 5)."
+            },
+            "avanzado": {
+              "prompt": "Empieza en Canarias, en (10, 2). Avanza 4 casillas al oeste y 3 al norte. Luego, 2 más al oeste y 2 más al norte.\nMarca el punto final.",
+              "size": [
+                12,
+                10
+              ],
+              "marks": [
+                {
+                  "at": [
+                    10,
+                    2
+                  ],
+                  "label": "Canarias: punto de práctica"
+                }
+              ],
+              "answer": [
+                4,
+                7
+              ],
+              "explain": "El primer tramo termina en (10 − 4, 2 + 3) = (6, 5). El segundo termina en (6 − 2, 5 + 2) = (4, 7)."
+            }
+          },
+          "hint": "¡Mi nariz apunta al oeste! A la izquierda baja el primer número; al subir aumenta el segundo.",
+          "success": "¡Encontraste el punto! Mi cola todavía tapa una casilla, pero tú ya sabes dónde llegar.",
+          "tokens": 5
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Con la Pinta reparada, los barcos llegan a La Gomera. Allí se abastecen antes de continuar."
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "El 6 de septiembre de 1492, la expedición sale de La Gomera para cruzar el Atlántico."
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "Tú tienes las cuentas listas. Ahora nos acompañan el mar, las velas y unas ganas enormes de saber qué viene.",
+          "mood": "feliz"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Dos cuentas y un mismo océano",
+      "place": "Océano Atlántico",
+      "date": "Fines de septiembre de 1492",
+      "background": "bg_altamar",
+      "perspective": "Tripulación",
+      "beats": [
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Pasan los días. Miras agua por todos lados; Diego acomoda una cuerda y se acerca a ti."
+        },
+        {
+          "type": "goal",
+          "text": "Compara las cuentas, revisa la fuente y ayuda a cuidar el agua potable."
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "Mira tu Brújula: Colón llevaba dos cuentas de la distancia. ¡Y eran distintas!",
+          "mood": "preocupado"
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Según el diario conservado por Bartolomé de las Casas, Colón contaba menos leguas a la tripulación de las que calculaba haber navegado."
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "Tú puedes comparar dos listas conmigo. Una legua era una medida de distancia; nuestras cifras de práctica son inventadas.",
+          "mood": "serio"
+        },
+        {
+          "type": "challenge",
+          "id": "D",
+          "subject": "matematica",
+          "oa": [
+            "MA-OA6"
+          ],
+          "kind": "numeric",
+          "intro": "En este juego, «recorridas» son las leguas que Colón calcula haber navegado. «Anotadas» son las que cuenta a la tripulación.",
+          "who": "diego",
+          "variants": {
+            "inicial": {
+              "prompt": "La lista del juego dice: 144 leguas recorridas y 117 anotadas.\n¿Cuántas leguas menos hay en la cuenta anotada? Puedes pensar: 117 + □ = 144.",
+              "answer": 27,
+              "unit": "leguas",
+              "tolerance": 0,
+              "explain": "Restas 144 − 117 = 27 leguas.\nCompruebas con 117 + 27 = 144: la cuenta anotada muestra 27 leguas menos."
+            },
+            "intermedio": {
+              "prompt": "Durante dos días del juego, las leguas recorridas son 132 y 145. Las anotadas son 120 y 130.\n¿Cuántas leguas menos hay en el total anotado?",
+              "answer": 27,
+              "unit": "leguas",
+              "tolerance": 0,
+              "explain": "Las recorridas suman 132 + 145 = 277; las anotadas, 120 + 130 = 250.\nLa diferencia total es 277 − 250 = 27 leguas."
+            },
+            "avanzado": {
+              "prompt": "En el juego, recorres 48 leguas por día durante 3 días y 36 por día durante otros 2. Se anotan 30 leguas cada día.\n¿Cuántas leguas menos hay en el total anotado?",
+              "answer": 66,
+              "unit": "leguas",
+              "tolerance": 0,
+              "explain": "Recorres 3 × 48 + 2 × 36 = 216 leguas. Se anotan 5 × 30 = 150. La diferencia es 216 − 150 = 66 leguas."
+            }
+          },
+          "hint": "¡Aquí hay dos huellas! Suma las leguas de cada lista y resta el total anotado del total recorrido.",
+          "success": "Ahora tú puedes explicar la diferencia con números. Una cuenta más corta no encoge el océano.",
+          "tokens": 5
+        },
+        {
+          "type": "line",
+          "who": "mascota",
+          "text": "¡Una cuenta, otra cuenta... y yo solo tengo una cola! Revisemos de dónde sale esta información.",
+          "mood": "sorpresa"
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Tu Brújula dice: se cree que Colón escribió el diario. Se perdió; Las Casas guardó partes en un extracto, un texto corto."
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "En su Historia de las Indias, incluyó un extracto usando un resumen anterior y un libro sobre Colón escrito por Hernando, hijo de Colón."
+        },
+        {
+          "type": "challenge",
+          "id": "E",
+          "subject": "lenguaje",
+          "oa": [
+            "LE-OA7"
+          ],
+          "kind": "mc",
+          "intro": "Colón anotaba lo que hacía y veía en el viaje. Su relato cuenta la mirada de la expedición.",
+          "who": "diego",
+          "variants": {
+            "inicial": {
+              "prompt": "Tu Brújula dice que Colón anotaba su viaje. Las Casas conservó partes del relato después.\n¿Quién escribió el diario del viaje?",
+              "options": [
+                "A Rodrigo de Triana.",
+                "A Cristóbal Colón.",
+                "A Diego."
+              ],
+              "answer": 1,
+              "explain": "El diario se atribuye a Colón, que registraba su viaje. Las Casas conservó partes del relato después."
+            },
+            "intermedio": {
+              "prompt": "Quieres contar cómo llegó el relato hasta hoy.\n¿Qué pareja muestra quién escribió el diario y quién conservó partes después?",
+              "options": [
+                "Las Casas escribió el diario; Colón lo guardó después.",
+                "Lía escribió el diario; Diego lo guardó después.",
+                "Colón escribió el diario; Las Casas conservó partes después."
+              ],
+              "answer": 2,
+              "explain": "El diario se atribuye a Colón. Las Casas conservó partes del relato usando textos anteriores, no el original perdido."
+            },
+            "avanzado": {
+              "prompt": "Lees el relato de la expedición y quieres saber qué pensó una niña de la isla al ver los barcos.\n¿Qué respuesta explica quién guardó el relato y si alcanza para conocer sus pensamientos?",
+              "options": [
+                "Las Casas guardó partes del relato; no alcanza para saber exactamente qué pensó la niña.",
+                "Las Casas guardó partes del relato; por eso conocemos todos los pensamientos de la niña.",
+                "La niña escribió el diario para contar lo que pensaba."
+              ],
+              "answer": 0,
+              "explain": "Las Casas conservó partes del relato de la expedición. Ese texto no alcanza para conocer los pensamientos exactos de una niña lucaya."
+            }
+          },
+          "hint": "¡Olfatea la ficha! Colón anotó su viaje. Las Casas conservó partes después. Busca también de quién habla el relato.",
+          "success": "¡Seguiste la pista del diario! Ahora sabes quién lo escribió, quién guardó partes y qué no puede contarnos.",
+          "tokens": 5
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "Agua potable significa agua que puedes beber. Aunque veas mar por todos lados, su agua salada no reemplaza nuestros barriles.",
+          "mood": "serio"
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Tu Brújula explica: casi toda el agua del planeta es salada. Hay mucha menos agua dulce."
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Más abajo hay menos luz y el agua suele estar más fría. La presión, el empuje del agua de encima, aumenta."
+        },
+        {
+          "type": "challenge",
+          "id": "F",
+          "subject": "ciencias",
+          "oa": [
+            "CN-OA12",
+            "CN-OA13"
+          ],
+          "kind": "mc",
+          "intro": "Tú puedes ayudarnos a cuidar el agua para beber y a entender qué cambia al bajar en el océano.",
+          "who": "diego",
+          "variants": {
+            "inicial": {
+              "prompt": "Hay mucha más agua salada que dulce en el planeta.\n¿Qué idea ayuda a cuidar la reserva y describe lo que pasa más abajo en el océano?",
+              "options": [
+                "Podemos beber agua de mar; más abajo hay más luz.",
+                "Debemos cuidar el agua potable; más abajo llega menos luz.",
+                "Toda el agua es dulce; podemos vaciar los barriles."
+              ],
+              "answer": 1,
+              "explain": "El agua dulce es mucho menos abundante que la salada, así que cuidamos los barriles. El agua de mar tiene demasiada sal para beberla. Más abajo llega menos luz solar."
+            },
+            "intermedio": {
+              "prompt": "Tu Brújula compara dos zonas: A está cerca de la superficie; B está más abajo.\n¿Qué comparación ayuda a cuidar la reserva de agua?",
+              "options": [
+                "En B hay más luz y menos presión; podemos beber agua de mar.",
+                "En B el agua se vuelve dulce; ya no necesitamos barriles.",
+                "En B hay menos luz y más presión; seguimos cuidando el agua potable."
+              ],
+              "answer": 2,
+              "explain": "En B llega menos luz y el agua de encima empuja más: aumenta la presión. El agua sigue siendo salada. Como hay mucha menos agua dulce, cuidamos la reserva."
+            },
+            "avanzado": {
+              "prompt": "Un compañero propone beber agua de mar de una zona más profunda: cree que allí pierde la sal.\n¿Qué respuesta corrige su idea y describe tres cambios que ocurren más abajo?",
+              "options": [
+                "Sigue salada: cuidamos los barriles; más abajo hay menos luz, el agua suele estar más fría y hay más presión.",
+                "Se vuelve dulce: dejamos los barriles; más abajo hay menos luz y menos presión.",
+                "Sigue salada, pero un paño quita la sal; más abajo el agua suele estar más caliente y hay menos presión.",
+                "Se vuelve dulce: más abajo hay más luz y la misma presión."
+              ],
+              "answer": 0,
+              "explain": "Bajar no elimina la sal: al beber agua de mar, tu cuerpo pierde más agua para eliminar esa sal. Cuidamos el agua potable porque hay mucha menos agua dulce. Más abajo hay menos luz, el agua suele estar más fría y aumenta la presión."
+            }
+          },
+          "hint": "¡Mi hocico pide agua potable! Bajar no quita la sal. Recuerda la luz, el frío y el agua que empuja desde arriba.",
+          "success": "Ya puedes explicar por qué cuidamos los barriles, aunque el horizonte esté lleno de agua.",
+          "tokens": 5
+        },
+        {
+          "type": "choice",
+          "id": "d2",
+          "prompt": "Diego te pregunta qué hacer con las dos cuentas. ¿Cómo acompañas a tus compañeros en esta aventura?",
+          "options": [
+            {
+              "text": "Cuento la diferencia a un compañero y le muestro cómo la calculé.",
+              "set": {
+                "cuentas": "verdad",
+                "confianza": "franqueza"
+              },
+              "then": [
+                {
+                  "type": "line",
+                  "who": "diego",
+                  "text": "¡Lo explicaste con calma y con números! Ese compañero y yo confiamos en ti porque dices la verdad.",
+                  "mood": "feliz"
+                }
+              ]
+            },
+            {
+              "text": "Guardo el secreto por ahora y escucho la preocupación de Diego.",
+              "set": {
+                "cuentas": "secreto",
+                "confianza": "escucha"
+              },
+              "then": [
+                {
+                  "type": "line",
+                  "who": "diego",
+                  "text": "Tú prefieres pensarlo por ahora. Me acompañas y escuchas; podemos conversar otra vez cuando tengas tus ideas claras.",
+                  "mood": "serio"
+                }
+              ]
+            },
+            {
+              "text": "Propongo mostrar cuántos días de agua potable quedan.",
+              "set": {
+                "cuentas": "agua",
+                "confianza": "organizacion"
+              },
+              "then": [
+                {
+                  "type": "line",
+                  "who": "diego",
+                  "text": "Revisemos la reserva entre todos. ¡Contigo es más fácil organizar el agua!",
+                  "mood": "feliz"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Tu elección cambia cómo te relacionas con tus compañeros de aventura. La expedición real continúa su recorrido."
+        },
+        {
+          "type": "line",
+          "who": "diego",
+          "text": "Tú puedes quedarte cerca mientras revisamos la bodega. Estar acompañado hace más liviana esta espera.",
+          "mood": "preocupado"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "¡Tierra!",
+      "place": "Atlántico, frente a Guanahaní",
+      "date": "12 de octubre de 1492, cerca de las 2 de la madrugada",
+      "background": "bg_noche",
+      "perspective": "Tripulación",
+      "beats": [
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "La noche del 11 al 12 de octubre llega después de semanas de navegación. Te acercas a la cubierta."
+        },
+        {
+          "type": "if",
+          "cond": {
+            "flag": "confianza",
+            "eq": "franqueza"
+          },
+          "then": [
+            {
+              "type": "line",
+              "who": "diego",
+              "text": "Me ayudaste a entender las cuentas. Quédate conmigo: ¡te avisaré si veo algo!",
+              "mood": "feliz"
+            }
+          ]
+        },
+        {
+          "type": "if",
+          "cond": {
+            "flag": "confianza",
+            "eq": "escucha"
+          },
+          "then": [
+            {
+              "type": "line",
+              "who": "diego",
+              "text": "Gracias por escucharme. Quédate conmigo: esperar con un amigo se siente mejor.",
+              "mood": "feliz"
+            }
+          ]
+        },
+        {
+          "type": "if",
+          "cond": {
+            "flag": "confianza",
+            "eq": "organizacion"
+          },
+          "then": [
+            {
+              "type": "line",
+              "who": "diego",
+              "text": "¡La reserva quedó ordenada gracias a ti! Ven, miremos el horizonte juntos.",
+              "mood": "feliz"
+            }
+          ]
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "¡Tierra! Según el diario, Rodrigo de Triana la avista desde la Pinta hacia las dos de la madrugada."
+        },
+        {
+          "type": "goal",
+          "text": "Lee el relato adaptado y distingue sus pistas sobre la noche del avistamiento."
+        },
+        {
+          "type": "challenge",
+          "id": "G",
+          "subject": "lenguaje",
+          "oa": [
+            "LE-OA6"
+          ],
+          "kind": "reading",
+          "intro": "Lee este relato del diario con palabras más sencillas. Es una adaptación: cuenta lo mismo sin copiar las frases originales.",
+          "who": "diego",
+          "variants": {
+            "inicial": {
+              "passage": "Durante la noche, la Pinta iba delante de los otros barcos.\nRodrigo de Triana vio tierra hacia las dos de la madrugada del 12 de octubre.\nLos barcos esperaron hasta que amaneciera para acercarse a la isla.",
+              "source": "Adaptado del diario atribuido a Colón, versión de Las Casas; noche del 11–12 de octubre de 1492. En su Historia de las Indias, usó un resumen anterior y el libro sobre Colón escrito por su hijo Hernando.",
+              "questions": [
+                {
+                  "prompt": "Según el texto, ¿quién vio tierra desde la Pinta?",
+                  "options": [
+                    "Bartolomé de las Casas.",
+                    "Rodrigo de Triana.",
+                    "Una niña lucaya."
+                  ],
+                  "answer": 1,
+                  "explain": "La segunda oración nombra a Rodrigo de Triana como el marinero que vio tierra."
+                }
+              ],
+              "explain": "La Pinta iba delante y Rodrigo de Triana vio tierra hacia las dos de la madrugada.\nEl texto cuenta que esperaron hasta el amanecer para acercarse."
+            },
+            "intermedio": {
+              "passage": "Cerca de las diez de la noche, Colón vio una luz, pero no aseguró que fuera tierra.\nDespués, Rodrigo de Triana vio tierra desde la Pinta, que iba delante.\nEran cerca de las dos de la madrugada del 12 de octubre.\nLos barcos redujeron las velas y esperaron hasta el amanecer.",
+              "source": "Adaptado del diario atribuido a Colón, versión de Las Casas; noche del 11–12 de octubre de 1492. En su Historia de las Indias, usó un resumen anterior y el libro sobre Colón escrito por su hijo Hernando.",
+              "questions": [
+                {
+                  "prompt": "¿En qué orden pasaron las cosas?",
+                  "options": [
+                    "Vieron tierra, amaneció y después Colón vio la luz de la noche.",
+                    "Amaneció, Colón vio una luz y luego la Pinta empezó a esperar.",
+                    "Colón vio una luz, Triana vio tierra y esperaron el amanecer."
+                  ],
+                  "answer": 2,
+                  "explain": "La luz aparece primero; el avistamiento de Triana ocurre más tarde y luego esperan el amanecer."
+                },
+                {
+                  "prompt": "Según el texto, ¿por qué ver la luz no era lo mismo que ver tierra?",
+                  "options": [
+                    "Porque Colón no aseguró que la luz fuera tierra.",
+                    "Porque el texto dice que la luz apareció al mediodía.",
+                    "Porque Triana dijo que era una estrella."
+                  ],
+                  "answer": 0,
+                  "explain": "Colón vio una luz, pero no aseguró que fuera tierra. Triana vio tierra después."
+                }
+              ],
+              "explain": "Primero Colón vio una luz; después Triana vio tierra y los barcos esperaron el amanecer. Colón no aseguró que la luz fuera tierra."
+            },
+            "avanzado": {
+              "passage": "Colón vio una luz alrededor de las diez de la noche, pero no aseguró entonces que fuera tierra.\nLa Pinta iba delante; desde ella, Rodrigo de Triana vio tierra hacia las dos de la madrugada del 12 de octubre.\nLos barcos redujeron las velas y esperaron hasta el día.\nAl amanecer llegaron a una isla habitada, llamada Guanahaní por su gente.",
+              "source": "Adaptado del diario atribuido a Colón, versión de Las Casas; noche del 11–12 de octubre de 1492. En su Historia de las Indias, usó un resumen anterior y el libro sobre Colón escrito por su hijo Hernando.",
+              "questions": [
+                {
+                  "prompt": "Según el texto, ¿qué diferencia hay entre lo que vieron Colón y Triana?",
+                  "options": [
+                    "Triana vio la luz y Colón vio tierra al amanecer.",
+                    "Colón no aseguró que la luz fuera tierra; Triana sí aparece como quien vio tierra.",
+                    "Las Casas miró la luz desde la Pinta y avisó a Triana.",
+                    "Ambos describieron la isla por escrito antes de verla."
+                  ],
+                  "answer": 1,
+                  "explain": "Colón no aseguró que la luz fuera tierra. El texto dice que Triana sí vio tierra."
+                },
+                {
+                  "prompt": "La isla estaba habitada y su gente la llamaba Guanahaní.\n¿Qué te dicen juntas esas dos pistas?",
+                  "options": [
+                    "La tripulación inventó ese nombre antes de zarpar.",
+                    "La isla comenzó a existir cuando llegaron los barcos.",
+                    "La gente de la isla ya tenía una vida y un nombre para su territorio.",
+                    "El texto permite conocer los pensamientos exactos de cada habitante."
+                  ],
+                  "answer": 2,
+                  "explain": "La gente ya vivía allí y tenía un nombre para la isla antes de la llegada de los barcos."
+                }
+              ],
+              "explain": "Colón vio una luz sin asegurar que fuera tierra; Triana vio tierra después. Los habitantes ya tenían una vida y un nombre para su isla."
+            }
+          },
+          "hint": "¡Mis orejas leen contigo! Busca quién vio cada cosa y en qué momento. Junta las pistas para saber algo más.",
+          "success": "¡Encontraste las pistas! Ahora tu Brújula te llevará junto a quienes viven en la isla.",
+          "tokens": 5
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "La expedición espera hasta el amanecer para acercarse. La isla ya tiene habitantes, historias y un nombre: Guanahaní."
+        },
+        {
+          "type": "line",
+          "who": "mascota",
+          "text": "¡Mis orejas llegaron despiertas! Mi cola todavía cree que es hora de dormir.",
+          "mood": "feliz"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "La playa de Guanahaní",
+      "place": "Guanahaní, isla de los lucayos",
+      "date": "12 de octubre de 1492, por la mañana",
+      "background": "bg_playa",
+      "perspective": "Familia lucaya",
+      "beats": [
+        {
+          "type": "perspective",
+          "title": "Otra mirada: una isla que ya es hogar",
+          "text": "Tu Brújula te lleva junto a una familia lucaya. Desde su playa, observas cómo se acercan los barcos."
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Los lucayos eran un pueblo indígena de las Bahamas, relacionado con otros pueblos taínos."
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Lía y su familia son inventados, incluido su nombre. Sus rutinas no representan a todas las familias lucayas."
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Lees sus palabras traducidas para seguir la aventura. Dentro de la escena, tú y la familia no comparten idioma."
+        },
+        {
+          "type": "line",
+          "who": "nina_lucaya",
+          "text": "Soy Lía. Tú puedes quedarte a mi lado y mirar los barcos. Esta isla es nuestro hogar.",
+          "mood": "serio"
+        },
+        {
+          "type": "line",
+          "who": "padre_lucayo",
+          "text": "Esta es nuestra canoa, un bote estrecho que movemos con remos. La usamos para pescar. Espera nuestra respuesta antes de tocarla.",
+          "mood": "serio"
+        },
+        {
+          "type": "line",
+          "who": "madre_lucaya",
+          "text": "Estoy preparando el algodón. Teníamos trabajo y planes para hoy, antes de ver esos barcos.",
+          "mood": "serio"
+        },
+        {
+          "type": "line",
+          "who": "nina_lucaya",
+          "text": "Nuestra hamaca es una cama de tejido colgada. Quiero descansar allí, pero mi hermano siempre pide turno. ¡Tendremos que compartirla!",
+          "mood": "feliz"
+        },
+        {
+          "type": "goal",
+          "text": "Comprende palabras y cantidades, y busca una forma respetuosa de conversar sin compartir idioma."
+        },
+        {
+          "type": "challenge",
+          "id": "H",
+          "subject": "lenguaje",
+          "oa": [
+            "LE-OA12"
+          ],
+          "kind": "match",
+          "intro": "Un huracán es una gran tormenta de vientos que giran. Tú puedes reconocer estas palabras de origen taíno usando las pistas.",
+          "who": "nina_lucaya",
+          "variants": {
+            "inicial": {
+              "prompt": "Lee: reman en una canoa, un bote estrecho; descansan en una hamaca, una cama colgada; recuerdan un huracán, una gran tormenta.\nUne cada palabra con su significado.",
+              "pairs": [
+                [
+                  "canoa",
+                  "Bote estrecho que se mueve con remos."
+                ],
+                [
+                  "hamaca",
+                  "Cama de tejido colgada para descansar."
+                ],
+                [
+                  "huracán",
+                  "Gran tormenta con vientos que giran."
+                ]
+              ],
+              "explain": "El bote es la canoa; la cama colgada es la hamaca. La gran tormenta es el huracán."
+            },
+            "intermedio": {
+              "prompt": "Lee: avanzan con remos en un bote estrecho. Descansan en una cama de tejido colgada. Recuerdan vientos fuertes que giran alrededor de un centro.\nUne cada palabra con su significado.",
+              "pairs": [
+                [
+                  "canoa",
+                  "Bote estrecho que se mueve con remos."
+                ],
+                [
+                  "hamaca",
+                  "Cama de tejido colgada para descansar."
+                ],
+                [
+                  "huracán",
+                  "Gran tormenta con vientos que giran."
+                ]
+              ],
+              "explain": "Los remos son la pista para canoa; la cama de tejido colgada, para hamaca. Los vientos fuertes que giran son la pista para huracán."
+            },
+            "avanzado": {
+              "prompt": "Una canoa puede ser un bote o un sombrero; una hamaca, una cama colgada o una silla; un huracán, una tormenta o alguien inquieto.\nAquí reman, descansan entre árboles y recuerdan vientos que giran.\nUne cada palabra con su significado aquí.",
+              "pairs": [
+                [
+                  "canoa",
+                  "Bote estrecho que se mueve con remos."
+                ],
+                [
+                  "hamaca",
+                  "Cama de tejido colgada para descansar."
+                ],
+                [
+                  "huracán",
+                  "Gran tormenta con vientos que giran."
+                ]
+              ],
+              "explain": "Para remar, canoa significa bote; para descansar entre árboles, hamaca significa cama colgada. Los vientos que giran señalan la tormenta llamada huracán. Elige el significado que encaja con lo que hacen en el relato."
+            }
+          },
+          "hint": "¡Mi cola no es una hamaca! Busca qué hacen: remar, descansar o recordar una tormenta.",
+          "success": "¡Reconociste las tres palabras! Las usamos hoy y también nos recuerdan la herencia taína.",
+          "tokens": 5
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "El diario menciona ovillos de algodón y papagayos, junto con cuentas de vidrio y cascabeles europeos. No fija un precio."
+        },
+        {
+          "type": "line",
+          "who": "madre_lucaya",
+          "text": "Este acuerdo y sus cantidades son inventados. ¡Practiquemos las cuentas!",
+          "mood": "serio"
+        },
+        {
+          "type": "challenge",
+          "id": "I",
+          "subject": "matematica",
+          "oa": [
+            "MA-OA2",
+            "MA-OA6"
+          ],
+          "kind": "numeric",
+          "intro": "Un ovillo es hilo enrollado. En este juego, acuerdas cambiar tres ovillos por dos cascabeles.",
+          "who": "madre_lucaya",
+          "variants": {
+            "inicial": {
+              "prompt": "En este juego, cambias 3 ovillos por 2 cascabeles. Tienes 12 ovillos.\n¿Cuántos cascabeles corresponden? Forma grupos de 3 y calcula el doble del número de grupos.",
+              "answer": 8,
+              "unit": "cascabeles",
+              "tolerance": 0,
+              "explain": "Formas 12 ÷ 3 = 4 grupos de ovillos.\nCada grupo corresponde a 2 cascabeles: doblas 4 y obtienes 4 × 2 = 8."
+            },
+            "intermedio": {
+              "prompt": "En este juego, cambias 3 ovillos por 2 cascabeles. Tienes 24 ovillos.\n¿Cuántos cascabeles corresponden?",
+              "answer": 16,
+              "unit": "cascabeles",
+              "tolerance": 0,
+              "explain": "24 ÷ 3 = 8 grupos.\nDoblas 8: 8 × 2 = 16 cascabeles, que también puedes calcular como 8 + 8."
+            },
+            "avanzado": {
+              "prompt": "En este juego, tienes 36 ovillos y guardas 6. Cambias los demás en grupos de 3 ovillos por 2 cascabeles.\n¿Cuántos cascabeles corresponden?",
+              "answer": 20,
+              "unit": "cascabeles",
+              "tolerance": 0,
+              "explain": "Quedan 36 − 6 = 30 ovillos, que forman 30 ÷ 3 = 10 grupos. Calculas 2 × 10 = 20 cascabeles: para multiplicar 2 por 10, agregas un cero."
+            }
+          },
+          "hint": "¡Revisa las dos canastas! Guarda lo que la familia conserva, forma grupos de tres y calcula el doble del número de grupos.",
+          "success": "¡Tus cuentas están listas! Ahora cada persona decide si quiere intercambiar o guardar sus objetos.",
+          "tokens": 5
+        },
+        {
+          "type": "if",
+          "cond": {
+            "flag": "carga",
+            "eq": "regalos"
+          },
+          "then": [
+            {
+              "type": "choice",
+              "id": "d3",
+              "prompt": "No comparten idioma. ¿Cómo intentas entenderte con la familia, respetando lo que quiera cada persona?",
+              "options": [
+                {
+                  "text": "Saludo con gestos y espero que la familia responda.",
+                  "set": {
+                    "encuentro": "gestos"
+                  },
+                  "then": [
+                    {
+                      "type": "line",
+                      "who": "nina_lucaya",
+                      "text": "Tú levantaste la mano y esperaste. Te saludo también; puedes quedarte aquí mientras nos entendemos.",
+                      "mood": "feliz"
+                    },
+                    {
+                      "type": "item",
+                      "id": "collar_conchas",
+                      "name": "Collar de conchas",
+                      "text": "Recuerdo cosmético de la Academia por tu saludo con gestos. Podrás lucirlo al volver; este objeto pertenece a tu aventura."
+                    }
+                  ]
+                },
+                {
+                  "text": "Dibujo en la arena y le dejo espacio para agregar algo.",
+                  "set": {
+                    "encuentro": "dibujos"
+                  },
+                  "then": [
+                    {
+                      "type": "line",
+                      "who": "nina_lucaya",
+                      "text": "Tú dibujaste los barcos. Agrego nuestra canoa; así puedes ver algo de nuestra vida.",
+                      "mood": "feliz"
+                    },
+                    {
+                      "type": "item",
+                      "id": "catalejo_grumete",
+                      "name": "Catalejo fantástico de la Academia",
+                      "text": "Un adorno mágico de la Academia que podrás lucir al volver. Pertenece a tu aventura; no es un instrumento de 1492."
+                    }
+                  ]
+                },
+                {
+                  "text": "Ofrezco agua y fruta; espero que decidan si las quieren.",
+                  "set": {
+                    "encuentro": "comida"
+                  },
+                  "then": [
+                    {
+                      "type": "line",
+                      "who": "madre_lucaya",
+                      "text": "Gracias por esperar nuestra respuesta. Tú puedes dejar la fruta aquí; nosotros elegiremos qué compartir contigo.",
+                      "mood": "feliz"
+                    },
+                    {
+                      "type": "item",
+                      "id": "panuelo_mascota",
+                      "name": "Pañuelo de marinero para tu mascota",
+                      "text": "Recuerdo cosmético de la Academia por ofrecer algo y esperar una respuesta. Tu mascota ya ensaya cómo posar con él."
+                    }
+                  ]
+                },
+                {
+                  "text": "Ofrezco los regalos que traje y pregunto con gestos si los quieren.",
+                  "set": {
+                    "encuentro": "regalos"
+                  },
+                  "then": [
+                    {
+                      "type": "line",
+                      "who": "nina_lucaya",
+                      "text": "Tú trajiste cuentas y cascabeles. Te muestro qué me interesa; esperas mi respuesta antes de entregarlos.",
+                      "mood": "feliz"
+                    },
+                    {
+                      "type": "item",
+                      "id": "broche_cascabel",
+                      "name": "Broche de cascabel",
+                      "text": "Recuerdo cosmético de la Academia por ofrecer tus regalos con permiso. Adorna tu personaje al volver; no compra la amistad de nadie."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "else": [
+            {
+              "type": "choice",
+              "id": "d3",
+              "prompt": "No comparten idioma. ¿Cómo intentas entenderte con la familia, respetando lo que quiera cada persona?",
+              "options": [
+                {
+                  "text": "Saludo con gestos y espero que la familia responda.",
+                  "set": {
+                    "encuentro": "gestos"
+                  },
+                  "then": [
+                    {
+                      "type": "line",
+                      "who": "nina_lucaya",
+                      "text": "Tú levantaste la mano y esperaste. Te saludo también; puedes quedarte aquí mientras nos entendemos.",
+                      "mood": "feliz"
+                    },
+                    {
+                      "type": "item",
+                      "id": "collar_conchas",
+                      "name": "Collar de conchas",
+                      "text": "Recuerdo cosmético de la Academia por tu saludo con gestos. Podrás lucirlo al volver; este objeto pertenece a tu aventura."
+                    }
+                  ]
+                },
+                {
+                  "text": "Dibujo en la arena y le dejo espacio para agregar algo.",
+                  "set": {
+                    "encuentro": "dibujos"
+                  },
+                  "then": [
+                    {
+                      "type": "line",
+                      "who": "nina_lucaya",
+                      "text": "Tú dibujaste los barcos. Agrego nuestra canoa; así puedes ver algo de nuestra vida.",
+                      "mood": "feliz"
+                    },
+                    {
+                      "type": "item",
+                      "id": "catalejo_grumete",
+                      "name": "Catalejo fantástico de la Academia",
+                      "text": "Un adorno mágico de la Academia que podrás lucir al volver. Pertenece a tu aventura; no es un instrumento de 1492."
+                    }
+                  ]
+                },
+                {
+                  "text": "Ofrezco agua y fruta; espero que decidan si las quieren.",
+                  "set": {
+                    "encuentro": "comida"
+                  },
+                  "then": [
+                    {
+                      "type": "line",
+                      "who": "madre_lucaya",
+                      "text": "Gracias por esperar nuestra respuesta. Tú puedes dejar la fruta aquí; nosotros elegiremos qué compartir contigo.",
+                      "mood": "feliz"
+                    },
+                    {
+                      "type": "item",
+                      "id": "panuelo_mascota",
+                      "name": "Pañuelo de marinero para tu mascota",
+                      "text": "Recuerdo cosmético de la Academia por ofrecer algo y esperar una respuesta. Tu mascota ya ensaya cómo posar con él."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "La familia decide qué compartir y qué conservar. Tu elección abre una conversación de tu aventura; no cambia la llegada histórica."
+        },
+        {
+          "type": "line",
+          "who": "nina_lucaya",
+          "text": "Miraste desde nuestra playa. Cuando recuerdes este día, acuérdate también de nuestra vida en la isla.",
+          "mood": "serio"
+        },
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "Tu Brújula brilla: aparece el engranaje del horizonte. Es una pieza del Reloj de las Épocas, dentro de tu aventura."
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "De vuelta a la Academia",
+      "place": "La Academia, fuera del tiempo",
+      "date": "Fuera del tiempo, después de tu visita a 1492",
+      "background": "bg_academia",
+      "perspective": "Viajero del tiempo",
+      "beats": [
+        {
+          "type": "line",
+          "who": "narrador",
+          "text": "El portal se abre y vuelves a la Academia. Tu mascota comprueba que su cola también regresó."
+        },
+        {
+          "type": "goal",
+          "text": "Revisa lo que ocurrió, recuerda tus decisiones y explica qué solución te parece justa."
+        },
+        {
+          "type": "line",
+          "who": "estela",
+          "text": "¡Trajiste el engranaje del horizonte! Antes de ponerlo en el Reloj, leeremos lo que ocurrió y recordaremos tus decisiones.",
+          "mood": "feliz"
+        },
+        {
+          "type": "line",
+          "who": "estela",
+          "text": "Después elegirás una solución y contarás por qué. Tus razones importan; también puedes proponer tu propia idea.",
+          "mood": "serio"
+        },
+        {
+          "type": "line",
+          "who": "estela",
+          "text": "Escuchaste desde un barco y desde una playa. Tú puedes guardar ambas miradas; ninguna vida cabe completa en una sola página.",
+          "mood": "feliz"
+        }
+      ]
+    }
+  ],
+  "chronicle": {
+    "title": "Así ocurrió",
+    "paragraphs": [
+      "La expedición de Cristóbal Colón salió de Palos el 3 de agosto de 1492. Hoy el lugar se llama Palos de la Frontera. Viajaron unos noventa hombres en la nao Santa María y las carabelas Pinta y Niña. Colón quería llegar a Asia navegando hacia el oeste para comerciar con especias y otros productos.",
+      "La Pinta tuvo problemas con el timón y fue reparada en Gran Canaria. Después de cargar provisiones en La Gomera, la expedición salió de esa isla el 6 de septiembre para cruzar el Atlántico.",
+      "El diario se atribuye a Colón, pero el original se perdió. Las Casas conservó partes del relato en textos más cortos, llamados extractos. Incluyó uno en su Historia de las Indias. Para hacerlo, usó un resumen anterior y un libro sobre la vida de Colón escrito por Hernando, hijo de Colón. Según ese relato, Colón contaba a la tripulación menos leguas de las que calculaba haber navegado.",
+      "Según el diario, Rodrigo de Triana vio tierra desde la Pinta hacia las dos de la madrugada del 12 de octubre. Según Las Casas, los Reyes dieron a Colón la recompensa porque él dijo haber visto antes una luz. Ver una luz y ver tierra no eran lo mismo.",
+      "La isla se llamaba Guanahaní y ya estaba habitada por lucayos. Eran un pueblo indígena de las Bahamas, relacionado con otros pueblos taínos. Colón la llamó San Salvador. El diario menciona ovillos de algodón y papagayos entre lo que ofrecían habitantes de la isla. También nombra cuentas de vidrio y cascabeles entre los objetos europeos intercambiados. No indica un precio fijo.",
+      "Diego, Inés, el carpintero y la familia de la playa son personajes inventados. Las rutinas de esta familia no representan a todas las familias lucayas. Tus ayudas, acuerdos, cantidades de práctica y recuerdos pertenecen a la aventura; no cambiaron los hechos históricos.",
+      "Canoa, hamaca y huracán son palabras de origen taíno que usamos en español. La llegada europea cambió para siempre la vida de los pueblos taínos. Los próximos capítulos mostrarán esas consecuencias. Los pueblos taínos no desaparecieron: hoy sus descendientes y comunidades indígenas caribeñas mantienen viva su herencia."
+    ]
+  },
+  "recap": [
+    {
+      "if": {
+        "flag": "carga",
+        "eq": "agua"
+      },
+      "text": "Llevaste agua potable extra y revisaste tus barriles con Diego en Canarias."
+    },
+    {
+      "if": {
+        "flag": "carga",
+        "eq": "herramientas"
+      },
+      "text": "Llevaste herramientas y colaboraste en una tarea del carpintero de la aventura; ganaste el distintivo de carpintería."
+    },
+    {
+      "if": {
+        "flag": "carga",
+        "eq": "regalos"
+      },
+      "text": "Guardaste cuentas y cascabeles; al encontrarte con la familia pudiste elegir ofrecerlos como regalos."
+    },
+    {
+      "if": {
+        "flag": "cuentas",
+        "eq": "verdad"
+      },
+      "text": "Explicaste las cuentas a un compañero; Diego confió en ti porque dijiste la verdad."
+    },
+    {
+      "if": {
+        "flag": "cuentas",
+        "eq": "secreto"
+      },
+      "text": "Guardaste el secreto por ahora y escuchaste a Diego; él valoró tu compañía durante la espera."
+    },
+    {
+      "if": {
+        "flag": "cuentas",
+        "eq": "agua"
+      },
+      "text": "Propusiste revisar cuántos días de agua quedaban; Diego confió en tu ayuda para organizar las raciones."
+    },
+    {
+      "if": {
+        "flag": "encuentro",
+        "eq": "gestos"
+      },
+      "text": "Saludaste con gestos y esperaste la respuesta de la familia; ganaste un collar de conchas de la Academia."
+    },
+    {
+      "if": {
+        "flag": "encuentro",
+        "eq": "dibujos"
+      },
+      "text": "Dibujaste en la arena y dejaste espacio para la canoa de Lía; ganaste un catalejo fantástico de la Academia."
+    },
+    {
+      "if": {
+        "flag": "encuentro",
+        "eq": "comida"
+      },
+      "text": "Ofreciste agua y fruta, respetando la respuesta de la familia; tu mascota ganó un pañuelo de marinero."
+    },
+    {
+      "if": {
+        "flag": "encuentro",
+        "eq": "regalos"
+      },
+      "text": "Ofreciste tus regalos con permiso y esperaste una respuesta; ganaste un broche de cascabel de la Academia."
+    }
+  ],
+  "reflection": {
+    "oa": [
+      "HI-OA20",
+      "HI-OA21"
+    ],
+    "prompt": "Triana vio tierra desde la Pinta. Según Las Casas, los Reyes dieron la recompensa a Colón porque dijo haber visto antes una luz.\n¿Qué solución te parece justa? Elige una y explica tu razón con un hecho del relato.",
+    "options": [
+      {
+        "id": "triana",
+        "text": "Dar la recompensa a Triana, porque vio tierra según el diario."
+      },
+      {
+        "id": "compartir",
+        "text": "Compartirla y acordar cómo reconocer lo que vio cada uno."
+      },
+      {
+        "id": "escuchar",
+        "text": "Escuchar a quienes estaban allí y acordar una regla clara para decidir."
+      },
+      {
+        "id": "propia",
+        "text": "Proponer otra solución y explicar por qué me parece justa."
+      }
+    ],
+    "reasons": [
+      "Porque el diario dice que Triana vio tierra y quiero reconocerlo.",
+      "Porque ver una luz y ver tierra son cosas distintas; quiero reconocer cada aporte.",
+      "Porque escuchar a quienes estaban allí y tener reglas claras ayuda a decidir.",
+      "Porque mi propuesta considera este hecho del relato: ..."
+    ],
+    "closing": "Tú elegiste y explicaste tu razón. Escuchar otras ideas puede ayudarte a revisar la tuya.\nPensar en el pasado también ayuda a tratarnos mejor hoy."
+  },
+  "rewards": {
+    "piece": {
+      "id": "engranaje_horizonte",
+      "name": "El engranaje del horizonte",
+      "text": "Primera pieza del Reloj de las Épocas. Tu viaje guardó la memoria del cruce y de una isla que ya tenía historias."
+    }
+  }
+}

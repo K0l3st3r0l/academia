@@ -1,0 +1,4 @@
+Storybook cartoon game UI art for a children's adventure game: clean dark brown outlines, soft cel shading, warm honey and walnut wood, polished brass and gold, deep teal accents, the same art style as the reference image.
+A sprite sheet of 10 game interface icons in a grid of 5 columns and 2 rows, each icon centred in its own cell and well apart, on a flat chroma green background (#00B140). No text or letters, no frames, no shadows on the green.
+Row 1: (1) a shiny gold coin token stamped with a small hourglass; (2) a glowing golden time spark (a four-pointed star with a soft glow); (3) a brass clock piece shaped like a small gear wedge with a teal gem; (4) a brown leather adventurer's backpack with brass buckles; (5) a friendly waving cartoon hand.
+Row 2: (6) a rolled parchment scroll with a red wax seal; (7) a brass settings gear; (8) a small brass bell (sound); (9) a brass padlock; (10) an open book with a ribbon bookmark.

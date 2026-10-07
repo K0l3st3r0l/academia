@@ -43,6 +43,9 @@ backend**. No van en `.env`: ese archivo también lo lee la base, y tocarlo hace
 que el próximo deploy recree el contenedor de PostgreSQL. Sin `.env.mail`, el
 ingreso con correo queda oculto y los alumnos entran con RUT + PIN.
 
+La clave de OpenRouter (para Jev, `tools/jev/jev.py`) vive en `.env.openrouter`, por la misma
+razón: nunca en `.env`.
+
 ## Puertos
 - Backend: 4100
 - Frontend: 4101 (nginx sirviendo React build)

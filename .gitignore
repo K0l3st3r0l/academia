@@ -1,7 +1,10 @@
 .env
 .env.mail
+.env.openrouter
 /content/*
 !/content/questions/
+# Story chapters (JSON + fact-check notes): small text, versioned like the questions.
+!/content/historia/
 # Question drafting (content/pipeline/preguntas.py) and its per-OA drafts; pending job ids stay local.
 !/content/pipeline/
 /content/pipeline/**/*.job
