@@ -139,6 +139,24 @@ sus posiciones en `shared/world/<curso>.json`. Por eso las reglas de composició
 | Archivo | Unidad | Prompt |
 |---|---|---|
 | `matematica-5b-u1.png` | Matemática 5° · Unidad 1 · Isla del Observatorio (Atacama: salar con flamencos, vicuñas, cardones, observatorio) | `art/mapa/matematica-5b-u1.txt` |
+| `matematica-5b-u2.png` | Matemática 5° · Unidad 2 · Isla del Valle de Elqui (huertos y parronales en filas, papayos, higueras, río, capilla de adobe) | `art/mapa/matematica-5b-u2.txt` |
+| `matematica-5b-u3.png` | Matemática 5° · Unidad 3 · Isla del Volcán (lago Llanquihue, volcán Osorno, lupinos, vacas, casa de tejuelas) | `art/mapa/matematica-5b-u3.txt` |
+| `matematica-5b-u4.png` | Matemática 5° · Unidad 4 · Isla de las Torres (Torres del Paine, glaciar, guanacos, lengas, refugio; última, sin puente) | `art/mapa/matematica-5b-u4.txt` |
+
+**Ciencias, Historia, Lenguaje e Inglés (2026-10-12):** los 17 prompts salen de `art/mapa/islas_5b.py`
+(tabla `ISLANDS`, una ruta de norte a sur por asignatura; Lenguaje e Inglés por eje, máximo 8 niveles
+por isla; Historia sin repetir OA). `python3 art/mapa/islas_5b.py layout [imagen ...]` agrega cada isla
+dibujada a `shared/world/5b.json`: estima el color de sus discos, tapa los sobrantes junto al muelle y
+detecta el muelle y los cristales (`art/pipeline/muelle.py`). El muelle detectado falla a menudo
+(confunde roca anaranjada con madera): revisarlo en una hoja y, si está mal, corregirlo a mano con
+`"dock_manual": true` para que una nueva pasada no lo pise. Después, `build_world.py`.
+
+**El modelo no respeta el número de discos** (2026-10-12: pidió 7, 7 y 5; dibujó 8, 8 y 7). En vez de regenerar,
+`art/pipeline/quitar_disco.py <isla.png> <x> <y> [r g b]` pinta el sendero sobre los discos sobrantes
+más cercanos al muelle (guarda el original como `.orig.png`). Si los discos salen de otro tono, el
+layout de la isla lleva `"pad": [r, g, b]` (la Isla de las Torres). `build_world.py` descarta lo que
+no tenga forma de disco y, cuando su detector de arena no une todos los niveles con la plaza, aprende
+el color del sendero de la arena alrededor de los discos.
 
 `art/mapa/concepto-a-saga.txt` es el boceto descartado de mapa continuo estilo saga.
 

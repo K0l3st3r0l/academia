@@ -100,6 +100,10 @@ await runMigrations();
 const { default: pool } = await import('../src/db/index.js');
 
 const APP_TABLES = [
+  'academy_bank_ledger',
+  'academy_chests',
+  'academy_items',
+  'academy_progress',
   'copihue_ledger',
   'student_level_progress',
   'practice_attempts',

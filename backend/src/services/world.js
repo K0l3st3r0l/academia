@@ -100,6 +100,7 @@ async function getMap(studentId, gradeLevel, subject) {
     }
     return {
       unit: island.unit,
+      label: island.label ?? null,  // islands by eje (Lenguaje, Inglés) are named for it, not a unit
       name: island.name,
       image: island.image,
       width: island.width,
@@ -120,7 +121,8 @@ async function getMap(studentId, gradeLevel, subject) {
   const current = playable.find(l => l.state === 'open') ?? [...playable].reverse().find(l => l.state === 'done') ?? null;
 
   const drawn = new Set(map.islands.map(i => i.unit));
-  const comingUnits = [...new Set(oas.flatMap(o => o.units ?? []))]
+  // A map drawn by eje has no units left to announce: every eje already has its islands.
+  const comingUnits = map.by === 'eje' ? [] : [...new Set(oas.flatMap(o => o.units ?? []))]
     .filter(u => !drawn.has(u))
     .sort((a, b) => a - b)
     .map(unit => ({ unit, ejes: [...new Set(oas.filter(o => o.units?.includes(unit)).map(o => o.eje))] }));
@@ -156,8 +158,19 @@ function findLevel(worldMap, key) {
   return null;
 }
 
+// One card per subject with a map: where the student is and how many stars they have.
+async function listMaps(studentId, gradeLevel) {
+  const maps = loadLayout(gradeLevel)?.maps ?? [];
+  return Promise.all(maps.map(async ({ subject }) => {
+    const map = await getMap(studentId, gradeLevel, subject);
+    const here = map.islands.find(i => [...i.levels, i.challenge].some(l => l.key === map.current)) ?? map.islands[0];
+    return { subject, stars: map.stars, islands: map.islands.length, island: { name: here.name, image: here.image } };
+  }));
+}
+
 module.exports = {
   getMap,
+  listMaps,
   findLevel,
   levelLabel,
   starsFor,

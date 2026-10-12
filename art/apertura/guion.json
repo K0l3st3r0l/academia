@@ -1,0 +1,63 @@
+{
+  "_": "Opening film of the Academy (wiki academia/diseno-narrativo §3). One line per shot, with room to breathe. 'voz' groups lines that Grok says in one clip (Estela, preset voice 'ara'); montar.py cuts each line out by Whisper's timestamps. Order of 'voces' is the generation priority.",
+  "partes": [
+    {
+      "id": "parte1",
+      "planos": [
+        {"clip": "v01-reloj-oscuro", "linea": "n1"},
+        {"clip": "v02-academia-exterior", "linea": "n2"},
+        {"clip": "v03-reloj-atrio", "linea": "n3"},
+        {"clip": "v04-tormenta", "linea": "n4"},
+        {"clip": "v05-carabela", "linea": "n5"},
+        {"clip": "v06-ciudad-colonial", "linea": "n6"},
+        {"clip": "c4-estela", "linea": "e1", "voz_propia": true}
+      ]
+    },
+    {"id": "vivo", "vivo": true, "linea": "e2", "duracion": 11},
+    {
+      "id": "parte2",
+      "planos": [
+        {"clip": "g-mision", "linea": "e3", "voz_propia": true},
+        {"clip": "v07-portal", "titulo": true}
+      ]
+    },
+    {
+      "id": "parte3",
+      "tutorial": true,
+      "planos": [
+        {"juego": "t1-explorar", "linea": "t1"},
+        {"juego": "t2-desafios", "linea": "t2"},
+        {"juego": "t3-tienda-banco", "linea": "t3"},
+        {"juego": "t4-copihues", "linea": "t4"},
+        {"juego": "t5-portal", "linea": "t5"}
+      ]
+    }
+  ],
+  "lineas": {
+    "n1": "Hay historias que el tiempo no debe olvidar.",
+    "n2": "Lejos de todos los relojes del mundo flota la Academia: un observatorio fuera del tiempo, donde se forman los viajeros del tiempo.",
+    "n3": "En su corazón late el Reloj de las Épocas. Mientras sus piezas giran, todas las historias siguen vivas.",
+    "n4": "Pero una noche, una tormenta del tiempo sacudió la Academia… y el reloj se quebró.",
+    "n5": "Sus piezas cayeron en otras épocas: en medio del mar, en el desierto, en ciudades antiguas.",
+    "n6": "Y donde cae una pieza, los colores se apagan. Las historias empiezan a olvidarse.",
+    "e1": "Necesito a alguien curioso, valiente, que sepa escuchar a todos y resolver problemas sin hacer daño.",
+    "e2": "¡Ahí estás! Te estaba esperando. Esta es la Brújula del Tiempo: desde hoy, es tuya.",
+    "e3": "Viaja a otras épocas. Ayuda, coopera y escucha a quienes vivieron la historia. Recupera las piezas del reloj… para que ninguna historia se olvide.",
+    "t1": "Esta es la Academia, tu casa entre viaje y viaje. Camina, salta y explora: hay chispas escondidas por todas partes.",
+    "t2": "Cada desafío que resuelves te da tokens: en el mapa de Matemática y aquí, en el Entrenamiento.",
+    "t3": "Con tus tokens compras recuerdos en el puesto del Mercader, o los guardas en el Banco de Tempo, donde crecen cada semana.",
+    "t4": "Los copihues premian tus logros, y con ellos consigues la colección copihue.",
+    "t5": "Y cuando el Portal se abra, viajarás a otras épocas a recuperar las piezas del reloj. ¿Listo? ¡Tu aventura comienza ahora!"
+  },
+  "voces": [
+    {"id": "g-mision", "lineas": ["e3"], "cuadro": "c08-estela-brujula.png", "duracion": 14, "visual": true},
+    {"id": "g-n1n2", "lineas": ["n1", "n2"], "cuadro": "c4-estela-atrio.png", "duracion": 15},
+    {"id": "g-n3", "lineas": ["n3"], "cuadro": "c4-estela-atrio.png", "duracion": 11},
+    {"id": "g-n4n5", "lineas": ["n4", "n5"], "cuadro": "c4-estela-atrio.png", "duracion": 15},
+    {"id": "g-n6e2", "lineas": ["n6", "e2"], "cuadro": "c4-estela-atrio.png", "duracion": 15},
+    {"id": "g-t1", "lineas": ["t1"], "cuadro": "c4-estela-atrio.png", "duracion": 11},
+    {"id": "g-t2", "lineas": ["t2"], "cuadro": "c4-estela-atrio.png", "duracion": 10},
+    {"id": "g-t3t4", "lineas": ["t3", "t4"], "cuadro": "c4-estela-atrio.png", "duracion": 15},
+    {"id": "g-t5", "lineas": ["t5"], "cuadro": "c4-estela-atrio.png", "duracion": 11}
+  ]
+}

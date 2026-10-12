@@ -250,6 +250,32 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-6px); }
   }
+  /* Opening film, live scene: the background drifts, Estela and then the student appear, and the
+     Compass of Time flies from her hand to the student. */
+  .intro-kenburns { animation: intro-kenburns 14s ease-out both; }
+  @keyframes intro-kenburns { from { transform: scale(1.12); } to { transform: scale(1); } }
+  .intro-appear { animation: intro-appear 1.2s ease-out both; }
+  .intro-appear-late { animation: intro-appear 1.4s ease-out 1.6s both; }
+  @keyframes intro-appear {
+    from { opacity: 0; transform: translateY(18px) scale(.94); filter: brightness(2.2) blur(6px); }
+    to { opacity: 1; transform: none; filter: none; }
+  }
+  .intro-hero-glow {
+    background: radial-gradient(circle, rgba(255, 220, 130, .45), transparent 65%);
+    animation: intro-glow 2.4s ease-out 1.4s both;
+  }
+  @keyframes intro-glow { from { opacity: 0; transform: scale(.4); } 60% { opacity: 1; } to { opacity: .7; transform: scale(1); } }
+  .intro-compass { animation: intro-compass 2.2s cubic-bezier(.3, .7, .3, 1) 4.2s both; filter: drop-shadow(0 0 18px #ffd86b); }
+  @keyframes intro-compass {
+    from { opacity: 0; transform: translate(-38vw, -6vh) scale(.6) rotate(-30deg); }
+    20% { opacity: 1; }
+    to { opacity: 1; transform: translate(-50%, 0) scale(1) rotate(0); }
+  }
+  .intro-title { animation: intro-appear 1.6s ease-out both; }
+  .intro-subtitle { text-wrap: balance; }
+  @media (prefers-reduced-motion: reduce) {
+    .intro-kenburns, .intro-appear, .intro-appear-late, .intro-hero-glow, .intro-compass, .intro-title { animation: none; }
+  }
   @media (prefers-reduced-motion: reduce) {
     .animate-breathe, .animate-hop, .world-float, .world-drift, .world-twinkle, .world-pulse,
     .world-bob, .world-walk, .world-glide, .world-rise, .pet-trot, .pet-sniff, .pet-scratch, .title-pan, .title-glow, .title-flicker,

@@ -1,0 +1,19 @@
+== voces 21:47
+g-mision: ok
+g-n1n2: ok
+g-n3: ok
+g-n4n5: ok
+g-n6e2: ok
+g-t1: ok
+g-t2: ok
+g-t3t4: ok
+g-t5: ok
+== portal 22:03
+v07-portal exit 0
+done
+== montaje 22:04
+Lock global adquirido: academia/apertura-montaje
+Concurrencia interna limitada: Docker Compose=1, Gradle workers=2.
+Capacidad OK: RAM disponible 3552MB, swap usado 3010MB (libre 3133MB), memory PSI avg10 0.00.
+apertura.json: 4 escenas, 177 s; sin voz todavía: ninguna
+== fin 22:09

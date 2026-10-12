@@ -46,6 +46,21 @@ ingreso con correo queda oculto y los alumnos entran con RUT + PIN.
 La clave de OpenRouter (para Jev, `tools/jev/jev.py`) vive en `.env.openrouter`, por la misma
 razón: nunca en `.env`.
 
+## La Academia (lobby) y su apertura
+`/academia/` es una página estática del frontend y `/alumno/apertura` su película. Sus archivos
+grandes **no están en git** y el deploy los toma del disco del VPS:
+- `frontend/public/academia/index.html`: lo escribe `art/academia/lobby/build.py` (ver su README;
+  modo servidor y economía). Si falta, `/academia/` da 404.
+- los videos de `frontend/public/academia/apertura/`: los escribe `art/apertura/montar.py` (ver su
+  README).
+Ambos se corren bajo `deploy-guard.sh run`. `build.py` también escribe
+`shared/academy/economia.json`, que sí se versiona: el backend no arranca sin él.
+`shared/academy/config.json` abre la Academia a todos (`"abierta": true`); cerrada, solo la ven
+las cuentas de prueba. Se lee en cada pedido, sin reiniciar.
+
+Las Islas de retos (`/alumno/islas`) se arman con `art/mapa/islas_5b.py` (prompts y layout) y
+`art/pipeline/build_world.py`; ver `art/prompts.md` §2.
+
 ## Puertos
 - Backend: 4100
 - Frontend: 4101 (nginx sirviendo React build)

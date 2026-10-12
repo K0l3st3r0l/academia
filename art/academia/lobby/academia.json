@@ -66,14 +66,14 @@
       "sprite": "galeria",
       "support": "columns",
       "columns": [
-        41.1,
-        46.7,
-        52.3
+        40.9,
+        47.5,
+        52.8
       ]
     },
     {
       "id": "hanging-left",
-      "x": 20,
+      "x": 19.7,
       "y": 6.3,
       "w": 1.65,
       "h": 0.28,
@@ -83,7 +83,7 @@
     },
     {
       "id": "hanging-right",
-      "x": 38.4,
+      "x": 38.75,
       "y": 6.3,
       "w": 1.65,
       "h": 0.28,
@@ -445,8 +445,8 @@
       "sprite": "portal",
       "x": 31,
       "y": 7.8,
-      "w": 3.05,
-      "h": 3.2,
+      "w": 4.4,
+      "h": 4.6,
       "layer": "back"
     },
     {
@@ -459,15 +459,15 @@
     },
     {
       "sprite": "banco",
-      "x": 45,
+      "x": 44.2,
       "y": 7.8,
-      "w": 2.8,
-      "h": 2.38,
+      "w": 5.5,
+      "h": 2.0945121951219514,
       "layer": "back"
     },
     {
       "sprite": "arcade",
-      "x": 50,
+      "x": 51,
       "y": 7.8,
       "w": 1.35,
       "h": 2.32,
@@ -501,38 +501,41 @@
     {
       "id": "estela",
       "type": "npc",
-      "x": 28.5,
+      "x": 28,
       "y": 7.8,
       "name": "Estela",
       "sprite": "estela_idle-0",
       "w": 1.3418511066398389,
       "h": 1.9,
       "dialogue": "welcome",
-      "after": "travel"
+      "after": "travel",
+      "animation": "estela"
     },
     {
       "id": "merchant",
       "type": "npc",
-      "x": 35,
+      "x": 34.7,
       "y": 7.8,
       "name": "Mercader del Tiempo",
-      "sprite": "mercader",
-      "w": 1.2,
+      "sprite": "mercader_idle-0",
+      "w": 1.6,
       "h": 1.58,
       "dialogue": "merchant",
-      "after": "shop"
+      "after": "shop",
+      "animation": "mercader_idle"
     },
     {
       "id": "tempo",
       "type": "npc",
-      "x": 43,
+      "x": 48.7,
       "y": 7.8,
       "name": "Tempo",
-      "sprite": "tempo",
-      "w": 1.18,
+      "sprite": "tempo_idle-0",
+      "w": 1.32,
       "h": 1.52,
       "dialogue": "tempo",
-      "after": "bank"
+      "after": "bank",
+      "animation": "tempo_idle"
     },
     {
       "id": "garden",
@@ -581,18 +584,19 @@
     {
       "id": "bank",
       "type": "station",
-      "x": 45,
+      "x": 44.2,
       "y": 7.8,
       "name": "Banco del Tiempo",
       "action": "bank",
       "prompt": "Usar",
-      "w": 2.8,
-      "h": 2.38
+      "w": 5.5,
+      "h": 2.2139965297860034,
+      "radius": 2.7
     },
     {
       "id": "arcade",
       "type": "station",
-      "x": 50,
+      "x": 51,
       "y": 7.8,
       "name": "Arcade",
       "action": "arcade",
@@ -629,9 +633,9 @@
       "y": 7.8,
       "name": "Portal del Tiempo",
       "action": "travel",
-      "radius": 1.2,
-      "w": 3.05,
-      "h": 3.2
+      "radius": 1.74,
+      "w": 4.4,
+      "h": 4.6
     },
     {
       "id": "telescope",
@@ -659,7 +663,8 @@
           "id": "medallon",
           "name": "Medallón del cielo",
           "text": "Recuerdo de tu súper salto."
-        }
+        },
+        "copihues": 1
       },
       "sprite": "cofre",
       "w": 0.95,
@@ -709,7 +714,7 @@
     {
       "id": "spark-3",
       "type": "collectible",
-      "x": 33,
+      "x": 34,
       "y": 7.15,
       "name": "Chispa del tiempo"
     },
@@ -744,14 +749,14 @@
     {
       "id": "spark-8",
       "type": "collectible",
-      "x": 20.8,
+      "x": 20.525,
       "y": 5.65,
       "name": "Chispa del tiempo"
     },
     {
       "id": "spark-9",
       "type": "collectible",
-      "x": 39.2,
+      "x": 39.575,
       "y": 5.65,
       "name": "Chispa del tiempo"
     },
@@ -794,7 +799,7 @@
       {
         "type": "line",
         "who": "estela",
-        "text": "Mira arriba: esas monedas son tus fichas. Las ganas con desafíos y cofres, y las gastas en el Puesto del Mercader o las guardas en el Banco de Tempo."
+        "text": "Mira arriba: esas monedas son tus tokens. Los ganas con desafíos y cofres, y los gastas en el Puesto del Mercader o los guardas en el Banco de Tempo."
       },
       {
         "type": "line",
@@ -856,7 +861,7 @@
       {
         "type": "line",
         "who": "mercader",
-        "text": "Puedes comprar con fichas y vender por la mitad del precio. Tus recuerdos van a la mochila."
+        "text": "Puedes comprar recuerdos con tokens y vender por la mitad del precio. La Colección copihue se canjea solo con copihues: cada pieza guarda un poquito de Chile."
       },
       {
         "type": "set",
@@ -873,7 +878,7 @@
       {
         "type": "line",
         "who": "tempo",
-        "text": "Ahorrar es guardar hoy para un plan de mañana. Cada semana tus ahorros crecen un 5%, hasta 10 fichas."
+        "text": "Ahorrar es guardar hoy para un plan de mañana. Cada semana tus ahorros crecen un 5%, hasta 10 tokens."
       },
       {
         "type": "set",
@@ -962,6 +967,42 @@
       "text": "Cada línea guarda una historia.",
       "icon": "objeto_mapa",
       "merchantLine": "Cada línea guarda una historia. ¿Cuál vas a descubrir tú?"
+    },
+    {
+      "id": "chupalla",
+      "icon": "objeto_chupalla",
+      "name": "Chupalla de huaso",
+      "price": 2,
+      "currency": "copihues",
+      "text": "Un sombrero tejido que acompaña las tradiciones del campo chileno.",
+      "merchantLine": "Una chupalla para llevar contigo el cariño del campo chileno."
+    },
+    {
+      "id": "manta",
+      "icon": "objeto_manta",
+      "name": "Manta huasa",
+      "price": 3,
+      "currency": "copihues",
+      "text": "Colores que abrigan y cuentan historias de Chile.",
+      "merchantLine": "Cada color de esta manta guarda un poquito de nuestra tradición."
+    },
+    {
+      "id": "faja",
+      "icon": "objeto_faja",
+      "name": "Faja tejida",
+      "price": 2,
+      "currency": "copihues",
+      "text": "Una pieza tejida para celebrar nuestras raíces.",
+      "merchantLine": "Hilos y colores que unen generaciones. ¡Esta faja te acompañará!"
+    },
+    {
+      "id": "collar_copihue",
+      "icon": "objeto_collar_copihue",
+      "name": "Collar de copihues para tu mascota",
+      "price": 1,
+      "currency": "copihues",
+      "text": "Nuestra flor nacional, junto a tu compañero de aventuras.",
+      "merchantLine": "Un copihue para tu gran compañero: un recuerdo de nuestra flor nacional."
     }
   ],
   "chapters": [
@@ -1040,7 +1081,7 @@
     {
       "id": "sofi",
       "name": "Sofi",
-      "x": 47.5,
+      "x": 49.85,
       "y": 7.8,
       "style": "afro",
       "clothes": "#f87171",
@@ -1048,14 +1089,14 @@
       "pieces": 3,
       "featured": "Capa de estrellas",
       "zone": [
-        41,
-        52.8
+        41.55,
+        51.85
       ]
     },
     {
       "id": "tomas",
       "name": "Tomás",
-      "x": 48,
+      "x": 49.6,
       "y": 4.4,
       "style": "desordenado",
       "clothes": "#f5c842",
@@ -1063,7 +1104,7 @@
       "pieces": 0,
       "featured": "Pañuelo de marinero",
       "zone": [
-        41,
+        40.95,
         52.8
       ]
     }
@@ -1077,6 +1118,7 @@
   "practice": {
     "count": 3,
     "tokensEach": 2,
+    "dailyRewards": 3,
     "source": "ref/cap1.json"
   },
   "stationCopy": {
@@ -1104,7 +1146,7 @@
       "text": "En la tradición andina, una llama aparece en las nubes oscuras de la Vía Láctea."
     }
   ],
-  "version": "2.1",
+  "version": "2.4",
   "stairArt": {
     "size": [
       1495,
@@ -1195,7 +1237,6 @@
     "tienda": 12,
     "arcade": 176,
     "reloj": 203,
-    "banco": 196,
     "lectura": 348,
     "banca": 209,
     "tablon": 35,
@@ -1233,6 +1274,82 @@
           406,
           354,
           24
+        ]
+      ],
+      "circles": [
+        [
+          107,
+          143,
+          22,
+          0.22
+        ],
+        [
+          88,
+          184,
+          13,
+          -0.3
+        ],
+        [
+          104,
+          396,
+          38,
+          -0.16
+        ],
+        [
+          355,
+          400,
+          37,
+          0.16
+        ]
+      ],
+      "numerals": [
+        [
+          162,
+          160
+        ],
+        [
+          133,
+          199
+        ],
+        [
+          94,
+          260
+        ],
+        [
+          127,
+          342
+        ],
+        [
+          162,
+          395
+        ],
+        [
+          291,
+          395
+        ],
+        [
+          327,
+          348
+        ],
+        [
+          374,
+          263
+        ],
+        [
+          351,
+          198
+        ],
+        [
+          303,
+          151
+        ],
+        [
+          261,
+          129
+        ],
+        [
+          194,
+          130
         ]
       ]
     },
@@ -1355,47 +1472,42 @@
     "banco": {
       "circles": [
         [
-          143,
-          194,
-          42,
+          265,
+          393,
+          118,
           0.07
         ]
       ],
       "lights": [
         [
-          23,
-          170,
-          20
+          577,
+          262,
+          48
         ],
         [
-          325,
-          164,
-          18
-        ],
-        [
-          378,
-          169,
-          19
+          1528,
+          254,
+          48
         ]
       ]
     },
     "arcade": {
       "screen": [
         [
-          54,
-          65
+          41,
+          74
         ],
         [
-          129,
-          69
+          106,
+          73
         ],
         [
-          140,
-          129
+          120,
+          137
         ],
         [
-          44,
-          126
+          49,
+          137
         ]
       ]
     },
@@ -1506,6 +1618,26 @@
           54
         ]
       ]
+    },
+    "cofre": {
+      "padlock": {
+        "gem": [
+          0.637,
+          0.522
+        ],
+        "claspBounds": [
+          675,
+          512,
+          800,
+          651
+        ],
+        "anchor": [
+          738.283,
+          687
+        ],
+        "width": 0.2,
+        "sway": 4
+      }
     }
   }
 }

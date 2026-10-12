@@ -1,0 +1,118 @@
+{
+ "catalog": [
+  {
+   "id": "panuelo",
+   "name": "Pañuelo de marinero para tu mascota",
+   "text": "Un pequeño pañuelo para un gran viaje.",
+   "price": 10,
+   "currency": "tokens"
+  },
+  {
+   "id": "sombrero",
+   "name": "Sombrero de explorador",
+   "text": "Para salir a descubrir.",
+   "price": 20,
+   "currency": "tokens"
+  },
+  {
+   "id": "brujula",
+   "name": "Brújula de bolsillo",
+   "text": "Un norte que cabe en tu mano.",
+   "price": 25,
+   "currency": "tokens"
+  },
+  {
+   "id": "capa",
+   "name": "Capa de estrellas",
+   "text": "Un pedacito de cielo en tu mochila.",
+   "price": 40,
+   "currency": "tokens"
+  },
+  {
+   "id": "linterna",
+   "name": "Linterna de época",
+   "text": "Luz para tus próximas aventuras.",
+   "price": 15,
+   "currency": "tokens"
+  },
+  {
+   "id": "mapa",
+   "name": "Mapa antiguo enmarcado",
+   "text": "Cada línea guarda una historia.",
+   "price": 30,
+   "currency": "tokens"
+  },
+  {
+   "id": "chupalla",
+   "name": "Chupalla de huaso",
+   "text": "Un sombrero tejido que acompaña las tradiciones del campo chileno.",
+   "price": 2,
+   "currency": "copihues"
+  },
+  {
+   "id": "manta",
+   "name": "Manta huasa",
+   "text": "Colores que abrigan y cuentan historias de Chile.",
+   "price": 3,
+   "currency": "copihues"
+  },
+  {
+   "id": "faja",
+   "name": "Faja tejida",
+   "text": "Una pieza tejida para celebrar nuestras raíces.",
+   "price": 2,
+   "currency": "copihues"
+  },
+  {
+   "id": "collar_copihue",
+   "name": "Collar de copihues para tu mascota",
+   "text": "Nuestra flor nacional, junto a tu compañero de aventuras.",
+   "price": 1,
+   "currency": "copihues"
+  }
+ ],
+ "chests": [
+  {
+   "id": "high-chest",
+   "reward": {
+    "tokens": 15,
+    "item": {
+     "id": "medallon",
+     "name": "Medallón del cielo",
+     "text": "Recuerdo de tu súper salto."
+    },
+    "copihues": 1
+   }
+  },
+  {
+   "id": "spark-chest",
+   "requiresSparks": 12,
+   "reward": {
+    "tokens": 20,
+    "item": {
+     "id": "insignia",
+     "name": "Insignia de exploración",
+     "text": "Encontraste todas las chispas de la Academia."
+    }
+   }
+  }
+ ],
+ "sparks": [
+  "spark-1",
+  "spark-2",
+  "spark-3",
+  "spark-4",
+  "spark-5",
+  "spark-6",
+  "spark-7",
+  "spark-8",
+  "spark-9",
+  "spark-10",
+  "reading-spark",
+  "sky-spark"
+ ],
+ "practice": {
+  "tokensEach": 2,
+  "dailyRewards": 3
+ }
+}

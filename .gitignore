@@ -29,3 +29,16 @@ graphify-out/
 __pycache__/
 !/art/piezas/maestra-cara.png
 !/art/piezas/maestra-gorro.png
+
+# Academy lobby: built by art/academia/lobby/build.py (15 MB page) and its opening film, cut by
+# art/apertura/montar.py from Grok clips kept only on the VPS. Deploys from the VPS include them.
+/art/academia/lobby/academia.html
+/art/academia/lobby/shots3/
+/frontend/public/academia/index.html
+/frontend/public/academia/apertura/*.mp4
+/frontend/public/academia/apertura/*.m4a
+/art/apertura/clips/
+/art/apertura/voz/
+/art/apertura/trabajo/
+/art/apertura/juego/
+/art/apertura/vista-previa.mp4

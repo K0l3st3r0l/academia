@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats, getPetCatalog, getPetMe, markPetSeen, getWorldMap, getCopihuesMe, markCopihuesSeen } from '../api/client';
+import { getStudentMe, getCharacterCatalog, getCharacterMe, getCharacterStats, getPetCatalog, getPetMe, markPetSeen, getWorldMaps, getCopihuesMe, markCopihuesSeen, getAcademyMe } from '../api/client';
 import { getStudentUser, studentLogout } from '../api/studentAuth';
 import CharacterView from '../components/character/CharacterView';
 import { layersToLook } from '../components/character/look';
@@ -69,8 +69,10 @@ export default function AlumnoHome() {
   const [attributes, setAttributes] = useState(null);
   const [petCatalog, setPetCatalog] = useState(null);
   const [petInfo, setPetInfo] = useState(null);
-  const [world, setWorld] = useState(null);
+  const [islands, setIslands] = useState(null);
   const [copihues, setCopihues] = useState(null);
+  const [academy, setAcademy] = useState(null);
+  const introSeen = academy?.introSeenAt ? true : academy ? false : null;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -91,9 +93,10 @@ export default function AlumnoHome() {
       .catch(() => setAttributes(null));
     getPetCatalog().then(res => setPetCatalog(res.data)).catch(() => {});
     getPetMe().then(res => setPetInfo(res.data)).catch(() => setPetInfo(null));
-    // Only courses with a drawn map get the card (today, Matemática 5°).
-    getWorldMap('matematica').then(res => setWorld(res.data)).catch(() => setWorld(null));
+    // Only courses with drawn islands get the card (today, 5°).
+    getWorldMaps().then(res => setIslands(res.data.maps.length ? res.data.maps : null)).catch(() => setIslands(null));
     getCopihuesMe().then(res => setCopihues(res.data)).catch(() => setCopihues(null));
+    getAcademyMe().then(res => setAcademy(res.data.snapshot)).catch(() => setAcademy(null));
   }, []);
 
   const pet = petInfo?.pet;
@@ -132,23 +135,45 @@ export default function AlumnoHome() {
           <p className="text-gray-500 text-sm">{student?.course_name}</p>
         </div>
 
-        {world && (
+        {/* The lobby is a separate static page; the first visit goes through the opening film.
+            While shared/academy/config.json keeps it closed, only test accounts see it. */}
+        {academy?.open && <a
+          href={introSeen ? '/academia/' : '/alumno/apertura'}
+          onClick={e => { if (!introSeen) { e.preventDefault(); navigate('/alumno/apertura'); } }}
+          className="block rounded-2xl overflow-hidden shadow-xl border-4 border-gold/70 relative group focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold"
+          aria-label="Entrar a la Academia"
+        >
+          <img
+            src="/academia/portada-640.webp"
+            alt=""
+            className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-surface/95 via-surface/70 to-transparent px-4 pt-8 pb-3 flex items-end justify-between">
+            <div>
+              <p className="text-xl font-black text-white leading-tight">La Academia</p>
+              <p className="text-sm text-gray-300">{introSeen === false ? 'Tu aventura comienza aquí' : 'Estela, la tienda y el banco te esperan'}</p>
+            </div>
+            <span className="bg-gold group-hover:bg-yellow-300 text-surface font-black px-4 py-2 rounded-xl">Entrar</span>
+          </div>
+        </a>}
+
+        {islands && (
           <Link
-            to="/alumno/mundo/matematica"
+            to="/alumno/islas"
             className="block rounded-2xl overflow-hidden shadow-xl border-4 border-surface relative group"
-            aria-label={`Jugar en el mapa de Matemática: ${world.stars.earned} de ${world.stars.max} estrellas`}
+            aria-label={`Islas de retos: ${islands.length} asignaturas, ${islands.reduce((n, m) => n + m.stars.earned, 0)} estrellas`}
           >
             <img
-              src={`/world/${world.islands[0].image}-640.webp`}
+              src={`/world/${islands[0].island.image}-640.webp`}
               alt=""
               className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
               style={{ objectPosition: '50% 58%' }}
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-surface/95 via-surface/70 to-transparent px-4 pt-8 pb-3 flex items-end justify-between">
               <div>
-                <p className="text-xl font-black text-white leading-tight">Matemática</p>
+                <p className="text-xl font-black text-white leading-tight">Islas de retos</p>
                 <p className="text-sm text-gray-300 inline-flex items-center gap-1">
-                  <Star filled size={16} /> {world.stars.earned} de {world.stars.max}
+                  {islands.length === 1 ? '1 asignatura' : `${islands.length} asignaturas`} · <Star filled size={16} /> {islands.reduce((n, m) => n + m.stars.earned, 0)}
                 </p>
               </div>
               <span className="bg-brand group-hover:bg-brand-dark text-white font-black px-4 py-2 rounded-xl">¡A jugar!</span>

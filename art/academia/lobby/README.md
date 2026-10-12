@@ -9,7 +9,7 @@ Abre `academia.html` directamente o pega su contenido en un artefacto HTML. Todo
 - `build.py`: empaqueta las piezas del salón y los cuadros del niño y del zorro. Conserva el formato `SRC`, `KID_SPRITES` y `PET_SPRITES` de `ref/rig-build.py`: cuadros WebP q90 a mitad de tamaño, cuerpos sin cabeza, anclajes, pivotes, expresiones, máscaras de oclusión y mariquita.
 - `test.js`: ejecuta el bloque `CORE_BEGIN` / `CORE_END` de la plantilla con Node, sin DOM ni dependencias npm.
 - `test-ui.js`: comprueba el JavaScript compilado, temporizadores, objetivos, controles y redimensionado con un DOM/Canvas simulado, sin dependencias npm.
-- `academia.html`: página compilada lista para compartir, menor de 12,5 MB.
+- `academia.html`: página compilada lista para compartir, menor de 15,5 MB.
 
 El `StoryEngine` y las seis tarjetas de desafíos vienen de `ref/historia-plantilla.html`. `MapDialogue` conecta las secuencias del mapa con el mismo estado que usan tienda, banco, inventario y recompensas. La selección de cuadros, la capa de cabeza y las transiciones de reposo del niño, y los giros, descansos y poses del zorro, reutilizan `ref/rig-plantilla.html`. La física añade colisiones laterales y de techo, peldaños y descenso por plataformas.
 
@@ -23,7 +23,35 @@ node test.js
 node test-ui.js
 ```
 
-`build.py <out.html>` también funciona desde otro directorio. Sus entradas de arte están en `/root/apps/academia/art/academia/piezas/` y `/root/apps/academia/art/incoming/cuadros/`. Incluye también `/root/apps/academia/art/academia/v2/piezas/` y `estela-cuadros/`. Usa Pillow y numpy del venv indicado en `TASK3.md`. La compilación falla si faltan marcadores, archivos o si la página alcanza 12.500.000 bytes.
+Bajo la guardia de deploys (la compilación tarda ~40 s de CPU): `bash /root/apps/wiki/deploy-guard.sh run academia/lobby-build -- <python> build.py academia.html`.
+
+Cada compilación escribe tres cosas:
+
+- `academia.html`: la página tal cual, la que se publica como artefacto y la que prueban los tests;
+- `frontend/public/academia/index.html`: la misma página con `doctype`, `charset` y `viewport`, que claude.ai agrega al artefacto y que servida sola hacen falta (sin ellos se rompen los acentos y el teléfono la ve en miniatura);
+- `shared/academy/economia.json`: precios, cofres, chispas y práctica, que el backend usa para validar.
+
+Las dos páginas no se versionan (15 MB cada una, ver `.gitignore`); se regeneran con `build.py`. El capítulo 1 se lee desde `content/historia/5b/cap1.json`.
+
+`build.py <out.html>` también funciona desde otro directorio. Sus entradas de arte están en `/root/apps/academia/art/academia/piezas/` y `/root/apps/academia/art/incoming/cuadros/`. Incluye también `/root/apps/academia/art/academia/v2/piezas/`, los loops de Estela, Mercader y Tempo, y `incoming/animaciones/portal-vortice.mp4`. Usa ffmpeg, Pillow y numpy del venv indicado en `TASK3.md`. La compilación falla si faltan marcadores, archivos o si la página alcanza 15.500.000 bytes.
+
+## En el juego (games.laravas.com/academia/)
+
+Servida bajo `/academia/` y con un alumno conectado (`academia_student_token`), la página entra en **modo servidor** (`SERVER` en la plantilla); en el artefacto y en los tests sigue guardando en el navegador.
+
+- **La partida es del alumno, no del equipo:** se carga de `GET /api/academy/me` y la exploración (chispas, banderas, posición, ajustes) se sube con `PUT /api/academy/me/state` 1,5 s después de cada cambio y al salir. Nada se guarda en `localStorage`: en tablets compartidas un niño heredaría la partida de otro.
+- **Tokens y copihues reales:** compra, venta, banco, cofres y práctica ocurren en el juego y se envían al servidor (`backend/src/services/academy.js`), que valida con `shared/academy/economia.json` y responde la billetera completa; el juego la reemplaza. Si el servidor rechaza (billetera desactualizada, otra pestaña), avisa, recarga la billetera y cierra la ventana abierta.
+- **Regalo de bienvenida:** en vez de las 60 fichas del prototipo, el servidor regala 30 tokens reales una sola vez, al terminar la apertura (`academy_welcome` en `token_ledger`), y Estela lo anuncia al entrar para que estrenen el Mercader. Objetivo nuevo: «Compra tu primer recuerdo». Los cofres dan 35 tokens y 1 copihue una sola vez.
+- **Práctica:** paga 2 tokens por desafío hasta 3 veces al día (`practice.dailyRewards`), porque sus respuestas se corrigen en el navegador. Después los desafíos son para entrenar y Estela lo dice.
+- **Sin modo prueba ni «Reiniciar progreso»**; Ajustes ofrece «Ver la apertura» y «Salir de la Academia».
+- **Portal cerrado:** el capítulo 1 sigue siendo un prototipo aparte (artefacto privado de claude.ai), así que todas las postales dicen «Pronto».
+- **Primera visita:** sin la apertura vista, la página manda a `/alumno/apertura` (ver `art/apertura/README.md`).
+- **Cerrada mientras se prueba:** con `"abierta": false` en `shared/academy/config.json`, solo las cuentas de prueba (`is_test`) la ven; el resto vuelve a `/alumno`. Se lee en cada pedido.
+- **Entrenamiento:** ofrece la práctica rápida o ir a las Islas de retos (`/alumno/islas`), un extra por asignatura fuera de la historia.
+
+## Mochila
+
+Los objetos se mueven a cualquier casilla: arrastrándolos (dedo o mouse), tocando un objeto y luego una casilla vacía, o con «Mover» y las flechas. Sobre otro objeto, se intercambian. Las posiciones (`state.bag`, `{id: casilla}`) se guardan con la partida; `bagLayout` pone primero cada objeto en su casilla guardada y los nuevos en la primera libre. Los íconos bloquean el arrastre nativo de imágenes, que cancelaba el del juego.
 
 ## Jugar
 
@@ -48,13 +76,17 @@ Los compañeros son simulados. Usan los cuadros del mismo niño, distintos peina
 
 ## Lobby v2: arquitectura y animación
 
-El muro se dibuja en el mismo plano de mundo que el suelo, alternando piezas reflejadas. Su zócalo termina en y 7,3; las tablas llegan a y 7,95 y la línea de pies está en 7,8. El fondo se empaqueta con brillo 85 % y saturación 86 %. `atrio` se coloca una sola vez centrado detrás del portal en x 31.
+El muro se dibuja en el mismo plano de mundo que el suelo, alternando piezas reflejadas. Su zócalo termina en y 7,3; las tablas llegan a y 7,95 y la línea de pies está en 7,8. El fondo se empaqueta con brillo 85 % y saturación 86 %. `atrio` se coloca una sola vez centrado detrás del portal en x 31. Como el muro se repite unas seis veces, `v2/cortar.py` (`moonless`) pinta cielo sobre la luna de su ventana: la única luna del salón es la del atrio.
 
 Las galerías ocupan x 6,6–19,5 y 40,5–53,4, con pies en y 4,4, columnas y baranda dibujada **después** de personajes y objetos. Las escaleras usan 18 huellas medidas y un peldaño de entrada en cada lado; la tapa superior coincide con la galería. Las tres plataformas del atrio cuelgan de dos cadenas hasta el techo. Los cuatro compañeros tienen rutas limitadas a su nivel y ala. El minimapa representa ambos pisos.
 
 `build.py` mide la última fila opaca de cada pieza y exporta `ART_META`; el renderizador compensa el padding y dibuja sombras de contacto. También normaliza el cofre cerrado 36 px hacia abajo para compartir la base del abierto. Las regiones de animación están en `academia.json → animations`, en píxeles de las fuentes originales. El build produce imágenes de diagnóstico y `measurements.json` en `shots3/`. Las partes que oscilan se separan al compilar; los engranajes usan pequeñas cachés recortadas y el vórtice usa una sola superficie reutilizada con una máscara extraída del portal.
 
-Estela tiene 72 cuadros WebP de 320 × 454, calidad 74, a 12 fps, conservando la proporción y el anclaje de las botas; se omite el cuadro 72 que repite el inicio. Mercader y Tempo conservan su dibujo sin estiramientos. Los tonos violetas de las estaciones se remapean preservando luminosidad HSL, croma y alfa. Estela conserva su pelo y capa.
+Estela tiene 72 cuadros WebP de 280 × 397, calidad 74, a 12 fps. Mercader y Tempo tienen 36 cuadros a 6 fps, de 240 px de ancho y calidad 72. Los tres usan fundido entre cuadros, anclaje en los pies, giro sobre el centro del cuerpo y sombra de contacto. Se omite el cuadro 72 que repite el inicio; Mercader y Tempo usan los cuadros pares 0–70. Sus retratos estáticos se conservan en los menús. Los tonos violetas de las estaciones se remapean preservando luminosidad HSL, croma y alfa. Estela conserva su pelo y capa.
+
+El portal usa 48 cuadros del video, extraídos cada tres cuadros de los primeros 144, a 8 fps y con su color original. Se recorta el vano con margen y máscara suave, a 300 × 320 px y calidad 72; el renderizador funde cuadros y añade un giro de ±4° a unos 2,8°/s. Conserva partículas, borde, engranajes, arcos, luz del piso, pulso de seis segundos, aceleración por cercanía y viaje. Con movimiento reducido muestra el primer cuadro. `shots3/portal-video-alignment.png` documenta la correspondencia con la pieza original.
+
+El banco conserva la proporción del arte nuevo: 5,5 × 2,214 CH, centrado en x 44,2. Las columnas derechas están en 40,9, 47,5 y 52,8; Tempo en 48,7 y el arcade en 51. La separación mayor de 6,6 CH deja espacio para el ancho del banco y las columnas. La interacción del banco abarca 2,7 CH hacia cada lado; Sofi y Tomás mantienen rutas dentro de la galería. La rueda gira suavemente alrededor de (330, 377), con radio 155 en la fuente; las cuatro lámparas parpadean. Ver `shots3/bank-wheel.png` y `shots3/right-wing-layout.png` (composición de arte, no captura de navegador).
 
 Al abrir un cofre, se concede y guarda el premio una sola vez. La secuencia bloquea controles, anticipa durante 0,5 s, abre la tapa con luz y chispas, eleva el objeto desde 1,05 s y muestra la banda a los 2,7 s. E / Enter o un toque permiten cerrar desde que aparece el objeto; la cámara vuelve gradualmente. El movimiento reducido cambia directamente al cofre abierto y la banda. La fanfarria usa cinco notas suaves y solo crea WebAudio después de la interacción. La mochila y el catálogo muestran los iconos reales.
 
@@ -102,11 +134,11 @@ Las secuencias de diálogo son listas de beats de `ref/SCHEMA.md`: `line`, `choi
 
 Una partida guarda flags, fichas, inventario, niveles por asignatura, resultados, decisiones, banco, chispas, secretos, cofres y posición en `academia:map:v2`. Los accesos a localStorage están protegidos con `try/catch`: si está bloqueado, la partida funciona en memoria. No se guardan pilas de diálogos a medias; al volver a hablar se inicia esa interacción. El enlace a la historia abre otro artefacto: este prototipo todavía no sincroniza partidas entre artefactos.
 
-Hay un solo `requestAnimationFrame`, física con pasos de 1/60 s, DPR máximo 1,5 y recorte de objetos fuera de cámara. Las cachés LRU tienen presupuestos de **64 MiB para canvases recoloreados** y **24 MiB para datos de máscaras**; los canvases expulsados se liberan. Esto limita las cachés independientemente del tiempo de juego y del número de looks. Los efectos están limitados a 140 partículas. Se pausa el loop en pestañas ocultas. «Reducir movimiento» congela los efectos de las estaciones y Estela, elimina sacudidas, partículas y zoom de tesoros, y conserva las acciones del juego. Se respeta la preferencia del sistema y también se puede activar en Ajustes. El sonido de tesoros y menús comparte un interruptor persistente. Los controles táctiles también se guardan.
+Hay un solo `requestAnimationFrame`, física con pasos de 1/60 s, DPR máximo 1,5 y recorte de objetos fuera de cámara. Las cachés LRU tienen presupuestos de **64 MiB para canvases recoloreados** y **24 MiB para datos de máscaras**; los canvases expulsados se liberan. Esto limita las cachés independientemente del tiempo de juego y del número de looks. Los efectos están limitados a 140 partículas. Se pausa el loop en pestañas ocultas. «Reducir movimiento» congela los efectos de las estaciones y los tres NPC, elimina sacudidas, partículas y zoom de tesoros, y conserva las acciones del juego. Se respeta la preferencia del sistema y también se puede activar en Ajustes. El sonido de tesoros y menús comparte un interruptor persistente. Los controles táctiles también se guardan.
 
 ## Verificación
 
-42 tests de Node pasan, incluidos el doble salto y llegar al pie de cada escalera desde el salón; incluidos ascenso y descenso de ambas escaleras, plataformas bajas alcanzables y el salto necesario para llegar al cofre alto, la cámara en vertical/horizontal y la persistencia del primer encuentro con Estela. `node test-ui.js` verifica además los tiempos de la bienvenida, la sustitución de un toast, el modo de movimiento reducido, el plegado y la reapertura de objetivos, la restauración de la partida, controles táctiles, rotación, súper salto y paneles sobre el HTML compilado. Añade cruces reales de `tick()` frente a todas las estaciones sin abrir paneles, apertura con eventos E / Enter, bloqueo y tiempos del tesoro, fanfarria, recompensas únicas, persistencia, modo reducido y rutas de compañeros. Las pruebas v2.1 añaden selección y compra de tienda, insuficiencia, sello de propiedad, venta, avance de mensajes, doce chispas, stepper del banco, postales, páginas, navegación y foco. El DOM/Canvas simulado no verifica estilos ni equivale a una revisión de navegador.
+51 tests de Node pasan, incluidos el doble salto y llegar al pie de cada escalera desde el salón; incluidos ascenso y descenso de ambas escaleras, plataformas bajas alcanzables y el salto necesario para llegar al cofre alto, la cámara en vertical/horizontal y la persistencia del primer encuentro con Estela. `node test-ui.js` verifica además los tiempos de la bienvenida, la sustitución de un toast, el modo de movimiento reducido, el plegado y la reapertura de objetivos, la restauración de la partida, controles táctiles, rotación, súper salto y paneles sobre el HTML compilado. Añade cruces reales de `tick()` frente a todas las estaciones sin abrir paneles, apertura con eventos E / Enter, bloqueo y tiempos del tesoro, fanfarria, recompensas únicas, persistencia, modo reducido y rutas de compañeros. Las pruebas v2.1 añaden selección y compra de tienda, insuficiencia, sello de propiedad, venta, avance de mensajes, doce chispas, stepper del banco, postales, páginas, navegación y foco. El DOM/Canvas simulado no verifica estilos ni equivale a una revisión de navegador.
 
 **Verificación visual: DEGRADED.** Se inspeccionaron los dos mockups y las piezas del kit. No se obtuvo una captura del juego en navegador. Chromium está instalado, pero este sandbox impide su arranque (`sandbox_host_linux.cc: shutdown: Operation not permitted`). Queda la revisión visual del artefacto en escritorio 1600 × 900, tablet táctil 1024 × 768 y teléfono 400 × 820, incluida su orientación horizontal, y la medición de 60 fps en esos dispositivos.
 

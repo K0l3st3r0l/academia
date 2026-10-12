@@ -30,6 +30,14 @@ export const studentLogin = (rut, pin) =>
 export const getStudentMe = () =>
   studentClient.get('/api/auth/student-me');
 
+// The Academy lobby is a static page (/academia/) that calls these itself; the app only needs to
+// know whether the opening film was seen.
+export const getAcademyMe = () =>
+  studentClient.get('/api/academy/me');
+
+export const markAcademyIntroSeen = () =>
+  studentClient.post('/api/academy/me/intro-seen');
+
 export const getCharacterCatalog = () =>
   studentClient.get('/api/characters/catalog');
 
@@ -156,7 +164,10 @@ export const getPetNames = (status) =>
 export const reviewPetName = (studentId, status) =>
   client.patch(`/api/pets/names/${studentId}`, { status });
 
-// Modo Libre: the world map and its levels (home practice).
+// Modo Libre: the Islands of challenges, one map per subject, and its levels (home practice).
+export const getWorldMaps = () =>
+  studentClient.get('/api/world');
+
 export const getWorldMap = (subject) =>
   studentClient.get(`/api/world/${subject}`);
 

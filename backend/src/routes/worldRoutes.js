@@ -9,7 +9,7 @@ const { pickForStudent } = require('../services/questionPicker');
 const { scheduleRating } = require('../services/skillRatings');
 const { levelAchievements } = require('../services/copihues');
 const {
-  getMap, findLevel, levelLabel, starsFor, LEVEL_QUESTIONS, CHALLENGE_QUESTIONS, MIN_QUESTIONS, STAR_BONUS,
+  getMap, listMaps, findLevel, levelLabel, starsFor, LEVEL_QUESTIONS, CHALLENGE_QUESTIONS, MIN_QUESTIONS, STAR_BONUS,
 } = require('../services/world');
 
 const router = express.Router();
@@ -48,6 +48,16 @@ async function lockAttempt(client, attemptId, studentId, index) {
   }
   return { attempt };
 }
+
+router.get('/', async (req, res) => {
+  try {
+    const gradeLevel = await studentGrade(req.user.id);
+    res.json({ maps: gradeLevel ? await listMaps(req.user.id, gradeLevel) : [] });
+  } catch (err) {
+    logger.error({ err }, 'world maps error');
+    res.status(500).json({ error: 'Error al cargar las islas' });
+  }
+});
 
 router.get('/:subject', async (req, res) => {
   try {

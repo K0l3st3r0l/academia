@@ -26,6 +26,8 @@ CUTS = [
     ('escalera', 'escalera.png', None),
     ('cofre', 'cofre.png', None),
     ('cofre_abierto', 'cofre-abierto.png', None),
+    ('banco_ancho', 'banco-ancho.png', None),  # 2026-10-07: the first bank looked cramped
+    ('banco_mueble', 'banco-mueble.png', None),  # then a stone block pasted on the hall: furniture instead
 ]
 # Inventory icons: a 4 x 2 grid on one sheet, keyed by the catalogue's and the chests' item ids.
 # Menu kit (ui-marcos.png) and HUD icons (ui-iconos.png): boxes in source pixels.
@@ -43,7 +45,7 @@ HUD = {
 ICONS = ['medallon', 'insignia', 'panuelo', 'sombrero', 'brujula', 'capa', 'linterna', 'mapa']
 
 
-def cut(rgb, solid_inside=False):
+def cut(rgb, solid_inside=False, enclosed_key=1.0):
     bg = rgb[3, 3].astype(int)
     key = keyed(rgb, bg)
     rgba, _ = cut_chroma(rgb, bg, key)
@@ -52,7 +54,7 @@ def cut(rgb, solid_inside=False):
         # image border is background; anything enclosed by the chest keeps its own colour.
         outside = ndimage.binary_propagation(np.zeros_like(key, bool) | _border(key.shape) & (key > 0.5),
                                              mask=key > 0.35)
-        inner = ndimage.binary_erosion(~outside, iterations=3)
+        inner = ndimage.binary_erosion(~outside, iterations=3) & (key < enclosed_key)
         rgba[inner, :3] = rgb[inner]
         rgba[inner, 3] = 255
     return rgba
@@ -62,6 +64,22 @@ def _border(shape):
     b = np.zeros(shape, bool)
     b[0], b[-1], b[:, 0], b[:, -1] = True, True, True, True
     return b
+
+
+def cut_exact(rgb):
+    """For art with green of its own (the copihue collar's leaves would key out): only pixels
+    close to the background's exact colour are background; the outline is unblended from it."""
+    bg = rgb[3, 3].astype(float)
+    dist = np.abs(rgb.astype(float) - bg).sum(-1)
+    alpha = np.clip((dist - 40) / 60, 0, 1)
+    labels, count = ndimage.label(alpha > 0.5)
+    if count:
+        areas = ndimage.sum(np.ones_like(labels), labels, range(1, count + 1))
+        keep = ndimage.binary_dilation(np.isin(labels, 1 + np.nonzero(areas >= areas.max() * 0.02)[0]), iterations=2)
+        alpha = np.where(keep, alpha, 0)
+    a = np.maximum(alpha, 1e-3)[..., None]
+    colour = np.where((alpha < 1)[..., None], np.clip((rgb - (1 - a) * bg) / a, 0, 255), rgb)
+    return np.dstack([colour, alpha * 255]).astype(np.uint8)
 
 
 def trim(rgba, box=None):
@@ -90,6 +108,35 @@ def atrium(rgb):
     return out
 
 
+def moonless(rgb):
+    """The wall repeats, mirrored, along the whole hall, so its window moon became a row of moons
+    (2026-10-08). Paint the sky over it and its glow; the atrium keeps the only moon."""
+    a = rgb.astype(float)
+    cx, cy = 1211, 223
+    x0, x1, y0, y1 = 1153, 1265, 140, 330  # the pane between the mullion and the arch's bar
+    ys, xs = np.mgrid[y0:y1, x0:x1]
+    box = a[y0:y1, x0:x1]
+    r, b = box[..., 0], box[..., 2]
+    d = np.hypot((xs - cx) / 72, (ys - cy) / 75)  # 1 = where the glow fades into the sky
+    frame = ndimage.binary_dilation((r - b > 15) & (d > .62))  # gold leading, kept as drawn
+    sky = (d > 1.08) & (b - r > 45) & (r < 32) & ~frame
+    terms = lambda u, v: np.stack([np.ones_like(u), u, v, u * u, u * v, v * v], -1)
+    fit, model = terms((xs[sky] - cx) / 60, (ys[sky] - cy) / 60), terms((xs - cx) / 60, (ys - cy) / 60)
+    grain = ndimage.gaussian_filter(np.random.default_rng(7).normal(0, 1, xs.shape), .7)
+    fill = np.empty_like(box)
+    for c in range(3):
+        coef, *_ = np.linalg.lstsq(fit, box[..., c][sky], rcond=None)
+        fill[..., c] = model @ coef + grain * 4
+    alpha = ndimage.gaussian_filter(np.clip((1 - d) / .2, 0, 1) * ~frame, .6) * ~frame
+    box[:] = box * (1 - alpha[..., None]) + fill * alpha[..., None]
+    # Without a few stars the painted patch reads as a hole in the sky.
+    src = rgb.astype(float)
+    star = src[162:169, 1231:1238] - np.median(src[158:173, 1227:1242], axis=(0, 1))
+    for sx, sy in ((1177, 198), (1227, 207), (1196, 262), (1250, 243)):
+        a[sy - 3:sy + 4, sx - 3:sx + 4] += np.clip(star, 0, None)
+    return np.clip(a.round(), 0, 255).astype(np.uint8)
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     sizes = {}
@@ -98,7 +145,8 @@ def main():
         rgb = np.asarray(Image.open(RAW / src).convert('RGB'))
         if crop:
             rgb = rgb[crop[1]:crop[3], crop[0]:crop[2]]
-        rgba = cut(rgb, solid_inside=name.startswith('cofre'))
+        # The bank's grille encloses pure green (background seen through the bars): only teal stays.
+        rgba = cut(rgb, solid_inside=name.startswith(('cofre', 'banco_mueble')), enclosed_key=0.6 if name == 'banco_mueble' else 1.0)
         if name.startswith('cofre'):
             # Both chest states share one box, so the closed and open chest line up when swapped.
             if chest_box is None:
@@ -128,13 +176,20 @@ def main():
         rgba, _ = trim(rgba)
         Image.fromarray(rgba).save(OUT / f'objeto_{name}.png')
         sizes[f'objeto_{name}'] = [int(rgba.shape[1]), int(rgba.shape[0])]
+    # The copihue collection (special items bought with copihues): one row of four.
+    sheet = np.asarray(Image.open(RAW / 'coleccion-copihue.png').convert('RGB'))
+    w = sheet.shape[1] // 4
+    for i, name in enumerate(['chupalla', 'manta', 'faja', 'collar_copihue']):
+        rgba, _ = trim(cut_exact(sheet[:, i * w:(i + 1) * w]))
+        Image.fromarray(rgba).save(OUT / f'objeto_{name}.png')
+        sizes[f'objeto_{name}'] = [int(rgba.shape[1]), int(rgba.shape[0])]
     for sheet_name, boxes in (('ui-marcos.png', UI), ('ui-iconos.png', HUD)):
         sheet = np.asarray(Image.open(RAW / sheet_name).convert('RGB'))
         for name, (x0, y0, x1, y1) in boxes.items():
             rgba, _ = trim(cut(sheet[y0:y1, x0:x1]))
             Image.fromarray(rgba).save(OUT / f'{name}.png')
             sizes[name] = [int(rgba.shape[1]), int(rgba.shape[0])]
-    im = Image.open(RAW / 'muro.png').convert('RGB')
+    im = Image.fromarray(moonless(np.asarray(Image.open(RAW / 'muro.png').convert('RGB'))))
     im.save(OUT / 'muro.png')
     sizes['muro'] = list(im.size)
     atrio = atrium(np.asarray(Image.open(RAW / 'atrio.png').convert('RGB')))

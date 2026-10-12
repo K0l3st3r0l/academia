@@ -15,6 +15,8 @@ import WorldMap from './pages/WorldMap';
 import LevelPlay from './pages/LevelPlay';
 import TeacherCopihues from './pages/TeacherCopihues';
 import CreateStudentPassword from './pages/CreateStudentPassword';
+import AcademyIntro from './pages/AcademyIntro';
+import IslandsHub from './pages/IslandsHub';
 
 function ProtectedTeacher({ children }) {
   const { user, loading, isTeacher } = useAuth();
@@ -53,6 +55,14 @@ export default function App() {
           <Route
             path="/alumno/companero"
             element={<ProtectedStudent><PetPage /></ProtectedStudent>}
+          />
+          <Route
+            path="/alumno/apertura"
+            element={<ProtectedStudent><AcademyIntro /></ProtectedStudent>}
+          />
+          <Route
+            path="/alumno/islas"
+            element={<ProtectedStudent><IslandsHub /></ProtectedStudent>}
           />
           <Route
             path="/alumno/mundo/:subject"

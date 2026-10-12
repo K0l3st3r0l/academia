@@ -104,7 +104,7 @@ body.window-open #touch-bar{display:none}body.menu-open #controls-hint,body.menu
 .bank-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px}.vault{padding:20px;border:6px ridge #ca9c50;background:radial-gradient(ellipse,#536565,#243a3c);border-radius:22px;box-shadow:inset 0 0 0 4px #1d2420}.vault-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}.vault-column{display:grid;justify-items:center;gap:6px;text-align:center;padding:10px;border:2px ridge #af8b53;background:#1e2c2a;border-radius:15px}.vault-column strong{font-family:'Baloo 2',sans-serif;font-size:42px;color:#ffe6a2}.vault-column h3{font-size:19px}.bank-stepper{display:grid;gap:12px;justify-items:center}.amount-control{display:flex;gap:10px;align-items:center}.amount-control input{width:115px!important;text-align:center;background:#fff0ce!important;color:#3b2314!important;border:3px ridge #c79c51!important;font-size:27px!important}.amount-control button{min-width:48px}.quick-amounts{display:flex;flex-wrap:wrap;gap:8px}.bank-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.week-dial-wrap{display:flex;align-items:center;justify-content:center;gap:12px;font-size:13px}.week-dial{width:65px;height:65px;border:5px ridge #caa052;border-radius:50%;background:conic-gradient(#eac15c var(--week-angle),#183b3d 0);display:grid;place-items:center;box-shadow:inset 0 0 0 5px #362717}.week-dial span{background:#382619;color:#ffe7b0;border-radius:50%;font-weight:900;padding:7px;font-size:12px}
 .clock-layout{display:grid;grid-template-columns:minmax(320px,1fr) minmax(0,1fr);align-items:center;gap:35px}.clock-face{position:relative;width:340px;height:340px;max-width:100%;margin:12px auto;border:11px ridge #cfa44f;border-radius:50%;background:radial-gradient(circle,#235655,#0c3338 65%,#ae884c 66% 67%,#322015 68%);box-shadow:inset 0 0 25px #051f23}.clock-face:before{content:'✦';position:absolute;inset:33%;display:grid;place-items:center;font:800 60px 'Baloo 2';color:#c8a05c}.clock-hand{position:absolute;left:50%;top:24%;height:27%;width:5px;background:#eac66b;transform-origin:bottom;transform:rotate(35deg);border-radius:5px}.clock-hand.hour{height:19%;top:32%;transform:rotate(-65deg)}:is(#overlay,.closing-ghost) .clock-piece{position:absolute;width:76px;height:80px;min-height:44px;left:var(--slot-x);top:var(--slot-y);transform:translate(-50%,-50%);border:0;background:#1b3635;border-radius:15px;padding:5px;color:#fff0cc;font-size:10px;box-shadow:0 0 0 2px #806538}.clock-piece .ui-icon{width:34px;height:38px;opacity:.3;filter:grayscale(1)}.clock-piece.owned .ui-icon{opacity:1;filter:drop-shadow(0 0 5px #ffd454)}:is(#overlay,.closing-ghost) .clock-piece.selected{box-shadow:0 0 0 3px #ffe180,0 0 15px #ffcf68}.chapter-detail{display:grid;gap:14px;text-align:center;justify-items:center;padding:22px}.chapter-year{color:#704216;font:800 30px 'Baloo 2'}.locked-copy{display:flex;align-items:center;gap:8px;color:#65482e;font-weight:900}
 .travel-intro{display:flex;align-items:center;gap:20px}.travel-intro .portrait-oval{width:95px;height:115px}.travel-intro .parchment{flex:1}.postcards{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 5px 18px;scrollbar-color:#cda257 #2c1d14;scrollbar-width:thin}:is(#overlay,.closing-ghost) .postcard{flex:0 0 270px;display:grid;grid-template-rows:145px auto;scroll-snap-align:center;padding:10px;border:7px solid transparent;border-image:var(--ui-pergamino) 24 fill / 10px;transform:rotate(-1deg);color:#3b2314;text-shadow:none;background:none;min-height:255px}.postcard:nth-child(even){transform:rotate(1deg)}:is(#overlay,.closing-ghost) .postcard.selected{box-shadow:0 0 0 3px #ffd571}.postcard img{width:100%;height:145px;object-fit:cover;border:2px solid #795333}.postcard-art{position:relative;background:radial-gradient(ellipse at 50% 100%,#59615a,#14242b);height:145px;display:grid;place-items:center}.postcard-art:before{content:'';position:absolute;inset:15% 20% 0;background:linear-gradient(140deg,#101d22 40%,#314041);clip-path:polygon(0 100%,0 35%,20% 35%,30% 0,40% 35%,65% 35%,80% 15%,95% 60%,100% 100%)}.postcard-art .ui-icon{z-index:1}.postcard-copy{position:relative;padding:10px 3px;display:grid;gap:6px;font-size:14px}.postcard-year{font:800 18px 'Baloo 2';color:#634019}.travel-bottom{display:grid;justify-items:center;gap:12px}:is(#overlay,.closing-ghost) .travel-link{display:inline-flex;align-items:center;justify-content:center;min-width:220px;min-height:58px;border:14px solid transparent;border-image:var(--ui-boton-oro) 20 40 fill / 14px;background:none;color:#3b2314;border-radius:0;padding:2px 18px;font:800 26px 'Baloo 2';text-decoration:none}
-.bag-counters{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.bag-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px}.bag-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}:is(#overlay,.closing-ghost) .bag-grid .item-slot{min-height:100px;aspect-ratio:1;padding:12px}.bag-grid .item-slot .item-icon{height:70px}.bag-grid .item-slot.empty{opacity:.4;pointer-events:none}.bag-detail{display:grid;align-content:start;justify-items:center;gap:15px;text-align:center;min-height:270px;padding:20px}.bag-detail>.item-icon{width:105px;height:110px}.gesture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}:is(#overlay,.closing-ghost) .gesture-grid button{font:800 24px 'Baloo 2';min-height:95px;text-align:center}.objectives-scroll{display:grid;gap:18px;padding:25px;list-style:none;margin:0}.objectives-scroll li{display:flex;align-items:center;gap:15px;line-height:1.5}.objective-check{width:37px;flex-shrink:0;color:#78603f;font-size:30px}.objective-check.done{color:#245d46}.toggle-card{display:flex!important;align-items:center;justify-content:space-between;gap:15px;border:3px ridge #be9451;padding:12px 18px;background:#322219;border-radius:15px;min-height:66px}.toggle-card span{flex:1;color:#fff0cc}.toggle-card input[type=checkbox]{appearance:none;width:62px;min-height:32px;height:32px;border:3px ridge #e0b967;border-radius:18px;background:#191811;position:relative;flex-shrink:0;cursor:pointer}.toggle-card input[type=checkbox]:before{content:'';position:absolute;top:2px;left:3px;width:22px;height:22px;border-radius:50%;background:linear-gradient(#fbe5a1,#bc8640);box-shadow:0 1px 3px #0008}.toggle-card input:checked{background:#2e6656}.toggle-card input:checked:before{left:31px}.panel select{background:#f6dfb5;color:#3b2314;border:3px ridge #c29a55}
+.bag-counters{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.bag-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px}.bag-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}:is(#overlay,.closing-ghost) .bag-grid .item-slot{min-height:100px;aspect-ratio:1;padding:12px}.bag-grid .item-slot .item-icon{height:70px}.bag-grid .item-slot.empty{opacity:.45}.item-slot.empty:hover,.item-slot.empty.selected,.item-slot.drop-target{opacity:.9}.item-slot.carrying{opacity:.35}.bag-grid .item-slot{touch-action:none}.bag-detail{display:grid;align-content:start;justify-items:center;gap:15px;text-align:center;min-height:270px;padding:20px}.bag-detail>.item-icon{width:105px;height:110px}.gesture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}:is(#overlay,.closing-ghost) .gesture-grid button{font:800 24px 'Baloo 2';min-height:95px;text-align:center}.objectives-scroll{display:grid;gap:18px;padding:25px;list-style:none;margin:0}.objectives-scroll li{display:flex;align-items:center;gap:15px;line-height:1.5}.objective-check{width:37px;flex-shrink:0;color:#78603f;font-size:30px}.objective-check.done{color:#245d46}.toggle-card{display:flex!important;align-items:center;justify-content:space-between;gap:15px;border:3px ridge #be9451;padding:12px 18px;background:#322219;border-radius:15px;min-height:66px}.toggle-card span{flex:1;color:#fff0cc}.toggle-card input[type=checkbox]{appearance:none;width:62px;min-height:32px;height:32px;border:3px ridge #e0b967;border-radius:18px;background:#191811;position:relative;flex-shrink:0;cursor:pointer}.toggle-card input[type=checkbox]:before{content:'';position:absolute;top:2px;left:3px;width:22px;height:22px;border-radius:50%;background:linear-gradient(#fbe5a1,#bc8640);box-shadow:0 1px 3px #0008}.toggle-card input:checked{background:#2e6656}.toggle-card input:checked:before{left:31px}.panel select{background:#f6dfb5;color:#3b2314;border:3px ridge #c29a55}
 .open-book{display:grid;grid-template-columns:1fr 1fr;gap:0;filter:drop-shadow(0 7px 7px #0007);perspective:900px}.book-page{min-height:310px;padding:24px 26px;display:flex;flex-direction:column;gap:18px}.book-page:first-child{box-shadow:inset -12px 0 12px -12px #5a381d}.book-page:last-child{box-shadow:inset 12px 0 12px -12px #5a381d}.book-page p{font-size:18px;line-height:1.75}.book-page.turning{animation:page-turn .3s ease}.book-number{margin-top:auto;font-size:12px;color:#765438;text-align:center}.book-emblem{display:grid;place-items:center;font-size:90px;color:#b58e50;padding:10px}.book-reward{display:flex;align-items:center;justify-content:center;gap:10px;color:#ffe2a2!important}.book-controls{display:flex;justify-content:center;gap:12px}
 .sky-panel{background:radial-gradient(ellipse,#244352,#0b2032)!important;padding:20px!important;border-radius:16px!important}.sky-panel .sky-map{max-height:340px;height:auto;border:3px ridge #b69659;background:#071b2a}.sky-panel h3{color:#ffe4a6}.sky-panel p{color:#f1e3c8!important}.sky-notes{display:grid;grid-template-columns:1fr 1fr;gap:15px}.sky-notes .parchment p{color:#3b2314!important}
 :is(#overlay,.closing-ghost) .challenge{padding:18px 23px;animation:none}:is(#overlay,.closing-ghost) .challenge:before{display:none}:is(#overlay,.closing-ghost) .challenge button{border-image:var(--ui-pergamino) 24 fill / 12px / 0;color:#3b2314;text-shadow:none}:is(#overlay,.closing-ghost) .challenge button.primary{border-image-source:var(--ui-boton-oro);color:#3b2314}:is(#overlay,.closing-ghost) .challenge button.selected,:is(#overlay,.closing-ghost) .challenge button.active{outline:3px solid #b78621;outline-offset:-3px;box-shadow:0 0 15px #bd8d3770}:is(#overlay,.closing-ghost) .challenge .feedback{border:3px double #3c7450;border-radius:0;background:#e2dfad;transform:rotate(-.5deg)}:is(#overlay,.closing-ghost) .challenge .feedback.help{border-color:#9b5b29;background:#efd4a9}:is(#overlay,.closing-ghost) .challenge .feedback h3{color:#31553b}:is(#overlay,.closing-ghost) .challenge .feedback.help h3{color:#804620}:is(#overlay,.closing-ghost) .challenge .explanation{color:#3b2314;background:#ecd8b2;border-color:#966b35}:is(#overlay,.closing-ghost) .challenge .eyebrow,:is(#overlay,.closing-ghost) .challenge .log-meta{color:#67472c}.numeric-controls{background:transparent!important}
@@ -133,9 +133,307 @@ body.touch-disabled #touch-bar{display:none}
 @media(max-width:850px){.counter-word{display:none}}
 button.counter{cursor:pointer;font:inherit}
 .message-link{margin-right:8px}
+/* Window space, rather than the original 1600px artwork, sets every menu's scale. */
+:is(#overlay,.closing-ghost):not(.dialogue-mode){padding:40px 4vw 18px}
+:is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#game-window,.game-window){height:min(90dvh,900px);max-height:none;border-width:24px;border-image-width:24px;padding:0}
+:is(#overlay,.closing-ghost):not(.dialogue-mode) .window-header{position:absolute;inset:-46px 0 auto;height:76px;min-height:0;margin:0}
+:is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#window-title,.window-title){width:min(620px,72%);min-height:76px;height:76px;padding:8px 38px 26px;font-size:clamp(20px,2.5vw,30px)}
+:is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#overlay-close,.overlay-close){right:-35px;top:4px;width:50px;height:50px}
+:is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#window-wallet,.window-wallet){right:4px;top:48px;min-height:32px;font-size:14px;padding:2px 7px}
+:is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#stage,.game-stage){container-type:size;flex:1;min-height:0;padding:34px 10px 8px;overflow:hidden}
+.window-footer{justify-content:center;padding:0;min-height:16px;line-height:16px;font-size:10px}
+.window-footer small{font-size:inherit}
+body.touch-controls .window-footer,body.touch-device .window-footer{display:none}
+@media(hover:none),(pointer:coarse){.window-footer{display:none}}
+:is(#stage,.game-stage)>.window-fit{display:flex;width:100%;max-width:none;height:100%;min-height:0;align-self:stretch;flex-direction:column;gap:clamp(6px,1.5cqh,12px);margin:0;padding:0}
+.window-content{flex:1;min-width:0;min-height:0;display:grid;align-content:start;gap:clamp(6px,1.5cqh,12px);padding:5px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#d7ad60 #302014}
+.window-content::-webkit-scrollbar{width:9px;height:9px}.window-content::-webkit-scrollbar-thumb{background:#d7ad60;border:2px solid #302014;border-radius:8px}.window-content::-webkit-scrollbar-track{background:#302014}
+.window-content>*{min-width:0}
+.window-actions{flex:none;display:flex;align-items:center;justify-content:center;gap:8px;min-width:0}
+.window-actions:empty,.window-actions:has(>[hidden]:only-child){display:none}
+:is(#overlay,.closing-ghost) .window-fit button{min-height:44px;font-size:clamp(13px,2.9cqh,17px);border-width:10px;border-image-width:10px;padding:2px 7px;line-height:1.25}
+.window-fit :is(p,small){font-size:clamp(13px,3cqh,16px);line-height:1.4}
+.window-fit h3{font-size:clamp(18px,4.3cqh,25px)}
+.window-fit .parchment{border-width:14px;border-image-width:14px;padding:6px 8px}
+.window-fit .ui-icon{width:24px;height:24px}
+.window-fit .ui-icon.large{width:clamp(32px,9cqh,48px);height:clamp(32px,9cqh,48px)}
+.window-fit .stack{gap:clamp(6px,1.5cqh,12px)}
+.window-fit .character-stand{gap:10px;justify-content:start}
+.window-fit .portrait-oval{width:clamp(95px,32cqh,180px);height:clamp(120px,40cqh,235px);border-width:5px}
+.window-fit .merchant-bubble p{font-size:inherit;line-height:inherit}
+.window-fit .merchant-bubble{min-height:0;font-size:clamp(13px,3.2cqh,17px);line-height:1.4;padding:6px 8px}
+.window-fit .shop-layout{grid-template-columns:minmax(0,.7fr) minmax(0,2fr);gap:clamp(12px,3cqw,24px)}
+.window-fit .shop-items{display:block}
+.window-fit .shelf-grid{grid-template-columns:repeat(3,minmax(0,min(150px,25cqh,23cqw)));justify-content:center;gap:18px 14px;padding-bottom:16px}
+.window-fit .shelf-grid:before{top:calc(50% - 32px)}.window-fit .shelf-grid:after{bottom:0}
+:is(#overlay,.closing-ghost) .window-fit .item-slot{height:min(150px,25cqh,23cqw);min-height:0;aspect-ratio:1;width:100%;padding:8px 12px 24px;border:0}
+.window-fit .item-slot .item-icon{height:min(80px,16cqh);max-width:85px}
+.window-fit .price-tag{height:42px;min-width:65px;font-size:14px;padding:10px 3px 3px 12px;bottom:-5px;right:3px}
+.window-fit .price-tag .ui-icon{width:18px;height:18px}
+.window-fit .item-slot .owned-dot{font-size:18px;top:8px;right:12px}
+.shop-panel>.window-actions{display:grid;grid-template-columns:minmax(0,1fr) auto}
+.window-fit .detail-card{grid-template-columns:40px minmax(0,1fr) auto;min-height:0;margin:0;gap:10px}
+.window-fit .detail-card>.item-icon{width:40px;height:48px}
+.window-fit .detail-copy{gap:3px}.window-fit .detail-copy h3{font-size:clamp(17px,3.6cqh,22px)}
+.window-fit .detail-copy p{font-size:13px;line-height:1.3}
+.window-fit .detail-card .primary{min-width:100px;max-width:180px;font-size:14px}
+.window-fit .shop-tools{display:block}.window-fit .shop-tools button{max-width:140px}
+.window-fit .owned-stamp{font-size:12px;padding:5px;max-width:140px}
+.window-fit .bank-layout{grid-template-columns:minmax(0,.65fr) minmax(0,2fr);gap:20px}
+.window-fit .bank-main{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center}
+.window-fit .bank-main>.week-dial-wrap{grid-column:1/-1}
+.window-fit .bank-main>button{grid-column:1/-1;justify-self:center}
+.window-fit .vault{padding:10px;border-width:4px}.window-fit .vault-columns{gap:8px}
+.window-fit .vault-column{gap:3px;padding:8px}.window-fit .vault-column h3{font-size:16px}
+.window-fit .vault-column strong{font-size:clamp(28px,7cqh,40px)}
+.window-fit .bank-stepper{gap:8px;font-size:14px}
+.window-fit .amount-control{gap:5px}.window-fit .amount-control input{width:85px!important;font-size:22px!important;min-height:44px;padding:4px}
+.window-fit .amount-control button{min-width:44px;padding:0}
+.window-fit .quick-amounts{gap:4px}.window-fit .quick-amounts button{padding:1px 5px}
+.window-fit .week-dial{width:54px;height:54px;flex-shrink:0}
+.window-fit .week-dial-wrap p{font-size:13px}
+.window-fit .clock-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.window-fit .clock-face{width:min(340px,66cqh,42cqw);height:min(340px,66cqh,42cqw);margin:8px auto;border-width:8px}
+:is(#overlay,.closing-ghost) .window-fit .clock-piece{width:clamp(48px,14cqh,76px);height:clamp(48px,15cqh,80px);font-size:10px;padding:3px;border:0}
+.window-fit .clock-piece .ui-icon{width:clamp(22px,6cqh,34px);height:clamp(22px,6cqh,34px)}
+.window-fit .chapter-detail{gap:10px;padding:10px}.window-fit .chapter-year{font-size:clamp(23px,6cqh,30px)}
+.window-fit .travel-intro{gap:12px}.window-fit .travel-intro .portrait-oval{width:70px;height:85px}
+.window-fit .postcards{gap:14px;padding:6px 5px 12px;min-width:0}
+:is(#overlay,.closing-ghost) .window-fit .postcard{flex-basis:clamp(180px,25cqw,270px);grid-template-rows:min(135px,28cqh) auto;min-height:0;padding:8px;border-width:6px}
+.window-fit .postcard img,.window-fit .postcard-art{height:min(135px,28cqh)}
+.window-fit .postcard-copy{gap:4px;font-size:14px;padding:8px 2px 2px}
+.window-fit .postcard-year{font-size:16px;min-width:48px;top:-41px;padding:5px}
+.window-fit .travel-bottom{gap:5px}.window-fit .travel-bottom small{font-size:12px}
+:is(#overlay,.closing-ghost) .window-fit .travel-link{min-height:48px;min-width:180px;font-size:23px;border-width:10px;border-image-width:10px;padding:2px 10px}
+.window-fit .bag-counters{gap:8px}.window-fit .bag-counters .wallet{font-size:13px;padding:3px 8px}
+.window-fit .bag-layout{display:block}
+.window-fit .bag-grid{grid-template-columns:repeat(4,minmax(0,min(128px,17cqh,20cqw)));justify-content:center;gap:8px;padding:8px}
+:is(#overlay,.closing-ghost) .window-fit .bag-grid .item-slot{height:min(128px,17cqh,20cqw);min-height:0;padding:8px}
+.window-fit .bag-grid .item-slot .item-icon{height:min(70px,12cqh)}
+.window-fit .bag-detail{display:flex;flex:1;flex-wrap:wrap;align-items:center;justify-content:center;min-height:0;gap:8px;padding:6px 8px;text-align:left}
+.window-fit .bag-detail>.item-icon{width:45px;height:48px}.window-fit .bag-detail h3{font-size:18px;max-width:260px}
+.window-fit .bag-detail p{font-size:13px;max-width:240px}.window-fit .bag-detail>.ui-icon.large{width:35px;height:35px}
+.window-fit .open-book{margin:0}
+.window-fit .book-page{min-height:0;height:clamp(230px,65cqh,460px);padding:12px 18px;gap:clamp(8px,2.5cqh,18px)}
+.window-fit .book-page p{font-size:clamp(14px,3.5cqh,18px);line-height:1.5}
+.window-fit .book-page h3{font-size:clamp(19px,4.5cqh,27px)}
+.window-fit .book-emblem{font-size:clamp(42px,12cqh,70px)}
+.window-fit .book-reward{font-size:13px;gap:5px;margin:0;display:flex;justify-content:center;align-items:center}
+.window-fit .book-controls{display:flex;gap:8px}
+.window-fit .sky-map{height:min(240px,49cqh);width:100%;min-height:0}
+.window-fit .sky-notes{gap:12px}.window-fit .sky-notes h3{font-size:20px}.window-fit .sky-notes p{font-size:14px}
+.window-fit .gesture-grid{gap:10px}
+:is(#overlay,.closing-ghost) .window-fit .gesture-grid button{min-height:clamp(60px,18cqh,95px);font-size:clamp(18px,4.5cqh,24px)}
+.window-fit .objectives-scroll{gap:clamp(6px,2cqh,16px);padding:10px 16px}
+.window-fit .objectives-scroll li{gap:10px;font-size:clamp(14px,3.5cqh,17px);line-height:1.35}
+.window-fit .objective-check{width:28px;font-size:25px}
+.window-fit .toggle-card{min-height:52px;padding:6px 10px;gap:10px;font-size:14px}
+.window-fit .toggle-card input[type=checkbox]{padding:0}
+.window-fit label{font-size:14px}.window-fit select{min-height:44px;font-size:15px;padding:4px 12px;margin-left:0}
+.settings-panel .window-content>p{font-size:13px}
+.settings-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+/* The prompt and controls share the same size container as every other menu. */
+:is(#overlay,.closing-ghost) .challenge.window-fit{border-width:12px;border-image-width:12px;padding:8px 10px;box-shadow:none}
+.challenge-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+.challenge-meta .row{flex-wrap:nowrap;gap:7px;min-width:0}
+.challenge-meta .log-meta{font-size:12px;line-height:1.25;color:#5b402b}
+.challenge-meta .subject-icon{width:24px;height:24px;font-size:15px;flex-shrink:0;background:#d8bc89;color:#403020}
+.challenge-meta .attempt-label{font-size:11px;white-space:nowrap;color:#674a30}
+:is(#overlay,.closing-ghost) .window-fit .challenge-prompt{font-size:clamp(18px,4cqh,26px);line-height:1.22;color:#3b2314}
+:is(#overlay,.closing-ghost) .window-fit .challenge-prompt.long-prompt{font-size:clamp(18px,3.5cqh,22px);line-height:1.25}
+.challenge .paper-rule{height:1px;flex:none}
+.challenge .window-content{padding:2px;gap:6px}
+.challenge-header{display:grid;gap:6px;min-width:0}
+.challenge-workspace{gap:6px;min-width:0}
+.challenge .options{gap:6px}
+:is(#overlay,.closing-ghost) .challenge .option{padding:2px 7px;font-size:clamp(13px,2.9cqh,16px);gap:8px;line-height:1.3;text-align:left}
+.challenge .option .key{width:24px;height:24px;font-size:12px;border-radius:5px;flex-shrink:0}
+.challenge .numeric-workspace{grid-template-columns:1fr 1fr;align-items:start}
+.challenge .numeric-controls{position:static;gap:6px;padding:0;background:none}
+.challenge .number-wrap{gap:6px}.challenge .number-input{font-size:clamp(22px,6cqh,30px);padding:6px;min-height:48px}
+.challenge .unit{font-size:13px}
+.challenge .digit-pad{width:100%;grid-template-columns:repeat(4,1fr);gap:4px}
+:is(#overlay,.closing-ghost) .challenge .digit-pad button{font-size:18px;padding:0}
+.challenge .match-columns{grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr);gap:8px}
+.challenge .match-column{gap:4px}
+:is(#overlay,.closing-ghost) .challenge .match-column button{min-height:44px;font-size:clamp(13px,2.8cqh,16px);line-height:1.25;padding:2px 5px}
+.challenge .order-list{gap:4px}
+.challenge .order-item{padding:2px 6px;font-size:14px;gap:6px;min-width:0}
+.challenge .order-controls{flex:none}
+:is(#overlay,.closing-ghost) .challenge .order-controls button{min-width:44px;padding:0}
+.challenge .grid-wrap{padding:4px;min-width:0}
+.challenge .coordinate-grid{height:min(260px,52cqh);max-height:none;width:100%}
+.challenge .coordinate-readout{min-height:0;font-size:14px}
+.challenge .passage{padding:8px;font-size:14px;line-height:1.4}
+.challenge .reading-text{display:grid;align-content:start;gap:6px}
+.challenge .source{font-size:11px;line-height:1.35}
+.challenge .reading-question{align-content:start;gap:6px;min-width:0}
+.challenge .reading-question h3{font-family:Nunito,sans-serif;font-size:14px;line-height:1.3}
+:is(#overlay,.closing-ghost) .challenge .reading-question .option{font-size:13px;border-width:8px;border-image-width:8px;padding:2px 5px;gap:5px}
+.challenge .feedback{padding:12px;gap:8px}.challenge .feedback p,.challenge .explanation{font-size:14px;line-height:1.4}
+.challenge .explanation{padding:10px;white-space:pre-wrap}.challenge .feedback .portrait{width:55px;height:65px}
+@media(min-width:1024px) and (min-height:640px){
+ .challenge .short-options{grid-template-columns:1fr 1fr}
+ .challenge[data-kind=match]:has(.challenge-workspace) .window-content,.challenge[data-kind=order]:has(.challenge-workspace) .window-content{grid-template-columns:minmax(0,.65fr) minmax(0,1.8fr);grid-template-rows:auto minmax(0,1fr)}
+ .challenge[data-kind=match] .challenge-header,.challenge[data-kind=order] .challenge-header{grid-column:1/-1}
+ .challenge[data-kind=match] .challenge-prompt,.challenge[data-kind=order] .challenge-prompt{grid-column:1;align-self:start}
+ .challenge[data-kind=match] .challenge-workspace,.challenge[data-kind=order] .challenge-workspace{grid-column:2;grid-row:2;align-content:start}
+ .challenge[data-kind=grid] .challenge-workspace{grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);align-items:center}
+ .challenge[data-kind=grid] .grid-wrap{grid-column:2;grid-row:1/3}
+ .challenge[data-kind=grid] .coordinate-readout{grid-column:1;grid-row:2}
+ .challenge[data-kind=reading] .challenge-workspace{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:8px}
+}
+@media(max-width:1023px),(max-height:639px){
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#game-window,.game-window){height:90dvh;border-width:18px;border-image-width:18px}
+ .window-footer{display:none}
+ .window-fit .portrait-oval{width:100px;height:125px}
+ .window-fit .bank-main{grid-template-columns:1fr}
+ .window-fit .bank-main>.week-dial-wrap{grid-column:auto}
+ .window-actions{background:#3c291d;border-top:2px ridge #be9451;padding-top:5px}
+ .challenge .window-actions{background:transparent;border-color:#bb965f}
+ .challenge[data-kind=match] .match-columns{grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr)}
+}
+@media(max-width:600px){
+ :is(#overlay,.closing-ghost):not(.dialogue-mode){padding:35px 0 0;align-items:flex-end}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#game-window,.game-window){width:100%;height:93dvh;border-width:18px;border-image-width:18px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) .window-header{top:-38px;height:74px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#window-title,.window-title){width:calc(100% - 16px);height:74px;min-height:74px;font-size:20px;padding:8px 24px 24px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#overlay-close,.overlay-close){right:-16px;top:1px;width:44px;height:44px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#window-wallet,.window-wallet){top:73px;right:2px;min-height:30px;font-size:12px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#stage,.game-stage){padding:38px 0 4px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode):has(.window-wallet:not([hidden])) :is(#stage,.game-stage){padding-top:70px}
+ .window-content{padding:5px 4px}
+ .window-fit .shop-layout,.window-fit .bank-layout{grid-template-columns:1fr;gap:12px}
+ .window-fit .character-stand{flex-direction:row;gap:10px}
+ .window-fit .portrait-oval{width:65px;height:85px;border-width:4px}
+ .window-fit .merchant-bubble{font-size:13px;padding:4px;flex:1}
+ .window-fit .shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 10px;background-position:center calc(33.3% - 4px);background-size:100% 48px}
+ .window-fit .shelf-grid:before{top:calc(66.6% - 30px)}
+ :is(#overlay,.closing-ghost) .window-fit .item-slot{height:min(135px,39cqw);padding:10px 14px 25px}
+ .window-fit .item-slot .item-icon{height:70px}
+ .shop-panel>.window-actions{grid-template-columns:1fr;gap:4px}
+ .window-fit .detail-card{grid-template-columns:minmax(0,1fr) auto;gap:7px;padding:4px;border-width:12px;border-image-width:12px}
+ .window-fit .detail-card>.item-icon{display:none}
+ .window-fit .detail-copy h3{font-size:16px}.window-fit .detail-copy p{font-size:12px}
+ .window-fit .detail-card .primary{min-width:92px;max-width:130px;font-size:13px}
+ .window-fit .shop-tools{justify-self:center}.window-fit .shop-tools button{max-width:none;min-height:44px}
+ .window-fit .bag-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ :is(#overlay,.closing-ghost) .window-fit .bag-grid .item-slot{height:min(125px,37cqw)}
+ .window-fit .bag-detail{gap:5px;justify-content:flex-start}.window-fit .bag-detail h3{font-size:16px}
+ .window-fit .bag-detail p{max-width:100%;font-size:12px}
+ .window-fit .bank-main{grid-template-columns:1fr}
+ .window-fit .clock-layout{grid-template-columns:1fr;gap:8px}
+ .window-fit .clock-face{width:260px;height:260px}
+ :is(#overlay,.closing-ghost) .window-fit .clock-piece{width:58px;height:60px;font-size:9px}
+ .window-fit .clock-piece .ui-icon{width:25px;height:25px}
+ .window-fit .travel-intro .portrait-oval{width:58px;height:75px}
+ :is(#overlay,.closing-ghost) .window-fit .postcard{flex-basis:220px;grid-template-rows:125px auto}
+ .window-fit .postcard img,.window-fit .postcard-art{height:125px}
+ .window-fit .open-book{grid-template-columns:1fr}
+ .window-fit .book-page{height:auto;min-height:240px;padding:12px 14px}
+ .window-fit .book-page p{font-size:15px}.window-fit .book-controls{gap:4px}
+ :is(#overlay,.closing-ghost) .window-fit .book-controls button{font-size:12px;padding:1px 3px}
+ .window-fit .sky-notes{grid-template-columns:1fr}
+ .window-fit .gesture-grid{grid-template-columns:1fr}
+ .window-fit .toggle-card{padding:6px;gap:5px;font-size:13px}
+ .window-fit .toggle-card .ui-icon{width:21px;height:21px}
+ .challenge-meta .attempt-label{display:none}.challenge-meta .log-meta{font-size:11px}
+ :is(#overlay,.closing-ghost) .challenge.window-fit{border-width:10px;border-image-width:10px;padding:6px 4px}
+ .challenge .numeric-workspace{grid-template-columns:1fr}
+ .challenge .match-columns{gap:5px}
+ .challenge .coordinate-grid{height:260px}
+ .challenge .window-actions{flex-wrap:wrap;gap:4px}
+ .challenge .window-actions button{flex:1}
+ .message-box{grid-template-columns:52px minmax(0,1fr);gap:8px;padding:10px 6px 4px}
+ .message-portrait{width:52px;height:64px}
+ .message-text{font-size:14px;line-height:1.4}
+}
+@media(max-height:550px) and (orientation:landscape){
+ :is(#overlay,.closing-ghost):not(.dialogue-mode){padding:28px 15px 8px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) .window-header{top:-36px;height:64px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#window-title,.window-title){height:64px;min-height:64px;font-size:22px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#overlay-close,.overlay-close){right:-20px;top:0;width:44px;height:44px}
+ :is(#overlay,.closing-ghost):not(.dialogue-mode) :is(#stage,.game-stage){padding-top:28px}
+ .window-fit .shop-layout,.window-fit .bank-layout{grid-template-columns:140px minmax(0,1fr)}
+ .window-fit .clock-face{width:200px;height:200px}
+ .window-fit .bag-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ :is(#overlay,.closing-ghost) .window-fit .bag-grid .item-slot{height:100px}
+ .window-fit .book-page{height:auto;min-height:230px}
+ .message-box{border-width:14px;border-image-width:14px;padding:6px 12px 3px;gap:10px}
+ .message-text{font-size:14px;line-height:1.35}
+ .message-portrait{width:64px;height:72px}
+}
+
+/* Long phone messages keep their Continue control in the box. */
+.dialogue-mode .message-copy{display:flex;flex-direction:column;min-height:0;max-height:max(80px,calc(100dvh - var(--hud-height,0px) - var(--touch-height,0px) - 104px))}
+.dialogue-mode .message-text{min-height:0;overflow:auto;scrollbar-width:thin;scrollbar-color:#9b6c31 #ebd09c}
+.dialogue-mode .message-controls,.dialogue-mode .spark-row{flex:none}
+.dialogue-mode .message-text::-webkit-scrollbar{width:7px}.dialogue-mode .message-text::-webkit-scrollbar-thumb{background:#9b6c31;border-radius:6px}
+
+/* TASK6: compact HUD, illustrated map and independently scrolling shop shelves. */
+#lobby-hud{display:flex;flex-wrap:nowrap;gap:8px;height:48px;padding:3px max(12px,env(safe-area-inset-right)) 3px max(12px,env(safe-area-inset-left));border-bottom-width:4px}
+#lobby-hud .brand{font-size:21px;margin-right:auto;line-height:1}.brand small{display:none}
+#lobby-hud button.counter{height:36px;min-height:36px;padding:3px 8px;font-size:13px;gap:4px}
+#lobby-hud .counter .ui-icon{width:20px;height:20px}
+#lobby-hud .hud-action,#lobby-hud #clock-hud{position:relative;width:38px;height:38px;min-height:38px;min-width:38px;padding:4px;border-radius:50%;gap:0;flex:none}
+#lobby-hud .hud-action .ui-icon{width:24px;height:24px}
+#lobby-hud .hud-label{display:none}
+#clock-hud .clock-badge{position:absolute;bottom:-2px;right:-4px;font-size:9px;line-height:13px;background:#fff0cc;color:#3b2314;border:1px solid #96672e;border-radius:6px;padding:0 3px}
+#lobby-hud #energy-wrap{position:absolute;left:0;right:0;bottom:-3px;width:100%;height:3px;display:block;pointer-events:none}
+#energy-label{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}
+#lobby-hud #energy{height:3px;border:0;border-radius:0;margin:0;background:#20150f}#energy-fill{transition:width .15s linear}
+#copihues{color:#ffabb4!important}
+#mini.mini-map{height:60px;background:transparent;border-radius:0;margin-top:2px}
+body.menu-open #toast{display:none}
+#portal-flash{position:fixed;inset:0;z-index:35;pointer-events:none;opacity:0;background:radial-gradient(ellipse,#fff4c1 0%,#66ede6 20%,#9972ed 55%,#0a254c 100%)}
+body.travelling #lobby-hud,body.travelling #touch-bar{pointer-events:none}
+.shop-panel>.window-content{overflow:hidden}
+.shop-panel .shop-layout{height:100%;min-height:0}
+.window-fit .shop-items{display:flex;flex-direction:column;min-height:0;gap:6px}
+.collection-tabs{display:flex;gap:5px;flex:none;flex-wrap:wrap}
+:is(#overlay,.closing-ghost) .window-fit .collection-tabs button{font-size:13px;min-height:44px;padding:1px 5px;flex:1;white-space:nowrap}
+.collection-tabs button[aria-pressed=true]{filter:brightness(1.2);outline:2px solid #8ad8c9;outline-offset:-5px}
+.window-fit .shop-items .shelf-grid{overflow:auto;min-height:0;align-content:start;scrollbar-width:thin;scrollbar-color:#d3a656 #382217;padding:8px 6px 20px}
+.shelf-grid::-webkit-scrollbar{width:7px}.shelf-grid::-webkit-scrollbar-thumb{background:#d3a656;border-radius:6px}
+@media(max-width:1199px){#lobby-hud .counter-word{display:none}}
+@media(max-width:600px){
+ #lobby-hud{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));height:auto;min-height:98px;justify-content:center;gap:4px 6px;padding:4px 8px;border-bottom-width:3px}
+ #lobby-hud .brand{font-size:19px;margin:0;grid-column:1/3;grid-row:1}
+ #lobby-hud button.counter{min-width:0;min-height:44px;height:44px;padding:3px;grid-row:1;font-size:11px}#lobby-hud #tokens{grid-column:3}#lobby-hud #copihues{grid-column:4}#lobby-hud #sparks{grid-column:5}
+ #lobby-hud .hud-action,#lobby-hud #clock-hud{order:1;width:44px;height:44px;min-width:44px;min-height:44px;grid-row:2;grid-column:auto;justify-self:center}
+ #lobby-hud #clock-hud{margin:0}#lobby-hud #settings{margin:0}
+ #mini.mini-map{height:48px}#objective{max-width:240px;font-size:11px}
+ .shop-panel .window-content{padding:3px 2px}.window-fit .shop-layout{grid-template-rows:auto minmax(0,1fr);gap:8px}
+ .window-fit .shop-items .shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-height:550px) and (orientation:landscape){
+ #objective #mini{display:none}
+ .window-fit .shop-layout{grid-template-columns:100px minmax(0,1fr);gap:10px}
+ .shop-panel.window-fit .character-stand{min-height:0;max-height:100%;overflow:auto;scrollbar-width:thin;scrollbar-color:#d3a656 #382217}
+ .window-fit .character-stand .portrait-oval{width:58px;height:72px;border-width:3px}
+ .window-fit .merchant-bubble{font-size:12px;line-height:1.25;padding:3px}
+ .window-fit .shop-items .shelf-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px}
+ :is(#overlay,.closing-ghost) .shop-panel .item-slot{height:112px;min-height:112px;padding:5px 8px 22px}
+ .shop-panel.window-fit .item-slot .item-icon{height:60px}
+ .shop-panel>.window-actions{grid-template-columns:minmax(0,1fr) auto;gap:4px}
+ .window-fit .detail-card{grid-template-columns:minmax(0,1fr) auto;gap:4px;padding:2px;border-width:9px;border-image-width:9px}
+ .window-fit .detail-card>.item-icon{display:none}.window-fit .detail-copy h3{font-size:15px}.window-fit .detail-copy p{font-size:11px;line-height:1.2}
+ .window-fit .detail-card .primary{max-width:120px;min-width:90px;font-size:12px}.window-fit .shop-tools button{max-width:100px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){#energy-fill{transition:none}}body.reduced-motion #energy-fill{transition:none}
+#context{visibility:visible!important;position:absolute!important;width:1px!important;height:1px!important;padding:0!important;border:0!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap}
+#lobby-hud #energy-wrap{height:5px;bottom:-5px}
+#lobby-hud #energy{height:5px}
+#energy-wrap.ready #energy{box-shadow:0 0 10px 2px #ffd23fcc}
+#energy-wrap.ready #energy-fill{background:linear-gradient(90deg,#fff6b0,#ffd23f,#7ff3e6);animation:energy-ready .45s ease-in-out infinite alternate}
+#lobby-hud #energy-wrap.ready #energy-label{clip:auto;width:auto;height:auto;overflow:visible;position:absolute;left:50%;top:9px;transform:translateX(-50%);font:900 12px/1 Nunito,sans-serif;color:#3b2314;background:linear-gradient(#fff4ae,#e6ae36);border:2px solid #fff3d8;padding:4px 12px;border-radius:12px;white-space:nowrap;box-shadow:0 0 14px #ffd23f;animation:energy-badge .45s ease-in-out infinite alternate}
+@keyframes energy-ready{from{filter:brightness(1)}to{filter:brightness(1.9) saturate(1.5)}}
+@keyframes energy-badge{from{transform:translateX(-50%) scale(1);box-shadow:0 0 6px #ffd23f}to{transform:translateX(-50%) scale(1.08);box-shadow:0 0 18px #ffe680}}
+@media(prefers-reduced-motion:reduce){#energy-wrap.ready #energy-fill,#lobby-hud #energy-wrap.ready #energy-label{animation:none}}
+body.reduced-motion #energy-wrap.ready #energy-fill,body.reduced-motion #lobby-hud #energy-wrap.ready #energy-label{animation:none}
 </style>
 <main id="lobby" aria-label="Academia, observatorio fuera del tiempo">
-<header id="lobby-hud"><div class="brand">Academ<span>IA</span><small>OBSERVATORIO FUERA DEL TIEMPO</small></div><div id="energy-wrap"><span id="energy-label">Corre para cargar tu súper salto</span><div id="energy"><div id="energy-fill"></div></div></div><button class="counter" id="tokens" aria-label="Fichas">60 fichas</button><button class="counter" id="sparks">0/12 chispas</button><button id="clock-hud" aria-label="Piezas del Reloj">0/8 piezas</button><button id="bag">Mochila</button><button id="gestures">Gestos</button><button id="objectives-toggle" aria-controls="objective" aria-expanded="true">Objetivos</button><button id="settings" aria-label="Ajustes">⚙</button></header>
+<header id="lobby-hud"><div class="brand">Academ<span>IA</span><small>OBSERVATORIO FUERA DEL TIEMPO</small></div><div id="energy-wrap"><span id="energy-label">Corre para cargar tu súper salto</span><div id="energy" role="progressbar" aria-label="Energía para el súper salto" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="energy-fill"></div></div></div><button class="counter" id="tokens" aria-label="Tokens">60 tokens</button><button class="counter" id="copihues" aria-label="Copihues">0 copihues</button><button class="counter" id="sparks">0/12 chispas</button><button id="clock-hud" aria-label="Piezas del Reloj">0/8 piezas</button><button id="bag">Mochila</button><button id="gestures">Gestos</button><button id="objectives-toggle" aria-controls="objective" aria-expanded="true">Objetivos</button><button id="settings" aria-label="Ajustes">⚙</button></header>
 <div id="play-area">
 <canvas id="view" tabindex="0" aria-label="Mapa de la Academia. Flechas o A y D para caminar, Shift para correr, espacio para saltar, E para interactuar.">Explora la Academia con las flechas. Pulsa E cerca de un personaje u objeto para usarlo.</canvas>
 <div id="objective"><strong>Tu primera visita</strong><span id="goal-copy">Habla con Estela y explora la Academia.</span><canvas class="mini-map" id="mini" aria-label="Tu posición en el salón"></canvas></div>
@@ -144,8 +442,9 @@ button.counter{cursor:pointer;font:inherit}
 <div id="toast" hidden role="status"></div>
 </div>
 <div id="touch-bar" aria-label="Controles táctiles"><div class="touch-pad"><button data-hold="left" aria-label="Caminar a la izquierda">←</button><button data-hold="right" aria-label="Caminar a la derecha">→</button><button data-hold="run" aria-label="Correr">⇧</button><button data-hold="drop" aria-label="Bajar de la plataforma">↓</button><button data-hold="jump" aria-label="Saltar">↑</button></div><button id="action-touch" disabled>Acércate</button></div>
-<div id="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="window-title"><div id="game-window" class="game-window"><header class="window-header"><h2 id="window-title" class="window-title"></h2><span id="window-wallet" class="wallet window-wallet" aria-label="Tus fichas" hidden></span><button id="overlay-close" class="overlay-close" aria-label="Cerrar y volver al mapa">×</button></header><div id="stage" class="game-stage" tabindex="-1"></div><footer class="window-footer"><button id="overlay-back">Volver</button><small>Flechas / WASD · E / Enter elegir · Esc / Q volver</small></footer></div></div>
+<div id="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="window-title"><div id="game-window" class="game-window"><header class="window-header"><h2 id="window-title" class="window-title"></h2><span id="window-wallet" class="wallet window-wallet" aria-label="Tus tokens" hidden></span><button id="overlay-close" class="overlay-close" aria-label="Cerrar y volver al mapa">×</button></header><div id="stage" class="game-stage" tabindex="-1"></div><footer class="window-footer"><small>Flechas / WASD · E / Enter elegir · Esc / Q volver</small></footer></div></div>
 <div id="treasure" hidden role="status" aria-live="polite"><strong id="treasure-title"></strong><span id="treasure-tokens"></span><p id="treasure-copy"></p><button id="treasure-close">Guardar · E / Enter</button></div>
+<div id="portal-flash" hidden aria-hidden="true"></div>
 <div id="announcer" class="sr-only" aria-live="polite"></div>
 <div id="loading"><h1>Academ<span class="gold">IA</span></h1><p id="load-message">Encendiendo las estrellas…</p></div>
 </main>
@@ -326,7 +625,7 @@ class StoryEngine {
     return this.view();
   }
 }
-const CH = 100, WALK = 100, RUN = 340, GRAVITY = 1400, DOUBLE_JUMP = 1;
+const CH = 100, WALK = 100, RUN = 340, GRAVITY = 1400, DOUBLE_JUMP = 1, READY_HOLD = 1.5;
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const WEEK = 7 * 24 * 60 * 60 * 1000;
 function loadMap(data) {
@@ -357,7 +656,7 @@ function loadMap(data) {
 }
 function makeBody(x, y) {
   return {x,y,vx:0,vy:0,w:42,h:96,ground:false,face:1,energy:0,super:false,superV0:0,superTime:0,superLand:0,
-    dist:0,still:0,squash:0,coyote:0,buffer:0,dropTime:0,jumpCut:false,airJumped:false,flip:0};
+    dist:0,still:0,squash:0,coyote:0,buffer:0,dropTime:0,jumpCut:false,airJumped:false,flip:0,readyHold:0};
 }
 const horizontalOverlap = (b, p, x = b.x) => x + b.w/2 > p.x + .01 && x - b.w/2 < p.x + p.w - .01;
 function support(map, b) {
@@ -390,7 +689,14 @@ function moveBody(b, map, dt, input = {}) {
   }
   if (b.flip > 0) b.flip = b.flip + dt/.42 >= 1 ? 0 : b.flip + dt/.42;
   if (!input.jumpHeld && !b.jumpCut && !b.super && b.vy < 0) {b.vy *= .45; b.jumpCut = true;}
-  if (b.ground) b.energy = clamp(b.energy+dt*(Math.abs(b.vx)>RUN*.92?.5:-.08),0,1);
+  // A full charge holds for a moment after the run stops, so the «ready» state can be seen and
+  // the jump timed at a ledge; then it drains as before.
+  if (b.ground) {
+    const running = Math.abs(b.vx) > RUN*.92;
+    if (running && b.energy >= .999) {b.energy = 1; b.readyHold = READY_HOLD;}
+    else if (!running && b.energy >= .999 && b.readyHold > 0) b.readyHold = Math.max(0, b.readyHold-dt);
+    else b.energy = clamp(b.energy+dt*(running?.5:-.08),0,1);
+  }
   const oldX = b.x;
   b.x = clamp(b.x+b.vx*dt,b.w/2,map.width-b.w/2);
   for (const p of [...map.solids,...(b.dropTime>0?[]:map.steps)]) {
@@ -428,7 +734,7 @@ function moveBody(b, map, dt, input = {}) {
 }
 function freshState(now = Date.now(), settings = {}) {
   const level = STORY_LEVELS.includes(settings.startingLevel) ? settings.startingLevel : 'intermedio';
-  return {version:1,startingLevel:level,flags:{},tokens:60,items:[],pieces:[],sparks:[],revealed:[],chests:[],position:null,
+  return {version:1,startingLevel:level,flags:{},tokens:60,copihues:0,items:[],bag:{},pieces:[],sparks:[],revealed:[],chests:[],position:null,
     levels:Object.fromEntries(STORY_SUBJECTS.map(s=>[s,level])),streaks:Object.fromEntries(STORY_SUBJECTS.map(s=>[s,0])),
     results:{},choices:{},currentGoal:'',goals:[],bank:{balance:0,lastWeek:now},settings:{startingLevel:level,testMode:!!settings.testMode,sound:settings.sound!==false,reducedMotion:!!settings.reducedMotion,touchControls:typeof settings.touchControls==='boolean'?settings.touchControls:null}};
 }
@@ -445,7 +751,7 @@ function collect(state, map, id) {
 function unlockChest(state, entity) {return !entity.requiresSparks || state.sparks.length>=entity.requiresSparks;}
 function openChest(state, entity) {
   if (state.chests.includes(entity.id) || !unlockChest(state,entity)) return false;
-  state.chests.push(entity.id);state.tokens += entity.reward?.tokens || 0;
+  state.chests.push(entity.id);state.tokens += entity.reward?.tokens || 0;state.copihues += entity.reward?.copihues || 0;
   const item = entity.reward?.item;
   if (item && !state.items.some(i=>i.id===item.id)) state.items.push(storyClone(item));
   return true;
@@ -453,13 +759,14 @@ function openChest(state, entity) {
 function trade(state, catalog, id, sell = false) {
   const item = catalog.find(i=>i.id===id), own = state.items.findIndex(i=>i.id===id);
   if (!item) return {ok:false,text:'Ese objeto no está en la tienda.'};
+  const currency=item.currency==='copihues'?'copihues':'tokens';
   if (sell) {
     if (own<0) return {ok:false,text:'Todavía no tienes ese objeto.'};
-    const refund=Math.floor(item.price/2);state.items.splice(own,1);state.tokens+=refund;return {ok:true,text:`Vendiste por ${refund} fichas.`};
+    const refund=Math.floor(item.price/2);state.items.splice(own,1);state[currency]+=refund;return {ok:true,text:`Vendiste por ${refund} ${currency}.`};
   }
   if (own>=0) return {ok:false,text:'Ya lo tienes en tu mochila.'};
-  if (state.tokens<item.price) return {ok:false,text:'Necesitas más fichas para este recuerdo.'};
-  state.tokens-=item.price;state.items.push(storyClone(item));return {ok:true,text:'¡Recuerdo guardado en tu mochila!'};
+  if (state[currency]<item.price) return {ok:false,text:`Necesitas más ${currency} para este recuerdo.`};
+  state[currency]-=item.price;state.items.push(storyClone(item));return {ok:true,text:'¡Recuerdo guardado en tu mochila!'};
 }
 function accrueInterest(state, now = Date.now()) {
   const bank=state.bank;
@@ -478,11 +785,30 @@ function bankTransfer(state, amount, withdraw = false, now = Date.now()) {
   const text=String(amount).trim();
   if (!/^\d+$/.test(text) || !Number.isSafeInteger(Number(text)) || Number(text)<=0) return {ok:false,text:'Elige una cantidad entera mayor que cero.'};
   const n=Number(text),source=withdraw?state.bank.balance:state.tokens;
-  if (n>source) return {ok:false,text:withdraw?'No tienes tantas fichas ahorradas.':'No tienes tantas fichas en tu mochila.'};
+  if (n>source) return {ok:false,text:withdraw?'No tienes tantos tokens ahorrados.':'No tienes tantos tokens en tu mochila.'};
   // Empty accounts begin their first full savings week at their first deposit.
   if (!withdraw && state.bank.balance===0) state.bank.lastWeek=now;
   state.tokens+=withdraw?n:-n;state.bank.balance+=withdraw?-n:n;
-  return {ok:true,text:withdraw?'Retiro listo. Tic-tac, tus fichas vuelven a ti.':'Depósito listo. ¡Tu plan de mañana empieza hoy!'};
+  return {ok:true,text:withdraw?'Retiro listo. Tic-tac, tus tokens vuelven a ti.':'Depósito listo. ¡Tu plan de mañana empieza hoy!'};
+}
+// Where each item sits in the bag: its saved slot when free, otherwise the first empty one.
+function bagLayout(items, saved = {}, min = 12) {
+  const slots = Array(Math.max(min, items.length)).fill(null), rest = [];
+  for (const item of items) {
+    const at = saved[item.id];
+    if (Number.isInteger(at) && at >= 0 && at < slots.length && !slots[at]) slots[at] = item; else rest.push(item);
+  }
+  let free = 0;
+  for (const item of rest) { while (slots[free]) free++; slots[free] = item; }
+  return slots;
+}
+// Moves the item in slot `from` to slot `to`, swapping with whatever is there.
+function moveInBag(state, from, to) {
+  const slots = bagLayout(state.items, state.bag);
+  if (!slots[from] || from === to || to < 0 || to >= slots.length) return false;
+  [slots[from], slots[to]] = [slots[to], slots[from]];
+  state.bag = Object.fromEntries(slots.flatMap((item, i) => item ? [[item.id, i]] : []));
+  return true;
 }
 function serializeState(state) {
   const snapshot={};
@@ -495,7 +821,7 @@ function restoreState(serialized, now = Date.now(), map = null) {
     const raw=typeof serialized==='string'?JSON.parse(serialized):serialized;
     if (!raw || raw.version!==1 || !Number.isSafeInteger(raw.tokens) || raw.tokens<0 || !raw.bank || !Number.isSafeInteger(raw.bank.balance) || raw.bank.balance<0 || !Number.isFinite(raw.bank.lastWeek) || raw.bank.lastWeek<0) return fallback;
     const state=freshState(now,raw.settings);
-    state.tokens=raw.tokens;state.bank={balance:raw.bank.balance,lastWeek:raw.bank.lastWeek};
+    state.tokens=raw.tokens;state.copihues=Number.isSafeInteger(raw.copihues) && raw.copihues>=0?raw.copihues:raw.copihues===undefined && Array.isArray(raw.chests) && raw.chests.includes('high-chest')?1:0;state.bank={balance:raw.bank.balance,lastWeek:raw.bank.lastWeek};
     for (const key of ['sparks','chests','revealed','pieces']) state[key]=[...new Set((Array.isArray(raw[key])?raw[key]:[]).filter(x=>typeof x==='string' && x.length<100))];
     if (map) {
       const known=[...map.entities,...Object.values(map.maps||{}).flatMap(m=>m.entities||[])];
@@ -504,6 +830,7 @@ function restoreState(serialized, now = Date.now(), map = null) {
       state.revealed=state.revealed.filter(id=>known.some(e=>e.id===id));
     }
     state.items=(Array.isArray(raw.items)?raw.items:[]).filter(i=>i && typeof i.id==='string' && typeof i.name==='string').slice(0,100).map(i=>({id:i.id.slice(0,100),name:i.name.slice(0,200),text:String(i.text||'').slice(0,500)})).filter((i,j,a)=>a.findIndex(k=>k.id===i.id)===j);
+    for (const [k,v] of Object.entries(raw.bag||{})) if (typeof k==='string' && k.length<100 && Number.isInteger(v) && v>=0 && v<100) state.bag[k]=v;
     for (const [k,v] of Object.entries(raw.flags||{})) if (!['__proto__','constructor','prototype'].includes(k) && ['boolean','string','number'].includes(typeof v)) state.flags[k]=v;
     for (const subject of STORY_SUBJECTS) {
       if (STORY_LEVELS.includes(raw.levels?.[subject])) state.levels[subject]=raw.levels[subject];
@@ -544,7 +871,7 @@ function cameraLayout(map,player,width,height,portrait=false) {
   return {zoom,x:clamp(player.x-width/zoom*.5,0,Math.max(0,map.width-width/zoom)),
     y:clamp(player.y-height/zoom*.88,0,Math.max(0,map.height-height/zoom))};
 }
-const AcademiaCore={CH,WALK,RUN,GRAVITY,DOUBLE_JUMP,WEEK,loadMap,makeBody,moveBody,support,nearby,freshState,trade,bankTransfer,accrueInterest,collect,unlockChest,openChest,serializeState,restoreState,safeSave,safeLoad,MapDialogue,StoryEngine,ByteLRU,cameraLayout};
+const AcademiaCore={CH,WALK,RUN,GRAVITY,DOUBLE_JUMP,WEEK,loadMap,makeBody,moveBody,support,nearby,freshState,trade,bagLayout,moveInBag,bankTransfer,accrueInterest,collect,unlockChest,openChest,serializeState,restoreState,safeSave,safeLoad,MapDialogue,StoryEngine,ByteLRU,cameraLayout};
 // CORE_END
 const SRC = __SRC_JSON__;
 const ART_META = __ART_JSON__;
@@ -558,12 +885,18 @@ let currentData=MAP_DATA,map=loadMap(currentData);const KID=KID_SPRITES,PET=PET_
 const DEG=Math.PI/180,INK='#172c38',cycle=(n,k)=>((Math.floor(n)%k)+k)%k,rand=(a,b)=>a+Math.random()*(b-a);
 const motion=matchMedia('(prefers-reduced-motion: reduce)');let reduced=motion.matches,effects=!reduced;
 let storage;try{storage=localStorage;}catch{storage=null;}
-let state=safeLoad(storage,Date.now(),map),settings=state.settings;
+// Served by games.laravas.com under /academia/, the Academy belongs to the signed-in student: it
+// saves on the server and spends their real tokens and copihues. The standalone page (artifact,
+// tests) keeps its own save in this browser.
+const SERVER=(()=>{if(!location.pathname.startsWith('/academia'))return null;let token=null;try{token=storage?.getItem('academia_student_token');}catch{}if(!token){location.replace('/?modo=alumno');return null;}return {token,practiceLeft:0,saveTimer:null};})();
+// Chapter 1 is still a separate prototype (a private claude.ai page): in the game every trip waits.
+if(SERVER)for(const chapter of MAP_DATA.chapters)chapter.available=false;
+let state=SERVER?freshState(Date.now()):safeLoad(storage,Date.now(),map),settings=state.settings;
 reduced=motion.matches || settings.reducedMotion;effects=!reduced;
-let treasure=null,cameraBoost=1,audioContext=null;
+let treasure=null,portalTravel=null,cameraBoost=1,audioContext=null;
 const images={},maskCache=new ByteLRU(24*1024*1024),textureCache=new ByteLRU(64*1024*1024,c=>{c.width=1;c.height=1;});
 let body,kid,look,engine=null,dialogueDone=null,primaryAction=null,numberActions=[],challengeUI=null;
-let W=0,H=0,zoom=1,dpr=1,cam={x:0,y:0},near=null,timer=0,shake=0,toastTimer=null,toastHideTimer=null,lastSave=0,ready=false;
+let superReady=false,W=0,H=0,zoom=1,dpr=1,cam={x:0,y:0},near=null,timer=0,shake=0,toastTimer=null,toastHideTimer=null,lastSave=0,ready=false;
 let objectivesOpen=!(state.flags.metEstela || state.flags.welcomed);
 const touchDevice=matchMedia('(any-pointer: coarse)');
 document.body.classList.toggle('touch-device',touchDevice.matches || navigator.maxTouchPoints>0);
@@ -584,7 +917,7 @@ function append(parent,...children){children.filter(Boolean).forEach(c=>parent.a
 function button(text,action,className=''){const node=el('button',className,text);node.type='button';node.addEventListener('click',action);return node;}
 function announce(text){$('announcer').textContent=text;}
 function toast(text,duration=3500){
- clearTimeout(toastTimer);clearTimeout(toastHideTimer);$('toast').classList.remove('fading');$('toast').textContent=text;$('toast').hidden=false;announce(text);
+ clearTimeout(toastTimer);clearTimeout(toastHideTimer);$('toast').classList.remove('fading');$('toast').textContent=text;$('toast').hidden=!overlay.hidden || !!portalTravel;announce(text);
  toastTimer=setTimeout(()=>{$('toast').classList.add('fading');toastHideTimer=setTimeout(()=>{$('toast').hidden=true;},reduced?0:400);},duration);
 }
 function portrait(who,className='portrait',mood=''){
@@ -593,15 +926,31 @@ function portrait(who,className='portrait',mood=''){
  const img=el('img',className+(mood?' mood-'+mood:''));img.src=src;img.alt=meta.name||'';return img;
 }
 const subjects={matematica:['Matemática','∑'],lenguaje:['Lenguaje','Aa'],ciencias:['Ciencias','❋'],historia:['Historia','⌛'],ingles:['Inglés','Hi']},levelNames={inicial:'Inicial',intermedio:'Intermedio',avanzado:'Avanzado'};
+function mapSparks(){return map.entities.filter(e=>e.type==='collectible');}
 function updateHUD(){
- if($('tokens').children[1]){$('tokens').children[1].textContent=state.tokens;$('sparks').children[1].textContent=state.sparks.length+'/12';$('clock-hud').children[1].textContent=state.pieces.length+'/8';$('window-wallet').children[1].textContent=state.tokens;}
- $('window-wallet').setAttribute('aria-label',state.tokens+' fichas');$('tokens').setAttribute('aria-label',state.tokens+' fichas');$('sparks').setAttribute('aria-label',state.sparks.length+' de 12 chispas');$('clock-hud').setAttribute('aria-label',state.pieces.length+' de 8 piezas');
+ const sparks=mapSparks(),found=sparks.filter(e=>state.sparks.includes(e.id)).length;
+ if($('tokens').children[1]){$('tokens').children[1].textContent=state.tokens;$('copihues').children[1].textContent=state.copihues;$('sparks').children[1].textContent=found+'/'+sparks.length;$('clock-hud').children[1].textContent=state.pieces.length+'/8';$('window-wallet').children[1].textContent=state.tokens;$('window-wallet').children[3].textContent=state.copihues;}
+ $('sparks').hidden=!sparks.length;
+ $('window-wallet').setAttribute('aria-label',state.tokens+' tokens · '+state.copihues+' copihues');$('tokens').setAttribute('aria-label',state.tokens+' tokens');$('copihues').setAttribute('aria-label',state.copihues+' copihues');$('sparks').setAttribute('aria-label',found+' de '+sparks.length+' chispas de este mapa');$('clock-hud').setAttribute('aria-label','Reloj: '+state.pieces.length+' de 8 piezas');
  const visits=(state.flags.metMerchant?'✓ Mercader':'Conoce al Mercader')+' · '+(state.flags.metTempo?'✓ Tempo':'Conoce a Tempo');
  $('goal-copy').textContent=state.flags.welcomed?visits+' · '+(state.sparks.length===12?'¡Abre el cofre en la galería derecha!':'Busca las chispas y sube a la galería.'):'Habla con Estela y explora la Academia.';
  $('objective').hidden=!objectivesOpen || !overlay.hidden;$('objectives-toggle').setAttribute('aria-expanded',String(objectivesOpen && overlay.hidden));
  $('play-area').classList.toggle('objectives-open',!$('objective').hidden);
 }
-function save(){state.position={mapId:map.id,x:player.x,y:player.y};safeSave(storage,state);updateHUD();}
+function save(){state.position={mapId:map.id,x:player.x,y:player.y};if(SERVER)queueUpload();else safeSave(storage,state);updateHUD();}
+async function api(method,path,body,keepalive=false){
+ const res=await fetch('/api/academy'+path,{method,keepalive,headers:{'Content-Type':'application/json',Authorization:'Bearer '+SERVER.token},body:body===undefined?undefined:JSON.stringify(body)});
+ if(res.status===401){location.replace('/?modo=alumno');throw new Error('Tu sesión terminó.');}
+ const data=await res.json().catch(()=>({}));if(data.snapshot)applySnapshot(data.snapshot);
+ if(!res.ok)throw new Error(data.error||'No pudimos guardar en la Academia.');return data;
+}
+// The server's wallet replaces the game's copy after every action.
+function applySnapshot(snap){Object.assign(state,{tokens:snap.tokens,copihues:snap.copihues,items:snap.items,chests:snap.chests,bank:{balance:snap.bank.balance,lastWeek:snap.bank.lastWeek}});SERVER.practiceLeft=snap.practiceLeft;SERVER.firstName=snap.firstName;SERVER.welcomeGift=snap.welcomeGift;if(ready)updateHUD();}
+function queueUpload(){clearTimeout(SERVER.saveTimer);SERVER.saveTimer=setTimeout(()=>upload(),1500);}
+function upload(keepalive=false){clearTimeout(SERVER.saveTimer);SERVER.saveTimer=null;return api('PUT','/me/state',{state:JSON.parse(serializeState(state))},keepalive).catch(()=>{});}
+// The action already happened in the game; when the server disagrees (a stale wallet, another
+// tab), its snapshot undoes it and the open window closes so nothing shows a wrong balance.
+function remote(path,body){if(!SERVER)return;api('POST',path,body).catch(err=>{toast(err.message,5000);api('GET','/me').then(()=>{if(!overlay.hidden)closeOverlay();}).catch(()=>{});});}
 function clearInput(){doubleRun=false;keys.clear();touch.clear();Object.assign(input,{left:false,right:false,run:false,jump:false,jumpHeld:false,drop:false});document.querySelectorAll('[data-hold]').forEach(b=>b.classList.remove('pressed'));}
 let messageState=null,messageTimer=null,menuNavigation=null,menuSerial=0,uiTimers=new Set(),uiAnimations=new Set();
 function uiLater(fn,ms){const id=setTimeout(()=>{uiTimers.delete(id);fn();},ms);uiTimers.add(id);return id;}
@@ -613,7 +962,7 @@ function uiSound(kind='tick'){
  tones.forEach((frequency,i)=>{const oscillator=audioContext.createOscillator(),gain=audioContext.createGain(),at=audioContext.currentTime+i*.045;oscillator.type=kind==='paper'?'sine':'triangle';oscillator.frequency.setValueAtTime(frequency,at);gain.gain.setValueAtTime(.001,at);gain.gain.linearRampToValueAtTime(kind==='paper'?.005:.009,at+.009);gain.gain.exponentialRampToValueAtTime(.001,at+.08);oscillator.connect(gain);gain.connect(audioContext.destination);oscillator.onended=()=>{oscillator.disconnect();gain.disconnect();};oscillator.start(at);oscillator.stop(at+.09);});
 }
 function uiIcon(name,className=''){const img=el('img','ui-icon'+(className?' '+className:''));img.src=SRC[name];img.alt='';img.setAttribute('aria-hidden','true');return img;}
-function wallet(count,kind='ico_ficha',label='fichas'){const node=append(el('span','wallet'),uiIcon(kind),el('span','',String(count)));node.setAttribute('aria-label',count+' '+label);return node;}
+function wallet(count,kind='ico_ficha',label='tokens'){const node=append(el('span','wallet'),uiIcon(kind),el('span','',String(count)));node.setAttribute('aria-label',count+' '+label);return node;}
 function stand(who,line){const bubble=el('p','',line);return {node:append(el('aside','character-stand'),append(el('div','portrait-oval'),portrait(who)),append(el('div','parchment merchant-bubble'),bubble)),bubble};}
 function setOverlayMode(mode,title){
  document.body.classList.toggle('window-open',mode!=='dialogue');if(ready)resize();
@@ -621,7 +970,7 @@ function setOverlayMode(mode,title){
  $('window-wallet').hidden=!['Puesto del Mercader','Banco del Tiempo','Mochila'].includes(title);
 }
 function showOverlay(mode='panel',title='La Academia'){
- const opening=overlay.hidden;stopUI();menuSerial++;overlay.hidden=false;setOverlayMode(mode,title);document.body.classList.add('menu-open');clearInput();updateHUD();stage.replaceChildren();stage.focus();
+ if(portalTravel)return;const opening=overlay.hidden;stopUI();clearTimeout(toastTimer);clearTimeout(toastHideTimer);$('toast').hidden=true;menuSerial++;overlay.hidden=false;setOverlayMode(mode,title);document.body.classList.add('menu-open');clearInput();updateHUD();stage.replaceChildren();stage.focus();
  if(opening)uiSound('paper');
 }
 function closeOverlay(){
@@ -630,6 +979,12 @@ function closeOverlay(){
  overlay.hidden=true;document.body.classList.remove('menu-open','window-open');engine=null;dialogueDone=null;primaryAction=null;numberActions=[];challengeUI=null;save();clearInput();canvas.focus();if(wasOpen)uiSound('paper');
 }
 function panel(title,text){showOverlay('panel',title);const card=el('section','panel');if(text)card.append(el('p','',text));stage.append(card);primaryAction=null;return card;}
+function fitWindow(card,...actions){
+ const content=el('div','window-content'),strip=el('div','window-actions');
+ card.classList.add('window-fit');
+ for(const child of [...card.children])if(!actions.includes(child))content.append(child);
+ strip.append(...actions);card.replaceChildren(content,strip);return card;
+}
 function makeNext(text='Continuar →',action=advance){primaryAction=action;return button(text,action,'primary');}
 function advance(){engine.advance();render();}
 function startDialogue(beats,done=closeOverlay){showOverlay('dialogue');dialogueDone=done;engine=new MapDialogue(beats,state,currentData.characters);render();}
@@ -648,8 +1003,9 @@ function messageBox(title,text,who='estela',next=closeOverlay,{sparks=false,choi
 }
 // What each HUD counter is, in the child's words (they asked: «¿qué son las chispas? ¿y los tokens?»).
 const EXPLAIN={
- tokens:['Fichas','ico_ficha',()=>'Son el dinero de la Academia. Las ganas resolviendo desafíos en el Entrenamiento y en los viajes, y abriendo cofres. Con ellas compras en el Puesto del Mercader, o las guardas en el Banco de Tempo para que crezcan cada semana. Tienes '+state.tokens+'.'],
- sparks:['Chispas del tiempo','ico_chispa',()=>{const left=12-state.sparks.length;return 'Son las estrellitas doradas que flotan por la Academia: 10 escondidas en el salón, las galerías y las plataformas colgantes, una en el Rincón de lectura y otra en el telescopio. Con las 12 se abre el Cofre de las chispas, en la galería de la derecha. '+(left?'Llevas '+state.sparks.length+': ¡te faltan '+left+'!':'¡Ya tienes las 12! Ve a abrir el cofre.');}],
+ tokens:['Tokens','ico_ficha',()=>'Los tokens reconocen tu esfuerzo. Los ganas resolviendo desafíos en el Entrenamiento y en los viajes, y abriendo cofres. Con ellos compras en el Puesto del Mercader, o los guardas en el Banco de Tempo para que crezcan cada semana. Tienes '+state.tokens+'.'],
+ copihues:['Copihues','ico_copihue',()=>'Los copihues reconocen tus logros: dominar un nivel, ganar el desafío de una isla, jugar varios días seguidos o cuando tu profesor te felicita. Se canjean en la Colección copihue del Mercader, que no se compra con tokens.'],
+ sparks:['Chispas de este mapa','ico_chispa',()=>{const left=12-state.sparks.length;return 'Las chispas de este mapa son un coleccionable, no dinero. Son las estrellitas doradas que flotan por la Academia: 10 escondidas en el salón, las galerías y las plataformas colgantes, una en el Rincón de lectura y otra en el telescopio. Con las 12 se abre el Cofre de las chispas, en la galería de la derecha. '+(left?'Llevas '+state.sparks.length+': ¡te faltan '+left+'!':'¡Ya tienes las 12! Ve a abrir el cofre.');}],
  pieces:['Piezas del Reloj','ico_pieza',()=>'El Reloj de las Épocas perdió sus 8 piezas. Cada viaje por el Portal del Tiempo te devuelve una cuando terminas la historia. Tienes '+state.pieces.length+' de 8.'],
 };
 function explain(kind){const [title,icon,text]=EXPLAIN[kind];const box=showMessage(title,text(),icon,{sparks:kind==='sparks'});if(kind==='pieces'){const go=button('Ver el Reloj',showClock,'secondary');go.classList.add('message-link');box.querySelector('.message-controls')?.prepend(go);}return box;}
@@ -664,14 +1020,14 @@ function render(){
   const choices=el('div','message-choices');view.beat.options.forEach((opt,i)=>{const action=()=>{if(completeMessage())return;engine.choose(i);uiSound('tick');render();};numberActions[i]=action;choices.append(optionButton(opt.text,i,action));});stage.append(choices);
   messageBox('Tu decisión',view.beat.prompt,'estela',()=>{},{choices:true});bindNavigation([...choices.children],1,i=>choices.children[i].focus());
  }else if(view.type==='challenge')renderChallenge(view);
- else if(view.type==='item'){const card=el('div','scene-card');append(card,el('div','eyebrow','Un recuerdo'),el('h2','',view.beat.name),itemIcon(view.beat),el('p','',view.beat.text),makeNext('Guardar en mi mochila →'));stage.append(card);}
- else if(view.type==='perspective'){const card=el('div','scene-card');append(card,el('h2','',view.beat.title),el('p','',view.beat.text),makeNext());stage.append(card);}
+ else if(view.type==='item'){const card=el('div','scene-card');append(card,el('div','eyebrow','Un recuerdo'),el('h2','',view.beat.name),itemIcon(view.beat),el('p','',view.beat.text),makeNext('Guardar en mi mochila →'));fitWindow(card,card.lastElementChild);stage.append(card);}
+ else if(view.type==='perspective'){const card=el('div','scene-card');append(card,el('h2','',view.beat.title),el('p','',view.beat.text),makeNext());fitWindow(card,card.lastElementChild);stage.append(card);}
  stage.focus();
 }
 function bindNavigation(nodes,columns,select,index=0){menuNavigation={nodes,columns,select,index};nodes.forEach((node,i)=>{node.addEventListener('focus',()=>{menuNavigation && (menuNavigation.index=i);});});}
 function navigateMenu(key){
  if(!menuNavigation)return false;
- const first=menuNavigation.nodes[0];if(first?.closest('.shelf-grid'))menuNavigation.columns=innerWidth<=600?2:3;else if(first?.closest('.bag-grid'))menuNavigation.columns=innerWidth<=600?2:4;else if(first?.closest('.gesture-grid'))menuNavigation.columns=innerWidth<=600?1:2;
+ const first=menuNavigation.nodes[0];if(first?.closest('.shelf-grid'))menuNavigation.columns=innerWidth<=600?2:3;else if(first?.closest('.bag-grid'))menuNavigation.columns=innerWidth<=600?2:4;else if(first?.closest('.gesture-grid'))menuNavigation.columns=innerWidth<=600?1:2;else if(first?.closest('.short-options'))menuNavigation.columns=innerWidth>=1024?2:1;
  const directions={ArrowLeft:-1,a:-1,ArrowRight:1,d:1,ArrowUp:-menuNavigation.columns,w:-menuNavigation.columns,ArrowDown:menuNavigation.columns,s:menuNavigation.columns};if(!(key in directions))return false;
  const nav=menuNavigation,next=clamp(nav.index+directions[key],0,nav.nodes.length-1);if(nav.nodes[next].disabled)return true;nav.index=next;nav.select(nav.index);nav.nodes[nav.index].focus();nav.nodes[nav.index].scrollIntoView?.({block:'nearest',inline:'nearest',behavior:'instant'});uiSound('tick');return true;
 }
@@ -683,12 +1039,13 @@ function optionButton(text,index,action,selected=false){return append(button('',
 // Challenge cards reused from the story prototype, including all six input kinds.
   function paper(view) {
     const card = el('section','challenge'), [name,icon] = subjects[view.beat.subject] || [view.beat.subject,'✦'];
-    const meta = el('div','row spread'), subject = el('div','row');
-    append(subject,el('span','subject-icon',icon),append(el('div'),el('div','eyebrow','Bitácora de viaje'),el('div','log-meta',`${name} · ${levelNames[view.level]}`)));
+    const header = el('div','challenge-header'), meta = el('div','challenge-meta'), subject = el('div','row');
+    card.dataset.kind=view.beat.kind;
+    append(subject,el('span','subject-icon',icon),el('div','log-meta',`Bitácora de viaje · ${name} · ${levelNames[view.level]}`));
     append(meta,subject,el('span','attempt-label',view.attempts ? 'Con una pista, vuelve a intentar' : 'A tu ritmo'));
-    card.append(meta);
-    if (settings.testMode) card.append(el('p','log-meta',`Modo prueba · ${(view.beat.oa || []).join(' · ')} · ${view.beat.id}`));
-    card.append(el('hr','paper-rule')); return card;
+    header.append(meta);
+    if (settings.testMode) header.append(el('p','log-meta',`Modo prueba · ${(view.beat.oa || []).join(' · ')} · ${view.beat.id}`));
+    header.append(el('hr','paper-rule'));card.append(header); return card;
   }
   function explanation(view) {
     const lines = [view.variant.explain, ...(view.beat.kind === 'reading' ? view.variant.questions.map(q => q.explain) : [])].filter(Boolean);
@@ -701,7 +1058,7 @@ function optionButton(text,index,action,selected=false){return append(button('',
       const feedback = el('div','feedback help');
       append(feedback,append(el('div','hint-row'),portrait('mascota'),append(el('div'),el('h3','','Una pista para ti'),el('p','',view.beat.hint))),el('small','','Puedes intentarlo otra vez.'));
       append(card,feedback,makeNext('Volver a intentar →',() => {challengeUI = null; advance();}));
-      stage.append(card); announce('Una pista para ti. Puedes intentarlo otra vez.'); return;
+      fitWindow(card,card.lastElementChild);stage.append(card); announce('Una pista para ti. Puedes intentarlo otra vez.'); return;
     }
     if (view.resolved) {
       const outcome = view.outcome, feedback = el('div',`feedback${outcome.status === 'help' ? ' help' : ''}`);
@@ -711,9 +1068,9 @@ function optionButton(text,index,action,selected=false){return append(button('',
         feedback.append(append(el('div','hint-row'),portrait(who),append(el('div'),el('div','feedback-speaker',CHAPTER.characters?.[who]?.name || who),el('p','',outcome.text))));
       } else feedback.append(el('p','',outcome.text));
       append(feedback,
-        el('small','',`+${outcome.tokens} ${outcome.tokens === 1 ? 'ficha de tiempo' : 'fichas de tiempo'}`));
+        el('small','',`+${outcome.tokens} ${outcome.tokens === 1 ? 'token de tiempo' : 'tokens de tiempo'}`));
       append(card,feedback,el('div','eyebrow','Así se resuelve'),el('p','explanation',explanation(view)),makeNext('Continuar la práctica →',() => {challengeUI = null; advance();}));
-      stage.append(card); return;
+      fitWindow(card,card.lastElementChild);stage.append(card); return;
     }
     if (!challengeUI || challengeUI.pending !== view || challengeUI.attempt !== view.attempts) {
       challengeUI = {pending:view, attempt:view.attempts, value:null, reading:[], pairs:{}, activeLeft:null,
@@ -722,12 +1079,14 @@ function optionButton(text,index,action,selected=false){return append(button('',
     }
     const prompt = view.variant.prompt || 'Lee y descubre';
     const heading = el('h2','challenge-prompt',prompt);
-    if (prompt.trim().split(/\s+/).length >= 40 || prompt.length > 240) heading.classList.add('long-prompt');
-    card.append(heading);
-    const workspace = el('div','stack'); card.append(workspace);
-    const submit = answer => {const result = engine.submit(answer); announce(result.status === 'hint' ? 'Aún no. Tu mascota tiene una pista.' : result.text); render();};
+    if (prompt.trim().split(/\s+/).length >= 28 || prompt.length > 180) heading.classList.add('long-prompt');
+    if(view.beat.kind!=='reading')card.append(heading);
+    const workspace = el('div','stack challenge-workspace'); card.append(workspace);
+    const submit = answer => {const result = engine.submit(answer);if(SERVER && result.tokens>0){SERVER.practiceLeft--;remote('/practice');} announce(result.status === 'hint' ? 'Aún no. Tu mascota tiene una pista.' : result.text); render();};
     const kinds = {mc:renderMC,numeric:renderNumeric,match:renderMatch,order:renderOrder,grid:renderGrid,reading:renderReading};
-    kinds[view.beat.kind](workspace,view,submit); stage.append(card);
+    kinds[view.beat.kind](workspace,view,submit);
+    const actions=[...workspace.querySelectorAll('.submit-action,.reset-pairs')];
+    fitWindow(card,...actions);stage.append(card);
   }
   function shuffle(array) {
     const shuffled = array.slice();
@@ -739,7 +1098,9 @@ function optionButton(text,index,action,selected=false){return append(button('',
     const options=el('div','options'),nodes=[];let selected=0;
     const select=index=>{selected=index;nodes.forEach((node,i)=>{node.classList.toggle('selected',i===index);node.setAttribute('aria-pressed',String(i===index));});};
     view.variant.options.forEach((text,index)=>{const action=()=>submit(index);numberActions[index]=action;const node=optionButton(text,index,action);nodes.push(node);options.append(node);});
-    workspace.append(options);bindNavigation(nodes,1,select);select(0);primaryAction=()=>submit(selected);
+    const short=view.variant.options.every(text=>text.length<=120);options.classList.toggle('short-options',short);
+    workspace.append(options);bindNavigation(nodes,innerWidth>=1024&&short?2:1,select);select(0);primaryAction=()=>submit(selected);
+    workspace.append(button('Responder →',()=>submit(selected),'primary submit-action'));
   }
   function renderNumeric(workspace,view,submit) {
     workspace.classList.add('numeric-workspace');
@@ -750,7 +1111,7 @@ function optionButton(text,index,action,selected=false){return append(button('',
     input.value = challengeUI.value || ''; input.setAttribute('aria-describedby','numeric-unit');
     const unit = el('span','unit',view.variant.unit || 'Escribe un número'); unit.id = 'numeric-unit';
     const pad = el('div','digit-pad'); pad.setAttribute('aria-label','Teclado de números');
-    const check = button('Comprobar respuesta →',() => submit(input.value),'primary');
+    const check = button('Comprobar respuesta →',() => submit(input.value),'primary submit-action');
     const update = () => {challengeUI.value = input.value; check.disabled = !input.value.trim();}; input.addEventListener('input',update);
     ['1','2','3','4','5','6','7','8','9','−','0','⌫',','].forEach(digit => {
       const node = button(digit,() => {
@@ -771,7 +1132,7 @@ function optionButton(text,index,action,selected=false){return append(button('',
     const directions = el('p','log-meta','Toca una palabra de la izquierda y después su pareja de la derecha.');
     const columns = el('div','match-columns'), left = el('div','match-column'), right = el('div','match-column');
     append(columns,left,right);
-    const check = button('Comprobar parejas →',() => submit(pairs.map((pair,i) => [pair[0],pairs[challengeUI.pairs[i]][1]])),'primary');
+    const check = button('Comprobar parejas →',() => submit(pairs.map((pair,i) => [pair[0],pairs[challengeUI.pairs[i]][1]])),'primary submit-action');
     const leftButtons = [], rightButtons = {};
     function update() {
       leftButtons.forEach((node,i) => {
@@ -793,7 +1154,7 @@ function optionButton(text,index,action,selected=false){return append(button('',
         challengeUI.pairs[challengeUI.activeLeft] = j; challengeUI.activeLeft = null; update();});
       rightButtons[j] = node; right.append(node);
     });
-    append(workspace,directions,columns,button('Rehacer las parejas',() => {challengeUI.pairs = {}; challengeUI.activeLeft = null; update();},'quiet'),check); update();
+    append(workspace,directions,columns,button('Rehacer las parejas',() => {challengeUI.pairs = {}; challengeUI.activeLeft = null; update();},'quiet reset-pairs'),check); update();
   }
   function renderOrder(workspace,view,submit) {
     workspace.append(el('p','log-meta','Usa las flechas para poner los pasos en orden. También puedes arrastrarlos.'));
@@ -822,7 +1183,7 @@ function optionButton(text,index,action,selected=false){return append(button('',
         row.addEventListener('dragend',() => {dragging=null;}); append(controls,up,down); row.append(controls); list.append(row);
       });
     }
-    draw(); append(workspace,list,button('Comprobar orden →',() => submit(challengeUI.order.map(i => view.variant.items[i])),'primary'));
+    draw(); append(workspace,list,button('Comprobar orden →',() => submit(challengeUI.order.map(i => view.variant.items[i])),'primary submit-action'));
   }
   function renderGrid(workspace,view,submit) {
     const [maxX,maxY] = view.variant.size, margin = 40, step = 34, width = maxX*step+margin*2, height = maxY*step+margin*2;
@@ -838,7 +1199,7 @@ function optionButton(text,index,action,selected=false){return append(button('',
       shape('text',{x:sx(mark.at[0]),y:sy(mark.at[1])-10,'text-anchor':mark.at[0]===0?'start':mark.at[0]===maxX?'end':'middle',class:'grid-mark'},mark.label);
     }
     const readout=el('p','coordinate-readout','Elige un punto (x, y).'); readout.setAttribute('aria-live','polite');
-    const check=button('Comprobar coordenadas →',() => submit(challengeUI.value),'primary'); check.disabled=!challengeUI.value;
+    const check=button('Comprobar coordenadas →',() => submit(challengeUI.value),'primary submit-action'); check.disabled=!challengeUI.value;
     let chosen=null; const points=[];
     const select=(point,x,y) => {if(chosen){chosen.classList.remove('chosen');chosen.setAttribute('aria-pressed','false');}chosen=point;point.classList.add('chosen');point.setAttribute('aria-pressed','true');challengeUI.value=[x,y];readout.textContent=`Tu punto: (${x}, ${y})`;check.disabled=false;};
     for(let y=0;y<=maxY;y++) for(let x=0;x<=maxX;x++) {
@@ -856,8 +1217,8 @@ function optionButton(text,index,action,selected=false){return append(button('',
     wrap.append(svg);append(workspace,el('p','log-meta','Primero cuenta hacia la derecha (x), después hacia arriba (y). Con teclado, usa las flechas y Enter.'),wrap,readout,check);
   }
   function renderReading(workspace,view,submit) {
-    append(workspace,el('div','passage',view.variant.passage),el('p','source',view.variant.source));
-    const check=button('Comprobar respuestas →',() => submit(challengeUI.reading),'primary');
+    workspace.append(append(el('div','reading-text'),el('div','passage',view.variant.passage),el('p','source',view.variant.source)));
+    const check=button('Comprobar respuestas →',() => submit(challengeUI.reading),'primary submit-action');
     const update=() => {check.disabled=view.variant.questions.some((question,i)=>!Number.isInteger(challengeUI.reading[i]));};
     view.variant.questions.forEach((question,i) => {
       const section=el('div','reading-question');section.setAttribute('role','group');section.setAttribute('aria-label',`Pregunta ${i+1}`);
@@ -871,83 +1232,120 @@ function optionButton(text,index,action,selected=false){return append(button('',
     workspace.append(check);update();
   }
 function itemIcon(item){const src=SRC[item.icon||'objeto_'+item.id];if(!src)return null;const img=el('img','item-icon');img.src=src;img.alt=item.name;return img;}
-function applyMotion(){reduced=motion.matches || !!settings.reducedMotion;effects=!reduced;fx.length=0;if(reduced){completeMessage();for(const id of uiTimers)clearTimeout(id);uiTimers.clear();for(const animation of uiAnimations)animation.cancel();uiAnimations.clear();document.querySelectorAll('.flying-item,.closing-ghost').forEach(n=>n.remove());updateHUD();}document.body.classList.toggle('reduced-motion',reduced);if(reduced && treasure)treasure.t=3;}
+function applyMotion(){reduced=motion.matches || !!settings.reducedMotion;effects=!reduced;fx.length=0;vortexStatic=false;if(reduced){completeMessage();for(const id of uiTimers)clearTimeout(id);uiTimers.clear();for(const animation of uiAnimations)animation.cancel();uiAnimations.clear();document.querySelectorAll('.flying-item,.closing-ghost').forEach(n=>n.remove());updateHUD();}document.body.classList.toggle('reduced-motion',reduced);if(reduced && treasure)treasure.t=3;}
 function unlockAudio(){if(settings.sound===false)return;try{const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)return;if(!audioContext)audioContext=new Audio();if(audioContext.state==='suspended')audioContext.resume().catch(()=>{});}catch{audioContext=null;}}
 function fanfare(){if(!audioContext || settings.sound===false)return;const now=audioContext.currentTime;for(const [i,f] of [587.33,739.99,880,1174.66,880].entries()){const o=audioContext.createOscillator(),gain=audioContext.createGain(),at=now+i*.145;o.type=i%2?'triangle':'square';o.frequency.setValueAtTime(f,at);gain.gain.setValueAtTime(0,at);gain.gain.linearRampToValueAtTime(.018,at+.012);gain.gain.exponentialRampToValueAtTime(.001,at+.22);o.connect(gain);gain.connect(audioContext.destination);o.onended=()=>{o.disconnect();gain.disconnect();};o.start(at);o.stop(at+.24);}}
 function beginTreasure(e){
  if(treasure || state.chests.includes(e.id))return;
- unlockAudio();if(!openChest(state,e))return;
+ unlockAudio();if(!openChest(state,e))return;remote('/chests/'+encodeURIComponent(e.id)+'/open',{sparks:state.sparks});
  if(!overlay.hidden)closeOverlay();clearInput();player.vx=player.vy=0;player.y=e.y;player.ground=!!support(map,player);player.face=Math.sign(e.x-player.x)||player.face;player.kid.action='side';player.kid.frame=0;
  treasure={entity:e,t:reduced?3:0,sounded:false,banner:false};$('context').hidden=true;document.body.classList.add('treasuring');$('treasure').hidden=true;save();
  if(!reduced)dust(e.x,e.y-10,5,.2);
  announce('Abriendo '+e.name+'.');
 }
 function advanceTreasure(dt){if(!treasure)return;treasure.t+=dt;if(treasure.t>=1.05 && !treasure.sounded){fanfare();treasure.sounded=true;}
- if(treasure.t>=2.7 && !treasure.banner){treasure.banner=true;const e=treasure.entity,item=e.reward?.item;$('treasure-title').textContent='¡Conseguiste: '+(item?.name||'un tesoro')+'!';$('treasure-tokens').textContent='+'+(e.reward?.tokens||0)+' fichas';$('treasure-copy').textContent=item?.text||'Un recuerdo para tu mochila.';$('treasure').hidden=false;announce($('treasure-title').textContent+' '+$('treasure-tokens').textContent);$('treasure-close').focus();}
+ if(treasure.t>=2.7 && !treasure.banner){treasure.banner=true;const e=treasure.entity,item=e.reward?.item;$('treasure-title').textContent='¡Conseguiste: '+(item?.name||'un tesoro')+'!';$('treasure-tokens').textContent='+'+(e.reward?.tokens||0)+' tokens'+(e.reward?.copihues?' · +'+e.reward.copihues+' copihue':'');$('treasure-copy').textContent=item?.text||'Un recuerdo para tu mochila.';$('treasure').hidden=false;announce($('treasure-title').textContent+' '+$('treasure-tokens').textContent);$('treasure-close').focus();}
  $('action-touch').disabled=treasure.t<1.05;$('action-touch').textContent=treasure.t<1.05?'Abriendo…':'Guardar';
 }
 function finishTreasure(){if(!treasure || !reduced && treasure.t<1.05)return;treasure=null;$('treasure').hidden=true;document.body.classList.remove('treasuring');clearInput();save();canvas.focus();}
 
-function showShop(selected=0,thankYou=''){
- const card=panel('Puesto del Mercader');card.classList.add('shop-panel');const merchant=stand('mercader',''),layout=el('div','shop-layout'),items=el('div','shop-items'),grid=el('div','shelf-grid'),detail=el('div','parchment detail-card'),slots=[];let chosen=clamp(selected,0,MAP_DATA.catalog.length-1);
- const select=i=>{chosen=i;const item=MAP_DATA.catalog[i],owned=state.items.some(o=>o.id===item.id);slots.forEach((slot,k)=>{slot.classList.toggle('selected',k===i);slot.setAttribute('aria-pressed',String(k===i));});if(menuNavigation)menuNavigation.index=i;
+function showShop(selected=0,thankYou='',collection='tokens'){
+ const catalog=MAP_DATA.catalog.filter(item=>(item.currency||'tokens')===collection),card=panel('Puesto del Mercader');card.classList.add('shop-panel');
+ const merchant=stand('mercader',''),layout=el('div','shop-layout'),items=el('div','shop-items'),tabs=el('div','collection-tabs'),grid=el('div','shelf-grid'),detail=el('div','parchment detail-card'),slots=[];let chosen=clamp(selected,0,catalog.length-1);
+ tabs.setAttribute('aria-label','Colecciones del Mercader');
+ for(const [currency,label] of [['tokens','Recuerdos · tokens'],['copihues','Colección copihue']]){const tab=button(label,()=>showShop(0,'',currency));tab.setAttribute('aria-pressed',String(currency===collection));tabs.append(tab);}
+ grid.setAttribute('aria-label',collection==='copihues'?'Colección copihue':'Recuerdos con tokens');
+ const select=i=>{chosen=i;const item=catalog[i],owned=state.items.some(o=>o.id===item.id);slots.forEach((slot,k)=>{slot.classList.toggle('selected',k===i);slot.setAttribute('aria-pressed',String(k===i));});if(menuNavigation)menuNavigation.index=i;
   merchant.bubble.textContent=thankYou||item.merchantLine;thankYou='';detail.replaceChildren();const copy=append(el('div','detail-copy'),el('h3','',item.name),el('p','',item.text));append(detail,itemIcon(item),copy);
   if(owned)detail.append(el('div','owned-stamp','En tu mochila'));
-  else {const shortfall=Math.max(0,item.price-state.tokens),buy=button(shortfall?'Te faltan '+shortfall+' fichas':'Comprar',()=>purchase(i),'primary');buy.disabled=shortfall>0;buy.dataset.action='buy';if(!shortfall)append(buy,uiIcon('ico_ficha'),el('span','',item.price));detail.append(buy);}
+  else {const shortfall=Math.max(0,item.price-state[collection]),unit=collection==='copihues'?(shortfall===1?'copihue':'copihues'):'tokens',buy=button(shortfall?'Te faltan '+shortfall+' '+unit:'Comprar',()=>purchase(i),'primary');buy.disabled=shortfall>0;buy.dataset.action='buy';if(!shortfall)append(buy,uiIcon(collection==='copihues'?'ico_copihue':'ico_ficha'),el('span','',item.price));detail.append(buy);}
   primaryAction=()=>purchase(chosen);
  };
- const purchase=i=>{const item=MAP_DATA.catalog[i];if(state.items.some(o=>o.id===item.id)||state.tokens<item.price)return;const before=state.tokens,result=trade(state,MAP_DATA.catalog,item.id);if(!result.ok)return;uiSound('coin');save();slots[i].append(el('span','owned-dot','✓'));select(i);merchant.bubble.textContent='¡Gracias! Que este recuerdo te acompañe en tu aventura.';animateCount($('window-coins'),before,state.tokens);flyIcon(item,slots[i],$('bag'));announce(result.text);};
- MAP_DATA.catalog.forEach((item,i)=>{const node=button('',()=>{uiSound('tick');if(chosen===i)purchase(i);else select(i);},'item-slot');node.dataset.item=item.id;node.setAttribute('aria-label',item.name+', '+item.price+' fichas');append(node,itemIcon(item),append(el('span','price-tag'),uiIcon('ico_ficha'),el('span','',item.price)));if(state.items.some(o=>o.id===item.id))node.append(el('span','owned-dot','✓'));slots.push(node);grid.append(node);});
- append(items,grid,detail,append(el('div','shop-tools'),button('Ver mi mochila',showBag)));append(layout,merchant.node,items);card.append(layout);bindNavigation(slots,innerWidth<=600?2:3,select,chosen);select(chosen);
+ const purchase=i=>{const item=catalog[i];if(state.items.some(o=>o.id===item.id)||state[collection]<item.price)return;const before=state[collection],result=trade(state,MAP_DATA.catalog,item.id);if(!result.ok)return;remote('/shop/buy',{itemId:item.id});uiSound('coin');save();slots[i].append(el('span','owned-dot','✓'));select(i);merchant.bubble.textContent='¡Gracias! Que este recuerdo te acompañe en tu aventura.';animateCount($(collection==='copihues'?'window-copihues':'window-coins'),before,state[collection]);flyIcon(item,slots[i],$('bag'));announce(result.text);};
+ catalog.forEach((item,i)=>{const node=button('',()=>{uiSound('tick');if(chosen===i)purchase(i);else select(i);},'item-slot');node.dataset.item=item.id;node.setAttribute('aria-label',item.name+', '+item.price+' '+collection);append(node,itemIcon(item),append(el('span','price-tag'),uiIcon(collection==='copihues'?'ico_copihue':'ico_ficha'),el('span','',item.price)));if(state.items.some(o=>o.id===item.id))node.append(el('span','owned-dot','✓'));slots.push(node);grid.append(node);});
+ append(items,tabs,grid);append(layout,merchant.node,items);card.append(layout,detail,append(el('div','shop-tools'),button('Ver mi mochila',showBag)));fitWindow(card,detail,card.querySelector('.shop-tools'));bindNavigation(slots,innerWidth<=600?2:3,select,chosen);select(chosen);
 }
-function showBag(selected=0){
- const card=panel('Mochila'),counters=append(el('div','bag-counters'),wallet(state.tokens),wallet(state.sparks.length+'/12','ico_chispa','chispas'),wallet(state.pieces.length+'/8','ico_pieza','piezas')),layout=el('div','bag-layout'),grid=el('div','bag-grid'),detail=el('div','parchment bag-detail'),slots=[];
- const select=i=>{const item=state.items[i];if(!item)return;slots.forEach((node,k)=>{node.classList.toggle('selected',k===i);node.setAttribute('aria-pressed',String(k===i));});detail.replaceChildren();append(detail,itemIcon(item),el('h3','',item.name),el('p','',item.text||'Un recuerdo de tu aventura.'),el('div','owned-stamp','En tu mochila'));
-  const sale=MAP_DATA.catalog.find(o=>o.id===item.id);if(sale)detail.append(button('Vender · '+Math.floor(sale.price/2)+' fichas',()=>{const result=trade(state,MAP_DATA.catalog,item.id,true);if(result.ok){uiSound('coin');save();showBag(Math.max(0,i-1));toast(result.text);}}));
+function showBag(selected=0,carrying=null){
+ const card=panel('Mochila'),counters=append(el('div','bag-counters'),wallet(state.tokens),wallet(state.copihues,'ico_copihue','copihues'),mapSparks().length?wallet(mapSparks().filter(e=>state.sparks.includes(e.id)).length+'/'+mapSparks().length,'ico_chispa','chispas de este mapa'):null),layout=el('div','bag-layout'),grid=el('div','bag-grid'),detail=el('div','parchment bag-detail');
+ const contents=bagLayout(state.items,state.bag),slots=[];let chosen=clamp(selected,0,contents.length-1);
+ // Moving: pick an item (tap, «Mover» or drag), then drop it on another slot; a full one swaps.
+ const move=(from,to)=>{if(!moveInBag(state,from,to))return showBag(from);uiSound('tick');save();showBag(to);};
+ const select=i=>{chosen=i;const item=contents[i];slots.forEach((node,k)=>{node.classList.toggle('selected',k===i);node.setAttribute('aria-pressed',String(k===i));});if(menuNavigation)menuNavigation.index=i;detail.replaceChildren();
+  if(carrying!==null){append(detail,itemIcon(contents[carrying]),el('h3','','Moviendo: '+contents[carrying].name),el('p','','Elige la casilla donde lo quieres dejar.'),button('Cancelar',()=>showBag(carrying)));primaryAction=()=>move(carrying,chosen);return;}
+  if(!item){append(detail,el('h3','','Casilla vacía'),el('p','',state.items.length?'Elige un objeto y luego esta casilla para dejarlo aquí. También puedes arrastrarlo.':'Aún no tienes objetos. Visita al Mercader del Tiempo.'));if(!state.items.length)detail.append(button('Ir al puesto',showShop,'primary'));primaryAction=null;return;}
+  append(detail,itemIcon(item),el('h3','',item.name),el('p','',item.text||'Un recuerdo de tu aventura.'),el('div','owned-stamp','En tu mochila'),button('Mover',()=>showBag(i,i)));
+  const sale=MAP_DATA.catalog.find(o=>o.id===item.id);if(sale)detail.append(button('Vender · '+Math.floor(sale.price/2)+' '+(sale.currency||'tokens'),()=>{const result=trade(state,MAP_DATA.catalog,item.id,true);if(result.ok){remote('/shop/sell',{itemId:item.id});uiSound('coin');save();showBag(i);toast(result.text);}}));
+  primaryAction=()=>showBag(i,i);
  };
- for(let i=0;i<Math.max(12,state.items.length);i++){const item=state.items[i],node=button('',()=>{uiSound('tick');select(i);},'item-slot'+(item?'':' empty'));node.disabled=!item;node.setAttribute('aria-label',item?item.name:'Casilla vacía');if(item){node.append(itemIcon(item));slots.push(node);}grid.append(node);}
- card.classList.add('bag-panel');append(layout,grid,detail);append(card,counters,layout);if(slots.length){bindNavigation(slots,innerWidth<=600?2:4,select,clamp(selected,0,slots.length-1));select(clamp(selected,0,slots.length-1));}else append(detail,uiIcon('ico_mochila','large'),el('h3','','Tu próxima aventura empieza aquí'),el('p','','Aún no tienes objetos. Visita al Mercader del Tiempo.'),button('Ir al puesto',showShop,'primary'));
+ let drag=null;
+ const dropAt=(x,y)=>{const node=document.elementFromPoint?.(x,y)?.closest?.('.bag-grid .item-slot');return node?Number(node.dataset.slot):-1;};
+ contents.forEach((item,i)=>{
+  const node=button('',()=>{if(drag?.moved)return;uiSound('tick');if(carrying!==null)return move(carrying,i);const picked=contents[chosen];if(!item && picked && chosen!==i)return move(chosen,i);select(i);},'item-slot'+(item?'':' empty')+(carrying===i?' carrying':''));
+  node.dataset.slot=i;node.setAttribute('aria-label',item?item.name:'Casilla vacía');if(item)node.append(itemIcon(item));
+  if(item)node.addEventListener('pointerdown',e=>{if(carrying!==null)return;drag={from:i,x:e.clientX,y:e.clientY,moved:false,ghost:null};node.setPointerCapture?.(e.pointerId);});
+  node.addEventListener('pointermove',e=>{if(!drag || drag.from!==i)return;if(!drag.moved && Math.hypot(e.clientX-drag.x,e.clientY-drag.y)<8)return;
+   if(!drag.moved){drag.moved=true;node.classList.add('carrying');const ghost=itemIcon(item);ghost.classList.add('flying-item');document.body.append(ghost);drag.ghost=ghost;}
+   drag.ghost.style.left=(e.clientX-30)+'px';drag.ghost.style.top=(e.clientY-32)+'px';const over=dropAt(e.clientX,e.clientY);slots.forEach((n,k)=>n.classList.toggle('drop-target',k===over && k!==i));});
+  const finish=e=>{if(!drag || drag.from!==i)return;const {moved,ghost}=drag;ghost?.remove();if(!moved){drag=null;return;}const to=e.type==='pointerup'?dropAt(e.clientX,e.clientY):-1;setTimeout(()=>{drag=null;},0);if(to>=0 && to!==i)move(i,to);else showBag(i);};
+  node.addEventListener('pointerup',finish);node.addEventListener('pointercancel',finish);
+  slots.push(node);grid.append(node);
+ });
+ // Icons are images: the browser's own image drag would cancel ours.
+ grid.addEventListener('dragstart',e=>e.preventDefault());
+ card.classList.add('bag-panel');append(layout,grid,detail);append(card,counters,layout);fitWindow(card,detail);
+ const start=carrying!==null?carrying:clamp(selected,0,contents.length-1);bindNavigation(slots,innerWidth<=600?2:4,select,start);select(start);
 }
 function showBank(amountValue=10){
- const earned=accrueInterest(state,Date.now());save();if(earned.earned)toast('Tus ahorros crecieron '+earned.earned+' fichas.');const card=panel('Banco del Tiempo'),tempo=stand('tempo','Guarda tus fichas para un plan de mañana. Por cada semana completa ganas un 5 %, hasta 10 fichas. ¡Tic-tac!'),layout=el('div','bank-layout'),main=el('div','stack'),vault=el('div','vault'),columns=el('div','vault-columns');
+ const earned=accrueInterest(state,Date.now());save();if(earned.earned)toast('Tus ahorros crecieron '+earned.earned+' tokens.');const card=panel('Banco del Tiempo'),tempo=stand('tempo','Guarda tus tokens para un plan de mañana. Por cada semana completa ganas un 5 %, hasta 10 tokens. ¡Tic-tac!'),layout=el('div','bank-layout'),main=el('div','stack bank-main'),vault=el('div','vault'),columns=el('div','vault-columns');
  const pocket=el('strong','',state.tokens),stored=el('strong','',state.bank.balance),left=append(el('div','vault-column'),el('h3','','En tu mochila'),uiIcon('ico_ficha','large'),pocket),right=append(el('div','vault-column'),el('h3','','En la bóveda'),uiIcon('ico_ficha','large'),stored);append(columns,left,right);vault.append(columns);
- const label=el('label','sr-only','Cantidad de fichas');label.htmlFor='bank-amount';const amount=el('input');amount.id='bank-amount';amount.type='text';amount.inputMode='numeric';amount.value=String(amountValue);amount.maxLength=8;amount.setAttribute('aria-label','Cantidad de fichas');
+ const label=el('label','sr-only','Cantidad de tokens');label.htmlFor='bank-amount';const amount=el('input');amount.id='bank-amount';amount.type='text';amount.inputMode='numeric';amount.value=String(amountValue);amount.maxLength=8;amount.setAttribute('aria-label','Cantidad de tokens');
  const stepper=el('div','bank-stepper'),setAmount=n=>{amount.value=String(clamp(n,1,Math.max(1,state.tokens,state.bank.balance)));uiSound('tick');};
  const step=delta=>setAmount((Number(amount.value)||1)+delta),quick=el('div','quick-amounts');[5,10].forEach(n=>quick.append(button(String(n),()=>setAmount(n))));quick.append(button('Todo',()=>setAmount(Math.max(state.tokens,state.bank.balance))));
- append(stepper,el('span','','¿Cuántas fichas?'),label,append(el('div','amount-control'),button('−',()=>step(-1)),amount,button('+',()=>step(1))),quick);
- const transfer=withdraw=>{const before=state.tokens,bankBefore=state.bank.balance,result=bankTransfer(state,amount.value,withdraw);save();if(result.ok){uiSound('coin');animateCount(pocket,before,state.tokens);animateCount(stored,bankBefore,state.bank.balance);animateCount($('window-coins'),before,state.tokens);flyIcon({id:'coin',icon:'ico_ficha',name:'Fichas'},withdraw?right:left,withdraw?left:right);updateDial();}toast(result.text);};
+ append(stepper,el('span','','¿Cuántos tokens?'),label,append(el('div','amount-control'),button('−',()=>step(-1)),amount,button('+',()=>step(1))),quick);
+ const transfer=withdraw=>{const before=state.tokens,bankBefore=state.bank.balance,result=bankTransfer(state,amount.value,withdraw);save();if(result.ok){remote('/bank',{amount:Number(amount.value),withdraw});uiSound('coin');animateCount(pocket,before,state.tokens);animateCount(stored,bankBefore,state.bank.balance);animateCount($('window-coins'),before,state.tokens);flyIcon({id:'coin',icon:'ico_ficha',name:'Tokens'},withdraw?right:left,withdraw?left:right);updateDial();}toast(result.text);};
  const dial=el('div','week-dial'),percent=el('span'),timeText=el('p'),dialWrap=append(el('div','week-dial-wrap'),append(dial,percent),timeText);
- const updateDial=()=>{const elapsed=clamp(Date.now()-state.bank.lastWeek,0,WEEK),fraction=elapsed/WEEK;dial.style.setProperty('--week-angle',fraction*360+'deg');percent.textContent=Math.floor(fraction*100)+' %';dial.setAttribute('aria-label',percent.textContent+' de la semana transcurrida');timeText.textContent='Próximo interés en '+Math.ceil((WEEK-elapsed)/86400000)+' días. Con 20 fichas ahorradas ganas 1 por semana.';};updateDial();
- append(main,vault,stepper,append(el('div','bank-actions'),button('Depositar',()=>transfer(false),'primary'),button('Retirar',()=>transfer(true))),dialWrap);if(settings.testMode)main.append(button('Avanzar una semana',()=>{state.bank.lastWeek-=WEEK;const result=accrueInterest(state,Date.now());save();showBank(Number(amount.value)||10);toast('Una semana: +'+result.earned+' fichas.');}));append(layout,tempo.node,main);card.append(layout);
+ const updateDial=()=>{const elapsed=clamp(Date.now()-state.bank.lastWeek,0,WEEK),fraction=elapsed/WEEK;dial.style.setProperty('--week-angle',fraction*360+'deg');percent.textContent=Math.floor(fraction*100)+' %';dial.setAttribute('aria-label',percent.textContent+' de la semana transcurrida');timeText.textContent='Próximo interés en '+Math.ceil((WEEK-elapsed)/86400000)+' días. Con 20 tokens ahorrados ganas 1 por semana.';};updateDial();
+ append(main,vault,stepper,append(el('div','bank-actions'),button('Depositar',()=>transfer(false),'primary'),button('Retirar',()=>transfer(true))),dialWrap);if(settings.testMode)if(!SERVER)main.append(button('Avanzar una semana',()=>{state.bank.lastWeek-=WEEK;const result=accrueInterest(state,Date.now());save();showBank(Number(amount.value)||10);toast('Una semana: +'+result.earned+' tokens.');}));append(layout,tempo.node,main);card.append(layout);fitWindow(card,main.querySelector('.bank-actions'));
 }
 function chapterDetail(node,index){const chapter=MAP_DATA.chapters[index];node.replaceChildren();append(node,el('div','chapter-year',chapter.year),el('h3','',chapter.title));if(chapter.available)append(node,el('p','','Un viaje te espera al otro lado del portal.'),button('Abrir el portal',showTravel,'primary'));else append(node,append(el('div','locked-copy'),uiIcon('ico_candado'),el('span','','Pronto')),el('p','','Esta época todavía guarda sus secretos.'));}
 function showClock(){
- const card=panel('Reloj de las Épocas','Cada viaje te traerá una pieza. Juntas vuelven a poner el tiempo en marcha.'),layout=el('div','clock-layout'),face=el('div','clock-face'),detail=el('div','parchment chapter-detail'),slots=[];face.setAttribute('aria-label','Ocho piezas del Reloj de las Épocas');append(face,el('div','clock-hand'),el('div','clock-hand hour'));
- const select=i=>{slots.forEach((node,k)=>{node.classList.toggle('selected',k===i);node.setAttribute('aria-pressed',String(k===i));});chapterDetail(detail,i);primaryAction=()=>{if(MAP_DATA.chapters[i].available)showTravel();};};
- MAP_DATA.chapters.forEach((chapter,i)=>{const own=state.pieces.includes('chapter-'+(i+1)),node=button('',()=>{uiSound('tick');select(i);},'clock-piece'+(own?' owned':'')),angle=i*Math.PI/4-Math.PI/2;node.style.setProperty('--slot-x',50+Math.cos(angle)*40+'%');node.style.setProperty('--slot-y',50+Math.sin(angle)*40+'%');node.setAttribute('aria-label',chapter.title+', '+chapter.year+', '+(own?'pieza recuperada':'pieza perdida'));append(node,uiIcon('ico_pieza'),el('span','',chapter.year));slots.push(node);face.append(node);});append(layout,face,detail);card.append(layout);bindNavigation(slots,1,select);select(0);
+ const card=panel('Reloj de las Épocas','Cada viaje te traerá una pieza. Juntas vuelven a poner el tiempo en marcha.'),layout=el('div','clock-layout'),face=el('div','clock-face'),detail=el('div','parchment chapter-detail'),clockActions=el('div','clock-actions'),slots=[];face.setAttribute('aria-label','Ocho piezas del Reloj de las Épocas');append(face,el('div','clock-hand'),el('div','clock-hand hour'));
+ const select=i=>{slots.forEach((node,k)=>{node.classList.toggle('selected',k===i);node.setAttribute('aria-pressed',String(k===i));});chapterDetail(detail,i);const action=detail.querySelector('.primary');clockActions.replaceChildren(...(action?[action]:[]));clockActions.hidden=!action;primaryAction=()=>{if(MAP_DATA.chapters[i].available)showTravel();};};
+ MAP_DATA.chapters.forEach((chapter,i)=>{const own=state.pieces.includes('chapter-'+(i+1)),node=button('',()=>{uiSound('tick');select(i);},'clock-piece'+(own?' owned':'')),angle=i*Math.PI/4-Math.PI/2;node.style.setProperty('--slot-x',50+Math.cos(angle)*40+'%');node.style.setProperty('--slot-y',50+Math.sin(angle)*40+'%');node.setAttribute('aria-label',chapter.title+', '+chapter.year+', '+(own?'pieza recuperada':'pieza perdida'));append(node,uiIcon('ico_pieza'),el('span','',chapter.year));slots.push(node);face.append(node);});append(layout,face,detail);card.append(layout);bindNavigation(slots,1,select);select(0);fitWindow(card,clockActions);
 }
 function showTravel(){
  const card=panel('Portal del Tiempo'),carousel=el('div','postcards'),bottom=el('div','travel-bottom'),cards=[];let chosen=0;
  card.append(append(el('div','travel-intro'),append(el('div','portrait-oval'),portrait('estela')),append(el('div','parchment'),el('p','','El tiempo guarda muchas voces. Elige una postal y yo te acompañaré.'))));carousel.setAttribute('aria-label','Elige una época');
- const select=i=>{chosen=i;cards.forEach((node,k)=>{node.classList.toggle('selected',k===i);node.setAttribute('aria-pressed',String(k===i));});bottom.replaceChildren();const chapter=MAP_DATA.chapters[i];if(chapter.available){const link=el('a','travel-link','¡Viajar!');link.href='https://claude.ai/artifact/4rjPdYSBxNpHofQ8u5MU7s';link.target='_blank';link.rel='noopener noreferrer';append(bottom,link,el('small','','Este viaje abre la historia en otra pestaña.'));primaryAction=()=>link.click();}else{append(bottom,append(el('div','locked-copy'),uiIcon('ico_candado'),el('span','','Pronto')),el('p','','Esta postal se abrirá en una próxima aventura.'));primaryAction=null;}};
- MAP_DATA.chapters.forEach((chapter,i)=>{const node=button('',()=>{uiSound('tick');if(chosen===i && chapter.available)primaryAction?.();else select(i);},'postcard');node.setAttribute('aria-label',chapter.title+', '+chapter.year+(chapter.available?', disponible':', pronto'));let art;if(chapter.available){art=el('img');art.src=SRC.postal_palos;art.alt='Puerto de Palos, punto de partida del viaje de 1492';}else art=append(el('div','postcard-art'),uiIcon('ico_candado','large'));append(node,art,append(el('div','postcard-copy'),el('span','postcard-year',chapter.year),el('strong','',chapter.title),el('small','',chapter.available?'Disponible':'Pronto')));cards.push(node);carousel.append(node);});append(card,carousel,bottom);bindNavigation(cards,1,select);select(0);
+ const select=i=>{chosen=i;cards.forEach((node,k)=>{node.classList.toggle('selected',k===i);node.setAttribute('aria-pressed',String(k===i));});bottom.replaceChildren();const chapter=MAP_DATA.chapters[i];if(chapter.available){const link=el('a','travel-link','¡Viajar!');link.href='https://claude.ai/artifact/4rjPdYSBxNpHofQ8u5MU7s';link.target='_blank';link.rel='noopener noreferrer';link.addEventListener('click',event=>{if(event?.ctrlKey || event?.metaKey || event?.shiftKey || event?.altKey)return;event?.preventDefault?.();beginPortalTravel(link.href);});append(bottom,link,el('small','','Este viaje abre la historia en otra pestaña.'));primaryAction=()=>link.click();}else{append(bottom,append(el('div','locked-copy'),uiIcon('ico_candado'),el('span','','Pronto')),el('p','','Esta postal se abrirá en una próxima aventura.'));primaryAction=null;}};
+ MAP_DATA.chapters.forEach((chapter,i)=>{const node=button('',()=>{uiSound('tick');if(chosen===i && chapter.available)primaryAction?.();else select(i);},'postcard');node.setAttribute('aria-label',chapter.title+', '+chapter.year+(chapter.available?', disponible':', pronto'));let art;if(chapter.available){art=el('img');art.src=SRC.postal_palos;art.alt='Puerto de Palos, punto de partida del viaje de 1492';}else art=append(el('div','postcard-art'),uiIcon('ico_candado','large'));append(node,art,append(el('div','postcard-copy'),el('span','postcard-year',chapter.year),el('strong','',chapter.title),el('small','',chapter.available?'Disponible':'Pronto')));cards.push(node);carousel.append(node);});append(card,carousel,bottom);fitWindow(card,bottom);bindNavigation(cards,1,select);select(0);
 }
 function showReading(){
  const first=collect(state,map,'reading-spark');save();const card=panel('Rincón de lectura'),book=el('div','open-book'),left=el('div','parchment book-page'),right=el('div','parchment book-page'),controls=el('div','book-controls');let page=0;
  const drawPage=()=>{left.replaceChildren();right.replaceChildren();append(left,uiIcon('ico_libro','large'),el('h3','','¿Sabías que…?'),el('p','',MAP_DATA.reading[page]),el('div','book-number',String(page*2+1)));append(right,el('div','book-emblem',page===0?'✦':page===1?'✧':'☾'),el('h3','',page===0?'Un norte en tu mano':page===1?'El cielo desde Chile':'Historias en la oscuridad'),el('p','','Cada viaje empieza con una pregunta. ¿Qué te gustaría descubrir?'),el('div','book-number',String(page*2+2)));prev.disabled=page===0;next.disabled=page===MAP_DATA.reading.length-1;};
  const turn=delta=>{page=clamp(page+delta,0,MAP_DATA.reading.length-1);drawPage();uiSound('paper');uiAnimate(delta>0?right:left,[{transform:'rotateY(0deg)'},{transform:'rotateY(-14deg)',opacity:.7},{transform:'rotateY(0deg)',opacity:1}],{duration:300});};
- const prev=button('← Página anterior',()=>turn(-1)),next=button('Página siguiente →',()=>turn(1));append(controls,prev,next);append(book,left,right);append(card,book,append(el('p','book-reward'),uiIcon('ico_chispa'),el('span','',first?'+1 chispa por tu primera lectura.':'Ya encontraste la chispa de lectura.')),controls);drawPage();bindNavigation([prev,next],1,i=>[prev,next][i].focus(),1);
+ const prev=button('← Página anterior',()=>turn(-1)),next=button('Página siguiente →',()=>turn(1));append(controls,prev,next);append(book,left,right);append(card,book,append(el('p','book-reward'),uiIcon('ico_chispa'),el('span','',first?'+1 chispa por tu primera lectura.':'Ya encontraste la chispa de lectura.')),controls);fitWindow(card,controls);drawPage();bindNavigation([prev,next],1,i=>[prev,next][i].focus(),1);
 }
 function showSky(){
  const first=collect(state,map,'sky-spark');save();const card=panel('Todos miraron el mismo cielo','Estela: «Entre luces y sombras, el cielo guarda muchas historias».');card.classList.add('sky-panel');
  const diagram=document.createElementNS('http://www.w3.org/2000/svg','svg');diagram.setAttribute('viewBox','0 0 700 290');diagram.setAttribute('class','sky-map');diagram.setAttribute('role','img');diagram.setAttribute('aria-label','Cruz del Sur de cuatro estrellas y la Yacana, una llama oscura en la Vía Láctea.');
  diagram.innerHTML='<defs><radialGradient id="milky"><stop stop-color="#b3c8da" stop-opacity=".7"/><stop offset="1" stop-color="#7b8cad" stop-opacity=".04"/></radialGradient></defs><ellipse cx="470" cy="125" rx="210" ry="95" fill="url(#milky)" transform="rotate(-20 470 125)"/><path d="M100 45L120 178M60 110L170 116" stroke="#d5b874" stroke-dasharray="4 5"/><g fill="#fff0c2"><circle cx="100" cy="45" r="6"/><circle cx="120" cy="178" r="7"/><circle cx="60" cy="110" r="5"/><circle cx="170" cy="116" r="5"/><circle cx="230" cy="42" r="2"/><circle cx="290" cy="210" r="2"/><circle cx="340" cy="55" r="2"/><circle cx="605" cy="55" r="2"/><circle cx="640" cy="206" r="2"/><circle cx="195" cy="230" r="2"/></g><path d="M380 155L393 75L410 60L416 87L437 122L535 124L555 103L569 113L548 140L541 194L527 194L525 155L452 155L446 194L432 194L426 141L410 128L400 158Z" fill="#071c28" stroke="#aaa67b" stroke-width="1.5" stroke-dasharray="3 5"/><g fill="#fff3d8"><circle cx="402" cy="103" r="3"/><circle cx="412" cy="108" r="3"/></g><g fill="#ffebc1" font-size="20" font-family="Nunito, sans-serif"><text x="55" y="259">Cruz del Sur</text><text x="355" y="259">Yacana · Llama oscura</text></g>';
- const notes=el('div','sky-notes');for(const sky of MAP_DATA.sky)notes.append(append(el('div','parchment'),el('h3','',sky.title),el('p','',sky.text)));append(card,diagram,notes,append(el('p','book-reward'),uiIcon('ico_chispa'),el('span','',first?'+1 chispa por descubrir este rincón.':'Ya encontraste la chispa del cielo.')));
+ const notes=el('div','sky-notes');for(const sky of MAP_DATA.sky)notes.append(append(el('div','parchment'),el('h3','',sky.title),el('p','',sky.text)));append(card,diagram,notes,append(el('p','book-reward'),uiIcon('ico_chispa'),el('span','',first?'+1 chispa por descubrir este rincón.':'Ya encontraste la chispa del cielo.')));fitWindow(card);
 }
 
+// A deterministic entry point for layout/interaction checks, using the real challenge engine.
+// The source chapter has no order beat; keep a complete practice example for that input kind.
+const ORDER_PRACTICE={type:'challenge',id:'practice-order',kind:'order',subject:'historia',hint:'Primero prepara el viaje; al final llega a tierra.',success:'¡Ordenaste los pasos del viaje!',variants:Object.fromEntries(STORY_LEVELS.map(level=>[level,{prompt:'Ordena estos pasos de un viaje por mar.',items:['Preparar los barcos.','Salir del puerto.','Navegar por el océano.','Llegar a tierra.'],explain:'Preparamos los barcos, salimos del puerto, navegamos y llegamos a tierra.'}]))};
+function practiceKind(kind,level='intermedio',id){
+ if(!STORY_LEVELS.includes(level))throw new Error('Nivel desconocido: '+level);
+ const source=CHALLENGES.find(beat=>beat.kind===kind&&(!id||beat.id===id))||(kind==='order'&&(!id||id===ORDER_PRACTICE.id)?ORDER_PRACTICE:null);
+ if(!source)throw new Error('Desafío desconocido: '+kind+(id?' / '+id:''));
+ const beat={...storyClone(source),who:'estela',flatTokens:SERVER && SERVER.practiceLeft<1?0:2,intro:null};
+ state.levels[beat.subject]=level;challengeUI=null;startDialogue([beat],closeOverlay);
+}
 function practice(){
- const available=shuffle(CHALLENGES),beats=available.slice(0,3).map(b=>({...storyClone(b),who:'estela',flatTokens:2,intro:null}));
- startDialogue([{type:'line',who:'estela',text:'Tres desafíos, a tu ritmo. Tu mascota te dará pistas. Ganas 2 fichas en cada uno, también si aprendes con la explicación.'},...beats,{type:'line',who:'estela',text:'¡Práctica terminada! Sigue explorando: cada intento te ayuda a aprender.'}],closeOverlay);
+ const paid=SERVER?SERVER.practiceLeft:3,available=shuffle(CHALLENGES),beats=available.slice(0,3).map((b,i)=>({...storyClone(b),who:'estela',flatTokens:i<paid?2:0,intro:null}));
+ const intro=paid>=3?'Tres desafíos, a tu ritmo. Tu mascota te dará pistas. Ganas 2 tokens en cada uno, también si aprendes con la explicación.':paid>0?'Tres desafíos, a tu ritmo. Hoy te quedan tokens en '+(paid===1?'el primero':'los primeros '+paid)+'; el resto es para entrenar.':'Tres desafíos, a tu ritmo. Por hoy ya ganaste los tokens de práctica: estos son para entrenar. ¡Mañana hay más!';
+ startDialogue([{type:'line',who:'estela',text:intro},...beats,{type:'line',who:'estela',text:'¡Práctica terminada! Sigue explorando: cada intento te ayuda a aprender.'}],closeOverlay);
 }
 function gesture(phrase){
  player.bubble={text:phrase,until:timer+4};const c=classmates.filter(c=>Math.abs(c.x-player.x)<300 && Math.abs(c.y-player.y)<80).sort((a,b)=>Math.abs(a.x-player.x)-Math.abs(b.x-player.x))[0];
@@ -955,10 +1353,10 @@ function gesture(phrase){
  announce(phrase);closeOverlay();
 }
 function showClassmate(e){showOverlay('dialogue',e.name);messageBox(e.name,e.pieces+' piezas del Reloj. Mi recuerdo destacado es '+e.featured+'. ¡Qué gusto verte en la Academia!','ico_gestos');const choices=el('div','message-choices');choices.append(button('Decir «¡Hola!»',()=>{if(completeMessage())return;gesture('¡Hola!');},'parchment-option'));stage.replaceChildren(choices,...stage.children);}
-function showGestures(){const card=panel('Gestos','Elige una frase para saludar a tus compañeros.'),grid=el('div','gesture-grid'),nodes=[];MAP_DATA.phrases.forEach(p=>{const node=button(p,()=>{uiSound('tick');gesture(p);},'parchment-option');grid.append(node);nodes.push(node);});card.append(grid);bindNavigation(nodes,innerWidth<=600?1:2,i=>nodes[i].focus());}
+function showGestures(){const card=panel('Gestos','Elige una frase para saludar a tus compañeros.'),grid=el('div','gesture-grid'),nodes=[];MAP_DATA.phrases.forEach(p=>{const node=button(p,()=>{uiSound('tick');gesture(p);},'parchment-option');grid.append(node);nodes.push(node);});card.append(grid);fitWindow(card);bindNavigation(nodes,innerWidth<=600?1:2,i=>nodes[i].focus());}
 function showObjectives(){
- const card=panel('Objetivos'),scroll=el('ul','parchment objectives-scroll'),goals=[['Habla con Estela',state.flags.metEstela],['Conoce al Mercader',state.flags.metMerchant],['Conoce a Tempo',state.flags.metTempo],['Encuentra las 12 chispas ('+state.sparks.length+'/12)',state.sparks.length===12],['Abre el cofre de las chispas',state.chests.includes('spark-chest')],['Recupera las ocho piezas ('+state.pieces.length+'/8)',state.pieces.length===8]];
- goals.forEach(([text,done])=>scroll.append(append(el('li'),el('span','objective-check'+(done?' done':''),done?'✓':'○'),el('span','',text))));append(card,scroll,button(objectivesOpen?'Ocultar objetivo en el mapa':'Mostrar objetivo en el mapa',()=>{objectivesOpen=!objectivesOpen;closeOverlay();}));
+ const card=panel('Objetivos'),scroll=el('ul','parchment objectives-scroll'),goals=[['Habla con Estela',state.flags.metEstela],['Conoce al Mercader',state.flags.metMerchant],['Compra tu primer recuerdo',state.items.some(i=>MAP_DATA.catalog.some(c=>c.id===i.id))],['Conoce a Tempo',state.flags.metTempo],['Encuentra las 12 chispas ('+state.sparks.length+'/12)',state.sparks.length===12],['Abre el cofre de las chispas',state.chests.includes('spark-chest')],['Recupera las ocho piezas ('+state.pieces.length+'/8)',state.pieces.length===8]];
+ goals.forEach(([text,done])=>scroll.append(append(el('li'),el('span','objective-check'+(done?' done':''),done?'✓':'○'),el('span','',text))));append(card,scroll,button(objectivesOpen?'Ocultar objetivo en el mapa':'Mostrar objetivo en el mapa',()=>{objectivesOpen=!objectivesOpen;closeOverlay();}));fitWindow(card,card.lastElementChild);
 }
 function showSettings(){
  if(treasure)return;const card=panel('Ajustes'),label=el('label','','Nivel de partida'),select=el('select');for(const level of STORY_LEVELS){const opt=el('option','',levelNames[level]);opt.value=level;opt.selected=level===settings.startingLevel;select.append(opt);}label.append(select);
@@ -967,19 +1365,21 @@ function showSettings(){
  toggle('Sonido de los tesoros',settings.sound!==false,value=>{settings.sound=value;if(value)uiSound('tick');},'ico_sonido');
  const motionToggle=toggle('Reducir movimiento',reduced,value=>{settings.reducedMotion=value;applyMotion();},'ico_ajustes');motionToggle.disabled=motion.matches;
  toggle('Controles táctiles',usingTouch(),value=>{settings.touchControls=value;applyTouch();clearInput();resize();},'ico_gestos');
- toggle('Modo prueba (activa «avanzar una semana» en el banco)',settings.testMode,value=>{settings.testMode=value;},'ico_pieza');
- append(card,el('p','small','← → / A D: caminar · Shift o doble toque: correr · Espacio / W / ↑: saltar · ↓ / S: bajar · E / Enter: usar · Esc / Q: volver.'),button('Reiniciar progreso',()=>{const warning=panel('Reiniciar progreso','Volverás al inicio con 60 fichas y la mochila vacía.');append(warning,button('Sí, reiniciar',()=>{state=freshState();settings=state.settings;applyMotion();applyTouch();objectivesOpen=true;Object.assign(player,makeBody(map.spawn.x,map.spawn.y));player.kid=createKid();Object.assign(pet,makeBody(player.x-70,player.y),{pose:null,action:'sit',garden:null,w:35,h:42});save();closeOverlay();toast('Una nueva visita a la Academia.');},'primary'),button('Seguir explorando',showSettings));}));
+ if(!SERVER)toggle('Modo prueba (activa «avanzar una semana» en el banco)',settings.testMode,value=>{settings.testMode=value;},'ico_pieza');
+ const keysHelp=el('p','small','← → / A D: caminar · Shift o doble toque: correr · Espacio / W / ↑: saltar · ↓ / S: bajar · E / Enter: usar · Esc / Q: volver.');
+ if(SERVER){append(card,keysHelp,append(el('div','settings-links'),button('Ver la apertura',()=>{upload(true);location.href='/alumno/apertura?repetir=1';}),button('Salir de la Academia',()=>{upload(true);location.href='/alumno';},'primary')));card.classList.add('settings-panel');fitWindow(card,card.lastElementChild);return;}
+ append(card,keysHelp,button('Reiniciar progreso',()=>{const warning=panel('Reiniciar progreso','Volverás al inicio con 60 tokens y la mochila vacía.');append(warning,button('Sí, reiniciar',()=>{state=freshState();settings=state.settings;applyMotion();applyTouch();objectivesOpen=true;Object.assign(player,makeBody(map.spawn.x,map.spawn.y));player.kid=createKid();Object.assign(pet,makeBody(player.x-70,player.y),{pose:null,action:'sit',garden:null,w:35,h:42});save();closeOverlay();toast('Una nueva visita a la Academia.');},'primary'),button('Seguir explorando',showSettings));fitWindow(warning,...[...warning.children].filter(n=>n.tagName==='BUTTON'));}));card.classList.add('settings-panel');fitWindow(card,card.lastElementChild);
 }
 function applyTouch(){document.body.classList.toggle('touch-controls',settings.touchControls===true);document.body.classList.toggle('touch-disabled',settings.touchControls===false);}
 function installGameKit(){
  for(const [name,src] of Object.entries(SRC))if(name.startsWith('ui_'))document.body.style.setProperty('--'+name.replaceAll('_','-'),`url("${src}")`);
- for(const [id,icon,label] of [['bag','ico_mochila','Mochila'],['gestures','ico_gestos','Gestos'],['objectives-toggle','ico_objetivos','Objetivos'],['settings','ico_ajustes','Ajustes']]){const node=$(id);node.classList.add('hud-action');node.setAttribute('aria-label',label);node.replaceChildren(uiIcon(icon),el('span','hud-label',label));}
- $('tokens').replaceChildren(uiIcon('ico_ficha'),el('span','',state.tokens),el('small','counter-word','fichas'));$('sparks').replaceChildren(uiIcon('ico_chispa'),el('span','',state.sparks.length+'/12'),el('small','counter-word','chispas'));$('clock-hud').replaceChildren(uiIcon('ico_pieza'),el('span','',state.pieces.length+'/8'),el('small','counter-word','piezas'));$('window-wallet').replaceChildren(uiIcon('ico_ficha'),el('span','',state.tokens));$('window-wallet').children[1].id='window-coins';
+ for(const [id,icon,label] of [['clock-hud','ico_pieza','Reloj'],['bag','ico_mochila','Mochila'],['gestures','ico_gestos','Gestos'],['objectives-toggle','ico_objetivos','Objetivos'],['settings','ico_ajustes','Ajustes']]){const node=$(id);node.classList.add('hud-action');node.setAttribute('aria-label',label);node.title=label;node.replaceChildren(uiIcon(icon),el('span','hud-label',label));}
+ $('tokens').replaceChildren(uiIcon('ico_ficha'),el('span','',state.tokens),el('small','counter-word','tokens'));$('copihues').replaceChildren(uiIcon('ico_copihue'),el('span','',state.copihues),el('small','counter-word','copihues'));$('sparks').replaceChildren(uiIcon('ico_chispa'),el('span','',state.sparks.length+'/12'),el('small','counter-word','chispas'));$('clock-hud').replaceChildren(uiIcon('ico_pieza'),el('span','clock-badge',state.pieces.length+'/8'));$('window-wallet').replaceChildren(uiIcon('ico_ficha'),el('span','',state.tokens));$('window-wallet').children[1].id='window-coins';$('window-wallet').append(uiIcon('ico_copihue'),el('span','',state.copihues));$('window-wallet').children[3].id='window-copihues';
  applyTouch();
 }
 
 function interact(e=near){
- if(treasure){finishTreasure();return;}if(!e || !overlay.hidden)return;
+ if(portalTravel)return;if(treasure){finishTreasure();return;}if(!e || !overlay.hidden)return;
  if(e.classmate){showClassmate(e);return;}
  if(e.type==='npc'){
   if(e.id==='estela'){
@@ -998,8 +1398,15 @@ function interact(e=near){
  if(e.type==='exit'){const next=MAP_DATA.maps?.[e.map];if(next){enterMap(next,e.spawn);}else showMessage(e.name,e.text||'Pronto: un nuevo lugar para explorar.','ico_candado');return;}
  station(e.action);
 }
+// In the game, Training also leads to the Islands of challenges: an extra, one subject per island,
+// outside the Academy's story (which mixes subjects).
+function training(){
+ showOverlay('dialogue');const choices=el('div','message-choices');stage.append(choices);
+ messageBox('Entrenamiento','Aquí practicas con tres desafíos rápidos. Y si quieres retos de una sola asignatura, las Islas de retos te esperan: cada isla es una zona de Chile.','estela',()=>{},{choices:true});
+ choices.append(button('Práctica rápida',()=>{if(completeMessage())return;practice();},'primary'),button('Ir a las Islas de retos',()=>{if(completeMessage())return;upload(true);location.href='/alumno/islas';}));
+}
 function station(action){
- const handlers={travel:showTravel,clock:showClock,shop:showShop,bank:showBank,practice,reading:showReading,telescope:()=>startDialogue(currentData.dialogues.telescope,showSky),garden:()=>{
+ const handlers={travel:showTravel,clock:showClock,shop:showShop,bank:showBank,practice:SERVER?training:practice,reading:showReading,telescope:()=>startDialogue(currentData.dialogues.telescope,showSky),garden:()=>{
   showOverlay('dialogue');const choices=el('div','message-choices');stage.append(choices);messageBox('Jardín de mascotas','Tu zorro también merece un descanso. ¿Jugamos un rato?','mascota',()=>{},{choices:true});choices.append(button('Jugar con tu mascota',()=>{if(completeMessage())return;pet.garden={x:map.entities.find(e=>e.id==='garden')?.x||950,until:timer+10,started:false};closeOverlay();toast('¡Hora de jugar! Tu zorro vuelve contigo después.');},'primary'));
  },arcade:()=>showMessage(MAP_DATA.stationCopy.arcade.title,MAP_DATA.stationCopy.arcade.text,'ico_candado'),board:()=>showMessage(MAP_DATA.stationCopy.board.title,MAP_DATA.stationCopy.board.text,'ico_objetivos')};
  (handlers[action]||closeOverlay)();
@@ -1408,7 +1815,9 @@ function stepPet(dt){
 }
 function visible(x,w=100){return x+w>=cam.x-100 && x-w<=cam.x+W/zoom+100;}
 function drawActor(actor){
- if(!visible(actor.x))return;bind(actor);C.save();C.translate(actor.x,actor.y);C.scale(1+actor.squash*.12,1-actor.squash*.12);
+ if(!visible(actor.x))return;bind(actor);C.save();C.translate(actor.x,actor.y);
+ if(actor===player && player.energy>=.999 && player.ground){const beat=reduced?.5:.5+.5*Math.sin(timer*10);glow(0,-6,46+beat*10,'#ffd23f',.28+beat*.3);glow(0,-50,40,'#7ff3e6',.08+beat*.12);if(!reduced && Math.random()<.18)emit('dust',actor.x+rand(-22,22),actor.y-rand(10,90),{vx:rand(-10,10),vy:rand(-70,-30),size:rand(1.5,3),max:.5,color:'#ffe680'});}
+ C.scale(1+actor.squash*.12,1-actor.squash*.12);
  C.fillStyle='#08091766';C.beginPath();C.ellipse(0,2,24,5,0,0,Math.PI*2);C.fill();if(actor.flip>0){const ease=1-Math.pow(1-actor.flip,2);C.translate(0,-48);C.rotate(actor.face*ease*Math.PI*2);C.translate(0,48);}drawKid();C.restore();
  if(actor.classmate)label(actor.name,actor.x,actor.y-110,'#c7e8e4',12);
  if(actor.waveUntil>timer)label('¡Hola!',actor.x+30,actor.y-75,'#f5c842',15);
@@ -1423,29 +1832,176 @@ function bubble(text,x,y){C.save();C.font='800 13px Nunito, sans-serif';const wo
 // All anchors and animation regions are expressed in source pixels in ART_META / map.animations.
 function contactShadow(x,y,width){C.save();C.fillStyle='#17191455';C.beginPath();C.ellipse(x,y+1,width/2,Math.max(3,width*.075),0,0,Math.PI*2);C.fill();C.restore();}
 function pieceBox(p){const meta=ART_META[p.sprite],img=images[p.sprite];if(!img)return null;const size=meta?.size||[img.width,img.height],ground=meta?.ground??size[1];return {meta,img,scale:p.w/size[0],sx:p.w/size[0],sy:p.h/size[1],top:-ground*p.h/size[1],left:-p.w/2,size};}
-function glow(x,y,r,color='#ffd36a',strength=.4){C.save();C.globalCompositeOperation='lighter';C.globalAlpha=strength;const g=C.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,color);g.addColorStop(1,'#ffce6000');C.fillStyle=g;C.beginPath();C.arc(x,y,r,0,Math.PI*2);C.fill();C.restore();}
+const glowSprites={};
+function glowSprite(color){if(glowSprites[color])return glowSprites[color];const c=document.createElement('canvas');c.width=c.height=64;const g=c.getContext('2d'),r=g.createRadialGradient(32,32,0,32,32,32);r.addColorStop(0,color);r.addColorStop(1,'#ffce6000');g.fillStyle=r;g.fillRect(0,0,64,64);return glowSprites[color]=c;}
+function glow(x,y,r,color='#ffd36a',strength=.4){if(r<=0 || strength<=0)return;const a=C.globalAlpha,o=C.globalCompositeOperation;C.globalCompositeOperation='lighter';C.globalAlpha=Math.min(1,strength);C.drawImage(glowSprite(color),x-r,y-r,r*2,r*2);C.globalAlpha=a;C.globalCompositeOperation=o;}
 const partCache=new Map();
-function part(sprite,region,kind){const key=sprite+JSON.stringify(region)+kind;if(partCache.has(key))return partCache.get(key);const img=images[sprite],c=document.createElement('canvas');if(kind==='circle'){const [x,y,r]=region;c.width=c.height=Math.ceil(r*2);const g=c.getContext('2d');g.beginPath();g.arc(r,r,r,0,Math.PI*2);g.clip();g.drawImage(img,x-r,y-r,r*2,r*2,0,0,r*2,r*2);}partCache.set(key,c);return c;}
-// The portal gets one reusable offscreen surface; its mask never changes.
-let vortexSurface=null,vortexGradient=null;
-function vortex(){
- const meta=ART_META.portal,size=meta.size;if(!vortexSurface){vortexSurface=document.createElement('canvas');vortexSurface.width=size[0];vortexSurface.height=size[1];}
- const g=vortexSurface.getContext('2d'),t=reduced?0:timer;g.clearRect(0,0,...size);g.save();g.translate(226,280);
- if(!vortexGradient){vortexGradient=g.createRadialGradient(0,0,1,0,0,165);vortexGradient.addColorStop(0,'#fff7c3');vortexGradient.addColorStop(.1,'#69ede0');vortexGradient.addColorStop(.48,'#087f96');vortexGradient.addColorStop(.77,'#15397b');vortexGradient.addColorStop(1,'#091a3c');}
- g.fillStyle=vortexGradient;g.fillRect(-226,-280,...size);g.scale(1,1.08);g.rotate(-t*.7);g.lineCap='round';
- for(let arm=0;arm<5;arm++){
-  for(let band=0;band<3;band++){g.beginPath();for(let j=0;j<=45;j++){const r=2+j*3.5,a=arm*Math.PI*2/5+r*.032+band*.025,x=Math.cos(a)*r,y=Math.sin(a)*r;j?g.lineTo(x,y):g.moveTo(x,y);}g.strokeStyle=['#166ac080','#27e6d780','#896beb88'][band];g.lineWidth=14-band*4;g.stroke();}
+function part(sprite,region,kind){const key=sprite+JSON.stringify(region)+kind;if(partCache.has(key))return partCache.get(key);const img=images[sprite],c=document.createElement('canvas');if(kind==='circle'){const [x,y,r]=region,[w,h]=ART_META[sprite].size,sx=img.width/w,sy=img.height/h;c.width=c.height=Math.ceil(r*2);const g=c.getContext('2d');g.beginPath();g.arc(r,r,r,0,Math.PI*2);g.clip();g.drawImage(img,(x-r)*sx,(y-r)*sy,r*2*sx,r*2*sy,0,0,r*2,r*2);}partCache.set(key,c);return c;}
+const loopSurfaces=new Map();
+function sampleLoop(name,time){
+ const meta=ART_META[name];if(reduced)return images[meta.frameKeys[0]];
+ let surface=loopSurfaces.get(name);if(!surface){surface=document.createElement('canvas');[surface.width,surface.height]=meta.size;loopSurfaces.set(name,surface);}
+ const phase=time*meta.fps,index=Math.floor(phase)%meta.frames,blend=phase-Math.floor(phase),g=surface.getContext('2d');
+ g.clearRect(0,0,...meta.size);g.globalCompositeOperation='source-over';g.globalAlpha=1-blend;g.drawImage(images[meta.frameKeys[index]],0,0,...meta.size);
+ // Summing premultiplied colours keeps the opaque body solid throughout the crossfade.
+ g.globalCompositeOperation='lighter';g.globalAlpha=blend;g.drawImage(images[meta.frameKeys[(index+1)%meta.frames]],0,0,...meta.size);g.globalAlpha=1;g.globalCompositeOperation='source-over';return surface;
+}
+// A single 320px offscreen texture and a bounded hall particle pool share the game's RAF.
+const PORTAL_PARTICLE_CAP=120;
+let vortexSurface=null,vortexStatic=false,vortexAt=-1,vortexRim=null,portalPhase=0,portalPull=0,portalArc=null,nextPortalArc=1.6;
+let portalSeed=73471;const portalRandom=()=>{portalSeed=(portalSeed*1664525+1013904223)>>>0;return portalSeed/4294967296;};
+// The portal pulls like a black hole (the user: «que atrape partículas hacia su interior, como un
+// efecto magnético, como un agujero negro»): motes live in polar coordinates around the opening,
+// orbit faster and fall faster the closer they get (Kepler-like), stretch into streaks, skim the
+// floor as dragged dust, and vanish into the core with a twinkle. R is the opening's radius.
+// Motes appear at random around the portal and fall straight into its centre, each at its own
+// speed, accelerating as they near it (the user, 2026-10-07: «de manera lineal… a diferente
+// velocidad… antes de desaparecer generan un brillo»). Each capture leaves a starburst and feeds
+// the core's glow. Positions are offsets from the opening's centre, in world pixels.
+const portalParticles=Array.from({length:PORTAL_PARTICLE_CAP},()=>({x:0,y:0,ex:0,ey:0,t:0,dur:1,kind:0,size:1,warm:false,live:false}));
+let portalR=120,portalFlashes=[],portalFeed=0,portalDown=200;
+function spawnMote(m,R,anywhere,from){
+ const a=portalRandom()*Math.PI*2,r=R*(.75+portalRandom()*2.3);
+ m.x=from?from[0]:Math.cos(a)*r;m.y=from?from[1]:Math.sin(a)*r*.85;
+ if(!from && m.y>portalDown)m.y=portalDown*portalRandom();
+ m.ex=(portalRandom()-.5)*R*.16;m.ey=(portalRandom()-.5)*R*.16;
+ const k=portalRandom();m.kind=from?1:k<.12?2:k<.45?1:0;m.size=.7+portalRandom()*.8;m.warm=portalRandom()<.35;
+ m.dur=from?.7+portalRandom()*.4:.9+portalRandom()*2.1;m.t=anywhere?portalRandom()*m.dur:0;m.live=true;
+}
+function motePos(m,u){const e=Math.pow(clamp(u,0,1),2.2);return [m.x+(m.ex-m.x)*e,m.y+(m.ey-m.y)*e];}
+const moteSprites={},cometSprites={};
+function cometSprite(color){if(cometSprites[color])return cometSprites[color];const c=document.createElement('canvas');c.width=128;c.height=32;const g=c.getContext('2d');
+ const along=g.createLinearGradient(0,0,128,0);along.addColorStop(0,color+'00');along.addColorStop(.75,color+'66');along.addColorStop(1,color+'cc');g.fillStyle=along;
+ // Feathered across its width: a soft ellipse, so the streak has no hard edge anywhere.
+ g.filter='blur(3px)';g.beginPath();g.ellipse(64,16,60,6,0,0,Math.PI*2);g.fill();g.filter='none';return cometSprites[color]=c;}
+function moteSprite(color){if(moteSprites[color])return moteSprites[color];const c=document.createElement('canvas');c.width=c.height=32;const g=c.getContext('2d'),r=g.createRadialGradient(16,16,0,16,16,16);r.addColorStop(0,'#ffffff');r.addColorStop(.25,color);r.addColorStop(1,color+'00');g.fillStyle=r;g.fillRect(0,0,32,32);return moteSprites[color]=c;}
+function portalPower(){
+ const surge=reduced?0:Math.pow(Math.max(0,Math.cos((timer%6)/6*Math.PI*2)),18);
+ const travel=portalTravel?clamp(portalTravel.t/1.2,0,1):0;
+ return {surge,travel,speed:1+portalPull*.8+surge*.8+travel*4};
+}
+function stepPortal(dt){
+ const p=map.props.find(p=>p.sprite==='portal');if(!p || reduced)return;
+ const distance=Math.hypot(player.x-p.x,player.y-p.y),target=clamp(1-distance/(3*CH),0,1);
+ portalPull+=(target-portalPull)*Math.min(1,dt*3);
+ const power=portalPower();portalPhase+=dt*power.speed;
+ const b=pieceBox(p),R=map.animations.portal.vortex.radius[0]*b.sx;portalR=R;
+ const a=map.animations.portal.vortex,cy=b.top+a.center[1]*b.sy;portalDown=Math.max(10,-cy-14);
+ const count=Math.min(PORTAL_PARTICLE_CAP,45+Math.floor(portalPull*35)+Math.floor(power.travel*25)),pull=power.speed*(1+portalPull*.6);
+ for(let i=0;i<count;i++){
+  const m=portalParticles[i];if(!m.live)spawnMote(m,R,true);
+  m.t+=dt*pull;
+  if(m.t>=m.dur){if(portalFlashes.length<14)portalFlashes.push({x:m.ex,y:m.ey,t:0,size:.6+m.kind*.45,warm:m.warm});portalFeed=Math.min(1.2,portalFeed+.08+m.kind*.06);spawnMote(m,R,false);}
  }
- for(let i=0;i<36;i++){const u=((i/36+t*.11)%1),r=150*(1-u),a=i*2.4+u*9;g.fillStyle=i%4?'#b0fff5':'#fff5b7';g.globalAlpha=.3+.7*Math.sin(u*Math.PI);g.beginPath();g.arc(Math.cos(a)*r,Math.sin(a)*r,1+i%3*.6,0,Math.PI*2);g.fill();}
- g.globalAlpha=1;g.fillStyle='#fff4bf';g.beginPath();g.arc(0,0,5+(reduced?0:Math.sin(t*2)*1.1),0,Math.PI*2);g.fill();g.restore();g.globalCompositeOperation='destination-in';g.drawImage(images.portal_mask,0,0);g.globalCompositeOperation='source-over';return vortexSurface;
+ // Near the portal, sparkles leave the child's body and are pulled straight in too.
+ if(portalPull>.15 && portalRandom()<dt*10*portalPull){const m=portalParticles[Math.floor(portalRandom()*count)],cx=b.left+a.center[0]*b.sx;spawnMote(m,R,false,[player.x-p.x-cx,player.y-CH*(.2+portalRandom()*.7)-p.y-cy]);}
+ for(const f of portalFlashes)f.t+=dt;portalFlashes=portalFlashes.filter(f=>f.t<.32);
+ portalFeed=Math.max(0,portalFeed-dt*1.4);
+ if(timer>=nextPortalArc){const pairs=[[0,1],[1,2],[2,3]],pair=pairs[Math.floor(portalRandom()*3)];portalArc={pair,at:timer};nextPortalArc=timer+1+portalRandom()*2;}
+ if(portalArc && timer-portalArc.at>.2)portalArc=null;
+}
+function vortex(){
+ const size=ART_META.portal.size,a=map.animations.portal.vortex,[cx,cy]=a.center,meta=ART_META.portal_video;
+ if(!vortexSurface){vortexSurface=document.createElement('canvas');vortexSurface.width=320;vortexSurface.height=Math.round(320*size[1]/size[0]);}
+ if(reduced && vortexStatic)return vortexSurface;
+ if(!reduced && vortexAt>=0 && timer-vortexAt<1/24)return vortexSurface;vortexAt=timer;
+ const g=vortexSurface.getContext('2d'),t=reduced?0:portalPhase,power=portalPower(),frame=sampleLoop('portal_video',t),[left,top,right,bottom]=meta.sourceRect,rect=[left,top,right-left,bottom-top];
+ g.setTransform(vortexSurface.width/size[0],0,0,vortexSurface.height/size[1],0,0);g.clearRect(0,0,...size);
+ g.drawImage(frame,...rect);
+ g.save();g.translate(cx,cy);g.rotate(reduced?0:Math.sin(t*.7)*.07);
+ // The measured base underneath fills the small gaps from rotating a masked opening.
+ g.globalAlpha=reduced?0:.82;g.drawImage(frame,left-cx,top-cy,rect[2],rect[3]);
+ g.globalCompositeOperation='lighter';g.globalAlpha=power.surge*.2+power.travel*.4;g.drawImage(frame,left-cx,top-cy,rect[2],rect[3]);g.restore();
+ // The rim follows the measured opening silhouette; the original ornaments stay visible.
+ if(!vortexRim){vortexRim=document.createElement('canvas');vortexRim.width=vortexSurface.width;vortexRim.height=vortexSurface.height;const r=vortexRim.getContext('2d');r.setTransform(vortexRim.width/size[0],0,0,vortexRim.height/size[1],0,0);r.strokeStyle='#6df5e0';r.shadowColor='#7867ff';r.shadowBlur=9;r.lineWidth=4;r.beginPath();(a.edge||ART_META.portal.opening.polygon).forEach(([x,y],i)=>i?r.lineTo(x,y):r.moveTo(x,y));r.closePath();r.stroke();}
+ g.save();g.setTransform(1,0,0,1,0,0);g.globalCompositeOperation='lighter';g.globalAlpha=Math.min(1,.55+power.surge*.3);g.drawImage(vortexRim,0,0);g.restore();
+ g.globalCompositeOperation='destination-in';g.drawImage(images.portal_mask,0,0,...size);g.globalCompositeOperation='source-over';vortexStatic=reduced;return vortexSurface;
+}
+// The portal's light (two halos, the floor pool and the reflection) covers a large area with
+// additive blending, the costliest thing in the hall: it is baked once at half resolution and
+// drawn as one image; surges and travel add a second, fading copy.
+// The portal's light covers a large area with additive blending, the costliest thing in the hall.
+// The halos on the wall are painted once into a copy of the atrium background (drawn anyway); the
+// floor pool and reflection are baked once at half resolution. Surges add a brief extra copy.
+let portalLightBake=null,atriumLit=null;
+function portalGeometry(){const p=map.props.find(p=>p.sprite==='portal'),b=p&&pieceBox(p);if(!b)return null;const a=map.animations.portal.vortex;return {p,b,cx:b.left+a.center[0]*b.sx,cy:b.top+a.center[1]*b.sy};}
+function litAtrium(layer){
+ if(atriumLit?.layer===layer)return atriumLit.canvas;const img=images.atrio,geo=portalGeometry();if(!geo)return img;
+ const c=document.createElement('canvas');c.width=img.width;c.height=img.height;const g=c.getContext('2d');g.drawImage(img,0,0);
+ const kx=img.width/layer.w,ky=img.height/layer.h,x=(geo.p.x+geo.cx-layer.x)*kx,y=(geo.p.y+geo.cy-layer.y)*ky,w=geo.p.w;
+ g.globalCompositeOperation='lighter';const halo=(dy,r,color,alpha)=>{g.globalAlpha=alpha;g.drawImage(glowSprite(color),x-r*kx,y+dy*ky-r*ky,r*2*kx,r*2*ky);};
+ halo(0,w*.85,'#489dbe',.12);halo(-40,w*.63,'#9875ee',.09);
+ atriumLit={layer,canvas:c};return c;
+}
+function bakePortalLight(p,b){
+ const left=-p.w*.75,top=-30,w=p.w*1.5,h=100,k=.5;
+ const c=document.createElement('canvas');c.width=Math.ceil(w*k);c.height=Math.ceil(h*k);const g=c.getContext('2d');g.scale(k,k);g.translate(-left,-top);g.globalCompositeOperation='lighter';
+ g.save();g.translate(0,15);g.scale(1,.22);g.globalAlpha=.15;g.drawImage(glowSprite('#63dfd1'),-p.w*.7,-p.w*.7,p.w*1.4,p.w*1.4);g.restore();
+ const streak=g.createLinearGradient(0,-8,0,65);streak.addColorStop(0,'#a7ffee50');streak.addColorStop(1,'#77acff00');g.fillStyle=streak;g.globalAlpha=.7;g.beginPath();g.moveTo(-p.w*.13,-8);g.lineTo(p.w*.13,-8);g.lineTo(p.w*.32,65);g.lineTo(-p.w*.32,65);g.closePath();g.fill();
+ return portalLightBake={canvas:c,left,top,w,h,pw:p.w};
+}
+function portalLight(p,b){
+ const power=portalPower(),bake=portalLightBake?.pw===p.w?portalLightBake:bakePortalLight(p,b);
+ C.save();C.globalCompositeOperation='lighter';C.drawImage(bake.canvas,bake.left,bake.top,bake.w,bake.h);
+ // A surge (every ~6 s) or the travel sequence brightens the halo for a moment.
+ const extra=power.surge*.8+power.travel;if(extra>.02){const a=map.animations.portal.vortex,cx=b.left+a.center[0]*b.sx,cy=b.top+a.center[1]*b.sy;C.globalAlpha=Math.min(1,extra);C.drawImage(bake.canvas,bake.left,bake.top,bake.w,bake.h);C.globalAlpha=Math.min(1,extra)*.15;C.drawImage(glowSprite('#489dbe'),cx-p.w*.6,cy-p.w*.6,p.w*1.2,p.w*1.2);}
+ if(!reduced && timer%6<1){const u=(timer%6),r=30+u*p.w;C.globalAlpha=(1-u)*.38;C.strokeStyle='#a1ffee';C.lineWidth=2;C.beginPath();C.ellipse(0,12,r,r*.19,0,0,Math.PI*2);C.stroke();}C.restore();
+}
+function portalMotes(p,b){
+ if(reduced)return;const a=map.animations.portal.vortex,power=portalPower(),cx=b.left+a.center[0]*b.sx,cy=b.top+a.center[1]*b.sy,R=portalR;
+ C.save();C.globalCompositeOperation='lighter';C.lineCap='round';const base=C.getTransform?.();
+ // The core brightens with every capture, so the portal looks like it is feeding.
+ const feed=portalFeed+power.surge*.6;C.globalAlpha=Math.min(.6,.1+feed*.3);const cd=R*(.5+feed*.25);C.drawImage(moteSprite('#bffcff'),cx-cd/2,cy-cd/2,cd,cd);
+ const count=Math.min(PORTAL_PARTICLE_CAP,45+Math.floor(portalPull*35)+Math.floor(power.travel*25));
+ for(let i=0;i<count;i++){
+  const m=portalParticles[i];if(!m.live)continue;const u=m.t/m.dur;
+  const [x,y]=motePos(m,u),[tx,ty]=motePos(m,u-.2),speed=Math.pow(clamp(u,0,1),1.2),dx=x-tx,dy=y-ty,len=Math.hypot(dx,dy);
+  // Faint where it appears, brighter as it speeds up, brightest at the moment it is captured.
+  const glowA=Math.min(1,m.t/.4)*(.12+.88*Math.pow(speed,1.6)),col=m.warm?'#ffd88a':'#9ff7ff',w=(m.kind===2?9:m.kind===1?7:5)*m.size*(.7+speed*.6);
+  if(len>1 && !base){C.save();C.translate(cx+x,cy+y);C.rotate(Math.atan2(dy,dx));C.globalAlpha=glowA;C.drawImage(cometSprite(col),-len*1.15,-w,len*1.2,w*2);C.restore();}
+  else if(len>1){const ang=Math.atan2(dy,dx),co=Math.cos(ang),si=Math.sin(ang);C.setTransform(base.a*co+base.c*si,base.b*co+base.d*si,base.c*co-base.a*si,base.d*co-base.b*si,base.a*(cx+x)+base.c*(cy+y)+base.e,base.b*(cx+x)+base.d*(cy+y)+base.f);C.globalAlpha=glowA;C.drawImage(cometSprite(col),-len*1.15,-w,len*1.2,w*2);C.setTransform(base);}
+  if(m.kind || u>.7){const d=(m.kind===2?18:m.kind===1?13:9)*m.size*(.6+speed*1.1);C.globalAlpha=glowA*.9;C.drawImage(moteSprite(m.warm?'#ffcf6b':'#6ff3ff'),cx+x-d/2,cy+y-d/2,d,d);}
+ }
+ // The capture: a short four-point starburst where the mote vanished.
+ for(const f of portalFlashes){const u=f.t/.32,k=1-u,len=(10+22*f.size)*(.6+u*.6),x=cx+f.x,y=cy+f.y;
+  C.globalAlpha=k*.8;const d=(22+30*f.size)*(.7+u*.5);C.drawImage(moteSprite(f.warm?'#ffe39a':'#d6ffff'),x-d/2,y-d/2,d,d);
+  C.globalAlpha=k*.35;C.strokeStyle='#ffffff';C.lineWidth=1.2*k+.3;C.beginPath();C.moveTo(x-len,y);C.lineTo(x+len,y);C.moveTo(x,y-len*.8);C.lineTo(x,y+len*.8);C.stroke();}
+ C.restore();
+}
+function portalFrame(a,t){
+ for(let i=0;i<(a.numerals||[]).length;i++){const [x,y]=a.numerals[i],n=a.numerals.length,phase=reduced?0:(t*.75)%n,distance=Math.min((i-phase+n)%n,(phase-i+n)%n);glow(x,y,9,'#fff1ae',reduced?.12:Math.max(.04,.65-distance*.26));}
+ if(reduced || !portalArc)return;
+ const [from,to]=portalArc.pair,[x1,y1,r1]=a.circles[from],[x2,y2,r2]=a.circles[to],angle=Math.atan2(y2-y1,x2-x1),sx=x1+Math.cos(angle)*r1,sy=y1+Math.sin(angle)*r1,ex=x2-Math.cos(angle)*r2,ey=y2-Math.sin(angle)*r2;
+ C.save();C.globalCompositeOperation='lighter';C.strokeStyle='#cffff8';C.globalAlpha=(1-(timer-portalArc.at)/.2)*.85;C.lineWidth=1.5;C.beginPath();C.moveTo(sx,sy);
+ for(let i=1;i<=7;i++){const u=i/7,bend=from===2?Math.sin(u*Math.PI)*32:Math.sin(i*19+Math.floor(timer*30))*5;C.lineTo(sx+(ex-sx)*u+Math.sin(angle)*bend,sy+(ey-sy)*u+Math.cos(angle)*bend);}C.stroke();C.restore();
+}
+function beginPortalTravel(href){
+ if(portalTravel)return;
+ if(reduced){window.open(href,'_blank','noopener,noreferrer');return;}
+ // Reserve the existing travel tab during the click so the later navigation is not popup-blocked.
+ const destination=window.open('about:blank','_blank');
+ if(!destination){showMessage('El viaje te espera','Toca el enlace para abrir la historia.','portal');const link=el('a','message-link','¡Viajar!');link.href=href;link.target='_blank';link.rel='noopener noreferrer';stage.querySelector('.message-controls').append(link);return;}
+ destination.opener=null;closeOverlay();clearInput();player.vx=0;portalTravel={t:0,action:()=>destination.location.replace(href)};$('portal-flash').hidden=false;document.body.classList.add('travelling');announce('El portal se abre. ¡Buen viaje!');
+}
+function advancePortalTravel(dt){
+ if(!portalTravel)return;
+ portalTravel.t+=dt;const u=clamp(portalTravel.t/1.2,0,1),flash=$('portal-flash');flash.style.opacity=String(u<.78?u*u*.8:clamp((u-.78)/.14,0,1));flash.style.background=u>.9?'#fffdf2':'';
+ if(u>=1){const action=portalTravel.action;portalTravel=null;flash.hidden=true;flash.style.opacity='0';document.body.classList.remove('travelling');clearInput();action();}
 }
 function animatePiece(p,box){
  const a=map.animations?.[p.sprite];if(!a)return;const t=reduced?0:timer;
  C.save();C.translate(box.left,box.top);C.scale(box.sx,box.sy);
- for(const circle of a.circles||[]){const [x,y,r,rate]=circle;C.save();C.beginPath();C.arc(x,y,r,0,Math.PI*2);C.clip();C.translate(x,y);C.rotate(p.sprite==='banco'?Math.sin(t*.3)*.24:t*rate);C.drawImage(part(p.sprite,circle,'circle'),-r,-r,r*2,r*2);C.restore();}
+ for(const circle of a.circles||[]){const [x,y,r,rate]=circle;C.save();C.translate(x,y);C.rotate(p.sprite==='banco'?Math.sin(t*.3)*.24:t*rate);C.drawImage(part(p.sprite,circle,'circle'),-r,-r,r*2,r*2);C.restore();}
  if(a.hand){const [x,y,r]=a.hand;C.save();C.translate(x,y);C.rotate(Math.floor(t)*Math.PI/30);C.strokeStyle='#ffe69f';C.lineWidth=1.6;C.beginPath();C.moveTo(0,15);C.lineTo(0,-r);C.stroke();C.restore();}
  if(a.sway){const {polygon,pivot,amplitude}=a.sway;C.save();C.translate(...pivot);C.rotate(reduced?0:Math.sin(t*1.4+p.x)*amplitude);C.drawImage(images[p.sprite+'_sway'],-pivot[0],-pivot[1]);C.restore();}
- if(a.screen){C.save();C.beginPath();a.screen.forEach(([x,y],i)=>i?C.lineTo(x,y):C.moveTo(x,y));C.closePath();C.clip();C.fillStyle='#071f32';C.fillRect(40,55,110,90);for(let i=0;i<18;i++){const x=51+(i*37)%86,y=62+(i*19+t*11)%70;C.fillStyle=i%3?'#72ead7':'#ffde85';C.fillRect(x,y,i%3?2:4,2);}C.fillStyle='#fae8a2';if(reduced || Math.floor(t*2)%2===0)C.fillRect(79,111,17,3);C.restore();}
+ if(a.screen){
+  C.save();C.beginPath();a.screen.forEach(([x,y],i)=>i?C.lineTo(x,y):C.moveTo(x,y));C.closePath();C.clip();
+  const [tl,tr,,bl]=a.screen;C.transform(tr[0]-tl[0],tr[1]-tl[1],bl[0]-tl[0],bl[1]-tl[1],...tl);
+  C.fillStyle='#062b32';C.fillRect(0,0,1.25,1); // The source's BR extends past the affine unit square.
+  for(let i=0;i<18;i++){const x=.06+(i*37%86)/94,y=.06+((i*19+t*11)%70)/80;C.fillStyle=i%3?'#72ead7':'#ffde85';C.fillRect(x,y,i%3?.025:.05,.025);}
+  C.fillStyle='#fae8a2';if(reduced || Math.floor(t*2)%2===0)C.fillRect(.37,.77,.22,.035);C.restore();
+ }
+ if(p.sprite==='portal')portalFrame(a,t);
  for(const [x,y,r] of a.lights||[])glow(x,y,r,'#ffca68',reduced?.25:.3+Math.sin(t*5+x)*.06+Math.sin(t*11+y)*.025);
  if(a.twinkle){const [x,y]=a.twinkle,alpha=reduced?.35:Math.pow(Math.max(0,Math.sin(t*.9+p.x)),12);C.save();C.globalAlpha=alpha;C.strokeStyle='#fff6cc';C.lineWidth=2;C.beginPath();C.moveTo(x-8,y);C.lineTo(x+8,y);C.moveTo(x,y-8);C.lineTo(x,y+8);C.stroke();C.restore();}
  if(a.butterfly){const [x,y]=a.butterfly,bx=x+(reduced?0:Math.sin(t*1.3)*35),by=y+(reduced?0:Math.cos(t*2)*16);C.save();C.translate(bx,by);C.fillStyle='#ffcb55';for(const side of [-1,1]){C.beginPath();C.ellipse(side*5,0,Math.max(1,reduced?5:Math.abs(Math.sin(t*16))*6),4,side*.5,0,Math.PI*2);C.fill();}C.restore();}
@@ -1455,8 +2011,8 @@ function prop(p){
  if(!visible(p.x,p.w))return;const b=pieceBox(p);if(!b)return;
  contactShadow(p.x,p.y,p.w*(b.meta?(b.meta.bounds[2]-b.meta.bounds[0])/b.size[0]:.8));
  C.save();C.translate(p.x,p.y);if(p.flip)C.scale(-1,1);const a=map.animations?.[p.sprite];if(a?.wobble && !reduced && Math.abs(player.x-p.x)<130 && Math.abs(player.y-p.y)<90)C.rotate(Math.sin(timer*9)*a.wobble);
- if(p.sprite==='portal'){glow(0,1,p.w*.6,'#66e9de',.18);C.drawImage(vortex(),b.left,b.top,p.w,p.h);}
- C.drawImage(b.img,b.left,b.top,p.w,p.h);animatePiece(p,b);C.restore();
+ if(p.sprite==='portal'){portalLight(p,b);const v=vortex(),[l,t,r,bt]=map.animations.portal.vortex.bounds,size=ART_META.portal.size,kx=v.width/size[0],ky=v.height/size[1];C.drawImage(v,l*kx,t*ky,(r-l)*kx,(bt-t)*ky,b.left+l*b.sx,b.top+t*b.sy,(r-l)*b.sx,(bt-t)*b.sy);}
+ C.drawImage(b.img,b.left,b.top,p.w,p.h);animatePiece(p,b);if(p.sprite==='portal')portalMotes(p,b);C.restore();
 }
 function platform(p){
  if(!visible(p.x+p.w/2,p.w/2))return;
@@ -1475,7 +2031,7 @@ function drawArchitecture(){
  C.fillStyle='#3a251b';C.fillRect(0,-map.height,map.width,map.height*2);
  for(const layer of map.backgrounds){
   const first=layer.repeat?Math.max(0,Math.floor((cam.x-layer.x)/layer.w)):0,last=layer.repeat?Math.min(Math.ceil(map.width/layer.w),Math.ceil((cam.x+W/zoom-layer.x)/layer.w)+1):1;
-  for(let i=first;i<last;i++){const x=layer.x+i*layer.w;C.save();C.translate(x,layer.y);if(layer.mirror && i%2){C.translate(layer.w,0);C.scale(-1,1);}C.drawImage(images[layer.sprite],0,0,layer.w,layer.h);
+  for(let i=first;i<last;i++){const x=layer.x+i*layer.w;C.save();C.translate(x,layer.y);if(layer.mirror && i%2){C.translate(layer.w,0);C.scale(-1,1);}C.drawImage(layer.sprite==='atrio'?litAtrium(layer):images[layer.sprite],0,0,layer.w,layer.h);
    const a=map.animations?.[layer.sprite];for(const [lx,ly,r] of a?.lights||[])glow(lx/ART_META[layer.sprite].size[0]*layer.w,ly/ART_META[layer.sprite].size[1]*layer.h,r/ART_META[layer.sprite].size[1]*layer.h,'#ffcc73',reduced?.12:.14+Math.sin(timer*1.3+i)*.04);C.restore();}
  }
  for(const p of map.floors){
@@ -1495,7 +2051,8 @@ function drawChest(e){
  if(opened)glow(0,-e.h*.42,55,'#fff0a0',opening?.35:.1);
  C.drawImage(b.img,b.left,b.top,e.w,e.h);
  if(!opened){const t=reduced?0:timer,glint=opening?1:Math.pow(Math.max(0,Math.sin(t*.85+e.x)),20);glow(5,-e.h*.38,16,'#85ffee',glint*.65);
-  if(!unlocked){const lock=images.ico_candado,size=e.w*.34,pulse=reduced?0:Math.sin(timer*2.2)*.08;glow(0,-e.h*.45,22,'#76dad6',.3+pulse);if(lock)C.drawImage(lock,-size/2,-e.h*.45-size*.55,size,size*lock.height/lock.width);}
+  if(!unlocked){const lock=images.ico_candado,a=map.animations.cofre.padlock,size=e.w*a.width,[ax,ay]=a.anchor,x=b.left+ax*b.sx,y=b.top+ay*b.sy;
+   if(lock){const meta=ART_META.ico_candado,scale=size/meta.size[0];C.save();C.translate(x,y);C.rotate(reduced?0:Math.sin(timer*1.4)*a.sway*DEG);C.drawImage(lock,-size/2,-meta.bounds[1]*scale,size,size*meta.size[1]/meta.size[0]);C.restore();}}
  }
  if(opening && !reduced && treasure.t>=.5){const t=treasure.t-.5;for(let i=0;i<14;i++){const u=(t*.6+i/14)%1,x=Math.sin(i*4.1)*u*45,y=-e.h*.45-u*125;C.save();C.globalAlpha=1-u;C.fillStyle='#fff5b7';C.fillRect(x,y,2,2);C.restore();}C.save();C.translate(0,-e.h*.47);C.rotate(t*.35);for(let i=0;i<10;i++){C.rotate(Math.PI/5);C.fillStyle='#ffe29a25';C.beginPath();C.moveTo(0,0);C.lineTo(-14,-120);C.lineTo(14,-120);C.closePath();C.fill();}C.restore();if(t<.2)glow(0,-e.h*.5,100,'#fffbe7',(1-t/.2)*.6);}
  C.restore();
@@ -1518,14 +2075,14 @@ function drawEntity(e){
  if(!visible(e.x,e.w||60))return;
  if((e.hidden || e.type==='secret') && !state.revealed.includes(e.id))return;
  if(e.type==='npc' && e.sprite){
-  const animated=e.id==='estela',meta=animated?ART_META.estela:ART_META[e.sprite],img=images[animated?'estela_idle-'+(reduced?0:Math.floor(timer*meta.fps)%meta.frames):e.sprite],ground=meta.ground,scale=e.h/(animated?ground:meta.bounds[3]-meta.bounds[1]);
-  contactShadow(e.x,e.y,animated?55:e.w*.55);C.save();C.translate(e.x,e.y);C.scale(player.x<e.x?-1:1,1);C.drawImage(img,-meta.size[0]*scale/2,-ground*scale,meta.size[0]*scale,meta.size[1]*scale);C.restore();label(e.name,e.x,e.y-e.h-10,'#fff3d8',13);
+  const animated=!!e.animation,meta=animated?ART_META[e.animation]:ART_META[e.sprite],img=animated?sampleLoop(e.animation,timer):images[e.sprite],ground=meta.ground,scale=e.h/(animated?meta.stand:meta.bounds[3]-meta.bounds[1]),center=meta.centerX??meta.size[0]/2;
+  contactShadow(e.x,e.y,e.id==='estela'?55:e.w*.55);C.save();C.translate(e.x,e.y);C.scale(player.x<e.x?-1:1,1);C.drawImage(img,-center*scale,-ground*scale,meta.size[0]*scale,meta.size[1]*scale);C.restore();label(e.name,e.x,e.y-e.h-10,'#fff3d8',13);
  }
  if(e.type==='secret' && e.sprite)prop(e);
  if(e.type==='chest')drawChest(e);
  if(e.type==='sign')drawGuide(e);
  if(e.type==='collectible' && !e.source && !state.sparks.includes(e.id)){
-  const pulse=reduced?0:Math.sin(timer*3+e.x)*4;C.save();C.translate(e.x,e.y+pulse);C.fillStyle='#f5c842';C.shadowColor='#f5c842';C.shadowBlur=effects?15:0;C.beginPath();C.moveTo(0,-13);C.lineTo(7,-3);C.lineTo(13,0);C.lineTo(6,4);C.lineTo(0,13);C.lineTo(-6,4);C.lineTo(-13,0);C.lineTo(-7,-3);C.closePath();C.fill();C.restore();
+  const pulse=reduced?0:Math.sin(timer*3+e.x)*4;C.save();C.translate(e.x,e.y+pulse);if(effects)glow(0,0,24,'#f5c842',.55);C.fillStyle='#f5c842';C.beginPath();C.moveTo(0,-13);C.lineTo(7,-3);C.lineTo(13,0);C.lineTo(6,4);C.lineTo(0,13);C.lineTo(-6,4);C.lineTo(-13,0);C.lineTo(-7,-3);C.closePath();C.fill();C.restore();
  }
 }
 function drawEffects(){for(const p of fx){if(!visible(p.x))continue;const t=p.life/p.max;C.save();C.translate(p.x,p.y);C.globalAlpha=1-t;C.strokeStyle=p.color||'#fff3d8';C.fillStyle=p.color||'#f5c842';C.lineWidth=2;if(p.kind==='ring'){C.beginPath();C.ellipse(0,0,20+t*70,4+t*12,0,0,Math.PI*2);C.stroke();}else if(p.kind==='line'){C.beginPath();C.moveTo(0,0);C.lineTo(p.len||-30,0);C.stroke();}else if(p.kind==='z'){C.font=`800 ${p.size||18}px Nunito`;C.fillText('z',0,0);}else if(p.kind==='heart'){C.font='20px Nunito';C.fillText('♥',0,0);}else{C.beginPath();C.arc(0,0,p.size*(1+t),0,Math.PI*2);C.fill();}C.restore();}}
@@ -1535,22 +2092,40 @@ function resize(){
  const width=Math.round(W*dpr),height=Math.round(H*dpr);if(canvas.width!==width)canvas.width=width;if(canvas.height!==height)canvas.height=height;
  const view=cameraLayout(map,player,W,H,innerHeight>innerWidth);zoom=view.zoom;cam.x=view.x;cam.y=view.y;
 }
+let miniUpdated=-1;
+function drawMinimap(){
+ if($('objective').hidden || timer-miniUpdated<.05)return;miniUpdated=timer;
+ const mini=$('mini'),m=mini.getContext('2d');if(mini.width!==600){mini.width=600;mini.height=120;}
+ m.setTransform(2,0,0,2,0,0);m.clearRect(0,0,300,60);
+ const x=v=>6+v/map.width*288,y=v=>6+v/map.height*50;
+ m.strokeStyle='#8d633b';m.lineWidth=1.1;m.lineCap='round';m.fillStyle='#795435';m.font='bold 9px Nunito, sans-serif';m.fillText('Mapa',7,10);
+ for(const floor of map.floors){m.beginPath();m.moveTo(x(floor.x),y(floor.y));m.lineTo(x(floor.x+floor.w),y(floor.y));m.stroke();}
+ for(const p of map.platforms){if(p.sprite==='galeria'){m.beginPath();m.moveTo(x(p.x),y(p.y));m.lineTo(x(p.x+p.w),y(p.y));m.stroke();}else{m.fillStyle='#9e7449';for(let i=0;i<4;i++){m.beginPath();m.arc(x(p.x+p.w*i/3),y(p.y),1.2,0,Math.PI*2);m.fill();}}}
+ if(map.stairArt){m.beginPath();m.moveTo(x(40),y(780));m.lineTo(x(660),y(440));m.moveTo(x(map.width-660),y(440));m.lineTo(x(map.width-40),y(780));m.stroke();}
+ const star=(cx,cy,r,color)=>{m.fillStyle=color;m.beginPath();for(let i=0;i<8;i++){const a=-Math.PI/2+i*Math.PI/4,rad=i%2?r*.35:r;i?m.lineTo(cx+Math.cos(a)*rad,cy+Math.sin(a)*rad):m.moveTo(cx+Math.cos(a)*rad,cy+Math.sin(a)*rad);}m.closePath();m.fill();};
+ for(const e of map.entities){
+  const cx=x(e.x),cy=y(e.y);
+  if(e.type==='portal'){m.save();m.translate(cx,cy-4);m.strokeStyle='#286eb1';m.lineWidth=1.5;m.beginPath();for(let j=0;j<35;j++){const a=j*.25,r=.2+j*.12;j?m.lineTo(Math.cos(a)*r,Math.sin(a)*r):m.moveTo(0,0);}m.stroke();m.restore();}
+  else if(e.id==='estela')star(cx,cy-5,4,'#725d9b');
+  else if(e.type==='chest' && (!e.hidden || state.revealed.includes(e.id))){const opened=state.chests.includes(e.id),locked=!unlockChest(state,e);m.fillStyle=opened?'#bf9863':'#815431';m.fillRect(cx-3,cy-5,6,4);m.strokeStyle='#533721';m.lineWidth=.8;m.strokeRect(cx-3,cy-5,6,4);m.beginPath();m.moveTo(cx-3,cy-5);m.lineTo(cx+3,cy-(opened?8:6));m.stroke();if(locked){m.fillStyle='#efd075';m.fillRect(cx-.9,cy-4,1.8,2.5);}}
+  else if(e.type==='collectible' && !state.sparks.includes(e.id))star(cx,cy,2.4,'#c29520');
+ }
+ const radius=reduced?2.9:3+Math.sin(timer*2)*.3;m.fillStyle='#247f80';m.strokeStyle='#fffdf1';m.lineWidth=1.4;m.beginPath();m.arc(x(player.x),y(player.y)-2,radius,0,Math.PI*2);m.fill();m.stroke();
+}
 function draw(){
  C.setTransform(dpr,0,0,dpr,0,0);C.fillStyle='#3a251b';C.fillRect(0,0,W,H);
  C.save();C.scale(zoom,zoom);C.translate(-cam.x,-cam.y);if(effects && shake>0)C.translate(rand(-1,1)*shake*12,rand(-1,1)*shake*8);
  drawArchitecture();for(const p of map.props.filter(p=>p.layer!=='front'))prop(p);map.entities.forEach(drawEntity);
  drawFox();classmates.forEach(drawActor);drawActor(player);drawEffects();for(const p of map.props.filter(p=>p.layer==='front'))prop(p);map.platforms.forEach(railing);
- if(near && overlay.hidden && !treasure){label((usingTouch()?'': 'E · ')+(near.classmate||near.type==='npc'?'Hablar':near.type==='chest'?(unlockChest(state,near)&&!state.chests.includes(near.id)?'Abrir':'Ver'):near.type==='sign'?'Leer':'Usar'),near.x,near.y-(near.h||110)-44,'#f5c842',16);}
+ if(near && overlay.hidden && !treasure){label((usingTouch()?'': 'E · ')+(near.classmate||near.type==='npc'?'Hablar':near.type==='chest'?(unlockChest(state,near)&&!state.chests.includes(near.id)?'Abrir':'Ver'):near.type==='sign'?'Leer':'Usar'),near.x,near.y-(near.h||110)-44,'#f5c842',16);if(!near.classmate && near.type!=='npc')label(near.name,near.x,near.y-(near.h||110)-78,'#fff3d8',13);}
  C.restore();
  if(treasure){const e=treasure.entity;C.save();const x=(e.x-cam.x)*zoom,y=(e.y-e.h/2-cam.y)*zoom,g=C.createRadialGradient(x,y,50,x,y,Math.max(W,H)*.75);g.addColorStop(0,'#04121b10');g.addColorStop(1,'#04121baf');C.fillStyle=g;C.fillRect(0,0,W,H);C.scale(zoom,zoom);C.translate(-cam.x,-cam.y);drawChest(e);drawActor(player);drawTreasureItem();map.platforms.forEach(railing);C.restore();}
- const mini=$('mini'),m=mini.getContext('2d');if(mini.width!==300){mini.width=300;mini.height=32;}m.clearRect(0,0,300,32);m.fillStyle='#658282';m.fillRect(8,25,284,2);for(const p of map.platforms.filter(p=>p.sprite==='galeria'))m.fillRect(8+p.x/map.width*284,11,p.w/map.width*284,2);
- m.strokeStyle='#a38b5f';m.beginPath();m.moveTo(10,25);m.lineTo(8+6.6*CH/map.width*284,11);m.moveTo(8+53.4*CH/map.width*284,11);m.lineTo(290,25);m.stroke();
- m.fillStyle='#f5c842';for(const e of map.entities.filter(e=>e.type==='collectible' && !e.source && !state.sparks.includes(e.id))){m.beginPath();m.arc(8+e.x/map.width*284,e.y<500?7:e.y<650?17:22,2,0,Math.PI*2);m.fill();}m.fillStyle='#83ded5';m.beginPath();m.arc(8+player.x/map.width*284,player.y<500?7:player.y<700?17:22,4,0,Math.PI*2);m.fill();
+ drawMinimap();
 }
 function tick(dt){
  timer+=dt;
- advanceTreasure(dt);
- if(overlay.hidden && !treasure){
+ advanceTreasure(dt);stepPortal(dt);advancePortalTravel(dt);
+ if(overlay.hidden && !treasure && !portalTravel){
   const event=moveBody(player,map,dt,{axis:Number(input.right)-Number(input.left),run:input.run,jump:input.jump,jumpHeld:input.jumpHeld,drop:input.drop});input.jump=false;input.drop=false;
   if(event.double){emit('ring',player.x,player.y,{color:'#fff3d8',max:.35});for(let i=0;i<5;i++)emit('dust',player.x+rand(-14,14),player.y,{vx:rand(-60,60),vy:rand(20,90),size:rand(2,4),max:.35,color:'#fff3d8'});uiSound?.('tick');}
   else if(event.jumped){dust(player.x,player.y,event.super?12:4);pet.jumpAt=timer*1000+220;if(event.super){emit('ring',player.x,player.y);shake=.2;toast('¡Súper salto!');}}
@@ -1567,18 +2142,19 @@ function tick(dt){
    if(e.type==='collectible' && !e.source && Math.abs(player.x-e.x)<32 && Math.abs(player.y-CH*.55-e.y)<60 && collect(state,map,e.id)){emit('ring',e.x,e.y);save();toast(state.sparks.length===12?'¡Las 12 chispas! Abre el cofre en la galería derecha.':state.sparks.length===1?'¡Tu primera chispa del tiempo! Junta las 12 para abrir el cofre de la galería derecha.':'Chispa del tiempo · '+state.sparks.length+'/12',state.sparks.length===1?6000:3500);}
   }
   near=nearby(map,player,state,classmates);
-  $('energy-fill').style.width=Math.round(player.energy*100)+'%';$('energy-label').textContent=player.energy>=.999?'¡Súper salto listo!':'Corre para cargar tu súper salto';
+  $('energy-fill').style.width=Math.round(player.energy*100)+'%';$('energy').setAttribute('aria-valuenow',Math.round(player.energy*100));$('energy-label').textContent=player.energy>=.999?'¡Súper salto listo!':'Corre para cargar tu súper salto';{const ready=player.energy>=.999;if(ready!==superReady){superReady=ready;$('energy-wrap').classList.toggle('ready',ready);if(ready){uiSound('coin');emit('ring',player.x,player.y,{color:'#ffd23f',max:.5});}}}
   $('action-touch').disabled=!near;$('action-touch').textContent=near?near.classmate||near.type==='npc'?'Hablar':'Usar':'Acércate';
   $('context').hidden=!near;$('context').textContent=near?near.name:'';
  }
  const view=cameraLayout(map,player,W,H,innerHeight>innerWidth);
+ if(portalTravel){const p=map.props.find(p=>p.sprite==='portal');if(p){view.x=clamp(p.x-W/zoom*.5,0,Math.max(0,map.width-W/zoom));view.y=clamp(p.y-H/zoom*.8,0,Math.max(0,map.height-H/zoom));}}
  cameraBoost+=( (treasure && !reduced?1.25:1)-cameraBoost)*Math.min(1,dt*4);if(reduced)cameraBoost=1;zoom=view.zoom*cameraBoost;
  if(treasure && !reduced){view.x=clamp(treasure.entity.x-W/zoom*.5,0,Math.max(0,map.width-W/zoom));view.y=clamp(treasure.entity.y-H/zoom*.75,0,Math.max(0,map.height-H/zoom));}
  cam.x+=(view.x-cam.x)*(reduced?1:Math.min(1,dt*5));cam.y+=(view.y-cam.y)*(reduced?1:Math.min(1,dt*5));shake=Math.max(0,shake-dt);
  // Smooth following must still keep the child inside the play area during fast jumps and falls.
  const maxY=Math.max(0,map.height-H/zoom);
  const minY=Math.min(0,player.y-CH-H/zoom*.04); // A charged jump can briefly reach above the map.
- cam.y=clamp(cam.y,clamp(player.y-H/zoom*.94,minY,maxY),clamp(player.y-CH-H/zoom*.04,minY,maxY));
+ if(!portalTravel)cam.y=clamp(cam.y,clamp(player.y-H/zoom*.94,minY,maxY),clamp(player.y-CH-H/zoom*.04,minY,maxY));
  for(let i=fx.length-1;i>=0;i--){const p=fx[i];p.life+=dt;p.x+=p.vx*dt;p.y+=p.vy*dt;if(p.life>p.max)fx.splice(i,1);}
  if(timer-lastSave>4){save();lastSave=timer;}
 }
@@ -1588,6 +2164,7 @@ function sync(){input.left=keys.has('ArrowLeft')||keys.has('a')||touch.has('left
 let doubleRun=false,lastTap={};
 function pressDirection(key){const now=performance.now();if(now-(lastTap[key]||-1000)<280)doubleRun=true;lastTap[key]=now;}
 window.addEventListener('keydown',event=>{
+ if(portalTravel){event.preventDefault();return;}
  if(treasure){if(['e','E','Enter','Escape'].includes(event.key)){event.preventDefault();if(!event.repeat)finishTreasure();}return;}
  if(!overlay.hidden){
   const key=event.key.length===1?event.key.toLowerCase():event.key;
@@ -1617,25 +2194,40 @@ window.addEventListener('keydown',event=>{
 window.addEventListener('keyup',event=>{const key=event.key.length===1?event.key.toLowerCase():event.key;keys.delete(key);if(['ArrowLeft','ArrowRight','a','d'].includes(key))doubleRun=false;sync();});
 window.addEventListener('blur',()=>{doubleRun=false;clearInput();save();});
 for(const b of document.querySelectorAll('[data-hold]')){
- b.addEventListener('pointerdown',e=>{e.preventDefault();if(!overlay.hidden || treasure)return;const key=b.dataset.hold;b.setPointerCapture(e.pointerId);touch.add(key);b.classList.add('pressed');if(key==='jump')input.jump=true;if(key==='drop')input.drop=true;if(['left','right'].includes(key))pressDirection(key);sync();});
+ b.addEventListener('pointerdown',e=>{e.preventDefault();if(!overlay.hidden || treasure || portalTravel)return;const key=b.dataset.hold;b.setPointerCapture(e.pointerId);touch.add(key);b.classList.add('pressed');if(key==='jump')input.jump=true;if(key==='drop')input.drop=true;if(['left','right'].includes(key))pressDirection(key);sync();});
  const release=()=>{touch.delete(b.dataset.hold);b.classList.remove('pressed');if(['left','right'].includes(b.dataset.hold))doubleRun=false;sync();};b.addEventListener('pointerup',release);b.addEventListener('pointercancel',release);b.addEventListener('lostpointercapture',release);
 }
-$('action-touch').onclick=()=>{if(messageState && !overlay.hidden)messageState.activate();else interact();};$('treasure-close').onclick=finishTreasure;$('overlay-close').onclick=closeOverlay;$('overlay-back').onclick=closeOverlay;$('tokens').onclick=()=>explain('tokens');$('sparks').onclick=()=>explain('sparks');$('bag').onclick=showBag;$('gestures').onclick=showGestures;$('clock-hud').onclick=()=>explain('pieces');$('settings').onclick=showSettings;$('touch-toggle').onclick=()=>document.body.classList.add('touch-controls');
+$('action-touch').onclick=()=>{if(messageState && !overlay.hidden)messageState.activate();else interact();};$('treasure-close').onclick=finishTreasure;$('overlay-close').onclick=closeOverlay;$('tokens').onclick=()=>explain('tokens');$('sparks').onclick=()=>explain('sparks');$('bag').onclick=showBag;$('gestures').onclick=showGestures;$('clock-hud').onclick=showClock;$('copihues').onclick=()=>explain('copihues');$('settings').onclick=showSettings;$('touch-toggle').onclick=()=>document.body.classList.add('touch-controls');
 const layoutObserver=new ResizeObserver(resize);layoutObserver.observe($('play-area'));
 function usingTouch(){return settings.touchControls!==false && (document.body.classList.contains('touch-device') || document.body.classList.contains('touch-controls'));}
 touchDevice.addEventListener('change',()=>{document.body.classList.toggle('touch-device',touchDevice.matches || navigator.maxTouchPoints>0);clearInput();resize();});
 $('objectives-toggle').onclick=()=>{if(!overlay.hidden)return;showObjectives();};
 window.addEventListener('resize',resize);document.addEventListener('visibilitychange',()=>{clearInput();save();if(!document.hidden && !raf && ready)raf=requestAnimationFrame(frame);});
-window.addEventListener('pagehide',save);motion.addEventListener('change',applyMotion);
+window.addEventListener('pagehide',()=>{save();if(SERVER)upload(true);});motion.addEventListener('change',applyMotion);
+// First visit goes through the opening film; the game starts from the server's save.
+async function loadFromServer(){
+ let snap;try{({snapshot:snap}=await api('GET','/me'));}catch(err){$('load-message').textContent=err.message+' Recarga para intentarlo de nuevo.';return false;}
+ // Closed while it is being tried out (shared/academy/config.json): only test accounts come in.
+ if(!snap.open){location.replace('/alumno');return false;}
+ if(!snap.introSeenAt){location.replace('/alumno/apertura');return false;}
+ state=restoreState({...snap.state,version:1,tokens:snap.tokens,copihues:snap.copihues,items:snap.items,chests:snap.chests,bank:snap.bank},Date.now(),map);settings=state.settings;applySnapshot(snap);applyTouch();
+ objectivesOpen=!(state.flags.metEstela || state.flags.welcomed);
+ if(state.position?.mapId===map.id){player.x=clamp(state.position.x,25,map.width-25);player.y=clamp(state.position.y,0,map.height);player.ground=!!support(map,player);Object.assign(pet,{x:player.x-70,y:player.y});}
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)upload(true);else api('GET','/me').catch(()=>{});});
+ return true;
+}
 async function start(){
  if(!ctx){$('load-message').textContent='Este navegador necesita Canvas 2D para explorar la Academia.';return;}
  let count=0;await Promise.all(Object.entries(SRC).map(([name,src])=>new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{images[name]=img;count++;if(count%30===0)$('load-message').textContent='Preparando el observatorio… '+Math.round(count/Object.keys(SRC).length*100)+'%';resolve();};img.onerror=()=>reject(new Error('No se pudo cargar '+name));img.src=src;})));
+ if(SERVER && !await loadFromServer())return;
  installGameKit();resize();applyMotion();
  ready=true;$('loading').hidden=true;updateHUD();bind(player);canvas.focus();raf=requestAnimationFrame(frame);
+ // The welcome gift is real tokens, so Estela says it once, pointing at the shop to try them.
+ if(SERVER?.welcomeGift && !state.flags.welcomeGiftShown){state.flags.welcomeGiftShown=true;save();showMessage('Regalo de bienvenida','¡Bienvenido a la Academia! Te regalo '+SERVER.welcomeGift+' tokens para que estrenes el Puesto del Mercader. Elige un recuerdo y míralo luego en tu mochila.','estela');return;}
  if(!state.flags.welcomed && !state.flags.metEstela)toast(usingTouch()?'¡Bienvenido! Acércate a Estela y toca Hablar.':'¡Bienvenido! Acércate a Estela y pulsa E para hablar.',4600);
 }
 // Read-only diagnostics for prototype reviewers and browser smoke tests.
-window.Academia={core:AcademiaCore,get state(){return state;},get player(){return player;},get map(){return map;},get pet(){return pet;},get classmates(){return classmates;},get viewport(){return {width:W,height:H,zoom,x:cam.x,y:cam.y};},get treasure(){return treasure?{id:treasure.entity.id,time:treasure.t,banner:treasure.banner}:null;},get dialogue(){return engine?.view()||null;},get reducedMotion(){return reduced;},get memory(){return {textures:textureCache.bytes,masks:maskCache.bytes};},interact,station,gesture,showShop,showBag,showBank,showClock,showTravel,showReading,showObjectives,showSettings,closeOverlay,loadMap:enterMap};
+window.Academia={core:AcademiaCore,get state(){return state;},get player(){return player;},get map(){return map;},get pet(){return pet;},get classmates(){return classmates;},get viewport(){return {width:W,height:H,zoom,x:cam.x,y:cam.y};},get travel(){return portalTravel?{time:portalTravel.t}:null;},get portalEffect(){return {particles:portalParticles.length,resolution:vortexSurface?[vortexSurface.width,vortexSurface.height]:null,pull:portalPull,phase:portalPhase};},get treasure(){return treasure?{id:treasure.entity.id,time:treasure.t,banner:treasure.banner}:null;},get dialogue(){return engine?.view()||null;},get reducedMotion(){return reduced;},get memory(){return {textures:textureCache.bytes,masks:maskCache.bytes};},interact,station,gesture,practiceKind,get practiceCases(){return [...CHALLENGES,ORDER_PRACTICE].flatMap(beat=>STORY_LEVELS.map(level=>({id:beat.id,kind:beat.kind,level})));},showShop,showBag,showBank,showClock,showTravel,showReading,showObjectives,showSettings,closeOverlay,loadMap:enterMap};
 start().catch(error=>{$('load-message').textContent='No pudimos preparar el observatorio. Recarga para intentarlo de nuevo.';console.error(error);});
 })();
 </script>

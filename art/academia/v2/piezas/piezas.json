@@ -31,6 +31,14 @@
   1159,
   1120
  ],
+ "banco_ancho": [
+  1729,
+  696
+ ],
+ "banco_mueble": [
+  1804,
+  687
+ ],
  "objeto_medallon": [
   283,
   390
@@ -62,6 +70,22 @@
  "objeto_mapa": [
   357,
   359
+ ],
+ "objeto_chupalla": [
+  532,
+  279
+ ],
+ "objeto_manta": [
+  505,
+  402
+ ],
+ "objeto_faja": [
+  436,
+  440
+ ],
+ "objeto_collar_copihue": [
+  518,
+  382
  ],
  "ui_marco": [
   856,

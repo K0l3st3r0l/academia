@@ -1,0 +1,190 @@
+{
+ "scenes": [
+  {
+   "type": "video",
+   "src": "/academia/apertura/parte1.mp4?v=bfb567fb8a",
+   "cues": [
+    {
+     "start": 1.5,
+     "end": 5.15,
+     "text": "Hay historias que el tiempo no debe olvidar."
+    },
+    {
+     "start": 10.56,
+     "end": 14.03,
+     "text": "Lejos de todos los relojes del mundo flota la Academia:"
+    },
+    {
+     "start": 14.22,
+     "end": 18.69,
+     "text": "un observatorio fuera del tiempo, donde se forman los viajeros del tiempo."
+    },
+    {
+     "start": 22.88,
+     "end": 26.63,
+     "text": "En su corazón late el Reloj de las Épocas."
+    },
+    {
+     "start": 26.68,
+     "end": 30.95,
+     "text": "Mientras sus piezas giran, todas las historias siguen vivas."
+    },
+    {
+     "start": 34.33,
+     "end": 38.64,
+     "text": "Pero una noche, una tormenta del tiempo sacudió la Academia…"
+    },
+    {
+     "start": 38.73,
+     "end": 40.54,
+     "text": "y el reloj se quebró."
+    },
+    {
+     "start": 46.89,
+     "end": 49.28,
+     "text": "Sus piezas cayeron en otras épocas:"
+    },
+    {
+     "start": 49.43,
+     "end": 53.24,
+     "text": "en medio del mar, en el desierto, en ciudades antiguas."
+    },
+    {
+     "start": 58.21,
+     "end": 61.86,
+     "text": "Y donde cae una pieza, los colores se apagan."
+    },
+    {
+     "start": 62.03,
+     "end": 64.16,
+     "text": "Las historias empiezan a olvidarse."
+    },
+    {
+     "start": 69.39,
+     "end": 75.66,
+     "text": "Necesito a alguien curioso, valiente, que sepa escuchar a todos y resolver problemas sin hacer daño."
+    }
+   ]
+  },
+  {
+   "type": "live",
+   "duration": 11.100000000000001,
+   "background": "/academia/apertura/atrio.webp?v=7f6261b4fd",
+   "estela": "/academia/apertura/estela.webp?v=741d2dae7a",
+   "compass": "/academia/apertura/brujula.webp?v=910da88bdb",
+   "audio": "/academia/apertura/vivo.m4a?v=f0932e6e56",
+   "cues": [
+    {
+     "start": 1.32,
+     "end": 2.67,
+     "text": "¡Ahí estás!"
+    },
+    {
+     "start": 2.9,
+     "end": 4.01,
+     "text": "Te estaba esperando."
+    },
+    {
+     "start": 4.54,
+     "end": 6.39,
+     "text": "Esta es la Brújula del Tiempo:"
+    },
+    {
+     "start": 6.64,
+     "end": 8.65,
+     "text": "desde hoy, es tuya."
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "src": "/academia/apertura/parte2.mp4?v=7dd3b6e60e",
+   "cues": [
+    {
+     "start": 0.0,
+     "end": 2.67,
+     "text": "Viaja a otras épocas."
+    },
+    {
+     "start": 2.9,
+     "end": 7.01,
+     "text": "Ayuda, coopera y escucha a quienes vivieron la historia."
+    },
+    {
+     "start": 7.44,
+     "end": 9.53,
+     "text": "Recupera las piezas del reloj…"
+    },
+    {
+     "start": 9.58,
+     "end": 12.81,
+     "text": "para que ninguna historia se olvide."
+    }
+   ],
+   "overlays": [
+    {
+     "kind": "title",
+     "start": 16.44,
+     "end": 29.42,
+     "subtitle": "Tu aventura comienza"
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "src": "/academia/apertura/parte3.mp4?v=ff007b7ba9",
+   "cues": [
+    {
+     "start": 1.0,
+     "end": 6.47,
+     "text": "Esta es la Academia, tu casa entre viaje y viaje."
+    },
+    {
+     "start": 6.52,
+     "end": 8.99,
+     "text": "Camina, salta y explora:"
+    },
+    {
+     "start": 9.04,
+     "end": 11.75,
+     "text": "hay chispas escondidas por todas partes."
+    },
+    {
+     "start": 13.5,
+     "end": 16.37,
+     "text": "Cada desafío que resuelves te da tokens:"
+    },
+    {
+     "start": 16.42,
+     "end": 20.51,
+     "text": "en el mapa de Matemática y aquí, en el Entrenamiento."
+    },
+    {
+     "start": 24.58,
+     "end": 31.75,
+     "text": "Con tus tokens compras recuerdos en el puesto del Mercader, o los guardas en el Banco de Tempo, donde crecen cada semana."
+    },
+    {
+     "start": 36.9,
+     "end": 42.45,
+     "text": "Los copihues premian tus logros, y con ellos consigues la colección copihue."
+    },
+    {
+     "start": 46.26,
+     "end": 53.05,
+     "text": "Y cuando el Portal se abra, viajarás a otras épocas a recuperar las piezas del reloj."
+    },
+    {
+     "start": 53.18,
+     "end": 53.93,
+     "text": "¿Listo?"
+    },
+    {
+     "start": 54.34,
+     "end": 56.57,
+     "text": "¡Tu aventura comienza ahora!"
+    }
+   ]
+  }
+ ]
+}

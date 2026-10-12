@@ -79,8 +79,21 @@ describe('mapa del mundo', () => {
     expect(island.levels[0]).toMatchObject({ label: 'Números hasta 1.000 millones', at: [603, 1105] });
     expect(island.challenge).toMatchObject({ key: 'desafio-1', state: 'preparing' });
     expect(res.body.current).toBe('OA1');
-    expect(res.body.comingUnits.map(u => u.unit)).toEqual([2, 3, 4]);
+    // Every unit of Matemática 5° has its island (2026-10-12): none is left as «coming».
+    expect(res.body.islands.map(i => i.name)).toEqual(['Isla del Observatorio', 'Isla del Valle de Elqui', 'Isla del Volcán', 'Isla de las Torres']);
+    expect(res.body.islands.map(i => i.levels.length)).toEqual([8, 7, 7, 5]);
+    expect(res.body.comingUnits).toEqual([]);
     expect(res.body.stars).toEqual({ earned: 0, max: 6 });
+  });
+
+  it('lista las asignaturas con islas, con la isla donde va el alumno', async () => {
+    await questions('OA1', 4);
+    const { auth } = await student();
+    const res = await request(app).get('/api/world').set('Authorization', auth);
+    expect(res.status).toBe(200);
+    expect(res.body.maps.find(m => m.subject === 'matematica')).toMatchObject({
+      islands: 4, island: { name: 'Isla del Observatorio', image: 'matematica-5b-u1' },
+    });
   });
 
   it('solo para alumnos de un curso con mapa', async () => {
@@ -88,7 +101,8 @@ describe('mapa del mundo', () => {
     const asTeacher = await request(app).get('/api/world/matematica').set('Authorization', `Bearer ${signToken(teacherPayload(teacher))}`);
     expect(asTeacher.status).toBe(403);
     const { auth } = await student();
-    expect((await request(app).get('/api/world/historia').set('Authorization', auth)).status).toBe(404);
+    // Since 2026-10-12 every subject of 5° has islands: a subject without them is a 404.
+    expect((await request(app).get('/api/world/artes').set('Authorization', auth)).status).toBe(404);
   });
 
   it('un nivel cerrado o sin preguntas no se puede empezar', async () => {

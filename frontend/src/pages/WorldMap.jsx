@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { getWorldMap } from '../api/client';
+import { getWorldMap, getAcademyMe } from '../api/client';
 import { getStudentUser } from '../api/studentAuth';
 import { Tokens } from '../components/TokenCoin';
 import Explorer from '../components/world/Explorer';
@@ -177,7 +177,7 @@ function Island({ island, current, celebrate, explorer, companions, controls, on
     <section
       className="relative"
       style={{ background: 'linear-gradient(to bottom, #267EFB 0%, #7FB0FB 45%, #CAD1FC 100%)' }}
-      aria-label={`Unidad ${island.unit}: ${island.name}`}
+      aria-label={`${island.label ?? `Unidad ${island.unit}`}: ${island.name}`}
     >
       <div className="hidden md:block absolute left-[6%] top-[30%] world-drift"><Cloud width={260} /></div>
       <div className="hidden md:block absolute right-[5%] top-[62%] world-drift" style={{ animationDelay: '-11s' }}><Cloud width={300} /></div>
@@ -241,6 +241,7 @@ export default function WorldMap() {
   const [error, setError] = useState(null);
   const [selected, setSelected] = useState(null);
   const [explorer, setExplorer] = useState(null);
+  const [academyOpen, setAcademyOpen] = useState(false);
   const [celebrate] = useState(() => readStorage(sessionStorage, celebrateKey(subject)));
   const currentRef = useRef(null);
   const scrolled = useRef(false);
@@ -251,6 +252,7 @@ export default function WorldMap() {
       .then(res => setMap(res.data))
       .catch(err => setError(err.response?.status === 404 ? 'Tu curso aún no tiene este mapa.' : 'No se pudo cargar el mapa.'));
     writeStorage(sessionStorage, celebrateKey(subject), null);
+    getAcademyMe().then(res => setAcademyOpen(res.data.snapshot.open)).catch(() => {});
   }, [subject]);
 
   // The character starts where the student left it; if a new level opened since, it walks there.
@@ -295,14 +297,24 @@ export default function WorldMap() {
       <header className="sticky top-0 z-30 px-3 pt-3 pb-2 flex items-center gap-2 justify-between max-w-[720px] mx-auto">
         <button
           type="button"
-          onClick={() => navigate('/alumno')}
-          aria-label="Volver al inicio"
+          onClick={() => navigate('/alumno/islas')}
+          aria-label="Volver a las Islas de retos"
           className="w-11 h-11 rounded-full bg-white border-4 flex items-center justify-center font-black text-xl"
           style={{ borderColor: INK, color: INK, boxShadow: `0 3px 0 ${INK}` }}
         >
           ←
         </button>
-        <h1 className="px-4 py-1.5 rounded-full text-white font-black text-lg truncate" style={{ background: `${INK}D9` }}>
+        {/* The islands are an extra beside the Academy's story: one tap back to the lobby. */}
+        {academyOpen && <a
+          href="/academia/"
+          aria-label="Volver a la Academia"
+          title="Volver a la Academia"
+          className="w-11 h-11 shrink-0 rounded-full border-4 overflow-hidden bg-white"
+          style={{ borderColor: INK, boxShadow: `0 3px 0 ${INK}` }}
+        >
+          <img src="/academia/portada-640.webp" alt="" className="w-full h-full object-cover" />
+        </a>}
+        <h1 className="px-4 py-1.5 rounded-full text-white font-black text-lg truncate mr-auto" style={{ background: `${INK}D9` }}>
           {SUBJECT_NAMES[subject] ?? subject}
         </h1>
         <div className="flex items-center gap-1.5">
