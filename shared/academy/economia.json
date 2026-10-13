@@ -8,24 +8,10 @@
    "currency": "tokens"
   },
   {
-   "id": "sombrero",
-   "name": "Sombrero de explorador",
-   "text": "Para salir a descubrir.",
-   "price": 20,
-   "currency": "tokens"
-  },
-  {
    "id": "brujula",
    "name": "Brújula de bolsillo",
    "text": "Un norte que cabe en tu mano.",
    "price": 25,
-   "currency": "tokens"
-  },
-  {
-   "id": "capa",
-   "name": "Capa de estrellas",
-   "text": "Un pedacito de cielo en tu mochila.",
-   "price": 40,
    "currency": "tokens"
   },
   {
@@ -41,27 +27,6 @@
    "text": "Cada línea guarda una historia.",
    "price": 30,
    "currency": "tokens"
-  },
-  {
-   "id": "chupalla",
-   "name": "Chupalla de huaso",
-   "text": "Un sombrero tejido que acompaña las tradiciones del campo chileno.",
-   "price": 2,
-   "currency": "copihues"
-  },
-  {
-   "id": "manta",
-   "name": "Manta huasa",
-   "text": "Colores que abrigan y cuentan historias de Chile.",
-   "price": 3,
-   "currency": "copihues"
-  },
-  {
-   "id": "faja",
-   "name": "Faja tejida",
-   "text": "Una pieza tejida para celebrar nuestras raíces.",
-   "price": 2,
-   "currency": "copihues"
   },
   {
    "id": "collar_copihue",

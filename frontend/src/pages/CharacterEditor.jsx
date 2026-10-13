@@ -1,11 +1,12 @@
 import { useState, useEffect, useMemo, useSyncExternalStore } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  getCharacterCatalog, getCharacterMe, getStudentMe, saveCharacter, renameCharacter, buyCharacterItem,
+  getCharacterCatalog, getCharacterMe, getStudentMe, saveCharacter, renameCharacter, buyCharacterItem, getCopihuesMe,
 } from '../api/client';
 import CharacterView from '../components/character/CharacterView';
 import { layersToLook, defaultLayers } from '../components/character/look';
 import { Tokens } from '../components/TokenCoin';
+import { Copihues } from '../components/Copihue';
 
 // Each tab groups catalog lists; parts preview the character, colors are swatches.
 const TABS = [
@@ -37,6 +38,7 @@ const TABS = [
     { field: 'earwear', list: 'earwear', label: 'Orejas', type: 'part', view: 'portrait', size: 96 },
     { field: 'neckwear', list: 'neckwear', label: 'Cuello', type: 'part', view: 'portrait', size: 96 },
     { field: 'backwear', list: 'backwear', label: 'Espalda', type: 'part', view: 'full', size: 120 },
+    { field: 'waistwear', list: 'waistwear', label: 'Cintura', type: 'part', view: 'full', size: 120 },
   ] },
 ];
 const ALL_SECTIONS = TABS.flatMap(t => t.sections);
@@ -48,13 +50,15 @@ const NAME_STATUS = {
 };
 
 const priceOf = item => item?.price ?? 0;
+// The copihue collection (chupalla, manta, faja) is paid with copihues, everything else with tokens.
+const inCopihues = item => item?.currency === 'copihues';
 
 function PriceTag({ item, owned }) {
   if (!priceOf(item)) return null;
   const locked = !owned.has(item.id);
   return (
     <span className={`absolute -top-2 -right-2 text-[10px] font-black px-1.5 py-0.5 rounded-full ${locked ? 'bg-gold text-black' : 'bg-correct text-white'}`}>
-      {locked ? `🔒 ${priceOf(item)}` : 'Tuyo'}
+      {locked ? `🔒 ${priceOf(item)}${inCopihues(item) ? ' ✿' : ''}` : 'Tuyo'}
     </span>
   );
 }
@@ -101,7 +105,7 @@ function ColorOptions({ section, catalog, layers, owned, onPick }) {
             key={opt.id}
             type="button"
             onClick={() => onPick(section.field, opt.id)}
-            aria-label={`${section.label}: ${opt.name || opt.hex}${priceOf(opt) && !owned.has(opt.id) ? `, cuesta ${priceOf(opt)} tokens` : ''}`}
+            aria-label={`${section.label}: ${opt.name || opt.hex}${priceOf(opt) && !owned.has(opt.id) ? `, cuesta ${priceOf(opt)} ${inCopihues(opt) ? 'copihues' : 'tokens'}` : ''}`}
             aria-pressed={selected}
             className={`relative w-11 h-11 rounded-full border-4 transition-transform ${selected ? 'border-gold scale-110' : 'border-gray-700'}`}
             style={{ backgroundColor: opt.hex }}
@@ -121,6 +125,8 @@ export default function CharacterEditor() {
   const [character, setCharacter] = useState(null);
   const [owned, setOwned] = useState(new Set());
   const [tokens, setTokens] = useState(0);
+  const [copihues, setCopihues] = useState(0);
+  const walletFor = item => (inCopihues(item) ? copihues : tokens);
   const [tab, setTab] = useState('piel');
   const [nameDraft, setNameDraft] = useState('');
   const [renaming, setRenaming] = useState(false);
@@ -137,6 +143,7 @@ export default function CharacterEditor() {
       .then(([catalogRes, characterRes, meRes]) => {
         setCatalog(catalogRes.data);
         setTokens(meRes.data.student?.tokens_balance ?? 0);
+        getCopihuesMe().then(res => setCopihues(res.data.balance ?? 0)).catch(() => {});
         const existing = characterRes?.data?.character;
         // Without a character the answer is a 404 that still lists the items already owned.
         const owns = characterRes?.data?.ownedItems ?? characterRes?.response?.data?.ownedItems ?? [];
@@ -176,7 +183,8 @@ export default function CharacterEditor() {
     try {
       const res = await buyCharacterItem(item.id);
       setOwned(prev => new Set([...prev, item.id]));
-      setTokens(res.data.tokens);
+      if (res.data.tokens != null) setTokens(res.data.tokens);
+      if (res.data.copihues != null) setCopihues(res.data.copihues);
     } catch (err) {
       setError(err.response?.data?.error || 'No pudimos comprarlo. Inténtalo de nuevo.');
     } finally {
@@ -321,14 +329,14 @@ export default function CharacterEditor() {
                 <Options section={section} catalog={catalog} layers={layers} owned={owned} onPick={setLayer} />
                 {selectedItem && isLocked(selectedItem) && (
                   <div className="mt-3 flex items-center justify-between gap-3 bg-surface rounded-xl px-3 py-2">
-                    <span className="text-sm text-gray-300">¿Te gusta? Cuesta <Tokens value={priceOf(selectedItem)} /></span>
+                    <span className="text-sm text-gray-300">¿Te gusta? Cuesta {inCopihues(selectedItem) ? <Copihues value={priceOf(selectedItem)} /> : <Tokens value={priceOf(selectedItem)} />}</span>
                     <button
                       type="button"
                       onClick={() => handleBuy(selectedItem)}
-                      disabled={buying === selectedItem.id || tokens < priceOf(selectedItem)}
+                      disabled={buying === selectedItem.id || walletFor(selectedItem) < priceOf(selectedItem)}
                       className="bg-gold hover:brightness-110 disabled:opacity-40 text-black font-black text-sm px-4 py-2 rounded-xl"
                     >
-                      {tokens < priceOf(selectedItem) ? `Te faltan ${priceOf(selectedItem) - tokens}` : 'Comprar'}
+                      {walletFor(selectedItem) < priceOf(selectedItem) ? `Te faltan ${priceOf(selectedItem) - walletFor(selectedItem)}` : 'Comprar'}
                     </button>
                   </div>
                 )}

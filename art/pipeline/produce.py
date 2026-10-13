@@ -86,14 +86,14 @@ UNDER_HAT_ASK = (
     'illustration, thick dark navy outlines, one shadow tone, no gradients, no text.')
 ACCESSORY_ASK = ('Edit the attached image of a bald 10-year-old child character. Add ONLY {desc}, in the same art '
                  'style. Do not add hair and do not change the face, the clothes or the body. ' + KEEP_BALD)
-ACCESSORIES = ('headwear', 'eyewear', 'neckwear', 'backwear', 'earwear')
+ACCESSORIES = ('headwear', 'eyewear', 'neckwear', 'backwear', 'earwear', 'waistwear')
 # Which template each kind is an edit of (keys of manifest["templates"]).
 TEMPLATE = {**{k: 'maestra' for k in ASK}, **{k: 'ropa' for k in CLOTHES_ASK}, **{k: 'cara' for k in ACCESSORIES},
             'hair-hat': 'gorro'}
 # Below this many pixels the cut is empty or GPT drew the part somewhere else.
 MIN_AREA = {'hair': 20000, 'eyes': 3000, 'brows': 1200, 'nose': 120, 'mouth': 500, 'top': 40000, 'dress': 60000,
             'bottom': 20000, 'shoes': 15000, 'headwear': 4000, 'eyewear': 1500, 'neckwear': 2500, 'backwear': 4000,
-            'earwear': 300, 'hair-hat': 3000}
+            'earwear': 300, 'waistwear': 2500, 'hair-hat': 3000}
 
 
 def all_parts(manifest):

@@ -36,6 +36,8 @@ def parts_of(*kinds, with_none=False):
         item = {'id': pid, 'name': part.get('label', pid)}
         if part.get('price'):
             item['price'] = part['price']
+        if part.get('currency') == 'copihues':  # the copihue collection, sold by the Academy's merchant
+            item['currency'] = 'copihues'
         if layer['kind'] == 'dress':
             item['coversBottom'] = True
         out.append(item)
@@ -86,6 +88,7 @@ def main():
         'neckwear': parts_of('neckwear', with_none=True),
         'backwear': parts_of('backwear', with_none=True),
         'earwear': parts_of('earwear', with_none=True),
+        'waistwear': parts_of('waistwear', with_none=True),
     }
     path = ROOT / 'shared/character-catalog.json'
     path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')

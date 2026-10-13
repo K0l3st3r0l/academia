@@ -929,28 +929,12 @@
       "merchantLine": "¡Tu mascota se verá lista para zarpar! Un pañuelo para un gran compañero."
     },
     {
-      "id": "sombrero",
-      "name": "Sombrero de explorador",
-      "price": 20,
-      "text": "Para salir a descubrir.",
-      "icon": "objeto_sombrero",
-      "merchantLine": "Para ti, que siempre quieres descubrir qué hay más allá."
-    },
-    {
       "id": "brujula",
       "name": "Brújula de bolsillo",
       "price": 25,
       "text": "Un norte que cabe en tu mano.",
       "icon": "objeto_brujula",
       "merchantLine": "Un norte que cabe en tu mano. ¡Nunca te perderás!"
-    },
-    {
-      "id": "capa",
-      "name": "Capa de estrellas",
-      "price": 40,
-      "text": "Un pedacito de cielo en tu mochila.",
-      "icon": "objeto_capa",
-      "merchantLine": "Lleva un pedacito de cielo contigo. ¡Te queda de maravilla!"
     },
     {
       "id": "linterna",
@@ -967,33 +951,6 @@
       "text": "Cada línea guarda una historia.",
       "icon": "objeto_mapa",
       "merchantLine": "Cada línea guarda una historia. ¿Cuál vas a descubrir tú?"
-    },
-    {
-      "id": "chupalla",
-      "icon": "objeto_chupalla",
-      "name": "Chupalla de huaso",
-      "price": 2,
-      "currency": "copihues",
-      "text": "Un sombrero tejido que acompaña las tradiciones del campo chileno.",
-      "merchantLine": "Una chupalla para llevar contigo el cariño del campo chileno."
-    },
-    {
-      "id": "manta",
-      "icon": "objeto_manta",
-      "name": "Manta huasa",
-      "price": 3,
-      "currency": "copihues",
-      "text": "Colores que abrigan y cuentan historias de Chile.",
-      "merchantLine": "Cada color de esta manta guarda un poquito de nuestra tradición."
-    },
-    {
-      "id": "faja",
-      "icon": "objeto_faja",
-      "name": "Faja tejida",
-      "price": 2,
-      "currency": "copihues",
-      "text": "Una pieza tejida para celebrar nuestras raíces.",
-      "merchantLine": "Hilos y colores que unen generaciones. ¡Esta faja te acompañará!"
     },
     {
       "id": "collar_copihue",

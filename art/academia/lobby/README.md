@@ -49,6 +49,14 @@ Servida bajo `/academia/` y con un alumno conectado (`academia_student_token`), 
 - **Cerrada mientras se prueba:** con `"abierta": false` en `shared/academy/config.json`, solo las cuentas de prueba (`is_test`) la ven; el resto vuelve a `/alumno`. Se lee en cada pedido.
 - **Entrenamiento:** ofrece la práctica rápida o ir a las Islas de retos (`/alumno/islas`), un extra por asignatura fuera de la historia.
 
+## Equipo y prendas del personaje
+
+En el juego, el Mercader tiene tres secciones: «Para tu personaje» (los accesorios del personaje del alumno, los mismos del editor, pagados con tokens), «Colección copihue» (chupalla, manta y faja, que se pagan con copihues, más el collar de la mascota) y «Recuerdos» (pañuelo, brújula, linterna y mapa). Las prendas se compran con `POST /api/characters/me/items/:id`, así que el editor y el lobby comparten lo que el alumno tiene. Sus íconos son la propia capa de la prenda (`/character/<archivo>`; los archivos ya vienen recortados, `x, y` solo los ubican).
+
+La ventana «Equipo» (desde la Mochila, el Mercader o «Ponértelo» tras comprar) muestra la página `/alumno/equipo?marco=1` dentro de la ventana de madera: el personaje real con lo que puede ponerse por zona (cabeza, lentes, orejas, cuello, espalda, cintura). Al guardar, la página avisa al lobby con `postMessage` y Esc la cierra desde adentro. Lo puesto se ve en el inicio, las islas y la apertura, que dibujan al personaje real.
+
+El niño del lobby es una animación genérica de perfil: toma del personaje la piel, el color de la polera y el más parecido de sus tres peinados (desordenado, cola, afro). Que muestre los accesorios es la fase 2 (arte de perfil por accesorio).
+
 ## Mochila
 
 Los objetos se mueven a cualquier casilla: arrastrándolos (dedo o mouse), tocando un objeto y luego una casilla vacía, o con «Mover» y las flechas. Sobre otro objeto, se intercambian. Las posiciones (`state.bag`, `{id: casilla}`) se guardan con la partida; `bagLayout` pone primero cada objeto en su casilla guardada y los nuevos en la primera libre. Los íconos bloquean el arrastre nativo de imágenes, que cancelaba el del juego.

@@ -71,30 +71,32 @@ describe('Academia: partida y apertura', () => {
 describe('Academia: tienda con tokens y copihues reales', () => {
   it('compra con tokens, deja registro y no permite comprar dos veces', async () => {
     const s = await student(30);
-    const res = await s.call('post', '/shop/buy', { itemId: 'sombrero' });
+    const res = await s.call('post', '/shop/buy', { itemId: 'brujula' });
     expect(res.status).toBe(200);
-    expect(res.body.snapshot.tokens).toBe(10);
-    expect(res.body.snapshot.items).toEqual([{ id: 'sombrero', name: 'Sombrero de explorador', text: 'Para salir a descubrir.' }]);
+    expect(res.body.snapshot.tokens).toBe(5);
+    expect(res.body.snapshot.items).toEqual([{ id: 'brujula', name: 'Brújula de bolsillo', text: 'Un norte que cabe en tu mano.' }]);
     const { rows } = await pool.query('SELECT amount, reason FROM token_ledger WHERE student_id = $1', [s.row.id]);
-    expect(rows).toEqual([{ amount: -20, reason: 'academy_shop' }]);
-    expect((await s.call('post', '/shop/buy', { itemId: 'sombrero' })).status).toBe(409);
+    expect(rows).toEqual([{ amount: -25, reason: 'academy_shop' }]);
+    expect((await s.call('post', '/shop/buy', { itemId: 'brujula' })).status).toBe(409);
+    // Wearables are the character's own items since 2026-10-12: not keepsakes here.
+    expect((await s.call('post', '/shop/buy', { itemId: 'sombrero' })).status).toBe(404);
   });
 
   it('rechaza sin saldo suficiente sin tocar nada', async () => {
     const s = await student(5);
-    const res = await s.call('post', '/shop/buy', { itemId: 'capa' });
+    const res = await s.call('post', '/shop/buy', { itemId: 'mapa' });
     expect(res.status).toBe(400);
     expect(res.body.error).toMatch(/más tokens/);
     expect(await balances(s.row.id)).toEqual({ tokens: 5, copihues: 0 });
     expect((await s.call('get', '/me')).body.snapshot.items).toEqual([]);
   });
 
-  it('la colección copihue se paga con copihues y vender devuelve la mitad', async () => {
+  it('la colección copihue se paga con copihues y vender devuelve la mitad (de 1, nada)', async () => {
     const s = await student(0);
     await pool.query('UPDATE local_students SET copihues_balance = 3 WHERE id = $1', [s.row.id]);
-    expect((await s.call('post', '/shop/buy', { itemId: 'manta' })).body.snapshot.copihues).toBe(0);
-    expect((await s.call('post', '/shop/sell', { itemId: 'manta' })).body.snapshot.copihues).toBe(1);
-    expect((await s.call('post', '/shop/sell', { itemId: 'manta' })).status).toBe(404);
+    expect((await s.call('post', '/shop/buy', { itemId: 'collar_copihue' })).body.snapshot.copihues).toBe(2);
+    expect((await s.call('post', '/shop/sell', { itemId: 'collar_copihue' })).body.snapshot.copihues).toBe(2);
+    expect((await s.call('post', '/shop/sell', { itemId: 'collar_copihue' })).status).toBe(404);
   });
 
   it('un objeto desconocido no existe', async () => {

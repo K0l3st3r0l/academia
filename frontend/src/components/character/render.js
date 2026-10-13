@@ -7,7 +7,8 @@
 
 const INK = [26, 26, 46];
 // hatBack: the underside of a wide brim beside the head, which hair hanging there covers.
-const PAINT_ORDER = ['body', 'shoes', 'bottom', 'top', 'backwear', 'neckwear', 'nose', 'mouth', 'eyes', 'brows',
+// A sash goes on the clothes and under the cape.
+const PAINT_ORDER = ['body', 'shoes', 'bottom', 'top', 'waistwear', 'backwear', 'neckwear', 'nose', 'mouth', 'eyes', 'brows',
   'hatBack', 'eyewear', 'hair', 'earwear', 'headwear'];
 // Which look field gives each color family its color.
 const COLOR_FIELD = { skin: 'skinColor', hair: 'hairColor', eye: 'eyeColor', top: 'topColor', bottom: 'bottomColor', shoes: 'shoeColor' };

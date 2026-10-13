@@ -93,7 +93,7 @@ test('measured bases and animation regions stay inside their source pieces',()=>
  assert.equal(measured.cofre.ground,measured.cofre_abierto.ground);assert.equal(measured.estela.frames,72);assert.equal(measured.estela.fps,12);assert.ok(measured.estela.size[1]>=350);
  for(const [name,a] of Object.entries(raw.animations)){const [w,h]=measured[name].size;for(const [x,y,r] of [...(a.circles||[]),...(a.lights||[])])assert.ok(x-r>=0 && x+r<=w && y-r>=0 && y+r<=h,name+' region');for(const [x,y] of a.screen||a.sway?.polygon||[])assert.ok(x>=0 && x<=w && y>=0 && y<=h,name+' polygon');}
 });
-test('artifact template has only allowed markup and no network scripts but the Academy API',()=>{assert.ok(template.startsWith('<title>'));assert.equal(/<!doctype|<html[\s>]|<head[\s>]|<body[\s>]/i.test(template),false);assert.equal(/<script[^>]+src=|\b(?:alert|confirm|prompt)\s*\(/.test(template),false);assert.deepEqual([...template.matchAll(/\bfetch\s*\(([^,]*)/g)].map(m=>m[1]),["'/api/academy'+path"],'network only to the same-origin Academy API, used when served by games.laravas.com');});
+test('artifact template has only allowed markup and no network scripts but the Academy API',()=>{assert.ok(template.startsWith('<title>'));assert.equal(/<!doctype|<html[\s>]|<head[\s>]|<body[\s>]/i.test(template),false);assert.equal(/<script[^>]+src=|\b(?:alert|confirm|prompt)\s*\(/.test(template),false);assert.ok([...template.matchAll(/\bfetch\s*\(([^,)]*)/g)].every(m=>m[1].startsWith("'/")),'network only to the same origin (games.laravas.com), never to another host');});
 test('display assets stay within the menu budget',()=>{
  const measured=JSON.parse(fs.readFileSync(__dirname+'/shots3/measurements.json','utf8')).pieces;
  assert.equal(measured.ui_marco.packedSize[0],640);
@@ -127,10 +127,10 @@ test('the high chest awards effort and recognition once, with no repeat reward o
  const restored=A.restoreState(A.serializeState(s),1000,map);assert.equal(A.openChest(restored,chest),false);assert.equal(restored.copihues,1);
 });
 test('copihue collection never spends or refunds tokens',()=>{
- const s=validState(),collection=raw.catalog.filter(i=>i.currency==='copihues');assert.deepEqual(collection.map(i=>i.price),[2,3,2,1]);
+ const s=validState(),collection=raw.catalog.filter(i=>i.currency==='copihues');assert.deepEqual(json(collection.map(i=>i.price)),[1],'chupalla, manta and faja are worn by the character since 2026-10-12');
  assert.equal(A.trade(s,raw.catalog,'collar_copihue').ok,false);assert.equal(s.tokens,60);s.copihues=8;
- for(const item of collection){assert.equal(A.trade(s,raw.catalog,item.id).ok,true);assert.equal(A.trade(s,raw.catalog,item.id).ok,false);}assert.equal(s.tokens,60);assert.equal(s.copihues,0);
- assert.equal(A.trade(s,raw.catalog,'manta',true).ok,true);assert.equal(s.copihues,1);assert.equal(s.tokens,60);
+ for(const item of collection){assert.equal(A.trade(s,raw.catalog,item.id).ok,true);assert.equal(A.trade(s,raw.catalog,item.id).ok,false);}assert.equal(s.tokens,60);assert.equal(s.copihues,7);
+ assert.equal(A.trade(s,raw.catalog,'collar_copihue',true).ok,true);assert.equal(s.copihues,7,'half of one copihue rounds down');assert.equal(s.tokens,60);
 });
 test('arcade affine basis and hanging padlock use the measured art coordinates',()=>{
  assert.deepEqual(raw.animations.arcade.screen,[[41,74],[106,73],[120,137],[49,137]]);

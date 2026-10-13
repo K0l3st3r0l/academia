@@ -3,7 +3,8 @@ const express = require('express');
 const pool = require('../db');
 const { authenticateToken, requireStudent, requireAdmin } = require('../middleware/auth');
 const { trackEvent } = require('../services/eventTracker');
-const { getCatalog, validateLayers, itemPrice, pricedItemsIn, allPricedItems, renameCost } = require('../services/characterCatalog');
+const { getCatalog, validateLayers, itemPrice, itemCurrency, pricedItemsIn, allPricedItems, renameCost } = require('../services/characterCatalog');
+const { spendCopihues, InsufficientCopihuesError } = require('../services/copihues');
 const { cleanName, nameProblem } = require('../services/characterName');
 const { spendTokens, InsufficientTokensError, insufficientTokens } = require('../services/tokenWallet');
 const { inTransaction } = require('../db/transaction');
@@ -159,8 +160,12 @@ router.post('/me/items/:itemId', authenticateToken, requireStudent, async (req, 
         [req.user.id, itemId, price]
       );
       if (!rowCount) return { status: 400, body: { error: 'Ya tienes ese artículo.' } };
+      if (itemCurrency(itemId) === 'copihues') {
+        const copihues = await spendCopihues(client, { studentId: req.user.id, amount: price, reason: 'shop_item', detail: itemId });
+        return { status: 200, body: { itemId, price, currency: 'copihues', copihues } };
+      }
       const tokens = await spendTokens(client, { studentId: req.user.id, amount: price, reason: 'shop_item' });
-      return { status: 200, body: { itemId, price, tokens } };
+      return { status: 200, body: { itemId, price, currency: 'tokens', tokens } };
     });
 
     if (result.status === 200) {
@@ -169,6 +174,9 @@ router.post('/me/items/:itemId', authenticateToken, requireStudent, async (req, 
     res.status(result.status).json(result.body);
   } catch (err) {
     if (err instanceof InsufficientTokensError) return insufficientTokens(res, err);
+    if (err instanceof InsufficientCopihuesError) {
+      return res.status(400).json({ error: `Te faltan copihues: cuesta ${err.price} y tienes ${err.balance}.`, code: 'insufficient_copihues' });
+    }
     logger.error({ err }, 'buy item error');
     res.status(500).json({ error: 'Error al comprar el artículo' });
   }

@@ -23,6 +23,32 @@ async function giveCopihues(client, { studentId, amount, reason, detail = null, 
   return rows[0];
 }
 
+class InsufficientCopihuesError extends Error {
+  constructor(balance, price) {
+    super('insufficient_copihues');
+    this.balance = balance;
+    this.price = price;
+  }
+}
+
+// Inside the caller's transaction; the check and the debit are one UPDATE, as with tokens.
+async function spendCopihues(client, { studentId, amount, reason, detail = null }) {
+  const { rows } = await client.query(
+    `UPDATE local_students SET copihues_balance = copihues_balance - $2
+     WHERE id = $1 AND copihues_balance >= $2 RETURNING copihues_balance`,
+    [studentId, amount]
+  );
+  if (!rows.length) {
+    const { rows: current } = await client.query('SELECT copihues_balance FROM local_students WHERE id = $1', [studentId]);
+    throw new InsufficientCopihuesError(current[0]?.copihues_balance ?? 0, amount);
+  }
+  await client.query(
+    'INSERT INTO copihue_ledger (student_id, amount, reason, detail) VALUES ($1, $2, $3, $4)',
+    [studentId, -amount, reason, detail]
+  );
+  return rows[0].copihues_balance;
+}
+
 // Consecutive days (Chile time) up to today with at least one finished level. Days are distinct
 // and newest first, so they match today - n exactly while consecutive; after a gap, never again.
 async function currentStreak(client, studentId) {
@@ -59,4 +85,7 @@ async function levelAchievements(client, { studentId, subject, gradeLevel, level
   return earned;
 }
 
-module.exports = { giveCopihues, levelAchievements, currentStreak, ACHIEVEMENTS, STREAK_DAYS, MAX_TEACHER_AWARD };
+module.exports = {
+  giveCopihues, spendCopihues, InsufficientCopihuesError, levelAchievements, currentStreak, ACHIEVEMENTS, STREAK_DAYS,
+  MAX_TEACHER_AWARD,
+};

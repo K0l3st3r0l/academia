@@ -786,6 +786,48 @@
       "label": "Audífonos de música",
       "desc": "big purple over-ear headphones with the band over the head",
       "price": 50
+    },
+    {
+      "id": "cabeza-sombrero-explorador",
+      "kind": "headwear",
+      "label": "Sombrero de explorador",
+      "desc": "a khaki safari explorer hat with a rounded crown, a medium round brim, a dark brown band and a small feather tucked in the band, sitting on the head",
+      "price": 20,
+      "clipsHair": true,
+      "keepColors": true
+    },
+    {
+      "id": "cabeza-chupalla",
+      "kind": "headwear",
+      "label": "Chupalla",
+      "desc": "a traditional Chilean huaso chupalla: a woven straw hat with a low flat round top, a wide flat brim and a black band, sitting straight on the head",
+      "price": 2,
+      "currency": "copihues",
+      "clipsHair": true,
+      "keepColors": true
+    },
+    {
+      "id": "espalda-capa-estrellas",
+      "kind": "backwear",
+      "label": "Capa de estrellas",
+      "desc": "a deep navy blue cape covered with small golden stars and thin golden constellation lines, tied at the neck with a round golden clasp, flowing behind the body and visible beside the arms and legs",
+      "price": 40
+    },
+    {
+      "id": "cuello-manta",
+      "kind": "neckwear",
+      "label": "Manta huasa",
+      "desc": "a short colorful Chilean huaso manta: a small woven shawl resting only on top of the shoulders and the upper chest, with bold red, white and green woven stripes and a short fringe along its edge; the arms stay exactly where they are, hanging at the sides, uncovered",
+      "price": 3,
+      "currency": "copihues"
+    },
+    {
+      "id": "cintura-faja",
+      "kind": "waistwear",
+      "label": "Faja tejida",
+      "desc": "a red woven Chilean huaso sash (faja) wrapped twice around the waist, tied in a knot at one side with two short fringed ends hanging down",
+      "price": 2,
+      "currency": "copihues"
     }
   ]
 }

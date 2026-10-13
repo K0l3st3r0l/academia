@@ -232,6 +232,7 @@ body.touch-controls .window-footer,body.touch-device .window-footer{display:none
 .window-fit label{font-size:14px}.window-fit select{min-height:44px;font-size:15px;padding:4px 12px;margin-left:0}
 .settings-panel .window-content>p{font-size:13px}
 .settings-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.equip-frame{display:block;width:100%;height:min(66dvh,640px);border:0;background:transparent;color-scheme:light}
 /* The prompt and controls share the same size container as every other menu. */
 :is(#overlay,.closing-ghost) .challenge.window-fit{border-width:12px;border-image-width:12px;padding:8px 10px;box-shadow:none}
 .challenge-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
@@ -1231,7 +1232,7 @@ function optionButton(text,index,action,selected=false){return append(button('',
     });
     workspace.append(check);update();
   }
-function itemIcon(item){const src=SRC[item.icon||'objeto_'+item.id];if(!src)return null;const img=el('img','item-icon');img.src=src;img.alt=item.name;return img;}
+function itemIcon(item){if(item.wear)return wearIcon(item);const src=SRC[item.icon||'objeto_'+item.id];if(!src)return null;const img=el('img','item-icon');img.src=src;img.alt=item.name;return img;}
 function applyMotion(){reduced=motion.matches || !!settings.reducedMotion;effects=!reduced;fx.length=0;vortexStatic=false;if(reduced){completeMessage();for(const id of uiTimers)clearTimeout(id);uiTimers.clear();for(const animation of uiAnimations)animation.cancel();uiAnimations.clear();document.querySelectorAll('.flying-item,.closing-ghost').forEach(n=>n.remove());updateHUD();}document.body.classList.toggle('reduced-motion',reduced);if(reduced && treasure)treasure.t=3;}
 function unlockAudio(){if(settings.sound===false)return;try{const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)return;if(!audioContext)audioContext=new Audio();if(audioContext.state==='suspended')audioContext.resume().catch(()=>{});}catch{audioContext=null;}}
 function fanfare(){if(!audioContext || settings.sound===false)return;const now=audioContext.currentTime;for(const [i,f] of [587.33,739.99,880,1174.66,880].entries()){const o=audioContext.createOscillator(),gain=audioContext.createGain(),at=now+i*.145;o.type=i%2?'triangle':'square';o.frequency.setValueAtTime(f,at);gain.gain.setValueAtTime(0,at);gain.gain.linearRampToValueAtTime(.018,at+.012);gain.gain.exponentialRampToValueAtTime(.001,at+.22);o.connect(gain);gain.connect(audioContext.destination);o.onended=()=>{o.disconnect();gain.disconnect();};o.start(at);o.stop(at+.24);}}
@@ -1249,21 +1250,35 @@ function advanceTreasure(dt){if(!treasure)return;treasure.t+=dt;if(treasure.t>=1
 }
 function finishTreasure(){if(!treasure || !reduced && treasure.t<1.05)return;treasure=null;$('treasure').hidden=true;document.body.classList.remove('treasuring');clearInput();save();canvas.focus();}
 
-function showShop(selected=0,thankYou='',collection='tokens'){
- const catalog=MAP_DATA.catalog.filter(item=>(item.currency||'tokens')===collection),card=panel('Puesto del Mercader');card.classList.add('shop-panel');
- const merchant=stand('mercader',''),layout=el('div','shop-layout'),items=el('div','shop-items'),tabs=el('div','collection-tabs'),grid=el('div','shelf-grid'),detail=el('div','parchment detail-card'),slots=[];let chosen=clamp(selected,0,catalog.length-1);
+function showShop(selected=0,thankYou='',collection=SERVER&&WEAR.items.length?'personaje':'tokens'){
+ // In the game the merchant also sells what the student's character can wear (bought through the
+ // character's own shop, so it is the same item the editor and «Equipo» know).
+ const wardrobe=!!(SERVER&&WEAR.items.length),lists={personaje:WEAR.items.filter(i=>i.currency==='tokens'),tokens:MAP_DATA.catalog.filter(i=>(i.currency||'tokens')==='tokens'),copihues:[...(wardrobe?WEAR.items.filter(i=>i.currency==='copihues'):[]),...MAP_DATA.catalog.filter(i=>i.currency==='copihues')]};
+ const catalog=lists[collection]||lists.tokens,card=panel('Puesto del Mercader');card.classList.add('shop-panel');
+ const merchant=stand('mercader',''),layout=el('div','shop-layout'),items=el('div','shop-items'),tabs=el('div','collection-tabs'),grid=el('div','shelf-grid'),detail=el('div','parchment detail-card'),slots=[];let chosen=clamp(selected,0,catalog.length-1),buying=false;
+ const currencyOf=item=>item.currency==='copihues'?'copihues':'tokens',owns=item=>item.wear?WEAR.owned.has(item.id):state.items.some(o=>o.id===item.id);
  tabs.setAttribute('aria-label','Colecciones del Mercader');
- for(const [currency,label] of [['tokens','Recuerdos · tokens'],['copihues','Colección copihue']]){const tab=button(label,()=>showShop(0,'',currency));tab.setAttribute('aria-pressed',String(currency===collection));tabs.append(tab);}
- grid.setAttribute('aria-label',collection==='copihues'?'Colección copihue':'Recuerdos con tokens');
- const select=i=>{chosen=i;const item=catalog[i],owned=state.items.some(o=>o.id===item.id);slots.forEach((slot,k)=>{slot.classList.toggle('selected',k===i);slot.setAttribute('aria-pressed',String(k===i));});if(menuNavigation)menuNavigation.index=i;
+ for(const [key,label] of wardrobe?[['personaje','Para tu personaje'],['copihues','Colección copihue'],['tokens','Recuerdos']]:[['tokens','Recuerdos · tokens'],['copihues','Colección copihue']]){const tab=button(label,()=>showShop(0,'',key));tab.setAttribute('aria-pressed',String(key===collection));tabs.append(tab);}
+ grid.setAttribute('aria-label',{personaje:'Para tu personaje',copihues:'Colección copihue',tokens:'Recuerdos con tokens'}[collection]);
+ const select=i=>{chosen=i;const item=catalog[i],cur=currencyOf(item);slots.forEach((slot,k)=>{slot.classList.toggle('selected',k===i);slot.setAttribute('aria-pressed',String(k===i));});if(menuNavigation)menuNavigation.index=i;
   merchant.bubble.textContent=thankYou||item.merchantLine;thankYou='';detail.replaceChildren();const copy=append(el('div','detail-copy'),el('h3','',item.name),el('p','',item.text));append(detail,itemIcon(item),copy);
-  if(owned)detail.append(el('div','owned-stamp','En tu mochila'));
-  else {const shortfall=Math.max(0,item.price-state[collection]),unit=collection==='copihues'?(shortfall===1?'copihue':'copihues'):'tokens',buy=button(shortfall?'Te faltan '+shortfall+' '+unit:'Comprar',()=>purchase(i),'primary');buy.disabled=shortfall>0;buy.dataset.action='buy';if(!shortfall)append(buy,uiIcon(collection==='copihues'?'ico_copihue':'ico_ficha'),el('span','',item.price));detail.append(buy);}
+  if(owns(item)){if(item.wear){detail.append(el('div','owned-stamp','Es tuyo'));const wear=button('Ponértelo',showEquipment,'primary');detail.append(wear);primaryAction=showEquipment;}else{detail.append(el('div','owned-stamp','En tu mochila'));primaryAction=null;}return;}
+  const shortfall=Math.max(0,item.price-state[cur]),unit=cur==='copihues'?(shortfall===1?'copihue':'copihues'):'tokens',buy=button(shortfall?'Te faltan '+shortfall+' '+unit:'Comprar',()=>purchase(i),'primary');buy.disabled=shortfall>0||buying;buy.dataset.action='buy';if(!shortfall)append(buy,uiIcon(cur==='copihues'?'ico_copihue':'ico_ficha'),el('span','',item.price));detail.append(buy);
   primaryAction=()=>purchase(chosen);
  };
- const purchase=i=>{const item=catalog[i];if(state.items.some(o=>o.id===item.id)||state[collection]<item.price)return;const before=state[collection],result=trade(state,MAP_DATA.catalog,item.id);if(!result.ok)return;remote('/shop/buy',{itemId:item.id});uiSound('coin');save();slots[i].append(el('span','owned-dot','✓'));select(i);merchant.bubble.textContent='¡Gracias! Que este recuerdo te acompañe en tu aventura.';animateCount($(collection==='copihues'?'window-copihues':'window-coins'),before,state[collection]);flyIcon(item,slots[i],$('bag'));announce(result.text);};
- catalog.forEach((item,i)=>{const node=button('',()=>{uiSound('tick');if(chosen===i)purchase(i);else select(i);},'item-slot');node.dataset.item=item.id;node.setAttribute('aria-label',item.name+', '+item.price+' '+collection);append(node,itemIcon(item),append(el('span','price-tag'),uiIcon(collection==='copihues'?'ico_copihue':'ico_ficha'),el('span','',item.price)));if(state.items.some(o=>o.id===item.id))node.append(el('span','owned-dot','✓'));slots.push(node);grid.append(node);});
- append(items,tabs,grid);append(layout,merchant.node,items);card.append(layout,detail,append(el('div','shop-tools'),button('Ver mi mochila',showBag)));fitWindow(card,detail,card.querySelector('.shop-tools'));bindNavigation(slots,innerWidth<=600?2:3,select,chosen);select(chosen);
+ const bought=(i,before,cur,text)=>{uiSound('coin');slots[i].append(el('span','owned-dot','✓'));select(i);animateCount($(cur==='copihues'?'window-copihues':'window-coins'),before,state[cur]);announce(text);};
+ const buyWear=async i=>{
+  const item=catalog[i],cur=currencyOf(item),before=state[cur];buying=true;select(i);
+  try{
+   const res=await fetch('/api/characters/me/items/'+encodeURIComponent(item.id),{method:'POST',headers:{Authorization:'Bearer '+SERVER.token}}),data=await res.json().catch(()=>({}));
+   if(!res.ok)throw new Error(data.error||'No pudimos comprarlo.');
+   WEAR.owned.add(item.id);await api('GET','/me').catch(()=>{});buying=false;
+   thankYou='¡Gracias! Póntelo en Equipo y lúcelo por la Academia.';bought(i,before,cur,item.name+' es tuyo.');
+  }catch(err){buying=false;toast(err.message,5000);select(i);}
+ };
+ const purchase=i=>{const item=catalog[i],cur=currencyOf(item);if(buying||owns(item)||state[cur]<item.price)return;if(item.wear)return buyWear(i);const before=state[cur],result=trade(state,MAP_DATA.catalog,item.id);if(!result.ok)return;remote('/shop/buy',{itemId:item.id});save();thankYou='¡Gracias! Que este recuerdo te acompañe en tu aventura.';bought(i,before,cur,result.text);flyIcon(item,slots[i],$('bag'));};
+ catalog.forEach((item,i)=>{const cur=currencyOf(item),node=button('',()=>{uiSound('tick');if(chosen===i)purchase(i);else select(i);},'item-slot');node.dataset.item=item.id;node.setAttribute('aria-label',item.name+', '+item.price+' '+cur);append(node,itemIcon(item),append(el('span','price-tag'),uiIcon(cur==='copihues'?'ico_copihue':'ico_ficha'),el('span','',item.price)));if(owns(item))node.append(el('span','owned-dot','✓'));slots.push(node);grid.append(node);});
+ append(items,tabs,grid);append(layout,merchant.node,items);card.append(layout,detail,append(el('div','shop-tools'),button('Ver mi mochila',showBag),wardrobe?button('Equipo',showEquipment):null));fitWindow(card,detail,card.querySelector('.shop-tools'));bindNavigation(slots,innerWidth<=600?2:3,select,chosen);select(chosen);
 }
 function showBag(selected=0,carrying=null){
  const card=panel('Mochila'),counters=append(el('div','bag-counters'),wallet(state.tokens),wallet(state.copihues,'ico_copihue','copihues'),mapSparks().length?wallet(mapSparks().filter(e=>state.sparks.includes(e.id)).length+'/'+mapSparks().length,'ico_chispa','chispas de este mapa'):null),layout=el('div','bag-layout'),grid=el('div','bag-grid'),detail=el('div','parchment bag-detail');
@@ -1292,6 +1307,7 @@ function showBag(selected=0,carrying=null){
  });
  // Icons are images: the browser's own image drag would cancel ours.
  grid.addEventListener('dragstart',e=>e.preventDefault());
+ if(SERVER)counters.append(button('Equipo',showEquipment));
  card.classList.add('bag-panel');append(layout,grid,detail);append(card,counters,layout);fitWindow(card,detail);
  const start=carrying!==null?carrying:clamp(selected,0,contents.length-1);bindNavigation(slots,innerWidth<=600?2:4,select,start);select(start);
 }
@@ -2204,12 +2220,41 @@ touchDevice.addEventListener('change',()=>{document.body.classList.toggle('touch
 $('objectives-toggle').onclick=()=>{if(!overlay.hidden)return;showObjectives();};
 window.addEventListener('resize',resize);document.addEventListener('visibilitychange',()=>{clearInput();save();if(!document.hidden && !raf && ready)raf=requestAnimationFrame(frame);});
 window.addEventListener('pagehide',()=>{save();if(SERVER)upload(true);});motion.addEventListener('change',applyMotion);
+// The student's character: its wearables are sold here and put on in «Equipo» (the app's own page,
+// framed), and the lobby kid takes its skin, clothes colour and the nearest of its three hairstyles.
+const WEAR={items:[],owned:new Set(),catalog:null,parts:null,icons:new Map()};
+const WEAR_SLOTS=['headwear','neckwear','backwear','waistwear','eyewear','earwear'];
+const WEAR_LINES={headwear:'¡Con eso en la cabeza nadie te va a olvidar!',neckwear:'Abrigadito y con estilo, como un buen viajero.',backwear:'¡Esa te quedará de maravilla cuando corras!',waistwear:'Bien amarrada, lista para la fiesta.',eyewear:'Para mirar el mundo con otros ojos.',earwear:'Para escuchar hasta los secretos del viento.'};
+function hairToStyle(id=''){if(/afro|rizos|hi-top|burbujas/.test(id))return 'afro';if(/largo|melena|cola|trenza|mono|pinza|mariposa|colitas|wolf|rastas/.test(id))return 'cola';return 'desordenado';}
+function dressPlayer(layers){const c=WEAR.catalog;if(!c||!layers)return;const skin=c.skinTones?.find(t=>t.id===layers.skinTone)?.hex,clothes=c.topColors?.find(t=>t.id===layers.topColor)?.hex;Object.assign(player.look,{...(skin&&{skin}),...(clothes&&{clothes}),style:hairToStyle(layers.hairStyle)});}
+async function loadWardrobe(){
+ try{
+  const auth={headers:{Authorization:'Bearer '+SERVER.token}};
+  const [catalog,me,parts]=await Promise.all([fetch('/api/characters/catalog').then(r=>r.json()),fetch('/api/characters/me',auth).then(r=>r.json()),fetch('/character/parts.json',{cache:'no-cache'}).then(r=>r.json())]);
+  Object.assign(WEAR,{catalog,parts,owned:new Set(me.ownedItems||[])});
+  WEAR.items=WEAR_SLOTS.flatMap(slot=>(catalog[slot]||[]).filter(i=>i.price>0).map(i=>({id:i.id,name:i.name,price:i.price,currency:i.currency==='copihues'?'copihues':'tokens',wear:slot,text:'Para tu personaje. Después de comprarlo, póntelo en Equipo.',merchantLine:WEAR_LINES[slot]})));
+  if(me.character)dressPlayer(me.character.layers);
+ }catch{}
+}
+// A wearable's icon is its own layer: parts.json files are already cropped (x, y only place them).
+function wearIcon(item){
+ const img=el('img','item-icon');img.alt=item.name;const cached=WEAR.icons.get(item.id);if(cached){img.src=cached;return img;}
+ const layer=WEAR.parts?.layers?.[item.id];if(!layer)return img;
+ const source=new Image();source.onload=()=>{const c=document.createElement('canvas'),k=Math.min(1,128/Math.max(layer.w,layer.h));c.width=Math.round(layer.w*k);c.height=Math.round(layer.h*k);c.getContext('2d').drawImage(source,0,0,c.width,c.height);const url=c.toDataURL();WEAR.icons.set(item.id,url);img.src=url;};
+ source.src='/character/'+layer.file+'?v='+WEAR.parts.version;return img;
+}
+function showEquipment(){
+ const card=panel('Equipo'),frame=el('iframe','equip-frame');frame.src='/alumno/equipo?marco=1';frame.title='Equipo: elige qué ponerte';
+ card.classList.add('equip-panel');card.append(frame);fitWindow(card);uiSound('paper');
+}
 // First visit goes through the opening film; the game starts from the server's save.
 async function loadFromServer(){
  let snap;try{({snapshot:snap}=await api('GET','/me'));}catch(err){$('load-message').textContent=err.message+' Recarga para intentarlo de nuevo.';return false;}
  // Closed while it is being tried out (shared/academy/config.json): only test accounts come in.
  if(!snap.open){location.replace('/alumno');return false;}
  if(!snap.introSeenAt){location.replace('/alumno/apertura');return false;}
+ await loadWardrobe();
+ window.addEventListener('message',e=>{if(e.origin!==location.origin)return;if(e.data?.type==='academia:equipo'){dressPlayer(e.data.layers);toast('¡Listo! Ya lo llevas puesto.');}if(e.data?.type==='academia:cerrar')closeOverlay();});
  state=restoreState({...snap.state,version:1,tokens:snap.tokens,copihues:snap.copihues,items:snap.items,chests:snap.chests,bank:snap.bank},Date.now(),map);settings=state.settings;applySnapshot(snap);applyTouch();
  objectivesOpen=!(state.flags.metEstela || state.flags.welcomed);
  if(state.position?.mapId===map.id){player.x=clamp(state.position.x,25,map.width-25);player.y=clamp(state.position.y,0,map.height);player.ground=!!support(map,player);Object.assign(pet,{x:player.x-70,y:player.y});}

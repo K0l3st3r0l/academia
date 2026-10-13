@@ -17,6 +17,7 @@ import TeacherCopihues from './pages/TeacherCopihues';
 import CreateStudentPassword from './pages/CreateStudentPassword';
 import AcademyIntro from './pages/AcademyIntro';
 import IslandsHub from './pages/IslandsHub';
+import EquipmentPage from './pages/EquipmentPage';
 
 function ProtectedTeacher({ children }) {
   const { user, loading, isTeacher } = useAuth();
@@ -59,6 +60,10 @@ export default function App() {
           <Route
             path="/alumno/apertura"
             element={<ProtectedStudent><AcademyIntro /></ProtectedStudent>}
+          />
+          <Route
+            path="/alumno/equipo"
+            element={<ProtectedStudent><EquipmentPage /></ProtectedStudent>}
           />
           <Route
             path="/alumno/islas"

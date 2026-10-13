@@ -717,6 +717,17 @@
       "id": "cabeza-sombrero",
       "name": "Sombrero",
       "price": 60
+    },
+    {
+      "id": "cabeza-sombrero-explorador",
+      "name": "Sombrero de explorador",
+      "price": 20
+    },
+    {
+      "id": "cabeza-chupalla",
+      "name": "Chupalla",
+      "price": 2,
+      "currency": "copihues"
     }
   ],
   "eyewear": [
@@ -757,6 +768,12 @@
       "id": "cuello-medalla",
       "name": "Medalla",
       "price": 80
+    },
+    {
+      "id": "cuello-manta",
+      "name": "Manta huasa",
+      "price": 3,
+      "currency": "copihues"
     }
   ],
   "backwear": [
@@ -773,6 +790,11 @@
       "id": "espalda-capa",
       "name": "Capa",
       "price": 80
+    },
+    {
+      "id": "espalda-capa-estrellas",
+      "name": "Capa de estrellas",
+      "price": 40
     }
   ],
   "earwear": [
@@ -788,6 +810,18 @@
       "id": "orejas-audifonos",
       "name": "Audífonos de música",
       "price": 50
+    }
+  ],
+  "waistwear": [
+    {
+      "id": "ninguno",
+      "name": "Ninguno"
+    },
+    {
+      "id": "cintura-faja",
+      "name": "Faja tejida",
+      "price": 2,
+      "currency": "copihues"
     }
   ]
 }

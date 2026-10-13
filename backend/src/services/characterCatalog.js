@@ -36,9 +36,12 @@ const CATEGORY_FIELDS = {
   neckwear: 'neckwear',
   backwear: 'backwear',
   earwear: 'earwear',
+  waistwear: 'waistwear',
 };
 // Accessory slots may be left out: missing means none.
-const OPTIONAL_FIELDS = new Set(['headwear', 'eyewear', 'neckwear', 'backwear', 'earwear']);
+const OPTIONAL_FIELDS = new Set(['headwear', 'eyewear', 'neckwear', 'backwear', 'earwear', 'waistwear']);
+// A catalog built before a slot existed simply has no list for it.
+const entries = catalogKey => catalog[catalogKey] ?? [];
 
 function getCatalog() {
   return catalog;
@@ -53,19 +56,29 @@ function validateLayers(layers) {
       errors.push(`${field} es requerido`);
       continue;
     }
-    const valid = catalog[catalogKey].some(entry => entry.id === value);
+    const valid = entries(catalogKey).some(entry => entry.id === value);
     if (!valid) errors.push(`${field}: "${value}" no existe en el catálogo`);
   }
   return errors;
 }
 
 // Items with a price must be bought before they can be worn; the rest are free for everyone.
-function itemPrice(itemId) {
+function itemEntry(itemId) {
   for (const catalogKey of Object.values(CATEGORY_FIELDS)) {
-    const entry = catalog[catalogKey].find(e => e.id === itemId);
-    if (entry) return entry.price ?? 0;
+    const entry = entries(catalogKey).find(e => e.id === itemId);
+    if (entry) return entry;
   }
   return null;
+}
+
+function itemPrice(itemId) {
+  const entry = itemEntry(itemId);
+  return entry ? entry.price ?? 0 : null;
+}
+
+// The copihue collection (sold by the Academy's merchant) costs copihues; everything else, tokens.
+function itemCurrency(itemId) {
+  return itemEntry(itemId)?.currency === 'copihues' ? 'copihues' : 'tokens';
 }
 
 function pricedItemsIn(layers) {
@@ -77,11 +90,11 @@ function pricedItemsIn(layers) {
 // Test accounts own everything, including items added after they were created.
 function allPricedItems() {
   return Object.values(CATEGORY_FIELDS)
-    .flatMap(catalogKey => catalog[catalogKey])
+    .flatMap(entries)
     .filter(e => (e.price ?? 0) > 0)
     .map(e => e.id);
 }
 
 const renameCost = () => catalog.renameCost ?? 100;
 
-module.exports = { getCatalog, validateLayers, itemPrice, pricedItemsIn, allPricedItems, renameCost };
+module.exports = { getCatalog, validateLayers, itemPrice, itemCurrency, pricedItemsIn, allPricedItems, renameCost };

@@ -33,12 +33,13 @@ REGIONS = {
     'shoes': (180, 1150, 844, 1536),
     'headwear': (100, 0, 924, 520),
     'eyewear': (280, 230, 744, 470),
-    'neckwear': (260, 420, 764, 760),
+    'neckwear': (200, 400, 824, 880),  # wide enough for a manta over the shoulders (2026-10-12)
+    'waistwear': (150, 800, 874, 1180),
     'backwear': (80, 380, 944, 1250),
     'earwear': (200, 250, 824, 560),
 }
 MIN_SPECK = {'face': 30, 'eyes': 60, 'brows': 60, 'nose': 20, 'mouth': 40, 'hair': 400, 'hair-hat': 400, 'top': 400,
-             'dress': 400, 'bottom': 400, 'shoes': 400, 'headwear': 300, 'eyewear': 60, 'neckwear': 200, 'backwear': 300, 'earwear': 60}
+             'dress': 400, 'bottom': 400, 'shoes': 400, 'headwear': 300, 'eyewear': 60, 'neckwear': 200, 'backwear': 300, 'earwear': 60, 'waistwear': 200}
 CLOTHES = ('top', 'dress', 'bottom')
 FEATURES = ('eyes', 'brows', 'nose', 'mouth')
 
@@ -129,6 +130,11 @@ def extract(template_path, part_path, kind, drop_warm=False):
     mask = diff > 75
     if kind not in CLOTHES:
         mask &= ~magentaish(p)
+    if kind in ('waistwear', 'neckwear', 'backwear'):
+        # Over the clothes GPT redraws their shaded magenta too (a waistband under the sash, 2026-10-12):
+        # by hue, darker than magentaish catches. Red pieces keep little blue.
+        r, g, b = p[..., 0], p[..., 1], p[..., 2]
+        mask &= ~((b > 90) & (r > 110) & (g < 90) & (b > 0.45 * r))
     if drop_warm:
         mask &= ~warm(p)
     if kind in ('hair', 'hair-hat'):

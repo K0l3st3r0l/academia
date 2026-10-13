@@ -1,7 +1,7 @@
 // characters.layers stores catalog ids; the renderer needs part ids and hex colors.
 
 const hexOf = (list, id) => list.find(e => e.id === id)?.hex;
-export const ACCESSORY_SLOTS = ['headwear', 'eyewear', 'neckwear', 'backwear', 'earwear'];
+export const ACCESSORY_SLOTS = ['headwear', 'eyewear', 'neckwear', 'backwear', 'earwear', 'waistwear'];
 const NONE = 'ninguno';
 
 export function layersToLook(layers, catalog) {

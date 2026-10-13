@@ -156,6 +156,26 @@ describe('accesorios', () => {
     expect(bogus.status).toBe(400);
   });
 
+  it('la colección copihue (chupalla, manta, faja) se paga con copihues y la faja va en la cintura', async () => {
+    const { student, token } = await studentWithCharacter({ tokens: 100 });
+    const auth = ['Authorization', `Bearer ${token}`];
+    const sash = CATALOG.waistwear.find(a => a.id === 'cintura-faja');
+    expect(sash).toMatchObject({ price: 2, currency: 'copihues' });
+    expect(CATALOG.headwear.find(a => a.id === 'cabeza-chupalla')).toMatchObject({ currency: 'copihues' });
+
+    const poor = await request(app).post(`/api/characters/me/items/${sash.id}`).set(...auth);
+    expect(poor.body).toMatchObject({ code: 'insufficient_copihues' });
+    await pool.query('UPDATE local_students SET copihues_balance = 3 WHERE id = $1', [student.id]);
+    const bought = await request(app).post(`/api/characters/me/items/${sash.id}`).set(...auth);
+    expect(bought.body).toMatchObject({ currency: 'copihues', copihues: 1 });
+    expect(await balance(student.id)).toBe(100);
+    const worn = await request(app).put('/api/characters/me').set(...auth).send({ layers: { ...LAYERS, waistwear: sash.id } });
+    expect(worn.body.character.layers.waistwear).toBe(sash.id);
+
+    const hat = CATALOG.headwear.find(a => a.id === 'cabeza-sombrero-explorador');
+    expect((await request(app).post(`/api/characters/me/items/${hat.id}`).set(...auth)).body).toMatchObject({ currency: 'tokens', tokens: 80 });
+  });
+
   it('el vestido está marcado como que cubre la parte de abajo', () => {
     expect(CATALOG.tops.find(t => t.id === 'top-vestido').coversBottom).toBe(true);
   });

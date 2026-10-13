@@ -1,5 +1,5 @@
 {
- "version": "43738ad8bc",
+ "version": "550cac654b",
  "canvas": {
   "w": 512,
   "h": 768
@@ -2086,6 +2086,73 @@
    "w": 234,
    "h": 121,
    "label": "Audífonos de música"
+  },
+  "cabeza-sombrero-explorador": {
+   "kind": "headwear",
+   "file": "cabeza-sombrero-explorador.webp",
+   "map": "cabeza-sombrero-explorador.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 122,
+   "y": 26,
+   "w": 261,
+   "h": 150,
+   "label": "Sombrero de explorador",
+   "clipsHair": true
+  },
+  "cabeza-chupalla": {
+   "kind": "headwear",
+   "file": "cabeza-chupalla.webp",
+   "map": "cabeza-chupalla.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 91,
+   "y": 33,
+   "w": 327,
+   "h": 153,
+   "label": "Chupalla",
+   "clipsHair": true
+  },
+  "espalda-capa-estrellas": {
+   "kind": "backwear",
+   "file": "espalda-capa-estrellas.webp",
+   "map": "espalda-capa-estrellas.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 39,
+   "y": 255,
+   "w": 434,
+   "h": 345,
+   "label": "Capa de estrellas"
+  },
+  "cuello-manta": {
+   "kind": "neckwear",
+   "file": "cuello-manta.webp",
+   "map": "cuello-manta.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 133,
+   "y": 257,
+   "w": 236,
+   "h": 127,
+   "label": "Manta huasa"
+  },
+  "cintura-faja": {
+   "kind": "waistwear",
+   "file": "cintura-faja.webp",
+   "map": "cintura-faja.map.webp",
+   "families": [
+    "skin"
+   ],
+   "x": 174,
+   "y": 399,
+   "w": 161,
+   "h": 95,
+   "label": "Faja tejida"
   }
  }
 }

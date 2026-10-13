@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spendTokens, InsufficientTokensError } = require('./tokenWallet');
-const { giveCopihues } = require('./copihues');
+const { giveCopihues, spendCopihues, InsufficientCopihuesError } = require('./copihues');
 
 // Written by art/academia/lobby/build.py from the same data the game shows.
 const CANDIDATE_PATHS = [
@@ -159,19 +159,6 @@ async function credit(client, studentId, amount, reason) {
   await client.query('INSERT INTO token_ledger (student_id, amount, reason) VALUES ($1, $2, $3)', [studentId, amount, reason]);
 }
 
-async function spendCopihues(client, studentId, amount, detail) {
-  const { rows } = await client.query(
-    `UPDATE local_students SET copihues_balance = copihues_balance - $2
-     WHERE id = $1 AND copihues_balance >= $2 RETURNING copihues_balance`,
-    [studentId, amount]
-  );
-  if (!rows.length) throw new AcademyError('Te faltan copihues para este recuerdo.');
-  await client.query(
-    "INSERT INTO copihue_ledger (student_id, amount, reason, detail) VALUES ($1, $2, 'academy_shop', $3)",
-    [studentId, -amount, detail]
-  );
-}
-
 async function buy(client, studentId, itemId) {
   const item = catalogItem(itemId);
   if (!item) throw new AcademyError('Ese objeto no está en la tienda.', 404);
@@ -182,7 +169,12 @@ async function buy(client, studentId, itemId) {
   );
   if (!rowCount) throw new AcademyError('Ya lo tienes en tu mochila.', 409);
   if (currencyOf(item) === 'copihues') {
-    await spendCopihues(client, studentId, item.price, item.name);
+    try {
+      await spendCopihues(client, { studentId, amount: item.price, reason: 'academy_shop', detail: item.name });
+    } catch (err) {
+      if (err instanceof InsufficientCopihuesError) throw new AcademyError('Te faltan copihues para este recuerdo.');
+      throw err;
+    }
   } else {
     try {
       await spendTokens(client, { studentId, amount: item.price, reason: 'academy_shop' });
