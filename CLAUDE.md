@@ -32,6 +32,10 @@ cd backend && npx vitest run
 # Cuenta de alumno de prueba (RUT 11.111.111-1, curso 5°): genera e imprime un PIN nuevo.
 # Opcional: otro curso como argumento. No usar credenciales de alumnos reales para probar.
 docker exec academia-backend node scripts/test-student.js
+# Segunda cuenta de prueba (otro probador): RUT 11.111.111-2. Su dígito verificador no es válido:
+# entra con RUT + PIN, pero no puede unirse a una sala con código. Hasta el próximo deploy el script
+# del contenedor no acepta el RUT; mientras, pasarlo por stdin:
+#   docker exec -i -w /app/scripts academia-backend node - 5° 11.111.111-2 < backend/scripts/test-student.js
 ```
 
 Las cuentas de prueba llevan `local_students.is_test`: cualquier informe o estadística

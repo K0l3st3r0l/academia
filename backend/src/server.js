@@ -7,6 +7,7 @@ const { syncCurriculum } = require('./services/curriculum');
 const { scheduleRating } = require('./services/skillRatings');
 const { app, allowedOrigins } = require('./app');
 const { setupGameSocket, closeRoomForTeacher } = require('./sockets/gameSocket');
+const { setupAcademySocket } = require('./sockets/academySocket');
 
 const server = http.createServer(app);
 
@@ -17,6 +18,7 @@ const io = new Server(server, {
 app.set('io', io);
 app.set('closeRoomForTeacher', closeRoomForTeacher);
 setupGameSocket(io);
+setupAcademySocket(io);
 
 process.on('unhandledRejection', (reason) => {
   logger.error({ stack: reason?.stack, reason: reason?.message || reason }, 'Unhandled promise rejection');

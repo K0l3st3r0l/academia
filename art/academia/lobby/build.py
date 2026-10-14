@@ -4,6 +4,7 @@ Usage: <venv>/bin/python build.py <out.html>
 import base64
 import io
 import json
+import shutil
 import re
 import subprocess
 import sys
@@ -405,6 +406,9 @@ def main():
     out.write_text(page)
     GAME_PAGE.parent.mkdir(parents=True, exist_ok=True)
     GAME_PAGE.write_text(GAME_HEAD + page + '</body></html>\n')
+    # Presence (sockets/academySocket.js) needs the Socket.io client; the game loads it from here,
+    # the same version the app uses. The artifact never does.
+    shutil.copy(Path('/root/apps/academia/frontend/node_modules/socket.io-client/dist/socket.io.min.js'), GAME_PAGE.parent / 'socket.io.min.js')
     export_economy()
     (DEBUG / 'measurements.json').write_text(json.dumps({'pieces':META,'stairs':DATA['stairArt'],'animations':DATA['animations']},ensure_ascii=False,indent=2)+'\n')
     groups = {group:sum(len(value) for name,value in SOURCES.items() if name.startswith(group))

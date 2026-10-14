@@ -57,6 +57,12 @@ La ventana «Equipo» (desde la Mochila, el Mercader o «Ponértelo» tras compr
 
 El niño del lobby es una animación genérica de perfil: toma del personaje la piel, el color de la polera y el más parecido de sus tres peinados (desordenado, cola, afro). Que muestre los accesorios es la fase 2 (arte de perfil por accesorio).
 
+## Compañeros reales (presencia)
+
+En el juego, los alumnos se ven en tiempo real (`backend/src/sockets/academySocket.js`, namespace `/academia`). Todos pueden verse, pero en copias de la Academia de hasta 30 jugadores: los del mismo curso quedan juntos primero y, si una copia se llena, se abre otra. Cada jugador manda su posición y velocidad hasta 10 veces por segundo; el servidor agrupa los cambios y los reenvía 10 veces por segundo, solo de quienes se movieron. En el lobby, la posición se suaviza y la animación del niño sale de esa velocidad. Viajan además los gestos predefinidos, solo como número de frase: no hay chat. Dentro del curso se ve el primer nombre; entre cursos, el nombre del personaje si un profesor lo aprobó, o «Viajero». Con compañeros reales en la copia, los simulados se retiran. «Jugar en privado» (Ajustes) desconecta: nadie te ve y no ves a nadie. El cliente de Socket.io lo copia `build.py` a `/academia/socket.io.min.js`; el artefacto nunca lo carga.
+
+**Teñido de muchos personajes (2026-10-14):** cada cuadro del niño se repinta por combinación de piel y ropa. Antes se guardaba la imagen entera y se repintaba píxel a píxel; con 25 compañeros de colores distintos el lobby caía a 12 cuadros por segundo. Ahora la máscara guarda solo los píxeles de ropa y piel, el repintado se monta con `source-atop` sobre la imagen original y cada textura se guarda al tamaño en pantalla. Resultado en Chromium sin GPU: 47–59 fps con 26 en pantalla y 32 fps con 51.
+
 ## Mochila
 
 Los objetos se mueven a cualquier casilla: arrastrándolos (dedo o mouse), tocando un objeto y luego una casilla vacía, o con «Mover» y las flechas. Sobre otro objeto, se intercambian. Las posiciones (`state.bag`, `{id: casilla}`) se guardan con la partida; `bagLayout` pone primero cada objeto en su casilla guardada y los nuevos en la primera libre. Los íconos bloquean el arrastre nativo de imágenes, que cancelaba el del juego.

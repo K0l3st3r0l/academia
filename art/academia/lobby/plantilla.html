@@ -737,7 +737,7 @@ function freshState(now = Date.now(), settings = {}) {
   const level = STORY_LEVELS.includes(settings.startingLevel) ? settings.startingLevel : 'intermedio';
   return {version:1,startingLevel:level,flags:{},tokens:60,copihues:0,items:[],bag:{},pieces:[],sparks:[],revealed:[],chests:[],position:null,
     levels:Object.fromEntries(STORY_SUBJECTS.map(s=>[s,level])),streaks:Object.fromEntries(STORY_SUBJECTS.map(s=>[s,0])),
-    results:{},choices:{},currentGoal:'',goals:[],bank:{balance:0,lastWeek:now},settings:{startingLevel:level,testMode:!!settings.testMode,sound:settings.sound!==false,reducedMotion:!!settings.reducedMotion,touchControls:typeof settings.touchControls==='boolean'?settings.touchControls:null}};
+    results:{},choices:{},currentGoal:'',goals:[],bank:{balance:0,lastWeek:now},settings:{startingLevel:level,testMode:!!settings.testMode,sound:settings.sound!==false,reducedMotion:!!settings.reducedMotion,touchControls:typeof settings.touchControls==='boolean'?settings.touchControls:null,private:!!settings.private}};
 }
 function nearby(map, b, state, extra = []) {
   return [...map.entities,...extra].filter(e => !['spawn','collectible'].includes(e.type) &&
@@ -895,7 +895,7 @@ if(SERVER)for(const chapter of MAP_DATA.chapters)chapter.available=false;
 let state=SERVER?freshState(Date.now()):safeLoad(storage,Date.now(),map),settings=state.settings;
 reduced=motion.matches || settings.reducedMotion;effects=!reduced;
 let treasure=null,portalTravel=null,cameraBoost=1,audioContext=null;
-const images={},maskCache=new ByteLRU(24*1024*1024),textureCache=new ByteLRU(64*1024*1024,c=>{c.width=1;c.height=1;});
+const images={},maskCache=new ByteLRU(64*1024*1024),textureCache=new ByteLRU(96*1024*1024,c=>{c.width=1;c.height=1;});
 let body,kid,look,engine=null,dialogueDone=null,primaryAction=null,numberActions=[],challengeUI=null;
 let superReady=false,W=0,H=0,zoom=1,dpr=1,cam={x:0,y:0},near=null,timer=0,shake=0,toastTimer=null,toastHideTimer=null,lastSave=0,ready=false;
 let objectivesOpen=!(state.flags.metEstela || state.flags.welcomed);
@@ -1364,7 +1364,8 @@ function practice(){
  startDialogue([{type:'line',who:'estela',text:intro},...beats,{type:'line',who:'estela',text:'¡Práctica terminada! Sigue explorando: cada intento te ayuda a aprender.'}],closeOverlay);
 }
 function gesture(phrase){
- player.bubble={text:phrase,until:timer+4};const c=classmates.filter(c=>Math.abs(c.x-player.x)<300 && Math.abs(c.y-player.y)<80).sort((a,b)=>Math.abs(a.x-player.x)-Math.abs(b.x-player.x))[0];
+ const i=MAP_DATA.phrases.indexOf(phrase);if(presence?.connected && i>=0)presence.emit('academia:gesto',{i});
+ player.bubble={text:phrase,until:timer+4};const c=npcs().filter(c=>Math.abs(c.x-player.x)<300 && Math.abs(c.y-player.y)<80).sort((a,b)=>Math.abs(a.x-player.x)-Math.abs(b.x-player.x))[0];
  if(c){c.face=Math.sign(player.x-c.x)||1;c.target=c.x;c.until=timer+5;c.vx=0;c.waveUntil=timer+2;c.bubble={text:phrase==='¡Mira mi mascota!'?'¡Qué linda!':'¡Hola! ¡Nos vemos en la Academia!',until:timer+5};}
  announce(phrase);closeOverlay();
 }
@@ -1383,6 +1384,7 @@ function showSettings(){
  toggle('Controles táctiles',usingTouch(),value=>{settings.touchControls=value;applyTouch();clearInput();resize();},'ico_gestos');
  if(!SERVER)toggle('Modo prueba (activa «avanzar una semana» en el banco)',settings.testMode,value=>{settings.testMode=value;},'ico_pieza');
  const keysHelp=el('p','small','← → / A D: caminar · Shift o doble toque: correr · Espacio / W / ↑: saltar · ↓ / S: bajar · E / Enter: usar · Esc / Q: volver.');
+ if(SERVER)toggle('Jugar en privado: nadie te ve y no ves a nadie',!!settings.private,value=>{settings.private=value;if(value)disconnectPresence();else connectPresence();presenceLabel();},'ico_candado');
  if(SERVER){append(card,keysHelp,append(el('div','settings-links'),button('Ver la apertura',()=>{upload(true);location.href='/alumno/apertura?repetir=1';}),button('Salir de la Academia',()=>{upload(true);location.href='/alumno';},'primary')));card.classList.add('settings-panel');fitWindow(card,card.lastElementChild);return;}
  append(card,keysHelp,button('Reiniciar progreso',()=>{const warning=panel('Reiniciar progreso','Volverás al inicio con 60 tokens y la mochila vacía.');append(warning,button('Sí, reiniciar',()=>{state=freshState();settings=state.settings;applyMotion();applyTouch();objectivesOpen=true;Object.assign(player,makeBody(map.spawn.x,map.spawn.y));player.kid=createKid();Object.assign(pet,makeBody(player.x-70,player.y),{pose:null,action:'sit',garden:null,w:35,h:42});save();closeOverlay();toast('Una nueva visita a la Academia.');},'primary'),button('Seguir explorando',showSettings));fitWindow(warning,...[...warning.children].filter(n=>n.tagName==='BUTTON'));}));card.classList.add('settings-panel');fitWindow(card,card.lastElementChild);
 }
@@ -1487,45 +1489,59 @@ function classify(name) {
     vals.sort((a, b) => a - b);
     ref[k] = vals.length ? vals[Math.floor(vals.length * 0.7)] : 1;
   }
-  const m={data,kind,value,ref,w:c.width,h:c.height}; maskCache.set(name,m,data.data.byteLength+kind.byteLength+value.byteLength); return m;
+  // Only clothes and skin are ever repainted, so only those pixels are kept, as a list: a frame's
+  // mask went from ~9 bytes per pixel of the whole image to 6 per repainted pixel, and every frame
+  // fits in the cache at once (2026-10-14: with many players it was evicted and reclassified).
+  let n=0;for(let i=0;i<kind.length;i++)if(kind[i])n++;
+  const idx=new Uint32Array(n),kinds=new Uint8Array(n),vals=new Uint8Array(n);
+  for(let i=0,j=0;i<kind.length;i++)if(kind[i]){idx[j]=i;kinds[j]=kind[i];vals[j]=Math.round(value[i]*255);j++;}
+  const m={idx,kinds,vals,ref:[0,ref[1]*255,ref[2]*255],w:c.width,h:c.height};maskCache.set(name,m,n*6);return m;
 }
 
 function hex(c) { return [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16)); }
 
-function paint(name, clothes, skin, shade) {
-  const m = maskCache.get(name) || classify(name);
-  const out = new ImageData(new Uint8ClampedArray(m.data.data), m.w, m.h);
-  const p = out.data;
-  const colours = [null, hex(clothes), hex(skin)];
-  for (let i = 0; i < m.kind.length; i++) {
-    const k = m.kind[i];
-    if (k) {
-      const f = m.value[i] / m.ref[k];
-      const base = colours[k];
-      for (let ch = 0; ch < 3; ch++) {
-        const v = f <= 1 ? base[ch] * f : base[ch] + (255 - base[ch]) * Math.min(1, (f - 1) * 1.5);
-        p[i * 4 + ch] = v;
-      }
-    }
-    if (shade !== 1 && p[i * 4 + 3]) for (let ch = 0; ch < 3; ch++) p[i * 4 + ch] *= shade;
+// A recoloured copy is the original image with its clothes and skin pixels repainted on top
+// ('source-atop' keeps the original's edges), stored at the size it is drawn on screen.
+const paintLayers=new Map();
+function paint(name, clothes, skin, shade, res = 1) {
+  const m = maskCache.get(name) || classify(name), img = images[name];
+  let layer = paintLayers.get(m.w + 'x' + m.h);
+  if (!layer) {
+    const canvas = document.createElement('canvas');canvas.width = m.w;canvas.height = m.h;
+    layer = {canvas, ctx: canvas.getContext('2d'), data: new ImageData(m.w, m.h)};paintLayers.set(m.w + 'x' + m.h, layer);
   }
+  const p = layer.data.data, colours = [null, hex(clothes), hex(skin)];
+  p.fill(0);
+  for (let j = 0; j < m.idx.length; j++) {
+    const i = m.idx[j] * 4, k = m.kinds[j], f = m.vals[j] / m.ref[k], base = colours[k];
+    for (let ch = 0; ch < 3; ch++) p[i + ch] = f <= 1 ? base[ch] * f : base[ch] + (255 - base[ch]) * Math.min(1, (f - 1) * 1.5);
+    p[i + 3] = 255;
+  }
+  layer.ctx.putImageData(layer.data, 0, 0);
   const c = document.createElement('canvas');
-  c.width = m.w; c.height = m.h;
-  c.getContext('2d').putImageData(out, 0, 0);
+  c.width = Math.max(1, Math.round(m.w * res)); c.height = Math.max(1, Math.round(m.h * res));
+  const g = c.getContext('2d');
+  g.drawImage(img, 0, 0, c.width, c.height);
+  g.globalCompositeOperation = 'source-atop';
+  g.drawImage(layer.canvas, 0, 0, c.width, c.height);
+  if (shade !== 1) { g.fillStyle = `rgba(0,0,0,${1 - shade})`; g.fillRect(0, 0, c.width, c.height); }
   return c;
 }
 
+// Textures are kept at the size the kid is drawn, in quarter steps: most screens show it at half
+// size or less, so a look's frames take a quarter of the memory and many looks fit at once.
+function textureRes() { return Math.min(1, Math.max(0.25, Math.ceil(kidScale() * zoom * dpr * 1.1 * 4) / 4)); }
 
 function kidTexture(name) {
- const key=name+'|'+look.clothes+'|'+look.skin;
+ const res=textureRes(),key=name+'|'+look.clothes+'|'+look.skin+'|'+res;
  const cached=textureCache.get(key);if(cached)return cached;
- const canvas=paint(name,look.clothes,look.skin,1);return textureCache.set(key,canvas,canvas.width*canvas.height*4);
+ const canvas=paint(name,look.clothes,look.skin,1,res);return textureCache.set(key,canvas,canvas.width*canvas.height*4);
 }
 function kidForeground(frame) {
- const name='kidocc_'+frame,key=name+'|'+look.clothes+'|'+look.skin;
+ const res=textureRes(),name='kidocc_'+frame,key=name+'|'+look.clothes+'|'+look.skin+'|'+res;
  const cached=textureCache.get(key);if(cached)return cached;
- const c=document.createElement('canvas');c.width=KID.size[0];c.height=KID.size[1];const g=c.getContext('2d');
- g.drawImage(kidTexture('kid_'+frame),0,0);g.globalCompositeOperation='destination-in';g.drawImage(images[name],0,0);
+ const c=document.createElement('canvas');c.width=Math.round(KID.size[0]*res);c.height=Math.round(KID.size[1]*res);const g=c.getContext('2d');
+ g.drawImage(kidTexture('kid_'+frame),0,0,c.width,c.height);g.globalCompositeOperation='destination-in';g.drawImage(images[name],0,0,c.width,c.height);
  return textureCache.set(key,c,c.width*c.height*4);
 }
 const KID_ACTIVITIES=['read','lupa','paint'];
@@ -1684,7 +1700,7 @@ function drawKid() {
   C.rotate(anchor.angle * DEG);
   C.drawImage(kidTexture('kid_head_' + look.style + '_' + view), -head.pivot[0], -head.pivot[1], head.size[0], head.size[1]);
   C.restore();
-  if (anchor.occ) C.drawImage(kidForeground(frame), 0, 0);
+  if (anchor.occ) C.drawImage(kidForeground(frame), 0, 0, KID.size[0], KID.size[1]);
   // The ladybug walks the way it faces: played backwards, it turns round instead of reversing.
   const bug = KID.bug && KID.bug.frames[frame];
   // Kneeling near a ledge, the ladybug's path can run past the edge: it only shows on solid ground.
@@ -2132,7 +2148,7 @@ function draw(){
  C.setTransform(dpr,0,0,dpr,0,0);C.fillStyle='#3a251b';C.fillRect(0,0,W,H);
  C.save();C.scale(zoom,zoom);C.translate(-cam.x,-cam.y);if(effects && shake>0)C.translate(rand(-1,1)*shake*12,rand(-1,1)*shake*8);
  drawArchitecture();for(const p of map.props.filter(p=>p.layer!=='front'))prop(p);map.entities.forEach(drawEntity);
- drawFox();classmates.forEach(drawActor);drawActor(player);drawEffects();for(const p of map.props.filter(p=>p.layer==='front'))prop(p);map.platforms.forEach(railing);
+ drawFox();npcs().forEach(drawActor);for(const r of remotes.values())if(!r.hidden)drawActor(r);drawActor(player);drawEffects();for(const p of map.props.filter(p=>p.layer==='front'))prop(p);map.platforms.forEach(railing);
  if(near && overlay.hidden && !treasure){label((usingTouch()?'': 'E · ')+(near.classmate||near.type==='npc'?'Hablar':near.type==='chest'?(unlockChest(state,near)&&!state.chests.includes(near.id)?'Abrir':'Ver'):near.type==='sign'?'Leer':'Usar'),near.x,near.y-(near.h||110)-44,'#f5c842',16);if(!near.classmate && near.type!=='npc')label(near.name,near.x,near.y-(near.h||110)-78,'#fff3d8',13);}
  C.restore();
  if(treasure){const e=treasure.entity;C.save();const x=(e.x-cam.x)*zoom,y=(e.y-e.h/2-cam.y)*zoom,g=C.createRadialGradient(x,y,50,x,y,Math.max(W,H)*.75);g.addColorStop(0,'#04121b10');g.addColorStop(1,'#04121baf');C.fillStyle=g;C.fillRect(0,0,W,H);C.scale(zoom,zoom);C.translate(-cam.x,-cam.y);drawChest(e);drawActor(player);drawTreasureItem();map.platforms.forEach(railing);C.restore();}
@@ -2148,7 +2164,8 @@ function tick(dt){
   if(event.landed){dust(player.x,player.y,6);emit('ring',player.x,player.y);if(player.superLand>0)shake=.3;}
   if(effects && Math.abs(player.vx)>RUN*.9 && Math.random()<dt*20){emit('line',player.x-player.face*35,player.y-rand(20,80),{vx:-player.face*160,len:-player.face*40,max:.2});if(player.ground)dust(player.x,player.y,1,.3);}
   bind(player);stepKid(dt);
-  for(const c of classmates){
+  stepRemotes(dt);sendPresence();
+  for(const c of npcs()){
    if(timer>c.until){if(Math.random()<.55){c.target=c.x;c.until=timer+rand(10,35);}else{const destinations=[...map.entities.filter(e=>['station','secret','chest'].includes(e.type)),...map.props.filter(p=>p.sprite==='banca')].filter(e=>Math.abs(e.y-c.y)<100 && (!c.zone || e.x>=c.zone[0]*CH && e.x<=c.zone[1]*CH));c.target=destinations.length?destinations[Math.floor(rand(0,destinations.length))].x:c.x;c.until=timer+rand(5,14);}if(Math.random()<.35)c.bubble={text:['¡Estoy buscando chispas!','¡Nos vemos en el portal!','Me gusta este cielo.','¡Tu mascota es genial!'][Math.floor(rand(0,4))],until:timer+4};}
    if(c.zone)c.target=clamp(c.target,c.zone[0]*CH,c.zone[1]*CH);const axis=Math.abs(c.target-c.x)>15?Math.sign(c.target-c.x):0;moveBody(c,map,dt,{axis});bind(c);stepKid(dt);
   }
@@ -2157,7 +2174,7 @@ function tick(dt){
    if((e.type==='secret' || e.hidden) && !state.revealed.includes(e.id) && Math.abs(player.x-e.x)<(e.revealRadius||150) && Math.abs(player.y-e.y)<80){state.revealed.push(e.id);toast(e.type==='secret'?'Descubriste un rincón secreto.':'¡Un cofre en las alturas!');save();}
    if(e.type==='collectible' && !e.source && Math.abs(player.x-e.x)<32 && Math.abs(player.y-CH*.55-e.y)<60 && collect(state,map,e.id)){emit('ring',e.x,e.y);save();toast(state.sparks.length===12?'¡Las 12 chispas! Abre el cofre en la galería derecha.':state.sparks.length===1?'¡Tu primera chispa del tiempo! Junta las 12 para abrir el cofre de la galería derecha.':'Chispa del tiempo · '+state.sparks.length+'/12',state.sparks.length===1?6000:3500);}
   }
-  near=nearby(map,player,state,classmates);
+  near=nearby(map,player,state,npcs());
   $('energy-fill').style.width=Math.round(player.energy*100)+'%';$('energy').setAttribute('aria-valuenow',Math.round(player.energy*100));$('energy-label').textContent=player.energy>=.999?'¡Súper salto listo!':'Corre para cargar tu súper salto';{const ready=player.energy>=.999;if(ready!==superReady){superReady=ready;$('energy-wrap').classList.toggle('ready',ready);if(ready){uiSound('coin');emit('ring',player.x,player.y,{color:'#ffd23f',max:.5});}}}
   $('action-touch').disabled=!near;$('action-touch').textContent=near?near.classmate||near.type==='npc'?'Hablar':'Usar':'Acércate';
   $('context').hidden=!near;$('context').textContent=near?near.name:'';
@@ -2243,6 +2260,40 @@ function wearIcon(item){
  const source=new Image();source.onload=()=>{const c=document.createElement('canvas'),k=Math.min(1,128/Math.max(layer.w,layer.h));c.width=Math.round(layer.w*k);c.height=Math.round(layer.h*k);c.getContext('2d').drawImage(source,0,0,c.width,c.height);const url=c.toDataURL();WEAR.icons.set(item.id,url);img.src=url;};
  source.src='/character/'+layer.file+'?v='+WEAR.parts.version;return img;
 }
+// Real classmates: other students in this copy of the Academy (server: sockets/academySocket.js).
+// Their position comes from the server and is eased toward; the kid animation reads their speed.
+const remotes=new Map();let presence=null,lastSent='',sentAt=0;
+const npcs=()=>remotes.size?[]:classmates;
+function loadScript(src){return new Promise((resolve,reject)=>{const tag=document.createElement('script');tag.src=src;tag.onload=resolve;tag.onerror=reject;document.head.append(tag);});}
+function remoteLook(l){const c=WEAR.catalog;return {skin:c?.skinTones?.find(t=>t.id===l?.skinTone)?.hex||'#e9a86e',clothes:c?.topColors?.find(t=>t.id===l?.topColor)?.hex||'#287d88',style:hairToStyle(l?.hairStyle||'')};}
+function addRemote(p){const st=p.state||{x:map.spawn.x,y:map.spawn.y};remotes.set(p.id,Object.assign(makeBody(st.x,st.y),{remote:true,classmate:true,type:'npc',id:'viajero-'+p.id,name:p.name,kid:createKid(),look:remoteLook(p.look),net:p.state,hidden:!p.state}));presenceLabel();}
+function presenceLabel(){const small=$('lobby-hud').querySelector('.brand small');if(!small)return;small.textContent=settings.private?'JUGANDO EN PRIVADO':remotes.size?(remotes.size+1)+' VIAJEROS EN ESTA ACADEMIA':'OBSERVATORIO FUERA DEL TIEMPO';}
+async function connectPresence(){
+ if(!SERVER||presence||settings.private)return;
+ try{if(!window.io)await loadScript('/academia/socket.io.min.js');}catch{return;}
+ presence=window.io('/academia',{auth:{token:SERVER.token},transports:['websocket','polling']});
+ presence.on('academia:presentes',d=>{remotes.clear();d.jugadores.forEach(addRemote);lastSent='';presenceLabel();});
+ presence.on('academia:llega',p=>{addRemote(p);if(overlay.hidden)toast(p.name+' llegó a la Academia.');});
+ presence.on('academia:sale',({id})=>{remotes.delete(id);presenceLabel();});
+ presence.on('academia:mueve',moves=>{for(const [id,st] of moves){const r=remotes.get(id);if(!r||!st)continue;if(!r.net||Math.hypot(st.x-r.x,st.y-r.y)>400)Object.assign(r,{x:st.x,y:st.y});r.net=st;}});
+ presence.on('academia:gesto',({id,i})=>{const r=remotes.get(id),text=MAP_DATA.phrases[i];if(r&&text)r.bubble={text,until:timer+4};});
+ presence.on('disconnect',()=>{remotes.clear();presenceLabel();});
+}
+function disconnectPresence(){presence?.disconnect();presence=null;remotes.clear();presenceLabel();}
+function stepRemotes(dt){
+ for(const r of remotes.values()){
+  const n=r.net;r.hidden=!n||(n.map&&n.map!==map.id);if(r.hidden)continue;
+  const k=Math.min(1,dt*12);r.x+=(n.x-r.x)*k;r.y+=(n.y-r.y)*k;Object.assign(r,{vx:n.vx,vy:n.vy,ground:n.ground,face:n.face,flip:n.flip});
+  // The physics that would count how long they stand still runs on their own screen, not here.
+  r.still=r.ground&&Math.abs(r.vx)<12?r.still+dt:0;bind(r);stepKid(dt);
+ }
+}
+// Ten times a second at most, and only when something changed (or every two seconds, as a pulse).
+function sendPresence(){
+ if(!presence?.connected)return;const now=performance.now();if(now-sentAt<100)return;
+ const st={x:Math.round(player.x),y:Math.round(player.y),vx:Math.round(player.vx),vy:Math.round(player.vy),face:player.face,ground:!!player.ground,flip:+(player.flip||0).toFixed(2),map:map.id},key=JSON.stringify(st);
+ if(key===lastSent&&now-sentAt<2000)return;presence.emit('academia:estado',st);lastSent=key;sentAt=now;
+}
 function showEquipment(){
  const card=panel('Equipo'),frame=el('iframe','equip-frame');frame.src='/alumno/equipo?marco=1';frame.title='Equipo: elige qué ponerte';
  card.classList.add('equip-panel');card.append(frame);fitWindow(card);uiSound('paper');
@@ -2267,12 +2318,13 @@ async function start(){
  if(SERVER && !await loadFromServer())return;
  installGameKit();resize();applyMotion();
  ready=true;$('loading').hidden=true;updateHUD();bind(player);canvas.focus();raf=requestAnimationFrame(frame);
+ if(SERVER){connectPresence();presenceLabel();}
  // The welcome gift is real tokens, so Estela says it once, pointing at the shop to try them.
  if(SERVER?.welcomeGift && !state.flags.welcomeGiftShown){state.flags.welcomeGiftShown=true;save();showMessage('Regalo de bienvenida','¡Bienvenido a la Academia! Te regalo '+SERVER.welcomeGift+' tokens para que estrenes el Puesto del Mercader. Elige un recuerdo y míralo luego en tu mochila.','estela');return;}
  if(!state.flags.welcomed && !state.flags.metEstela)toast(usingTouch()?'¡Bienvenido! Acércate a Estela y toca Hablar.':'¡Bienvenido! Acércate a Estela y pulsa E para hablar.',4600);
 }
 // Read-only diagnostics for prototype reviewers and browser smoke tests.
-window.Academia={core:AcademiaCore,get state(){return state;},get player(){return player;},get map(){return map;},get pet(){return pet;},get classmates(){return classmates;},get viewport(){return {width:W,height:H,zoom,x:cam.x,y:cam.y};},get travel(){return portalTravel?{time:portalTravel.t}:null;},get portalEffect(){return {particles:portalParticles.length,resolution:vortexSurface?[vortexSurface.width,vortexSurface.height]:null,pull:portalPull,phase:portalPhase};},get treasure(){return treasure?{id:treasure.entity.id,time:treasure.t,banner:treasure.banner}:null;},get dialogue(){return engine?.view()||null;},get reducedMotion(){return reduced;},get memory(){return {textures:textureCache.bytes,masks:maskCache.bytes};},interact,station,gesture,practiceKind,get practiceCases(){return [...CHALLENGES,ORDER_PRACTICE].flatMap(beat=>STORY_LEVELS.map(level=>({id:beat.id,kind:beat.kind,level})));},showShop,showBag,showBank,showClock,showTravel,showReading,showObjectives,showSettings,closeOverlay,loadMap:enterMap};
+window.Academia={core:AcademiaCore,get state(){return state;},get player(){return player;},get map(){return map;},get pet(){return pet;},get classmates(){return classmates;},get remotes(){return [...remotes.values()].map(r=>({name:r.name,x:Math.round(r.x),y:Math.round(r.y),hidden:r.hidden,bubble:r.bubble?.text}));},get viewport(){return {width:W,height:H,zoom,x:cam.x,y:cam.y};},get travel(){return portalTravel?{time:portalTravel.t}:null;},get portalEffect(){return {particles:portalParticles.length,resolution:vortexSurface?[vortexSurface.width,vortexSurface.height]:null,pull:portalPull,phase:portalPhase};},get treasure(){return treasure?{id:treasure.entity.id,time:treasure.t,banner:treasure.banner}:null;},get dialogue(){return engine?.view()||null;},get reducedMotion(){return reduced;},get memory(){return {textures:textureCache.bytes,masks:maskCache.bytes};},interact,station,gesture,practiceKind,get practiceCases(){return [...CHALLENGES,ORDER_PRACTICE].flatMap(beat=>STORY_LEVELS.map(level=>({id:beat.id,kind:beat.kind,level})));},showShop,showBag,showBank,showClock,showTravel,showReading,showObjectives,showSettings,closeOverlay,loadMap:enterMap};
 start().catch(error=>{$('load-message').textContent='No pudimos preparar el observatorio. Recarga para intentarlo de nuevo.';console.error(error);});
 })();
 </script>

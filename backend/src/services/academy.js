@@ -274,6 +274,6 @@ async function practiceReward(client, studentId) {
 }
 
 module.exports = {
-  ECONOMY, WEEK_MS, WELCOME_GIFT, AcademyError, accrue, lockProgress, snapshot, saveState, markIntroSeen,
+  ECONOMY, WEEK_MS, WELCOME_GIFT, AcademyError, academyOpen, accrue, lockProgress, snapshot, saveState, markIntroSeen,
   buy, sell, bankTransfer, openChest, practiceReward,
 };
